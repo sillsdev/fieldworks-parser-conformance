@@ -1,0 +1,31 @@
+fieldworks-parser-conformance
+Copyright (c) 2022-2026 SIL International
+Released under the MIT License (see LICENSE).
+
+This repository contains material derived from, or copied from, the sources
+below. Each remains under its own terms.
+
+HermitCrabInput.dtd
+  Based on Maxwell, Mike. 1999. Hermit Crab Parsing Engine Specification.
+  SIL manuscript. The DTD describes the input format of the HermitCrab parsing
+  engine (https://github.com/sillsdev/machine).
+
+FieldWorks witnesses (edge-cases/*/fieldworks/, languages/*/fieldworks/)
+  Each project.fwdata is a small FieldWorks Language Explorer project, written
+  by FieldWorks (https://github.com/sillsdev/FieldWorks, LGPL-2.1) on top of
+  LibLCM (https://github.com/sillsdev/liblcm, LGPL-2.1). The files hold only
+  invented test data plus the standard lists and defaults that FieldWorks and
+  LibLCM write into every new project. The versions are in PROVENANCE.md.
+
+Writing system files (fieldworks/WritingSystemStore/*.ldml)
+  LDML files written by LibLCM from the SIL Locale Data Repository, which
+  carries data from the Unicode Common Locale Data Repository (CLDR). Their
+  collation and character data derive from Unicode CLDR data files, copyright
+  (c) Unicode, Inc., distributed under the Unicode License v3
+  (https://www.unicode.org/license.txt). They are reduced to the elements that
+  define the writing system (see AGENTS.md section 3).
+
+Citations
+  Grammar and word files cite published linguistic descriptions, and the
+  FieldWorks loader source (HCLoader.cs), by name and line only; none of their
+  text is copied.

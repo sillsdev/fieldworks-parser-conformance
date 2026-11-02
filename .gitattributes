@@ -1,0 +1,11 @@
+# Text files are stored with LF endings and checked out with LF on every platform, so that the hashes in
+# generated/hc-conformance-manifest.v2.json do not depend on a checkout setting.
+* text=auto eol=lf
+
+# A FieldWorks project is hashed on its raw bytes (phonology-mutations.yaml base_sha256). Never convert it.
+*.fwdata binary
+
+# These three hold the exact output of one engine run. Their line endings are part of the evidence.
+edge-cases/simultaneous-subrule-genuine-overlap/hc_stderr.txt -text
+edge-cases/simultaneous-subrule-genuine-overlap/output.tsv -text
+edge-cases/simultaneous-subrule-genuine-overlap/words.txt -text
