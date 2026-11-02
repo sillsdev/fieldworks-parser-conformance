@@ -1,4 +1,4 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 language: StressEnvZeroAllomorphs
 inspired_by: ["synthetic Bantu/Austronesian zero-allomorph prefix and suffix probe (not modeling any real language)"]
 sources: []
@@ -9,7 +9,7 @@ fieldworks_producible: true
 # first so synthesis tries them; tabun and gisam exercise the null suffix after a nasal.
 # Only two environments remain: subP1z and subP2z each carry a left environment on a lone prefix, the one
 # side HCLoader writes. Every other condition is in an input pattern, so despite its name this fixture
-# checks environments only twice. Open item: a near-side density fixture, in conformance-stress/README.md.
+# checks environments only twice. Open item: a near-side density fixture, in stress/README.md.
 budget_ms: 60000
 words:
   - word: batu

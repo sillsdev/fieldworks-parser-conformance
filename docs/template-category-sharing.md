@@ -13,7 +13,7 @@ the engine's same-morpheme free-fluctuation mechanism.
 ## Verification
 
 Expected rows are derived above and verified against C# at
-`8bad193454a14422a3be59c3156513691ae3da3b` on 2026-09-15. The original staged fixture records
+`8bad1934` on 2026-09-15. The original staged fixture records
 earlier C# verification at `caa4ddde`. Both new fixtures pass self-check with memoization on and
 off: 2 passed, 0 failed, 0 skipped, 16 rows total.
 

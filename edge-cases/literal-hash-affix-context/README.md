@@ -1,6 +1,6 @@
 # literal-hash-affix-context: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -29,7 +29,7 @@ forms are the C# oracle behavior for this authored grammar.
 ## Founding-oracle evidence
 
 `words.yaml` signatures and rule traces were checked by the C# HermitCrab conformance harness built
-from the pinned Machine commit `18cf242f4b114b0eb9bac304b4b171ca2f499a39` on 2026-10-09. The
+from the pinned Machine commit `18cf242f` on 2026-10-09. The
 targeted self-check passed: 1 fixture, 0 failed. The harness accepted `ra`, `raa`, `ara`, `ar`,
 and `a`; it rejected `ta`, `taa`, `ata`, and `at`.
 

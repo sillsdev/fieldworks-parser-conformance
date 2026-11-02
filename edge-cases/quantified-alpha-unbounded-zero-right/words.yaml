@@ -1,8 +1,8 @@
-# oracle-provenance: founding-oracle machine-source=aab4c59819adb7b366915e09df2fb28c62b8c03a
+# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
 # original oracle-provenance: founding-oracle
-# hc.dll, Machine 18cf242f4b114b0eb9bac304b4b171ca2f499a39.
+# hc.dll, Machine 18cf242f.
 language: quantified-alpha-unbounded-zero-right
 inspired_by: ["synthetic zero-count repeated feature agreement"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]

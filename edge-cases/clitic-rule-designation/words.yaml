@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=a2f80e28debaffda8a65b3b11875c80479768bc7 verified-date=2026-10-15
+# oracle-provenance: founding-oracle machine-commit=a2f80e28 verified-date=2026-10-15
 # Signatures transcribed from the self-check run, not hand-derived.
 language: CliticRuleDesignation
 inspired_by: ["synthetic clitic-designation probe, not a model of a real language"]

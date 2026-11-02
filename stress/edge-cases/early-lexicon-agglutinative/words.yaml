@@ -1,4 +1,4 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 language: StressEarlyLexiconAgglutinative
 sources: []
 requires: [phonology]

@@ -1,6 +1,6 @@
 # standalone-combining-mark: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -107,7 +107,7 @@ this staged copy in the same change (the graduation guard enforces this mechanic
 
 
 ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde8782557c6fb58cac57e4761ffcafc2a6) directly against this fixture's
+machine commit caa4ddde) directly against this fixture's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
 fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"

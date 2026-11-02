@@ -1,6 +1,6 @@
 # quantified-alpha-unbounded-rtl-right: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -18,7 +18,7 @@ Synthetic repeated-alpha environment parity regression. C# requires every
 repetition of the voice variable to agree. Mixed c/t repetitions must leave
 the root unchanged; uniform repetitions must permit the rewrite.
 
-Oracle: hc.dll, Machine `18cf242f4b114b0eb9bac304b4b171ca2f499a39`; 17 complete
+Oracle: hc.dll, Machine `18cf242f`; 17 complete
 word rows recorded with the conformance batch adapter, no skipped/capped rows.
 
 Divergence: `docs/divergences/058-repeated-environment-alpha-agreement.md`.

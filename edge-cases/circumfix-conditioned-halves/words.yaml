@@ -1,7 +1,7 @@
-# oracle-provenance: founding-oracle machine-source=aab4c59819adb7b366915e09df2fb28c62b8c03a
+# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=f150e2a005ce639f7d68ef17fb0db25b2f6aaa3c verified-date=2026-09-16
+# original oracle-provenance: founding-oracle machine-commit=f150e2a0 verified-date=2026-09-16
 language: CircumfixConditionedHalves
 inspired_by: ["synthetic circumfix cross-product with live per-side V/C conditioning (not modeling any real language)"]
 sources:

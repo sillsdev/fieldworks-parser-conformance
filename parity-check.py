@@ -17,7 +17,7 @@ Checks (ledger "Floor summary (G4 parity check keys)"):
 
 Once the v1 tree is deleted, A/B/C find zero v1 fixtures and report "migration complete"; only D runs.
 
-Usage:  python conformance/parity-check.py [conformance_root]   (default: this script's directory)
+Usage:  python parity-check.py [conformance_root]   (default: this script's directory)
 """
 import csv
 import json
@@ -80,6 +80,8 @@ def load_coverage(path):
 PROV_RE = re.compile(r'^\s*provenance:\s*(.*\S)\s*$')
 LANG_RE = re.compile(r'^language:\s*(.*\S)\s*$')
 REQ_RE = re.compile(r'^requires:\s*\[(.*)\]\s*$')
+REQ_BLOCK_RE = re.compile(r'^requires:\s*$')
+REQ_ITEM_RE = re.compile(r'^\s*-\s*(\S.*?)\s*$')
 
 
 def _strip_quotes(s):
@@ -101,8 +103,15 @@ def load_v2_words(langs_dir, edge_dir):
                 continue
             lang = None
             requires = None
+            in_block = False  # inside a block-style `requires:` list
             with open(wy, encoding="utf-8") as f:
                 for raw in f:
+                    if in_block:
+                        im = REQ_ITEM_RE.match(raw)
+                        if im:
+                            requires.append(_strip_quotes(im.group(1)))
+                            continue
+                        in_block = False
                     # skip full-line comments so a '#'-commented example provenance never counts
                     if raw.lstrip().startswith("#"):
                         continue
@@ -119,6 +128,9 @@ def load_v2_words(langs_dir, edge_dir):
                         if rm:
                             inner = rm.group(1).strip()
                             requires = [t.strip() for t in inner.split(",") if t.strip()]
+                        elif REQ_BLOCK_RE.match(raw):
+                            requires = []
+                            in_block = True
             if lang is None:
                 die(f"{wy} has no 'language:' field")
             if requires is None:

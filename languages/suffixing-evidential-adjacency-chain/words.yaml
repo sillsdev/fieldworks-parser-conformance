@@ -23,7 +23,7 @@
 # naive: HermitCrabExtensions.ToRegexString unconditionally wraps any character-definition segment
 # whose string representation is more than one character (here, the "ch"/"sh" digraph segments this
 # grammar defines for the plural/reportative suffixes) in its own parentheses, regardless of
-# ambiguity -- see conformance/PROTOCOL.md section 3's addendum. This affected every word in the
+# ambiguity -- see PROTOCOL.md section 3's addendum. This affected every word in the
 # fixture containing a "ch" or "sh" digraph (walaknichik, walaknkishi, sipuncha, walaknkichikmi),
 # corrected below to match the oracle once this was understood; every other signature in this file
 # matched the hand derivation (or the same pattern, once recognized) with no further disagreement.

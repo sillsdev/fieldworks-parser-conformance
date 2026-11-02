@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-source=aab4c59819adb7b366915e09df2fb28c62b8c03a
+# oracle-provenance: founding-oracle machine-source=aab4c598
 # Direction variant independently self-checked with the same complete expectations.
 # original oracle-provenance: founding-oracle
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)

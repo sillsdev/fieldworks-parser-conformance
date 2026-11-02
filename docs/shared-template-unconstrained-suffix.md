@@ -35,12 +35,12 @@ This is a loader-reachability argument, not a claimed real-project FieldWorks ro
 ## Verification scope
 
 The expected identities were derived above, then checked with the Machine conformance harness
-built from `a20bce1231fab308810fa5a531257eef24f5df1b`, which includes merged #493. Ten rows pass
+built from `a20bce12`, which includes merged #493. Ten rows pass
 with memoization enabled and disabled, for both TV/IV and IV/TV template declaration order.
 Each replay reports one passed fixture, no failures and no skips. The reverse-order probe changes
 only the two template elements; the same `words.yaml` is retained.
 
-Run the harness with `--fixtures <root-containing-only-this-edge-case>` and repeat with
+Run an engine's self-check with `--fixtures <root-containing-only-this-edge-case>` (the sillsdev/machine runner's flag) and repeat with
 `--no-memoization`. The default committed order is TV then IV. Reverse only those two template
 elements in a scratch copy for the second pair of runs. A focused replay must discover exactly
 one fixture and check all ten rows, not merely return exit zero on an empty root.

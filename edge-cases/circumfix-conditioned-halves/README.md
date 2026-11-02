@@ -1,6 +1,6 @@
 # circumfix-conditioned-halves: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -102,7 +102,7 @@ reported). `pubbmo`/`puabmo` remained rejected and needed no change. The self-ch
 with zero divergence for this fixture, and the overall run ends `PASSED` (the one `[FAIL]` line
 remaining, `edge-cases/head-ambiguous-compounding`, is a pre-existing baselined
 rules-attribution-only divergence unrelated to this fixture). `machine` checkout commit
-`f150e2a005ce639f7d68ef17fb0db25b2f6aaa3c`. This fixture's `words.yaml` carries
+`f150e2a0`. This fixture's `words.yaml` carries
 `# oracle-provenance: founding-oracle`.
 
 ## Verification

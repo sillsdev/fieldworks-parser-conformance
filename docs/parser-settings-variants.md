@@ -25,7 +25,7 @@ Validation observed on 2026-10-22:
 - Selected option matrix: five fixtures, each with a default and two variants; all 15 runs / 81 word-run rows passed in C# HC and in the live PanGloss external adapter. Each side compared complete signature multisets and statuses.
 - PanGloss harness package: 53 tests passed, including malformed settings/expectations, deliberately wrong named expectations, and a capped parse that must not pass as a completed zero-analysis result.
 
-Reproduce the full C# self-check from the Machine checkout:
+Reproduce the full C# self-check from a sillsdev/machine checkout that mounts this repository as its `conformance/` directory:
 
 ```powershell
 dotnet run -c Release --project src/SIL.Machine.Morphology.HermitCrab.Conformance -- --fixtures conformance --include-pathological

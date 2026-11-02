@@ -1,6 +1,6 @@
 # head-ambiguous-compounding: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references

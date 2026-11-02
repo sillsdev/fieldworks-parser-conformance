@@ -4,7 +4,7 @@ This synthetic grammar checks when an ordinary rule may follow a final or non-fi
 and when a partial word survives an applicable template battery with no matching output.
 
 The ten expected rows were derived from the synthesis gates and checked against C# at
-`8bad193454a14422a3be59c3156513691ae3da3b` on 2026-09-15. The original PanGloss staged fixture
+`8bad1934` on 2026-09-15. The original PanGloss staged fixture
 records earlier C# checks at `4823a05a`; no new parser implementation is included here.
 
 - DAK: a non-partial ordinary rule is blocked after a final template. The same rule works after

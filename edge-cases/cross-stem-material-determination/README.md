@@ -1,6 +1,6 @@
 # cross-stem-material-determination: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -121,7 +121,7 @@ staged copy in the same change (graduation guard enforces this mechanically).
 ## Oracle provenance (re-verified 2026-09-16)
 
 `rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# founding oracle,
-machine commit f150e2a005ce639f7d68ef17fb0db25b2f6aaa3c) against the template-slot grammar:
+machine commit f150e2a0) against the template-slot grammar:
 PASS, every word's signature and traced `rules:` list matched. The "Oracle discipline" and
 "Verification" sections above describe how the fixture was originally authored (stratum-level
 `mrSfx`), not its current verification status.

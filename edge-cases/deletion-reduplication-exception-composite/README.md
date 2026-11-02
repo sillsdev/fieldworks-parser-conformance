@@ -1,6 +1,6 @@
 # deletion-reduplication-exception-composite: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -32,7 +32,7 @@ deletion/nasal-assimilation rules are untouched.
 ## Oracle provenance (reconciled 2026-09-16)
 
 `rust/tools/oracle-conformance.ps1` ran `hc-conformance.exe` self-check (C# founding oracle,
-machine commit `f150e2a005ce639f7d68ef17fb0db25b2f6aaa3c`) directly against this fixture's
+machine commit `f150e2a0`) directly against this fixture's
 grammar.xml + words.yaml after the conversion above: PASS -- every word's signature and traced
 `rules:` list matched, unchanged from the pre-conversion run. The fixture's `words.yaml` carries
 `# oracle-provenance: founding-oracle`.

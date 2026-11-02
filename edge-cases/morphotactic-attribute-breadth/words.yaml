@@ -45,7 +45,7 @@
 #     repetition caps, and every other word below hold identically; no word's analysis set changed.
 #
 # What did NOT survive, and is not covered by any other fixture (see
-# conformance/docs/engine-only-fixture-retirement.md for the full per-construct disposition):
+# docs/engine-only-fixture-retirement.md for the full per-construct disposition):
 #   - RealizationalRule itself (mrReal/mrRealDecoy, kulru/kulsi) -- languages/fusional-realizational-
 #     morphology still exercises RealizationalRule, but stays fieldworks_producible: false for that
 #     construct (see that fixture's own words.yaml); no producible fixture anywhere in this suite
@@ -78,7 +78,7 @@
 #   - outputType="append" specifically (see above) -- no fixture in this suite has a producible
 #     substitute for it. The two fixtures that exercised it, mpr-group-overwrite-without-realizational
 #     and mpr-overwrite-order-dependence, were fieldworks_producible: false and have been removed
-#     (conformance/docs/engine-only-fixture-retirement.md), so nothing here exercises it now.
+#     (docs/engine-only-fixture-retirement.md), so nothing here exercises it now.
 #
 # PARTIAL SHAPES. HCLoader sets partial on a stem entry only when its MSA has no part of speech
 # (HCLoader.cs:757, :817) and on a rule only outside a slot (:1031), with no outputPartOfSpeech.
@@ -88,7 +88,7 @@
 
 # COVERAGE.CSV REGRESSION, FOUND AND FIXED separately from the conversion itself: the conversion (and
 # its later WIP expansion) never re-added per-word/per-parse "exercises:" tags, so every word in this
-# fixture silently stopped contributing to conformance/coverage.csv -- the whole MorphotacticAttributeBreadth
+# fixture silently stopped contributing to coverage.csv -- the whole MorphotacticAttributeBreadth
 # block (28 rows) vanished with no replacement and no test caught it (parity-check.py and
 # CheckedInCoverageTablesAreUpToDate both only check that coverage.csv matches what WordsYamlLoader
 # actually finds, and a fixture with zero "exercises:" tags matches that trivially). Every word below

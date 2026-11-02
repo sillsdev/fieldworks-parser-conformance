@@ -1,6 +1,6 @@
 # ambiguous-disagree-repeated-minus-partial-focus: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -16,7 +16,7 @@ revision, not current verification. PanGloss-specific assertions remain in PanGl
 
 Synthetic repeated minus alpha on a complete class and an agreeing focus on
 a partial class. hc.dll requires ii from iu.
-Oracle: hc.dll, Machine `18cf242f4b114b0eb9bac304b4b171ca2f499a39`; 16 complete rows.
+Oracle: hc.dll, Machine `18cf242f`; 16 complete rows.
 Analysis binding: docs/divergences/069-analysis-binds-overridden-alpha.md.
 Confirmed FST proposal: docs/divergences/067-ambiguous-disagreement-proposals.md.
 FieldWorks: HCLoader.cs:2338-2344,2745-2770,2799-2808.

@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=8bad193454a14422a3be59c3156513691ae3da3b verified-date=2026-09-15
+# oracle-provenance: founding-oracle machine-commit=8bad1934 verified-date=2026-09-15
 # Expected parses are derived from the grammar and checked against C#; see ../../docs/final-template-partial-discriminators.md.
 language: FinalTemplatePartialDiscriminators
 inspired_by: ["synthetic final-template partial-rule discriminator probe (not modeling any real language)"]

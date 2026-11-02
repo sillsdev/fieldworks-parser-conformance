@@ -113,11 +113,11 @@ words:
     provenance: "docs/conformance-staging-plan.md pathology catalog (agglutinative-Austronesian row): MPR-gated rule exception"
     expect_fail: true
     blocked_by: [mrSuf]
-    # Claims the McDc:PresentGatedForm cell of conformance/dataflow-obligations.tsv's obligation matrix.
-    # DataflowClaimGate checks this against conformance/dataflow-obligations.tsv, never trusts it,
+    # Claims the McDc:PresentGatedForm cell of the consuming engine's data-flow obligation matrix (kept by sillsdev/machine, not in this repository).
+    # The engine's gate checks the claim against its own ledger, never trusts it,
     # and recomputes severing/before/after by re-severing the writer and reader named in the ledger
     # row -- the inline values below are what it recomputed against, not what it trusts blindly.
-    claimed_cells:
+    claims:
       - cell: "MorphologicalPhonologicalRuleFeature::LexicalEntry.ruleFeatures->MorphologicalInput.excludedMPRFeatures::McDc:PresentGatedForm"
         severing: >-
           either VOKAD's LexicalEntry.ruleFeatures="mprException" (the writer) or mrSuf's
@@ -163,7 +163,7 @@ words:
       mentanukam for its own fail->pass flip to be the one reported.
     expect_fail: true
     blocked_by: [prObstruentDeletion]
-    claimed_cells:
+    claims:
       - cell: "MorphologicalPhonologicalRuleFeature::MorphologicalOutput.MPRFeatures->PhonologicalSubrule.excludedMPRFeatures::McDc:PresentGatedForm"
         severing: >-
           either mrDelExclSrc's own MorphologicalOutput.MPRFeatures="mprAffixDelExcl" write (the

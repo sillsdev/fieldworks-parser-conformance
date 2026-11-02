@@ -53,11 +53,11 @@ words:
     blocked_by: [prNonContig]
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-    # Claims the McDc:AbsentGatedForm cell of conformance/dataflow-obligations.tsv's obligation matrix.
-    # DataflowClaimGate checks this against conformance/dataflow-obligations.tsv, never trusts it,
+    # Claims the McDc:AbsentGatedForm cell of the consuming engine's data-flow obligation matrix (kept by sillsdev/machine, not in this repository).
+    # The engine's gate checks the claim against its own ledger, never trusts it,
     # and recomputes severing/before/after by re-severing the writer and reader named in the ledger
     # row -- the inline values below are what it recomputed against, not what it trusts blindly.
-    claimed_cells:
+    claims:
       - cell: "PartOfSpeech::LexicalEntry.partOfSpeech->PhonologicalSubrule.requiredPartsOfSpeech::McDc:AbsentGatedForm"
         severing: >-
           ADIL's own partOfSpeech="posCircum" (the writer), or prNonContig's PhonologicalSubrule

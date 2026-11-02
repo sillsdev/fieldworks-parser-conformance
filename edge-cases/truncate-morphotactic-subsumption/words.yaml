@@ -2,8 +2,8 @@
 language: TruncateSubsumptionProbe
 inspired_by: ["synthetic affix truncation and inserted-host attribution probe"]
 sources:
-  - "Machine #480 truncate-morphotactic at fa8d9b2540962981add315d06203e928a11c1853; companion adds root ag, prefix X, and explicit MorphemeId values"
-  - "Combined C# oracle: Machine #556 d98d12a5d514ce589d7495c71d055830e061a418 plus Machine #500 ApplyRhs relocation at 157c031ef272d07c900db41b2d4a8852b13f64b0"
+  - "Machine #480 truncate-morphotactic at fa8d9b25; companion adds root ag, prefix X, and explicit MorphemeId values"
+  - "Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e"
 requires: []
 fieldworks_producible: true
 words:

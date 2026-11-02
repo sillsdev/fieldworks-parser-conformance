@@ -1,4 +1,4 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 # HAND DERIVATION. Every suffix is a rule with several allomorphs, each with the stem's final
 # context in its input pattern (grammar.xml). The input patterns of one rule are mutually exclusive, so exactly one
 # allomorph is valid for a given stem and no disjunctive re-check rejects. Rules: nouns take PL, POSS, CASE

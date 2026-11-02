@@ -6,7 +6,7 @@ identities. The grammar is unchanged.
 ## Provenance and #506 behavior
 
 The entries for `a` and `ga` are hand-derived from forward synthesis, not transcribed from the
-unpatched C# oracle. At #480 head `fa8d9b2540962981add315d06203e928a11c1853`, the C# parser
+unpatched C# oracle. At #480 head `fa8d9b25`, the C# parser
 occasionally loses tied, zero-width morph annotations when it copies a word (`Shape.CopyTo` reaches
 `AnnotationList.GetNodes` and `BidirList.Find`). The resulting signatures are nondeterministic even
 though the parser still returns two parses for `a` and five for `ga`. These rows intentionally make
@@ -15,8 +15,8 @@ all annotations. Do not regenerate these expectations from an unpatched run. The
 [Machine #506](https://github.com/sillsdev/machine/issues/506).
 
 The expected multiset was observed on the directional-boundary fix
-`d98d12a5d514ce589d7495c71d055830e061a418`, based at
-`259920414132bdd5a85542722d9af5509aed8943`: ten fresh loads returned the complete two-parse and
+`d98d12a5`, based at
+`25992041`: ten fresh loads returned the complete two-parse and
 five-parse sets. The fix is proposed in [Machine #556](https://github.com/sillsdev/machine/pull/556).
 It is not included in this fixture branch.
 

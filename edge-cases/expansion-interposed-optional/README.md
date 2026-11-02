@@ -1,6 +1,6 @@
 # expansion-interposed-optional: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -19,7 +19,7 @@ revision, not current verification. PanGloss-specific assertions remain in PanGl
 Issue 8 tracks expansion-rule unapplication when an earlier deletion unapplication can insert an
 Optional segment between the expansion's RHS target positions. The pinned C# regression is
 `ExpandRuleUnappliesAcrossInterposedOptionalSegment` in Machine's
-`RewriteRuleTests.cs` at commit `aab4c59819adb7b366915e09df2fb28c62b8c03a`.
+`RewriteRuleTests.cs` at commit `aab4c598`.
 
 This fixture reduces that shape to one root and two rules. Forward synthesis maps `ROOT/u` to `ii`
 with `prExpand`; `prDelete` then deletes `z` only in `i_z_i`, so it is inert for this root. During
@@ -30,7 +30,7 @@ are negative controls.
 ## Oracle and status
 
 The expected complete identity is `ROOT|ii`; `words.yaml` is verified against the pinned C#
-`hc-conformance.exe` from Machine commit `aab4c59819adb7b366915e09df2fb28c62b8c03a`. Its self-check
+`hc-conformance.exe` from Machine commit `aab4c598`. Its self-check
 passed the fixture with the positive identity and traced rule `[prExpand]`; `u`, `i`, and `iz` each
 had no analysis.
 

@@ -4,7 +4,7 @@
 # both parse those words fine. The bug is in hc-foma's own byte/token handling around Unicode
 # NFD-decomposition, not in HermitCrab or in the grammar-model constructs any of this suite's 8
 # typological languages exercise (they use invented lexemes with plain ASCII segment inventories by
-# design, so none of them can host this trigger naturalistically) -- per conformance/README.md's
+# design, so none of them can host this trigger naturalistically) -- per README.md's
 # growth policy, this is therefore an edge-case (option 3: "engine-internal... a rule shape no real
 # grammar would contain"), not a new word in an existing language.
 #
@@ -28,7 +28,7 @@
 #
 # All signatures below are hand-derived (no multi-character segment representations exist in this
 # grammar, so no HermitCrabExtensions.ToRegexString parenthesization applies -- see
-# conformance/PROTOCOL.md section 3's addendum) and self-check-verified against the C# oracle before
+# PROTOCOL.md section 3's addendum) and self-check-verified against the C# oracle before
 # being checked in, per this suite's authoring discipline (signatures are authored-and-verified,
 # never blindly regenerated).
 

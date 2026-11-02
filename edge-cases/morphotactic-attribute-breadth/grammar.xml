@@ -20,7 +20,7 @@
        that depended on it (the MorphologicalRule@blockable="false" probe, the RealizationalRule@
        blockable="false" probe, both suppletive-sibling families) is gone, not converted: no
        FieldWorks-producible substitute exists for CheckBlocking itself (see
-       conformance/docs/engine-only-fixture-retirement.md).
+       docs/engine-only-fixture-retirement.md).
      - Main's own morphologicalRuleOrder="linear" mattered to this fixture's ground truth (an
        exclusion pair, since removed, was legible only because one order is tried), so
        PROTOCOL.md section 9's fourth usage-level check applied: MorphologicalRuleOrder must not
@@ -64,7 +64,7 @@
            fieldworks-producibility.tsv but had no witnessing fixture before this one. What is lost:
            outputType="append" itself. HCLoader never sets Output away from Overwrite, so append
            semantics have no FieldWorks-producible fixture anywhere in this suite; the two engine-only
-           fixtures that exercised it were removed (see conformance/docs/engine-only-fixture-retirement.md),
+           fixtures that exercised it were removed (see docs/engine-only-fixture-retirement.md),
            so this suite no longer exercises append at all. -->
       <MorphologicalPhonologicalRuleFeatureGroup matchType="all" features="mprA mprB">
         <Name>exceptionFeatures</Name>

@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a
+# oracle-provenance: founding-oracle machine-commit=aab4c598
 # C# hc.dll replay; see STAGING.md.
 language: BoundaryNarrowingProbe
 inspired_by: ["synthetic boundary-initial narrowing probe"]

@@ -1,7 +1,7 @@
 # HermitCrab grammar-model construct checklist
 #
-# This is the coverage-report key set: every conformance/languages/<name>/words.yaml and
-# conformance/edge-cases/<name>/words.yaml's per-parse and per-word "exercises:" entries are
+# This is the coverage-report key set: every languages/<name>/words.yaml and
+# edge-cases/<name>/words.yaml's per-parse and per-word "exercises:" entries are
 # expected to draw their values verbatim from this list. It is a data file, not compiled code, so a
 # new construct can be added here the moment a fixture needs it, without touching the harness.
 #

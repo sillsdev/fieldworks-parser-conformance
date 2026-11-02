@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-10-31
+# oracle-provenance: founding-oracle machine-commit=aab4c598 verified-date=2026-10-31
 # Replayed on hc.dll at Machine aab4c598 (see STAGING.md): the rows below are the oracle's own output.
 # Synthetic; no real language. The grammar is the per-copy form HCLoader emits for an enclitic entry (a clitic
 # rule of the Clitics stratum, without a part of speech, plus a stem entry copy) and a stem entry with two MoStemMsas (Verb, Noun) and a

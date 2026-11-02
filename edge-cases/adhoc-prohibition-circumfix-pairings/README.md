@@ -11,11 +11,11 @@ Synthetic. An ad hoc allomorph prohibition naming a circumfix lexeme form. A Fie
 
 ## Oracle
 
-hc.dll at Machine `aab4c59819adb7b366915e09df2fb28c62b8c03a`, self-check PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-10-30`.
+hc.dll at Machine `aab4c598`, self-check PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-30`.
 
 ## FieldWorks witness
 
-`fieldworks/project.fwdata` is backed out of `grammar.xml` via LibLCM, not hand-edited: `tools/xample-projector` `author`, extended (extended with MSA-copies, environment-copies, circumfix and variant-entry options; the patch is not part of this repository) so that a rule whose subrules are the prefix x suffix cross product becomes one circumfix entry (created through `ILexEntryFactory.Create`, which makes the first prefix and suffix halves itself; the other halves are added) and `--half-prohib` adds the half-only prohibitions. FieldWorks 9.3.10.1452, LibLCM 11.0.0.55173.
+`fieldworks/project.fwdata` is backed out of `grammar.xml` via LibLCM, not hand-edited: the `author` command of the PanGloss `xample-projector` tool (kept in the PanGloss repository, not here), extended (extended with MSA-copies, environment-copies, circumfix and variant-entry options; the patch is not part of this repository) so that a rule whose subrules are the prefix x suffix cross product becomes one circumfix entry (created through `ILexEntryFactory.Create`, which makes the first prefix and suffix halves itself; the other halves are added) and `--half-prohib` adds the half-only prohibitions. FieldWorks 9.3.10.1452, LibLCM 11.0.0.55173.
 `author --grammar grammar.xml --name AdhocCirc --half-prohib aGa=mrCirc:ta`
 The authored project has one circumfix entry (lexeme form `ta- -ka`, halves ta, to, ka, ki), two MoAlloAdhocProhibs naming the circumfix lexeme form (one per direction) and two naming the half `ta` on `ga`. Loaded back through HCLoader it emits four pairing subrules and eight AllomorphCoOccurrenceRules; the half-only prohibitions add none.
 `phonology-mutations.yaml` `base_sha256` matches the project; the `remove-g-only` case ran through `mutate` (exit 0).

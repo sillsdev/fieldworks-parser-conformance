@@ -11,11 +11,11 @@ Synthetic. An ad hoc allomorph prohibition on a prefix allomorph that has two en
 
 ## Oracle
 
-hc.dll at Machine `aab4c59819adb7b366915e09df2fb28c62b8c03a`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-10-30`.
+hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-30`.
 
 ## FieldWorks witness
 
-`fieldworks/project.fwdata` is backed out of `grammar.xml` via LibLCM, not hand-edited: `tools/xample-projector` `author`, extended (extended with MSA-copies, environment-copies, circumfix and variant-entry options; the patch is not part of this repository) with `--msa-copies`, `--env-copies`, `--variant-of`, circumfix rules and `--half-prohib`. FieldWorks 9.3.10.1452, LibLCM 11.0.0.55173.
+`fieldworks/project.fwdata` is backed out of `grammar.xml` via LibLCM, not hand-edited: the `author` command of the PanGloss `xample-projector` tool (kept in the PanGloss repository, not here), extended (extended with MSA-copies, environment-copies, circumfix and variant-entry options; the patch is not part of this repository) with `--msa-copies`, `--env-copies`, `--variant-of`, circumfix rules and `--half-prohib`. FieldWorks 9.3.10.1452, LibLCM 11.0.0.55173.
 `author --grammar grammar.xml --name AdhocEnv --msa-copies mrTa1,mrTa2 --env-copies subTa1a,subTa1b --env-copies subTa2a,subTa2b   (ParserParameters gets MergeMSAs=false)`
 The authored project has one prefix allomorph with two PhoneEnvRC environments, two MoInflAffMsas, and two MoAlloAdhocProhibs (one per direction). Loaded back through HCLoader it emits the same four copies per MSA pair and eight AllomorphCoOccurrenceRules.
 `phonology-mutations.yaml` `base_sha256` matches the project; the `remove-t-only` case ran through `mutate` (exit 0). (`g` is referenced by the environment's natural class, so the removal case names `t`.)

@@ -1,6 +1,6 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 # Stress fixture for excluded co-occurrence pruning. The expected parses are engine output, not an independent
-# enumeration: the original parses are master's (see conformance-stress/README.md) and the FLEx null-affix rows
+# enumeration: the original parses are master's (see stress/README.md) and the FLEx null-affix rows
 # were regenerated from the #480 engine and checked against the grammar.
 language: StressExcludedCoOccurrence
 inspired_by: ["synthetic prefix-complex stress probe (not modeling any real language)"]

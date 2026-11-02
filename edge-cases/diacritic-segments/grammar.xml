@@ -3,7 +3,7 @@
 <HermitCrabInput>
   <Language>
     <Name>LatinDiacriticProbe</Name>
-    <!-- Engine-internal probe (conformance/README.md's growth-policy option 3): pins the
+    <!-- Engine-internal probe (README.md's growth-policy option 3): pins the
          PanGloss hc-foma (alternative FST) engine's Latin-diacritic zero-parse bug (precomposed
          é/ö/ñ/î, NFD-decomposition interacting badly with that engine's own byte/token handling —
          not a HermitCrab bug, and not a phenomenon any of the 8 typological languages would

@@ -1,24 +1,25 @@
 # Stress fixtures
 
 These grammars are for timing and optimization work on the analysis pass. They are not conformance
-fixtures: they live outside `conformance/`, so no ledger, manifest, coverage report or default runner
-sees them. Each `words.yaml` starts with `# kind: stress`. They follow the same rule as the suite: only grammars a
-FieldWorks project can produce (see the conformance README section on what the XML can say but FieldWorks
-cannot).
+fixtures: they live under `stress/`, outside `edge-cases/` and `languages/`, so no manifest, coverage report
+or default runner sees them. Each `words.yaml` starts with `# kind: stress`. They follow the same rule as the
+suite: only grammars a FieldWorks project can produce (see the
+[README section on what the XML can say but FieldWorks cannot](../README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)).
 
 Expected output is a parity check: the original parses came from `master` (three identical runs were
 required). The FLEx-style null-affix rows were updated against the current engine and reviewed against the
 grammars; an optimization must return the same parses. The measure of a change is the number of
 analysis steps, not wall-clock time.
 
-Run them only on request:
+Run them only on request. In a sillsdev/machine checkout that mounts this repository as `conformance/`:
 
 ```
 dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests --filter TestCategory=Stress
-dotnet run --project src/SIL.Machine.Morphology.HermitCrab.Conformance -- --fixtures conformance-stress --include-pathological
+dotnet run --project src/SIL.Machine.Morphology.HermitCrab.Conformance -- --fixtures conformance/stress --include-pathological
 ```
 
-The test fixture is `[Explicit]` and `[Category("Stress")]`, so a plain `dotnet test` skips it.
+The test fixture is `[Explicit]` and `[Category("Stress")]`, so a plain `dotnet test` skips it. The issue numbers
+in the table below (#490, #560, #572, #574, #575, #576, #579, #548) are sillsdev/machine issues and pull requests.
 
 | Fixture | What it exercises | Built for |
 |---|---|---|

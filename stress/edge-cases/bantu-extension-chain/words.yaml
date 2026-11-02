@@ -1,6 +1,6 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 # StressBantuExtensionChain: dense-exclusion stress fixture. The expected parses are engine output, not an
-# independent enumeration: they are master's parses (see conformance-stress/README.md).
+# independent enumeration: they are master's parses (see stress/README.md).
 language: StressBantuExtensionChain
 inspired_by: ["Bantu-style verb extension chain (synthetic; not modeling a real language)"]
 requires: []

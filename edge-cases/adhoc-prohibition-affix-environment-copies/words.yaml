@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-10-30
+# oracle-provenance: founding-oracle machine-commit=aab4c598 verified-date=2026-10-30
 # Replayed on hc.dll at Machine aab4c598 (see README.md): the rows below are the oracle's own output.
 # Synthetic; no real language.
 # The grammar is the per-copy form HCLoader emits for a prefix entry whose one allomorph has two environments

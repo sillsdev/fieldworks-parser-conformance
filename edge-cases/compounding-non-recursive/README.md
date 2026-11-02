@@ -1,6 +1,6 @@
 # compounding-non-recursive: provenance and regression rationale
 
-Graduated from PanGloss staging in Machine PR [#480](https://github.com/sillsdev/machine/pull/480).
+Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -67,7 +67,7 @@ grammar, not a regression.
 ## Oracle provenance (re-verified 2026-09-16)
 
 `rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# founding oracle,
-machine commit f150e2a005ce639f7d68ef17fb0db25b2f6aaa3c) against the converted grammar: PASS,
+machine commit f150e2a0) against the converted grammar: PASS,
 every word's signature and traced `rules:` list matched. The fixture was first authored against
 `pg_parse::Morpher` alone and reconciled against the oracle on 2026-08-31; the same five
 load-bearing scenarios are independently proven propose-vs-confirm in

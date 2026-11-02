@@ -17,8 +17,8 @@ The construct numbers used below are that section's row numbers.
 27 fixtures were deleted. Four were later restored as producible grammars, so 23 stay deleted
 (see "Restored" below). 133 fixtures remain (6 `languages/`, 127 `edge-cases/`), every one
 `fieldworks_producible: true`; two of them, `edge-cases/compound-max-applications` and
-`edge-cases/final-template-partial-trace`, are new. The count comes from `conformance/generated/hc-conformance-manifest.v1.json`
-(`--check-manifest`), not from this page.
+`edge-cases/final-template-partial-trace`, are new. The count comes from `generated/hc-conformance-manifest.v2.json`
+(`python3 scripts/generate_manifest.py --check`), not from this page.
 
 ## Marked producible without a grammar change
 
@@ -175,6 +175,10 @@ Counts by row: 1 has 9 fixtures, 2 has 6, 3 has 2, 4 has 3, 5 has 1, 7 has 3, 8 
 needs several rows is counted under each.
 
 ## Trace-verified surfaces lost and gained
+
+The sections from here to the end record how the retirement moved the coverage measurements of sillsdev/machine
+(its trace floor, its ledgers and its test classes). Those files and tests are kept in sillsdev/machine, not in
+this repository; the section is history, kept for the reasoning.
 
 `GrammarCoverageGateTests.TraceFloor` counts the surfaces a verified parse's rule trace proves. The
 corpus had 61 before the producible rewrite and has 58 now; the floor was lowered once for each step.

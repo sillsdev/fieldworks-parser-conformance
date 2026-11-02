@@ -79,7 +79,7 @@ words:
     blocked_by: [crJoin]
     exercises:
       - "CompoundingRule"
-    claimed_cells:
+    claims:
       - cell: "PartOfSpeech::CompoundingRule.outputPartOfSpeech->MorphologicalRule.requiredPartsOfSpeech::McDc:AbsentGatedForm"
         severing: >-
           either crJoin's own CompoundingRule.outputPartOfSpeech="posOther" (the writer) or

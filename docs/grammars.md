@@ -211,6 +211,6 @@ the `zero` cells the stretch may also be empty.
 
 ## Stress grammars
 
-The 16 grammars under `conformance-stress/` (at the repository root, outside this directory) are timing
-probes for the analysis pass, not fixtures, and no ledger counts them. That directory's README lists each
+The 16 grammars under `stress/` (at the repository root, beside `edge-cases/`) are timing
+probes for the analysis pass, not fixtures, and no coverage ledger counts them. That directory's README lists each
 one and what it exercises. They follow the same rule: only grammars a FieldWorks project can produce.

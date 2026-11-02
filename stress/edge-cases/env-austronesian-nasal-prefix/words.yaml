@@ -1,4 +1,4 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 language: AustronesianNasalPrefixes
 inspired_by: ["Synthetic Austronesian nasal-assimilating meN- and peN- prefixes with place-conditioned allomorphs and a locative suffix with a zero allomorph (not modeling one real language)."]
 sources: []
@@ -8,7 +8,7 @@ fieldworks_producible: true
 # expected analyses were checked against their input patterns and the rule order.
 # The place conditions sit in each allomorph's input pattern (the stem-side context), where HCLoader
 # writes them. The grammar carries no RequiredEnvironments, so despite its name this fixture does not
-# exercise environment checking. Open item: a near-side density fixture, in conformance-stress/README.md.
+# exercise environment checking. Open item: a near-side density fixture, in stress/README.md.
 budget_ms: 60000
 words:
   - word: paba

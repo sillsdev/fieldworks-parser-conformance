@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=a20bce1231fab308810fa5a531257eef24f5df1b verified-date=2026-09-15
+# oracle-provenance: founding-oracle machine-commit=a20bce12 verified-date=2026-09-15
 # Expected identities follow forward derivations, not a Rust parser run.
 language: SharedTemplateUnconstrainedSuffix
 inspired_by: ["synthetic shared-template probe, not a model of a real language"]

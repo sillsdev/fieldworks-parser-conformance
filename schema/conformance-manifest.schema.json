@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/sillsdev/machine/conformance/schema/conformance-manifest.schema.json",
-  "title": "hc-conformance-manifest/v1",
-  "description": "Provenance and integrity for the conformance fixtures. Not a copy of the ground truth: words.yaml is the canonical authored format and grammar.xml the authoritative grammar; this records paths, formats and hashes only. All paths are canonical repository-relative paths using '/', never relative to this manifest.",
+  "$id": "https://github.com/sillsdev/fieldworks-parser-conformance/schema/conformance-manifest.schema.json",
+  "title": "hc-conformance-manifest/v2",
+  "description": "Provenance and integrity for the conformance fixtures. Not a copy of the ground truth: words.yaml is the canonical authored format and grammar.xml the authoritative grammar; this records paths, formats and hashes only. All paths are canonical paths relative to the root of the suite repository, using '/' and with no leading directory name, never relative to this manifest.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -15,7 +15,7 @@
     "fixtures"
   ],
   "properties": {
-    "formatVersion": { "const": "hc-conformance-manifest/v1" },
+    "formatVersion": { "const": "hc-conformance-manifest/v2" },
     "wordsAuthoringFormatVersion": { "const": "hc-conformance-words/v1" },
     "grammarFormatVersion": { "const": "sil-machine-hermit-crab-input-xml/v1" },
     "dtdPath": { "$ref": "#/$defs/path" },

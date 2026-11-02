@@ -1,4 +1,4 @@
-# kind: stress (timing and optimization parity fixture, not conformance; see conformance-stress/README.md)
+# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)
 language: BantuConcordAllomorphy
 inspired_by: ["Synthetic Bantu-style noun-class concord and tense allomorphy (not modeling one real language): a concord prefix with four place-conditioned allomorphs plus a fallback, a negative prefix, and a tense suffix with a zero allomorph; conditioned allomorphs precede the fallback so synthesis tries them."]
 sources: []
@@ -8,7 +8,7 @@ fieldworks_producible: true
 # expected analyses were checked against their input patterns and the rule order.
 # The place conditions sit in each allomorph's input pattern (the stem-side context), where HCLoader
 # writes them. The grammar carries no RequiredEnvironments, so despite its name this fixture does not
-# exercise environment checking. Open item: a near-side density fixture, in conformance-stress/README.md.
+# exercise environment checking. Open item: a near-side density fixture, in stress/README.md.
 budget_ms: 60000
 words:
   - word: papa
