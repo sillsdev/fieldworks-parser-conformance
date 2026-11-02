@@ -20,9 +20,10 @@ loader source could write a construct is weaker evidence. Until a fixture has a 
 read from the loader. Only the 9 fixtures that carry a witness are certified today (all under `edge-cases/`);
 the other 124 of the 133 fixtures rest on the loader reading alone.
 
-**Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) mounts it as a
-git submodule at `conformance/`, pinned to a commit on `main`; PanGloss mounts it as a submodule that
-follows `main` (`branch = main`). Both run it through their own runners. Their gates, ledgers and
+**Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) and PanGloss each
+name a commit of `main` in a file called `conformance.commit` and clone this repository at that commit into an
+ignored `conformance/` directory; neither uses a submodule, and `HC_CONFORMANCE_SUITE` names a local copy
+instead. Both run it through their own runners. Their gates, ledgers and
 coverage measurements live in their own repositories. To change the
 suite, read [AGENTS.md](AGENTS.md). Where a fixture or document names a ledger, a test or a source path
 of one of those repositories, it is a historical or cross-repository reference, not a file here.
@@ -112,7 +113,7 @@ What that product genuinely contributed was provenance, not case data, so that i
 A consumer reads the manifest to discover fixtures and verify integrity, then reads `grammar.xml`
 and `words.yaml` directly for the actual grammar and cases. Paths inside the manifest are
 relative to the root of this repository, with no leading directory name (`edge-cases/<name>/grammar.xml`),
-never relative to the manifest itself. A consumer that mounts this repository as `conformance/` prepends
+never relative to the manifest itself. A consumer that clones this repository into `conformance/` prepends
 that itself. Version 2 dropped the `conformance/` prefix that version 1 carried.
 
 Regenerate with `python3 scripts/generate_manifest.py`; `python3 scripts/generate_manifest.py --check` verifies

@@ -1,7 +1,7 @@
 # The conformance suite: documentation
 
 These documents ship **with** the fixtures. That is deliberate: a consumer receives this repository and
-nothing else (sillsdev/machine and PanGloss mount it as a submodule), so anything explaining the suite that
+nothing else (sillsdev/machine and PanGloss clone it at a pinned commit), so anything explaining the suite that
 lives outside it may as well not exist.
 
 The suite covers only grammars a real FieldWorks project can produce. A grammar FieldWorks cannot

@@ -279,7 +279,8 @@ Two consequences:
   `batch <words.txt> <output.tsv>` with the two paths substituted in, then (2) invokes
   `hc.dll -i <grammar> -s <that temp script>`. Not required by any current acceptance criteria
   (self-check plus `--adapter` against `hc-rs` suffices), but straightforward if ever needed. sillsdev/machine
-keeps such a wrapper script; it is not part of this repository.
+no longer keeps such a wrapper script: its last copy, `conformance/adapters/hc-dotnet-wrapper.sh`, is in
+sillsdev/machine commit `69c4ee0b` (see [PROVENANCE.md](PROVENANCE.md)). It is not part of this repository.
 
 ## 8. Host configuration every fixture was generated under
 
