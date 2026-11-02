@@ -37,9 +37,9 @@ You need **`PROTOCOL.md` and nothing else here.** Your entire obligation is to p
 parses for each fixture's `grammar.xml` and words. If you do, you inherit whatever this suite covers.
 
 The measurements that justify calling the fixture set complete (counterfactual census, interface inventory,
-severance sweep, interaction chains, data-flow obligations) are kept by sillsdev/machine, because they are
-computed by running its HermitCrab engine. They are not part of this repository, and you are never measured
-against them.
+severance sweep, interaction chains, data-flow obligations) are computed by running sillsdev/machine's HermitCrab engine. They are not part of this repository, and
+you are never measured against them. They are not in sillsdev/machine#615 either; the last copy is in
+sillsdev/machine commit `69c4ee0b` (see [PROVENANCE.md](../PROVENANCE.md)).
 
 ## If you are extending the suite
 

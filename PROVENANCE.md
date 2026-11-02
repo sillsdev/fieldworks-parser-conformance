@@ -44,7 +44,8 @@ Some fixture comments and READMEs cite a commit by eight characters or fewer (fo
 headers, "history row" notes, or "fixed at" notes). They name commits of sillsdev/machine, PanGloss, or their
 branches at the time of writing, and are history, not instructions. The same applies to paths such as
 `rust/tools/...`, `conformance/adapters/...`, `semantic-coverage-*.tsv` and `tools/xample-projector`, which belong to
-those repositories and not to this one.
+those repositories and not to this one (the ledgers and adapter scripts of sillsdev/machine survive in its commit
+`69c4ee0b`, row above).
 
 ## FieldWorks witnesses
 

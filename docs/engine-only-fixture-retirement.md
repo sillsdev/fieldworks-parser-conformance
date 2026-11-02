@@ -58,7 +58,7 @@ except where listed.
     `head-ambiguous-compounding`, `recursive-endocentric-compounding`,
     `subrule-morphosyntactic-gating`, `guesser-pattern-root-fallback`,
     `pattern-root-required-environment`, `standalone-combining-mark`); the oracle found no change
-    in any word. `morphological-rule-order-measurement.md` has the count.
+    in any word. `morphological-rule-order-measurement.md` has the count (last copy: sillsdev/machine commit `69c4ee0b`).
   * 18 fixtures dropped `outputPartOfSpeech` from every slot rule. No row changed.
   * `edge-cases/morphotactic-attribute-breadth`: the partial stem entry `eNap` lost its part of
     speech, the partial slot rule `mrPartial` became the ordinary suffix `mrMo` (so `kulmo`'s
@@ -177,8 +177,8 @@ needs several rows is counted under each.
 ## Trace-verified surfaces lost and gained
 
 The sections from here to the end record how the retirement moved the coverage measurements of sillsdev/machine
-(its trace floor, its ledgers and its test classes). Those files and tests are kept in sillsdev/machine, not in
-this repository; the section is history, kept for the reasoning.
+(its trace floor, its ledgers and its test classes). Those files and tests are not in this repository or in sillsdev/machine#615; their last copy is in
+sillsdev/machine commit `69c4ee0b`. The section is history, kept for the reasoning.
 
 `GrammarCoverageGateTests.TraceFloor` counts the surfaces a verified parse's rule trace proves. The
 corpus had 61 before the producible rewrite and has 58 now; the floor was lowered once for each step.
