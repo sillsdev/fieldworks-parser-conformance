@@ -73,10 +73,6 @@ suite) — that test is what actually gates CI; the throwaway dump test was dele
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/infix-interdigitation/`. On acceptance, delete this staged copy in
-the same change (graduation guard enforces this mechanically).
-
 ## Oracle provenance (reconciled 2026-08-31)
 
 

@@ -95,10 +95,6 @@ expected for this fixture; the committed regression test asserts the proposal di
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/circumfix-in-template-slot/`. On acceptance, delete this staged
-copy in the same change (graduation guard enforces this mechanically).
-
 ## Oracle provenance (reconciled 2026-08-31)
 
 

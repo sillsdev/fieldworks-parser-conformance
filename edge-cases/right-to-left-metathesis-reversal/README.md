@@ -109,7 +109,3 @@ oracle's own trace (`[mrRtlReversal]` for both). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.
 
 ## Graduation
-
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/right-to-left-metathesis-reversal/`. On acceptance, delete this
-staged copy in the same change (graduation guard enforces this mechanically).

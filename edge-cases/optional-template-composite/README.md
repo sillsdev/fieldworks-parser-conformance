@@ -124,10 +124,6 @@ matches exactly, including the `monu`/vacuous-slot double analysis and the trunc
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/optional-template-composite/`. On acceptance, delete this staged
-copy in the same change (graduation guard enforces this mechanically).
-
 ## Also depended on by task 7.7 (added 2026-08-03)
 
 This is **complete-template exercise 2** of the first `Morphotactics -> BoundaryCleanup` vertical

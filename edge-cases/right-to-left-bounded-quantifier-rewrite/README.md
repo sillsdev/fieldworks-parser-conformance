@@ -85,10 +85,6 @@ promoted to `Admit`.
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/right-to-left-bounded-quantifier-rewrite/`. On acceptance, delete this
-staged copy in the same change (graduation guard enforces this mechanically).
-
 ## Founding-oracle verification (update)
 
 Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` self-check): both

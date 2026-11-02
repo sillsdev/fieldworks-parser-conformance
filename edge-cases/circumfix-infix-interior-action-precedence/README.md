@@ -110,10 +110,6 @@ failed`, `346 words checked across 29 fixtures` (the whole default corpus, this 
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/circumfix-infix-interior-action-precedence/`. On acceptance, delete
-this staged copy in the same change (graduation guard enforces this mechanically).
-
 ## Oracle provenance (reconciled 2026-08-31)
 
 

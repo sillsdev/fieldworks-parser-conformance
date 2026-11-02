@@ -100,7 +100,3 @@ section above (hc.dll still has no CLI surface for `guessRoot: true`, so it rema
 re-checkable by hc.dll's own loader/schema.
 
 ## Graduation
-
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/guesser-pattern-root-fallback/`. On acceptance, delete this staged
-copy in the same change (graduation guard enforces this mechanically).

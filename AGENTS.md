@@ -55,8 +55,9 @@ section "Consuming the suite from another repository" describe the files; `schem
    fixtures you touched.
 7. Delete a fixture by removing its directory and its line in `docs/grammars.md`, then regenerating. Remove a
    `dead-rules-allowed.tsv` line that names it.
-8. Tell the consuming engines. Each pins a commit of this repository, so a change reaches them when they bump
-   their submodule; their own self-check and ledgers are regenerated on their side, not here.
+8. Tell the consuming engines. sillsdev/machine pins a commit of `main` in its submodule, so a change reaches
+   it when it bumps the pin; PanGloss follows `main`, so it sees a change once the commit is on `main`. Their
+   own self-check and ledgers are regenerated on their side, not here.
 
 ### 2a. Generated files
 

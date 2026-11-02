@@ -75,10 +75,6 @@ to actually support this construct.
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/recursive-endocentric-compounding/`. On acceptance, delete this staged
-copy in the same change (graduation guard enforces this mechanically).
-
 ## G11 addendum (2026-07-25)
 
 The `AnalyzerConfig::max_stem_count = 2` ceiling described above turned out to be a **faithful

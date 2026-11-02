@@ -122,10 +122,6 @@ checked across 35 fixtures (2 skipped)`, this fixture's 2 words included, all pa
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/circumfix-reduplication-precedence/`. On acceptance, delete this
-staged copy in the same change (graduation guard enforces this mechanically).
-
 ## Oracle provenance (reconciled 2026-08-31)
 
 

@@ -98,11 +98,6 @@ actually gates CI; the throwaway dump test was deleted once transcription was do
 
 ## Graduation
 
-Not yet proposed upstream (no `sillsdev/machine` PR opened). Candidate destination:
-`machine/conformance/edge-cases/standalone-combining-mark/` — same two files (`grammar.xml`,
-`words.yaml`), re-verified against the C# founding oracle before acceptance. On acceptance, delete
-this staged copy in the same change (the graduation guard enforces this mechanically).
-
 ## Oracle provenance (reconciled 2026-08-31)
 
 

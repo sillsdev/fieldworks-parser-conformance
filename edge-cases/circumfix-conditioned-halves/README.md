@@ -115,7 +115,3 @@ traced [...]` when the declared list is wrong). The `expect_fail` words (`pubbmo
 were confirmed by the same self-check run producing no mismatch for them.
 
 ## Graduation
-
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/circumfix-conditioned-halves/`. On acceptance, delete this staged
-copy in the same change (graduation guard enforces this mechanically).

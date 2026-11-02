@@ -140,10 +140,6 @@ pg-parse --test conformance_fixtures_gate` pass/fail counts confirming this fixt
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/circumfix-cross-product-and-infix-drop/`. On acceptance, delete
-this staged copy in the same change (graduation guard enforces this mechanically).
-
 ## Oracle provenance (reconciled 2026-08-31)
 
 

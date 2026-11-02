@@ -101,7 +101,3 @@ from the oracle's own trace (`[prIterUnbounded]` for all three). `words.yaml`'s 
 `oracle-provenance: founding-oracle`.
 
 ## Graduation
-
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/unbounded-iterative-quantifier-expansion/`. On acceptance, delete
-this staged copy in the same change (graduation guard enforces this mechanically).

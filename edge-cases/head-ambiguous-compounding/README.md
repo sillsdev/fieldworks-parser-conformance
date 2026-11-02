@@ -151,10 +151,6 @@ set exactly. The test is committed un-`#[ignore]`d as a green regression guard.
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/head-ambiguous-compounding/`. On acceptance, delete this staged copy
-in the same change (graduation guard enforces this mechanically).
-
 ## Also depended on by task 7.7 (added 2026-08-03)
 
 A SECOND Rust gate now depends on this fixture's `dakimo` witness, alongside

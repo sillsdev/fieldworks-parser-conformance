@@ -92,10 +92,6 @@ Verification section below for the run result; `words.yaml`'s header carries
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/pattern-root-required-environment/`. On acceptance, delete this
-staged copy in the same change (graduation guard enforces this mechanically).
-
 ## Shared construct coverage note
 
 The shared tags record only ordinary mrPast affix analyses. No word reaches the guess-only

@@ -20,9 +20,10 @@ loader source could write a construct is weaker evidence. Until a fixture has a 
 read from the loader. Only the 9 fixtures that carry a witness are certified today (all under `edge-cases/`);
 the other 124 of the 133 fixtures rest on the loader reading alone.
 
-**Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) and PanGloss
-each mount it as a git submodule at `conformance/` and run it through their own runners; each pins a
-commit. Their gates, ledgers and coverage measurements live in their own repositories. To change the
+**Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) mounts it as a
+git submodule at `conformance/`, pinned to a commit on `main`; PanGloss mounts it as a submodule that
+follows `main` (`branch = main`). Both run it through their own runners. Their gates, ledgers and
+coverage measurements live in their own repositories. To change the
 suite, read [AGENTS.md](AGENTS.md). Where a fixture or document names a ledger, a test or a source path
 of one of those repositories, it is a historical or cross-repository reference, not a file here.
 The commit hashes cited in fixtures are plain text, explained in [PROVENANCE.md](PROVENANCE.md).

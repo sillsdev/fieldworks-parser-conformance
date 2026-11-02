@@ -75,7 +75,3 @@ load-bearing scenarios are independently proven propose-vs-confirm in
 grammar (with the subrule gate) because it tests the engine's group-aware subrule path directly.
 
 ## Graduation
-
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/compounding-non-recursive/`. On acceptance, delete this staged copy
-in the same change (graduation guard enforces this mechanically).

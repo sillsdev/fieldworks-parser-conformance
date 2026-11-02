@@ -114,10 +114,6 @@ asserting that they should.
 
 ## Graduation
 
-Not yet proposed upstream. Candidate destination:
-`machine/conformance/edge-cases/cross-stem-material-determination/`. On acceptance, delete this
-staged copy in the same change (graduation guard enforces this mechanically).
-
 ## Oracle provenance (re-verified 2026-09-16)
 
 `rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# founding oracle,
