@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- The two final-template gates in one grammar. A non-final and a final template share the suffix f.
+     A partial rule (an inflectional rule in no slot) and a derivational rule are the two kinds the gates
+     tell apart: after a final template only the partial one may follow (the derivational one is refused by
+     NonPartialRuleProhibitedAfterFinalTemplate), and straight after a non-final template only the
+     derivational one may follow (the partial one is refused by NonPartialRuleRequiredAfterNonFinalTemplate).
+     FieldWorks writes neither output features nor a required stem name on a slot rule, so the slot rules
+     carry none. -->
+<HermitCrabInput>
+  <Language>
+    <Name>FinalTemplatePartialTrace</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posV"><Name>V</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="table1">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cG"><Representations><Representation>g</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cF"><Representations><Representation>f</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cQ"><Representations><Representation>q</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="mrPartial mrTail">
+        <Name>Morphology</Name>
+        <MorphologicalRuleDefinitions>
+          <!-- Slot rule of the non-final template. Its suffix f is the final template's suffix too. -->
+          <MorphologicalRule id="mrNonFinal" requiredPartsOfSpeech="posV">
+            <Name>Non-final template suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subNonFinal">
+                <MorphologicalInput><PhoneticSequence id="stemNonFinal"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemNonFinal" /><InsertSegments><PhoneticShape>f</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>NONFINAL</MorphemeId>
+          </MorphologicalRule>
+          <!-- Slot rule of the final template. -->
+          <MorphologicalRule id="mrFinal" requiredPartsOfSpeech="posV">
+            <Name>Final template suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subFinal">
+                <MorphologicalInput><PhoneticSequence id="stemFinal"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemFinal" /><InsertSegments><PhoneticShape>f</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>FINAL</MorphemeId>
+          </MorphologicalRule>
+          <!-- Partial (an inflectional rule in no slot): allowed after the final template, refused straight after the non-final one. -->
+          <MorphologicalRule id="mrPartial" partial="true" requiredPartsOfSpeech="posV">
+            <Name>Partial suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subPartial">
+                <MorphologicalInput><PhoneticSequence id="stemPartial"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemPartial" /><InsertSegments><PhoneticShape>q</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PARTIAL</MorphemeId>
+          </MorphologicalRule>
+          <!-- Derivational (it has an output part of speech), so refused straight after the final template and allowed after a non-final one. -->
+          <MorphologicalRule id="mrTail" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>Tail suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTail">
+                <MorphologicalInput><PhoneticSequence id="stemTail"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemTail" /><InsertSegments><PhoneticShape>t</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TAIL</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <AffixTemplates>
+          <AffixTemplate requiredPartsOfSpeech="posV" final="true">
+            <Name>finalTemplate</Name>
+            <Slot morphologicalRules="mrFinal"><Name>finalSlot</Name></Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV" final="false">
+            <Name>nonFinalTemplate</Name>
+            <Slot morphologicalRules="mrNonFinal"><Name>nonFinalSlot</Name></Slot>
+          </AffixTemplate>
+        </AffixTemplates>
+        <LexicalEntries>
+          <LexicalEntry id="eSag" partOfSpeech="posV">
+            <Allomorphs><Allomorph id="aSag"><PhoneticShape>sag</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>SAG</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered">
+        <Name>Surface</Name>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

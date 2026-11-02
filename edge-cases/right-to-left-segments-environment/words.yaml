@@ -1,0 +1,62 @@
+# Verified against the C# founding oracle (hc.dll, via hc-conformance self-check). The right
+# context was once an inline literal <Segments> node (a PanGloss lowering shape); it is now the
+# single segment "y", and all five words keep their signatures.
+
+language: RightToLeftSegmentsEnvironment
+inspired_by: ["synthetic right-to-left inline-pre-segmented-environment rewrite probe (not modeling any real language)"]
+sources:
+  - "openspec/changes/plan-construct-coverage-completion task 4.2 (RightToLeftRewrite: additional in-scope pattern shapes -- Segments)"
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: ey
+    note: >-
+      ROOT1's correctly-rewritten surface form: underlying "ay". The rule (`prRtlSegEnv`) rewrites
+      "a" -> "e" only when immediately followed by "y" -- given a right
+      context of the segment "y".
+    provenance: "openspec/changes/plan-construct-coverage-completion task 4.2"
+    parses:
+      - signature: "ROOT1|ey"
+        rules: [prRtlSegEnv]
+        exercises:
+          - "RewriteRule direction (Dir): right-to-left"
+
+  - word: a
+    note: >-
+      ROOT2's own (unchanged) spelling -- no "y" follows at all, so the right
+      environment correctly fails to match and the rule does not fire.
+    provenance: "openspec/changes/plan-construct-coverage-completion task 4.2"
+    parses:
+      - signature: "ROOT2|a"
+        rules: []
+        exercises:
+          - "RewriteRule direction (Dir): right-to-left"
+
+  - word: ay
+    note: >-
+      ROOT1's own RAW, un-rewritten underlying shape, queried directly as a surface string -- the
+      rule is obligatory wherever its environment matches, so this exact string is NOT a valid
+      surface form for ROOT1 at all (it should have rewritten to "ey"). Proves the rule genuinely
+      fires (obligatorily) via its right environment, rather than being vacuously
+      inapplicable.
+    provenance: "openspec/changes/plan-construct-coverage-completion task 4.2"
+    expect_fail: true
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
+
+  - word: e
+    note: >-
+      A structurally-invalid string: "a" rewritten to "e" with no "y" following at all (unlike
+      "ey", where the "y" that licensed the rewrite is still present after it). Never a valid
+      surface form for either root.
+    provenance: "openspec/changes/plan-construct-coverage-completion task 4.2"
+    expect_fail: true
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
+
+  - word: "y"
+    note: A bare "y" with no preceding root segment at all -- never a valid surface form for either root.
+    provenance: "openspec/changes/plan-construct-coverage-completion task 4.2"
+    expect_fail: true
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"

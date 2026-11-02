@@ -1,0 +1,381 @@
+kind	member	verdict	loader	note
+clitic-rule	@blockable=false	never	1079-1093	Blockable is never set
+clitic-rule	@blockable=true	metadata		the default
+clitic-rule	@id	metadata		rule identity
+clitic-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
+clitic-rule	@isActive=yes	metadata		the default
+clitic-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
+clitic-rule	@multipleApplication=0	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
+clitic-rule	@multipleApplication=2	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=3	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=4	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=5	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=6	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=7	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=8	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=9	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@outputObligatoryFeatures	never	1079-1093	obligatory features are never loaded
+clitic-rule	@outputPartOfSpeech	never	1079-1093	no OutSyntacticFeatureStruct
+clitic-rule	@outputSubcategorization	never	1079-1093	subcategorization is never loaded
+clitic-rule	@partial=false	metadata		the default
+clitic-rule	@partial=true	never	1079-1093	IsPartial is not set on a clitic rule
+clitic-rule	@requiredPartsOfSpeech	writes	1084-1085	StemMsa.FromPartsOfSpeech
+clitic-rule	@requiredStemName	never	1079-1093	not set
+clitic-rule	@requiredSubcategorizedRules	never	1079-1093	subcategorization is never loaded
+clitic-rule	Gloss	metadata		
+clitic-rule	MorphemeId	metadata		
+clitic-rule	MorphologicalSubrules	metadata		
+clitic-rule	Name	metadata		
+clitic-rule	OutputFootFeatures	never	208	no foot feature is ever created
+clitic-rule	OutputHeadFeatures	never	1079-1093	no output features
+clitic-rule	OutputSubcategorizationOverrides	never	1079-1093	subcategorization is never loaded
+clitic-rule	Properties	metadata		
+clitic-rule	RequiredFootFeatures	never	208	no foot feature is ever created
+clitic-rule	RequiredHeadFeatures	never	1079-1093	only the part of speech is required
+clitic-rule/input	@excludedMPRFeatures	never	1079-1093	ExcludedMprFeatures is set only in LoadAffixTemplate
+clitic-rule/input	@requiredMPRFeatures	never	1079-1093	a clitic rule requires no MPR feature
+clitic-rule/input	PhoneticSequence	metadata		
+clitic-rule/output	@MPRFeatures	never	1025-1093	OutMprFeatures is set only by LoadDerivAffixProcessRule
+clitic-rule/output	@redupMorphType=implicit	metadata		the default
+clitic-rule/output	@redupMorphType=prefix	writes	1472-1483, 1509-1522	
+clitic-rule/output	@redupMorphType=suffix	writes	1472-1483, 1509-1522	
+clitic-rule/output	CopyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+clitic-rule/output	InsertSegments	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+clitic-rule/output	InsertSimpleContext	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+clitic-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+clitic-rule/subrule	@id	metadata		
+clitic-rule/subrule	@isActive=no	never	1079-1093	an allomorph has no inactive state in the loader
+clitic-rule/subrule	@isActive=yes	metadata		
+clitic-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+clitic-rule/subrule	MorphologicalInput	metadata		
+clitic-rule/subrule	MorphologicalOutput	metadata		
+clitic-rule/subrule	Properties	metadata		
+clitic-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+clitic-rule/subrule	RequiredFootFeatures	never	208	no foot feature
+clitic-rule/subrule	RequiredHeadFeatures	never	1196-1210	a clitic form is loaded as a stem allomorph, which carries no MsEnvFeatures
+clitic-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature
+compounding-rule	@blockable=false	never	1891-2050	Blockable is never set
+compounding-rule	@blockable=true	metadata		
+compounding-rule	@headPartsOfSpeech	writes	1893-1919, 1971-1980	the MSA parts of speech
+compounding-rule	@headProdRestrictionsMprFeatures	writes	1896-1919, 1983-1990	the MSA production restrictions
+compounding-rule	@headSubcategorizedRules	never	1891-2050	never loaded
+compounding-rule	@id	metadata		
+compounding-rule	@isActive=no	omitted	254	a disabled compound rule is not loaded, so it is the same as an absent rule
+compounding-rule	@isActive=yes	metadata		
+compounding-rule	@multipleApplication=0	never	1891-2050	FieldWorks accepts 1 to 9
+compounding-rule	@multipleApplication=1	writes	1943-1945	the default; also the only value on an exocompound
+compounding-rule	@multipleApplication=2	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=3	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=4	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=5	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=6	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=7	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=8	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@multipleApplication=9	writes	1943-1945	an endocompound only, from the parser parameters (1 to 9); an exocompound keeps 1
+compounding-rule	@nonHeadPartsOfSpeech	writes	1893-1919, 1971-1980	the MSA parts of speech
+compounding-rule	@nonHeadProdRestrictionsMprFeatures	writes	1896-1919, 1983-1990	the MSA production restrictions
+compounding-rule	@nonHeadSubcategorizedRules	never	1891-2050	never loaded
+compounding-rule	@outputObligatoryFeatures	never	1891-2050	never loaded
+compounding-rule	@outputPartOfSpeech	writes	1923-1924, 1982-1983	OverridingMsa or ToMsa part of speech
+compounding-rule	@outputProdRestrictionsMprFeatures	never	1950, 2011, 2038	only one OutMprFeature, an inflection class, is written (on the subrule)
+compounding-rule	@outputSubcategorization	never	1891-2050	never loaded
+compounding-rule	CompoundingSubrules	metadata		
+compounding-rule	HeadRequiredFootFeatures	never	208	no foot feature
+compounding-rule	HeadRequiredHeadFeatures	never	1891-1961, 1971-2050	the compounding loaders read the part of speech and the production restrictions only
+compounding-rule	Name	metadata		
+compounding-rule	NonHeadRequiredFootFeatures	never	208	no foot feature
+compounding-rule	NonHeadRequiredHeadFeatures	never	1891-1961, 1971-2050	the compounding loaders read the part of speech and the production restrictions only
+compounding-rule	OutputFootFeatures	never	208	no foot feature
+compounding-rule	OutputHeadFeatures	never	1923-1924	the output is a part of speech only
+compounding-rule	OutputSubcategorizationOverrides	never	1923-1924	the output is a part of speech only
+compounding-rule/head-input	@excludedMPRFeatures	never	1891-2050	nothing sets head-input MPR features
+compounding-rule/head-input	@requiredMPRFeatures	never	1891-2050	nothing sets head-input MPR features
+compounding-rule/head-input	PhoneticSequence	metadata		
+compounding-rule/nonhead-input	PhoneticSequence	metadata		
+compounding-rule/output	@MPRFeatures	writes	1950, 2011, 2038	one inflection class
+compounding-rule/output	@redupMorphType=implicit	metadata		
+compounding-rule/output	@redupMorphType=prefix	never	1891-2050	
+compounding-rule/output	@redupMorphType=suffix	never	1891-2050	
+compounding-rule/output	CopyFromInput	writes	1952-1961, 2000-2050	Copy, Insert("+"), Copy
+compounding-rule/output	InsertSegments	writes	1952-1961, 2000-2050	Copy, Insert("+"), Copy
+compounding-rule/output	InsertSimpleContext	never	1891-2050	the output is Copy, Insert("+"), Copy
+compounding-rule/output	ModifyFromInput	never	1891-2050	the output is Copy, Insert("+"), Copy
+compounding-rule/subrule	@isActive=no	never	1891-2050	one subrule is synthesized per rule, with no inactive state
+compounding-rule/subrule	@isActive=yes	metadata		
+compounding-rule/subrule	HeadMorphologicalInput	metadata		
+compounding-rule/subrule	MorphologicalOutput	metadata		
+compounding-rule/subrule	NonHeadMorphologicalInput	metadata		
+compounding-rule/subrule	VariableFeatures	never	1891-2050	
+cooccurrence-rule	@adjacency=adjacentToLeft	writes	2212-2307	
+cooccurrence-rule	@adjacency=adjacentToRight	writes	2212-2307	
+cooccurrence-rule	@adjacency=anywhere	writes	2212-2307	
+cooccurrence-rule	@adjacency=somewhereToLeft	writes	2212-2307	
+cooccurrence-rule	@adjacency=somewhereToRight	writes	2212-2307	
+cooccurrence-rule	@isActive=no	omitted	355, 361	a disabled ad hoc prohibition is not loaded
+cooccurrence-rule	@isActive=yes	metadata		
+cooccurrence-rule	@otherAllomorphs	writes	2212-2307	
+cooccurrence-rule	@otherMorphemes	writes	2212-2307	
+cooccurrence-rule	@primaryAllomorph	writes	2212-2307	
+cooccurrence-rule	@primaryMorpheme	writes	2212-2307	
+cooccurrence-rule	@type=exclude	writes	2232, 2282	
+cooccurrence-rule	@type=require	never	2232, 2282	only ConstraintType.Exclude is built
+derivational-rule	@blockable=false	never	975-1023	Blockable is never set
+derivational-rule	@blockable=true	metadata		the default
+derivational-rule	@id	metadata		rule identity
+derivational-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
+derivational-rule	@isActive=yes	metadata		the default
+derivational-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
+derivational-rule	@multipleApplication=0	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
+derivational-rule	@multipleApplication=2	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=3	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=4	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=5	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=6	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=7	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=8	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=9	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@outputObligatoryFeatures	never	975-1023	obligatory features are never loaded
+derivational-rule	@outputPartOfSpeech	writes	988-989	DerivAffMsa.ToPartOfSpeech
+derivational-rule	@outputSubcategorization	never	975-1023	subcategorization is never loaded
+derivational-rule	@partial=false	metadata		the default
+derivational-rule	@partial=true	never	975-1023	IsPartial is never set on a derivational rule
+derivational-rule	@requiredPartsOfSpeech	writes	980-981	DerivAffMsa.FromPartOfSpeech
+derivational-rule	@requiredStemName	writes	1009-1011	DerivAffMsa.FromStemName
+derivational-rule	@requiredSubcategorizedRules	never	975-1023	subcategorization is never loaded
+derivational-rule	Gloss	metadata		
+derivational-rule	MorphemeId	metadata		
+derivational-rule	MorphologicalSubrules	metadata		
+derivational-rule	Name	metadata		
+derivational-rule	OutputFootFeatures	never	208	no foot feature is ever created
+derivational-rule	OutputHeadFeatures	writes	990-991	DerivAffMsa.ToMsFeatures
+derivational-rule	OutputSubcategorizationOverrides	never	975-1023	subcategorization is never loaded
+derivational-rule	Properties	metadata		
+derivational-rule	RequiredFootFeatures	never	208	no foot feature is ever created
+derivational-rule	RequiredHeadFeatures	writes	982-983	DerivAffMsa.FromMsFeatures
+derivational-rule/input	@excludedMPRFeatures	never	975-1023	ExcludedMprFeatures is set only in LoadAffixTemplate
+derivational-rule/input	@requiredMPRFeatures	writes	1015-1018, 1050, 1118, 1145, 1172	inflection classes and production restrictions
+derivational-rule/input	PhoneticSequence	metadata		
+derivational-rule/output	@MPRFeatures	writes	1018	DerivAffMsa.ToInflectionClass and ToProdRestrict; the same list on every subrule
+derivational-rule/output	@redupMorphType=implicit	metadata		the default
+derivational-rule/output	@redupMorphType=prefix	writes	1472-1483, 1509-1522	
+derivational-rule/output	@redupMorphType=suffix	writes	1472-1483, 1509-1522	
+derivational-rule/output	CopyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+derivational-rule/output	InsertSegments	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+derivational-rule/output	InsertSimpleContext	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+derivational-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+derivational-rule/subrule	@id	metadata		
+derivational-rule/subrule	@isActive=no	never	975-1023	an allomorph has no inactive state in the loader
+derivational-rule/subrule	@isActive=yes	metadata		
+derivational-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+derivational-rule/subrule	MorphologicalInput	metadata		
+derivational-rule/subrule	MorphologicalOutput	metadata		
+derivational-rule/subrule	Properties	metadata		
+derivational-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+derivational-rule/subrule	RequiredFootFeatures	never	208	no foot feature
+derivational-rule/subrule	RequiredHeadFeatures	writes	1174-1175	MoAffixAllomorph.MsEnvFeatures (a lone affix form; not a circumfix or an affix process, checked by shape)
+derivational-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature
+lexical-entry	@family	never	745-817	never loaded
+lexical-entry	@id	metadata		
+lexical-entry	@isActive=no	never	740-780	no inactive state for an entry
+lexical-entry	@isActive=yes	metadata		
+lexical-entry	@morphologicalRules	never	745-817	never loaded
+lexical-entry	@obligatoryFootFeatures	never	745-817	never loaded
+lexical-entry	@obligatoryHeadFeatures	never	745-817	never loaded
+lexical-entry	@partOfSpeech	writes	754-757	StemMsa.PartOfSpeech
+lexical-entry	@partial=false	metadata		
+lexical-entry	@partial=true	writes	757, 817	only an entry with no part of speech (checked by shape)
+lexical-entry	@ruleFeatures	writes	745-751	one inflection class and the production restrictions (checked by group)
+lexical-entry	@subcategorizations	never	745-817	never loaded
+lexical-entry	Allomorphs	metadata		
+lexical-entry	AssignedFootFeatures	never	208	no foot feature
+lexical-entry	AssignedHeadFeatures	writes	758-759	StemMsa.MsFeatures
+lexical-entry	Gloss	metadata		
+lexical-entry	MorphemeId	metadata		
+lexical-entry	Properties	metadata		
+metathesis-rule	@id	metadata		
+metathesis-rule	@isActive=no	omitted	315	a disabled phonological rule is not loaded
+metathesis-rule	@isActive=yes	metadata		
+metathesis-rule	@leftSwitch	writes	2171-2186	
+metathesis-rule	@multipleApplicationOrder=leftToRightIterative	writes	2152-2170	directions 0, 1 and 2
+metathesis-rule	@multipleApplicationOrder=rightToLeftIterative	writes	2152-2170	directions 0, 1 and 2
+metathesis-rule	@rightSwitch	writes	2171-2186	
+metathesis-rule	Name	metadata		
+metathesis-rule	StructuralDescription	metadata		
+phonological-rule	@id	metadata		
+phonological-rule	@isActive=no	omitted	315	a disabled phonological rule is not loaded
+phonological-rule	@isActive=yes	metadata		
+phonological-rule	@multipleApplicationOrder=leftToRightIterative	writes	2052-2080	directions 0, 1 and 2
+phonological-rule	@multipleApplicationOrder=rightToLeftIterative	writes	2052-2080	directions 0, 1 and 2
+phonological-rule	@multipleApplicationOrder=simultaneous	writes	2052-2080	directions 0, 1 and 2
+phonological-rule	Name	metadata		
+phonological-rule	PhoneticInput	metadata		
+phonological-rule	PhonologicalSubrules	metadata		
+phonological-rule	VariableFeatures	metadata		
+phonological-subrule	@excludedMPRFeatures	writes	2101-2107	
+phonological-subrule	@isActive=no	never	2095-2146	a right-hand side has no inactive state
+phonological-subrule	@isActive=yes	metadata		
+phonological-subrule	@requiredMPRFeatures	writes	2101-2107	
+phonological-subrule	@requiredPartsOfSpeech	writes	2101-2107	
+phonological-subrule	Environment	writes	2108-2146	
+phonological-subrule	NextWord	never	2095-2146	a rewrite subrule has no word context
+phonological-subrule	PhoneticOutput	writes	2108-2146	
+phonological-subrule	PreviousWord	never	2095-2146	a rewrite subrule has no word context
+realizational-rule	*	never	1027	LoadInflAffixProcessRule carries a TODO; the loader builds no realizational rule
+root-allomorph	@id	metadata		
+root-allomorph	@isActive=no	never	858-894	
+root-allomorph	@isActive=yes	metadata		
+root-allomorph	@isBound=false	metadata		
+root-allomorph	@isBound=true	writes	884-889	bound root or bound stem
+root-allomorph	@stemName	writes	880-882	
+root-allomorph	ExcludedEnvironments	never	862-876	every environment is ConstraintType.Require
+root-allomorph	PhoneticShape	metadata		
+root-allomorph	Properties	metadata		
+root-allomorph	RequiredEnvironments	writes	862-876	
+slot	@isActive=no	never	1735-1773	a slot has no inactive state
+slot	@isActive=yes	metadata		
+slot	@morphologicalRules	writes	1735-1773	the affix MSAs of the slot
+slot	@optional=false	writes	1780	Optional
+slot	@optional=true	writes	1780	Optional
+slot	Name	metadata		
+slot-rule	@blockable=false	never	1025-1055	Blockable is never set
+slot-rule	@blockable=true	metadata		the default
+slot-rule	@id	metadata		rule identity
+slot-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
+slot-rule	@isActive=yes	metadata		the default
+slot-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
+slot-rule	@multipleApplication=0	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
+slot-rule	@multipleApplication=2	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=3	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=4	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=5	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=6	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=7	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=8	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=9	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@outputObligatoryFeatures	never	1025-1055	obligatory features are never loaded
+slot-rule	@outputPartOfSpeech	never	1025-1055	LoadInflAffixProcessRule sets no OutSyntacticFeatureStruct
+slot-rule	@outputSubcategorization	never	1025-1055	subcategorization is never loaded
+slot-rule	@partial=false	metadata	1031	the default; a rule in a slot is not partial
+slot-rule	@partial=true	never	1031	IsPartial is true only when SlotsRC.Count == 0
+slot-rule	@requiredPartsOfSpeech	writes	1035-1036	InflAffMsa.PartOfSpeech
+slot-rule	@requiredStemName	never	1025-1055	only LoadDerivAffixProcessRule sets RequiredStemName (1009-1011)
+slot-rule	@requiredSubcategorizedRules	never	1025-1055	subcategorization is never loaded
+slot-rule	Gloss	metadata		
+slot-rule	MorphemeId	metadata		
+slot-rule	MorphologicalSubrules	metadata		
+slot-rule	Name	metadata		
+slot-rule	OutputFootFeatures	never	208	no foot feature is ever created
+slot-rule	OutputHeadFeatures	never	1025-1055	no output features; the only slot-level output is the null affix of an irregular inflection type (1820-1855)
+slot-rule	OutputSubcategorizationOverrides	never	1025-1055	subcategorization is never loaded
+slot-rule	Properties	metadata		
+slot-rule	RequiredFootFeatures	never	208	no foot feature is ever created
+slot-rule	RequiredHeadFeatures	writes	1037-1038	InflAffMsa.InflFeats, as a required feature
+slot-rule/input	@excludedMPRFeatures	writes	1766	only a slot rule, and only the lexEntryInflTypes features of its slot (checked by group)
+slot-rule/input	@requiredMPRFeatures	writes	1015-1018, 1050, 1118, 1145, 1172	inflection classes and production restrictions
+slot-rule/input	PhoneticSequence	metadata		
+slot-rule/output	@MPRFeatures	never	1025-1093	OutMprFeatures is set only by LoadDerivAffixProcessRule
+slot-rule/output	@redupMorphType=implicit	metadata		the default
+slot-rule/output	@redupMorphType=prefix	writes	1472-1483, 1509-1522	
+slot-rule/output	@redupMorphType=suffix	writes	1472-1483, 1509-1522	
+slot-rule/output	CopyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+slot-rule/output	InsertSegments	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+slot-rule/output	InsertSimpleContext	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+slot-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+slot-rule/subrule	@id	metadata		
+slot-rule/subrule	@isActive=no	never	1025-1055	an allomorph has no inactive state in the loader
+slot-rule/subrule	@isActive=yes	metadata		
+slot-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+slot-rule/subrule	MorphologicalInput	metadata		
+slot-rule/subrule	MorphologicalOutput	metadata		
+slot-rule/subrule	Properties	metadata		
+slot-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+slot-rule/subrule	RequiredFootFeatures	never	208	no foot feature
+slot-rule/subrule	RequiredHeadFeatures	writes	1174-1175	MoAffixAllomorph.MsEnvFeatures (a lone affix form; not a circumfix or an affix process, checked by shape)
+slot-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature
+stem-name	@id	metadata		
+stem-name	@partsOfSpeech	writes	221-233	the owning part of speech and its sub-categories
+stem-name	Name	metadata		
+stem-name	Regions	metadata		
+stem-region	AssignedFootFeatures	never	208	no foot feature
+stem-region	AssignedHeadFeatures	writes	225-229	a region is a head feature structure; an empty region is skipped (checked by shape)
+stratum	@characterDefinitionTable	writes	217, 240	one table, PhonemeSets[0]
+stratum	@cyclicity=cyclic	inert		never written, and the engine reads no cyclicity, so no parse can differ
+stratum	@cyclicity=noncyclic	metadata		the default
+stratum	@isActive=no	never	240-246, 387	no stratum has an inactive state
+stratum	@isActive=yes	metadata		
+stratum	@morphologicalRuleOrder=linear	shape	246	allowed only when the stratum holds no active rule or template: every stratum that holds rules is built Unordered
+stratum	@morphologicalRuleOrder=unordered	writes	240, 243, 387	every stratum that holds rules
+stratum	@morphologicalRules	writes	240-420	
+stratum	@phonologicalRuleOrder=linear	metadata		the default
+stratum	@phonologicalRuleOrder=simultaneous	inert		never written, and the engine reads no phonological rule order, so no parse can differ
+stratum	@phonologicalRules	writes	240-420	
+stratum	AffixTemplates	metadata		
+stratum	LexicalEntries	metadata		
+stratum	MorphologicalRuleDefinitions	metadata		
+stratum	Name	metadata		
+template	@final=false	writes	1727	Final
+template	@final=true	writes	1727	Final
+template	@isActive=no	omitted	308	a disabled template is not loaded
+template	@isActive=yes	metadata		
+template	@requiredPartsOfSpeech	writes	1731-1733	the owning part of speech and its sub-categories
+template	@requiredSubcategorizedRules	never	1722-1855	never loaded
+template	Name	metadata		
+template	Slot	metadata		
+unslotted-rule	@blockable=false	never	1057-1070	Blockable is never set
+unslotted-rule	@blockable=true	metadata		the default
+unslotted-rule	@id	metadata		rule identity
+unslotted-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
+unslotted-rule	@isActive=yes	metadata		the default
+unslotted-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
+unslotted-rule	@multipleApplication=0	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
+unslotted-rule	@multipleApplication=2	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=3	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=4	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=5	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=6	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=7	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=8	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=9	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@outputObligatoryFeatures	never	1057-1070	obligatory features are never loaded
+unslotted-rule	@outputPartOfSpeech	never	1025-1070	no OutSyntacticFeatureStruct
+unslotted-rule	@outputSubcategorization	never	1057-1070	subcategorization is never loaded
+unslotted-rule	@partial=true	writes	1031, 1062	no slot (inflectional) or an unclassified MSA
+unslotted-rule	@requiredPartsOfSpeech	writes	1035-1036, 1066-1067	InflAffMsa.PartOfSpeech or UnclassifiedAffixMsa.PartOfSpeech
+unslotted-rule	@requiredStemName	never	1025-1070	only LoadDerivAffixProcessRule sets RequiredStemName
+unslotted-rule	@requiredSubcategorizedRules	never	1057-1070	subcategorization is never loaded
+unslotted-rule	Gloss	metadata		
+unslotted-rule	MorphemeId	metadata		
+unslotted-rule	MorphologicalSubrules	metadata		
+unslotted-rule	Name	metadata		
+unslotted-rule	OutputFootFeatures	never	208	no foot feature is ever created
+unslotted-rule	OutputHeadFeatures	never	1025-1070	no output features
+unslotted-rule	OutputSubcategorizationOverrides	never	1057-1070	subcategorization is never loaded
+unslotted-rule	Properties	metadata		
+unslotted-rule	RequiredFootFeatures	never	208	no foot feature is ever created
+unslotted-rule	RequiredHeadFeatures	writes	1037-1038	inflectional MSA only (InflFeats); an unclassified MSA has none
+unslotted-rule/input	@excludedMPRFeatures	never	1057-1070	ExcludedMprFeatures is set only in LoadAffixTemplate
+unslotted-rule/input	@requiredMPRFeatures	writes	1015-1018, 1050, 1118, 1145, 1172	inflection classes and production restrictions
+unslotted-rule/input	PhoneticSequence	metadata		
+unslotted-rule/output	@MPRFeatures	never	1025-1093	OutMprFeatures is set only by LoadDerivAffixProcessRule
+unslotted-rule/output	@redupMorphType=implicit	metadata		the default
+unslotted-rule/output	@redupMorphType=prefix	writes	1472-1483, 1509-1522	
+unslotted-rule/output	@redupMorphType=suffix	writes	1472-1483, 1509-1522	
+unslotted-rule/output	CopyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+unslotted-rule/output	InsertSegments	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+unslotted-rule/output	InsertSimpleContext	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+unslotted-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoAffixProcess and form allomorphs
+unslotted-rule/subrule	@id	metadata		
+unslotted-rule/subrule	@isActive=no	never	1057-1070	an allomorph has no inactive state in the loader
+unslotted-rule/subrule	@isActive=yes	metadata		
+unslotted-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+unslotted-rule/subrule	MorphologicalInput	metadata		
+unslotted-rule/subrule	MorphologicalOutput	metadata		
+unslotted-rule/subrule	Properties	metadata		
+unslotted-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+unslotted-rule/subrule	RequiredFootFeatures	never	208	no foot feature
+unslotted-rule/subrule	RequiredHeadFeatures	writes	1174-1175	MoAffixAllomorph.MsEnvFeatures (a lone affix form; not a circumfix or an affix process, checked by shape)
+unslotted-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature

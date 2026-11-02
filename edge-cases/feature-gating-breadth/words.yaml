@@ -1,0 +1,111 @@
+# Head feature gating on a root's own lexical features. See grammar.xml's header for what this pins
+# that edge-cases/chained-output-feature-override-loss does not.
+#
+# HAND DERIVATION (written from the rules before the oracle ran). mrAgr ("-ka") requires number=pl and
+# writes nothing; mrPl ("-pi") has no gate and writes number=pl. kal is lexically pl, tun lexically sg.
+# The stratum is unordered, so every order of the two suffixes is a candidate and the gate is read at
+# the point the rule applies.
+#   kal      bare root.
+#   tun      bare root.
+#   kalka    kal is pl, so mrAgr applies.                            KAL+AGR
+#   tunka    tun is sg and nothing has overwritten it: no parse.
+#   kalpi    mrPl applies to anything.                               KAL+PL
+#   tunpi    mrPl applies to anything.                               TUN+PL
+#   tunpika  mrPl overwrites sg with pl, then mrAgr's gate passes.   TUN+PL+AGR
+#   kalpika  as tunpika; the overwrite is redundant for kal.         KAL+PL+AGR
+#   tunkapi  mrAgr would have to apply first, while tun is still sg: no parse (the same two suffixes
+#            as tunpika in the other order).
+#   kalkapi  mrAgr first is fine for kal, then mrPl.                 KAL+AGR+PL
+#
+# Oracle: the C# founding oracle, self-check mode.
+
+language: FeatureGatingBreadth
+inspired_by: ["synthetic head feature gating probe (not modeling any real language)"]
+sources:
+  - "conformance/semantic-coverage-counterfactuals.tsv unobservable feature-gating surfaces"
+requires: []
+fieldworks_producible: true
+words:
+  - word: kal
+    note: Bare lexically plural root.
+    parses:
+      - signature: "KAL|kal"
+        rules: []
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: tun
+    note: Bare lexically singular root.
+    parses:
+      - signature: "TUN|tun"
+        rules: []
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: kalka
+    note: The root's own plural reaches mrAgr's RequiredHeadFeatures gate, so the suffix attaches.
+    parses:
+      - signature: "KAL+AGR|kalka"
+        rules: [mrAgr]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: tunka
+    note: >-
+      Negative control for the gate on a root's own lexical feature. "tun" is singular and nothing
+      has overwritten it, so mrAgr refuses the suffix.
+    expect_fail: true
+    blocked_by: [mrAgr]
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: kalpi
+    note: mrPl has no gate and applies to the plural root.
+    parses:
+      - signature: "KAL+PL|kalpi"
+        rules: [mrPl]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: tunpi
+    note: mrPl has no gate and applies to the singular root too.
+    parses:
+      - signature: "TUN+PL|tunpi"
+        rules: [mrPl]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: tunpika
+    note: >-
+      Positive control for OutputHeadFeatures overriding a lexical value. "tun" is singular, mrPl
+      overwrites number with plural, and only then does mrAgr's gate pass.
+    parses:
+      - signature: "TUN+PL+AGR|tunpika"
+        rules: [mrPl, mrAgr]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: kalpika
+    note: The same order on the plural root, where the overwrite is redundant.
+    parses:
+      - signature: "KAL+PL+AGR|kalpika"
+        rules: [mrPl, mrAgr]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: tunkapi
+    note: >-
+      The same two suffixes as tunpika in the other order. mrAgr would have to apply first, while tun
+      is still singular, and the gate is read at that point, so there is no parse.
+    expect_fail: true
+    blocked_by: [mrAgr]
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: kalkapi
+    note: mrAgr first is fine for the plural root, then mrPl.
+    parses:
+      - signature: "KAL+AGR+PL|kalkapi"
+        rules: [mrAgr, mrPl]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"

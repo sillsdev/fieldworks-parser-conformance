@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- The compound-rule application cap, the one MaxApplicationCount a FieldWorks project can set.
+
+     HCLoader sets MaxApplicationCount only on a compounding rule, from the rule's "maxApps" entry in
+     the project's parser parameters (HCLoader.cs 122-123 and 1943-1945), and the Parser Parameters
+     dialog accepts 1 to 9 (HCMaxCompoundRulesDlg: EnforceValidValue(rule, "MaxApps", 1, 9, true)).
+     A MorphologicalRule is never given a cap, so it keeps the engine default of 1
+     (edge-cases/morphotactic-attribute-breadth, kuldede, holds that).
+
+     The rule here is endocentric and recursive: head, non-head and output are all posN, so its own
+     output can be a head or a non-head of a further application. The cap is 2, so a derivation may
+     apply it twice and a compound of three roots is the deepest the rule reaches. The unbounded
+     head and non-head patterns are the loader's AnyPlus (one or more segments). The morpher
+     setting MaxRoots is raised to 4 (the dialog allows 1 to 10, default 2), because at the default
+     no word with three roots reaches the rule's cap at all. -->
+<HermitCrabInput>
+  <Language>
+    <Name>CompoundMaxApplications</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cO"><Representations><Representation>o</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cU"><Representations><Representation>u</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cM"><Representations><Representation>m</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cR"><Representations><Representation>r</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="crJoin">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="crJoin" multipleApplication="2" headPartsOfSpeech="posN" nonHeadPartsOfSpeech="posN" outputPartOfSpeech="posN">
+            <Name>join</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="hd">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="nh">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="hd" /><CopyFromInput index="nh" /></MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eKa" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aKa"><PhoneticShape>ka</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>KA</MorphemeId>
+            <Gloss>ka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTu" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aTu"><PhoneticShape>tu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TU</MorphemeId>
+            <Gloss>tu</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMi" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aMi"><PhoneticShape>mi</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>MI</MorphemeId>
+            <Gloss>mi</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRo" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aRo"><PhoneticShape>ro</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>RO</MorphemeId>
+            <Gloss>ro</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

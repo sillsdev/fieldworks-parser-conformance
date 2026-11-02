@@ -1,0 +1,78 @@
+# The two final-template gates in one grammar.
+#
+# HAND DERIVATION (written from the rules before the oracle ran). The stratum is unordered. A
+# non-final template (slot rule NONFINAL, suffix f) and a final template (FINAL, suffix f) share a
+# suffix. PARTIAL is an inflectional rule in no slot, so FieldWorks marks it partial; TAIL is a
+# derivational rule (it has an output part of speech) with suffix t. Two gates are in play:
+#   - After the final template a derivational rule is refused and a partial rule is allowed.
+#   - Straight after a non-final template a partial rule is refused and a derivational rule is
+#     allowed.
+# FieldWorks writes no output features and no required stem name on a slot rule, so no feature
+# separates the readings. The first gate (NonPartialRuleProhibitedAfterFinalTemplate) decides none of
+# these words at the default configuration: removing it from synthesis, from analysis, or from both,
+# changes no result here. The only result-level test of it is the enforce-final variant in
+# final-template-partial-discriminators (word pilfbvb), which fails when both copies are removed.
+#   sagftf  NONFINAL, TAIL, FINAL: TAIL follows the non-final template, so it is allowed, and the
+#           final template closes the word. One parse. If every template were final, TAIL would
+#           follow a final template and be refused.
+#   sagfqf  Readings: (a) NONFINAL, PARTIAL, FINAL: PARTIAL follows the non-final template, refused
+#           (NonPartialRuleRequiredAfterNonFinalTemplate). (b) FINAL, PARTIAL, then f: a final
+#           template has closed the word, so the last f has no template left to be. No parse. Making
+#           PARTIAL a derivational rule lets (a) apply: NONFINAL, PARTIAL, FINAL parses. So this word
+#           depends on the partial flag and on the non-final template.
+#   sagfq   FINAL, PARTIAL: parses, because a partial rule may follow a final template.
+#           (NONFINAL, PARTIAL is refused.)
+#   sagft   FINAL, TAIL: TAIL is derivational and follows the final template, which the gate
+#           NonPartialRuleProhibitedAfterFinalTemplate refuses. No parse, and the word still fails
+#           with that gate removed, so it does not evidence the gate.
+#   sagf    The final template alone parses; the non-final one alone is never a whole word.
+#
+# Order matters: the ledger takes the FIRST word that changes when an attribute is removed, and
+# needs it to be a word that fails now and parses afterwards. Removing `final` makes every template
+# final, which changes sagftf (parses now, fails then), so it comes first and that attribute is
+# skipped. Removing `partial` changes sagfqf (fails now, parses then), which is the first word it
+# changes.
+
+language: FinalTemplatePartialTrace
+inspired_by: ["synthetic final-template gate probe: a final and a non-final template, a partial and a plain suffix (not modeling any real language)"]
+sources:
+  - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
+  - "https://github.com/sillsdev/machine/issues/507"
+requires: []
+fieldworks_producible: true
+words:
+  - word: sagftf
+    note: >-
+      The non-final template, a derivational rule, then the final template. The derivational
+      rule follows a non-final template, so the gate allows it.
+    parses:
+      - signature: "SAG+NONFINAL+TAIL+FINAL|sagftf"
+        rules: [mrNonFinal, mrTail, mrFinal]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+
+  - word: sagfqf
+    note: >-
+      No reading parses. The partial rule straight after the non-final template is refused
+      (NonPartialRuleRequiredAfterNonFinalTemplate), and after the final template the last f has
+      no template left to be.
+    expect_fail: true
+    blocked_by: [mrPartial]
+
+  - word: sagfq
+    note: A partial rule after the final template. Only a partial rule may follow it, so this parses.
+    parses:
+      - signature: "SAG+FINAL+PARTIAL|sagfq"
+        rules: [mrFinal, mrPartial]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+
+  - word: sagft
+    note: A derivational rule after the final template is refused (the trace names NonPartialRuleProhibitedAfterFinalTemplate), but the word still fails with that gate removed, so it does not evidence it.
+    expect_fail: true
+    blocked_by: [mrTail]
+
+  - word: sagf
+    note: The final template alone parses.
+    parses:
+      - signature: "SAG+FINAL|sagf"
+        rules: [mrFinal]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]

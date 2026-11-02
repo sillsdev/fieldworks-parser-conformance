@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- Head feature gating on a root's own lexical features, in the smallest grammar that still
+     discriminates it.
+
+     edge-cases/chained-output-feature-override-loss already pins RequiredHeadFeatures and
+     OutputHeadFeatures between RULES (its root carries no head feature at all). What it cannot show
+     is the root's own AssignedHeadFeatures reaching a rule's gate, or a rule's OutputHeadFeatures
+     overriding a value the root already carried. This grammar pins exactly those two:
+
+       mrAgr  "-ka"  RequiredHeadFeatures number=pl.   No output.
+       mrPl   "-pi"  No gate.                           OutputHeadFeatures number=pl.
+
+       kal  is lexically plural, so mrAgr admits it.
+       tun  is lexically singular, so mrAgr refuses it until mrPl has overwritten number with pl.
+
+     The stratum is unordered, as FieldWorks builds every stratum. The gate is read at the point the
+     rule applies, so "tunpika" (mrPl then mrAgr) parses and "tunkapi" (mrAgr first, while tun is still
+     singular) does not, though both words contain the same two suffixes. Pure morphotactics: no
+     phonological rules, so every parse is a template application. -->
+<HermitCrabInput>
+  <Language>
+    <Name>FeatureGatingBreadth</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <HeadFeatures>
+      <SymbolicFeature id="featNum">
+        <Name>number</Name>
+        <Symbols>
+          <Symbol id="numSg">sg</Symbol>
+          <Symbol id="numPl">pl</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </HeadFeatures>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cU"><Representations><Representation>u</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cL"><Representations><Representation>l</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cN"><Representations><Representation>n</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="mrAgr mrPl">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <!-- Gated on number=pl and writes nothing, so the only thing it can show is the gate. -->
+          <MorphologicalRule id="mrAgr" requiredPartsOfSpeech="posN" outputPartOfSpeech="posN">
+            <Name>agreement</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subAgr">
+                <MorphologicalInput><PhoneticSequence id="stemAgr"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemAgr" /><InsertSegments><PhoneticShape>ka</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <RequiredHeadFeatures><FeatureValue feature="featNum" symbolValues="numPl" /></RequiredHeadFeatures>
+            <MorphemeId>AGR</MorphemeId>
+            <Gloss>AGR</Gloss>
+          </MorphologicalRule>
+          <!-- Ungated: applies to any noun and overwrites number with pl. -->
+          <MorphologicalRule id="mrPl" requiredPartsOfSpeech="posN" outputPartOfSpeech="posN">
+            <Name>plural</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subPl">
+                <MorphologicalInput><PhoneticSequence id="stemPl"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemPl" /><InsertSegments><PhoneticShape>pi</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <OutputHeadFeatures><FeatureValue feature="featNum" symbolValues="numPl" /></OutputHeadFeatures>
+            <MorphemeId>PL</MorphemeId>
+            <Gloss>PL</Gloss>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <!-- Lexically plural: satisfies mrAgr's gate as it stands. -->
+          <LexicalEntry id="eKal" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aKal"><PhoneticShape>kal</PhoneticShape></Allomorph></Allomorphs>
+            <AssignedHeadFeatures><FeatureValue feature="featNum" symbolValues="numPl" /></AssignedHeadFeatures>
+            <MorphemeId>KAL</MorphemeId>
+            <Gloss>kal</Gloss>
+          </LexicalEntry>
+          <!-- Lexically singular: fails mrAgr's gate until mrPl has overwritten number. -->
+          <LexicalEntry id="eTun" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aTun"><PhoneticShape>tun</PhoneticShape></Allomorph></Allomorphs>
+            <AssignedHeadFeatures><FeatureValue feature="featNum" symbolValues="numSg" /></AssignedHeadFeatures>
+            <MorphemeId>TUN</MorphemeId>
+            <Gloss>tun</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

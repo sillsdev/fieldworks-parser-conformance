@@ -1,0 +1,20 @@
+# Rules a fixture declares on purpose although no word exercises them. --coverage-report fails on a
+# dead rule missing from this file and on an entry whose rule some word now exercises.
+# Columns, tab-separated: fixture id, rule id, why the rule stays unexercised.
+edge-cases/compounding-breadth	mrTplSuf	Used only by katumi, an expect_fail control: crJoin's posOther output conflicts with its required posN.
+edge-cases/discontinuous-morph-environment	mrSuffixBad	Supplies the final u only in zuexbu and zuixdu, which are expect_fail rejections attributed to mrBadInfix.
+edge-cases/expansion-interposed-optional	prDelete	Vacuous in forward synthesis; its inverse inserts an optional z between expansion targets during analysis, which is the regression trigger.
+edge-cases/final-template-partial-discriminators	mrZTagSlot	Mandatory slot rule that can never match "nibgi"; the template's refusal is the point.
+edge-cases/interposed-optional-multi-rhs	delete	Vacuous in forward synthesis; its inverse inserts an optional x between merge targets during analysis, which is the regression trigger.
+edge-cases/literal-hash-affix-context	prFinal	Requires a literal # boundary absent from every authored shape; unchanged suffix forms and rejected rewritten neighbors pin that it must not fire.
+edge-cases/literal-hash-affix-context	prInitial	Requires a literal # boundary absent from every authored shape; unchanged prefix forms and rejected rewritten neighbors pin that it must not fire.
+edge-cases/morphotactic-attribute-breadth	subCoA	Allomorph of an isolated stacking suffix whose co-occurrence rules were removed; only its rule is exercised.
+edge-cases/morphotactic-attribute-breadth	subExA	Primary of an exclude AllomorphCoOccurrenceRule; words exercise the exclusion, not the allomorph.
+edge-cases/morphotactic-attribute-breadth	subExC	Named by the adjacency-variant exclude rules; "toplane" exercises the exclusion, not the allomorph.
+edge-cases/morphotactic-attribute-breadth	subExD	Named by the adjacency-variant exclude rules; "toplane" exercises the exclusion, not the allomorph.
+edge-cases/simultaneous-epenthesis-cascade	prule4	Iterative counterpart of the cascade this fixture pins; the parse crashes as expect_crash declares.
+edge-cases/adhoc-prohibition-stem-msa-copies	aBaN	Prohibition on the Noun copy of ba: the prefix ta- is Verb-only, so no candidate pairs it with this copy and this rule blocks no word; taba is blocked through the Verb copy aBaV.
+edge-cases/adhoc-prohibition-affix-environment-copies	subTa1a	Prohibition on the after-a environment copy of the prefix: its left context a never matches a word-initial prefix, so no candidate uses it; tada and taba are blocked through the before-consonant copies subTa1b and subTa2b.
+edge-cases/adhoc-prohibition-affix-environment-copies	subTa2a	Prohibition on the after-a environment copy of the prefix: its left context a never matches a word-initial prefix, so no candidate uses it; tada and taba are blocked through the before-consonant copies subTa1b and subTa2b.
+edge-cases/adhoc-prohibition-allomorph-variant-control	aLiN	Prohibition on the Noun copy of the variant li: the prefix ta- is Verb-only, so no candidate pairs it with this copy and this rule blocks no word; tali is blocked through the Verb copy aLiV.
+edge-cases/adhoc-prohibition-variant-enclitic-first	ePa	Entry copy of the enclitic, kept because HCLoader emits it beside the clitic rule: its prohibitions never fire here (only the rule copy mrPa blocks lapa and lipa), and no word in the fixture uses the entry copy as a stem.

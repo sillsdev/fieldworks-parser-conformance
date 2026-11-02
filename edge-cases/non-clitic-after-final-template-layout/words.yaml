@@ -1,0 +1,44 @@
+# oracle-provenance: founding-oracle machine-commit=ed5cf05d verified-date=2026-10-26
+# Expected parses are derived from the HC clitic and final-template rules (Machine #529); the engine run only confirms them.
+# The Morphology stratum is non-blocking, but no word depends on that: adding a phonological rule to it, which makes it
+# blocking, leaves every row unchanged. The words check the final-template gate within one stratum and a clitic by stratum name.
+language: NonCliticAfterFinalTemplateLayout
+inspired_by: ["synthetic FieldWorks-layout probe: a final template, a non-clitic rule and an enclitic in strata without phonological rules, not a model of a real language"]
+sources:
+  - "https://github.com/sillsdev/machine/pull/529"
+  - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
+  - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs: IsBlockingStratum"
+requires: []
+fieldworks_producible: true
+words:
+  - word: sagd
+    note: >-
+      The final verb template applied on its own.
+    parses:
+      - signature: "SAG+PAST|sagd"
+        rules: [mrPast]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+
+  - word: sagds
+    note: >-
+      Control: the enclitic is a clitic by stratum name and may follow the final template.
+    parses:
+      - signature: "SAG+PAST+ENC|sagds"
+        rules: [mrPast, mrEnc]
+        exercises: ["Clitic rules (Clitics stratum) after a final template"]
+
+  - word: sagdk
+    note: >-
+      mrDeriv is non-clitic and non-partial, so NonPartialRuleProhibitedAfterFinalTemplate refuses
+      it after the final template.
+    expect_fail: true
+    blocked_by: [mrDeriv]
+    exercises: ["Clitic rules (Clitics stratum) after a final template"]
+
+  - word: kolk
+    note: >-
+      Control: nouns have no template, so no final template has applied and mrDeriv attaches.
+    parses:
+      - signature: "KOL+DERIV|kolk"
+        rules: [mrDeriv]
+        exercises: ["Clitic rules (Clitics stratum) after a final template"]

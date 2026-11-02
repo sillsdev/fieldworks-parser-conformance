@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- Compounding breadth: the output part of speech of a compound rule that a later rule reads, and the
+     deactivation of a compounding rule.
+
+     The head and non-head patterns are the one-or-more-segments pattern HCLoader writes for every
+     compound rule (LoadEndoCompoundingRule, AnyPlus for both). An earlier note here said such patterns made
+     the analyser run past ten minutes on three words; with this lexicon they finish in milliseconds.
+
+     CONVERSION HISTORY: a compound rule's head and non-head requirements are the part of speech and the
+     production restrictions, nothing else (HCLoader.cs LoadEndoCompoundingRule 1891-1961 and
+     LoadExoCompoundingRule 1971-2050 read m_posFeature and the production restrictions only), so the
+     head-feature and non-head-feature requirements this fixture once carried, and the lexical entries that
+     existed only to violate them, are removed. The compound-subrule deactivation, the foot features and
+     the zero cap on a rule (crNever) went earlier: HCLoader writes one compounding subrule per rule, never
+     a foot feature, and FieldWorks accepts a compound-rule cap of 1 to 9 only (edge-cases/compound-max-applications
+     holds the cap). -->
+
+<HermitCrabInput>
+  <Language>
+    <Name>CompoundingBreadth</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+      <!-- Bucket-2 coverage (CompoundingRule.outputPartOfSpeech->MorphologicalRule.requiredPartsOfSpeech):
+           crJoin's own outputPartOfSpeech, deliberately DIFFERENT from posN (crJoin's own
+           headPartsOfSpeech) so mrTplSuf's requiredPartsOfSpeech="posN" genuinely CONFLICTS with it
+           rather than merely lacking it - see mrTplSuf below for why the polarity runs this
+           direction (posOther is the WRITTEN value, posN is the head's own fallback). -->
+      <PartOfSpeech id="posOther"><Name>other</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cU"><Representations><Representation>u</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cM"><Representations><Representation>m</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="crJoin crDecoy mrTplSuf">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="crJoin" headPartsOfSpeech="posN" nonHeadPartsOfSpeech="posN" outputPartOfSpeech="posOther">
+            <Name>joinTwice</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="hd">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="nh">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="hd" /><CopyFromInput index="nh" /></MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <!-- Decoy rule: would join with a "p" at the junction. -->
+          <CompoundingRule id="crDecoy" isActive="no" headPartsOfSpeech="posN" nonHeadPartsOfSpeech="posN" outputPartOfSpeech="posN">
+            <Name>joinDecoy</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="hdX">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="nhX">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="hdX" /><InsertSegments><PhoneticShape>p</PhoneticShape></InsertSegments><CopyFromInput index="nhX" /></MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <!-- Bucket-2 coverage (CompoundingRule.outputPartOfSpeech->MorphologicalRule.requiredPartsOfSpeech):
+               a compound gets a category (crJoin's own outputPartOfSpeech="posOther"), then a later
+               rule checks it - see words.yaml's "katumi" for the severance witness. Deliberately NOT
+               requiredPartsOfSpeech="posOther": SynthesisCompoundingRule.cs's own
+               HeadRequiredSyntacticFeatureStruct.Unify seeds the output's SyntacticFeatureStruct from
+               the HEAD's own required POS (headPartsOfSpeech="posN" here) BEFORE
+               OutSyntacticFeatureStruct's PriorityUnion applies outputPartOfSpeech over it - so
+               severing outputPartOfSpeech never leaves the result unset, it falls back to posN, the
+               head's own requirement. requiredPartsOfSpeech="posN" here is chosen to land exactly on
+               that fallback value, so severing the writer is what actually changes the observed
+               outcome (posOther->posN), not a vacuous-match trick as vokadan/idil use elsewhere. -->
+          <MorphologicalRule id="mrTplSuf" requiredPartsOfSpeech="posN" outputPartOfSpeech="posOther">
+            <Name>tplSuf</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTplSuf">
+                <MorphologicalInput><PhoneticSequence id="stemTplSuf"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemTplSuf" /><InsertSegments><PhoneticShape>mi</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TPLSUF</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eKa" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aKa"><PhoneticShape>ka</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>KA</MorphemeId>
+            <Gloss>ka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTu" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aTu"><PhoneticShape>tu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TU</MorphemeId>
+            <Gloss>tu</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

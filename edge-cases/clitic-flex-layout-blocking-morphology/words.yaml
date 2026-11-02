@@ -1,0 +1,42 @@
+# oracle-provenance: founding-oracle machine-commit=ed5cf05d verified-date=2026-10-26
+# Expected parses are derived from the HC clitic and final-template rules (Machine #529); the engine run only confirms them.
+# The Morphology stratum is blocking (it holds a phonological rule), but no word depends on that: the clearing of the
+# final-template state at the end of a blocking stratum is observable only through a non-clitic rule in a later stratum.
+language: CliticFlexLayoutBlockingMorphology
+inspired_by: ["synthetic FieldWorks-layout probe: a final template, an obligatory epenthesis and an enclitic across the Morphology and Clitics strata, not a model of a real language"]
+sources:
+  - "https://github.com/sillsdev/machine/pull/529"
+  - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
+  - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs: IsBlockingStratum"
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: sagdi
+    note: >-
+      The final template, then the Morphology stratum's obligatory epenthesis after word-final d.
+    parses:
+      - signature: "SAG+PAST|sagdi"
+        rules: [mrPast, prEpenthesis]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+
+  - word: sagd
+    note: >-
+      The epenthesis is obligatory at word-final d, so the unepenthesised form has no analysis.
+    expect_fail: true
+
+  - word: sagdis
+    note: >-
+      The enclitic attaches to the phonologically derived form, so phonology in one stratum feeds
+      the next stratum's clitic.
+    parses:
+      - signature: "SAG+PAST+ENC|sagdis"
+        rules: [mrPast, prEpenthesis, mrEnc]
+        exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+
+  - word: sagdk
+    note: >-
+      Control: the final-template gate applies within the Morphology stratum itself, so the ordinary
+      rule mrPlain is refused.
+    expect_fail: true
+    blocked_by: [mrPlain]
+    exercises: ["Clitic rules (Clitics stratum) after a final template"]

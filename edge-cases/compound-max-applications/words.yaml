@@ -1,0 +1,84 @@
+# The compound-rule cap. See grammar.xml's header for what a FieldWorks project can set.
+#
+# HAND DERIVATION (written from the rules before the oracle ran). crJoin is recursive (head,
+# non-head and output are all posN) with a cap of 2 applications; the roots are ka, tu, mi and ro.
+# MaxRoots is 4, so the root limit never decides a word below.
+#   ka tu mi ro   bare roots.
+#   katu          one application: KA head, TU non-head. One parse.
+#   katumi        three roots, two applications, within the cap. The analysis side takes a root as the
+#                 non-head each time (AnalysisCompoundingRule searches the root allomorphs for it), so
+#                 the one bracketing is (ka tu) mi, with the compound as the head.
+#   katumiro      four roots need three applications, whatever the bracketing. The cap is 2: no parse.
+#
+# Mutations (run against the checked-in grammar, not recorded here as data): the cap at 1 loses
+# katumi; the cap at 3 gives katumiro one analysis, KA+TU+MI+RO.
+
+language: CompoundMaxApplications
+inspired_by: ["synthetic recursive-compound cap probe (not modeling any real language)"]
+sources:
+  - "FieldWorks ParserCore HCLoader.cs and the Parser Parameters dialog, which hold the compound-rule cap"
+requires: [morpher-settings]
+fieldworks_producible: true
+morpher:
+  MaxRoots: 4
+words:
+  - word: ka
+    note: Bare root.
+    parses:
+      - signature: "KA|ka"
+        rules: []
+        exercises:
+          - "CompoundingRule"
+
+  - word: tu
+    note: Bare root.
+    parses:
+      - signature: "TU|tu"
+        rules: []
+        exercises:
+          - "CompoundingRule"
+
+  - word: mi
+    note: Bare root.
+    parses:
+      - signature: "MI|mi"
+        rules: []
+        exercises:
+          - "CompoundingRule"
+
+  - word: ro
+    note: Bare root.
+    parses:
+      - signature: "RO|ro"
+        rules: []
+        exercises:
+          - "CompoundingRule"
+
+  - word: katu
+    note: One application of crJoin, well within the cap.
+    parses:
+      - signature: "KA+TU|katu"
+        rules: [crJoin]
+        exercises:
+          - "CompoundingRule"
+
+  - word: katumi
+    note: >-
+      Three roots, so crJoin applies twice, which the cap of 2 allows. The analysis takes a root as
+      the non-head each time, so there is one bracketing, (ka tu) mi, with the first compound as the
+      head of the second. With the cap at 1 there is no analysis.
+    parses:
+      - signature: "KA+TU+MI|katumi"
+        rules: [crJoin, crJoin]
+        exercises:
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+
+  - word: katumiro
+    note: >-
+      Four roots need three applications of crJoin whatever the bracketing, and the cap is 2, so
+      there is no parse although MaxRoots (4) allows four stems. With the cap at 3 this word has
+      one analysis, KA+TU+MI+RO.
+    expect_fail: true
+    blocked_by: [crJoin]
+    exercises:
+      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
