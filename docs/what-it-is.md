@@ -20,7 +20,7 @@ edge-cases/<name>/   grammar.xml + words.yaml   -- micro-grammars for things no 
 stress/              timing and optimisation-parity grammars (not counted as conformance)
 HermitCrabInput.dtd  the published grammar DTD (the authoritative copy)
 schema/              JSON Schema for words.yaml and the manifest
-generated/           the versioned JSON manifest a consumer imports
+generated/           the versioned JSON manifest a consumer imports, and a separate stress manifest
 scripts/             the checks CI runs, and the manifest generator
 PROTOCOL.md          the adapter contract: CLI shape, TSV format, signature algorithm
 ```

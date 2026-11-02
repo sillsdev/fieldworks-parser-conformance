@@ -73,6 +73,7 @@ subset it claims to support.
 languages/<name>/    grammar.xml + words.yaml   -- 6 typologically-selected synthetic languages
 edge-cases/<name>/   grammar.xml + words.yaml   -- 127 focused micro-grammars for things no shared grammar hosts
 stress/              16 timing and optimisation-parity grammars (not conformance; see stress/README.md)
+                     docs/grammars.md and that README list each; generated/stress-manifest.v2.json hashes them
 docs/grammars.md     one line for every fixture above; scripts/check_grammars_md.py keeps it complete
 coverage.csv         language x word x construct (written by a consuming engine's coverage report)
 rules.csv            language x grammar rule id x exercising words (same)
@@ -81,7 +82,7 @@ constructs.txt       the checklist vocabulary of construct tags that `exercises:
 fieldworks-writable-shapes.tsv  the census of which DTD members HCLoader.cs writes (see below)
 HermitCrabInput.dtd  the published grammar DTD (the authoritative copy)
 schema/              Draft 2020-12 contracts for the authoring and product formats
-generated/           the versioned JSON manifest a consumer imports (scripts/generate_manifest.py)
+generated/           the versioned JSON manifest a consumer imports, and the stress manifest (scripts/generate_manifest.py)
 parity-check.py      the engine-free migration parity proof
 scripts/             the checks CI runs
 PROTOCOL.md          the adapter contract
@@ -89,7 +90,9 @@ PROVENANCE.md        which engine builds supplied the ground truth
 AGENTS.md            how to change the suite
 ```
 
-The 16 timing grammars in `stress/` are listed in that directory's README; no manifest counts them.
+The 16 timing grammars in `stress/` are listed in that directory's README and in `docs/grammars.md`. The manifest above does not
+count them; `generated/stress-manifest.v2.json` does, in the same layout, and `scripts/generate_manifest.py --check` checks both.
+None of the 16 has a FieldWorks witness yet; the rule and the expected-output meaning are in `stress/README.md`.
 
 ## Consuming the suite from another repository
 
