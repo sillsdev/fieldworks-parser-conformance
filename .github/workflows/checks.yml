@@ -24,13 +24,13 @@ jobs:
           cache-dependency-path: scripts/requirements.txt
       - name: Install the checkers
         run: python -m pip install -r scripts/requirements.txt
-      - name: Manifest is fresh
+      - name: Manifests are fresh (conformance and stress)
         run: python scripts/generate_manifest.py --check
       - name: words.yaml matches the schema
         run: python scripts/check_words_schema.py
       - name: grammar.xml matches the DTD
         run: python scripts/check_dtd.py
-      - name: docs/grammars.md lists every fixture
+      - name: docs/grammars.md and stress/README.md list every fixture
         run: python scripts/check_grammars_md.py
       - name: FieldWorks witnesses are well formed
         run: python scripts/check_fwdata.py
