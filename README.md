@@ -13,6 +13,13 @@ out, why FieldWorks cannot write each one, and the 23 fixtures removed for using
 [what the XML can say but FieldWorks cannot, so we do not test it](#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 [`docs/grammars.md`](docs/grammars.md) lists every grammar that remains.
 
+**The standard is the round trip.** "Producible" means a real FieldWorks project round-trips to the grammar: a
+project built in FieldWorks (LibLCM), put through `HCLoader.cs`, yields the fixture's `grammar.xml`. That the
+loader source could write a construct is weaker evidence. Until a fixture has a FieldWorks witness (a
+`fieldworks/` directory, [PROTOCOL.md](PROTOCOL.md) section 10), its `fieldworks_producible: true` is a claim
+read from the loader. Only the 9 fixtures that carry a witness are certified today (all under `edge-cases/`);
+the other 124 of the 133 fixtures rest on the loader reading alone.
+
 **Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) and PanGloss
 each mount it as a git submodule at `conformance/` and run it through their own runners; each pins a
 commit. Their gates, ledgers and coverage measurements live in their own repositories. To change the

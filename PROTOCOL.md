@@ -423,6 +423,12 @@ straight from a LibLCM project and has a materially narrower reach than the DTD 
 feeds. A fixture can therefore be a fully conformant, oracle-verified regression test of the engine
 and still describe a grammar shape no FieldWorks user will ever see.
 
+The standard for "producible" is the round trip: a real FieldWorks project, built in FieldWorks, goes through
+`HCLoader.cs` and yields the fixture's `grammar.xml`. That the loader source could write a construct is weaker
+evidence. `fieldworks_producible: true` is therefore a claim read from the loader until the fixture has a
+FieldWorks witness (section 10), and only the fixtures with a witness are certified today: 9 of the 133
+(all under `edge-cases/`).
+
 Every fixture's `words.yaml` front matter carries `fieldworks_producible: true`, directly after
 `requires`. The suite keeps only grammars a real FieldWorks project can produce: `true` means every
 construct the fixture's `grammar.xml` exercises has a known HCLoader code path that can emit it from
