@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the shape of every fieldworks/ witness directory (PROTOCOL.md section 10).
+"""Check the shape of every fieldworks/ witness directory, in fixtures and stress (PROTOCOL.md section 10).
 
 Structural only: the directory holds exactly project.fwdata, phonology-mutations.yaml and
 WritingSystemStore/*.ldml; the fixture is fieldworks_producible: true; phonology-mutations.yaml is
@@ -11,12 +11,12 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 
-from suite import ROOT, fixture_dirs
+from suite import ROOT, STRESS_GROUP, fixture_dirs
 
 
 def main() -> int:
     problems, checked = [], 0
-    for directory in fixture_dirs():
+    for directory in fixture_dirs() + fixture_dirs(groups=(STRESS_GROUP,)):
         witness = directory / "fieldworks"
         if not witness.is_dir():
             continue

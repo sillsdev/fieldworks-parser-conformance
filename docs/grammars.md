@@ -212,5 +212,26 @@ the `zero` cells the stretch may also be empty.
 ## Stress grammars
 
 The 16 grammars under `stress/` (at the repository root, beside `edge-cases/`) are timing
-probes for the analysis pass, not fixtures, and no coverage ledger counts them. That directory's README lists each
-one and what it exercises. They follow the same rule: only grammars a FieldWorks project can produce.
+probes for the analysis pass, not fixtures, and no coverage ledger counts them. They follow the same rule: only
+grammars a FieldWorks project can produce. All 16 carry `fieldworks_producible: true` read from the loader, and
+none has a FieldWorks witness yet (issue #1). Their expected output is a parity check against an engine, not a
+conformance claim. [stress/README.md](../stress/README.md) says what each really exercises and which
+sillsdev/machine optimization it was built for; `scripts/check_grammars_md.py` fails if this list and that table
+differ from the directory.
+
+- `stress/edge-cases/allomorph-list-density`: five suffix rules with 30 allomorphs, each gated by the stem's final context.
+- `stress/edge-cases/athabaskan-prefix-complex`: six prefix slots of homophonous prefixes with 51 paired-slot `exclude` rules.
+- `stress/edge-cases/bantu-extension-chain`: seven suffix slots of homophonous suffixes with 52 `exclude` rules.
+- `stress/edge-cases/bantu-extension-required-slot`: five free extension suffixes before a template with a required TAM prefix.
+- `stress/edge-cases/bantu-tam-fusion`: the Bantu slot templates with a plain and a vowel-copying allomorph per object and subject rule.
+- `stress/edge-cases/bantu-tam-templates`: 12 Bantu slot templates with required subject and TAM slots.
+- `stress/edge-cases/bantu-tam-templates-shared`: the same words and templates with three trailing slots shared across templates.
+- `stress/edge-cases/derivation-chain-homophone-roots`: seven free derivational suffixes over verb and noun roots that share shapes.
+- `stress/edge-cases/early-lexicon-agglutinative`: 25 rules and a vowel-harmony rule, where the 19 words that parse start with a root.
+- `stress/edge-cases/env-austronesian-nasal-prefix`: nasal-prefix allomorphs gated by the stem's first segment in the input pattern.
+- `stress/edge-cases/env-bantu-concord`: concord and tense allomorphs gated by the stem's edge segments in the input pattern.
+- `stress/edge-cases/env-zero-allomorphs`: zero allomorphs gated by rare segment classes, with two left environments on a lone prefix.
+- `stress/edge-cases/excluded-cooccurrence`: six prefix slots of four fillers with 12 `exclude` rules and a zero-width filler.
+- `stress/edge-cases/prefix-class-density`: four prefix rules with 20 allomorphs gated by the stem's first segment.
+- `stress/edge-cases/required-template-slot`: a required TAM prefix and a required noun class prefix, with decoy branches.
+- `stress/edge-cases/truncating-slot-chain`: five slot templates whose suffix slots each delete the vowel before them.
