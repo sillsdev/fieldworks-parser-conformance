@@ -73,5 +73,3 @@ every word's signature and traced `rules:` list matched. The fixture was first a
 load-bearing scenarios are independently proven propose-vs-confirm in
 `rust/crates/pg-foma/tests/cover_compounding.rs`, which keeps its own copy of the PRE-conversion
 grammar (with the subrule gate) because it tests the engine's group-aware subrule path directly.
-
-## Graduation

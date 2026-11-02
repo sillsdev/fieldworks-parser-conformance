@@ -107,5 +107,3 @@ Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` sel
 signatures match exactly, and the `rules: []` fields for `sq`/`tr` have been filled in from the
 oracle's own trace (`[mrRtlReversal]` for both). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.
-
-## Graduation

@@ -99,5 +99,3 @@ Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` sel
 signatures (`ect`/`ecct`/`eccccct`) match exactly, and their `rules: []` fields have been filled in
 from the oracle's own trace (`[prIterUnbounded]` for all three). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.
-
-## Graduation

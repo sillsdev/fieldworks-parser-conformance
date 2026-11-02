@@ -113,5 +113,3 @@ against the rewritten grammar. The `rules: [mrCirc]` attribution was confirmed b
 `-Propose` and observing no rules-mismatch report (the harness prints `declared rules [...] !=
 traced [...]` when the declared list is wrong). The `expect_fail` words (`pubbmo`, `puabmo`, `aamo`)
 were confirmed by the same self-check run producing no mismatch for them.
-
-## Graduation

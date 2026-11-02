@@ -98,5 +98,3 @@ element-reordering fixes, no linguistic content change. This does not change the
 section above (hc.dll still has no CLI surface for `guessRoot: true`, so it remains
 `oracle-provenance: rust-only`), but confirms the grammar itself is now valid HC XML, loadable and
 re-checkable by hc.dll's own loader/schema.
-
-## Graduation
