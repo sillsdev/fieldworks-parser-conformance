@@ -22,7 +22,7 @@ not belong here, however expressible it is in the XML and however well an engine
 - The standard is the round trip: a real FieldWorks project, put through the loader, yields the grammar. Reading
   the loader source is weaker evidence. `fieldworks_producible: true` is a claim read from the loader until the
   fixture has a FieldWorks witness (section 3), and only the 9 fixtures that carry one are certified today (of
-  133). Say which of the two you are relying on in the pull request.
+  133; none of the 16 stress fixtures has one). Say which of the two you are relying on in the pull request.
 - If the grammar needs a construct in that table, stop. Rewrite the grammar without it or do not add it.
   Do not relax `fieldworks_producible`: every fixture must carry `true`, and `scripts/check_words_schema.py`
   and the consuming engines' gates fail on anything else.
@@ -64,8 +64,11 @@ section "Consuming the suite from another repository" describe the files; `schem
 | File | Written by | Checked by |
 |---|---|---|
 | `generated/hc-conformance-manifest.v2.json` | `python3 scripts/generate_manifest.py` | `python3 scripts/generate_manifest.py --check`, and CI |
+| `generated/stress-manifest.v2.json` | the same command | the same `--check`, and CI |
 | `coverage.csv`, `rules.csv` | the consuming engine's coverage report (sillsdev/machine's runner: `--coverage-report`) | that engine's CI; **not yet checked here** |
 
+- The stress manifest lists `stress/edge-cases/*` in the same layout and is kept apart from the conformance
+  manifest, which consumers pin: changing a stress fixture changes only the stress manifest.
 - The manifest hashes `grammar.xml` and `words.yaml` of every fixture, the DTD, `constructs.txt`,
   `parity-check.py` and the two schemas. Editing a fixture `README.md`, a file under `docs/`, or this file
   changes nothing generated.
@@ -115,9 +118,67 @@ python3 scripts/check_links.py
 python3 scripts/privacy_lint.py
 ```
 
+`generate_manifest.py --check` covers both manifests, `check_grammars_md.py` covers both fixture lists (and the
+stress README table), and `check_fwdata.py` covers stress witnesses as well as fixture witnesses.
+
 - `check_words_schema.py` needs PyYAML and jsonschema, and `check_dtd.py` needs lxml or `xmllint`; CI
   installs them (`pip install -r scripts/requirements.txt`). The other scripts use the standard library only.
 - Then run the self-check of each consuming engine you can reach (for sillsdev/machine,
   `--fixtures conformance --include-pathological`, and `--fixtures conformance/stress` for the stress fixtures).
   This repository cannot run an engine; CI here proves the files are well formed, not that an engine agrees
   with them.
+
+## 5. Stress fixtures
+
+The grammars under `stress/edge-cases/` measure the cost of an engine's analysis pass. They are not
+conformance fixtures, and this section says how they differ from sections 1 to 4.
+
+**What stays the same.** The one rule applies: only what FieldWorks can produce, with the same evidence
+(section 1) and the same meaning of `fieldworks_producible: true` (a claim read from the loader until a
+`fieldworks/` witness exists, section 3). Every stress fixture carries the flag; none has a witness yet (0 of
+16), and `stress/README.md` states the count.
+
+**What differs.**
+
+| | Conformance fixture | Stress fixture |
+|---|---|---|
+| Directory | `languages/<name>/` or `edge-cases/<name>/` | `stress/edge-cases/<name>/` |
+| Expected output means | what the oracle engine does, read against the rules; each word pins one behaviour | parity: an optimization must return the same parses; the words are a workload, and a changed row is the failure |
+| Measure | pass or fail | work steps, never wall time; `budget_ms` only guards against a hang |
+| `words.yaml` starts with | front matter | `# kind: stress (...)`, then `fieldworks_producible: true` and `budget_ms` |
+| `exercises`, coverage, `rules.csv`, `dead-rules-allowed.tsv` | yes | none; no ledger counts them |
+| Fixture `README.md` | optional | none; `stress/README.md` describes every fixture in one table |
+| Listed in | `docs/grammars.md` bullets, `generated/hc-conformance-manifest.v2.json` | the `docs/grammars.md` "Stress grammars" bullets, the `stress/README.md` table and `generated/stress-manifest.v2.json` |
+| Run by | the consumer's default runner | only on request, through the consumer's opt-in stress category |
+
+**Adding or changing a stress fixture.**
+
+1. Check producibility as in section 1 and name the `HCLoader.cs` function that writes each construct. Say in
+   the pull request whether a witness exists (it will not).
+2. Write `stress/edge-cases/<name>/grammar.xml` and `words.yaml`. Start `words.yaml` with
+   `# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)`, then
+   `fieldworks_producible: true` and `budget_ms`. In the header comment say what the grammar models and what it
+   really exercises; do not name a script or a switch that is not in a repository.
+3. Take the expected rows from an engine run, never from memory: three identical runs of the reference engine
+   (sillsdev/machine `master` for the existing fixtures). Record the build in the header
+   (`# oracle-provenance: ...`) and, if it is new, in [PROVENANCE.md](PROVENANCE.md). Read each row against the
+   grammar. A row you cannot explain is a finding to file, not a pin. A word an engine in the field renders
+   differently from `master` is left out and named in `stress/README.md` (see `polundanasak`).
+4. Change an existing row only when the correct behaviour of the reference engine changed, and say which change
+   (for example FLEx-style null-affix boundaries) in the pull request. An optimization that moves a row has failed;
+   it is not a reason to edit the row.
+5. Add a row to the table in [stress/README.md](stress/README.md): what the fixture really exercises (checked
+   against the words and the grammar, not copied from the commit that added it), the word count, the no-parse
+   count, and the sillsdev/machine issue or pull request by number. Never cite a local file for a machine
+   record; cite the issue. Update the witness sentence if a witness was added.
+6. Add a bullet to the "Stress grammars" section of [docs/grammars.md](docs/grammars.md) and keep its count sentence
+   true. Update the counts in the root README (`stress/ ... 16 timing` and "The 16 timing grammars").
+7. Run `python3 scripts/generate_manifest.py` and read the diff. Only `generated/stress-manifest.v2.json` may
+   move; if the conformance manifest moves, you changed something it hashes.
+8. Delete a fixture by removing its directory, its README row and its bullet, and regenerating. Rename one only
+   with the consumers in step 9: the directory name `stress/` and the fixture names are read by sillsdev/machine.
+9. Tell the consumers (section 2, step 8). sillsdev/machine's stress test and runner discover the directory
+   themselves; a rename or a changed row there is a bump of its pin.
+
+`stress/README.md` shows how a consumer runs the fixtures; this repository cannot, so CI proves only that the files are
+well formed, listed, and hashed.
