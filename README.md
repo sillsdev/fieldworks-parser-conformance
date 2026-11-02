@@ -18,7 +18,7 @@ project built in FieldWorks (LibLCM), put through `HCLoader.cs`, yields the fixt
 loader source could write a construct is weaker evidence. Until a fixture has a FieldWorks witness (a
 `fieldworks/` directory, [PROTOCOL.md](PROTOCOL.md) section 10), its `fieldworks_producible: true` is a claim
 read from the loader. Only the 9 fixtures that carry a witness are certified today (all under `edge-cases/`);
-the other 124 of the 133 fixtures rest on the loader reading alone.
+the other 125 of the 134 fixtures rest on the loader reading alone.
 
 **Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) mounts it as a
 git submodule at `conformance/`, pinned to a commit on `main`; PanGloss mounts it as a submodule that
@@ -71,7 +71,7 @@ subset it claims to support.
 
 ```
 languages/<name>/    grammar.xml + words.yaml   -- 6 typologically-selected synthetic languages
-edge-cases/<name>/   grammar.xml + words.yaml   -- 127 focused micro-grammars for things no shared grammar hosts
+edge-cases/<name>/   grammar.xml + words.yaml   -- 128 focused micro-grammars for things no shared grammar hosts
 stress/              16 timing and optimisation-parity grammars (not conformance; see stress/README.md)
                      docs/grammars.md and that README list each; generated/stress-manifest.v2.json hashes them
 docs/grammars.md     one line for every fixture above; scripts/check_grammars_md.py keeps it complete
@@ -328,7 +328,7 @@ members and environments a grammar uses, not about each output byte for byte. `H
 morpheme boundary on the inside edge of every affix form and between the two parts of a compound (prefix
 1358 and 1649, suffix 1360 and 1623, circumfix 1597, reduplication 1506, 1549 and 1564, compounds 1871,
 1884, 1956, 2017 and 2044); the loader's table always has it (2761). A grammar file can write that boundary
-only if it defines one, and 15 of the 133 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
+only if it defines one, and 15 of the 134 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
 effect of that on a parse is not measured. A claim that an output is "written as HCLoader writes it" is
 therefore made only where the output carries the boundary, as in the circumfix of
 `languages/suffixing-vowel-harmony`.

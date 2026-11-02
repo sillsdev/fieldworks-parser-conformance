@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](../README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 133 fixtures: 6 languages and 127 edge cases.
+The list has 134 fixtures: 6 languages and 128 edge cases.
 
 ## The six languages
 
@@ -30,6 +30,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/circumfix-infix-interior-action-precedence`: one allomorph that is both circumfixing and infixing in the same output.
 - `edge-cases/circumfix-non-first-allomorph-selection`: a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails.
 - `edge-cases/circumfix-reduplication-precedence`: one allomorph that is both circumfixing and reduplicating in the same output.
+- `edge-cases/copy-agreement-featureless-redup`: a first-consonant-and-vowel reduplication in a grammar with no phonological features, where the two copies must agree in spelling (19 words).
 - `edge-cases/discontinuous-morph-environment`: a root environment checked on each contiguous piece of a root split by a two-infix rule.
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
 - `edge-cases/infix-interdigitation`: infixes inserted around a copied root, in a templatic Semitic shape.

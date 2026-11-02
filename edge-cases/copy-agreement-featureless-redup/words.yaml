@@ -1,0 +1,135 @@
+# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-11-02
+# All 19 rows are what the C# oracle (SIL.Machine.Morphology.HermitCrab at the commit above) does. They
+# were first taken from hc.dll through the batch contract, and on 2026-11-02 the harness self-check
+# (hc-conformance --fixtures, in-process oracle at that commit) passed every word, signature and traced rule.
+#
+# What this pins. A synthetic CV reduplication (redCV: copy the first consonant and vowel, then the rest)
+# in a grammar with NO phonological features. There, C# keeps each segment's spelling (StrRep) on its
+# node (XmlLanguageLoader.LoadCharacterDefinitionTable passes no feature struct when the feature system
+# is empty; CharacterDefinitionTable.Add builds the StrRep set from every spelling), so
+# AnalysisMorphologicalTransform.CanAlign (HasDisagreeingCopies) compares characters and refuses an
+# analysis whose two copies differ (pa then sa, ta then ti). An engine that compares only feature lanes
+# sees empty lanes here, proposes that analysis, and loses it later in synthesis. The parses are the
+# same either way, so the words pin the visible half: agreeing copies parse, disagreeing neighbours
+# do not, a segment with two spellings (u and ú) counts as one identity, and a copy that a rewrite
+# (k to s between vowels) changed still agrees once the rewrite is un-applied (kasata).
+#
+# FieldWorks: no fieldworks/ witness, so fieldworks_producible: true is a claim read from HCLoader.cs and is
+# not proven (see fieldworks_producible_notes for the reason and the parts that are inferred).
+language: CopyAgreementFeaturelessRedup
+inspired_by: ["synthetic CV reduplication in a grammar with no phonological features (not modeling any real language)"]
+sources:
+  - "AnalysisMorphologicalTransform.cs HasDisagreeingCopies/CanAlign (machine aab4c598), lines 65-165"
+requires: [phonology]
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Read from HCLoader.cs at FieldWorks 620cd9903; NOT proven by a FieldWorks witness. There is no
+  fieldworks/ directory because the PanGloss xample-projector `author` accepts one input sequence and two
+  output actions (insert plus copy), so it cannot back out a repeated copy, and a project may not be
+  hand-edited. What the loader reading shows: reduplication is an MoAffixProcess; LoadAffixProcessAllomorph
+  (1383-1488) writes one input pattern per input part and a CopyFromInput by part index, with no check that a
+  part is copied once, so copying parts 1, 2, 1, 2 and 3 is writable. A phoneme with two graphemes is one
+  character definition with two representations, and its feature struct is null when the phoneme has no
+  features (LoadCharacterDefinitionTable, 2718-2745). The rewrite is an ordinary regular phonological rule
+  with vowel contexts on both sides; the stratum is unordered as the loader builds it. Not shown: the third
+  part (`rest`, one or more of any segment) is written here as an iteration context 1..-1 over a natural class
+  with no features; the loader loads that shape (LoadPatternNode, 2381-2389), but an input variable in a
+  FieldWorks affix process becomes AnyStar (minimum 0, 1392), so a FieldWorks user would not naturally build
+  this part. Also not shown: a project with an entirely empty phonological feature system. The grammar sets
+  no redupMorphType (implicit); the same 19 rows hold with redupMorphType="prefix", which the loader writes
+  for a prefixing reduplication.
+words:
+  - word: tasi
+    note: >-
+      plain root; the reduplication rule is not applied.
+    parses:
+      - signature: "tasi|tasi"
+        rules: []
+  - word: tatasi
+    note: >-
+      agreeing copies (ta, ta) in front of root tasi.
+    parses:
+      - signature: "RED+tasi|tatasi"
+        rules: [mrRed]
+  - word: pasa
+    note: >-
+      plain root control.
+    parses:
+      - signature: "pasa|pasa"
+        rules: []
+  - word: papasa
+    note: >-
+      agreeing copies (pa, pa) in front of root pasa.
+    parses:
+      - signature: "RED+pasa|papasa"
+        rules: [mrRed]
+  - word: pasasa
+    note: >-
+      pa then sa disagree on the consonant: no parse.
+    expect_fail: true
+  - word: pasapa
+    note: >-
+      pa then sa disagree: no parse.
+    expect_fail: true
+  - word: tatika
+    note: >-
+      ta then ti disagree on the vowel: no parse.
+    expect_fail: true
+  - word: tatisa
+    note: >-
+      ta then ti disagree on the vowel, whatever the rewrite does: no parse.
+    expect_fail: true
+  - word: tusa
+    note: >-
+      root tuka; the vowel has two spellings (u and ú), and the rewrite k to s between vowels applies.
+    parses:
+      - signature: "tuka|t[uú]sa"
+        rules: [prLen]
+  - word: tutusa
+    note: >-
+      agreeing copies (tu, tu) in front of root tuka, whose k is rewritten to s.
+    parses:
+      - signature: "RED+tuka|t[uú]t[uú]sa"
+        rules: [mrRed, prLen]
+  - word: tutúsa
+    note: >-
+      the two copies are spelled u and ú: one segment with two spellings, so they agree.
+    parses:
+      - signature: "RED+tuka|t[uú]t[uú]sa"
+        rules: [mrRed, prLen]
+  - word: tuúsa
+    note: >-
+      no root and no agreeing copies: no parse.
+    expect_fail: true
+  - word: sasa
+    note: >-
+      the copies agree but there is no root sa: no parse.
+    expect_fail: true
+  - word: titasi
+    note: >-
+      ti then ta disagree: no parse, though tasi is a root.
+    expect_fail: true
+  - word: tasitasi
+    note: >-
+      the rule copies only the first consonant and vowel, not the whole root: no parse.
+    expect_fail: true
+  - word: kakasi
+    note: >-
+      the copies agree but there is no root kasi: no parse.
+    expect_fail: true
+  - word: kata
+    note: >-
+      plain root control; its k is word-initial, so the rewrite does not apply.
+    parses:
+      - signature: "kata|kata"
+        rules: []
+  - word: kasata
+    note: >-
+      RED + kata. The surface copies are ka and sa, but the rewrite k to s between vowels explains the second, so un-applying it makes the copies agree. A fix that compared surface characters would wrongly refuse this analysis.
+    parses:
+      - signature: "RED+kata|kasata"
+        rules: [mrRed, prLen]
+  - word: kakata
+    note: >-
+      the rewrite is obligatory, so the unrewritten surface kakata has no parse.
+    expect_fail: true
