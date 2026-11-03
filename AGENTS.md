@@ -57,7 +57,8 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
    `dead-rules-allowed.tsv` line that names it.
 8. Tell the consuming engines. sillsdev/machine and PanGloss each pin a commit of `main` in `conformance.commit`,
    so a change reaches an engine when it bumps that pin. Their own self-check is regenerated on their side, not
-   here.
+   here. The order of the pull requests, and what each pin names at each step, is in
+   [.claude/skills/land-a-conformance-change/SKILL.md](.claude/skills/land-a-conformance-change/SKILL.md).
 
 ### 2a. Generated files
 
