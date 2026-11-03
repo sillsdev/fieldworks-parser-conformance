@@ -6,10 +6,27 @@ one line saying what its grammar and words exercise. Each fixture has a `grammar
 
 Every grammar here is one a real FieldWorks project can produce. A grammar that FieldWorks cannot
 produce does not belong in the suite, however expressible it is in the XML; see
-[what FieldWorks cannot produce](../README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
+[what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
 The list has 133 fixtures: 6 languages and 127 edge cases.
+
+## The six languages at a glance
+
+| Directory | Grammar name | Simulates |
+|---|---|---|
+| `templatic-root-modification` | TemplaticRootModification | Templatic root-and-pattern morphology, stem names, OCP co-occurrence, simultaneous rewrite |
+| `metathesis-phase-isolation` | MetathesisPhaseIsolation | Infix, circumfix, reduplication, metathesis, subtractive truncation |
+| `polysynthetic-stratal-derivation-chain` | PolysyntheticStratalDerivationChain | Derivation-then-inflection recursion across strata, incorporation-style compounding, guessed stems |
+| `suffixing-evidential-adjacency-chain` | SuffixingEvidentialAdjacencyChain | Evidential suffix chain, morpheme-adjacency co-occurrence, `requires: []` — the XAmple-eligible, phonology-free grammar |
+| `suffixing-extension-slot-ordering` | SuffixingExtensionSlotOrdering | Verbal extension suffixes in template slots, MPR features in the loader's two groups, reduplication, post-nasal mutation, stem names on rules and root allomorphs |
+| `suffixing-vowel-harmony` | SuffixingVowelHarmony | Alpha-variable vowel harmony, merges, gradation and epenthesis in one stratum, a circumfix, an infix |
+
+Each is a dense, synthetic grammar (invented lexemes and segment inventories, no orthographic claim
+about any real language) where ordinary words exercise several constructs at once, rather than a
+one-mechanism probe. `edge-cases/` holds the things no shared grammar can host faithfully:
+loader/XML-semantics probes, an `expect_crash` pin, a `budget_ms` pathological stress case, and
+allomorphy/rewrite pins whose exact rule shape a naturalistic grammar wouldn't contain.
 
 ## The six languages
 

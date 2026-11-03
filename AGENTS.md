@@ -16,7 +16,7 @@ reaches less than the HermitCrab XML can say. A grammar that needs a construct t
 not belong here, however expressible it is in the XML and however well an engine handles it.
 
 - Before you author, change or keep a fixture, check each construct it uses against the table in
-  [README.md](README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it), against the census
+  [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it), against the census
   `fieldworks-writable-shapes.tsv` (every DTD member, with the `HCLoader.cs` line that writes it, only labels
   it, or never writes it), and against [PROTOCOL.md](PROTOCOL.md) section 9.
 - The standard is the round trip: a real FieldWorks project, put through the loader, yields the grammar. Reading
@@ -31,8 +31,8 @@ not belong here, however expressible it is in the XML and however well an engine
 ## 2. Adding, changing or deleting a fixture
 
 A fixture is a directory under `languages/` or `edge-cases/` holding `grammar.xml` and `words.yaml`, and
-optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/what-it-is.md) and the README
-section "Consuming the suite from another repository" describe the files; `schema/words.schema.json` and
+optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/what-it-is.md) and
+[docs/consuming.md](docs/consuming.md) ("Consuming the suite from another repository") describe the files; `schema/words.schema.json` and
 `HermitCrabInput.dtd` validate them.
 
 1. Check producibility (section 1). Name the `HCLoader.cs` function that writes each construct you rely on.
@@ -47,7 +47,7 @@ section "Consuming the suite from another repository" describe the files; `schem
 4. Update [docs/grammars.md](docs/grammars.md): one bullet per fixture, in the group it belongs to, in the
    form `` - `edge-cases/name`: one short line. `` `scripts/check_grammars_md.py` fails if a fixture is
    missing, listed twice or gone.
-5. If you ruled a construct out, add a row to the README section named in section 1 and, when the loader
+5. If you ruled a construct out, add a row to the table in [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md) named in section 1 and, when the loader
    verdict changed, update `fieldworks-writable-shapes.tsv`. Cite the `HCLoader.cs` function and line, and
    the FieldWorks commit you read. If you delete a fixture for this reason, add its row to the table in
    [docs/engine-only-fixture-retirement.md](docs/engine-only-fixture-retirement.md).
@@ -174,7 +174,7 @@ conformance fixtures, and this section says how they differ from sections 1 to 4
    count, and the sillsdev/machine issue or pull request by number. Never cite a local file for a machine
    record; cite the issue. Update the witness sentence if a witness was added.
 6. Add a bullet to the "Stress grammars" section of [docs/grammars.md](docs/grammars.md) and keep its count sentence
-   true. Update the counts in the root README (`stress/ ... 16 timing` and "The 16 timing grammars").
+   true. Update the counts in [docs/README.md](docs/README.md) (`stress/ ... 16 timing` and "The 16 timing grammars") and the numbers line of the root README.
 7. Run `python3 scripts/generate_manifest.py` and read the diff. Only `generated/stress-manifest.v2.json` may
    move; if the conformance manifest moves, you changed something it hashes.
 8. Delete a fixture by removing its directory, its README row and its bullet, and regenerating. Rename one only

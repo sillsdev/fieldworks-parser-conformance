@@ -4,7 +4,7 @@
 docs/grammars.md lists each conformance fixture as "- `group/name`: ...". Its "Stress grammars" section
 lists each stress fixture as "- `stress/edge-cases/name`: ...", and the table in stress/README.md has one
 "| `name` |" row per stress fixture. Each list must match the directories on disk, and the counts the prose
-states (the number of stress grammars, here and in the root README, and "N of M stress fixtures carry a FieldWorks witness") must match
+states (the number of stress grammars, here and in docs/README.md, and "N of M stress fixtures carry a FieldWorks witness") must match
 the disk. Every stress fixture must start `# kind: stress` and declare `fieldworks_producible: true`.
 """
 import re
@@ -41,11 +41,11 @@ def check_stress(grammars_md: str, problems: list) -> int:
     stated = re.search(r"^The (\d+) grammars under `stress/`", section, re.M)
     if not stated or int(stated.group(1)) != len(on_disk):
         problems.append(f"docs/grammars.md must say 'The {len(on_disk)} grammars under `stress/`'")
-    root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    docs_readme = (ROOT / "docs" / "README.md").read_text(encoding="utf-8")
     for pattern in (r"^stress/\s+(\d+) timing", r"^The (\d+) timing grammars in `stress/`"):
-        said = re.search(pattern, root_readme, re.M)
+        said = re.search(pattern, docs_readme, re.M)
         if not said or int(said.group(1)) != len(on_disk):
-            problems.append(f"README.md must say {len(on_disk)} stress grammars (pattern {pattern!r})")
+            problems.append(f"docs/README.md must say {len(on_disk)} stress grammars (pattern {pattern!r})")
     witnesses = sum(1 for d in directories if (d / "fieldworks").is_dir())
     claim = WITNESS_SENTENCE.search(readme)
     if not claim:
@@ -64,6 +64,39 @@ def check_stress(grammars_md: str, problems: list) -> int:
     return len(on_disk)
 
 
+NUMBERS_LINE = re.compile(
+    r"\*\*(\d+) conformance grammars\*\* \((\d+) languages, (\d+) edge cases\)"
+    r".*?\*\*(\d+) stress grammars\*\*.*?\*\*(\d+) FieldWorks witnesses\*\*"
+)
+
+
+def check_readme_numbers(problems: list) -> None:
+    """The numbers line of the root README must match the disk."""
+    conformance = fixture_dirs()
+    groups = [fixture_id(d).split("/")[0] for d in conformance]
+    stress = fixture_dirs(groups=(STRESS_GROUP,))
+    actual = (
+        len(conformance),
+        groups.count("languages"),
+        groups.count("edge-cases"),
+        len(stress),
+        sum(1 for d in conformance + stress if (d / "fieldworks").is_dir()),
+    )
+    line = NUMBERS_LINE.search((ROOT / "README.md").read_text(encoding="utf-8"))
+    if not line:
+        problems.append(
+            "README.md needs a numbers line: '**N conformance grammars** (N languages, N edge cases) "
+            "· **N stress grammars** · **N FieldWorks witnesses**'"
+        )
+        return
+    said = tuple(int(n) for n in line.groups())
+    if said != actual:
+        labels = ("conformance grammars", "languages", "edge cases", "stress grammars", "FieldWorks witnesses")
+        for label, s, a in zip(labels, said, actual):
+            if s != a:
+                problems.append(f"README.md numbers line says {s} {label}; the disk has {a}")
+
+
 def main() -> int:
     text = (ROOT / "docs" / "grammars.md").read_text(encoding="utf-8")
     listed = LISTED.findall(text)
@@ -71,6 +104,7 @@ def main() -> int:
     problems = []
     compare("docs/grammars.md", listed, on_disk, problems)
     stress = check_stress(text, problems)
+    check_readme_numbers(problems)
     for problem in problems:
         print(problem)
     print(

@@ -7,8 +7,8 @@ repository. This document covers the fixture format, what a case is, and why the
 `languages/` and `edge-cases/`.
 
 The suite covers only grammars a real FieldWorks project can produce. A grammar FieldWorks cannot
-produce does not belong here, however expressible it is in the HermitCrab XML; the README section
-[what the XML can say but FieldWorks cannot, so we do not test it](../README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)
+produce does not belong here, however expressible it is in the HermitCrab XML; the section
+[what the XML can say but FieldWorks cannot, so we do not test it](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)
 lists those constructs. [grammars.md](grammars.md) lists every fixture with a line about what it
 exercises.
 
@@ -171,7 +171,7 @@ ordinary words exercise several constructs at once rather than probing one mecha
 | `polysynthetic-stratal-derivation-chain` | Derivation-then-inflection recursion across strata, incorporation-style compounding, guessed stems |
 | `suffixing-evidential-adjacency-chain` | Evidential suffix chain, morpheme-adjacency co-occurrence, phonology-free |
 
-(Table per `README.md`, which lists all six.) Of the interfaces the whole corpus actually exercises, the
+(Table in `grammars.md`, which lists all six.) Of the interfaces the whole corpus actually exercises, the
 large majority are reached by one of the languages, not by a fabricated fixture, as measured by sillsdev/machine —
 realistic grammars carry most of the suite's real evidentiary weight, and the fabricated half exists for what
 realistic grammars cannot host.

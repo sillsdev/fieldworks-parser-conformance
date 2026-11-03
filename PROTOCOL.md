@@ -440,8 +440,8 @@ research fixture kept outside this tree can carry the verdict, but nothing in th
 A fixture moves to `true` by rewriting its grammar and re-running the C# founding oracle, never by
 relaxing the verdict in place; the rewrite keeps a fixture only if the oracle's rows still hold or
 change for a reason the rules explain. See `docs/engine-only-fixture-retirement.md` for the decision
-and what it removed, and the README section "What the XML can say but FieldWorks cannot, so we do not
-test it" for the constructs and the `HCLoader.cs` lines that rule them out.
+and what it removed, and the section "What the XML can say but FieldWorks cannot, so we do not
+test it" of `docs/fieldworks-cannot-say.md` for the constructs and the `HCLoader.cs` lines that rule them out.
 
 The verdict is human-authored, not mechanically re-derived the way `requires` is. It rests on
 `fieldworks-producibility.tsv` (a hand-researched, point-in-time snapshot of `HCLoader.cs`,
