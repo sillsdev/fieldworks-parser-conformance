@@ -20,9 +20,10 @@ loader source could write a construct is weaker evidence. Until a fixture has a 
 read from the loader. Only the 9 fixtures that carry a witness are certified today (all under `edge-cases/`);
 the other 124 of the 133 fixtures rest on the loader reading alone.
 
-**Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) mounts it as a
-git submodule at `conformance/`, pinned to a commit on `main`; PanGloss mounts it as a submodule that
-follows `main` (`branch = main`). Both run it through their own runners. Their gates, ledgers and
+**Who uses it.** This repository contains no engine. sillsdev/machine (the C# HermitCrab) and PanGloss each
+name a commit of `main` in a file called `conformance.commit` and clone this repository at that commit into an
+ignored `conformance/` directory; neither uses a submodule, and `HC_CONFORMANCE_SUITE` names a local copy
+instead. Both run it through their own runners. Their gates, ledgers and
 coverage measurements live in their own repositories. To change the
 suite, read [AGENTS.md](AGENTS.md). Where a fixture or document names a ledger, a test or a source path
 of one of those repositories, it is a historical or cross-repository reference, not a file here.
@@ -112,7 +113,7 @@ What that product genuinely contributed was provenance, not case data, so that i
 A consumer reads the manifest to discover fixtures and verify integrity, then reads `grammar.xml`
 and `words.yaml` directly for the actual grammar and cases. Paths inside the manifest are
 relative to the root of this repository, with no leading directory name (`edge-cases/<name>/grammar.xml`),
-never relative to the manifest itself. A consumer that mounts this repository as `conformance/` prepends
+never relative to the manifest itself. A consumer that clones this repository into `conformance/` prepends
 that itself. Version 2 dropped the `conformance/` prefix that version 1 carried.
 
 Regenerate with `python3 scripts/generate_manifest.py`; `python3 scripts/generate_manifest.py --check` verifies
@@ -243,7 +244,7 @@ but that does not make the grammar constructs FieldWorks-unproducible, so all th
 
 The combined #500+#506 corrected-engine audit that flips those copied grammars from `unordered` to
 `linear` loses analyses in all three companions; the exact changed words and signatures are recorded
-in sillsdev/machine's `morphological-rule-order-measurement.md`. The checked-in grammars remain `unordered`,
+in `morphological-rule-order-measurement.md` (sillsdev/machine#480). The checked-in grammars remain `unordered`,
 matching HCLoader's emitted order.
 
 The ordinary conformance runner checks signature multiplicity and the set of rule IDs associated
@@ -261,20 +262,20 @@ The suite keeps only grammars a real FieldWorks project can produce (see the rul
 constructs below are valid in `HermitCrabInput.dtd`, and the engine implements them except where a row
 says otherwise, but `HCLoader.cs` never writes them. No FieldWorks project can reach them, so a fixture
 that needs one would test the engine against input FieldWorks never sends, and the suite does not pin
-them. Do not author a fixture for any of them. The `todo` lines in sillsdev/machine's `semantic-coverage-baseline.txt` for
+them. Do not author a fixture for any of them. The `todo` lines in `semantic-coverage-baseline.txt` (from sillsdev/machine#480) for
 `Family`, `RealizationalRule`, `CharacterDefinitionTable/isActive/no`,
 `MorphologicalPhonologicalRuleFeatureGroup/outputType/append`, `isCliticRule`, `ExcludedEnvironments`,
 `blockable/false`, the foot-feature elements and `HeadRequiredHeadFeatures` and
 `NonHeadRequiredHeadFeatures` name constructs in this table; leave them `todo`.
 
-This is a different list from the surfaces that no engine reads at all (sillsdev/machine tracks eleven of those).
+This is a different list from the surfaces that no engine reads at all (the semantic-coverage ledgers tracked eleven of those).
 These the engine does read, and FieldWorks never writes. Subcategorization (row 17) and row 18 are read by no
 engine path either.
 
 **Where this was checked.** FieldWorks commit `620cd9903f46941ee85947615dba15c8888c8e7a`,
 `Src/LexText/ParserCore/HCLoader.cs`, which was last changed by
 `6b8a75287221a1b5ab6d15d6f6eedc117690ef98`; LibLCM commit `d564a719b1cce16c25ebea53a537393cb757f5d1`.
-The line numbers below are for that file. sillsdev/machine's `fieldworks-producibility.tsv` and its generator were written
+The line numbers below are for that file. `fieldworks-producibility.tsv` and its generator (from sillsdev/machine#480, not in this repository) were written
 against an earlier revision, so their line numbers are stale; their verdicts are unchanged. The
 protocol's section 9 holds the rule that applies these to a fixture.
 
@@ -308,7 +309,7 @@ protocol's section 9 holds the rule that applies these to a fixture.
 | 26 | `OutputHeadFeatures`, `outputObligatoryFeatures` and `requiredStemName` on a template-slot rule | `LoadInflAffixProcessRule` (1025) sets the required part of speech (1035-1036), the required head features from the inflection features (1037-1038) and the required production restrictions, and nothing else: no output feature structure, no stem name. Only `LoadDerivAffixProcessRule` sets `OutputSyntacticFeatureStruct` (990-991) and `RequiredStemName` (1009-1011). Output MPR is row 11. | none (`final-template-partial-trace` was rewritten) |
 | 27 | An MPR feature outside the three loader groups; an excluded MPR feature on anything but a slot rule's inflection-type feature; an inflection-type feature that a rule requires or writes; more than one inflection class on an entry or an output | `LoadLanguage` puts every MPR feature in `inflClasses`, `exceptionFeatures` or `lexEntryInflTypes` (181-205). A slot rule's `ExcludedMprFeatures` come only from the irregular inflection types of its slot (1766), and only a variant entry carries such a feature (`LoadLexEntryOfVariant` 796). A derivational affix writes one inflection class and the production restrictions (1015-1018), an entry has one inflection class (745-751), and a compound writes one (1950, 2011, 2038). | 3 words (`morphotactic-attribute-breadth`: `topdori`, `topdo`, `topri`) |
 
-Rows 1 to 6, 8, 9, 10, 17 and 18 cover the 26 `No` rows of sillsdev/machine's `fieldworks-producibility.tsv` (row 17
+Rows 1 to 6, 8, 9, 10, 17 and 18 cover the 26 `No` rows of `fieldworks-producibility.tsv` (row 17
 holds nine, row 9 five, row 10 three, row 1 two, and rows 2 to 6, 8 and 18 one each). Rows 7, 11 to 16 and 19 to 27
 are shapes that no per-attribute row can express: the usage-level and mechanical checks of the protocol's
 section 9 and the retirement record's list of what the suite no longer covers. Fixtures were deleted for

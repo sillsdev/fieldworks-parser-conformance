@@ -278,8 +278,8 @@ Two consequences:
   needs a **one-line wrapper script** that (1) writes a temporary `script.txt` containing
   `batch <words.txt> <output.tsv>` with the two paths substituted in, then (2) invokes
   `hc.dll -i <grammar> -s <that temp script>`. Not required by any current acceptance criteria
-  (self-check plus `--adapter` against `hc-rs` suffices), but straightforward if ever needed. sillsdev/machine
-keeps such a wrapper script; it is not part of this repository.
+  (self-check plus `--adapter` against `hc-rs` suffices), but straightforward if ever needed. The wrapper script was in sillsdev/machine#480 and is not part of this
+repository.
 
 ## 8. Host configuration every fixture was generated under
 
@@ -407,7 +407,7 @@ word-list equality, default-only coverage metadata, unique names, and exact capa
   `morpher-settings` must take the placeholder; the harness fails the run, naming the missing
   placeholder, rather than run it without the settings.
 - **Counterfactual and coverage gates** that rebuild a mutated grammar in a child process
-  (sillsdev/machine's `CounterfactualGate`) still evaluate every fixture at the defaults; their surface deltas for a
+  (`CounterfactualGate`, from sillsdev/machine#480) still evaluate every fixture at the defaults; their surface deltas for a
   fixture with a block are therefore measured under the defaults, not under the block.
 
 `edge-cases/deletion-reapplications` is the first fixture to use it (`DelReapps: 1`), observed from
@@ -444,8 +444,8 @@ and what it removed, and the README section "What the XML can say but FieldWorks
 test it" for the constructs and the `HCLoader.cs` lines that rule them out.
 
 The verdict is human-authored, not mechanically re-derived the way `requires` is. It rests on
-`fieldworks-producibility.tsv` (a hand-researched, point-in-time snapshot of `HCLoader.cs`
-kept by sillsdev/machine, not in this repository) plus five usage-level checks no per-row TSV
+`fieldworks-producibility.tsv` (a hand-researched, point-in-time snapshot of `HCLoader.cs`,
+from sillsdev/machine#480, not in this repository) plus five usage-level checks no per-row TSV
 entry can express on its own — three because each depends on *where* or *how* an otherwise-producible
 attribute is used, not merely on whether HCLoader ever writes it at all; a fourth because it depends
 on whether a fixture's own committed ground truth is sensitive to a value HCLoader can never produce;

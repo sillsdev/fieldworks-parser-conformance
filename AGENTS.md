@@ -1,8 +1,8 @@
 # Updating the conformance suite
 
 This file says how to change the suite and what to run before the change leaves your machine. It applies to
-this repository, which is consumed by engines (sillsdev/machine's C# HermitCrab and PanGloss) as a
-submodule. Nothing here assumes any engine's build, layout or language. Commands run from the root of this
+this repository, which engines (sillsdev/machine's C# HermitCrab and PanGloss) consume as a clone pinned by
+commit, not as a submodule. Nothing here assumes any engine's build, layout or language. Commands run from the root of this
 repository; `python3` is the only tool the checks need.
 
 If this file disagrees with `.github/workflows/`, the scripts in `scripts/`, or the files you are changing,
@@ -55,9 +55,9 @@ section "Consuming the suite from another repository" describe the files; `schem
    fixtures you touched.
 7. Delete a fixture by removing its directory and its line in `docs/grammars.md`, then regenerating. Remove a
    `dead-rules-allowed.tsv` line that names it.
-8. Tell the consuming engines. sillsdev/machine pins a commit of `main` in its submodule, so a change reaches
-   it when it bumps the pin; PanGloss follows `main`, so it sees a change once the commit is on `main`. Their
-   own self-check and ledgers are regenerated on their side, not here.
+8. Tell the consuming engines. sillsdev/machine and PanGloss each pin a commit of `main` in `conformance.commit`,
+   so a change reaches an engine when it bumps that pin. Their own self-check is regenerated on their side, not
+   here.
 
 ### 2a. Generated files
 
@@ -124,7 +124,9 @@ stress README table), and `check_fwdata.py` covers stress witnesses as well as f
 - `check_words_schema.py` needs PyYAML and jsonschema, and `check_dtd.py` needs lxml or `xmllint`; CI
   installs them (`pip install -r scripts/requirements.txt`). The other scripts use the standard library only.
 - Then run the self-check of each consuming engine you can reach (for sillsdev/machine,
-  `--fixtures conformance --include-pathological`, and `--fixtures conformance/stress` for the stress fixtures).
+  `--fixtures <path to this clone> --include-pathological`, and `--fixtures <path to this clone>/stress` for the
+  stress fixtures; its `conformance/` is a clone at its own pinned commit, so it does not see your change, and its
+  tests read this clone when `HC_CONFORMANCE_SUITE=<path to this clone>` is set).
   This repository cannot run an engine; CI here proves the files are well formed, not that an engine agrees
   with them.
 

@@ -1,7 +1,7 @@
 # The conformance suite: documentation
 
 These documents ship **with** the fixtures. That is deliberate: a consumer receives this repository and
-nothing else (sillsdev/machine and PanGloss mount it as a submodule), so anything explaining the suite that
+nothing else (sillsdev/machine and PanGloss clone it at a pinned commit), so anything explaining the suite that
 lives outside it may as well not exist.
 
 The suite covers only grammars a real FieldWorks project can produce. A grammar FieldWorks cannot
@@ -37,8 +37,8 @@ You need **`PROTOCOL.md` and nothing else here.** Your entire obligation is to p
 parses for each fixture's `grammar.xml` and words. If you do, you inherit whatever this suite covers.
 
 The measurements that justify calling the fixture set complete (counterfactual census, interface inventory,
-severance sweep, interaction chains, data-flow obligations) are kept by sillsdev/machine, because they are
-computed by running its HermitCrab engine. They are not part of this repository, and you are never measured
+severance sweep, interaction chains, data-flow obligations) were computed by running sillsdev/machine's
+HermitCrab engine (sillsdev/machine#480). They are not part of this repository, and you are never measured
 against them.
 
 ## If you are extending the suite

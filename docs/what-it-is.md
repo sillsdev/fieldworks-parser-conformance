@@ -2,7 +2,7 @@
 
 An engine-agnostic conformance suite for morphological/phonological parsers: a set of grammars and
 words with pre-computed correct answers. The engines that consume it (sillsdev/machine's C# HermitCrab
-and PanGloss) keep their own measurements of how complete that answer set is; those are not part of this
+and PanGloss) kept their own measurements of how complete that answer set is; those are not part of this
 repository. This document covers the fixture format, what a case is, and why the corpus is split into
 `languages/` and `edge-cases/`.
 
