@@ -11,6 +11,83 @@ produce does not belong in the suite, however expressible it is in the XML; see
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
 The list has 133 fixtures: 6 languages and 127 edge cases.
 
+## Which engines run which grammars
+
+Engines need different amounts of phonology: what a grammar says about sounds, in segments, features and rules.
+
+- **XAmple** works on letters: morphemes, allomorph strings, and string environments and natural classes written as lists of letters. FieldWorks' XAmple transforms write no phonological rules and no phonological features, so XAmple ignores both. It is a different algorithm (item-and-arrangement) from Hermit Crab (item-and-process, rules unapplied). It needs no phonology.
+- **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
+- **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
+
+All 133 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+
+### The XAmple subset
+
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **45 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+
+`requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
+
+#### Conformance subset
+
+All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
+
+- `edge-cases/adhoc-prohibition-affix-environment-copies`
+- `edge-cases/adhoc-prohibition-affix-msa-copies`
+- `edge-cases/adhoc-prohibition-allomorph-variant-control`
+- `edge-cases/adhoc-prohibition-circumfix-pairings`
+- `edge-cases/adhoc-prohibition-stem-msa-copies`
+- `edge-cases/adhoc-prohibition-variant-enclitic-first`
+- `edge-cases/adhoc-prohibition-variant-main-first-enclitic`
+- `edge-cases/adhoc-prohibition-variant-msa-copies`
+- `edge-cases/chained-output-feature-override-loss`
+- `edge-cases/circumfix-conditioned-halves`
+- `edge-cases/circumfix-cross-product-and-infix-drop`
+- `edge-cases/circumfix-in-template-slot`
+- `edge-cases/circumfix-infix-interior-action-precedence`
+- `edge-cases/circumfix-non-first-allomorph-selection`
+- `edge-cases/circumfix-reduplication-precedence`
+- `edge-cases/clitic-enclitic-and-proclitic`
+- `edge-cases/clitic-proclitic-after-final-template`
+- `edge-cases/clitic-rule-designation`
+- `edge-cases/clitic-stem-entry`
+- `edge-cases/compound-max-applications` (needs `morpher-settings`)
+- `edge-cases/compounding-breadth` (needs `morpher-settings`)
+- `edge-cases/compounding-non-recursive`
+- `edge-cases/cross-stem-material-determination`
+- `edge-cases/deep-optional-affix-nesting`
+- `edge-cases/diacritic-segments`
+- `edge-cases/feature-gating-breadth`
+- `edge-cases/final-template-merge-key` (needs `morpher-settings`)
+- `edge-cases/final-template-partial-discriminators` (needs `morpher-settings`)
+- `edge-cases/final-template-partial-root` (needs `morpher-settings`)
+- `edge-cases/final-template-partial-trace`
+- `edge-cases/guesser-pattern-root-fallback`
+- `edge-cases/head-ambiguous-compounding`
+- `edge-cases/infix-interdigitation`
+- `edge-cases/loader-pattern-shapes`
+- `edge-cases/morphotactic-attribute-breadth`
+- `edge-cases/non-clitic-after-final-template-layout`
+- `edge-cases/optional-template-composite`
+- `edge-cases/pattern-root-required-environment`
+- `edge-cases/recursive-endocentric-compounding`
+- `edge-cases/shared-template-unconstrained-suffix`
+- `edge-cases/standalone-combining-mark`
+- `edge-cases/stem-name-restricted-root-allomorph`
+- `edge-cases/strrep-identity`
+- `edge-cases/template-category-sharing`
+- `languages/suffixing-evidential-adjacency-chain`
+
+#### Stress subset
+
+All under [`stress/edge-cases/`](../stress/edge-cases/).
+
+- `stress/edge-cases/athabaskan-prefix-complex`
+- `stress/edge-cases/bantu-extension-chain`
+- `stress/edge-cases/bantu-extension-required-slot`
+- `stress/edge-cases/derivation-chain-homophone-roots`
+- `stress/edge-cases/excluded-cooccurrence`
+- `stress/edge-cases/required-template-slot`
+
 ## The six languages at a glance
 
 | Directory | Grammar name | Simulates |
@@ -18,7 +95,7 @@ The list has 133 fixtures: 6 languages and 127 edge cases.
 | `templatic-root-modification` | TemplaticRootModification | Templatic root-and-pattern morphology, stem names, OCP co-occurrence, simultaneous rewrite |
 | `metathesis-phase-isolation` | MetathesisPhaseIsolation | Infix, circumfix, reduplication, metathesis, subtractive truncation |
 | `polysynthetic-stratal-derivation-chain` | PolysyntheticStratalDerivationChain | Derivation-then-inflection recursion across strata, incorporation-style compounding, guessed stems |
-| `suffixing-evidential-adjacency-chain` | SuffixingEvidentialAdjacencyChain | Evidential suffix chain, morpheme-adjacency co-occurrence, `requires: []` — the XAmple-eligible, phonology-free grammar |
+| `suffixing-evidential-adjacency-chain` | SuffixingEvidentialAdjacencyChain | Evidential suffix chain, morpheme-adjacency co-occurrence, in the XAmple subset (no phonological features or rules) |
 | `suffixing-extension-slot-ordering` | SuffixingExtensionSlotOrdering | Verbal extension suffixes in template slots, MPR features in the loader's two groups, reduplication, post-nasal mutation, stem names on rules and root allomorphs |
 | `suffixing-vowel-harmony` | SuffixingVowelHarmony | Alpha-variable vowel harmony, merges, gradation and epenthesis in one stratum, a circumfix, an infix |
 
@@ -34,22 +111,22 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 - `languages/metathesis-phase-isolation`: infixation, circumfixation, reduplication, metathesis and truncation, one demonstration per part of speech (26 words).
 - `languages/polysynthetic-stratal-derivation-chain`: derivation then inflection across strata, with compounding, boundary markers and root guessing (24 words).
-- `languages/suffixing-evidential-adjacency-chain`: a chain of evidential suffixes in template slots, morpheme co-occurrence exclusions and homophonous roots (32 words).
+- `languages/suffixing-evidential-adjacency-chain`: [XAmple] a chain of evidential suffixes in template slots, morpheme co-occurrence exclusions and homophonous roots (32 words).
 - `languages/suffixing-extension-slot-ordering`: verbal extension suffixes in template slots, MPR features in the loader's two groups, reduplication, post-nasal mutation and head-feature agreement, and rules and root allomorphs that name stem names (52 words).
 - `languages/suffixing-vowel-harmony`: backness and alpha-variable harmony, vowel merges, consonant gradation and epenthesis ordered in one stratum, a circumfix whose one environment is checked at each piece, and an infix (27 words).
 - `languages/templatic-root-modification`: stem names and templatic root modification, with epenthesis, prothesis, feeding and geminate rules (25 words).
 
 ## Affix shapes: circumfix, infix, null, truncation
 
-- `edge-cases/circumfix-conditioned-halves`: a circumfix built as a cross product of two prefix halves and two suffix halves, each pairing conditioned on the stem edges.
-- `edge-cases/circumfix-cross-product-and-infix-drop`: a two-prefix by two-suffix circumfix cross product, and an infix rule that drops material.
-- `edge-cases/circumfix-in-template-slot`: a circumfix rule that sits in an affix template slot.
-- `edge-cases/circumfix-infix-interior-action-precedence`: one allomorph that is both circumfixing and infixing in the same output.
-- `edge-cases/circumfix-non-first-allomorph-selection`: a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails.
-- `edge-cases/circumfix-reduplication-precedence`: one allomorph that is both circumfixing and reduplicating in the same output.
+- `edge-cases/circumfix-conditioned-halves`: [XAmple] a circumfix built as a cross product of two prefix halves and two suffix halves, each pairing conditioned on the stem edges.
+- `edge-cases/circumfix-cross-product-and-infix-drop`: [XAmple] a two-prefix by two-suffix circumfix cross product, and an infix rule that drops material.
+- `edge-cases/circumfix-in-template-slot`: [XAmple] a circumfix rule that sits in an affix template slot.
+- `edge-cases/circumfix-infix-interior-action-precedence`: [XAmple] one allomorph that is both circumfixing and infixing in the same output.
+- `edge-cases/circumfix-non-first-allomorph-selection`: [XAmple] a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails.
+- `edge-cases/circumfix-reduplication-precedence`: [XAmple] one allomorph that is both circumfixing and reduplicating in the same output.
 - `edge-cases/discontinuous-morph-environment`: a root environment checked on each contiguous piece of a root split by a two-infix rule.
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
-- `edge-cases/infix-interdigitation`: infixes inserted around a copied root, in a templatic Semitic shape.
+- `edge-cases/infix-interdigitation`: [XAmple] infixes inserted around a copied root, in a templatic Semitic shape.
 - `edge-cases/process-morphology-in-place-mutation`: tense expressed only by changing a segment of the root, with no affix.
 - `edge-cases/truncate-morphotactic`: rules that remove a final or initial segment of the stem, matched by literal segment, with optional insertion.
 - `edge-cases/truncate-morphotactic-copy-u`: the truncation grammar with explicit morpheme ids and a copying suffix rule, so one surface form has several parses with different rule histories.
@@ -58,57 +135,57 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 ## Templates, slots and parts of speech
 
-- `edge-cases/feature-gating-breadth`: a rule gated on number=pl that a lexically singular root passes only after another rule has overwritten its number, in both suffix orders (10 words).
-- `edge-cases/final-template-merge-key`: a final template in a lower stratum, reached from two analysis orders that must merge into one parse.
-- `edge-cases/final-template-partial-discriminators`: rules that may or may not follow a final template, depending on whether they are partial.
-- `edge-cases/final-template-partial-root`: a partial root with a final template, and ordinary rules blocked after the template.
-- `edge-cases/final-template-partial-trace`: one word that both final-template refusals reject, and that parses once the partial rule is made ordinary.
-- `edge-cases/morphotactic-attribute-breadth`: repetition caps, partial rules and entries, bound allomorphs, non-final templates, co-occurrence rules and MPR groups.
-- `edge-cases/optional-template-composite`: optional and mandatory template slots that combine into several parses of one word.
-- `edge-cases/shared-template-unconstrained-suffix`: a template with a mandatory suffix shared by roots of different parts of speech.
+- `edge-cases/feature-gating-breadth`: [XAmple] a rule gated on number=pl that a lexically singular root passes only after another rule has overwritten its number, in both suffix orders (10 words).
+- `edge-cases/final-template-merge-key`: [XAmple] a final template in a lower stratum, reached from two analysis orders that must merge into one parse.
+- `edge-cases/final-template-partial-discriminators`: [XAmple] rules that may or may not follow a final template, depending on whether they are partial.
+- `edge-cases/final-template-partial-root`: [XAmple] a partial root with a final template, and ordinary rules blocked after the template.
+- `edge-cases/final-template-partial-trace`: [XAmple] one word that both final-template refusals reject, and that parses once the partial rule is made ordinary.
+- `edge-cases/morphotactic-attribute-breadth`: [XAmple] repetition caps, partial rules and entries, bound allomorphs, non-final templates, co-occurrence rules and MPR groups.
+- `edge-cases/optional-template-composite`: [XAmple] optional and mandatory template slots that combine into several parses of one word.
+- `edge-cases/shared-template-unconstrained-suffix`: [XAmple] a template with a mandatory suffix shared by roots of different parts of speech.
 - `edge-cases/subrule-morphosyntactic-gating`: a phonological subrule that applies only after a rule has changed the part of speech.
-- `edge-cases/template-category-sharing`: one template used by several parts of speech.
-- `edge-cases/deep-optional-affix-nesting`: twelve optional prefix slots that insert the same letter, so one word has many slot subsets that explain it.
+- `edge-cases/template-category-sharing`: [XAmple] one template used by several parts of speech.
+- `edge-cases/deep-optional-affix-nesting`: [XAmple] twelve optional prefix slots that insert the same letter, so one word has many slot subsets that explain it.
 
 ## Clitics
 
-- `edge-cases/clitic-enclitic-and-proclitic`: two unordered clitics, one before and one after the final template.
+- `edge-cases/clitic-enclitic-and-proclitic`: [XAmple] two unordered clitics, one before and one after the final template.
 - `edge-cases/clitic-flex-layout-blocking-morphology`: a final template followed by an obligatory epenthesis in a stratum that holds a phonological rule.
-- `edge-cases/clitic-proclitic-after-final-template`: a rule that is not a clitic and is refused after the final template.
-- `edge-cases/clitic-rule-designation`: rules inside and outside the clitics stratum, checked against the final template.
-- `edge-cases/clitic-stem-entry`: a clitic stem entry that FieldWorks loads into the clitics stratum.
-- `edge-cases/non-clitic-after-final-template-layout`: a clitic stratum that holds only clitics, after a non-blocking stratum with a final template.
+- `edge-cases/clitic-proclitic-after-final-template`: [XAmple] a rule that is not a clitic and is refused after the final template.
+- `edge-cases/clitic-rule-designation`: [XAmple] rules inside and outside the clitics stratum, checked against the final template.
+- `edge-cases/clitic-stem-entry`: [XAmple] a clitic stem entry that FieldWorks loads into the clitics stratum.
+- `edge-cases/non-clitic-after-final-template-layout`: [XAmple] a clitic stratum that holds only clitics, after a non-blocking stratum with a final template.
 
 ## Allomorphs, stem names and exceptions
 
 - `edge-cases/disjunctive-recheck`: allomorphs chosen in order, where the first allomorph's right environment is re-checked against the rest of the word.
 - `edge-cases/free-fluctuating-allomorph-pair`: two allomorphs that can both apply, so a word has one parse per allomorph.
 - `edge-cases/mpr-gated-exception`: a phonological rule that a root or an affix switches off with a morphological feature.
-- `edge-cases/stem-name-restricted-root-allomorph`: a root allomorph that is used only when a stem name matches the word's features.
-- `edge-cases/pattern-root-required-environment`: a lexical pattern entry and a literal root that has a required environment.
-- `edge-cases/guesser-pattern-root-fallback`: a lexical pattern entry that guesses roots only when no listed root matches.
+- `edge-cases/stem-name-restricted-root-allomorph`: [XAmple] a root allomorph that is used only when a stem name matches the word's features.
+- `edge-cases/pattern-root-required-environment`: [XAmple] a lexical pattern entry and a literal root that has a required environment.
+- `edge-cases/guesser-pattern-root-fallback`: [XAmple] a lexical pattern entry that guesses roots only when no listed root matches.
 - `edge-cases/guess-roots-settings`: root guessing turned on and off for the same words.
-- `edge-cases/loader-pattern-shapes`: lexical entries whose shape names a natural class.
+- `edge-cases/loader-pattern-shapes`: [XAmple] lexical entries whose shape names a natural class.
 
 ## Ad hoc prohibitions
 
-- `edge-cases/adhoc-prohibition-affix-environment-copies`: a prohibition on a prefix allomorph that has two environments and two morphosyntactic analyses.
-- `edge-cases/adhoc-prohibition-affix-msa-copies`: a prohibition on a prefix entry that has two morphosyntactic analyses.
-- `edge-cases/adhoc-prohibition-allomorph-variant-control`: a control for the variant cases, with an allomorph prohibition between a variant stem and a prefix.
-- `edge-cases/adhoc-prohibition-circumfix-pairings`: a prohibition that names a circumfix, which pairs with each of its prefix and suffix halves.
-- `edge-cases/adhoc-prohibition-stem-msa-copies`: a prohibition on a stem entry that has two morphosyntactic analyses.
-- `edge-cases/adhoc-prohibition-variant-enclitic-first`: a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry.
-- `edge-cases/adhoc-prohibition-variant-main-first-enclitic`: a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry.
-- `edge-cases/adhoc-prohibition-variant-msa-copies`: a morpheme prohibition on one analysis of a stem that has a variant entry.
+- `edge-cases/adhoc-prohibition-affix-environment-copies`: [XAmple] a prohibition on a prefix allomorph that has two environments and two morphosyntactic analyses.
+- `edge-cases/adhoc-prohibition-affix-msa-copies`: [XAmple] a prohibition on a prefix entry that has two morphosyntactic analyses.
+- `edge-cases/adhoc-prohibition-allomorph-variant-control`: [XAmple] a control for the variant cases, with an allomorph prohibition between a variant stem and a prefix.
+- `edge-cases/adhoc-prohibition-circumfix-pairings`: [XAmple] a prohibition that names a circumfix, which pairs with each of its prefix and suffix halves.
+- `edge-cases/adhoc-prohibition-stem-msa-copies`: [XAmple] a prohibition on a stem entry that has two morphosyntactic analyses.
+- `edge-cases/adhoc-prohibition-variant-enclitic-first`: [XAmple] a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry.
+- `edge-cases/adhoc-prohibition-variant-main-first-enclitic`: [XAmple] a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry.
+- `edge-cases/adhoc-prohibition-variant-msa-copies`: [XAmple] a morpheme prohibition on one analysis of a stem that has a variant entry.
 
 ## Compounding
 
-- `edge-cases/compounding-breadth`: head and non-head feature requirements, a compound output part of speech that a suffix rejects, and a switched-off compounding rule (7 words, replayed under two settings variants).
-- `edge-cases/compound-max-applications`: a recursive compounding rule capped at two applications, with the root limit raised to four (7 words).
-- `edge-cases/compounding-non-recursive`: one non-recursive compounding rule with head and non-head lexicon subsets chosen by licence features.
-- `edge-cases/head-ambiguous-compounding`: compounds in which either root could be the head.
-- `edge-cases/recursive-endocentric-compounding`: a compounding rule that applies to its own output.
-- `edge-cases/cross-stem-material-determination`: a suffix whose form depends on which prefix was chosen, not only on whether the pair is allowed.
+- `edge-cases/compounding-breadth`: [XAmple] head and non-head feature requirements, a compound output part of speech that a suffix rejects, and a switched-off compounding rule (7 words, replayed under two settings variants).
+- `edge-cases/compound-max-applications`: [XAmple] a recursive compounding rule capped at two applications, with the root limit raised to four (7 words).
+- `edge-cases/compounding-non-recursive`: [XAmple] one non-recursive compounding rule with head and non-head lexicon subsets chosen by licence features.
+- `edge-cases/head-ambiguous-compounding`: [XAmple] compounds in which either root could be the head.
+- `edge-cases/recursive-endocentric-compounding`: [XAmple] a compounding rule that applies to its own output.
+- `edge-cases/cross-stem-material-determination`: [XAmple] a suffix whose form depends on which prefix was chosen, not only on whether the pair is allowed.
 
 ## Phonological rules: deletion, epenthesis, merge, expansion
 
@@ -148,11 +225,11 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/right-to-left-metathesis-reversal`: a right-to-left metathesis where the left switch names the later group, as FieldWorks writes it.
 - `edge-cases/right-to-left-segments-environment`: a right-to-left iterative rewrite gated on one literal segment to its right (5 words).
 - `edge-cases/unbounded-iterative-quantifier-expansion`: a rewrite with an unbounded repetition in its environment, applied iteratively.
-- `edge-cases/standalone-combining-mark`: a tone mark defined as its own segment, written as a combining character.
-- `edge-cases/diacritic-segments`: roots with precomposed Latin diacritics, in the middle and at the end of the stem.
-- `edge-cases/strrep-identity`: a grammar with no phonological features, where each segment is identified by its spelling.
+- `edge-cases/standalone-combining-mark`: [XAmple] a tone mark defined as its own segment, written as a combining character.
+- `edge-cases/diacritic-segments`: [XAmple] roots with precomposed Latin diacritics, in the middle and at the end of the stem.
+- `edge-cases/strrep-identity`: [XAmple] a grammar with no phonological features, where each segment is identified by its spelling.
 - `edge-cases/strrep-rewrite-unapplication`: a rewrite undone on analysis in a grammar with no phonological features.
-- `edge-cases/chained-output-feature-override-loss`: two rules that each set an output feature, and a word that needs both.
+- `edge-cases/chained-output-feature-override-loss`: [XAmple] two rules that each set an output feature, and a word that needs both.
 - `edge-cases/alpha-variable-name-collision`: two vowels that flip different features under one alpha variable.
 
 ## Alpha variables in environments
@@ -237,18 +314,18 @@ sillsdev/machine optimization it was built for; `scripts/check_grammars_md.py` f
 differ from the directory.
 
 - `stress/edge-cases/allomorph-list-density`: five suffix rules with 30 allomorphs, each gated by the stem's final context.
-- `stress/edge-cases/athabaskan-prefix-complex`: six prefix slots of homophonous prefixes with 51 paired-slot `exclude` rules.
-- `stress/edge-cases/bantu-extension-chain`: seven suffix slots of homophonous suffixes with 52 `exclude` rules.
-- `stress/edge-cases/bantu-extension-required-slot`: five free extension suffixes before a template with a required TAM prefix.
+- `stress/edge-cases/athabaskan-prefix-complex`: [XAmple] six prefix slots of homophonous prefixes with 51 paired-slot `exclude` rules.
+- `stress/edge-cases/bantu-extension-chain`: [XAmple] seven suffix slots of homophonous suffixes with 52 `exclude` rules.
+- `stress/edge-cases/bantu-extension-required-slot`: [XAmple] five free extension suffixes before a template with a required TAM prefix.
 - `stress/edge-cases/bantu-tam-fusion`: the Bantu slot templates with a plain and a vowel-copying allomorph per object and subject rule.
 - `stress/edge-cases/bantu-tam-templates`: 12 Bantu slot templates with required subject and TAM slots.
 - `stress/edge-cases/bantu-tam-templates-shared`: the same words and templates with three trailing slots shared across templates.
-- `stress/edge-cases/derivation-chain-homophone-roots`: seven free derivational suffixes over verb and noun roots that share shapes.
+- `stress/edge-cases/derivation-chain-homophone-roots`: [XAmple] seven free derivational suffixes over verb and noun roots that share shapes.
 - `stress/edge-cases/early-lexicon-agglutinative`: 25 rules and a vowel-harmony rule, where the 19 words that parse start with a root.
 - `stress/edge-cases/env-austronesian-nasal-prefix`: nasal-prefix allomorphs gated by the stem's first segment in the input pattern.
 - `stress/edge-cases/env-bantu-concord`: concord and tense allomorphs gated by the stem's edge segments in the input pattern.
 - `stress/edge-cases/env-zero-allomorphs`: zero allomorphs gated by rare segment classes, with two left environments on a lone prefix.
-- `stress/edge-cases/excluded-cooccurrence`: six prefix slots of four fillers with 12 `exclude` rules and a zero-width filler.
+- `stress/edge-cases/excluded-cooccurrence`: [XAmple] six prefix slots of four fillers with 12 `exclude` rules and a zero-width filler.
 - `stress/edge-cases/prefix-class-density`: four prefix rules with 20 allomorphs gated by the stem's first segment.
-- `stress/edge-cases/required-template-slot`: a required TAM prefix and a required noun class prefix, with decoy branches.
+- `stress/edge-cases/required-template-slot`: [XAmple] a required TAM prefix and a required noun class prefix, with decoy branches.
 - `stress/edge-cases/truncating-slot-chain`: five slot templates whose suffix slots each delete the vowel before them.

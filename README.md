@@ -12,10 +12,20 @@ so anything it cannot write stays out. [What FieldWorks cannot say](docs/fieldwo
 
 ## The grammars
 
-- **Hermit Crab**: rule-based and item-and-process. A lexicon plus morphological and phonological rules, applied in order, with a matching C# engine in sillsdev/machine. This suite is written in its format (`grammar.xml`, `HermitCrabInput.dtd`).
-- **XAmple**: FieldWorks' other parser, in the AMPLE family. Morphemes, allomorphs and a word grammar, with no phonological rules. FieldWorks generates its control, dictionary and grammar files from the same project.
+- **Hermit Crab**: rule-based and item-and-process. Morphological and phonological rules applied in order, with a C# engine in sillsdev/machine. This suite is written in its format (`grammar.xml`, `HermitCrabInput.dtd`). It needs a complete phonology: every letter of every form and word defined as a segment.
+- **XAmple**: FieldWorks' other parser, in the AMPLE family, and a different algorithm (item-and-arrangement). It works on letters and ignores phonological features and rules, so any grammar with neither is in the XAmple subset.
 
 A FieldWorks project switches between the two with one setting (`ActiveParser`).
+
+### Which grammars each engine runs
+
+| Engine | Phonology it needs | Grammars |
+|---|---|---|
+| XAmple | None: letters only; it ignores features and rules | 45 conformance + 6 stress, the [XAmple subset](docs/grammars.md#the-xample-subset) |
+| Hermit Crab (machine) | Complete: every letter defined as a segment | all 133 + 16 |
+| PanGloss | None, incomplete or complete | all 133 + 16 |
+
+The suite has no grammar with incomplete phonology yet.
 
 ## Three projects, one suite
 
@@ -25,8 +35,7 @@ A FieldWorks project switches between the two with one setting (`ActiveParser`).
 | [machine](https://github.com/sillsdev/machine) | The C# Hermit Crab engine, and the reference that produced the expected parses. | `hc-conformance` runs the whole suite in machine's CI. |
 | [PanGloss](https://github.com/sillsdev/PanGloss) | A Rust parser ported from Hermit Crab. | It runs the same fixtures through its own runner and must match. |
 
-**And XAmple?** The suite has no XAmple grammars and no XAmple expected answers, so it does not test XAmple.
-Fixtures with no phonological rules are marked `requires: []`, which is what an XAmple-class engine could run.
+**And XAmple?** The suite has no XAmple expected answers, so it does not test XAmple. XAmple runs on the [subset](docs/grammars.md#the-xample-subset).
 PanGloss's `xample-projector` turns a FieldWorks witness into both Hermit Crab and XAmple input and drives the real XAmple engine. That is how the two are compared today.
 
 ## Try it

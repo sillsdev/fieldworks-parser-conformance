@@ -16,7 +16,7 @@ The one rule: the suite holds only what a real FieldWorks project can produce. T
 | [../README.md](../README.md) | the front page: what the suite is, the three projects, a quick start |
 | [what-it-is.md](what-it-is.md) | the suite, the fixture contract, the two-file format |
 | [glossary.md](glossary.md) | one line for each term the suite uses |
-| [grammars.md](grammars.md) | every grammar in the suite, one line each, grouped by area |
+| [grammars.md](grammars.md) | every grammar in the suite, one line each, grouped by area, and which engines run which |
 
 ### Implementing an engine
 
@@ -38,7 +38,7 @@ against them.
 | | |
 |---|---|
 | [consuming.md](consuming.md) | who uses the suite, how they pin it, what passing means, and the manifest and fixture files |
-| [grammars.md](grammars.md) | the six-language table and every fixture |
+| [grammars.md](grammars.md) | the six-language table and every fixture, and the XAmple subset |
 | [../stress/README.md](../stress/README.md) | the 16 stress grammars and what their expected output means |
 
 ### Contributing
