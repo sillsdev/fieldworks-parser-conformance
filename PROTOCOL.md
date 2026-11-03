@@ -426,7 +426,7 @@ and still describe a grammar shape no FieldWorks user will ever see.
 The standard for "producible" is the round trip: a real FieldWorks project, built in FieldWorks, goes through
 `HCLoader.cs` and yields the fixture's `grammar.xml`. That the loader source could write a construct is weaker
 evidence. `fieldworks_producible: true` is therefore a claim read from the loader until the fixture has a
-FieldWorks witness (section 10), and only the fixtures with a witness are certified today: 9 of the 133
+FieldWorks witness (section 10), and only the fixtures with a witness are certified today: 9 of the 134
 (all under `edge-cases/`).
 
 Every fixture's `words.yaml` front matter carries `fieldworks_producible: true`, directly after
