@@ -16,8 +16,8 @@ out, why FieldWorks cannot write each one, and the 23 fixtures removed for using
 project built in FieldWorks (LibLCM), put through `HCLoader.cs`, yields the fixture's `grammar.xml`. That the
 loader source could write a construct is weaker evidence. Until a fixture has a FieldWorks witness (a
 `fieldworks/` directory, [PROTOCOL.md](../PROTOCOL.md) section 10), its `fieldworks_producible: true` is a claim
-read from the loader. Only the 9 fixtures that carry a witness are certified today (all under `edge-cases/`);
-the other 125 of the 134 fixtures rest on the loader reading alone.
+read from the loader. Only the 10 fixtures that carry a witness are certified today (all under `edge-cases/`);
+the other 125 of the 135 fixtures rest on the loader reading alone.
 
 ## What the XML can say but FieldWorks cannot, so we do not test it
 
@@ -92,7 +92,7 @@ members and environments a grammar uses, not about each output byte for byte. `H
 morpheme boundary on the inside edge of every affix form and between the two parts of a compound (prefix
 1358 and 1649, suffix 1360 and 1623, circumfix 1597, reduplication 1506, 1549 and 1564, compounds 1871,
 1884, 1956, 2017 and 2044); the loader's table always has it (2761). A grammar file can write that boundary
-only if it defines one, and 15 of the 134 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
+only if it defines one, and 15 of the 135 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
 effect of that on a parse is not measured. A claim that an output is "written as HCLoader writes it" is
 therefore made only where the output carries the boundary, as in the circumfix of
 `languages/suffixing-vowel-harmony`.

@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 134 fixtures: 6 languages and 128 edge cases.
+The list has 135 fixtures: 6 languages and 129 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 134 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 135 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -201,6 +201,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/geminate-under-merge`: a long consonant shortened, then fused with a vowel.
 - `edge-cases/interposed-optional-multi-rhs`: a rule with several output segments and an optional segment between them.
 - `edge-cases/iterative-epenthesis-cascade`: two iterative epentheses with empty targets that feed each other.
+- `edge-cases/fw-metathesis-switch-indices`: a metathesis rule authored in FieldWorks with a left environment, whose two switches HCLoader names from `StrucChange`; the swap applies only after `a`.
 - `edge-cases/merge-then-metathesis`: a metathesis followed by a merge, undone in order on analysis.
 - `edge-cases/simultaneous-epenthesis-cascade`: a simultaneous epenthesis that inserts a vowel after any high vowel.
 - `edge-cases/simultaneous-expansion-terminates`: a simultaneous expansion that must be undone at two sites in one pass.
