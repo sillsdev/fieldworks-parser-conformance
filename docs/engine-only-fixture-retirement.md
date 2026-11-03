@@ -8,8 +8,8 @@ to a producible grammar when that preserves its purpose, and deleted when it doe
 `ConformanceFixtureGateTests.EveryFixtureIsMarkedFieldWorksProducible` enforces the rule.
 
 No fixture is kept engine-only. The constructs the suite does not test, and why FieldWorks cannot write
-each one, are in the README section
-[what the XML can say but FieldWorks cannot, so we do not test it](../README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
+each one, are in the section
+[what the XML can say but FieldWorks cannot, so we do not test it](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 The construct numbers used below are that section's row numbers.
 
 ## Result
@@ -74,7 +74,7 @@ targeted mutation of the grammar.
 
 * `languages/suffixing-vowel-harmony` (27 words; two respelled, see below): `outputPartOfSpeech` dropped from the three slot rules.
   `ruleCollective`, the circumfix with one `RequiredEnvironments`, stays: the loader writes exactly that
-  shape (README row 14), so the recorded reason for deleting it was wrong.
+  shape (row 14 of fieldworks-cannot-say.md), so the recorded reason for deleting it was wrong.
 * `edge-cases/feature-gating-breadth` (15 words became 10: 4 kept, 11 dropped, 6 added): its stratum is
   `unordered`, the rule-list order words, the realizational-rule words and the foot-feature words are
   gone, and six words pin what is left. It pins a root's own head feature reaching a rule's gate and a
@@ -116,7 +116,7 @@ and **added** when it is new.
   (`HeadRequiredHeadFeatures`), `kati` (`NonHeadRequiredFootFeatures`), `patu`
   (`HeadRequiredFootFeatures`) and `kamtu` (`multipleApplication="0"` on a compound). Kept: `ka`, `tu`,
   `katu`, `katumi`, `kaptu`. A compound rule that reads head or foot features, or has a cap of 0, is
-  unproducible (README rows 24, 19 and 23), so its negative controls went with it.
+  unproducible (rows 24, 19 and 23 of fieldworks-cannot-say.md), so its negative controls went with it.
 * `edge-cases/morphotactic-attribute-breadth` (29 to 24).
   * Dropped: `kulba` (a cap of 0 on an affix rule), `kuldedede` (three copies against a cap of 2, which
     HCLoader cannot set) and `topdori`, `topdo`, `topri`.
@@ -125,7 +125,7 @@ and **added** when it is new.
   * Lost with `topdori`, `topdo` and `topri`: the pair `mrConferExcl` (a derivational rule writing
     `mprExclFlag`) and `mrExclReader` (a slot rule excluding it). A derivational rule writes only an
     inflection class or a production restriction, and a slot rule excludes only an inflection-type
-    feature, which only a variant entry carries (README row 27). The dataflow cell
+    feature, which only a variant entry carries (row 27 of fieldworks-cannot-say.md). The dataflow cell
     `MorphologicalOutput.MPRFeatures->MorphologicalInput.excludedMPRFeatures` therefore has no flagged
     witness.
 * `edge-cases/final-template-partial-trace` (5 to 5, new): its rules were rebuilt as an unslotted partial
@@ -140,11 +140,11 @@ and **added** when it is new.
 ## Deleted (23)
 
 None could be converted to a producible grammar without losing its premise, except where the doubts
-below say otherwise. The first column is the fixture name; the second is the construct (README row
-numbers) that made it unproducible, with what the grammar used; the third is what it tested. A fixture
+below say otherwise. The first column is the fixture name; the second is the construct (row
+numbers in fieldworks-cannot-say.md) that made it unproducible, with what the grammar used; the third is what it tested. A fixture
 may need more than one construct.
 
-| Fixture | Construct (README row) | What it tested |
+| Fixture | Construct (row in fieldworks-cannot-say.md) | What it tested |
 |---|---|---|
 | `edge-cases/bistratal-overlapping-segment-representation` | 1: two character tables, one per stratum | whether a segment spelled differently on two strata is accepted or refused when each stratum has its own lexicon (the refusal side of shared representation) |
 | `edge-cases/cross-table-root-respelling` | 1: tables `tIn` and `tFin` | a root entered on an inner stratum surfaces spelled by the final table's segment with the same feature bundle, with no phonological rule |
@@ -185,7 +185,7 @@ corpus had 61 before the producible rewrite and has 58 now; the floor was lowere
 Compared surface by surface (a surface whose witness fixture merely changed does not count):
 
 * Lost (5): `dtd:element/HeadRequiredFootFeatures` and `dtd:element/NonHeadRequiredFootFeatures` (foot
-  features, README row 19), `dtd:element/HeadRequiredHeadFeatures` and
+  features, row 19 of fieldworks-cannot-say.md), `dtd:element/HeadRequiredHeadFeatures` and
   `dtd:element/NonHeadRequiredHeadFeatures` (row 24), all four witnessed by `compounding-breadth`; and
   `dtd:enum/MorphologicalRule/multipleApplication/2` (row 22), witnessed by
   `morphotactic-attribute-breadth`. None of the five can be produced by FieldWorks.

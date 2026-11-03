@@ -9,7 +9,7 @@ the coverage files and a runner pointed at the suite root do not see them. Each 
 ## The rule, and what "producible" means here
 
 The stress fixtures follow the one rule of the suite: only what a real FieldWorks project can produce (see the
-[README section on what the XML can say but FieldWorks cannot](../README.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)).
+[section on what the XML can say but FieldWorks cannot](../docs/fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)).
 "Producible" means a real FieldWorks project round-trips to the grammar: a project built in FieldWorks, put
 through `HCLoader.cs`, yields the fixture's `grammar.xml`.
 
@@ -33,7 +33,7 @@ No engine build is recorded for these rows (the conformance fixtures record thei
 ## Running them
 
 Run them only on request. This repository contains no engine, so nothing here runs them. A consumer that
-clones the suite into `conformance/`, as sillsdev/machine does (see the root README), reaches them at
+clones the suite into `conformance/`, as sillsdev/machine does (see [docs/consuming.md](../docs/consuming.md)), reaches them at
 `conformance/stress`. In such a checkout, with sillsdev/machine's `StressFixtureParityTests` present:
 
 ```
