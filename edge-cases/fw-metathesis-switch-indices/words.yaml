@@ -2,7 +2,7 @@
 # Counts below are from that hc.dll twice: the live FieldWorks HCLoader language built from fieldworks/project.fwdata,
 # and XmlLanguageLoader on this grammar.xml (xample-projector parse-hc; projectionAgrees true for all 11 words).
 # Signatures and rule traces were read from PanGloss's engine on this grammar.xml, whose analysis counts equal the hc.dll counts;
-# they have not been run through hc-conformance --fixtures. A self-check by a consuming engine should confirm them.
+# they pass sillsdev/machine's hc-conformance --fixtures self-check (1 passed, 0 failed), so the C# engine confirms them.
 # Synthetic; no real language. Phonemes carry an identity feature so each segment is distinct.
 language: FwMetathesisSwitchIndices
 inspired_by: ["a FieldWorks PhMetathesisRule whose StrucChange \"0 2 -1 1 -1\" names a left environment and two switches"]

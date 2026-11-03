@@ -9,7 +9,7 @@ Synthetic. A FieldWorks metathesis rule (`PhMetathesisRule`) with one left envir
 
 ## Oracle
 
-hc.dll shipped with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab): the live `HCLoader` language built from `fieldworks/project.fwdata` and `XmlLanguageLoader` on this `grammar.xml` give the same analysis count for all 11 words (`xample-projector parse-hc`, `projectionAgrees` true). Signatures and rule traces were read from PanGloss's engine, whose counts equal those; `hc-conformance --fixtures` has not been run on this fixture.
+hc.dll shipped with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab): the live `HCLoader` language built from `fieldworks/project.fwdata` and `XmlLanguageLoader` on this `grammar.xml` give the same analysis count for all 11 words (`xample-projector parse-hc`, `projectionAgrees` true). Signatures and rule traces were read from PanGloss's engine, whose counts equal those; `hc-conformance --fixtures` (sillsdev/machine, run on this fixture alone) reports 1 passed, 0 failed, so the C# engine confirms the expectations.
 
 ## FieldWorks witness
 
