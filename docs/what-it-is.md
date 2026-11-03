@@ -2,9 +2,8 @@
 
 An engine-agnostic conformance suite for morphological/phonological parsers: a set of grammars and
 words with pre-computed correct answers. The engines that consume it (sillsdev/machine's C# HermitCrab
-and PanGloss) have kept their own measurements of how complete that answer set is; those are not part of this
-repository, and sillsdev/machine#615 does not carry them (the last copy is in sillsdev/machine commit
-`69c4ee0b`). This document covers the fixture format, what a case is, and why the corpus is split into
+and PanGloss) kept their own measurements of how complete that answer set is; those are not part of this
+repository. This document covers the fixture format, what a case is, and why the corpus is split into
 `languages/` and `edge-cases/`.
 
 The suite covers only grammars a real FieldWorks project can produce. A grammar FieldWorks cannot
@@ -173,7 +172,7 @@ ordinary words exercise several constructs at once rather than probing one mecha
 | `suffixing-evidential-adjacency-chain` | Evidential suffix chain, morpheme-adjacency co-occurrence, phonology-free |
 
 (Table per `README.md`, which lists all six.) Of the interfaces the whole corpus actually exercises, the
-large majority are reached by one of the languages, not by a fabricated fixture, as measured by sillsdev/machine (commit `69c4ee0b`) —
+large majority are reached by one of the languages, not by a fabricated fixture, as measured by sillsdev/machine —
 realistic grammars carry most of the suite's real evidentiary weight, and the fabricated half exists for what
 realistic grammars cannot host.
 

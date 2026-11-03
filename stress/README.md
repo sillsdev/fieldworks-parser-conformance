@@ -34,7 +34,7 @@ No engine build is recorded for these rows (the conformance fixtures record thei
 
 Run them only on request. This repository contains no engine, so nothing here runs them. A consumer that
 clones the suite into `conformance/`, as sillsdev/machine does (see the root README), reaches them at
-`conformance/stress`. In such a checkout, with sillsdev/machine's `StressFixtureParityTests` present (sillsdev/machine#615):
+`conformance/stress`. In such a checkout, with sillsdev/machine's `StressFixtureParityTests` present:
 
 ```
 dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests --filter TestCategory=Stress

@@ -26,7 +26,6 @@ a build by the first eight characters of its hash.
 | `a2f80e28` | `a2f80e28debaffda8a65b3b11875c80479768bc7` | Founding-oracle commit recorded in October 2026 (verified 2026-10-15 and 2026-10-20) for the files listed. | `edge-cases/clitic-rule-designation/words.yaml`, `edge-cases/final-template-merge-key/words.yaml` |
 | `c2454760` | `c2454760181d77a3284482483cf78d921a2c4b9b` | Second machine commit at which the boundary-narrowing-probe results were observed. | `edge-cases/boundary-narrowing-probe/README.md` |
 | `25ddf914` | `25ddf914c0edb739a4445f9a088f7e06492a808d` | Founding-oracle commit recorded for pattern-root-required-environment (verified 2026-09-02). | `edge-cases/pattern-root-required-environment/words.yaml` |
-| `69c4ee0b` | `69c4ee0b5b74c46768cbf025ea77b743f3acae3c` | sillsdev/machine commit on which the adapter script `conformance/adapters/hc-dotnet-wrapper.sh` and the semantic-coverage ledgers survive; sillsdev/machine's runner pull request (#615) carries neither. | `PROTOCOL.md` |
 | `25992041` | `259920414132bdd5a85542722d9af5509aed8943` | Machine commit at which the truncate-morphotactic two-parse and related results were re-loaded ten times. | `edge-cases/truncate-morphotactic/README.md` |
 
 The assembly hashes recorded for the combined #500+#506 oracle (the truncation identity companions, see the
@@ -44,8 +43,7 @@ Some fixture comments and READMEs cite a commit by eight characters or fewer (fo
 headers, "history row" notes, or "fixed at" notes). They name commits of sillsdev/machine, PanGloss, or their
 branches at the time of writing, and are history, not instructions. The same applies to paths such as
 `rust/tools/...`, `conformance/adapters/...`, `semantic-coverage-*.tsv` and `tools/xample-projector`, which belong to
-those repositories and not to this one (the ledgers and adapter scripts of sillsdev/machine survive in its commit
-`69c4ee0b`, row above).
+those repositories and not to this one.
 
 ## FieldWorks witnesses
 
