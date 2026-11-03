@@ -1,0 +1,79 @@
+# oracle-provenance: hc.dll bundled with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab 3.x), verified-date=2026-11-03
+# Counts below are from that hc.dll twice: the live FieldWorks HCLoader language built from fieldworks/project.fwdata,
+# and XmlLanguageLoader on this grammar.xml (xample-projector parse-hc; projectionAgrees true for all 11 words).
+# Signatures and rule traces were read from PanGloss's engine on this grammar.xml, whose analysis counts equal the hc.dll counts;
+# they have not been run through hc-conformance --fixtures. A self-check by a consuming engine should confirm them.
+# Synthetic; no real language. Phonemes carry an identity feature so each segment is distinct.
+language: FwMetathesisSwitchIndices
+inspired_by: ["a FieldWorks PhMetathesisRule whose StrucChange \"0 2 -1 1 -1\" names a left environment and two switches"]
+sources: ["HCLoader.cs:335-347 (PhMetathesisRule case)", "HCLoader.cs:2152-2220 (LoadMetathesisRule)", "LibLCM PhMetathesisRule.GetStrucChangeIndices"]
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: akta
+    note: >-
+      Surface of R0 (underlying atka): the left environment a holds, so the switch t and k swap.
+    parses:
+      - signature: "R0|akta"
+        rules: [prule1]
+        exercises: ["MetathesisRule"]
+  - word: atka
+    note: >-
+      Underlying form, never a surface: the obligatory rule rewrites atk to akt, so atka has no analysis.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
+  - word: aktas
+    note: >-
+      As akta plus the suffix: the rule applies after the suffix is added (suffix first, then metathesis).
+    parses:
+      - signature: "R0+A|akta+?s"
+        rules: [mrule1, prule1]
+        exercises: ["MetathesisRule"]
+  - word: atkas
+    note: >-
+      Suffixed underlying form: no analysis for the same reason.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
+  - word: itka
+    note: >-
+      Control: the left environment is i, not a, so the rule does not apply to R1 and its own form is the surface.
+    parses:
+      - signature: "R1|itka"
+        rules: []
+        exercises: ["MetathesisRule"]
+  - word: ikta
+    note: >-
+      Control: the swapped form of R1 has no analysis because the rule never applied to it.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
+  - word: itkas
+    note: >-
+      Control: suffixed R1 surfaces unchanged.
+    parses:
+      - signature: "R1+A|itka+?s"
+        rules: [mrule1]
+        exercises: ["MetathesisRule"]
+  - word: tika
+    note: >-
+      Control: R2 has no a before tk, so it surfaces unchanged.
+    parses:
+      - signature: "R2|tika"
+        rules: []
+        exercises: ["MetathesisRule"]
+  - word: tikas
+    note: >-
+      Control: suffixed R2 surfaces unchanged.
+    parses:
+      - signature: "R2+A|tika+?s"
+        rules: [mrule1]
+        exercises: ["MetathesisRule"]
+  - word: kita
+    note: >-
+      Control: the metathesized form of nothing; R2 never swaps t and k.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
+  - word: kitas
+    note: >-
+      Control: as kita, suffixed.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
