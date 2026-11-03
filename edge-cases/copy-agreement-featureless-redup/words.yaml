@@ -51,6 +51,7 @@ words:
     parses:
       - signature: "RED+tasi|tatasi"
         rules: [mrRed]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
   - word: pasa
     note: >-
       plain root control.
@@ -63,6 +64,7 @@ words:
     parses:
       - signature: "RED+pasa|papasa"
         rules: [mrRed]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
   - word: pasasa
     note: >-
       pa then sa disagree on the consonant: no parse.
@@ -91,12 +93,14 @@ words:
     parses:
       - signature: "RED+tuka|t[uú]t[uú]sa"
         rules: [mrRed, prLen]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
   - word: tutúsa
     note: >-
       the two copies are spelled u and ú: one segment with two spellings, so they agree.
     parses:
       - signature: "RED+tuka|t[uú]t[uú]sa"
         rules: [mrRed, prLen]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
   - word: tuúsa
     note: >-
       no root and no agreeing copies: no parse.
@@ -129,6 +133,7 @@ words:
     parses:
       - signature: "RED+kata|kasata"
         rules: [mrRed, prLen]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
   - word: kakata
     note: >-
       the rewrite is obligatory, so the unrewritten surface kakata has no parse.

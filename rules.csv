@@ -90,6 +90,8 @@ CompoundingBreadth,crDecoy,!kaptu
 CompoundingBreadth,crJoin,katu;!katumi
 CompoundingBreadth,mrTplSuf,
 CompoundingNonRecursive,cr1,fasubel;!fasuzon;tikubel;!numobel
+CopyAgreementFeaturelessRedup,mrRed,tatasi;papasa;tutusa;tutúsa;kasata
+CopyAgreementFeaturelessRedup,prLen,tusa;tutusa;tutúsa;kasata
 CrossStemMaterialDetermination,mrPfxA,patoluka
 CrossStemMaterialDetermination,mrPfxB,butoluko
 CrossStemMaterialDetermination,mrSfx,patoluka;butoluko;!patoluko;!butoluka
