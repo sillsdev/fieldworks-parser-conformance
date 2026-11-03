@@ -231,6 +231,11 @@ CompoundingNonRecursive,fasubel,HEADA+NONHEADOK|fasubel,CompoundingRule
 CompoundingNonRecursive,fasuzon,,CompoundingRule
 CompoundingNonRecursive,tikubel,HEADB+NONHEADOK|tikubel,CompoundingRule
 CompoundingNonRecursive,numobel,,CompoundingRule
+CopyAgreementFeaturelessRedup,tatasi,RED+tasi|tatasi,AffixProcessRule: reduplication (ReduplicationHint)
+CopyAgreementFeaturelessRedup,papasa,RED+pasa|papasa,AffixProcessRule: reduplication (ReduplicationHint)
+CopyAgreementFeaturelessRedup,tutusa,RED+tuka|t[uú]t[uú]sa,AffixProcessRule: reduplication (ReduplicationHint)
+CopyAgreementFeaturelessRedup,tutúsa,RED+tuka|t[uú]t[uú]sa,AffixProcessRule: reduplication (ReduplicationHint)
+CopyAgreementFeaturelessRedup,kasata,RED+kata|kasata,AffixProcessRule: reduplication (ReduplicationHint)
 CrossStemMaterialDetermination,patoluka,PFXA+ROOT+SFX|patoluka,MPR features/groups
 CrossStemMaterialDetermination,butoluko,PFXB+ROOT+SFX|butoluko,MPR features/groups
 PathologicalDeepOptionalAffixNesting,k,K|k,Affix template slots (obligatory/disjunctive/ordering)
