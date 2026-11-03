@@ -25,10 +25,10 @@ scripts/             the checks CI runs, and the manifest generator
 PROTOCOL.md          the adapter contract: CLI shape, TSV format, signature algorithm
 ```
 
-Per `generated/hc-conformance-manifest.v2.json`, today that is **133 fixtures — 6 under
-`languages/`, 127 under `edge-cases/` — holding 1329 words in total**, computed by summing the
+Per `generated/hc-conformance-manifest.v2.json`, today that is **134 fixtures — 6 under
+`languages/`, 128 under `edge-cases/` — holding 1348 words in total**, computed by summing the
 manifest's own `caseCount` field per fixture rather than counted by hand. A `- word:` line count of the
-YAML is higher (1373) because variant blocks repeat words; variant rows are not counted. Regenerate the manifest
+YAML is higher (1392) because variant blocks repeat words; variant rows are not counted. Regenerate the manifest
 with `python3 scripts/generate_manifest.py`; `python3 scripts/generate_manifest.py --check` fails the build if the
 checked-in file has drifted from what a fresh scan produces.
 
@@ -176,7 +176,7 @@ large majority are reached by one of the languages, not by a fabricated fixture,
 realistic grammars carry most of the suite's real evidentiary weight, and the fabricated half exists for what
 realistic grammars cannot host.
 
-**`edge-cases/`** holds 127 micro-grammars for things no shared, realistic grammar can host
+**`edge-cases/`** holds 128 micro-grammars for things no shared, realistic grammar can host
 faithfully: loader/XML-semantics probes (`loader-pattern-shapes`), an `expect_crash` pin, a `budget_ms` pathological stress case, and
 allomorphy/rewrite pins whose exact rule shape a naturalistic grammar wouldn't contain (e.g.
 `mpr-gated-exception`'s deliberately-isolated MPR-feature exclusion). Each is deliberately narrow — most declare `requires: []` or a
