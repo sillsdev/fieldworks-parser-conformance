@@ -25,10 +25,10 @@ scripts/             the checks CI runs, and the manifest generator
 PROTOCOL.md          the adapter contract: CLI shape, TSV format, signature algorithm
 ```
 
-Per `generated/hc-conformance-manifest.v2.json`, today that is **135 fixtures — 6 under
-`languages/`, 129 under `edge-cases/` — holding 1359 words in total**, computed by summing the
+Per `generated/hc-conformance-manifest.v2.json`, today that is **138 fixtures — 6 under
+`languages/`, 132 under `edge-cases/` — holding 1377 words in total**, computed by summing the
 manifest's own `caseCount` field per fixture rather than counted by hand. A `- word:` line count of the
-YAML is higher (1403) because variant blocks repeat words; variant rows are not counted. Regenerate the manifest
+YAML is higher (1421) because variant blocks repeat words; variant rows are not counted. Regenerate the manifest
 with `python3 scripts/generate_manifest.py`; `python3 scripts/generate_manifest.py --check` fails the build if the
 checked-in file has drifted from what a fresh scan produces.
 

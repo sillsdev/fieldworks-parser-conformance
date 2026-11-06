@@ -17,6 +17,7 @@ The one rule: the suite holds only what a real FieldWorks project can produce. T
 | [what-it-is.md](what-it-is.md) | the suite, the fixture contract, the two-file format |
 | [glossary.md](glossary.md) | one line for each term the suite uses |
 | [grammars.md](grammars.md) | every grammar in the suite, one line each, grouped by area, and which engines run which |
+| [engine-divergences.md](engine-divergences.md) | the fixtures where an engine knowingly differs from hc.dll, and why |
 
 ### Implementing an engine
 
