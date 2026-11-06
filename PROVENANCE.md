@@ -15,6 +15,7 @@ a build by the first eight characters of its hash.
 | Short | Full hash | What it is | Files citing it |
 |---|---|---|---|
 | `aab4c598` | `aab4c59819adb7b366915e09df2fb28c62b8c03a` | The founding-oracle build most recent fixtures were verified against (the build PanGloss pins for its oracle). Tagged `pangloss-oracle-pin-aab4c598` on sillsdev/machine. | 82 files (`grep -rl aab4c598 .`) |
+| `4d9b454d` | `4d9b454d42a0da35e058641a65596339a79d115b` | Machine pin of the hc-conformance self-check of 2026-11-05, cited in the notes of the three known-engine-divergence fixtures. | `docs/engine-divergences.md`, `edge-cases/featureless-modify-from-input/words.yaml`, `edge-cases/unspecified-feature-minus-environment/words.yaml`, `edge-cases/unspecified-feature-minus-target/words.yaml` |
 | `18cf242f` | `18cf242f4b114b0eb9bac304b4b171ca2f499a39` | Machine build cited in notes of the form "Oracle: hc.dll, Machine <hash>" as the oracle for the fixtures that carry them. | 74 files (`grep -rl 18cf242f .`) |
 | `caa4ddde` | `caa4ddde8782557c6fb58cac57e4761ffcafc2a6` | Machine commit of an earlier C# verification, cited in the notes of the files listed. | 16 files (`grep -rl caa4ddde .`) |
 | `f150e2a0` | `f150e2a005ce639f7d68ef17fb0db25b2f6aaa3c` | Original founding-oracle commit recorded when the first fixtures were graduated (verified 2026-09-16). | 8 files (`grep -rl f150e2a0 .`) |

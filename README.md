@@ -3,7 +3,7 @@
 **One suite of grammars, words and expected parses, so every FieldWorks parser engine can prove it gives the same answers.**
 A linguist's project should parse a word the same way whichever engine runs it. This suite checks that it does.
 
-**135 conformance grammars** (6 languages, 129 edge cases) · **16 stress grammars** · **10 FieldWorks witnesses**
+**138 conformance grammars** (6 languages, 132 edge cases) · **16 stress grammars** · **10 FieldWorks witnesses**
 
 ## The one rule
 
@@ -21,11 +21,13 @@ A FieldWorks project switches between the two with one setting (`ActiveParser`).
 
 | Engine | Phonology it needs | Grammars |
 |---|---|---|
-| XAmple | None: letters only; it ignores features and rules | 45 conformance + 6 stress, the [XAmple subset](docs/grammars.md#the-xample-subset) |
-| Hermit Crab (machine) | Complete: every letter defined as a segment | all 135 + 16 |
-| PanGloss | None, incomplete or complete | all 135 + 16 |
+| XAmple | None: letters only; it ignores features and rules | 46 conformance + 6 stress, the [XAmple subset](docs/grammars.md#the-xample-subset) |
+| Hermit Crab (machine) | Complete: every letter defined as a segment | all 138 + 16 |
+| PanGloss | None, incomplete or complete | all 138 + 16 |
 
 The suite has no grammar with incomplete phonology yet.
+
+PanGloss knowingly differs from hc.dll on three fixtures, where hc.dll's answer comes only from a feature the grammar has not defined. They keep hc.dll's answers, and [docs/engine-divergences.md](docs/engine-divergences.md) lists them.
 
 ## Three projects, one suite
 
@@ -64,6 +66,7 @@ Set `HC_CONFORMANCE_SUITE=<path>` to use a local copy. Details: [docs/consuming.
 | Look up a term | [docs/glossary.md](docs/glossary.md) |
 | See what FieldWorks cannot say | [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md) |
 | Trace where results came from | [PROVENANCE.md](PROVENANCE.md) |
+| See where an engine knowingly differs from hc.dll | [docs/engine-divergences.md](docs/engine-divergences.md) |
 | Find every document | [docs/README.md](docs/README.md) |
 
 ## License

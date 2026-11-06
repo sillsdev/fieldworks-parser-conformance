@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 135 fixtures: 6 languages and 129 edge cases.
+The list has 138 fixtures: 6 languages and 132 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 135 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 138 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **45 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **46 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -57,6 +57,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/deep-optional-affix-nesting`
 - `edge-cases/diacritic-segments`
 - `edge-cases/feature-gating-breadth`
+- `edge-cases/featureless-modify-from-input`
 - `edge-cases/final-template-merge-key` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-discriminators` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-root` (needs `morpher-settings`)
@@ -126,6 +127,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/circumfix-reduplication-precedence`: [XAmple] one allomorph that is both circumfixing and reduplicating in the same output.
 - `edge-cases/copy-agreement-featureless-redup`: a first-consonant-and-vowel reduplication in a grammar with no phonological features, where the two copies must agree in spelling (19 words).
 - `edge-cases/discontinuous-morph-environment`: a root environment checked on each contiguous piece of a root split by a two-infix rule.
+- `edge-cases/featureless-modify-from-input`: [XAmple] a suffix rule that rewrites a vowel to a segment class with `ModifyFromInput`, undone on analysis in a grammar with no phonological features; a known PanGloss divergence ([engine divergences](engine-divergences.md)).
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
 - `edge-cases/infix-interdigitation`: [XAmple] infixes inserted around a copied root, in a templatic Semitic shape.
 - `edge-cases/process-morphology-in-place-mutation`: tense expressed only by changing a segment of the root, with no affix.
@@ -208,6 +210,8 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/simultaneous-feeding`: a simultaneous feature-changing rule whose sites overlap.
 - `edge-cases/simultaneous-feeding-control-iterative`: the same feature-changing rule applied iteratively, as a control.
 - `edge-cases/simultaneous-subrule-genuine-overlap`: two subrules that both match one position, where the first subrule wins.
+- `edge-cases/unspecified-feature-minus-environment`: a rewrite whose environment pins `[nasal:-]`, which a vowel with no nasal value does not satisfy; a known PanGloss divergence ([engine divergences](engine-divergences.md)).
+- `edge-cases/unspecified-feature-minus-target`: a deletion whose target pins `[nasal:-]`, which a vowel with no nasal value does not match; a known PanGloss divergence ([engine divergences](engine-divergences.md)).
 - `edge-cases/two-merges-cascade-env`: a vowel-fronting rule feeding two merges, with and without a morpheme boundary.
 - `edge-cases/merge-subrules-pos-ltr-template`: a left-to-right merge with subrules gated by part of speech and a verb template.
 - `edge-cases/merge-subrules-pos-rtl-template`: the same merge applied right to left.
