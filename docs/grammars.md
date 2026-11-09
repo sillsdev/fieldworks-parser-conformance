@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 135 fixtures: 6 languages and 129 edge cases.
+The list has 136 fixtures: 6 languages and 130 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 135 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 136 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **45 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **46 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -56,6 +56,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/cross-stem-material-determination`
 - `edge-cases/deep-optional-affix-nesting`
 - `edge-cases/diacritic-segments`
+- `edge-cases/empty-required-template-slot`
 - `edge-cases/feature-gating-breadth`
 - `edge-cases/final-template-merge-key` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-discriminators` (needs `morpher-settings`)
@@ -143,6 +144,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/final-template-partial-trace`: [XAmple] one word that both final-template refusals reject, and that parses once the partial rule is made ordinary.
 - `edge-cases/morphotactic-attribute-breadth`: [XAmple] repetition caps, partial rules and entries, bound allomorphs, non-final templates, co-occurrence rules and MPR groups.
 - `edge-cases/optional-template-composite`: [XAmple] optional and mandatory template slots that combine into several parses of one word.
+- `edge-cases/empty-required-template-slot`: [XAmple] a required FieldWorks prefix slot with no affix rules is omitted by HCLoader, so the bare stem and an optional suffix still parse (3 words).
 - `edge-cases/shared-template-unconstrained-suffix`: [XAmple] a template with a mandatory suffix shared by roots of different parts of speech.
 - `edge-cases/subrule-morphosyntactic-gating`: a phonological subrule that applies only after a rule has changed the part of speech.
 - `edge-cases/template-category-sharing`: [XAmple] one template used by several parts of speech.

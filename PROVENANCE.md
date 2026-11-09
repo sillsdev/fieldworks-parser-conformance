@@ -14,6 +14,7 @@ a build by the first eight characters of its hash.
 
 | Short | Full hash | What it is | Files citing it |
 |---|---|---|---|
+| `4d9b454d` | `4d9b454d42a0da35e058641a65596339a79d115b` | Exact C# founding-oracle build used to propose and trace-check `empty-required-template-slot`. | `edge-cases/empty-required-template-slot/words.yaml` |
 | `aab4c598` | `aab4c59819adb7b366915e09df2fb28c62b8c03a` | The founding-oracle build most recent fixtures were verified against (the build PanGloss pins for its oracle). Tagged `pangloss-oracle-pin-aab4c598` on sillsdev/machine. | 82 files (`grep -rl aab4c598 .`) |
 | `18cf242f` | `18cf242f4b114b0eb9bac304b4b171ca2f499a39` | Machine build cited in notes of the form "Oracle: hc.dll, Machine <hash>" as the oracle for the fixtures that carry them. | 74 files (`grep -rl 18cf242f .`) |
 | `caa4ddde` | `caa4ddde8782557c6fb58cac57e4761ffcafc2a6` | Machine commit of an earlier C# verification, cited in the notes of the files listed. | 16 files (`grep -rl caa4ddde .`) |
@@ -47,7 +48,7 @@ those repositories and not to this one.
 
 ## FieldWorks witnesses
 
-The nine `fieldworks/` directories (`project.fwdata`, `phonology-mutations.yaml`, `WritingSystemStore/`) were
+The eleven `fieldworks/` directories (`project.fwdata`, `phonology-mutations.yaml`, `WritingSystemStore/`) were
 produced by the `author` command of PanGloss's `xample-projector` tool against FieldWorks 9.3.10.1452 and
 LibLCM 11.0.0.55173, as each fixture README says. The tool's commit was not recorded with the witnesses; a
 `WITNESSES.md` that records it is a later step. The writing-system files carry CLDR revision

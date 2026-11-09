@@ -282,6 +282,7 @@ DisjunctiveRecheckProbe,pakzeta,++|pakzeta,Disjunctive allomorphs / free-fluctua
 DisjunctiveRecheckProbe,pakdeta,,Disjunctive allomorphs / free-fluctuation
 DisjunctiveRecheckProbe,gray,|gray,Disjunctive allomorphs / free-fluctuation
 DisjunctiveRecheckProbe,grey,|grey,Disjunctive allomorphs / free-fluctuation
+EmptyRequiredTemplateSlot,monua,+|monu+?a,Affix template slots (obligatory/disjunctive/ordering)
 EpenthesisFedMerge,bd,ROOT|bd,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ExpansionInterposedOptional,ii,ROOT|ii,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ExpansionOverlappingTargets,kaaa,KAA1|kaaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
@@ -311,6 +312,17 @@ FreeFluctuatingAllomorphPair,kits,ORD+SSFX|kits,Disjunctive allomorphs / free-fl
 FreeFluctuatingAllomorphPair,kots,,Disjunctive allomorphs / free-fluctuation
 FreeFluctuatingAllomorphPair,kot,ORD|kot,Disjunctive allomorphs / free-fluctuation
 FreeFluctuatingAllomorphPair,kit,,Disjunctive allomorphs / free-fluctuation
+FwMetathesisSwitchIndices,akta,R0|akta,MetathesisRule
+FwMetathesisSwitchIndices,atka,,MetathesisRule
+FwMetathesisSwitchIndices,aktas,R0+A|akta+?s,MetathesisRule
+FwMetathesisSwitchIndices,atkas,,MetathesisRule
+FwMetathesisSwitchIndices,itka,R1|itka,MetathesisRule
+FwMetathesisSwitchIndices,ikta,,MetathesisRule
+FwMetathesisSwitchIndices,itkas,R1+A|itka+?s,MetathesisRule
+FwMetathesisSwitchIndices,tika,R2|tika,MetathesisRule
+FwMetathesisSwitchIndices,tikas,R2+A|tika+?s,MetathesisRule
+FwMetathesisSwitchIndices,kita,,MetathesisRule
+FwMetathesisSwitchIndices,kitas,,MetathesisRule
 GeminateUnderMerge,f,ROOT|f,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 GuessRootsSettings,takuvuq,taku+INFL|takuvuq,Guesser/LexicalGuess
 GuessRootsSettings,takuvuq,taku+INFL|takuvuq,Guesser/LexicalGuess

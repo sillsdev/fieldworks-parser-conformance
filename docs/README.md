@@ -74,7 +74,7 @@ repo stores the witnesses but never executes them.
 
 ```
 languages/<name>/    grammar.xml + words.yaml   -- 6 typologically-selected synthetic languages
-edge-cases/<name>/   grammar.xml + words.yaml   -- 128 focused micro-grammars for things no shared grammar hosts
+edge-cases/<name>/   grammar.xml + words.yaml   -- 130 focused micro-grammars for things no shared grammar hosts
 stress/              16 timing and optimisation-parity grammars (not conformance; see stress/README.md)
                      docs/grammars.md and that README list each; generated/stress-manifest.v2.json hashes them
 docs/grammars.md     one line for every fixture above; scripts/check_grammars_md.py keeps it complete
