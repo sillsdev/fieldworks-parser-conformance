@@ -22,7 +22,7 @@ not belong here, however expressible it is in the XML and however well an engine
 - The standard is the round trip: a real FieldWorks project, put through the loader, yields the grammar. Reading
   the loader source is weaker evidence. `fieldworks_producible: true` is a claim read from the loader until the
   fixture has a FieldWorks witness (section 3), and only the 11 fixtures that carry one are certified today (of
-  137; none of the 16 stress fixtures has one). Say which of the two you are relying on in the pull request.
+  138; none of the 16 stress fixtures has one). Say which of the two you are relying on in the pull request.
 - If the grammar needs a construct in that table, stop. Rewrite the grammar without it or do not add it.
   Do not relax `fieldworks_producible`: every fixture must carry `true`, and `scripts/check_words_schema.py`
   and the consuming engines' gates fail on anything else.
