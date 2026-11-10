@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<ldml>
+  <identity>
+    <version number="" />
+    <generation date="2026-10-27T17:54:27Z" />
+    <language type="fr" />
+    <special xmlns:sil="urn://www.sil.org/ldml/0.1">
+      <sil:identity defaultRegion="FR" />
+    </special>
+  </identity>
+  <layout>
+    <orientation>
+      <characterOrder>left-to-right</characterOrder>
+    </orientation>
+  </layout>
+  <collations>
+    <defaultCollation>standard</defaultCollation>
+  </collations>
+  <special xmlns:sil="urn://www.sil.org/ldml/0.1">
+    <sil:external-resources>
+      <sil:font name="Charis SIL" />
+    </sil:external-resources>
+  </special>
+</ldml>

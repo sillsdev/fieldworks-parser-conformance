@@ -235,7 +235,7 @@ root-allomorph	Properties	metadata
 root-allomorph	RequiredEnvironments	writes	862-876	
 slot	@isActive=no	never	1735-1773	a slot has no inactive state
 slot	@isActive=yes	metadata		
-slot	@morphologicalRules	writes	1735-1773	the affix MSAs of the slot
+slot	@morphologicalRules	writes	308-312, 923-971, 1754-1780	the loaded affix rules of the slot; slots with no loaded affix are filtered out
 slot	@optional=false	writes	1780	Optional
 slot	@optional=true	writes	1780	Optional
 slot	Name	metadata		

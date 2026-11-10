@@ -1,0 +1,28 @@
+# oracle-provenance: founding-oracle machine-commit=4d9b454d
+language: EmptyRequiredTemplateSlot
+inspired_by: [a FieldWorks required prefix slot with no affix rules]
+sources:
+  - "FieldWorks 9.3.10.1452 HCLoader witness in fieldworks/"
+requires: []
+fieldworks_producible: true
+words:
+  - word: monu
+    note: >-
+      Bare stem parses even though its template has a required prefix slot with no loaded affix
+      rules; the FieldWorks loader omits that slot from the HC grammar.
+    parses:
+      - signature: "|monu"
+        rules: []
+  - word: monua
+    note: >-
+      The stem plus the optional -a suffix parses after the loader omits the empty required prefix
+      slot.
+    parses:
+      - signature: "+|monu+?a"
+        rules: [mrule1]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+  - word: amonu
+    note: >-
+      The leading a is not a prefix rule and cannot satisfy the omitted required prefix slot, so
+      this word has no analysis.
+    expect_fail: true

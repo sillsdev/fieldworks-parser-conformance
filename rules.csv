@@ -126,6 +126,7 @@ DiscontinuousMorphEnvironment,mrSuffixGood,zabu;zuaubu
 DisjunctiveRecheckProbe,ruleD,pakza;!pakda;pitda
 DisjunctiveRecheckProbe,ruleE,pakde;pakzeta;!pakdeta
 DisjunctiveRecheckProbe,ruleT,!wakta;wokta;pakzeta
+EmptyRequiredTemplateSlot,mrule1,monua
 EpenthesisFedMerge,prEpenthesis,bd
 EpenthesisFedMerge,prMerge,bd
 ExpansionInterposedOptional,prDelete,
@@ -162,6 +163,8 @@ FlexNullAffixEnvironments,mrPZ,zsag
 FlexNullAffixEnvironments,mrST,sagt
 FlexNullAffixEnvironments,mrSZ,sagz
 FreeFluctuatingAllomorphPair,ruleS,kits;!kots
+FwMetathesisSwitchIndices,mrule1,aktas;itkas;tikas
+FwMetathesisSwitchIndices,prule1,akta;aktas
 GeminateUnderMerge,prMerge,f
 GeminateUnderMerge,prShorten,f
 GuessRootsSettings,mrInfl,takuvuq
