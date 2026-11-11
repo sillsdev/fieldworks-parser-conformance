@@ -130,6 +130,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
 - `edge-cases/infix-interdigitation`: [XAmple] infixes inserted around a copied root, in a templatic Semitic shape.
 - `edge-cases/process-morphology-in-place-mutation`: tense expressed only by changing a segment of the root, with no affix.
+- `edge-cases/syncope-redup-optional-vowel-lattice`: a vowel-deletion rule with four subrules beside three same-category reduplication rules (CVV and CVCV copied twice), so un-applying the deletion offers growing runs of optional vowels to each reduplication match (22 words).
 - `edge-cases/truncate-morphotactic`: rules that remove a final or initial segment of the stem, matched by literal segment, with optional insertion.
 - `edge-cases/truncate-morphotactic-copy-u`: the truncation grammar with explicit morpheme ids and a copying suffix rule, so one surface form has several parses with different rule histories.
 - `edge-cases/truncate-morphotactic-identity`: the truncation grammar with explicit morpheme ids, so repeated signatures stay distinct rows.

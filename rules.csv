@@ -379,6 +379,10 @@ SuffixingVowelHarmony,prVowelMerge,!duii;duy
 SuffixingVowelHarmony,prVowelMultiMerge,!sueeb;sueb
 SuffixingVowelHarmony,ruleCollective,!etemig;!esalig
 SuffixingVowelHarmony,ruleInfixDemo,guan
+SyncopeRedupOptionalVowelLattice,mrRedA,tuutuu;hiihii;kaakaa;haphapa;tptpa
+SyncopeRedupOptionalVowelLattice,mrRedB,tuutuu;hiihii;kaakaa;haphapa;tptpa
+SyncopeRedupOptionalVowelLattice,mrRedC,tuutuu;hiihii;kaakaa;haphapa;tptpa
+SyncopeRedupOptionalVowelLattice,prSyncope,tpa;tpnka;hapnka;haphapa;tptpa
 TemplaticRootModification,mrAspImpf,hilaku
 TemplaticRootModification,mrAspJuss,hulaka
 TemplaticRootModification,mrAspPerf,hilaki;hulaki

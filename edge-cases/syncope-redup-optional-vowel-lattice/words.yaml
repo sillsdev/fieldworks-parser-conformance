@@ -1,0 +1,185 @@
+# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-11-11
+# Every row is what the C# oracle (SIL.Machine.Morphology.HermitCrab at the commit above, built as the
+# hc-conformance self-check runner) does. The runner's --propose output for the 22 words below was read against
+# the rules and then confirmed by the self-check, which passes every word, signature and traced rule. Two other
+# engines agree on every word: PanGloss (stable build 0b3fe6e27, `batch`) and a plain C# harness over hc.dll.
+#
+# What this pins. A deletion rule (syncope, prSyncope) with four subrules, each "left class, then a vowel, then a
+# consonant": stop _ C, nasal _ C, sibilant _ C, liquid _ C. The vowel is deleted between those consonants and
+# stays after h, which is no left context. Beside it sit three same-category reduplication rules (redA, redB,
+# redC, each verb to verb) whose affix processes have two allomorphs, C V V and C V C V, each copied
+# whole twice (parts 1 2 3 1 2 3 and 1 2 3 4 1 2 3 4). An analysis engine un-applies syncope by putting an
+# optional vowel back at every site, and a reinserted vowel is itself a site for the next subrule, so a word with
+# k deletion sites offers a run of optional vowels that grows with every subrule. Each reduplication allomorph
+# then has to match its copies over that lattice. The parses are the same however an engine walks it; the
+# words pin the visible half: reduplicated words parse once per rule, copies that disagree do not parse, and the
+# non-reduplicated word with three deletion sites (tpnka) parses to its one root. The cost of that walk is the
+# defect that sillsdev/machine#635 and sillsdev/PanGloss#236 (fix: PanGloss PR #237) describe; the suite pins results, not cost.
+#
+# FieldWorks: no fieldworks/ witness, so fieldworks_producible: true is a claim read from HCLoader.cs and is not
+# proven (see fieldworks_producible_notes).
+language: SyncopeRedupOptionalVowelLattice
+inspired_by: ["synthetic vowel syncope between consonants plus total CVV and CVCV reduplication (not modeling any real language)"]
+sources:
+  - "sillsdev/machine#635 and sillsdev/PanGloss#236: optional-vowel lattice growth under un-applied deletion, and the cost of reduplication matching over it"
+  - "AnalysisMorphologicalTransform.cs HasDisagreeingCopies/CanAlign (machine aab4c598)"
+requires: [phonology]
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Read from HCLoader.cs at FieldWorks 620cd9903; NOT proven by a FieldWorks witness. Reduplication is an
+  MoAffixProcess: LoadAffixProcessAllomorph (1383-1488) writes one input pattern per input part and a
+  CopyFromInput by part index with no check that a part is copied once, so parts 1 2 3 1 2 3 are writable; each
+  part here is one natural-class context (C or V). Each rule carries two allomorphs, which the loader writes as two
+  subrules, and the three rules share one part of speech (derivational rules, outputPartOfSpeech written at
+  988-989). The deletion rule is a PhRegularRule loaded by LoadRewriteRule (2052-2146): the input is a vowel
+  natural class, each right-hand side is an empty output with a left and a right environment, which the loader
+  writes as one subrule, and simultaneous order is writable (2052-2080). Natural classes are feature classes
+  over a fully specified feature system. Not shown by a witness: the whole project built in FieldWorks.
+words:
+  - word: tuu
+    note: >-
+      plain CVV root; no reduplication, and no vowel sits between two consonants, so syncope has no site.
+    parses:
+      - signature: "tuu|tuu"
+        rules: []
+  - word: hii
+    note: >-
+      plain CVV root, a second control.
+    parses:
+      - signature: "hii|hii"
+        rules: []
+  - word: hapa
+    note: >-
+      plain CVCV root; the vowel after h is not a syncope context (h is not a left context), so it stays.
+    parses:
+      - signature: "hapa|hapa"
+        rules: []
+  - word: tpa
+    note: >-
+      root tapa; the first a sits between t and p, so syncope deletes it (one site).
+    parses:
+      - signature: "tapa|tpa"
+        rules: [prSyncope]
+        exercises: ["RewriteRule Simultaneous"]
+  - word: tpnka
+    note: >-
+      root tapunika; the vowels a, u and i each sit between two consonants, so syncope deletes all three. The one word that is not reduplicated and has three deletion sites: un-applying the rule offers optional vowels at every position of a five-segment word.
+    parses:
+      - signature: "tapunika|tpnka"
+        rules: [prSyncope]
+        exercises: ["RewriteRule Simultaneous"]
+  - word: hapnka
+    note: >-
+      root hapunika; the a after h stays and u and i are deleted: two sites.
+    parses:
+      - signature: "hapunika|hapnka"
+        rules: [prSyncope]
+  - word: tuutuu
+    note: >-
+      a CVV root copied whole (C V V then C V V) by each of the three reduplication rules: three parses, no syncope site.
+    parses:
+      - signature: "tuu+REDA|tuutuu"
+        rules: [mrRedA]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "tuu+REDB|tuutuu"
+        rules: [mrRedB]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "tuu+REDC|tuutuu"
+        rules: [mrRedC]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+  - word: hiihii
+    note: >-
+      as tuutuu, root hii.
+    parses:
+      - signature: "hii+REDA|hiihii"
+        rules: [mrRedA]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "hii+REDB|hiihii"
+        rules: [mrRedB]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "hii+REDC|hiihii"
+        rules: [mrRedC]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+  - word: kaakaa
+    note: >-
+      as tuutuu, root kaa.
+    parses:
+      - signature: "kaa+REDA|kaakaa"
+        rules: [mrRedA]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "kaa+REDB|kaakaa"
+        rules: [mrRedB]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "kaa+REDC|kaakaa"
+        rules: [mrRedC]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+  - word: haphapa
+    note: >-
+      root hapa copied as C V C V twice; the a at the end of the first copy sits between p and h and is deleted (one site). The copies agree only after syncope is un-applied.
+    parses:
+      - signature: "hapa+REDA|haphapa"
+        rules: [mrRedA, prSyncope]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "hapa+REDB|haphapa"
+        rules: [mrRedB, prSyncope]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "hapa+REDC|haphapa"
+        rules: [mrRedC, prSyncope]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+  - word: tptpa
+    note: >-
+      root tapa copied as C V C V twice, then syncope deletes the vowels at three sites (t_p, p_t, t_p). Three parses, one per reduplication rule; the heavy reduplicated word.
+    parses:
+      - signature: "tapa+REDA|tptpa"
+        rules: [mrRedA, prSyncope]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "tapa+REDB|tptpa"
+        rules: [mrRedB, prSyncope]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+      - signature: "tapa+REDC|tptpa"
+        rules: [mrRedC, prSyncope]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)"]
+  - word: tapa
+    note: >-
+      the root tapa never surfaces with its first vowel: syncope is obligatory.
+    expect_fail: true
+  - word: tapatapa
+    note: >-
+      the reduplicated root with every vowel kept; syncope would have deleted three of them.
+    expect_fail: true
+  - word: hapahapa
+    note: >-
+      the reduplicated root hapa with its vowels kept; the a between p and h must be deleted.
+    expect_fail: true
+  - word: tpatpa
+    note: >-
+      tapa copied twice with only the first and third vowels deleted; syncope applies at every site at once, so the second a cannot survive.
+    expect_fail: true
+  - word: tptpi
+    note: >-
+      the copies differ in the final vowel (a and i), and no root ends in tpi.
+    expect_fail: true
+  - word: haphapi
+    note: >-
+      the copies of hapa differ in the final vowel: no parse.
+    expect_fail: true
+  - word: tuutii
+    note: >-
+      two CVV copies that disagree on the vowels (uu then ii): no parse.
+    expect_fail: true
+  - word: tuutaa
+    note: >-
+      two CVV copies that disagree on the first consonant and the vowels: no parse.
+    expect_fail: true
+  - word: tuutuutuu
+    note: >-
+      a CVV root copied three times: each rule copies once and no rule makes a six-segment stem a root.
+    expect_fail: true
+  - word: tapunika
+    note: >-
+      the root tapunika with its vowels kept; syncope must delete three of them.
+    expect_fail: true
+  - word: hapunika
+    note: >-
+      the root hapunika with its vowels kept; syncope must delete two of them.
+    expect_fail: true
