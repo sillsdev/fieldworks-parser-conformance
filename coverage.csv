@@ -1374,6 +1374,23 @@ SuffixingVowelHarmony,kalutun,KALT+ALPHA|kalutun,RewriteRule Simultaneous
 SuffixingVowelHarmony,kalutun,KALT+ALPHA|kalutun,Alpha-variable phonological environments (VariableFeature/AlphaVariables)
 SuffixingVowelHarmony,kalitin,,RewriteRule Simultaneous
 SuffixingVowelHarmony,kalitin,,Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+SyncopeRedupOptionalVowelLattice,tpa,tapa|tpa,RewriteRule Simultaneous
+SyncopeRedupOptionalVowelLattice,tpnka,tapunika|tpnka,RewriteRule Simultaneous
+SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDA|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDB|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDC|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,hiihii,hii+REDA|hiihii,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,hiihii,hii+REDB|hiihii,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,hiihii,hii+REDC|hiihii,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,kaakaa,kaa+REDA|kaakaa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,kaakaa,kaa+REDB|kaakaa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,kaakaa,kaa+REDC|kaakaa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,haphapa,hapa+REDA|haphapa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,haphapa,hapa+REDB|haphapa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,haphapa,hapa+REDC|haphapa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tptpa,tapa+REDA|tptpa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tptpa,tapa+REDB|tptpa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tptpa,tapa+REDC|tptpa,AffixProcessRule: reduplication (ReduplicationHint)
 TemplaticRootModification,katabit,KTB+P1SG|katabit,RewriteRule Simultaneous
 TemplaticRootModification,katabit,KTB+P1SG|katabit,MorphologicalOutputAction: CopyFromInput/InsertSegments
 TemplaticRootModification,katabt,,RewriteRule Simultaneous
