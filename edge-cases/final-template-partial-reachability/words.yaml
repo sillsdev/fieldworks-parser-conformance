@@ -18,6 +18,8 @@ words:
     parses:
       - signature: "KAMB+T|kamt"
         rules: [t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kamdt
     note: >-
@@ -25,6 +27,9 @@ words:
     parses:
       - signature: "KAM+D+T|kamdt"
         rules: [d, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kamet
     note: >-
@@ -32,8 +37,14 @@ words:
     parses:
       - signature: "KAM+E+T|kamet"
         rules: [e, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "KAMB+E+T|kamet"
         rules: [e, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kamu
     note: >-
@@ -41,6 +52,8 @@ words:
     parses:
       - signature: "KAMB+U|kamu"
         rules: [u]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kamut
     note: >-
@@ -48,6 +61,8 @@ words:
     parses:
       - signature: "KAMB+U+T|kamut"
         rules: [u, t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lopt
     note: >-
@@ -55,6 +70,8 @@ words:
     parses:
       - signature: "LOP+T|lopt"
         rules: [t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lopu
     note: >-
@@ -62,6 +79,8 @@ words:
     parses:
       - signature: "LOP+U|lopu"
         rules: [u]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: nukx
     note: >-
@@ -69,6 +88,8 @@ words:
     parses:
       - signature: "NUK+X|nukx"
         rules: [x]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kamx
     note: >-
@@ -76,6 +97,8 @@ words:
     parses:
       - signature: "KAM+X|kamx"
         rules: [x]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lopx
     note: >-
@@ -88,6 +111,9 @@ words:
     parses:
       - signature: "P+KAMB+T|akamt"
         rules: [p, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: akamdt
     note: >-
@@ -95,8 +121,14 @@ words:
     parses:
       - signature: "P+KAM+D+T|akamdt"
         rules: [p, d, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "P+KAM+D+T|akamdt"
         rules: [p, d, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: alopt
     note: >-
@@ -104,6 +136,9 @@ words:
     parses:
       - signature: "P+LOP+T|alopt"
         rules: [p, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: pat
     note: >-
@@ -116,6 +151,8 @@ words:
     parses:
       - signature: "PA+U|pau"
         rules: [u]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: pad
     note: >-
@@ -123,6 +160,8 @@ words:
     parses:
       - signature: "PA+D|pad"
         rules: [d]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: nukqx
     note: >-
@@ -130,6 +169,9 @@ words:
     parses:
       - signature: "NUK+Q+X|nukqx"
         rules: [q, x]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: nukxq
     note: >-
@@ -137,6 +179,9 @@ words:
     parses:
       - signature: "NUK+X+Q|nukxq"
         rules: [x, q]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: kamtd
     note: >-
@@ -149,3 +194,6 @@ words:
     parses:
       - signature: "NUK+E+T|nuket"
         rules: [e, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
