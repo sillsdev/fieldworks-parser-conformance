@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- Synthetic probe: a root with an environment-conditioned allomorph (gabs / _ V) before its elsewhere
+     form (gabas), plus an infix that splits the root. Infix segments must not count as the root's
+     neighbours: the environment is tested left of the first root piece and right of the last. -->
+<HermitCrabInput>
+  <Language>
+    <Name>InfixSplitRootAllomorphEnvironment</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posV"><Name>verb</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="featId">
+        <Name>id</Name>
+        <Symbols>
+          <Symbol id="sG">g</Symbol><Symbol id="sA">a</Symbol><Symbol id="sB">b</Symbol>
+          <Symbol id="sS">s</Symbol><Symbol id="sI">i</Symbol><Symbol id="sN">n</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="table1">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cG"><Representations><Representation>g</Representation></Representations><FeatureValue feature="featId" symbolValues="sG" /></SegmentDefinition>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations><FeatureValue feature="featId" symbolValues="sA" /></SegmentDefinition>
+        <SegmentDefinition id="cB"><Representations><Representation>b</Representation></Representations><FeatureValue feature="featId" symbolValues="sB" /></SegmentDefinition>
+        <SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations><FeatureValue feature="featId" symbolValues="sS" /></SegmentDefinition>
+        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations><FeatureValue feature="featId" symbolValues="sI" /></SegmentDefinition>
+        <SegmentDefinition id="cN"><Representations><Representation>n</Representation></Representations><FeatureValue feature="featId" symbolValues="sN" /></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+      <SegmentNaturalClass id="ncV"><Name>V</Name><Segment segment="cA" /><Segment segment="cI" /></SegmentNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="mrInfix mrSuffix">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="mrInfix" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>inInfix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subInfix">
+                <MorphologicalInput>
+                  <PhoneticSequence id="first"><SimpleContext naturalClass="ncAny" /></PhoneticSequence>
+                  <PhoneticSequence id="rest"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="first" /><InsertSegments><PhoneticShape>in</PhoneticShape></InsertSegments><CopyFromInput index="rest" />
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>INF</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrSuffix" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>aSuffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subSuffix">
+                <MorphologicalInput><PhoneticSequence id="stem"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stem" /><InsertSegments><PhoneticShape>a</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SFX</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eRoot" partOfSpeech="posV">
+            <Allomorphs>
+              <Allomorph id="aGabs"><PhoneticShape>gabs</PhoneticShape><RequiredEnvironments><Environment><RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncV" /></PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment></RequiredEnvironments></Allomorph>
+              <Allomorph id="aGabas"><PhoneticShape>gabas</PhoneticShape></Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT</MorphemeId><Gloss>root</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

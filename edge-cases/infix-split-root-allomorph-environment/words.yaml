@@ -1,0 +1,51 @@
+# oracle-provenance: machine-pr=sillsdev/machine#631 machine-commit=7e5d5a64 verified-date=2026-11-10
+# Rows taken from the machine conformance runner (--propose) with that fix; without it ginabas has no parse.
+language: InfixSplitRootAllomorphEnvironment
+inspired_by: ["synthetic allomorph environment and infixation probe (not modeling any real language)"]
+sources:
+  - "sillsdev/machine issue 630: Allomorph.IsWordValid tested environments once per root piece"
+requires: []
+fieldworks_producible: true
+words:
+  - word: gabsa
+    note: >-
+      Suffix a follows the root, so gabs / _ V applies and the root parses as gabs plus the suffix.
+    parses:
+      - signature: "ROOT+SFX|gabsa"
+        rules: [mrSuffix]
+  - word: gabas
+    note: >-
+      Word-final root: gabs / _ V does not apply, so the elsewhere form gabas parses.
+    parses:
+      - signature: "ROOT|gabas"
+        rules: []
+  - word: ginabas
+    note: >-
+      The infix splits gabas into g and abas; the infix's i follows the first piece but is not the root's right context. The root is word-final, so gabs / _ V does not apply and must not block gabas (sillsdev/machine issue 630).
+    parses:
+      - signature: "ROOT+INF|ginabas"
+        rules: [mrInfix]
+  - word: ginabsa
+    note: >-
+      The infix splits gabs into g and abs; the suffix a follows the last piece, so gabs / _ V holds and the root parses as gabs. Two rule orders (infix then suffix, suffix then infix) give the same surface.
+    parses:
+      - signature: "ROOT+INF+SFX|ginabsa"
+        rules: [mrInfix, mrSuffix]
+      - signature: "ROOT+INF+SFX|ginabsa"
+        rules: [mrSuffix, mrInfix]
+  - word: ginabs
+    note: >-
+      Rejection: gabs is word-final with the infix inside it, so gabs / _ V does not hold at the last piece and no other form fits.
+    expect_fail: true
+  - word: gabs
+    note: >-
+      Rejection: gabs / _ V needs a vowel after the root.
+    expect_fail: true
+  - word: gabasa
+    note: >-
+      Rejection: a vowel follows the root, so gabs / _ V applies and blocks the elsewhere form gabas; gabs does not spell this word.
+    expect_fail: true
+  - word: ginabasa
+    note: >-
+      Rejection: as gabasa with the infix inside the root; a vowel follows the last piece, so gabs / _ V blocks gabas.
+    expect_fail: true
