@@ -1,0 +1,239 @@
+# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine PR for issue 643.
+# Partial rules pk (suffix ko) and pc (prefix ka) apply to the stem, then ordinary prefixes and suffixes (n, m) and a reduplication (rd) wrap or copy the partial material before the final template T1 (suffix t) closes the word. A prune of final templates that looked only at the last rule applied would lose these words.
+language: PartialRuleWrappedMaterial
+inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
+sources:
+  - "https://github.com/sillsdev/machine/issues/643"
+requires: []
+fieldworks_producible: true
+words:
+  - word: lopkotr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+PK+T+R|lopkotr"
+        rules: [pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: loptr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: lopkot
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+PK+T|lopkot"
+        rules: [pk, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopt
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "LOP+T|lopt"
+        rules: [t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopktr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: lopotr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: loptkor
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+T+PK+R|loptkor"
+        rules: [t, pk, r]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+
+  - word: lopkotkor
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: kaloptr
+    note: >-
+      Analysis applies the partial rule pc in the derivation.
+    parses:
+      - signature: "PC+LOP+T+R|kaloptr"
+        rules: [pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "PC+LOP+T+R|kaloptr"
+        rules: [pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kalopkotr
+    note: >-
+      Analysis applies the partial rules pc, pk in the derivation.
+    parses:
+      - signature: "PC+LOP+PK+T+R|kalopkotr"
+        rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "PC+LOP+PK+T+R|kalopkotr"
+        rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "PC+LOP+PK+T+R|kalopkotr"
+        rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "PC+LOP+PK+T+R|kalopkotr"
+        rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: loptrko
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: loptkr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: lopkor
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+PK+R|lopkor"
+        rules: [pk, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+
+  - word: lopkontr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+PK+N+T+R|lopkontr"
+        rules: [pk, n, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: milopkotr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "M+LOP+PK+T+R|milopkotr"
+        rules: [m, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+LOP+PK+T+R|milopkotr"
+        rules: [m, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+LOP+PK+T+R|milopkotr"
+        rules: [m, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+LOP+PK+T+R|milopkotr"
+        rules: [m, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: mikaloptr
+    note: >-
+      Analysis applies the partial rule pc in the derivation.
+    parses:
+      - signature: "M+PC+LOP+T+R|mikaloptr"
+        rules: [m, pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+PC+LOP+T+R|mikaloptr"
+        rules: [m, pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+PC+LOP+T+R|mikaloptr"
+        rules: [m, pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+PC+LOP+T+R|mikaloptr"
+        rules: [m, pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "M+PC+LOP+T+R|mikaloptr"
+        rules: [m, pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopkolopkotr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+PK+RD+T+R|lopkolopkotr"
+        rules: [pk, rd, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: reduplication (ReduplicationHint)"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kalopkaloptr
+    note: >-
+      Analysis applies the partial rule pc in the derivation.
+    parses:
+      - signature: "PC+LOP+RD+T+R|kalopkaloptr"
+        rules: [pc, rd, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: reduplication (ReduplicationHint)"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopkonnt
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: lopnkotr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+N+PK+T+R|lopnkotr"
+        rules: [n, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopkolopkontr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LOP+PK+RD+N+T+R|lopkolopkontr"
+        rules: [pk, rd, n, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: reduplication (ReduplicationHint)"
+          - "Affix template slots (obligatory/disjunctive/ordering)"

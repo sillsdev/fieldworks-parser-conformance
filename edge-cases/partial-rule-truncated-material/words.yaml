@@ -1,0 +1,60 @@
+# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine PR for issue 643.
+# Partial rule pk adds the suffix ko; the ordinary truncation rule tr replaces the final o of its input with a. The truncation consumes the partial rule's last segment, so the partial material is not visible in the surface form. The final template T1 closes the word.
+language: PartialRuleTruncatedMaterial
+inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
+sources:
+  - "https://github.com/sillsdev/machine/issues/643"
+requires: []
+fieldworks_producible: true
+words:
+  - word: lipkatr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LIP+PK+TR+T+R|lipkatr"
+        rules: [pk, tr, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: subtraction/truncation"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lipkat
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LIP+PK+TR+T|lipkat"
+        rules: [pk, tr, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: subtraction/truncation"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lipatr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: liptr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: lipkotr
+    note: >-
+      Analysis applies the partial rule pk in the derivation.
+    parses:
+      - signature: "LIP+PK+T+R|lipkotr"
+        rules: [pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lipkaktr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: kalipatr
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true

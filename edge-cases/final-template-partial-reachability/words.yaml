@@ -1,0 +1,199 @@
+# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine PR for issue 643.
+# Four final templates: T1 and T2 (part of speech B), T3 (C) and T4 (A). One partial rule q needs part of speech C, so only T3 can follow a partial word; a partial entry (pa, no part of speech) is the other source of partial words. Words ending in T1, T2 or T4 after an ordinary rule have no analysis; words ending in T3 after q do.
+language: FinalTemplatePartialReachability
+inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
+sources:
+  - "https://github.com/sillsdev/machine/issues/643"
+requires: []
+fieldworks_producible: true
+words:
+  - word: kamd
+    note: >-
+      d needs part of speech A and gives B; kam in A gives KAM+D, which no template closes, so no analysis.
+    expect_fail: true
+
+  - word: kamt
+    note: >-
+      Control: the B entry kamb takes the final template T1 directly.
+    parses:
+      - signature: "KAMB+T|kamt"
+        rules: [t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kamdt
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "KAM+D+T|kamdt"
+        rules: [d, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kamet
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "KAM+E+T|kamet"
+        rules: [e, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "KAMB+E+T|kamet"
+        rules: [e, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kamu
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "KAMB+U|kamu"
+        rules: [u]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kamut
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "KAMB+U+T|kamut"
+        rules: [u, t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopt
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "LOP+T|lopt"
+        rules: [t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopu
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "LOP+U|lopu"
+        rules: [u]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: nukx
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "NUK+X|nukx"
+        rules: [x]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: kamx
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "KAM+X|kamx"
+        rules: [x]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: lopx
+    note: >-
+      x is only in the slots of T3 (C) and T4 (A); lop is B, so no analysis.
+    expect_fail: true
+
+  - word: akamt
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "P+KAMB+T|akamt"
+        rules: [p, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: akamdt
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "P+KAM+D+T|akamdt"
+        rules: [p, d, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+      - signature: "P+KAM+D+T|akamdt"
+        rules: [p, d, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: alopt
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "P+LOP+T|alopt"
+        rules: [p, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: pat
+    note: >-
+      No analysis: no sequence of the grammar's rules builds this string.
+    expect_fail: true
+
+  - word: pau
+    note: >-
+      The partial entry pa has no part of speech and takes the template T2 slot rule u after it.
+    parses:
+      - signature: "PA+U|pau"
+        rules: [u]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: pad
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "PA+D|pad"
+        rules: [d]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+
+  - word: nukqx
+    note: >-
+      q applies first and the final template T3 closes the word.
+    parses:
+      - signature: "NUK+Q+X|nukqx"
+        rules: [q, x]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+
+  - word: nukxq
+    note: >-
+      q (partial, needs part of speech C) after the final template T3: allowed because q is partial.
+    parses:
+      - signature: "NUK+X+Q|nukxq"
+        rules: [x, q]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+
+  - word: kamtd
+    note: >-
+      d after the final template T1 is refused: d is not partial.
+    expect_fail: true
+
+  - word: nuket
+    note: >-
+      Control: no partial rule is involved.
+    parses:
+      - signature: "NUK+E+T|nuket"
+        rules: [e, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
