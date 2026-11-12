@@ -58,6 +58,9 @@ BoundaryNarrowingProbe,prPostNasal,nmo
 ChainedOutputFeatureOverrideLoss,mrInner,zudi;zudiua
 ChainedOutputFeatureOverrideLoss,mrOuter,zudu;zudua;zudiua
 ChainedOutputFeatureOverrideLoss,mrOutermost,zudua;!zudia;zudiua
+CircumfixAllomorphEnvironment,mrCirc,!taalobod;mitaalobodke;!nktaalobodke;!mitaalobodek
+CircumfixAllomorphEnvironment,mrPre,mialobke;mitaalobodke
+CircumfixAllomorphEnvironment,mrSuf,mialobke;mitaalobodke
 CircumfixConditionedHalves,mrCirc,puaamo;puabzo;kibamo;kibbzo
 CircumfixCrossProductAndInfixDrop,mrCross,pabatidan;pabatidin;mabatidan;mabatidin
 CircumfixCrossProductAndInfixDrop,mrInfixDrop,bumat
@@ -119,9 +122,9 @@ DeletionReinsertedFeatureUnapply,prFinalDevoice,bag;bak
 DeletionReinsertedFeatureUnapply,prFinalTDeletion,bag;bak
 LatinDiacriticProbe,rDim,caféta;kelîta;!añota;!gölta
 LatinDiacriticProbe,rPl,años;cafés;göls;kelîs
-DiscontinuousMorphEnvironment,mrBadInfix,!zuexbu;!zuixdu
+DiscontinuousMorphEnvironment,mrBadInfix,zuexbu;zuixdu
 DiscontinuousMorphEnvironment,mrGoodInfix,zuaubu
-DiscontinuousMorphEnvironment,mrSuffixBad,
+DiscontinuousMorphEnvironment,mrSuffixBad,zuexbu;zuixdu
 DiscontinuousMorphEnvironment,mrSuffixGood,zabu;zuaubu
 DisjunctiveRecheckProbe,ruleD,pakza;!pakda;pitda
 DisjunctiveRecheckProbe,ruleE,pakde;pakzeta;!pakdeta
@@ -269,6 +272,7 @@ RightToLeftAnchorEnvironment,prSpread,eeae
 RightToLeftBoundedQuantifierRewrite,prRtlBq,acet;ecct
 RightToLeftMetathesisReversal,mrRtlReversal,sq;tr
 RightToLeftSegmentsEnvironment,prRtlSegEnv,ey
+SelfCompoundRootAllomorphEnvironment,crJoin,datpat;datdat
 SharedTemplateUnconstrainedSuffix,mrIverb,mivd
 SharedTemplateUnconstrainedSuffix,mrPast,mivd;tid
 IterativeEpenthesisCascadeProbe,prule4,

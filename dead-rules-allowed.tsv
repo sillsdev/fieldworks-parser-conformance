@@ -2,7 +2,6 @@
 # dead rule missing from this file and on an entry whose rule some word now exercises.
 # Columns, tab-separated: fixture id, rule id, why the rule stays unexercised.
 edge-cases/compounding-breadth	mrTplSuf	Used only by katumi, an expect_fail control: crJoin's posOther output conflicts with its required posN.
-edge-cases/discontinuous-morph-environment	mrSuffixBad	Supplies the final u only in zuexbu and zuixdu, which are expect_fail rejections attributed to mrBadInfix.
 edge-cases/expansion-interposed-optional	prDelete	Vacuous in forward synthesis; its inverse inserts an optional z between expansion targets during analysis, which is the regression trigger.
 edge-cases/final-template-partial-discriminators	mrZTagSlot	Mandatory slot rule that can never match "nibgi"; the template's refusal is the point.
 edge-cases/interposed-optional-multi-rhs	delete	Vacuous in forward synthesis; its inverse inserts an optional x between merge targets during analysis, which is the regression trigger.
