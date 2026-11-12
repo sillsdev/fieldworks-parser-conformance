@@ -13,6 +13,10 @@ words:
     parses:
       - signature: "LIP+PK+TR+T+R|lipkatr"
         rules: [pk, tr, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: subtraction/truncation"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lipkat
     note: >-
@@ -20,6 +24,10 @@ words:
     parses:
       - signature: "LIP+PK+TR+T|lipkat"
         rules: [pk, tr, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "AffixProcessRule: subtraction/truncation"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lipatr
     note: >-
@@ -37,6 +45,9 @@ words:
     parses:
       - signature: "LIP+PK+T+R|lipkotr"
         rules: [pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lipkaktr
     note: >-

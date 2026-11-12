@@ -299,6 +299,35 @@ FeatureGatingBreadth,kalkapi,KAL+AGR+PL|kalkapi,Syntactic feature agreement (Req
 FeatureRuleBeforeMerge,butbut,ROOT|butbut,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FinalTemplateMergeKey,sagdss,SAG+FINAL+TEMPLATE+NOM|sagdss,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialDiscriminators,dakfa,DAK+FINTAGA|dakfa,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamt,KAMB+T|kamt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamdt,KAM+D+T|kamdt,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,kamdt,KAM+D+T|kamdt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamet,KAM+E+T|kamet,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,kamet,KAM+E+T|kamet,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamet,KAMB+E+T|kamet,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,kamet,KAMB+E+T|kamet,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamu,KAMB+U|kamu,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamut,KAMB+U+T|kamut,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,lopt,LOP+T|lopt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,lopu,LOP+U|lopu,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,nukx,NUK+X|nukx,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,kamx,KAM+X|kamx,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,akamt,P+KAMB+T|akamt,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,akamt,P+KAMB+T|akamt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,akamdt,P+KAM+D+T|akamdt,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,akamdt,P+KAM+D+T|akamdt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,akamdt,P+KAM+D+T|akamdt,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,akamdt,P+KAM+D+T|akamdt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,alopt,P+LOP+T|alopt,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,alopt,P+LOP+T|alopt,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,pau,PA+U|pau,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,pad,PA+D|pad,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,nukqx,NUK+Q+X|nukqx,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,nukqx,NUK+Q+X|nukqx,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,nukxq,NUK+X+Q|nukxq,Affix template slots (obligatory/disjunctive/ordering)
+FinalTemplatePartialReachability,nukxq,NUK+X+Q|nukxq,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,nuket,NUK+E+T|nuket,AffixProcessRule: prefix/suffix/circumfix/infix
+FinalTemplatePartialReachability,nuket,NUK+E+T|nuket,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialRoot,dakfa,DAK+FINX|dakfa,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialRoot,nibfb,NIB+FINY|nibfb,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialTrace,sagftf,SAG+NONFINAL+TAIL+FINAL|sagftf,Affix template slots (obligatory/disjunctive/ordering)
@@ -815,6 +844,101 @@ partial-class-disagree-unbounded-rtl-right,ua,,CharacterDefinitionTable pattern 
 partial-class-disagree-unbounded-rtl-right,ua,,RewriteRule direction (Dir): right-to-left
 partial-class-disagree-unbounded-rtl-right,uu,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 partial-class-disagree-unbounded-rtl-right,uu,,RewriteRule direction (Dir): right-to-left
+PartialRuleDeletedMaterial,lipktr,LIP+PK+T+R|lipktr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleDeletedMaterial,lipktr,LIP+PK+T+R|lipktr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleDeletedMaterial,lipktr,LIP+PK+T+R|lipktr,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+PartialRuleDeletedMaterial,lipkt,LIP+PK+T|lipkt,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleDeletedMaterial,lipkt,LIP+PK+T|lipkt,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleDeletedMaterial,lipkt,LIP+PK+T|lipkt,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+PartialRuleDeletedMaterial,kaliptr,PC+LIP+T+R|kaliptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleDeletedMaterial,kaliptr,PC+LIP+T+R|kaliptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleDeletedMaterial,kaliptr,PC+LIP+T+R|kaliptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleDeletedMaterial,kaliptr,PC+LIP+T+R|kaliptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleDeletedMaterial,liptkor,LIP+T+PK+R|liptkor,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleDeletedMaterial,liptkor,LIP+T+PK+R|liptkor,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,lopkotr,LOP+PK+T+R|lopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,lopkotr,LOP+PK+T+R|lopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,lopkot,LOP+PK+T|lopkot,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,lopkot,LOP+PK+T|lopkot,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,lopt,LOP+T|lopt,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,loptkor,LOP+T+PK+R|loptkor,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,loptkor,LOP+T+PK+R|loptkor,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kaloptr,PC+LOP+T+R|kaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kaloptr,PC+LOP+T+R|kaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,kaloptr,PC+LOP+T+R|kaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kaloptr,PC+LOP+T+R|kaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,lopkor,LOP+PK+R|lopkor,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,lopkxotr,LOP+PK+IX+T+R|lopkxotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,lopkxotr,LOP+PK+IX+T+R|lopkxotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleInfixedMaterial,lopkxot,LOP+PK+IX+T|lopkxot,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleInfixedMaterial,lopkxot,LOP+PK+IX+T|lopkxot,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleTruncatedMaterial,lipkatr,LIP+PK+TR+T+R|lipkatr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleTruncatedMaterial,lipkatr,LIP+PK+TR+T+R|lipkatr,AffixProcessRule: subtraction/truncation
+PartialRuleTruncatedMaterial,lipkatr,LIP+PK+TR+T+R|lipkatr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleTruncatedMaterial,lipkat,LIP+PK+TR+T|lipkat,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleTruncatedMaterial,lipkat,LIP+PK+TR+T|lipkat,AffixProcessRule: subtraction/truncation
+PartialRuleTruncatedMaterial,lipkat,LIP+PK+TR+T|lipkat,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleTruncatedMaterial,lipkotr,LIP+PK+T+R|lipkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleTruncatedMaterial,lipkotr,LIP+PK+T+R|lipkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopkotr,LOP+PK+T+R|lopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopkotr,LOP+PK+T+R|lopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopkot,LOP+PK+T|lopkot,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopkot,LOP+PK+T|lopkot,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopt,LOP+T|lopt,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,loptkor,LOP+T+PK+R|loptkor,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,loptkor,LOP+T+PK+R|loptkor,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kaloptr,PC+LOP+T+R|kaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kaloptr,PC+LOP+T+R|kaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,kaloptr,PC+LOP+T+R|kaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kaloptr,PC+LOP+T+R|kaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kalopkotr,PC+LOP+PK+T+R|kalopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopkor,LOP+PK+R|lopkor,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopkontr,LOP+PK+N+T+R|lopkontr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopkontr,LOP+PK+N+T+R|lopkontr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,milopkotr,M+LOP+PK+T+R|milopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,mikaloptr,M+PC+LOP+T+R|mikaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopkolopkotr,LOP+PK+RD+T+R|lopkolopkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopkolopkotr,LOP+PK+RD+T+R|lopkolopkotr,AffixProcessRule: reduplication (ReduplicationHint)
+PartialRuleWrappedMaterial,lopkolopkotr,LOP+PK+RD+T+R|lopkolopkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,kalopkaloptr,PC+LOP+RD+T+R|kalopkaloptr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,kalopkaloptr,PC+LOP+RD+T+R|kalopkaloptr,AffixProcessRule: reduplication (ReduplicationHint)
+PartialRuleWrappedMaterial,kalopkaloptr,PC+LOP+RD+T+R|kalopkaloptr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopnkotr,LOP+N+PK+T+R|lopnkotr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopnkotr,LOP+N+PK+T+R|lopnkotr,Affix template slots (obligatory/disjunctive/ordering)
+PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,AffixProcessRule: prefix/suffix/circumfix/infix
+PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,AffixProcessRule: reduplication (ReduplicationHint)
+PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,Affix template slots (obligatory/disjunctive/ordering)
 PatternRootRequiredEnvironment,tikus,TIK+PAST|tikus,AffixProcessRule: prefix/suffix/circumfix/infix
 PatternRootRequiredEnvironment,bonus,BON+PAST|bonus,AffixProcessRule: prefix/suffix/circumfix/infix
 ProcessMorphologyInPlaceMutation,a,ROOT+ABLAUT|a,MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext

@@ -13,6 +13,9 @@ words:
     parses:
       - signature: "LOP+PK+T+R|lopkotr"
         rules: [pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: loptr
     note: >-
@@ -25,6 +28,9 @@ words:
     parses:
       - signature: "LOP+PK+T|lopkot"
         rules: [pk, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lopt
     note: >-
@@ -32,6 +38,8 @@ words:
     parses:
       - signature: "LOP+T|lopt"
         rules: [t]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lopktr
     note: >-
@@ -49,6 +57,9 @@ words:
     parses:
       - signature: "LOP+T+PK+R|loptkor"
         rules: [t, pk, r]
+        exercises:
+          - "Affix template slots (obligatory/disjunctive/ordering)"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: lopkotkor
     note: >-
@@ -61,8 +72,14 @@ words:
     parses:
       - signature: "PC+LOP+T+R|kaloptr"
         rules: [pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+T+R|kaloptr"
         rules: [pc, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kalopkotr
     note: >-
@@ -70,12 +87,24 @@ words:
     parses:
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: loptrko
     note: >-
@@ -93,6 +122,8 @@ words:
     parses:
       - signature: "LOP+PK+R|lopkor"
         rules: [pk, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: lopkxotr
     note: >-
@@ -100,6 +131,9 @@ words:
     parses:
       - signature: "LOP+PK+IX+T+R|lopkxotr"
         rules: [pk, ix, t, r]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: lopkxot
     note: >-
@@ -107,6 +141,9 @@ words:
     parses:
       - signature: "LOP+PK+IX+T|lopkxot"
         rules: [pk, ix, t]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: loxptr
     note: >-
