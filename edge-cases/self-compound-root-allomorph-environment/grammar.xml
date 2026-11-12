@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- Synthetic probe: a root whose only allomorph carries a Require environment "/ _ #" (word-final),
+     and one endocentric compounding rule that joins any two posN stems. Both copies of a root that is
+     compounded with itself carry the same MorphemeId, so an environment check that groups the pieces of a
+     word by morpheme would merge the two copies into one span. Each copy is a separate application of
+     the allomorph and is tested around itself: the first copy of "pat" in "patpat" is followed by p, not
+     by the word boundary. FieldWorks writes a root allomorph environment as a Require environment only
+     (HCLoader.LoadRootAllomorph, HCLoader.cs:855-880), and the rule has the shape LoadEndoCompoundingRule
+     builds. -->
+<HermitCrabInput>
+  <Language>
+    <Name>SelfCompoundRootAllomorphEnvironment</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cD"><Representations><Representation>d</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="crJoin">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="crJoin" headPartsOfSpeech="posN" nonHeadPartsOfSpeech="posN" outputPartOfSpeech="posN">
+            <Name>join</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="hd">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="nh">
+                    <OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="hd" /><CopyFromInput index="nh" /></MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <!-- pat / _ # : the conditioned root, word-final only. -->
+          <LexicalEntry id="ePat" partOfSpeech="posN">
+            <Allomorphs>
+              <Allomorph id="aPat">
+                <PhoneticShape>pat</PhoneticShape>
+                <RequiredEnvironments>
+                  <Environment>
+                    <RightEnvironment>
+                      <PhoneticTemplate finalBoundaryCondition="true"><PhoneticSequence /></PhoneticTemplate>
+                    </RightEnvironment>
+                  </Environment>
+                </RequiredEnvironments>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>PAT</MorphemeId>
+            <Gloss>pat</Gloss>
+          </LexicalEntry>
+          <!-- dat: a free root, the control for the mixed compounds. -->
+          <LexicalEntry id="eDat" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aDat"><PhoneticShape>dat</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>DAT</MorphemeId>
+            <Gloss>dat</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

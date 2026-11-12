@@ -1,0 +1,50 @@
+# oracle-provenance: machine-pr=sillsdev/machine#631 machine-commit=787d7600 verified-date=2026-11-11
+# Rows checked against hc.dll built from machine PR 631 head (with the #615 runner), not master.
+# Master rejects mitaalobodke (the environment is tested at each piece of the circumfix).
+
+language: CircumfixAllomorphEnvironment
+inspired_by: ["synthetic circumfix allomorph environment probe (not modeling any real language)"]
+sources:
+  - "sillsdev/machine issue 630: Allomorph.IsWordValid tested a circumfix environment at each piece"
+  - "FieldWorks HCLoader.LoadCircumfixAffixProcessAllomorph, HCLoader.cs:1335-1371"
+requires: []
+fieldworks_producible: true
+words:
+  - word: alob
+    note: >-
+      Bare root, a control.
+    parses:
+      - signature: "ROOT|alob"
+        rules: []
+
+  - word: mialobke
+    note: >-
+      Outer suffix -ke then outer prefix mi- without the circumfix, a control: neither affix has an environment.
+    parses:
+      - signature: "PRE+ROOT+SUF|mialobke"
+        rules: [mrSuf, mrPre]
+
+  - word: taalobod
+    note: >-
+      The circumfix alone: nothing precedes ta-, so the Require environment's vowel on the left has no segment to match and the word is rejected.
+    expect_fail: true
+    blocked_by: [mrCirc]
+
+  - word: mitaalobodke
+    note: >-
+      Both halves of the environment hold around the whole circumfix: a vowel (the i of mi-) before ta- and a consonant (the k of -ke) after -od. Inside the circumfix the stem edges are a (vowel) after ta- and b (consonant) before -od, so a test of the environment at each piece would reject this word.
+    parses:
+      - signature: "PRE+CIRC+ROOT+SUF|mitaalobodke"
+        rules: [mrCirc, mrSuf, mrPre]
+
+  - word: nktaalobodke
+    note: >-
+      The left half fails: the segment before ta- is k, not a vowel. The right half holds, so the left context alone rejects the word.
+    expect_fail: true
+    blocked_by: [mrCirc]
+
+  - word: mitaalobodek
+    note: >-
+      The right half fails: the segment after -od is e, not a consonant. The left half holds, so the right context alone rejects the word.
+    expect_fail: true
+    blocked_by: [mrCirc]

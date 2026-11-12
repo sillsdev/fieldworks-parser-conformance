@@ -1,0 +1,52 @@
+# oracle-provenance: machine-pr=sillsdev/machine#631 machine-commit=787d7600 verified-date=2026-11-11
+# Rows checked against hc.dll built from machine PR 631 head (with the #615 runner), not master.
+# Master and PR 631 agree on every word here.
+
+language: SelfCompoundRootAllomorphEnvironment
+inspired_by: ["synthetic allomorph environment and compounding probe (not modeling any real language)"]
+sources:
+  - "sillsdev/machine issue 630: Allomorph.IsWordValid groups the pieces of a word by morpheme"
+requires: []
+fieldworks_producible: true
+words:
+  - word: pat
+    note: >-
+      Bare conditioned root: the environment / _ # holds because the root is word-final.
+    parses:
+      - signature: "PAT|pat"
+        rules: []
+
+  - word: patpat
+    note: >-
+      Self-compound rejected: the first copy of pat is followed by p, not the word boundary, so its own environment fails. A check that merges both copies (same morpheme) and tests only the last copy's right edge would accept it.
+    expect_fail: true
+
+  - word: datpat
+    note: >-
+      Mixed compound with the conditioned root last: pat is word-final, so its environment holds.
+    parses:
+      - signature: "DAT+PAT|datpat"
+        rules: [crJoin]
+        exercises:
+          - "CompoundingRule"
+
+  - word: patdat
+    note: >-
+      Mixed compound with the conditioned root first: pat is followed by d, so its environment fails.
+    expect_fail: true
+
+  - word: dat
+    note: >-
+      Bare free root, a control.
+    parses:
+      - signature: "DAT|dat"
+        rules: []
+
+  - word: datdat
+    note: >-
+      Free root compounded with itself, a control: with no environment the self-compound parses. The signature lists the morpheme once, because both copies are DAT.
+    parses:
+      - signature: "DAT|datdat"
+        rules: [crJoin]
+        exercises:
+          - "CompoundingRule"
