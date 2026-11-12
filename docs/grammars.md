@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 137 fixtures: 6 languages and 131 edge cases.
+The list has 142 fixtures: 6 languages and 136 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 138 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 143 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **46 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **50 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -60,6 +60,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/feature-gating-breadth`
 - `edge-cases/final-template-merge-key` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-discriminators` (needs `morpher-settings`)
+- `edge-cases/final-template-partial-reachability`
 - `edge-cases/final-template-partial-root` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-trace`
 - `edge-cases/guesser-pattern-root-fallback`
@@ -69,6 +70,9 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/morphotactic-attribute-breadth`
 - `edge-cases/non-clitic-after-final-template-layout`
 - `edge-cases/optional-template-composite`
+- `edge-cases/partial-rule-infixed-material`
+- `edge-cases/partial-rule-truncated-material`
+- `edge-cases/partial-rule-wrapped-material`
 - `edge-cases/pattern-root-required-environment`
 - `edge-cases/recursive-endocentric-compounding`
 - `edge-cases/shared-template-unconstrained-suffix`
@@ -130,6 +134,9 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/infix-split-root-allomorph-environment`: a root allomorph conditioned on a following vowel, with an infix inside the root; infix segments are not the root's neighbours.
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
 - `edge-cases/infix-interdigitation`: [XAmple] infixes inserted around a copied root, in a templatic Semitic shape.
+- `edge-cases/partial-rule-infixed-material`: [XAmple] partial affix rules whose material an ordinary infix splits, under a final template.
+- `edge-cases/partial-rule-truncated-material`: [XAmple] a partial suffix whose last segment an ordinary truncation rule replaces, under a final template.
+- `edge-cases/partial-rule-wrapped-material`: [XAmple] partial affix rules whose material ordinary affixes and a reduplication wrap or copy, under a final template.
 - `edge-cases/process-morphology-in-place-mutation`: tense expressed only by changing a segment of the root, with no affix.
 - `edge-cases/truncate-morphotactic`: rules that remove a final or initial segment of the stem, matched by literal segment, with optional insertion.
 - `edge-cases/truncate-morphotactic-copy-u`: the truncation grammar with explicit morpheme ids and a copying suffix rule, so one surface form has several parses with different rule histories.
@@ -141,6 +148,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/feature-gating-breadth`: [XAmple] a rule gated on number=pl that a lexically singular root passes only after another rule has overwritten its number, in both suffix orders (10 words).
 - `edge-cases/final-template-merge-key`: [XAmple] a final template in a lower stratum, reached from two analysis orders that must merge into one parse.
 - `edge-cases/final-template-partial-discriminators`: [XAmple] rules that may or may not follow a final template, depending on whether they are partial.
+- `edge-cases/final-template-partial-reachability`: [XAmple] four final templates, only one of which a partial word can reach, with a partial rule and a partial entry.
 - `edge-cases/final-template-partial-root`: [XAmple] a partial root with a final template, and ordinary rules blocked after the template.
 - `edge-cases/final-template-partial-trace`: [XAmple] one word that both final-template refusals reject, and that parses once the partial rule is made ordinary.
 - `edge-cases/morphotactic-attribute-breadth`: [XAmple] repetition caps, partial rules and entries, bound allomorphs, non-final templates, co-occurrence rules and MPR groups.
@@ -207,6 +215,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/iterative-epenthesis-cascade`: two iterative epentheses with empty targets that feed each other.
 - `edge-cases/fw-metathesis-switch-indices`: a metathesis rule authored in FieldWorks with a left environment, whose two switches HCLoader names from `StrucChange`; the swap applies only after `a`.
 - `edge-cases/merge-then-metathesis`: a metathesis followed by a merge, undone in order on analysis.
+- `edge-cases/partial-rule-deleted-material`: partial affix rules whose inserted segment a phonological deletion rule removes from the surface form, under a final template.
 - `edge-cases/simultaneous-epenthesis-cascade`: a simultaneous epenthesis that inserts a vowel after any high vowel.
 - `edge-cases/simultaneous-expansion-terminates`: a simultaneous expansion that must be undone at two sites in one pass.
 - `edge-cases/simultaneous-feeding`: a simultaneous feature-changing rule whose sites overlap.
