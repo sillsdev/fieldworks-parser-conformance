@@ -178,6 +178,9 @@ interposed-optional-multi-rhs,delete,
 interposed-optional-multi-rhs,merge,de
 IterativeEpenthesisCascade,prRule1,uoaa;uata;uotaa;uotaata
 IterativeEpenthesisCascade,prRule2,uoaa;uata;uotaa;uotaata
+LexicalLookupSiblingAllomorphs,mrNounSuf,takt
+LexicalLookupSiblingAllomorphs,mrVerbSuf,taksa
+LexicalLookupSiblingAllomorphs,prHiatusI,tuk
 LiteralHashAffixContext,mrPrefixAR,ara
 LiteralHashAffixContext,mrPrefixR,ra
 LiteralHashAffixContext,mrPrefixRA,raa

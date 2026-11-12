@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- Synthetic probe of lexical lookup. Rule prHiatusI deletes i after a high vowel (i -> 0 / [+high -cons] _),
+     left to right, at the default Deletion Reapplications 0. Entry BU has two allomorphs: buii, and bui which
+     a Require environment limits to "before a consonant" (as a FieldWorks user writes "/ _ [C]"). Analysing
+     the surface word "bu" re-inserts at most one i after the u, so analysis reaches bui and never buii. The
+     matched allomorph bui fails its environment in synthesis, because nothing follows it. Whether the entry's
+     other allomorph buii is also tried is the difference between sillsdev/machine master (every allomorph of a
+     matched entry is tried, and buii synthesises to "bu") and machine PR 627 (only the matched allomorph is).
+     BAK has two plain allomorphs and checks that a matched allomorph still synthesises. TUIK, with one allomorph, shows the deletion rule at work in a word that parses on both builds. TAK is a noun and a
+     verb homograph; the suffix -sa takes only verbs and -t only nouns, so analysis of a suffixed word asks for
+     entries of one part of speech and the other homograph is skipped (machine PR 627 skips it earlier, by
+     syntactic feature; the output is the same). -->
+<HermitCrabInput>
+  <Language>
+    <Name>LexicalLookupSiblingAllomorphs</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+      <PartOfSpeech id="posV"><Name>v</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="featCons"><Name>cons</Name><Symbols><Symbol id="consPlus">+cons</Symbol><Symbol id="consMinus">-cons</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featHigh"><Name>high</Name><Symbols><Symbol id="highPlus">+high</Symbol><Symbol id="highMinus">-high</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featFront"><Name>front</Name><Symbols><Symbol id="frontPlus">+front</Symbol><Symbol id="frontMinus">-front</Symbol></Symbols></SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cB"><Representations><Representation>b</Representation></Representations><FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featFront" symbolValues="frontMinus" /></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations><FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featFront" symbolValues="frontPlus" /></SegmentDefinition>
+        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations><FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featFront" symbolValues="frontMinus" /></SegmentDefinition>
+        <SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations><FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featFront" symbolValues="frontPlus" /></SegmentDefinition>
+        <SegmentDefinition id="cU"><Representations><Representation>u</Representation></Representations><FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featFront" symbolValues="frontMinus" /></SegmentDefinition>
+        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations><FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featFront" symbolValues="frontPlus" /></SegmentDefinition>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations><FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featFront" symbolValues="frontMinus" /></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+      <FeatureNaturalClass id="ncHighV"><Name>highV</Name><FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /></FeatureNaturalClass>
+      <FeatureNaturalClass id="ncC"><Name>C</Name><FeatureValue feature="featCons" symbolValues="consPlus" /></FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="prHiatusI">
+        <Name>hiatusI</Name>
+        <PhoneticInput><PhoneticSequence><Segment segment="cI" /></PhoneticSequence></PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput />
+            <Environment>
+              <LeftEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncHighV" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="mrNounSuf mrVerbSuf" phonologicalRules="prHiatusI">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="mrNounSuf" requiredPartsOfSpeech="posN" outputPartOfSpeech="posN">
+            <Name>nounSuffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="mrNounSufSub">
+                <MorphologicalInput><PhoneticSequence id="mrNounSufStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="mrNounSufStem" /><InsertSegments><PhoneticShape>t</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>NSUF</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrVerbSuf" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>verbSuffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="mrVerbSufSub">
+                <MorphologicalInput><PhoneticSequence id="mrVerbSufStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="mrVerbSufStem" /><InsertSegments><PhoneticShape>sa</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>VSUF</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eBu" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aBuii"><PhoneticShape>buii</PhoneticShape></Allomorph><Allomorph id="aBui"><PhoneticShape>bui</PhoneticShape><RequiredEnvironments><Environment><RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncC" /></PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment></RequiredEnvironments></Allomorph></Allomorphs>
+            <MorphemeId>BU</MorphemeId>
+            <Gloss>bu</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eBak" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aBak"><PhoneticShape>bak</PhoneticShape></Allomorph><Allomorph id="aBaak"><PhoneticShape>baak</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>BAK</MorphemeId>
+            <Gloss>bak</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTuik" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aTuik"><PhoneticShape>tuik</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TUIK</MorphemeId>
+            <Gloss>tuik</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTakN" partOfSpeech="posN">
+            <Allomorphs><Allomorph id="aTakN"><PhoneticShape>tak</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TAKN</MorphemeId>
+            <Gloss>takn</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTakV" partOfSpeech="posV">
+            <Allomorphs><Allomorph id="aTakV"><PhoneticShape>tak</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TAKV</MorphemeId>
+            <Gloss>takv</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

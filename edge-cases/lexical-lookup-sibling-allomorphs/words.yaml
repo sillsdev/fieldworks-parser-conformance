@@ -1,0 +1,64 @@
+# oracle-provenance: hc.dll built from sillsdev/machine PR 627 head d26dd375 (with the #615 conformance runner; the lookup code is the same as at d10da372 apart from trace order), verified-date=2026-11-12
+# Rows are those of PR 627, which is not on master. Master and PR 627 differ on exactly one word, "bu":
+# master parses it as BU, PR 627 does not (see README.md). Every other row is the same on both builds.
+#
+# Pins Morpher.LexicalLookup. Master proposes every allomorph of each matched lexical entry for synthesis;
+# PR 627 proposes only the root allomorph that matched the input, and skips an entry whose syntactic features
+# do not unify with the input's. The second change only saves work and must not move any row.
+
+language: LexicalLookupSiblingAllomorphs
+inspired_by: ["synthetic lexical-lookup probe (not modeling any real language)"]
+sources:
+  - "sillsdev/machine pull request 627: LexicalLookup only uses the allomorphs found by SearchRootAllomorphs"
+  - "FieldWorks HCLoader.LoadRootAllomorph, HCLoader.cs (an allomorph's Require environment); the rule is prHiatusI, i -> 0 / [+high -cons] _, at the default Deletion Reapplications 0"
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: bu
+    note: >-
+      The sibling case. Analysis re-inserts at most one i after u (Deletion Reapplications 0), so it reaches bui and never buii. The matched allomorph bui requires a following consonant, and nothing follows it, so synthesis rejects it. Master also tries the entry's other allomorph buii, which synthesises to "bu" because prHiatusI deletes both i's, and so parses the word through a sibling that analysis never matched. PR 627 tries only bui, so the word does not parse there.
+    expect_fail: true
+
+  - word: tuk
+    note: >-
+      Control for the rule: TUIK loses its i to prHiatusI after u and surfaces as "tuk"; analysis restores the i and the single allomorph matches, on master and PR 627 alike.
+    parses:
+      - signature: "TUIK|tuk"
+        rules: [prHiatusI]
+
+  - word: bak
+    note: >-
+      Control: the entry's first allomorph matches and synthesises, on master and PR 627 alike.
+    parses:
+      - signature: "BAK|bak"
+        rules: []
+
+  - word: baak
+    note: >-
+      Control: the entry's second allomorph is the one that matches, so dropping siblings does not lose it.
+    parses:
+      - signature: "BAK|baak"
+        rules: []
+
+  - word: tak
+    note: >-
+      Syntactic-feature control: tak is both a noun (TAKN) and a verb (TAKV) and the bare word asks for no part of speech, so both homographs parse. Nothing is filtered.
+    parses:
+      - signature: "TAKN|tak"
+        rules: []
+      - signature: "TAKV|tak"
+        rules: []
+
+  - word: takt
+    note: >-
+      Syntactic-feature control: the noun suffix -t asks for a noun stem, so only the noun homograph parses. PR 627 skips the verb homograph before synthesis; master tries it and rejects it later. The row is the same.
+    parses:
+      - signature: "TAKN+NSUF|takt"
+        rules: [mrNounSuf]
+
+  - word: taksa
+    note: >-
+      Syntactic-feature control: the verb suffix -sa asks for a verb stem, so only the verb homograph parses, the mirror of takt.
+    parses:
+      - signature: "TAKV+VSUF|taksa"
+        rules: [mrVerbSuf]

@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 136 fixtures: 6 languages and 130 edge cases.
+The list has 137 fixtures: 6 languages and 131 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 136 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 137 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -162,6 +162,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 ## Allomorphs, stem names and exceptions
 
 - `edge-cases/disjunctive-recheck`: allomorphs chosen in order, where the first allomorph's right environment is re-checked against the rest of the word.
+- `edge-cases/lexical-lookup-sibling-allomorphs`: a word that parses only through an entry's other allomorph than the one analysis matched (master) or not at all (machine PR 627), plus syntactic-feature homograph controls (7 words).
 - `edge-cases/free-fluctuating-allomorph-pair`: two allomorphs that can both apply, so a word has one parse per allomorph.
 - `edge-cases/mpr-gated-exception`: a phonological rule that a root or an affix switches off with a morphological feature.
 - `edge-cases/stem-name-restricted-root-allomorph`: [XAmple] a root allomorph that is used only when a stem name matches the word's features.
