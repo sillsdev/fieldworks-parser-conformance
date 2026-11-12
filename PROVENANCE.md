@@ -28,6 +28,7 @@ a build by the first eight characters of its hash.
 | `c2454760` | `c2454760181d77a3284482483cf78d921a2c4b9b` | Second machine commit at which the boundary-narrowing-probe results were observed. | `edge-cases/boundary-narrowing-probe/README.md` |
 | `25ddf914` | `25ddf914c0edb739a4445f9a088f7e06492a808d` | Founding-oracle commit recorded for pattern-root-required-environment (verified 2026-09-02). | `edge-cases/pattern-root-required-environment/words.yaml` |
 | `25992041` | `259920414132bdd5a85542722d9af5509aed8943` | Machine commit at which the truncate-morphotactic two-parse and related results were re-loaded ten times. | `edge-cases/truncate-morphotactic/README.md` |
+| `787d7600` | `787d760009207f5963a178d7796e1d169ad15fc4` | Head of sillsdev/machine #631 (the fix for #630), run with the #615 conformance runner to take the rows of self-compound-root-allomorph-environment, circumfix-allomorph-environment and the flipped zuexbu and zuixdu rows of discontinuous-morph-environment. | `edge-cases/self-compound-root-allomorph-environment/words.yaml` |
 
 The assembly hashes recorded for the combined #500+#506 oracle (the truncation identity companions, see
 `docs/truncation-companions.md`):

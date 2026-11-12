@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 136 fixtures: 6 languages and 130 edge cases.
+The list has 138 fixtures: 6 languages and 132 edge cases.
 
 ## Which engines run which grammars
 
@@ -23,7 +23,7 @@ All 136 conformance and 16 stress grammars are Hermit Crab grammars, and PanGlos
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **46 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **48 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -40,6 +40,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/adhoc-prohibition-variant-main-first-enclitic`
 - `edge-cases/adhoc-prohibition-variant-msa-copies`
 - `edge-cases/chained-output-feature-override-loss`
+- `edge-cases/circumfix-allomorph-environment`
 - `edge-cases/circumfix-conditioned-halves`
 - `edge-cases/circumfix-cross-product-and-infix-drop`
 - `edge-cases/circumfix-in-template-slot`
@@ -71,6 +72,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/optional-template-composite`
 - `edge-cases/pattern-root-required-environment`
 - `edge-cases/recursive-endocentric-compounding`
+- `edge-cases/self-compound-root-allomorph-environment`
 - `edge-cases/shared-template-unconstrained-suffix`
 - `edge-cases/standalone-combining-mark`
 - `edge-cases/stem-name-restricted-root-allomorph`
@@ -126,7 +128,8 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/circumfix-non-first-allomorph-selection`: [XAmple] a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails.
 - `edge-cases/circumfix-reduplication-precedence`: [XAmple] one allomorph that is both circumfixing and reduplicating in the same output.
 - `edge-cases/copy-agreement-featureless-redup`: a first-consonant-and-vowel reduplication in a grammar with no phonological features, where the two copies must agree in spelling (19 words).
-- `edge-cases/discontinuous-morph-environment`: a root environment checked on each contiguous piece of a root split by a two-infix rule.
+- `edge-cases/discontinuous-morph-environment`: a root environment tested once around the whole span of a root split by a two-infix rule, not on each piece.
+- `edge-cases/circumfix-allomorph-environment`: [XAmple] one environment on a circumfix, as FieldWorks merges the two halves: a vowel before the prefix half and a consonant after the suffix half, not tested between the pieces.
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
 - `edge-cases/infix-interdigitation`: [XAmple] infixes inserted around a copied root, in a templatic Semitic shape.
 - `edge-cases/process-morphology-in-place-mutation`: tense expressed only by changing a segment of the root, with no affix.
@@ -183,6 +186,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 ## Compounding
 
+- `edge-cases/self-compound-root-allomorph-environment`: [XAmple] a root with a word-final environment compounded with itself, where each copy is tested around itself.
 - `edge-cases/compounding-breadth`: [XAmple] head and non-head feature requirements, a compound output part of speech that a suffix rejects, and a switched-off compounding rule (7 words, replayed under two settings variants).
 - `edge-cases/compound-max-applications`: [XAmple] a recursive compounding rule capped at two applications, with the root limit raised to four (7 words).
 - `edge-cases/compounding-non-recursive`: [XAmple] one non-recursive compounding rule with head and non-head lexicon subsets chosen by licence features.

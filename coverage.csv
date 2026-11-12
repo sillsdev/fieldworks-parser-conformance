@@ -1120,6 +1120,8 @@ RightToLeftSegmentsEnvironment,a,ROOT2|a,RewriteRule direction (Dir): right-to-l
 RightToLeftSegmentsEnvironment,ay,,RewriteRule direction (Dir): right-to-left
 RightToLeftSegmentsEnvironment,e,,RewriteRule direction (Dir): right-to-left
 RightToLeftSegmentsEnvironment,y,,RewriteRule direction (Dir): right-to-left
+SelfCompoundRootAllomorphEnvironment,datpat,DAT+PAT|datpat,CompoundingRule
+SelfCompoundRootAllomorphEnvironment,datdat,DAT|datdat,CompoundingRule
 SharedTemplateUnconstrainedSuffix,mivd,NROOT+IVERB+PAST|mivd,Affix template slots (obligatory/disjunctive/ordering)
 SimultaneousExpansionTerminates,biiiibiiii,ROOT|biiiibiiii,RewriteRule Simultaneous
 SimultaneousFeeding,gigugu,GIGI|gigugu,RewriteRule Simultaneous
