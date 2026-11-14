@@ -176,6 +176,8 @@ InfixAmbiguousSite,mrBefore,mimgue;!mguime
 Gezmara,mrConv,kcvotab
 Gezmara,mrGlyphSuf,ጸan
 Gezmara,mrPfv,kpfotab
+InfixSplitRootAllomorphEnvironment,mrInfix,ginabsa
+InfixSplitRootAllomorphEnvironment,mrSuffix,gabsa;ginabsa
 interposed-optional-multi-rhs,delete,
 interposed-optional-multi-rhs,merge,de
 IterativeEpenthesisCascade,prRule1,uoaa;uata;uotaa;uotaata
@@ -225,6 +227,8 @@ Ranavu,mrSufAlt,vokadi
 Ranavu,prNasalAssimAlveolar,menulik;mentanukam
 Ranavu,prNasalAssimBilabial,membalo
 Ranavu,prObstruentDeletion,menulik;!menanukam
+NfaLiteralAllomorphEnvironment,mrInfix,ginabas
+NfaLiteralAllomorphEnvironment,mrSuffix,gabsa
 NonCliticAfterFinalTemplateLayout,mrDeriv,!sagdk;kolk
 NonCliticAfterFinalTemplateLayout,mrEnc,sagds
 NonCliticAfterFinalTemplateLayout,mrPast,sagd;sagds
