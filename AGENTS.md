@@ -189,6 +189,10 @@ well formed, listed, and hashed.
 
 ## 6. Calibration grammars
 
+**Calibration only: never run in conformance or engine test runs.** No test, adapter or CI job may enumerate or
+parse `calibration/`; the words are slow by design. `scripts/check_calib_a.py` fails if a calibration path appears in
+either manifest or in a category the consumers enumerate (`languages/`, `edge-cases/`, `stress/edge-cases/`).
+
 `calibration/` holds synthetic grammars that calibrate PanGloss parser-work cost weights. They are not conformance
 fixtures: they are outside `languages/`, `edge-cases/` and `stress/`, outside both manifests, and not listed in
 `docs/grammars.md`. The rule in section 1 still applies (only what FieldWorks can produce). `calibration/README.md`

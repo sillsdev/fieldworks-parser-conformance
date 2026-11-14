@@ -1,4 +1,4 @@
-# kind: calibration (work-cap words; no oracle analyses are recorded for a word the engine stops)
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; work-cap words; no oracle analyses are recorded for a word the engine stops)
 # Run: pangloss batch grammar.xml cap-words.work-cap-200000.txt out.tsv --cost-column --work-columns --work-cap 200000
 # A CAP row ends at the cap, so its signature is partial and engine-dependent: only the status and the
 # work-step bound are expected. The C# oracle has no work cap, so it supplies no row for these words.

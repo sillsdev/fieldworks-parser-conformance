@@ -1,5 +1,11 @@
 # Calibration grammars
 
+**CALIBRATION ONLY: never run in conformance or engine test runs.** These words are slow on purpose (a word can
+cost 10G, a grammar can hold 50,000 entries). They are for cost calibration under a profiler, with the cap or
+flags this file names. No engine, test suite or CI job may enumerate `calibration/`; `scripts/check_calib_a.py`
+fails if a calibration path reaches a manifest or a consumer-enumerated category (`languages/`, `edge-cases/`,
+`stress/edge-cases/`).
+
 These grammars are the standing calibration set for parser-work cost weights (PanGloss #240). They are
 synthetic: each one scales a mechanism the existing suite only touches lightly (the survey found a median
 per-grammar maximum cost of 0.25M, tiny lexicons, nothing at work-cap scale and no wasted-search words).
@@ -51,6 +57,33 @@ The ladder aim is words near 1x, 4x, 16x, 64x and 256x of the cheapest word. A w
 The two empty rungs are a limit of the grammar at 40 characters, not a selection choice. The no-parse words are
 the wasted-search words: they fail only after the engine has explored the whole space, and on equal length they
 cost several times more than a parsing word.
+
+## The lexicon-size ladder
+
+Does parser cost track instructions linearly as one driver grows? `cal-lexsize-1k`, `-5k`, `-10k` and `-50k` answer it
+for the lexicon: the same 12 suffix rules (4 optional slots, `LoadAffixTemplate`, `LoadInflAffixProcessRule`,
+`LoadFormAffixProcessAllomorph`) and the same 16 words (12 parsing, 4 wasted-search, 7-14 characters) over lexicons
+of 1,000, 5,000, 10,000 and 50,000 generated roots. Each smaller lexicon is a prefix of the next, the oracle's
+analyses of every word are identical in all four, and the self-check passes 4 of 4. Constructs are those of
+`cal-large-lexicon`; no phonological rule.
+
+| grammar | grammar.xml | load ms | morpher ms | peak RSS | Ir, 16 words | Ir, 1 word | Ir of the other 15 words | cost, 16 words |
+|---|---|---|---|---|---|---|---|---|
+| `cal-lexsize-1k` | 0.23 MB, committed | 10.9 | 1.6 | 11.5 MB | 71.0M | 59.1M | 11.9M | 11.15M |
+| `cal-lexsize-5k` | 1.1 MB, committed | 35.2 | 9.2 | 25.1 MB | 277.1M | 265.3M | 11.8M | 11.30M |
+| `cal-lexsize-10k` | 2.2 MB, committed | 78.3 | 15.3 | 43.8 MB | 535.5M | 523.7M | 11.8M | 11.34M |
+| `cal-lexsize-50k` | 11.2 MB, **not committed** | 514.4 | 198.5 | 195.3 MB | 2630.0M | 2618.0M | 12.0M | 11.44M |
+
+Measured on the 0.19.4 release binary, `--threads 1`; Ir is the callgrind total of the whole process, so it includes
+grammar load. Finding: parse cost is flat in lexicon size (cost +2.6% and parse Ir +1% from 1k to 50k) while load
+grows linearly, about 52,000 instructions per entry; at 50k, load is 99.5% of the instructions of a 16-word batch.
+A calibration that counts whole-process instructions at this size measures the loader, not the parser.
+
+**The 50k grammar is 11.2 MB, over the 10 MB limit, so it is not committed.** `cal-lexsize-50k/` holds `words.yaml`,
+`words.txt`, `ladder.tsv` and `grammar.sha256` (SHA-256 of the exact LF text the generator writes);
+`scripts/check_calib_a.py` regenerates it and fails on a different hash, or if a `grammar.xml` over 10 MB is
+committed. To get the file: `python3 scripts/calib_a_gen.py lexsize PANGLOSS HC_DLL SCRATCH` writes it as
+`SCRATCH/cal-lexsize-50k.grammar.xml` (or call `fam_lexsize(50000)["xml"]`). The other three are committed.
 
 ## What each family exercises, and the loader function behind it
 
@@ -148,6 +181,7 @@ measured rate is far lower, so the set has room to grow.
 python3 scripts/calib_a_gen.py grammars x SCRATCH             # grammar.xml, candidate words to SCRATCH
 python3 scripts/calib_a_gen.py select PANGLOSS SCRATCH [FAM]  # measure, pick the ladder, write words.txt, ladder.tsv
 python3 scripts/calib_a_gen.py yaml HC_DLL SCRATCH [FAM]      # oracle batch, write words.yaml, cap-words.yaml
+python3 scripts/calib_a_gen.py lexsize PANGLOSS HC_DLL SCRATCH  # the four lexicon-size grammars, words, ladder.tsv, hashes
 python3 scripts/calib_a_gen.py table x SCRATCH                # the tables above
 python3 scripts/check_calib_a.py                              # shape check (also regenerates and compares each grammar)
 ```
