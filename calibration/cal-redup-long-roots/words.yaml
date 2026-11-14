@@ -1,0 +1,321 @@
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; see calibration/README.md)
+language: "CalRedupLongRoots"
+sources: []
+requires: []
+fieldworks_producible: true
+budget_ms: 600000
+# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
+words:
+  - word: tunatunakaki
+    note: "1x rung, 12 chars, 1.84M measured parser cost, 1 analysis. Stresses total and partial reduplication slots over long and self-repeating roots; first analysis applies 2 rules."
+    parses:
+      - signature: "r_tunatuna+suf2_ka+suf7_ki|tunatunakaki"
+        rules: [suf2_ka, suf7_ki]
+  - word: wotimumumattimumumatsupa
+    note: "4x rung, 24 chars, 7.45M measured parser cost, 1 analysis. Stresses total and partial reduplication slots over long and self-repeating roots; first analysis applies 4 rules."
+    parses:
+      - signature: "pre5_wo+r_timumumat+rd1_tot+suf2_su+suf7_pa|wotimumumattimumumatsupa"
+        rules: [pre5_wo, rd1_tot, suf2_su, suf7_pa]
+  - word: wonakumupasatataneneneki
+    note: "16x rung, 24 chars, 29.37M measured parser cost, 3 analyses. Stresses total and partial reduplication slots over long and self-repeating roots; first analysis applies 6 rules."
+    parses:
+      - signature: "pre5_wo+r_nakumupasata+rd1_fcv+suf2_ne+rd3_fcv+rd4_fcv+suf7_ki|wonakumupasatataneneneki"
+        rules: [pre5_wo, rd1_fcv, rd3_fcv, rd4_fcv, suf2_ne, suf7_ki]
+      - signature: "pre5_wo+r_nakumupasata+rd1_fcv+suf2_ne+rd3_fcv+rd6_fcv+suf7_ki|wonakumupasatataneneneki"
+        rules: [pre5_wo, rd1_fcv, rd3_fcv, rd6_fcv, suf2_ne, suf7_ki]
+      - signature: "pre5_wo+r_nakumupasata+rd1_fcv+suf2_ne+rd4_fcv+rd6_fcv+suf7_ki|wonakumupasatataneneneki"
+        rules: [pre5_wo, rd1_fcv, rd4_fcv, rd6_fcv, suf2_ne, suf7_ki]
+  - word: bimimimimimimimito
+    note: "64x rung, 18 chars, 128.00M measured parser cost, 117 analyses. Stresses total and partial reduplication slots over long and self-repeating roots; first analysis applies 6 rules."
+    parses:
+      - signature: "pre8_bi+r_mimimi+rd1_fcv+rd3_fcv+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_fcv+suf2_mi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_fcv+suf2_mi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_fcv+suf2_mi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_tot+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, rd3_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_tot+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, rd4_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_tot+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd1_tot+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd3_tot+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_tot, rd4_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd3_tot+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_tot, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+rd4_tot+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd4_tot, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimi+suf2_mi+rd3_fcv+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd1_fcv+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd1_fcv+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd1_fcv+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd1_fcv+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd1_fcv+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd1_fcv+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+rd3_fcv+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+suf2_mi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+suf2_mi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+r_mimimimi+suf2_mi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd4_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimi+rd3_fcv+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimi+suf2_mi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimi+suf2_mi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimi+suf2_mi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimimi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_fcv, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimimi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimimi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimimi+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimimi+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd1_cv+r_mimimimi+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimi+rd1_fcv+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimi+rd1_fcv+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimi+rd1_fcv+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimi+rd1_tot+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, rd3_cv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimi+suf2_mi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_fcv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimimi+rd1_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimimi+rd1_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimimi+rd1_fcv+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimimi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimimi+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+r_mimimimi+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+rd1_cv+r_mimimi+rd4_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_fcv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+rd1_cv+r_mimimi+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+rd1_cv+r_mimimi+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd3_cv+rd1_cv+r_mimimimi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+rd1_cv+r_mimimimi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd3_cv+rd1_cv+r_mimimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimi+rd1_fcv+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimi+rd1_fcv+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimi+rd1_fcv+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimi+rd1_tot+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, rd4_cv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimi+rd3_tot+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_tot, rd4_cv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimi+suf2_mi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimimi+rd1_fcv+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_cv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimimi+rd1_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimimi+rd1_fcv+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimimi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimimi+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+r_mimimimi+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd4_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd1_cv+r_mimimi+rd3_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd1_cv+r_mimimi+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd1_cv+r_mimimi+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd1_cv+r_mimimimi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_cv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd1_cv+r_mimimimi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd1_cv+r_mimimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+r_mimimi+rd1_fcv+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+r_mimimi+rd1_fcv+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+r_mimimi+suf2_mi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_cv, rd6_fcv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+r_mimimimi+rd1_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_cv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+r_mimimimi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+r_mimimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+rd1_cv+r_mimimi+rd6_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_cv, rd6_fcv, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+rd1_cv+r_mimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd4_cv+rd3_cv+rd1_cv+r_mimimimi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+rd1_fcv+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+rd1_fcv+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+rd1_fcv+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+rd1_tot+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_tot, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+rd3_tot+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_tot, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+rd4_tot+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd4_tot, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimi+suf2_mi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimimi+rd1_fcv+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimimi+rd1_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimimi+rd1_fcv+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimimi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimimi+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+r_mimimimi+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd4_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd1_cv+r_mimimi+rd3_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd1_cv+r_mimimi+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd1_cv+r_mimimi+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd1_cv+r_mimimimi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd1_cv+r_mimimimi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd1_cv+r_mimimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+r_mimimi+rd1_fcv+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+r_mimimi+rd1_fcv+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+r_mimimi+suf2_mi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_fcv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+r_mimimimi+rd1_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+r_mimimimi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+r_mimimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+rd1_cv+r_mimimi+rd4_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_fcv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+rd1_cv+r_mimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd3_cv+rd1_cv+r_mimimimi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+r_mimimi+rd1_fcv+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_fcv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+r_mimimi+rd1_fcv+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+r_mimimi+suf2_mi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+r_mimimimi+rd1_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+r_mimimimi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_fcv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+r_mimimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd4_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd1_cv+r_mimimi+rd3_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_fcv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd1_cv+r_mimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd1_cv+r_mimimimi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd3_cv+r_mimimi+rd1_fcv+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_fcv, rd3_cv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd3_cv+r_mimimi+suf2_mi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_cv, rd6_cv, suf2_mi, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd3_cv+r_mimimimi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd3_cv, rd4_cv, rd6_cv, suf7_to]
+      - signature: "pre8_bi+rd6_cv+rd4_cv+rd3_cv+rd1_cv+r_mimimi+suf7_to|bimimimimimimimito"
+        rules: [pre8_bi, rd1_cv, rd3_cv, rd4_cv, rd6_cv, suf7_to]
+  - word: gokakakakakakakakakakakakakakakakakakana
+    note: "256x rung, 40 chars, 203.51M measured parser cost, 25 analyses. Stresses total and partial reduplication slots over long and self-repeating roots; first analysis applies 6 rules."
+    parses:
+      - signature: "pre8_go+r_kakaka+rd1_fcv+rd3_tot+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_fcv, rd3_tot, rd4_fcv, rd6_tot, suf7_na]
+      - signature: "pre8_go+r_kakaka+rd1_tot+suf2_ka+rd3_fcv+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_fcv, rd4_fcv, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+r_kakaka+suf2_ka+rd3_tot+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd3_tot, rd4_fcv, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+rd3_fcv+rd4_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_fcv, rd4_tot, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+rd3_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_fcv, rd6_tot, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+rd3_tot+rd4_fcv+rd6_fcv+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_tot, rd4_fcv, rd6_fcv, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd4_fcv, rd6_tot, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+suf2_ka+rd3_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+suf2_ka+rd4_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd4_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd1_tot+suf2_ka+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+r_kakakaka+rd3_tot+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd3_tot, rd4_fcv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd1_cv+r_kakaka+rd3_tot+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_cv, rd3_tot, rd4_fcv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd3_cv+r_kakaka+rd1_tot+suf2_ka+rd4_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_cv, rd4_fcv, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+rd3_cv+r_kakakaka+rd1_tot+rd4_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_cv, rd4_tot, suf7_na]
+      - signature: "pre8_go+rd3_cv+r_kakakaka+rd1_tot+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_cv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd4_cv+r_kakaka+rd1_fcv+rd3_tot+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_fcv, rd3_tot, rd4_cv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd4_cv+r_kakaka+rd1_tot+suf2_ka+rd3_fcv+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_fcv, rd4_cv, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+rd4_cv+r_kakaka+suf2_ka+rd3_tot+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd3_tot, rd4_cv, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+rd4_cv+r_kakakaka+rd1_tot+rd3_tot+rd6_fcv+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_tot, rd4_cv, rd6_fcv, suf7_na]
+      - signature: "pre8_go+rd4_cv+r_kakakaka+rd1_tot+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd4_cv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd4_cv+r_kakakaka+rd3_tot+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd3_tot, rd4_cv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd4_cv+rd1_cv+r_kakaka+rd3_tot+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_cv, rd3_tot, rd4_cv, rd6_tot, suf7_na]
+      - signature: "pre8_go+rd4_cv+rd3_cv+r_kakaka+rd1_tot+suf2_ka+rd6_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_cv, rd4_cv, rd6_tot, suf2_ka, suf7_na]
+      - signature: "pre8_go+rd6_cv+r_kakakaka+rd1_tot+rd3_tot+rd4_fcv+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_tot, rd4_fcv, rd6_cv, suf7_na]
+      - signature: "pre8_go+rd6_cv+rd4_cv+r_kakakaka+rd1_tot+rd3_tot+suf7_na|gokakakakakakakakakakakakakakakakakakana"
+        rules: [pre8_go, rd1_tot, rd3_tot, rd4_cv, rd6_cv, suf7_na]
+  - word: lumimimmimimiminenemimimmimimiminenena
+    note: "wasted rung, 38 chars, 65.99M measured parser cost, 0 analyses. No analysis: the search explores the total and partial reduplication slots over long and self-repeating roots space and fails (dearest failing word, the cost of a wasted search)."
+    expect_fail: true
+    blocked_by: [wasted-search]

@@ -2,7 +2,7 @@
 
 **CALIBRATION ONLY: never run in conformance or engine test runs.** These words are slow on purpose (a word can
 cost 10G, a grammar can hold 50,000 entries). They are for cost calibration under a profiler, with the cap or
-flags this file names. No engine, test suite or CI job may enumerate `calibration/`; `scripts/check_calib_a.py`
+flags this file names. No engine, test suite or CI job may enumerate `calibration/`; `scripts/check_calibration.py`
 fails if a calibration path reaches a manifest or a consumer-enumerated category (`languages/`, `edge-cases/`,
 `stress/edge-cases/`).
 
@@ -25,7 +25,7 @@ Each family directory holds:
 | `cap-words.work-cap-200000.txt`, `.yaml` | `cal-work-cap` only: words that stop at the reduced work cap; the name carries the cap, run them only with `--work-cap 200000`; no analyses are recorded |
 | `budget_ms: 600000` | in `words.yaml`; guards against a hang only |
 
-## Families added by batch A (scale)
+## Families added by batch A (scale) and batch B (structure)
 
 Costs are the `cost` column of `pangloss batch --cost-column --threads 1` on the 0.19.4 release binary (the
 unit the cost model uses; one work step is about 700 to 900 cost). `span` is the maximum over the minimum cost
@@ -39,8 +39,12 @@ of the family. Words are 5 to 40 characters.
 | `cal-compounding-large` | 1500 roots, two endocompound rules | 20 | 8 | 0.43M | 27.6M | 65x | 7-34 |
 | `cal-work-cap` | 28 optional affix rules that insert one letter | 6 + 2 cap | 3 | 0.94M | 152.0M | 162x | 5-8 |
 | `cal-prefilter-scale` | 700 roots, 10 suffix rules, 640 words | 640 | 198 | 0.08M | 9.3M | 117x | 6-30 |
-
-Batch B adds its rows to this table.
+| `cal-deep-template-16` | one template of 16 slots (5 required, 11 optional, prefix and suffix alternating), 24 roots | 6 | 1 | 1.76M | 323.4M | 184x | 14-38 |
+| `cal-redup-long-roots` | total and partial reduplication slots (CV, CVC, final CV) over 26 long and self-repeating roots | 6 | 1 | 1.84M | 203.5M | 111x | 12-40 |
+| `cal-rule-cascade-32` | 32 ordered rewrite and metathesis rules (epenthesis, deletion, vowel and consonant substitution) under an 8-slot template | 6 | 1 | 12.63M | 568.7M | 45x | 9-24 |
+| `cal-infix-simulfix` | 7 infix slots in HCLoader's two-part shape (VC_V and CV_C contexts), an ablaut simulfix suffix, a required suffix and an optional prefix | 6 | 1 | 1.53M | 271.7M | 178x | 11-33 |
+| `cal-clitic-chain` | 12 homophonous proclitics and 12 enclitics after a 3-slot template; enclitic forms overlap the suffixes | 6 | 1 | 0.67M | 648.7M | 975x | 9-23 |
+| `cal-templatic-nonconcat` | 15 triliteral and 5 quadriliteral pattern rules (one required slot), ablaut, re-templating, affix slots over consonant skeletons | 6 | 1 | 1.45M | 14.8M | 10x | 11-18 |
 
 The ladder aim is words near 1x, 4x, 16x, 64x and 256x of the cheapest word. A word joins a rung only within
 2.5x of the rung's target, so a rung with no word is empty rather than filled with a nearer one. Costs per rung:
@@ -53,6 +57,12 @@ The ladder aim is words near 1x, 4x, 16x, 64x and 256x of the cheapest word. A w
 | `cal-compounding-large` | 0.43-0.60M | 1.7-1.8M | 6.8M | 26-28M | empty (no word above 65x) |
 | `cal-work-cap` | 0.94M, 2.3M | 7.5M, 8.2M | empty | 60M, 84M | 143M, 152M (both at the cap) |
 | `cal-prefilter-scale` | 0.08M | 0.31-0.32M | 1.2M | 5.0-5.3M | 9.1-9.3M (top is 117x) |
+| `cal-deep-template-16` | 1.8M | 7.0M | 28.1M | 112.4M | 323.4M |
+| `cal-redup-long-roots` | 1.8M | 7.4M | 29.4M | 128.0M | 203.5M |
+| `cal-rule-cascade-32` | 12.6M | 50.9M | 201.7M | 568.7M | 540.0M |
+| `cal-infix-simulfix` | 1.5M | 6.1M | 24.5M | 103.9M | 222.4M |
+| `cal-clitic-chain` | 0.7M | 2.7M | 10.6M | 42.6M | 173.3M |
+| `cal-templatic-nonconcat` | 1.5M | 5.8M | 14.8M | 13.9M | 13.7M |
 
 The two empty rungs are a limit of the grammar at 40 characters, not a selection choice. The no-parse words are
 the wasted-search words: they fail only after the engine has explored the whole space, and on equal length they
@@ -81,7 +91,7 @@ A calibration that counts whole-process instructions at this size measures the l
 
 **The 50k grammar is 11.2 MB, over the 10 MB limit, so it is not committed.** `cal-lexsize-50k/` holds `words.yaml`,
 `words.txt`, `ladder.tsv` and `grammar.sha256` (SHA-256 of the exact LF text the generator writes);
-`scripts/check_calib_a.py` regenerates it and fails on a different hash, or if a `grammar.xml` over 10 MB is
+`scripts/check_calibration.py` regenerates it and fails on a different hash, or if a `grammar.xml` over 10 MB is
 committed. To get the file: `python3 scripts/calib_a_gen.py lexsize PANGLOSS HC_DLL SCRATCH` writes it as
 `SCRATCH/cal-lexsize-50k.grammar.xml` (or call `fam_lexsize(50000)["xml"]`). The other three are committed.
 
@@ -98,9 +108,15 @@ Every construct is one the suite already uses (the stress fixtures use most; `Co
 | `cal-compounding-large` | two endocentric compounding rules (noun+noun, verb+noun), templates on both parts of speech | `LoadEndoCompoundingRule` 1891-1969, `LoadInflAffixProcessRule` |
 | `cal-work-cap` | unslotted (unclassified) affix rules, each a lone prefix or suffix form, with a required part of speech | `LoadUnclassifiedAffixProcessRule` 1057, `LoadFormAffixProcessAllomorph` 1626-1653 |
 | `cal-prefilter-scale` | as `cal-large-lexicon`, with a template of 5 slots | as `cal-large-lexicon` |
+| `cal-deep-template-16` | one template of 16 slots (5 required, 11 optional, prefix and suffix alternating), 24 roots | `LoadAffixTemplate` 1722, `LoadInflAffixProcessRule` 1025, `LoadFormAffixProcessAllomorph` 1490 |
+| `cal-redup-long-roots` | total and partial reduplication slots (CV, CVC, final CV) over 26 long and self-repeating roots | `LoadReduplicationPatterns` 1664, `LoadReduplicationOutputActions` 1682, `LoadFormAffixProcessAllomorph` 1490 (total `[...]`), `LoadAffixTemplate` 1722 |
+| `cal-rule-cascade-32` | 32 ordered rewrite and metathesis rules (epenthesis, deletion, vowel and consonant substitution) under an 8-slot template | `LoadRewriteRule` 2052, `LoadMetathesisRule` 2152, `LoadAffixTemplate` 1722, `CreateStrata` 372 |
+| `cal-infix-simulfix` | 7 infix slots in HCLoader's two-part shape (VC_V and CV_C contexts), an ablaut simulfix suffix, a required suffix and an optional prefix | `LoadFormAffixProcessAllomorph` 1576-1594 (infix `[any*]+leftctx`, `rightctx+any*`), `LoadAffixProcessAllomorph` 1383 (Copy, InsertPhones, ModifyFromInput), `LoadAffixTemplate` 1722 |
+| `cal-clitic-chain` | 12 homophonous proclitics and 12 enclitics after a 3-slot template; enclitic forms overlap the suffixes | `LoadCliticAffixProcessRule` 1079, `LoadFormAffixProcessAllomorph` 1490, `LoadAffixTemplate` 1722, `CreateStrata` 372 |
+| `cal-templatic-nonconcat` | 15 triliteral and 5 quadriliteral pattern rules (one required slot), ablaut, re-templating, affix slots over consonant skeletons | `LoadAffixProcessAllomorph` 1383 (Copy, InsertPhones, ModifyFromInput), `LoadAffixTemplate` 1722 |
 
-No family uses a phonological rule, a feature system or a stratum beyond `Main`, so a rule list in `words.yaml`
-is exact. Compounding stays at the parser's default of two roots (`MaxRoots`, `PROTOCOL.md` section 8): the batch
+No batch A family uses a phonological rule, a feature system or a stratum beyond `Main`, so a rule list in `words.yaml`
+is exact (batch B's rule lists are the oracle's trace; see below). Compounding stays at the parser's default of two roots (`MaxRoots`, `PROTOCOL.md` section 8): the batch
 command takes no morpher block, so a three-root word would measure only the refusal.
 
 ## Expected analyses and oracle status
@@ -170,10 +186,70 @@ binary, `--threads 1`, after `stile admit --jobs 4`, under `nice -n 10 ionice -c
 | `cal-compounding-large` | 179M | 2.0 s | 0.30G |
 | `cal-work-cap` (both files, cap 200000) | 457M | 4.6 s | 0.62G |
 | `cal-prefilter-scale` (`--prefilter auto`) | 753M | 9.8 s | 1.00G |
-| total | 2.46G | 32 s | 4.8G |
+| total (batch A) | 2.46G | 32 s | 4.8G |
+| `cal-deep-template-16` | 691M | 4.4 s | 0.86G |
+| `cal-redup-long-roots` | 436M | 2.7 s | 0.54G |
+| `cal-rule-cascade-32` | 1738M | 8.8 s | 1.91G |
+| `cal-infix-simulfix` | 630M | 3.8 s | 0.76G |
+| `cal-clitic-chain` | 879M | 6.0 s | 1.18G |
+| `cal-templatic-nonconcat` | 58M | 1.7 s | 0.10G |
+| total (batch B) | 4.43G | 27 s | 5.35G |
 
 If a run needs the earlier planning figure of 3 to 4 minutes per G of cost, the total is 7 to 10 minutes; the
 measured rate is far lower, so the set has room to grow.
+
+## Batch B: structural families
+
+Six families (`cal-deep-template-16`, `-redup-long-roots`, `-rule-cascade-32`, `-infix-simulfix`, `-clitic-chain`,
+`-templatic-nonconcat`) that scale search structure instead of size. Their rows are in the tables above; this section
+holds what is particular to them.
+
+- **Analyses.** Every `words.yaml` analysis is the C# oracle's: sillsdev/machine `4d9b454d` (tag
+  `pangloss-oracle-pin-4d9b454d`, `PROVENANCE.md`), `hc-conformance --propose` for signatures and the self-check
+  trace for `rules:`, 6 of 6 pass. PanGloss 0.19.4 returns the oracle's signatures for every ladder word (0 differences).
+  Notes in `words.yaml` are generated (rung, length, cost, analysis count, the structure the family stresses); they
+  do not explain individual analyses.
+- **Ladder reach.** The 256x rung is met or nearly met by `cal-clitic-chain` (260x), `cal-deep-template-16` (184x),
+  `cal-infix-simulfix` (145x) and `cal-redup-long-roots` (111x). `cal-rule-cascade-32` starts at 12.6M because 32 rules
+  cost that on a 9-character word, so its dearest parsing word is 43x the base; `cal-templatic-nonconcat` reaches only
+  9x (FieldWorks-writable root-and-pattern has few multiplicative sources). In those two the 256x rung is not dearer
+  than the 64x rung; do not use them for a top end. Costs are PanGloss's own prediction.
+- **The `+` boundary (A/B).** HCLoader writes a `+` morpheme boundary inside every form-allomorph output (prefix
+  `form+`, suffix `+form`, infix `+form+`, `HCLoader.cs` 1358, 1360, 1597, 1623, 1649). The batch B grammars omit it. One A/B on the
+  ladder words of `cal-deep-template-16` and `cal-rule-cascade-32` with `+` emitted (`CALIB_PLUS=1` in
+  `scripts/calib_b_lib.py`, a `BoundaryDefinition` and `form+`/`+form` outputs in the slot rules) found analyses
+  identical and cost +0 to +9 percent (table below), so the grammars stay without it. Phonological-rule
+  environments in `cal-rule-cascade-32` name no boundary, which keeps its effect small; a rule that names `+` was not tried.
+
+  | grammar | rung | cost without `+` | cost with `+` | ratio | analyses (both) |
+  |---|---|---|---|---|---|
+  | deep-template-16 | 1x | 1.755M | 1.795M | 1.02 | 1 |
+  | | 4x | 7.016M | 7.267M | 1.04 | 4 |
+  | | 16x | 28.09M | 29.43M | 1.05 | 12 |
+  | | 64x | 112.35M | 120.28M | 1.07 | 64 |
+  | | 256x | 323.42M | 352.24M | 1.09 | 144 |
+  | | wasted | 217.87M | 217.87M | 1.00 | 0 |
+  | | callgrind Ir, 6 words | 858.4M | 899.1M | 1.05 | |
+  | rule-cascade-32 | 1x | 12.63M | 12.72M | 1.01 | 1 |
+  | | 4x | 50.90M | 51.50M | 1.01 | 3 |
+  | | 16x | 201.70M | 202.24M | 1.00 | 1 |
+  | | 64x | 568.69M | 575.45M | 1.01 | 2 |
+  | | 256x | 540.00M | 540.68M | 1.00 | 1 |
+  | | wasted | 363.76M | 363.76M | 1.00 | 0 |
+  | | callgrind Ir, 6 words | 1914.6M | 1922.3M | 1.00 | |
+
+- **Infix shape and an engine divergence.** `cal-infix-simulfix` writes infixes in the shape HCLoader writes
+  (`LoadFormAffixProcessAllomorph` 1576-1594): input part `left` is `any*` then the left context, part `right` is the
+  right context then `any*`; output is Copy left, the form, Copy right (`+` omitted as above). It is not
+  a worker-invented shape. The family avoids words that hit a known divergence between the C# oracle and PanGloss,
+  which is being filed separately: a MoAffixProcess input `[any*] [context] [any*]` whose insertion lands where
+  the trailing part is empty (an infix or simulfix at the end of the word) is parsed differently by the two engines.
+  What the family does to avoid it: the suffix slot `suf6` is required, so no infixed material ends the word. In
+  addition the oracle (not PanGloss) found no analysis for left contexts of one or three segments or right contexts of two
+  segments in this shape (for example `C_V` and `V_C` on the root `mime`), whose cause is not root-caused; the family
+  uses only the `VC_V` and `CV_C` contexts, on which both engines agree. All ladder words are oracle-parsed.
+- **Required to regenerate:** the PanGloss release binary (`PANGLOSS=`), the built oracle (`ORACLE_DLL=`),
+  `WORD_TIMEOUT_MS` to bound runaway candidates.
 
 ## Regenerating
 
@@ -183,7 +259,10 @@ python3 scripts/calib_a_gen.py select PANGLOSS SCRATCH [FAM]  # measure, pick th
 python3 scripts/calib_a_gen.py yaml HC_DLL SCRATCH [FAM]      # oracle batch, write words.yaml, cap-words.yaml
 python3 scripts/calib_a_gen.py lexsize PANGLOSS HC_DLL SCRATCH  # the four lexicon-size grammars, words, ladder.tsv, hashes
 python3 scripts/calib_a_gen.py table x SCRATCH                # the tables above
-python3 scripts/check_calib_a.py                              # shape check (also regenerates and compares each grammar)
+python3 scripts/calib_b_gen.py grammar cal-deep-template-16 DIR   # batch B grammar (also cal-redup-long-roots, ...)
+python3 scripts/pick_words.py FAMILY WORK --n 300 --seeds 1,2,3 [--climb 2]   # batch B candidates, measure, ladder
+python3 scripts/finalize.py FAMILY WORK calibration/cal-FAMILY    # batch B oracle self-check, words.yaml, ladder.tsv
+python3 scripts/check_calibration.py                              # shape check (also regenerates and compares each grammar)
 ```
 
 Every random choice has a fixed seed, so the grammars regenerate byte for byte. The selection depends on the

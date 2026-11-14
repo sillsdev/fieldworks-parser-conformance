@@ -1,0 +1,43 @@
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; see calibration/README.md)
+language: "CalRuleCascade32"
+sources: []
+requires: [phonology]
+fieldworks_producible: true
+budget_ms: 600000
+# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
+words:
+  - word: suranatsa
+    note: "1x rung, 9 chars, 12.63M measured parser cost, 1 analysis. Stresses single-stratum cascade of 32 ordered phonological rules with metathesis and epenthesis; first analysis applies 4 rules."
+    parses:
+      - signature: "r_sulina+suf7_tsa|suranatsa"
+        rules: [su6_l_r, suf7_tsa, vh5_i_e, vh7_e_a]
+  - word: ankarehindu
+    note: "4x rung, 11 chars, 50.90M measured parser cost, 3 analyses. Stresses single-stratum cascade of 32 ordered phonological rules with metathesis and epenthesis; first analysis applies 9 rules."
+    parses:
+      - signature: "pre8_an+r_hadeki+suf1_ntu|ankarehindu"
+        rules: [pre8_an, su11_k_h, su17_h_k, su2_t_d, su7_d_r, su8_m_n, suf1_ntu, vh3_e_i, vh5_i_e]
+      - signature: "pre8_an+r_hadeki+suf6_mtu|ankarehindu"
+        rules: [pre8_an, su11_k_h, su17_h_k, su2_t_d, su7_d_r, su8_m_n, suf6_mtu, vh3_e_i, vh5_i_e]
+      - signature: "pre8_an+r_hadeki+suf7_ndu|ankarehindu"
+        rules: [pre8_an, su11_k_h, su17_h_k, su2_t_d, su7_d_r, su8_m_n, suf7_ndu, vh3_e_i, vh5_i_e]
+  - word: siheundohomirotaurehi
+    note: "16x rung, 21 chars, 201.70M measured parser cost, 1 analysis. Stresses single-stratum cascade of 32 ordered phonological rules with metathesis and epenthesis; first analysis applies 12 rules."
+    parses:
+      - signature: "pre8_ske+pre5_unt+pre3_oh+r_mirota+suf1_iu+suf7_ski|siheundohomirotaurehi"
+        rules: [de1_i, ep1_i_s_Tvl, ep6_o_h_C, pre3_oh, pre5_unt, pre8_ske, su11_k_h, su2_t_d, su5_s_r, suf1_iu, suf7_ski, vh5_i_e]
+  - word: olerelresahunduluskaaeou
+    note: "64x rung, 24 chars, 568.69M measured parser cost, 2 analyses. Stresses single-stratum cascade of 32 ordered phonological rules with metathesis and epenthesis; first analysis applies 22 rules."
+    parses:
+      - signature: "pre8_ol+pre5_al+pre3_im+r_ritaku+suf1_ntu+suf2_olu+suf4_tka+suf6_ae+suf7_ou|olerelresahunduluskaaeou"
+        rules: [de2_u, mt1_s_Tvl, mt4_k_s, pre3_im, pre5_al, pre8_ol, su11_k_h, su12_t_s, su14_n_l, su2_t_d, su5_s_r, su6_l_r, su8_m_n, suf1_ntu, suf2_olu, suf4_tka, suf6_ae, suf7_ou, vh1_a_e, vh2_o_u, vh3_e_i, vh5_i_e]
+      - signature: "pre8_ol+pre5_ar+pre3_im+r_ritaku+suf1_ntu+suf2_olu+suf4_tka+suf6_ae+suf7_ou|olerelresahunduluskaaeou"
+        rules: [de2_u, mt1_s_Tvl, mt4_k_s, pre3_im, pre5_ar, pre8_ol, su11_k_h, su12_t_s, su14_n_l, su2_t_d, su5_s_r, su6_l_r, su8_m_n, suf1_ntu, suf2_olu, suf4_tka, suf6_ae, suf7_ou, vh1_a_e, vh2_o_u, vh3_e_i, vh5_i_e]
+  - word: alansihunireyehoreaendu
+    note: "256x rung, 23 chars, 540.00M measured parser cost, 1 analysis. Stresses single-stratum cascade of 32 ordered phonological rules with metathesis and epenthesis; first analysis applies 13 rules."
+    parses:
+      - signature: "pre5_al+pre3_ans+r_kunari+suf2_ye+suf4_hli+suf6_ae+suf7_ndu|alansihunireyehoreaendu"
+        rules: [ep1_i_s_Tvl, ep6_o_h_C, pre3_ans, pre5_al, su11_k_h, su6_l_r, suf2_ye, suf4_hli, suf6_ae, suf7_ndu, vh1_a_e, vh3_e_i, vh5_i_e]
+  - word: uharektanarundaeyressa
+    note: "wasted rung, 22 chars, 363.76M measured parser cost, 0 analyses. No analysis: the search explores the single-stratum cascade of 32 ordered phonological rules with metathesis and epenthesis space and fails (dearest failing word, the cost of a wasted search)."
+    expect_fail: true
+    blocked_by: [wasted-search]

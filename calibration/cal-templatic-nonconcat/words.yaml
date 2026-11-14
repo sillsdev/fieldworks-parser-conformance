@@ -1,0 +1,55 @@
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; see calibration/README.md)
+language: "CalTemplaticNonconcat"
+sources: []
+requires: []
+fieldworks_producible: true
+budget_ms: 600000
+# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
+words:
+  - word: munkiblkita
+    note: "1x rung, 11 chars, 1.45M measured parser cost, 1 analysis. Stresses required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons; first analysis applies 3 rules."
+    parses:
+      - signature: "quad_q05+r_nkbl+suf6_ki+suf7_ta|munkiblkita"
+        rules: [quad_q05, suf6_ki, suf7_ta]
+  - word: yakayadabatahati
+    note: "4x rung, 16 chars, 5.81M measured parser cost, 1 analysis. Stresses required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons; first analysis applies 6 rules."
+    parses:
+      - signature: "pre8_ya+pre5_ka+pre3_ya+r_dbt+tri_p15+suf6_ha+suf7_ti|yakayadabatahati"
+        rules: [pre3_ya, pre5_ka, pre8_ya, suf6_ha, suf7_ti, tri_p15]
+  - word: takabikuggirinhuin
+    note: "16x rung, 18 chars, 14.82M measured parser cost, 4 analyses. Stresses required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons; first analysis applies 9 rules."
+    parses:
+      - signature: "pre8_ta+pre5_ka+pre3_bi+r_kgr+tri_p03+retemplate_t1+ablaut_last+suf4_in+suf6_hu+suf7_in|takabikuggirinhuin"
+        rules: [ablaut_last, pre3_bi, pre5_ka, pre8_ta, retemplate_t1, suf4_in, suf6_hu, suf7_in, tri_p03]
+      - signature: "pre8_ta+pre5_ka+pre3_bi+r_kgr+tri_p03+retemplate_t1+suf4_in+suf6_hu+suf7_in|takabikuggirinhuin"
+        rules: [pre3_bi, pre5_ka, pre8_ta, retemplate_t1, suf4_in, suf6_hu, suf7_in, tri_p03]
+      - signature: "pre8_ta+pre5_ka+pre3_bi+r_kgr+tri_p13+ablaut_last+suf4_in+suf6_hu+suf7_in|takabikuggirinhuin"
+        rules: [ablaut_last, pre3_bi, pre5_ka, pre8_ta, suf4_in, suf6_hu, suf7_in, tri_p13]
+      - signature: "pre8_ta+pre5_ka+pre3_bi+r_kgr+tri_p13+suf4_in+suf6_hu+suf7_in|takabikuggirinhuin"
+        rules: [pre3_bi, pre5_ka, pre8_ta, suf4_in, suf6_hu, suf7_in, tri_p13]
+  - word: lukataguttidinhuun
+    note: "64x rung, 18 chars, 13.87M measured parser cost, 4 analyses. Stresses required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons; first analysis applies 9 rules."
+    parses:
+      - signature: "pre8_lu+pre5_ka+pre3_ta+r_gtd+tri_p03+retemplate_t1+ablaut_last+suf4_in+suf6_hu+suf7_un|lukataguttidinhuun"
+        rules: [ablaut_last, pre3_ta, pre5_ka, pre8_lu, retemplate_t1, suf4_in, suf6_hu, suf7_un, tri_p03]
+      - signature: "pre8_lu+pre5_ka+pre3_ta+r_gtd+tri_p03+retemplate_t1+suf4_in+suf6_hu+suf7_un|lukataguttidinhuun"
+        rules: [pre3_ta, pre5_ka, pre8_lu, retemplate_t1, suf4_in, suf6_hu, suf7_un, tri_p03]
+      - signature: "pre8_lu+pre5_ka+pre3_ta+r_gtd+tri_p13+ablaut_last+suf4_in+suf6_hu+suf7_un|lukataguttidinhuun"
+        rules: [ablaut_last, pre3_ta, pre5_ka, pre8_lu, suf4_in, suf6_hu, suf7_un, tri_p13]
+      - signature: "pre8_lu+pre5_ka+pre3_ta+r_gtd+tri_p13+suf4_in+suf6_hu+suf7_un|lukataguttidinhuun"
+        rules: [pre3_ta, pre5_ka, pre8_lu, suf4_in, suf6_hu, suf7_un, tri_p13]
+  - word: tawabigubbisinhata
+    note: "256x rung, 18 chars, 13.70M measured parser cost, 4 analyses. Stresses required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons; first analysis applies 9 rules."
+    parses:
+      - signature: "pre8_ta+pre5_wa+pre3_bi+r_gbs+tri_p03+retemplate_t1+ablaut_last+suf4_in+suf6_ha+suf7_ta|tawabigubbisinhata"
+        rules: [ablaut_last, pre3_bi, pre5_wa, pre8_ta, retemplate_t1, suf4_in, suf6_ha, suf7_ta, tri_p03]
+      - signature: "pre8_ta+pre5_wa+pre3_bi+r_gbs+tri_p03+retemplate_t1+suf4_in+suf6_ha+suf7_ta|tawabigubbisinhata"
+        rules: [pre3_bi, pre5_wa, pre8_ta, retemplate_t1, suf4_in, suf6_ha, suf7_ta, tri_p03]
+      - signature: "pre8_ta+pre5_wa+pre3_bi+r_gbs+tri_p13+ablaut_last+suf4_in+suf6_ha+suf7_ta|tawabigubbisinhata"
+        rules: [ablaut_last, pre3_bi, pre5_wa, pre8_ta, suf4_in, suf6_ha, suf7_ta, tri_p13]
+      - signature: "pre8_ta+pre5_wa+pre3_bi+r_gbs+tri_p13+suf4_in+suf6_ha+suf7_ta|tawabigubbisinhata"
+        rules: [pre3_bi, pre5_wa, pre8_ta, suf4_in, suf6_ha, suf7_ta, tri_p13]
+  - word: bisabibargrnahain
+    note: "wasted rung, 17 chars, 8.60M measured parser cost, 0 analyses. No analysis: the search explores the required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons space and fails (dearest failing word, the cost of a wasted search)."
+    expect_fail: true
+    blocked_by: [wasted-search]

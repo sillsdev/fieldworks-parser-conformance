@@ -124,7 +124,7 @@ stress README table), and `check_fwdata.py` covers stress witnesses as well as f
 
 - `check_words_schema.py` needs PyYAML and jsonschema, and `check_dtd.py` needs lxml or `xmllint`; CI
   installs them (`pip install -r scripts/requirements.txt`). The other scripts use the standard library only.
-- `python3 scripts/check_calib_a.py` checks the calibration families (section 6); CI runs it.
+- `python3 scripts/check_calibration.py` checks the calibration families (section 6); CI runs it.
 - Then run the self-check of each consuming engine you can reach (for sillsdev/machine,
   `--fixtures <path to this clone> --include-pathological`, and `--fixtures <path to this clone>/stress` for the
   stress fixtures; its `conformance/` is a clone at its own pinned commit, so it does not see your change, and its
@@ -190,7 +190,7 @@ well formed, listed, and hashed.
 ## 6. Calibration grammars
 
 **Calibration only: never run in conformance or engine test runs.** No test, adapter or CI job may enumerate or
-parse `calibration/`; the words are slow by design. `scripts/check_calib_a.py` fails if a calibration path appears in
+parse `calibration/`; the words are slow by design. `scripts/check_calibration.py` fails if a calibration path appears in
 either manifest or in a category the consumers enumerate (`languages/`, `edge-cases/`, `stress/edge-cases/`).
 
 `calibration/` holds synthetic grammars that calibrate PanGloss parser-work cost weights. They are not conformance
@@ -198,9 +198,11 @@ fixtures: they are outside `languages/`, `edge-cases/` and `stress/`, outside bo
 `docs/grammars.md`. The rule in section 1 still applies (only what FieldWorks can produce). `calibration/README.md`
 describes the families, their measured cost ladders and how to run them.
 
-- Batch A families (`cal-*`) are generated: `python3 scripts/calib_a_gen.py grammars ...` rewrites `grammar.xml`, and
-  `scripts/check_calib_a.py` regenerates each grammar and fails on a difference. Change the generator, not the XML.
+- Every `cal-*` family is generated: batch A (scale) by `python3 scripts/calib_a_gen.py grammars ...`, batch B
+  (structure) by `python3 scripts/calib_b_gen.py grammar <family> <dir>`. `scripts/check_calibration.py` regenerates each
+  grammar from both generators and fails on a difference. Change the generator, not the XML.
 - `words.txt`, `words.yaml` and `ladder.tsv` are measurement records (engine and oracle builds are named in the README
-  and in each header); regenerate them with the `select` and `yaml` stages of the generator, never by hand.
+  and in each header); regenerate them with the `select` and `yaml` stages of batch A's generator, or with batch B's `pick_words.py` and
+  `finalize.py` (scripts/), never by hand. Batch B words.yaml analyses come from the C# oracle's trace.
 - A work-cap word list carries its cap in its file name. Never run it without that cap.
-- `scripts/check_calib_a.py` needs the same requirements as the other checks and runs in CI.
+- `scripts/check_calibration.py` needs the same requirements as the other checks and runs in CI.

@@ -1,0 +1,37 @@
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; see calibration/README.md)
+language: "CalInfixSimulfix"
+sources: []
+requires: []
+fieldworks_producible: true
+budget_ms: 600000
+# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
+words:
+  - word: napspumnedu
+    note: "1x rung, 11 chars, 1.53M measured parser cost, 1 analysis. Stresses unanchored infix slots and ablaut simulfixes over many consonant and vowel sites; first analysis applies 3 rules."
+    parses:
+      - signature: "r_napom+inf9_ps+sim5_ne+suf6_du|napspumnedu"
+        rules: [inf9_ps, sim5_ne, suf6_du]
+  - word: duttiimruasaropumullo
+    note: "4x rung, 21 chars, 6.11M measured parser cost, 1 analysis. Stresses unanchored infix slots and ablaut simulfixes over many consonant and vowel sites; first analysis applies 6 rules."
+    parses:
+      - signature: "r_dusopumul+inf3_ti+inf6_ti+inf9_ma+inf5_ru+inf4_ar+suf6_lo|duttiimruasaropumullo"
+        rules: [inf3_ti, inf4_ar, inf5_ru, inf6_ti, inf9_ma, suf6_lo]
+  - word: miwilluupskosruotokumippulo
+    note: "16x rung, 27 chars, 24.47M measured parser cost, 1 analysis. Stresses unanchored infix slots and ablaut simulfixes over many consonant and vowel sites; first analysis applies 8 rules."
+    parses:
+      - signature: "r_mikotokumep+inf8_wi+inf3_lu+inf6_lu+inf9_ps+inf4_os+inf5_ru+sim5_pu+suf6_lo|miwilluupskosruotokumippulo"
+        rules: [inf3_lu, inf4_os, inf5_ru, inf6_lu, inf8_wi, inf9_ps, sim5_pu, suf6_lo]
+  - word: hemukengpstarngegtiumidunitnelo
+    note: "64x rung, 31 chars, 103.88M measured parser cost, 1 analysis. Stresses unanchored infix slots and ablaut simulfixes over many consonant and vowel sites; first analysis applies 9 rules."
+    parses:
+      - signature: "pre7_he+r_mutegumidunet+inf8_ke+inf3_ng+inf9_ps+inf4_ar+inf5_ng+inf6_ti+sim5_ne+suf6_lo|hemukengpstarngegtiumidunitnelo"
+        rules: [inf3_ng, inf4_ar, inf5_ng, inf6_ti, inf8_ke, inf9_ps, pre7_he, sim5_ne, suf6_lo]
+  - word: yukedolngupslintietedotipusroho
+    note: "256x rung, 31 chars, 222.38M measured parser cost, 1 analysis. Stresses unanchored infix slots and ablaut simulfixes over many consonant and vowel sites; first analysis applies 9 rules."
+    parses:
+      - signature: "pre7_yu+r_keletedotipos+inf8_do+inf3_lu+inf6_ng+inf9_ps+inf4_in+inf5_ti+sim5_ro+suf6_ho|yukedolngupslintietedotipusroho"
+        rules: [inf3_lu, inf4_in, inf5_ti, inf6_ng, inf8_do, inf9_ps, pre7_yu, sim5_ro, suf6_ho]
+  - word: yukekedolngupslintietedotipusroho
+    note: "wasted rung, 33 chars, 271.67M measured parser cost, 0 analyses. No analysis: the search explores the unanchored infix slots and ablaut simulfixes over many consonant and vowel sites space and fails (dearest failing word, the cost of a wasted search)."
+    expect_fail: true
+    blocked_by: [wasted-search]
