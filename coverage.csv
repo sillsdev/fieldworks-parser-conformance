@@ -334,6 +334,8 @@ GuesserPatternRootFallback,gagd,gag+PAST|gag+?d,Guesser/LexicalGuess
 GuesserPatternRootFallback,gagd,gagd|gagd,Guesser/LexicalGuess
 HeadAmbiguousCompounding,dakimo,DAK+IMO|dakimo,CompoundingRule
 HeadAmbiguousCompounding,dakimo,DAK+IMO|dakimo,CompoundingRule
+InfixAmbiguousSite,migume,MIME+AFTER|migume,AffixProcessRule: prefix/suffix/circumfix/infix
+InfixAmbiguousSite,mimgue,MIME+BEFORE|mimgue,AffixProcessRule: prefix/suffix/circumfix/infix
 Gezmara,kpfotab,KTB+PFV|kpfotab,AffixProcessRule: prefix/suffix/circumfix/infix
 Gezmara,kcvotab,KTB+CONV|kcvotab,AffixProcessRule: prefix/suffix/circumfix/infix
 interposed-optional-multi-rhs,de,ABC|de,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

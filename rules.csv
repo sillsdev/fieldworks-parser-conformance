@@ -171,6 +171,8 @@ GuessRootsSettings,mrInfl,takuvuq
 GuesserPatternRootFallback,mrPast,gagd
 HeadAmbiguousCompounding,crLeftHead,dakimo;!imodak
 HeadAmbiguousCompounding,crRightHead,dakimo;!imodak
+InfixAmbiguousSite,mrAfter,migume;!mimegu
+InfixAmbiguousSite,mrBefore,mimgue;!mguime
 Gezmara,mrConv,kcvotab
 Gezmara,mrGlyphSuf,ጸan
 Gezmara,mrPfv,kpfotab
