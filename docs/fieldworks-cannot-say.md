@@ -17,7 +17,7 @@ project built in FieldWorks (LibLCM), put through `HCLoader.cs`, yields the fixt
 loader source could write a construct is weaker evidence. Until a fixture has a FieldWorks witness (a
 `fieldworks/` directory, [PROTOCOL.md](../PROTOCOL.md) section 10), its `fieldworks_producible: true` is a claim
 read from the loader. Only the 11 fixtures that carry a witness are certified today (all under `edge-cases/`);
-the other 127 of the 138 fixtures rest on the loader reading alone.
+the other 128 of the 139 fixtures rest on the loader reading alone.
 
 ## What the XML can say but FieldWorks cannot, so we do not test it
 
