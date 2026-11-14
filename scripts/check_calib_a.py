@@ -3,7 +3,7 @@
 
 For each family: grammar.xml is the DTD-valid output of scripts/calib_a_gen.py (regenerated and compared byte
 for byte), words.yaml passes schema/words.schema.json with fieldworks_producible true, words.txt lists exactly
-the words of words.yaml (plus cap-words.yaml), every word is 5 to 40 characters, and calibration/README.md names
+the words of words.yaml (plus the cap-words.work-cap-N.yaml file, whose name must carry the cap), every word is 5 to 40 characters, and calibration/README.md names
 the family. Needs PyYAML, jsonschema and lxml or xmllint (pip install -r scripts/requirements.txt).
 """
 import json
@@ -40,14 +40,22 @@ def main() -> int:
         if data.get("fieldworks_producible") is not True:
             problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
         yaml_words = [w["word"] for w in data["words"]]
-        cap_yaml = d / "cap-words.yaml"
-        cap_words = [w["word"] for w in load_words(cap_yaml)["words"]] if cap_yaml.is_file() else []
+        cap_yaml = d / calib_a_gen.CAP_YAML
+        cap_words = []
+        if cap_yaml.is_file():
+            cdata = load_words(cap_yaml)
+            cap_words = [w["word"] for w in cdata["words"]]
+            if cdata.get("work_cap") != calib_a_gen.CAP_STEPS:
+                problems.append(f"{name}: {cap_yaml.name} work_cap is not {calib_a_gen.CAP_STEPS}")
+            for w in cdata["words"]:
+                if w.get("expect_status") != "CAP" or not w.get("note"):
+                    problems.append(f"{name}: cap word {w.get('word')!r} lacks expect_status CAP or a note")
         listed = (d / "words.txt").read_text(encoding="utf-8").split()
-        listed_cap = (d / "cap-words.txt").read_text(encoding="utf-8").split() if (d / "cap-words.txt").is_file() else []
+        listed_cap = (d / calib_a_gen.CAP_TXT).read_text(encoding="utf-8").split() if (d / calib_a_gen.CAP_TXT).is_file() else []
         if listed != yaml_words:
             problems.append(f"{name}: words.txt does not list the words of words.yaml in order")
         if listed_cap != cap_words:
-            problems.append(f"{name}: cap-words.txt does not list the words of cap-words.yaml in order")
+            problems.append(f"{name}: {calib_a_gen.CAP_TXT} does not list the words of {calib_a_gen.CAP_YAML} in order")
         every = yaml_words + cap_words
         if len(set(every)) != len(every):
             problems.append(f"{name}: duplicate words")
@@ -56,8 +64,8 @@ def main() -> int:
                 problems.append(f"{name}: word {w!r} is {len(w)} characters, not 5 to 40")
         if name == "cal-prefilter-scale" and len(every) < 600:
             problems.append(f"{name}: {len(every)} words, fewer than the 600 that let --prefilter auto engage")
-        if name == "cal-work-cap" and not cap_words:
-            problems.append(f"{name}: no cap words")
+        if name == "cal-work-cap" and (not cap_words or not (d / "README.md").is_file()):
+            problems.append(f"{name}: no cap words or no README.md")
         print(f"{name}: {len(yaml_words)} words, {len(cap_words)} cap words")
     problems += check_dtd.doctype_problems(grammars)
     if check_dtd.etree is not None:

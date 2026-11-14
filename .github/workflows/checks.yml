@@ -36,6 +36,8 @@ jobs:
         run: python scripts/check_fwdata.py
       - name: Constructs, coverage and words agree
         run: python parity-check.py
+      - name: Calibration families are well formed
+        run: python scripts/check_calib_a.py
       - name: Relative links resolve
         run: python scripts/check_links.py
       - name: No private paths, emails or user names
