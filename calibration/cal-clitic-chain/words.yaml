@@ -1,0 +1,373 @@
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; see calibration/README.md)
+language: "CalCliticChain"
+sources: []
+requires: []
+fieldworks_producible: true
+budget_ms: 600000
+# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
+words:
+  - word: tomissuba
+    note: "1x rung, 9 chars, 0.67M measured parser cost, 1 analysis. Stresses homophonous proclitic and enclitic chains whose forms overlap the template suffixes; first analysis applies 2 rules."
+    parses:
+      - signature: "r_tomis+suf1_su+suf2_ba|tomissuba"
+        rules: [suf1_su, suf2_ba]
+  - word: rasogtiresu
+    note: "4x rung, 11 chars, 2.72M measured parser cost, 4 analyses. Stresses homophonous proclitic and enclitic chains whose forms overlap the template suffixes; first analysis applies 3 rules."
+    parses:
+      - signature: "r_rasog+suf1_ti+suf3_re+enc_su_a|rasogtiresu"
+        rules: [enc_su_a, suf1_ti, suf3_re]
+      - signature: "r_rasog+suf1_ti+suf3_re+enc_su_b|rasogtiresu"
+        rules: [enc_su_b, suf1_ti, suf3_re]
+      - signature: "r_rasog+suf2_ti+suf3_re+enc_su_a|rasogtiresu"
+        rules: [enc_su_a, suf2_ti, suf3_re]
+      - signature: "r_rasog+suf2_ti+suf3_re+enc_su_b|rasogtiresu"
+        rules: [enc_su_b, suf2_ti, suf3_re]
+  - word: sirakbalolomisusu
+    note: "16x rung, 17 chars, 10.56M measured parser cost, 8 analyses. Stresses homophonous proclitic and enclitic chains whose forms overlap the template suffixes; first analysis applies 6 rules."
+    parses:
+      - signature: "r_sirak+suf2_ba+enc_lo_a+enc_lo_b+enc_mi_a+enc_su_a+enc_su_b|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_a, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_a+enc_lo_b+enc_mi_a+enc_su_b+enc_su_a|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_a, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_a+enc_lo_b+enc_mi_b+enc_su_a+enc_su_b|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_b, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_a+enc_lo_b+enc_mi_b+enc_su_b+enc_su_a|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_b, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_b+enc_lo_a+enc_mi_a+enc_su_a+enc_su_b|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_a, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_b+enc_lo_a+enc_mi_a+enc_su_b+enc_su_a|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_a, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_b+enc_lo_a+enc_mi_b+enc_su_a+enc_su_b|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_b, enc_su_a, enc_su_b, suf2_ba]
+      - signature: "r_sirak+suf2_ba+enc_lo_b+enc_lo_a+enc_mi_b+enc_su_b+enc_su_a|sirakbalolomisusu"
+        rules: [enc_lo_a, enc_lo_b, enc_mi_b, enc_su_a, enc_su_b, suf2_ba]
+  - word: denabrasunenesuti
+    note: "64x rung, 17 chars, 42.60M measured parser cost, 16 analyses. Stresses homophonous proclitic and enclitic chains whose forms overlap the template suffixes; first analysis applies 6 rules."
+    parses:
+      - signature: "r_denab+suf1_ra+enc_su_a+enc_ne_a+enc_ne_b+enc_su_b+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_a, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_a+enc_ne_a+enc_ne_b+enc_su_b+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_b, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_a+enc_ne_b+enc_ne_a+enc_su_b+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_a, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_a+enc_ne_b+enc_ne_a+enc_su_b+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_b, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_b+enc_ne_a+enc_ne_b+enc_su_a+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_a, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_b+enc_ne_a+enc_ne_b+enc_su_a+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_b, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_b+enc_ne_b+enc_ne_a+enc_su_a+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_a, suf1_ra]
+      - signature: "r_denab+suf1_ra+enc_su_b+enc_ne_b+enc_ne_a+enc_su_a+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_su_b, enc_ti_b, suf1_ra]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_a+enc_ne_b+enc_su_a+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_ti_a, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_a+enc_ne_b+enc_su_a+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_ti_b, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_a+enc_ne_b+enc_su_b+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_b, enc_ti_a, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_a+enc_ne_b+enc_su_b+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_b, enc_ti_b, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_b+enc_ne_a+enc_su_a+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_ti_a, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_b+enc_ne_a+enc_su_a+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_a, enc_ti_b, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_b+enc_ne_a+enc_su_b+enc_ti_a|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_b, enc_ti_a, suf1_ra, suf3_su]
+      - signature: "r_denab+suf1_ra+suf3_su+enc_ne_b+enc_ne_a+enc_su_b+enc_ti_b|denabrasunenesuti"
+        rules: [enc_ne_a, enc_ne_b, enc_su_b, enc_ti_b, suf1_ra, suf3_su]
+  - word: hohahipkagasusumika
+    note: "256x rung, 19 chars, 173.25M measured parser cost, 144 analyses. Stresses homophonous proclitic and enclitic chains whose forms overlap the template suffixes; first analysis applies 7 rules."
+    parses:
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_a+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_a, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_a+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+enc_su_b+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_a+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_a, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_a+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_a, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_a|hohahipkagasusumika"
+        rules: [enc_ka_a, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+      - signature: "pro_ho_b+r_hahip+suf1_ka+suf2_ga+suf3_su+enc_su_b+enc_mi_b+enc_ka_b|hohahipkagasusumika"
+        rules: [enc_ka_b, enc_mi_b, enc_su_b, pro_ho_b, suf1_ka, suf2_ga, suf3_su]
+  - word: hodededeparankasunekati
+    note: "wasted rung, 23 chars, 648.72M measured parser cost, 0 analyses. No analysis: the search explores the homophonous proclitic and enclitic chains whose forms overlap the template suffixes space and fails (dearest failing word, the cost of a wasted search)."
+    expect_fail: true
+    blocked_by: [wasted-search]

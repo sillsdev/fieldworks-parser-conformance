@@ -1,0 +1,477 @@
+# kind: calibration (CALIBRATION ONLY: never run in conformance or engine test runs; see calibration/README.md)
+language: "CalDeepTemplate16"
+sources: []
+requires: []
+fieldworks_producible: true
+budget_ms: 600000
+# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
+words:
+  - word: parodetimisimi
+    note: "1x rung, 14 chars, 1.76M measured parser cost, 1 analysis. Stresses 16-slot template, five required slots, optional slots between them; odd slots prefix, even slots suffix; first analysis applies 5 rules."
+    parses:
+      - signature: "s01_pa+r_rode+s04_ti+s08_mi+s12_si+s16_mi|parodetimisimi"
+        rules: [s01_pa, s04_ti, s08_mi, s12_si, s16_mi]
+  - word: katiburohetisitaki
+    note: "4x rung, 18 chars, 7.02M measured parser cost, 4 analyses. Stresses 16-slot template, five required slots, optional slots between them; odd slots prefix, even slots suffix; first analysis applies 6 rules."
+    parses:
+      - signature: "s03_ka+s01_ti+r_burohe+s04_ti+s08_si+s12_ta+s16_ki|katiburohetisitaki"
+        rules: [s01_ti, s03_ka, s04_ti, s08_si, s12_ta, s16_ki]
+      - signature: "s05_ka+s01_ti+r_burohe+s04_ti+s08_si+s12_ta+s16_ki|katiburohetisitaki"
+        rules: [s01_ti, s04_ti, s05_ka, s08_si, s12_ta, s16_ki]
+      - signature: "s13_ka+s01_ti+r_burohe+s04_ti+s08_si+s12_ta+s16_ki|katiburohetisitaki"
+        rules: [s01_ti, s04_ti, s08_si, s12_ta, s13_ka, s16_ki]
+      - signature: "s15_ka+s01_ti+r_burohe+s04_ti+s08_si+s12_ta+s16_ki|katiburohetisitaki"
+        rules: [s01_ti, s04_ti, s08_si, s12_ta, s15_ka, s16_ki]
+  - word: titawuyuroymamananitakima
+    note: "16x rung, 25 chars, 28.09M measured parser cost, 12 analyses. Stresses 16-slot template, five required slots, optional slots between them; odd slots prefix, even slots suffix; first analysis applies 9 rules."
+    parses:
+      - signature: "s03_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s06_na+s08_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s03_ti, s04_ma, s06_na, s08_ni, s12_ta, s14_ki, s16_ma]
+      - signature: "s03_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s03_ti, s04_ma, s08_na, s10_ni, s12_ta, s14_ki, s16_ma]
+      - signature: "s03_ti+s01_ta+r_wuyuroy+s04_ma+s06_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s03_ti, s04_ma, s06_ma, s08_na, s10_ni, s12_ta, s14_ki, s16_ma]
+      - signature: "s11_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s06_na+s08_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s04_ma, s06_na, s08_ni, s11_ti, s12_ta, s14_ki, s16_ma]
+      - signature: "s11_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s04_ma, s08_na, s10_ni, s11_ti, s12_ta, s14_ki, s16_ma]
+      - signature: "s11_ti+s01_ta+r_wuyuroy+s04_ma+s06_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s04_ma, s06_ma, s08_na, s10_ni, s11_ti, s12_ta, s14_ki, s16_ma]
+      - signature: "s13_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s06_na+s08_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s04_ma, s06_na, s08_ni, s12_ta, s13_ti, s14_ki, s16_ma]
+      - signature: "s13_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s04_ma, s08_na, s10_ni, s12_ta, s13_ti, s14_ki, s16_ma]
+      - signature: "s13_ti+s01_ta+r_wuyuroy+s04_ma+s06_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s04_ma, s06_ma, s08_na, s10_ni, s12_ta, s13_ti, s14_ki, s16_ma]
+      - signature: "s15_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s06_na+s08_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s04_ma, s06_na, s08_ni, s12_ta, s14_ki, s15_ti, s16_ma]
+      - signature: "s15_ti+s01_ta+r_wuyuroy+s02_ma+s04_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s02_ma, s04_ma, s08_na, s10_ni, s12_ta, s14_ki, s15_ti, s16_ma]
+      - signature: "s15_ti+s01_ta+r_wuyuroy+s04_ma+s06_ma+s08_na+s10_ni+s12_ta+s14_ki+s16_ma|titawuyuroymamananitakima"
+        rules: [s01_ta, s04_ma, s06_ma, s08_na, s10_ni, s12_ta, s14_ki, s15_ti, s16_ma]
+  - word: kisimitirologekimipapiti
+    note: "64x rung, 24 chars, 112.35M measured parser cost, 64 analyses. Stresses 16-slot template, five required slots, optional slots between them; odd slots prefix, even slots suffix; first analysis applies 9 rules."
+    parses:
+      - signature: "s13_ki+s07_si+s03_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s03_mi, s04_mi, s07_si, s08_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s07_si+s03_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s06_mi, s07_si, s08_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s07_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s07_si, s08_mi, s10_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s07_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s07_si, s08_mi, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s07_si+s05_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s05_mi, s07_si, s08_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s07_si+s05_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s06_mi, s07_si, s08_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s07_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s07_si, s08_mi, s10_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s07_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s07_si, s08_mi, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s09_si+s03_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s03_mi, s04_mi, s08_pa, s09_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s03_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s06_mi, s08_pa, s09_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s09_si, s10_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s09_si, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s09_si+s05_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s05_mi, s08_pa, s09_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s05_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s06_mi, s08_pa, s09_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s09_si, s10_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s09_si, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s09_si+s07_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s07_mi, s08_pa, s09_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s07_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s06_mi, s07_mi, s08_pa, s09_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s09_si, s10_pa, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s09_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s09_si, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s11_si+s03_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s03_mi, s04_mi, s08_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s03_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s06_mi, s08_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s10_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s11_si, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s11_si+s05_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s05_mi, s08_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s05_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s06_mi, s08_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s10_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s11_si, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s13_ki+s11_si+s07_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s07_mi, s08_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s07_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s06_mi, s07_mi, s08_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s10_pa, s11_si, s12_pi, s13_ki, s16_ti]
+      - signature: "s13_ki+s11_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s11_si, s12_pa, s13_ki, s14_pi, s16_ti]
+      - signature: "s15_ki+s07_si+s03_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s03_mi, s04_mi, s07_si, s08_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s03_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s06_mi, s07_si, s08_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s07_si, s08_mi, s10_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s07_si, s08_mi, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s05_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s05_mi, s07_si, s08_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s05_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s06_mi, s07_si, s08_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s07_si, s08_mi, s10_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s07_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s07_si, s08_mi, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s03_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s03_mi, s04_mi, s08_pa, s09_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s03_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s06_mi, s08_pa, s09_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s09_si, s10_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s09_si, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s05_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s05_mi, s08_pa, s09_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s05_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s06_mi, s08_pa, s09_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s09_si, s10_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s09_si, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s07_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s07_mi, s08_pa, s09_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s07_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s06_mi, s07_mi, s08_pa, s09_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s09_si, s10_pa, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s09_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s09_si, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s03_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s03_mi, s04_mi, s08_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s03_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s06_mi, s08_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s10_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s03_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s03_mi, s04_ki, s08_mi, s11_si, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s05_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s05_mi, s08_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s05_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s06_mi, s08_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s10_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s05_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s05_mi, s08_mi, s11_si, s12_pa, s14_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s07_mi+s01_ti+r_rologe+s02_ki+s04_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s02_ki, s04_mi, s07_mi, s08_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s07_mi+s01_ti+r_rologe+s04_ki+s06_mi+s08_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s06_mi, s07_mi, s08_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s10_pa+s12_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s10_pa, s11_si, s12_pi, s15_ki, s16_ti]
+      - signature: "s15_ki+s11_si+s07_mi+s01_ti+r_rologe+s04_ki+s08_mi+s12_pa+s14_pi+s16_ti|kisimitirologekimipapiti"
+        rules: [s01_ti, s04_ki, s07_mi, s08_mi, s11_si, s12_pa, s14_pi, s15_ki, s16_ti]
+  - word: tipanakipaborurotimisasikama
+    note: "256x rung, 28 chars, 323.42M measured parser cost, 144 analyses. Stresses 16-slot template, five required slots, optional slots between them; odd slots prefix, even slots suffix; first analysis applies 11 rules."
+    parses:
+      - signature: "s11_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s06_sa, s08_si, s09_pa, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s09_pa, s10_si, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s09_pa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s09_pa, s10_si, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s09_pa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s08_mi, s09_pa, s10_sa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s07_na, s08_si, s09_pa, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s09_pa, s10_si, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s09_pa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s09_pa, s10_si, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s09_pa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s07_na, s08_mi, s09_pa, s10_sa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s07_na, s08_si, s09_pa, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s09_pa, s10_si, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s09_pa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s09_pa, s10_si, s11_ti, s12_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s09_pa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s11_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s07_na, s08_mi, s09_pa, s10_sa, s11_ti, s12_si, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s06_sa, s08_si, s09_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s09_pa, s10_si, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s09_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s09_pa, s10_si, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s09_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s08_mi, s09_pa, s10_sa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s07_na, s08_si, s09_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s09_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s09_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s07_na, s08_mi, s09_pa, s10_sa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s07_na, s08_si, s09_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s09_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s09_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s07_na, s08_mi, s09_pa, s10_sa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s06_sa, s08_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s08_mi, s10_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s07_na, s08_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s07_na, s08_mi, s10_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s07_na, s08_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s07_na, s08_mi, s10_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s08_si, s09_na, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s08_sa, s09_na, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s08_sa, s09_na, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s08_mi, s09_na, s10_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s08_si, s09_na, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s08_sa, s09_na, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s13_ti, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s08_sa, s09_na, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s13_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s08_mi, s09_na, s10_sa, s11_pa, s12_si, s13_ti, s14_ka, s16_ma]
+      - signature: "s15_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s06_sa, s08_si, s09_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s09_pa, s10_si, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s09_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s09_pa, s10_si, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s09_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s08_mi, s09_pa, s10_sa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s07_na, s08_si, s09_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s09_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s09_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s07_na, s08_mi, s09_pa, s10_sa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s07_na, s08_si, s09_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s09_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s09_pa, s10_si, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s09_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s09_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s07_na, s08_mi, s09_pa, s10_sa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s06_sa, s08_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s08_mi, s10_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s07_na, s08_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s07_na, s08_mi, s10_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s07_na, s08_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s07_na, s08_mi, s10_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s08_si, s09_na, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s08_sa, s09_na, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s08_sa, s09_na, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s08_mi, s09_na, s10_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s08_si, s09_na, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s08_sa, s09_na, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s08_sa, s09_na, s10_si, s11_pa, s12_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s08_sa, s09_na, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s11_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s08_mi, s09_na, s10_sa, s11_pa, s12_si, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s06_sa, s08_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s05_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s05_na, s08_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s06_mi, s08_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s05_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s05_na, s08_mi, s10_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s07_na, s08_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s07_na, s08_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s07_na, s08_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s07_na, s08_mi, s10_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s07_na, s08_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s07_na, s08_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s07_na, s08_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s07_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s07_na, s08_mi, s10_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s06_sa, s08_si, s09_na, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s08_sa, s09_na, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s03_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s03_ki, s04_mi, s08_sa, s09_na, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s08_sa, s09_na, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s06_mi, s08_sa, s09_na, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s03_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s03_ki, s04_ti, s08_mi, s09_na, s10_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s06_sa+s08_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s06_sa, s08_si, s09_na, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s08_sa, s09_na, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s05_ki+s01_pa+r_boruro+s02_ti+s04_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s02_ti, s04_mi, s05_ki, s08_sa, s09_na, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s10_si+s12_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s08_sa, s09_na, s10_si, s12_ka, s13_pa, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s06_mi+s08_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s06_mi, s08_sa, s09_na, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+      - signature: "s15_ti+s13_pa+s09_na+s05_ki+s01_pa+r_boruro+s04_ti+s08_mi+s10_sa+s12_si+s14_ka+s16_ma|tipanakipaborurotimisasikama"
+        rules: [s01_pa, s04_ti, s05_ki, s08_mi, s09_na, s10_sa, s12_si, s13_pa, s14_ka, s15_ti, s16_ma]
+  - word: tapasamakatapalohohukatikikimipatataki
+    note: "wasted rung, 38 chars, 217.87M measured parser cost, 0 analyses. No analysis: the search explores the 16-slot template, five required slots, optional slots between them; odd slots prefix, even slots suffix space and fails (dearest failing word, the cost of a wasted search)."
+    expect_fail: true
+    blocked_by: [wasted-search]
