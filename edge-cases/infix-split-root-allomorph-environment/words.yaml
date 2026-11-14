@@ -1,5 +1,9 @@
-# oracle-provenance: machine-pr=sillsdev/machine#631 machine-commit=7e5d5a64 verified-date=2026-11-10
-# Rows taken from the machine conformance runner (--propose) with that fix; without it ginabas has no parse.
+# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check); the ginabas row is expect_fail
+# because that build gives it no parse.
+# History: the rows were first taken with the fix in sillsdev/machine#631 (commit 7e5d5a64), where ginabas parses as
+# gabas + infix. #631 was CLOSED UNMERGED on 2026-11-12 and sillsdev/machine#630 is still open, so the oracle at
+# 4d9b454d has no such fix and ginabas has no parse there. ginabas is pinned to that outcome and its note records
+# the intended behaviour. When #630 is fixed upstream and a pin includes it, flip ginabas back to the parse below.
 language: InfixSplitRootAllomorphEnvironment
 inspired_by: ["synthetic allomorph environment and infixation probe (not modeling any real language)"]
 sources:
@@ -21,10 +25,12 @@ words:
         rules: []
   - word: ginabas
     note: >-
-      The infix splits gabas into g and abas; the infix's i follows the first piece but is not the root's right context. The root is word-final, so gabs / _ V does not apply and must not block gabas (sillsdev/machine issue 630).
-    parses:
-      - signature: "ROOT+INF|ginabas"
-        rules: [mrInfix]
+      Known oracle limitation (sillsdev/machine#630, open; the fix in #631 was closed unmerged). The infix splits gabas
+      into g and abas; the infix's i follows the first piece but is not the root's right context, and the root is
+      word-final, so gabs / _ V does not apply and should not block gabas. The oracle at 4d9b454d tests the allomorph
+      environment at each piece, counts gabs as applicable, and so no parse results. Intended parse once #630 is
+      fixed: ROOT+INF|ginabas with rule mrInfix.
+    expect_fail: true
   - word: ginabsa
     note: >-
       The infix splits gabs into g and abs; the suffix a follows the last piece, so gabs / _ V holds and the root parses as gabs. Two rule orders (infix then suffix, suffix then infix) give the same surface.
