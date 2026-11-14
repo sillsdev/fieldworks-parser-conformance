@@ -1,0 +1,30 @@
+# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check, --propose)
+language: NfaLiteralAllomorphEnvironment
+inspired_by: ["synthetic literal root-allomorph environment and infixation probe"]
+sources:
+  - "FieldWorks HCLoader.LoadRootAllomorph and LoadEnvironmentPattern"
+  - "sillsdev/PanGloss issue 300"
+requires: []
+fieldworks_producible: true
+words:
+  - word: gabsa
+    note: The suffix a supplies the literal right context for the conditioned gabs allomorph.
+    parses:
+      - signature: "ROOT+SFX|gabsa"
+        rules: [mrSuffix]
+  - word: gabas
+    note: At the end of the word the conditioned form is inapplicable, so gabas is used.
+    parses:
+      - signature: "ROOT|gabas"
+        rules: []
+  - word: ginabas
+    note: Infix in splits the elsewhere allomorph; no literal a follows its first piece.
+    parses:
+      - signature: "ROOT+INF|ginabas"
+        rules: [mrInfix]
+  - word: gabs
+    note: The conditioned allomorph lacks the required following a.
+    expect_fail: true
+  - word: gabasa
+    note: A following a licenses gabs and blocks the elsewhere form gabas.
+    expect_fail: true
