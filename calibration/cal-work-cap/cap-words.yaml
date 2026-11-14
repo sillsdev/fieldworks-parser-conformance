@@ -1,0 +1,15 @@
+# kind: calibration (work-cap words; no oracle analyses are recorded for a word the engine stops)
+# Run: pangloss batch grammar.xml cap-words.txt out.tsv --cost-column --work-columns --work-cap 200000
+# A CAP row ends at the cap, so its signature is partial and engine-dependent: only the status and the
+# work-step bound are expected. The C# oracle has no work cap, so it supplies no row for these words.
+work_cap: 200000
+work_steps_at_most: 212500
+words:
+  - word: "xxmiloy"
+    note: "x*2 milo y*1. Measured: CAP at the reduced work cap of 200000 steps, 162x the family's cheapest word; the search is not finished, so no analysis is expected."
+    expect_status: CAP
+    measured_work_steps: 212500
+  - word: "xxxmilmy"
+    note: "x*3 milm y*1. Measured: CAP at the reduced work cap of 200000 steps, 152x the family's cheapest word; the search is not finished, so no analysis is expected."
+    expect_status: CAP
+    measured_work_steps: 212500
