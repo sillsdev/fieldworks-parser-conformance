@@ -1,10 +1,12 @@
 # oracle-provenance: hc.dll built from sillsdev/machine PR 627 head d26dd375 (with the #615 conformance runner; the lookup code is the same as at d10da372 apart from trace order), verified-date=2026-11-12
-# Rows are those of PR 627, which is not on master. Master and PR 627 differ on exactly one word, "bu":
-# master parses it as BU, PR 627 does not (see README.md). Every other row is the same on both builds.
+# These rows were measured from PR 627 head d26dd375 before it merged. At the time, pre-merge master and
+# PR 627 differed on exactly one word, "bu": pre-merge master parsed it as BU, while PR 627 did not.
+# Every other row matched on those two builds (see README.md).
 #
-# Pins Morpher.LexicalLookup. Master proposes every allomorph of each matched lexical entry for synthesis;
-# PR 627 proposes only the root allomorph that matched the input, and skips an entry whose syntactic features
-# do not unify with the input's. The second change only saves work and must not move any row.
+# This fixture pins Morpher.LexicalLookup. The #627 change proposes only the root allomorph that matched the
+# input, and skips an entry whose syntactic features do not unify with the input's. The second change only
+# saves work and must not move any row. As of 2026-11-14, the PanGloss-pinned C# oracle (machine 1ddef2bd)
+# also gives "bu" no parse, matching expect_fail: true.
 
 language: LexicalLookupSiblingAllomorphs
 inspired_by: ["synthetic lexical-lookup probe (not modeling any real language)"]
@@ -16,7 +18,7 @@ fieldworks_producible: true
 words:
   - word: bu
     note: >-
-      The sibling case. Analysis re-inserts at most one i after u (Deletion Reapplications 0), so it reaches bui and never buii. The matched allomorph bui requires a following consonant, and nothing follows it, so synthesis rejects it. Master also tries the entry's other allomorph buii, which synthesises to "bu" because prHiatusI deletes both i's, and so parses the word through a sibling that analysis never matched. PR 627 tries only bui, so the word does not parse there.
+      The sibling case. Analysis re-inserts at most one i after u (Deletion Reapplications 0), so it reaches bui and never buii. The matched allomorph bui requires a following consonant, and nothing follows it, so synthesis rejects it. Before #627 merged, master also tried the entry's other allomorph buii, which synthesises to "bu" because prHiatusI deletes both i's, and so parsed the word through a sibling that analysis never matched. The #627 change tries only bui; the current pinned oracle (1ddef2bd) therefore gives no parse, as expected.
     expect_fail: true
 
   - word: tuk
@@ -51,7 +53,7 @@ words:
 
   - word: takt
     note: >-
-      Syntactic-feature control: the noun suffix -t asks for a noun stem, so only the noun homograph parses. PR 627 skips the verb homograph before synthesis; master tries it and rejects it later. The row is the same.
+      Syntactic-feature control: the noun suffix -t asks for a noun stem, so only the noun homograph parses. The #627 change skips the verb homograph before synthesis; pre-merge master tried it and rejected it later. The row is the same.
     parses:
       - signature: "TAKN+NSUF|takt"
         rules: [mrNounSuf]

@@ -4,13 +4,14 @@
      left to right, at the default Deletion Reapplications 0. Entry BU has two allomorphs: buii, and bui which
      a Require environment limits to "before a consonant" (as a FieldWorks user writes "/ _ [C]"). Analysing
      the surface word "bu" re-inserts at most one i after the u, so analysis reaches bui and never buii. The
-     matched allomorph bui fails its environment in synthesis, because nothing follows it. Whether the entry's
-     other allomorph buii is also tried is the difference between sillsdev/machine master (every allomorph of a
-     matched entry is tried, and buii synthesises to "bu") and machine PR 627 (only the matched allomorph is).
-     BAK has two plain allomorphs and checks that a matched allomorph still synthesises. TUIK, with one allomorph, shows the deletion rule at work in a word that parses on both builds. TAK is a noun and a
+     matched allomorph bui fails its environment in synthesis, because nothing follows it. In the original
+     pre-merge comparison, master also tried the entry's other allomorph buii (which synthesises to "bu"),
+     while PR 627 tried only the matched allomorph. BAK has two plain allomorphs and checks that a matched
+     allomorph still synthesises. TUIK, with one allomorph, shows the deletion rule at work in a word whose
+     result matched on both measured builds. TAK is a noun and a
      verb homograph; the suffix -sa takes only verbs and -t only nouns, so analysis of a suffixed word asks for
-     entries of one part of speech and the other homograph is skipped (machine PR 627 skips it earlier, by
-     syntactic feature; the output is the same). -->
+     entries of one part of speech and the other homograph is skipped (the #627 change skips it earlier, by
+     syntactic feature; the output matched on both measured builds). -->
 <HermitCrabInput>
   <Language>
     <Name>LexicalLookupSiblingAllomorphs</Name>
