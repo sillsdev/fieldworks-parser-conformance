@@ -12,6 +12,11 @@ a build by the first eight characters of its hash.
 
 ## Builds cited in fixtures
 
+**Current status (2026-11-14):** sillsdev/machine #627 merged to master on 2026-11-12 (`1eae2268`). PanGloss PR #313
+pins its C# oracle at machine `1ddef2bd`, which is `4d9b454d` plus a cherry-pick of #627; that oracle gives `bu` no
+parse, matching this fixture's `expect_fail: true`. The `d26dd375` row below records the earlier #615-runner measurement:
+its merge status and pre-merge master result describe the state when that build was tested.
+
 | Short | Full hash | What it is | Files citing it |
 |---|---|---|---|
 | `4d9b454d` | `4d9b454d42a0da35e058641a65596339a79d115b` | Exact C# founding-oracle build used to propose and trace-check `empty-required-template-slot` and `infix-ambiguous-site`, to propose `nfa-literal-allomorph-environment`, and to take the analyses of the six batch B structural calibration families (`calibration/cal-*` listed in `calibration/README.md`; `hc-conformance --propose`, self-check mode). | `edge-cases/empty-required-template-slot/words.yaml`, `edge-cases/infix-ambiguous-site/words.yaml`, `edge-cases/nfa-literal-allomorph-environment/words.yaml`, the six batch B `calibration/cal-*/words.yaml` |

@@ -166,7 +166,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 ## Allomorphs, stem names and exceptions
 
 - `edge-cases/disjunctive-recheck`: allomorphs chosen in order, where the first allomorph's right environment is re-checked against the rest of the word.
-- `edge-cases/lexical-lookup-sibling-allomorphs`: a word that parses only through an entry's other allomorph than the one analysis matched (master) or not at all (machine PR 627), plus syntactic-feature homograph controls (7 words).
+- `edge-cases/lexical-lookup-sibling-allomorphs`: a matched-allomorph lookup probe (`bu` has no parse with the #627 fix now in machine master), plus syntactic-feature homograph controls (7 words).
 - `edge-cases/free-fluctuating-allomorph-pair`: two allomorphs that can both apply, so a word has one parse per allomorph.
 - `edge-cases/mpr-gated-exception`: a phonological rule that a root or an affix switches off with a morphological feature.
 - `edge-cases/stem-name-restricted-root-allomorph`: [XAmple] a root allomorph that is used only when a stem name matches the word's features.
