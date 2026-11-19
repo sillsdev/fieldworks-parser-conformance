@@ -1156,6 +1156,181 @@ SimultaneousFeeding,gigugi,GIGI|gigugi,RewriteRule Iterative (epenthesis/deletio
 SimultaneousSubruleGenuineOverlap,be,|be,RewriteRule Simultaneous
 SimultaneousSubruleGenuineOverlap,bu,|bu,RewriteRule Simultaneous
 SimultaneousSubruleGenuineOverlap,di,|di,RewriteRule Simultaneous
+SpellingCompoundAffixFeeds,aa,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,ai,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ai,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,pa,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,pp,Y|pp,CompoundingRule
+SpellingCompoundAffixFeeds,pi,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pi,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sa,PRE+X|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,si,PRE+X|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ia,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ia,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,ip,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,ii,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ii,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,aap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,aip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,paa,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,paa,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pap,Y+SUF|p[aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,pap,Y+SUF|p[aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pai,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,pai,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ppa,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,ppa,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ppi,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,ppi,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pia,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,pia,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pip,Y+SUF|p[aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,pip,Y+SUF|p[aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pii,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,pii,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saa,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saa,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,sai,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sai,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,spa,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spa,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundAffixFeeds,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundAffixFeeds,spi,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spi,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spi,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spi,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,spi,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,spi,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sia,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sia,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sip,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sip,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,sip,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sip,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,sii,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sii,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,iap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,iip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAffixFeeds,sxyi,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyi,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixFeeds,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundAffixFeeds,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixFeeds,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
 SpellingCompoundAffixes,sa,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundAffixes,ai,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundAffixes,ai,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
@@ -1260,6 +1435,383 @@ SpellingCompoundCompleted,axy,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
 SpellingCompoundCompleted,xya,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
 SpellingCompoundCompleted,ai,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
 SpellingCompoundCompleted,ia,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,axy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,axy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,axy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,axy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,ap,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,ap,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,ap,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,ap,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xya,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xya,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xya,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xya,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xyxy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xyxy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xyxy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xyxy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xyp,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,xyp,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xyp,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,xyp,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,pa,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,pa,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,pa,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,pa,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,pxy,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,pxy,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,pxy,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,pxy,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,pp,Y|p+?p,CompoundingRule
+SpellingCompoundMultirule,pp,Y|p+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,pp,Y|p+?p,CompoundingRule
+SpellingCompoundMultirule,pp,Y|p+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,a+a,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,a+a,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,a+a,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,a+a,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,a+xy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,a+xy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,a+xy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,a+xy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,a+p,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,a+p,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,a+p,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,a+p,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xy+a,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xy+a,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xy+a,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xy+a,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xy+xy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xy+xy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xy+xy,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,xy+xy,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xy+p,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,xy+p,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,xy+p,X+Y|[aá(xy)ei]+?p,CompoundingRule
+SpellingCompoundMultirule,xy+p,X+Y|[aá(xy)ei]+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,p+a,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,p+a,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,p+a,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,p+a,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,p+xy,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,p+xy,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,p+xy,Y+X|p+?[aá(xy)ei],CompoundingRule
+SpellingCompoundMultirule,p+xy,Y+X|p+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundMultirule,p+p,Y|p+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultirule,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundMultirule,p+p,Y|p+?p,Boundary markers (CharacterDefinitionTable)
+SpellingCompoundMultiruleAffixes,aa,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,ai,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ai,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,ai,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pa,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pp,Y|pp,CompoundingRule
+SpellingCompoundMultiruleAffixes,pp,Y|pp,CompoundingRule
+SpellingCompoundMultiruleAffixes,pi,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pi,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pi,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sa,PRE+X|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,si,PRE+X|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ia,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ia,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,ia,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,ip,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,ip,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,ii,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ii,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,ii,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,aap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,asa,X+PRE|[aá(xy)ei]s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,asa,X+PRE|[aá(xy)ei]s[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,asp,X+PRE+Y|[aá(xy)ei]sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,asp,X+PRE+Y|[aá(xy)ei]sp,CompoundingRule
+SpellingCompoundMultiruleAffixes,asi,X+PRE|[aá(xy)ei]s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,asi,X+PRE|[aá(xy)ei]s[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,aip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,aii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,paa,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,paa,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pap,Y+SUF|p[aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pap,Y+SUF|p[aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,pai,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pai,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ppa,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ppa,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ppa,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ppa,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ppa,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ppa,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ppi,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ppi,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ppi,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ppi,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ppi,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ppi,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,psa,Y+PRE+X|ps[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,psa,Y+PRE+X|ps[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,psp,Y+PRE|psp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,psp,Y+PRE|psp,CompoundingRule
+SpellingCompoundMultiruleAffixes,psi,Y+PRE+X|ps[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,psi,Y+PRE+X|ps[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pia,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pia,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pip,Y+SUF|p[aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pip,Y+SUF|p[aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,pii,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pii,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saa,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saa,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sai,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sai,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sai,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundMultiruleAffixes,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundMultiruleAffixes,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+SUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,spi,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sia,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sia,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sia,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sip,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sip,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sip,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sip,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sip,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sip,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sii,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sii,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sii,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,iap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,isa,X+PRE|[aá(xy)ei]s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,isa,X+PRE|[aá(xy)ei]s[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,isp,X+PRE+Y|[aá(xy)ei]sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,isp,X+PRE+Y|[aá(xy)ei]sp,CompoundingRule
+SpellingCompoundMultiruleAffixes,isi,X+PRE|[aá(xy)ei]s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,isi,X+PRE|[aá(xy)ei]s[aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,iip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,iii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sapi,PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyi,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,saixy,PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundMultiruleAffixes,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundMultiruleAffixes,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundMultiruleAffixes,sxyip,PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p,CompoundingRule
 SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,CompoundingRule
 SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
 SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,MPR features/groups
@@ -1330,6 +1882,35 @@ SpellingCompoundOrdersPos,sp,Z+Y|sp,CompoundingRule
 SpellingCompoundOrdersPos,áp,X+Y|[aá(xy)ei]p,CompoundingRule
 SpellingCompoundOrdersPos,pxy,Y+X|p[aá(xy)ei],CompoundingRule
 SpellingCompoundOrdersPos,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundPrefixFeeds,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundPrefixFeeds,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,pp,Y|pp,CompoundingRule
+SpellingCompoundPrefixFeeds,sa,PRE+X|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,saa,PRE+X|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundPrefixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,sap,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundPrefixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,spa,PRE+Y+X|sp[aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundPrefixFeeds,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundPrefixFeeds,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundPrefixFeeds,pxy,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundPrefixFeeds,sxy,PRE+X|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
 SpellingCompoundReversed,aa,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,aá,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,axy,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
@@ -1367,6 +1948,108 @@ SpellingCompoundStrata,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],Affix
 SpellingCompoundStrata,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
 SpellingCompoundStrata,aia,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
 SpellingCompoundStrata,aia,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aa,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundSuffixFeeds,ai,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ai,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,pa,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,pp,Y|pp,CompoundingRule
+SpellingCompoundSuffixFeeds,pi,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pi,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,ia,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ia,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,ip,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundSuffixFeeds,ii,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ii,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,aaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundSuffixFeeds,aap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,aai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,apa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,api,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,aia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundSuffixFeeds,aip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,aii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,paa,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,paa,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,paa,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pap,Y+SUF|p[aá(xy)i]p,CompoundingRule
+SpellingCompoundSuffixFeeds,pap,Y+SUF|p[aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pai,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,pai,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,pai,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ppa,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,ppa,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ppi,Y+SUF|pp[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,ppi,Y+SUF|pp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pia,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,pia,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,pia,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pip,Y+SUF|p[aá(xy)i]p,CompoundingRule
+SpellingCompoundSuffixFeeds,pip,Y+SUF|p[aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pii,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,pii,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,pii,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,iaa,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundSuffixFeeds,iap,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,iai,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,ipa,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,ipi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,iia,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,CompoundingRule
+SpellingCompoundSuffixFeeds,iip,X+SUF+Y|[aá(xy)ei][aá(xy)i]p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,iii,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundSuffixFeeds,pxy,Y+SUF|p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pxy,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,xyi,X+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,xyi,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,xypi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,xypi,X+Y+SUF|[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pxyi,Y+SUF+X|p[aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,pxyi,Y+SUF+X|p[aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,pxyi,Y+X+SUF|p[aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,pxyi,Y+X+SUF|p[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,axyi,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundSuffixFeeds,axyi,X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSuffixFeeds,axyi,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundSuffixFeeds,axyi,X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundTemplate,sai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundTemplate,saa,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundTemplate,saai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
@@ -1377,6 +2060,27 @@ SpellingCompoundTemplate,sxyai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],
 SpellingCompoundTemplate,sxyai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
 SpellingCompoundTemplate,sxyxyi,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundTemplate,sxyxyi,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundTemplateFeeds,saa,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,sai,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,spa,TPRE+Y+TSUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,spi,TPRE+Y+TSUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,sia,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,sii,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,sapi,TPRE+X+Y+TSUF|s[aá(xy)ei]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,sapi,TPRE+X+Y+TSUF|s[aá(xy)ei]p[aá(xy)i],CompoundingRule
+SpellingCompoundTemplateFeeds,sxyi,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,saixy,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFeeds,saixy,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundTemplateFreeFeeds,saa,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,spa,TPRE+Y+TSUF|sp[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,sea,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,saepi,TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,saepi,TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i],CompoundingRule
+SpellingCompoundTemplateFreeFeeds,sapei,TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,sapei,TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i],CompoundingRule
+SpellingCompoundTemplateFreeFeeds,saexy,TPRE+X+DSUF+TSUF|s[aá(xy)ei][aá(xy)e][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,saexy,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplateFreeFeeds,saexy,TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
 Autoseg,pan,PA+SUF|pan,AffixProcessRule: prefix/suffix/circumfix/infix
 Autoseg,pán,PAH+SUF|pán,AffixProcessRule: prefix/suffix/circumfix/infix
 StemNameRestrictedRootAllomorph,tam,ROOT|tam,Stem names

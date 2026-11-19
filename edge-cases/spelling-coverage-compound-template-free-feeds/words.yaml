@@ -1,0 +1,319 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundTemplateFreeFeeds
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
+words:
+  - word: a
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: p
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: s
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: e
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: as
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ae
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ps
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pe
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ss
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: se
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ea
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: es
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ee
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aas
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aae
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: apa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: app
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aps
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ape
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: asa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: asp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ass
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ase
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aea
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aes
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aee
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: paa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pas
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pae
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pps
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppe
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: psa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: psp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pss
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pse
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pea
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pes
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pee
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: saa
+    note: "C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]"
+        rules: ["TPRE", "TSUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: sap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sas
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sae
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: spa
+    note: "C# returns 1 analysis (TPRE+Y+TSUF|sp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "TPRE+Y+TSUF|sp[aá(xy)i]"
+        rules: ["TPRE", "TSUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: spp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sps
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: spe
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ssa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ssp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sss
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sse
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sea
+    note: "C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]"
+        rules: ["TPRE", "TSUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: sep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ses
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: see
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eas
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eae
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: epa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: epp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eps
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: epe
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: esa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: esp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ess
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ese
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eea
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ees
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: eee
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: saep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sape
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: saepi
+    note: "C# returns 1 analysis (TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i]"
+        rules: ["DSUF", "TPRE", "TSUF", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sapei
+    note: "C# returns 1 analysis (TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i]"
+        rules: ["DSUF", "TPRE", "TSUF", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: saipe
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aepi
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: xy
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sxye
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: saexy
+    note: "C# returns 2 analyses (TPRE+X+DSUF+TSUF|s[aá(xy)ei][aá(xy)e][aá(xy)i]; TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "TPRE+X+DSUF+TSUF|s[aá(xy)ei][aá(xy)e][aá(xy)i]"
+        rules: ["DSUF", "TPRE", "TSUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["TPRE", "TSUF", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sxyep
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
