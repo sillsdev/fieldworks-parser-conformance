@@ -462,6 +462,32 @@ MergeSubrulesPosSimultaneousTemplate,Gs,TA_V+S|Gs,RewriteSubruleDef gating: requ
 MergeSubrulesPosSimultaneousTemplate,Gs,TA_V+S|Gs,Affix template slots (obligatory/disjunctive/ordering)
 MergeThenMetathesis,aca,ATSA|aca,MetathesisRule
 MergeThenMetathesis,aca,ATSA|aca,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisBoundaryBetweenSwitchesCompound,pt,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,pt,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,p+t,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,p+t,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,tp,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,t+p,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,ts,Z+PRE|t+?+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,t+s,Z+PRE|t+?+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,t++s,Z+PRE|t+?+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,st,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,s+t,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,ts,Z+PRE|t+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,t+s,Z+PRE|t+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,st,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,s+t,,MetathesisRule
+MetathesisMorphOrderCompound,pt,Y+Z|pt,MetathesisRule
+MetathesisMorphOrderCompound,pt,Y+Z|pt,MetathesisRule
+MetathesisMorphOrderPrefixRoot,ts,Z+PRE|ts,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,+ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,t+s,,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,st,,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,s+t,,MetathesisRule
+MetathesisBoundaryRightToLeftSuffix,ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftSuffix,+ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftSuffix,ta,,MetathesisRule
 MorphotacticAttributeBreadth,kul,KUL|kul,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,kulde,KUL+ONCE|kulde,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,kuldede,,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)

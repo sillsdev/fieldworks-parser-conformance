@@ -17,7 +17,7 @@ project built in FieldWorks (LibLCM), put through `HCLoader.cs`, yields the fixt
 loader source could write a construct is weaker evidence. Until a fixture has a FieldWorks witness (a
 `fieldworks/` directory, [PROTOCOL.md](../PROTOCOL.md) section 10), its `fieldworks_producible: true` is a claim
 read from the loader. Only the 11 fixtures that carry a witness are certified today (all under `edge-cases/`);
-the other 205 of the 216 fixtures rest on the loader reading alone.
+the other 212 of the 223 fixtures rest on the loader reading alone.
 
 ## What the XML can say but FieldWorks cannot, so we do not test it
 
@@ -72,12 +72,13 @@ protocol's section 9 holds the rule that applies these to a fixture.
 | 26 | `OutputHeadFeatures`, `outputObligatoryFeatures` and `requiredStemName` on a template-slot rule | `LoadInflAffixProcessRule` (1025) sets the required part of speech (1035-1036), the required head features from the inflection features (1037-1038) and the required production restrictions, and nothing else: no output feature structure, no stem name. Only `LoadDerivAffixProcessRule` sets `OutputSyntacticFeatureStruct` (990-991) and `RequiredStemName` (1009-1011). Output MPR is row 11. | none (`final-template-partial-trace` was rewritten) |
 | 27 | An MPR feature outside the three loader groups; an excluded MPR feature on anything but a slot rule's inflection-type feature; an inflection-type feature that a rule requires or writes; more than one inflection class on an entry or an output | `LoadLanguage` puts every MPR feature in `inflClasses`, `exceptionFeatures` or `lexEntryInflTypes` (181-205). A slot rule's `ExcludedMprFeatures` come only from the irregular inflection types of its slot (1766), and only a variant entry carries such a feature (`LoadLexEntryOfVariant` 796). A derivational affix writes one inflection class and the production restrictions (1015-1018), an entry has one inflection class (745-751), and a compound writes one (1950, 2011, 2038). | 3 words (`morphotactic-attribute-breadth`: `topdori`, `topdo`, `topri`) |
 | 28 | An affix-template slot with no loaded affix rules | `LoadLanguage` filters out a slot unless an affix MSA has a loaded morpheme (308-312). `LoadMorphologicalRule` adds an affix rule to that map only when it has an allomorph (923-971), and `LoadAffixTemplate` takes its rules from that map (1754-1780). An empty slot in a FieldWorks project is therefore absent from the HC grammar. Checked at FieldWorks commit `936ae91fe7bb2d5b9759e47eb5e95fc9bd8b388d`; see [sillsdev/machine#542](https://github.com/sillsdev/machine/issues/542). | none |
+| 29 | A `+` morpheme boundary spelled inside a root's own phonetic shape, between two of its segments | `HCLoader.cs` puts the `+` boundary only on the inside edge of an affix form and between the two parts of a compound (the lines in the next section); a root's form is the segments it was typed with. A linguist typing `+` into a lexical form is not witnessed, so a grammar whose entry spells `+` between two segments is treated as not producible until a FieldWorks project shows otherwise. See the `+` boundary paragraph below. | none |
 
 Rows 1 to 6, 8, 9, 10, 17 and 18 cover the 26 `No` rows of `fieldworks-producibility.tsv` (row 17
-holds nine, row 9 five, row 10 three, row 1 two, and rows 2 to 6, 8 and 18 one each). Rows 7, 11 to 16 and 19 to 28
+holds nine, row 9 five, row 10 three, row 1 two, and rows 2 to 6, 8 and 18 one each). Rows 7, 11 to 16 and 19 to 29
 are shapes that no per-attribute row can express: the usage-level and mechanical checks of the protocol's
 section 9 and the retirement record's list of what the suite no longer covers. Fixtures were deleted for
-rows 1 to 5, 7 to 11 and 20; rows 6, 12 to 16, 19 and 21 to 28 cost no fixture, though rows 24 and 27 cost
+rows 1 to 5, 7 to 11 and 20; rows 6, 12 to 16, 19 and 21 to 29 cost no fixture, though rows 24 and 27 cost
 words.
 
 `fieldworks-writable-shapes.tsv` is the census behind rows 11 to 28: for each rule kind (slot rule, unslotted
@@ -93,7 +94,7 @@ members and environments a grammar uses, not about each output byte for byte. `H
 morpheme boundary on the inside edge of every affix form and between the two parts of a compound (prefix
 1358 and 1649, suffix 1360 and 1623, circumfix 1597, reduplication 1506, 1549 and 1564, compounds 1871,
 1884, 1956, 2017 and 2044); the loader's table always has it (2761). A grammar file can write that boundary
-only if it defines one, and 17 of the 143 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
+only if it defines one, and 76 of the 223 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
 effect of that on a parse is not measured. A claim that an output is "written as HCLoader writes it" is
 therefore made only where the output carries the boundary, as in the circumfix of
 `languages/suffixing-vowel-harmony`.
