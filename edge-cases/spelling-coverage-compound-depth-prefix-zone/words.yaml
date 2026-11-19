@@ -1,0 +1,86 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundDepthPrefixZone
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 3
+fieldworks_producible: true
+words:
+  - word: as
+    note: "C# returns 1 analysis (X+PRE|[aá]s): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE|[aá]s"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: sa
+    note: "C# returns 1 analysis (PRE+X|s[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X|s[aá]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: apst
+    note: "C# returns 3 analyses (X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: aspt
+    note: "C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: apt
+    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: sap
+    note: "C# returns 3 analyses (PRE+X+Y|s[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X+Y|s[aá][+-=]?p"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|s[aá][+-=]?p"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|s[aá][+-=]?p"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"

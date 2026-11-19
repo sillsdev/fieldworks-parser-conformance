@@ -1,0 +1,47 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundJunctionBoundaryMark
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 3
+fieldworks_producible: true
+words:
+  - word: "apét"
+    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: apt
+    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: "aét"
+    note: "C# returns 2 analyses (X+Z|[aá][+-=é]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Z|[aá][+-=é]?t"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Z|[aá][+-=é]?t"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: sa
+    note: "C# returns 1 analysis (PRE+X|s[aá]): pins that this word has a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X|s[aá]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"

@@ -1,0 +1,77 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundDepthPrefixHop
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 4
+fieldworks_producible: true
+words:
+  - word: aasp
+    note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?[aá][+-=]?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|[aá][+-=]?[aá][+-=]?sp"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+  - word: aaasp
+    note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?sp"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+  - word: aaspa
+    note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?[aá][+-=]?sp[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|[aá][+-=]?[aá][+-=]?sp[+-=]?[aá]"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+  - word: aass
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aspa
+    note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?sp[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|[aá][+-=]?sp[+-=]?[aá]"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+  - word: aaaas
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaa
+    note: "C# returns 1 analysis (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+  - word: aaaa
+    note: "C# returns 1 analysis (X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+  - word: aaaaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: apsta
+    note: "C# returns 1 analysis (X+Y+PRE+Z|[aá][+-=]?p[+-=]?st[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+PRE+Z|[aá][+-=]?p[+-=]?st[+-=]?[aá]"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"

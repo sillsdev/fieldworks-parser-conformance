@@ -1,0 +1,63 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundDepthReorderedPrefix
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 3
+fieldworks_producible: true
+words:
+  - word: spat
+    note: "C# returns 1 analysis (PRE+Y+X+Z|sp[aá][+-=]?[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y+X+Z|sp[aá][+-=]?[+-=]?t"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sap
+    note: "C# returns 2 analyses (PRE+X+Y|s[aá]p[+-=]?): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X+Y|s[aá]p[+-=]?"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|s[aá]p[+-=]?"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: apt
+    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: stpa
+    note: "C# returns 1 analysis (PRE+Z+Y+X|stp[+-=]?[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z+Y+X|stp[+-=]?[+-=]?[aá]"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: psat
+    note: "C# returns 1 analysis (Y+PRE+X+Z|p[+-=]?s[aá]t[+-=]?): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE+X+Z|p[+-=]?s[aá]t[+-=]?"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: aspt
+    note: "C# returns 1 analysis (X+PRE+Y+Z|[aá][+-=]?spt[+-=]?): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y+Z|[aá][+-=]?spt[+-=]?"
+        rules: ["PRE", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"

@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 184 fixtures: 6 languages and 178 edge cases.
+The list has 203 fixtures: 6 languages and 197 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 184 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 203 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -224,6 +224,25 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/compound-allomorph-identity-distinct-entries`: Two entries and two endocompounding rules, one head-first and one non-head-first, covering distinct roots in each order and ambiguity.
 - `edge-cases/compound-allomorph-identity-same-spelling`: One entry whose two allomorphs spell the same string under compounding, so every pairing is a distinct derivation.
 - `edge-cases/compound-allomorph-identity-separated`: A prefix on the non-head side of a compound, so the same root recurs with another morpheme between.
+- `edge-cases/spelling-coverage-compound-depth3`: The two rules grow the head at opposite ends.
+- `edge-cases/spelling-coverage-compound-depth4`: The two rules grow the head at opposite ends.
+- `edge-cases/spelling-coverage-compound-depth-asymmetric`: The head-first rule licenses different entries on each side.
+- `edge-cases/spelling-coverage-compound-depth-limit`: The same head grows to five stems under MaxRoots.
+- `edge-cases/spelling-coverage-compound-depth-medial-suffix`: A compound grows on both sides of a suffixed stem, so a suffix can sit between two stems.
+- `edge-cases/spelling-coverage-compound-depth-mpr-output`: A compound subrule adds an MPR feature, so the next application may see a different head MPR set.
+- `edge-cases/spelling-coverage-compound-depth-mpr-restricted`: Both compounding rules restrict the same MPR feature on either side.
+- `edge-cases/spelling-coverage-compound-depth-prefix-hop`: Repeated left growth puts a prefix before the third or fourth stem and can put the head in the last stem.
+- `edge-cases/spelling-coverage-compound-depth-prefix-zone`: A suffix-first compounding rule has a prefix rule beside it.
+- `edge-cases/spelling-coverage-compound-depth-reordered-prefix`: The prefix copies both input parts in reverse order.
+- `edge-cases/spelling-coverage-compound-junction-boundary-mark`: The compound boundary is written as the code `é`, a letter that decomposes to a base plus a combining mark.
+- `edge-cases/spelling-coverage-compound-junction-mark`: A phoneme spelling that begins with a combining mark follows a root at the compound junction.
+- `edge-cases/spelling-coverage-compound-singleton-boundary`: At two stems, the literal `+` boundary is typed in accepted compounds of single-segment roots.
+- `edge-cases/spelling-coverage-compound-singleton-depth3`: Two compounding rules over single-segment roots, with no written boundary, grow past two stems.
+- `edge-cases/spelling-coverage-compound-singleton-medial-suffix`: Two single-segment stems compound; a third stem makes a suffix between stems possible.
+- `edge-cases/spelling-coverage-compound-singleton-merging-mark`: A segment U+0301 (a combining acute) follows a root, and neither compounding rule writes a boundary at the junction.
+- `edge-cases/spelling-coverage-compound-singleton-quote-boundary`: A literal double quote is a spelling of the `+` boundary used by both compounding rules.
+- `edge-cases/spelling-coverage-compound-singleton-quote-segment`: A literal double quote is a phoneme code in both a root and a prefix.
+- `edge-cases/spelling-coverage-compound-singleton-thai-mark`: Thai mai ek (U+0E48), a combining mark, is listed as a segment and starts a root.
 
 ## Phonological rules: deletion, epenthesis, merge, expansion
 

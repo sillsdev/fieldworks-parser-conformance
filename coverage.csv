@@ -1481,6 +1481,885 @@ SpellingCompoundCompleted,axy,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
 SpellingCompoundCompleted,xya,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
 SpellingCompoundCompleted,ai,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
 SpellingCompoundCompleted,ia,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundDepthAsymmetric,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthAsymmetric,ap,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthAsymmetric,ap,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthAsymmetric,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthAsymmetric,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthAsymmetric,app,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthAsymmetric,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthAsymmetric,a-p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthAsymmetric,a-p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthAsymmetric,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthAsymmetric,a=p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthAsymmetric,a=p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthAsymmetric,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthAsymmetric,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthAsymmetric,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthLimit,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aa,X|[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ap,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,pa,Y+X|p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pp,Y|p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthLimit,at,X+Z|[aá][+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthLimit,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,ta,Z+X|t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a-p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a=p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthLimit,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthLimit,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthLimit,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthLimit,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,aaaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthLimit,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMedialSuffix,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthMedialSuffix,a-ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthMedialSuffix,a-ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthMedialSuffix,a-ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthMedialSuffix,a=ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthMedialSuffix,a=ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a=ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthMedialSuffix,a=ps-t,X+Y+SUF+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMedialSuffix,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,aa,X|[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,aa,X|[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,ap,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,ap,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,pa,Y+X|p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,pa,Y+X|p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,pp,Y|p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,pp,Y|p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,aaa,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,aaa,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,aap,X+Y|[aá][+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,aap,X+Y|[aá][+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,apa,X+Y|[aá][+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,apa,X+Y|[aá][+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,app,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,app,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,paa,Y+X|p[+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,paa,Y+X|p[+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,pap,Y+X|p[+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,pap,Y+X|p[+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,ppa,Y+X|p[+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,ppa,Y+X|p[+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,ppp,Y|p[+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,ppp,Y|p[+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthMprOutput,at,X+Z|[aá][+-=]?t,MPR features/groups
+SpellingCompoundDepthMprOutput,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthMprOutput,at,X+Z|[aá][+-=]?t,MPR features/groups
+SpellingCompoundDepthMprOutput,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,ta,Z+X|t[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,ta,Z+X|t[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,a-p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,a-p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,a=p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,a=p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthMprOutput,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,MPR features/groups
+SpellingCompoundDepthMprOutput,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthMprOutput,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,MPR features/groups
+SpellingCompoundDepthMprOutput,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprOutput,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprOutput,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprOutput,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprOutput,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,aa,X|[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,aa,X|[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,aa,X|[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,aa,X|[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,ap,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ap,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,ap,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ap,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,pa,Y+X|p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,pa,Y+X|p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,pa,Y+X|p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,pa,Y+X|p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,pp,Y|p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,pp,Y|p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,pp,Y|p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,pp,Y|p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,aaa,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,aaa,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,aap,X+Y|[aá][+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,aap,X+Y|[aá][+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,apa,X+Y|[aá][+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,apa,X+Y|[aá][+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,app,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,app,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,paa,Y+X|p[+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,paa,Y+X|p[+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,pap,Y+X|p[+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,pap,Y+X|p[+-=]?[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ppa,Y+X|p[+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ppa,Y+X|p[+-=]?p[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ppp,Y|p[+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ppp,Y|p[+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthMprRestricted,at,X+Z|[aá][+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,at,X+Z|[aá][+-=]?t,MPR features/groups
+SpellingCompoundDepthMprRestricted,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepthMprRestricted,at,X+Z|[aá][+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,at,X+Z|[aá][+-=]?t,MPR features/groups
+SpellingCompoundDepthMprRestricted,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,ta,Z+X|t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ta,Z+X|t[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,ta,Z+X|t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,ta,Z+X|t[+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,a-p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a-p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,a-p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a-p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,a=p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a=p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,a=p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a=p,X+Y|[aá][+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthMprRestricted,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,MPR features/groups
+SpellingCompoundDepthMprRestricted,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthMprRestricted,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,MPR features/groups
+SpellingCompoundDepthMprRestricted,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepthMprRestricted,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,MPR features/groups
+SpellingCompoundDepthMprRestricted,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthMprRestricted,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthMprRestricted,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthMprRestricted,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],MPR features/groups
+SpellingCompoundDepthPrefixHop,aasp,X+PRE+Y|[aá][+-=]?[aá][+-=]?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixHop,aasp,X+PRE+Y|[aá][+-=]?[aá][+-=]?sp,CompoundingRule
+SpellingCompoundDepthPrefixHop,aasp,X+PRE+Y|[aá][+-=]?[aá][+-=]?sp,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixHop,aaasp,X+PRE+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixHop,aaasp,X+PRE+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?sp,CompoundingRule
+SpellingCompoundDepthPrefixHop,aaasp,X+PRE+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?sp,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixHop,aaspa,X+PRE+Y|[aá][+-=]?[aá][+-=]?sp[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixHop,aaspa,X+PRE+Y|[aá][+-=]?[aá][+-=]?sp[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthPrefixHop,aaspa,X+PRE+Y|[aá][+-=]?[aá][+-=]?sp[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixHop,aspa,X+PRE+Y|[aá][+-=]?sp[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixHop,aspa,X+PRE+Y|[aá][+-=]?sp[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthPrefixHop,aspa,X+PRE+Y|[aá][+-=]?sp[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixHop,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthPrefixHop,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixHop,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepthPrefixHop,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixHop,apsta,X+Y+PRE+Z|[aá][+-=]?p[+-=]?st[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixHop,apsta,X+Y+PRE+Z|[aá][+-=]?p[+-=]?st[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthPrefixHop,apsta,X+Y+PRE+Z|[aá][+-=]?p[+-=]?st[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepthPrefixZone,as,X+PRE|[aá]s,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,sa,PRE+X|s[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,apst,X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,apst,X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,apst,X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,apst,X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,apst,X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,apst,X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,aspt,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,aspt,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,aspt,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,aspt,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,aspt,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,aspt,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,apt,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,apt,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthPrefixZone,sap,PRE+X+Y|s[aá][+-=]?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,sap,PRE+X+Y|s[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthPrefixZone,sap,PRE+X+Y|s[aá][+-=]?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,sap,PRE+X+Y|s[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthPrefixZone,sap,PRE+X+Y|s[aá][+-=]?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthPrefixZone,sap,PRE+X+Y|s[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,spat,PRE+Y+X+Z|sp[aá][+-=]?[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthReorderedPrefix,spat,PRE+Y+X+Z|sp[aá][+-=]?[+-=]?t,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,sap,PRE+X+Y|s[aá]p[+-=]?,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthReorderedPrefix,sap,PRE+X+Y|s[aá]p[+-=]?,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,sap,PRE+X+Y|s[aá]p[+-=]?,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthReorderedPrefix,sap,PRE+X+Y|s[aá]p[+-=]?,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,apt,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,apt,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,stpa,PRE+Z+Y+X|stp[+-=]?[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthReorderedPrefix,stpa,PRE+Z+Y+X|stp[+-=]?[+-=]?[aá],CompoundingRule
+SpellingCompoundDepthReorderedPrefix,psat,Y+PRE+X+Z|p[+-=]?s[aá]t[+-=]?,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthReorderedPrefix,psat,Y+PRE+X+Z|p[+-=]?s[aá]t[+-=]?,CompoundingRule
+SpellingCompoundDepthReorderedPrefix,aspt,X+PRE+Y+Z|[aá][+-=]?spt[+-=]?,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepthReorderedPrefix,aspt,X+PRE+Y+Z|[aá][+-=]?spt[+-=]?,CompoundingRule
+SpellingCompoundDepth3,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepth3,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepth3,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth3,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth3,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth3,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth3,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth3,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aa,X|[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aa,X|[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ap,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ap,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,pa,Y+X|p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pa,Y+X|p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pp,Y|p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pp,Y|p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aaa,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aap,X+Y|[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,apa,X+Y|[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,app,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,paa,Y+X|p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pap,Y+X|p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ppa,Y+X|p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ppp,Y|p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aaaa,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aaap,X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,aapa,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,aapp,X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,apaa,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,apap,X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,appa,X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,appp,X+Y|[aá][+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,paaa,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,paap,Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,papa,Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,papp,Y+X|p[+-=]?[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ppaa,Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,ppap,Y+X|p[+-=]?p[+-=]?[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,pppa,Y+X|p[+-=]?p[+-=]?p[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,pppp,Y|p[+-=]?p[+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepth4,at,X+Z|[aá][+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,at,X+Z|[aá][+-=]?t,CompoundingRule
+SpellingCompoundDepth4,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,ta,Z+X|t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,ta,Z+X|t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a-p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a=p,X+Y|[aá][+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=p,X+Y|[aá][+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a=p-t,X+Y+Z|[aá][+-=]?p[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a=sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule
+SpellingCompoundDepth4,a-p-p,X+Y|[aá][+-=]?p[+-=]?p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a+sp+t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule
+SpellingCompoundDepth4,a-sp-t,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-p-t-a,X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a=sp-t-a,X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-a-a,X|[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundDepth4,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule
+SpellingCompoundDepth4,a-a-a-a,X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundJunctionBoundaryMark,apét,X+Y+Z|[aá][+-=é]?p[+-=é]?t,CompoundingRule
+SpellingCompoundJunctionBoundaryMark,apét,X+Y+Z|[aá][+-=é]?p[+-=é]?t,CompoundingRule
+SpellingCompoundJunctionBoundaryMark,apt,X+Y+Z|[aá][+-=é]?p[+-=é]?t,CompoundingRule
+SpellingCompoundJunctionBoundaryMark,apt,X+Y+Z|[aá][+-=é]?p[+-=é]?t,CompoundingRule
+SpellingCompoundJunctionBoundaryMark,aét,X+Z|[aá][+-=é]?t,CompoundingRule
+SpellingCompoundJunctionBoundaryMark,aét,X+Z|[aá][+-=é]?t,CompoundingRule
+SpellingCompoundJunctionBoundaryMark,sa,PRE+X|s[aá],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundJunctionMark,aṕ,X+Y+Z|[aá][+-=]?p[+-=]?[t́],CompoundingRule
+SpellingCompoundJunctionMark,aṕ,X+Y+Z|[aá][+-=]?p[+-=]?[t́],CompoundingRule
+SpellingCompoundJunctionMark,apt,X+Y+Z|[aá][+-=]?p[+-=]?[t́],CompoundingRule
+SpellingCompoundJunctionMark,apt,X+Y+Z|[aá][+-=]?p[+-=]?[t́],CompoundingRule
+SpellingCompoundJunctionMark,at,X+Z|[aá][+-=]?[t́],CompoundingRule
+SpellingCompoundJunctionMark,at,X+Z|[aá][+-=]?[t́],CompoundingRule
+SpellingCompoundJunctionMark,sa,PRE+X|s[aá],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
 SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
 SpellingCompoundMultirule,aa,X|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
@@ -1965,6 +2844,32 @@ SpellingCompoundReversed,aá,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,axy,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,xya,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,ae,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundSingletonBoundary,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonBoundary,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonBoundary,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonBoundary,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonBoundary,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonBoundary,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonBoundary,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonBoundary,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonBoundary,a+sa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonBoundary,a+sa,X+PRE|a+?sa,CompoundingRule
+SpellingCompoundSingletonBoundary,a+sp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonBoundary,a+sp,X+PRE+Y|a+?sp,CompoundingRule
+SpellingCompoundSingletonBoundary,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonBoundary,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonDepth3,apt,X+Y+Z|apt,CompoundingRule
+SpellingCompoundSingletonDepth3,apt,X+Y+Z|apt,CompoundingRule
+SpellingCompoundSingletonDepth3,ap,X+Y|ap,CompoundingRule
+SpellingCompoundSingletonDepth3,ap,X+Y|ap,CompoundingRule
+SpellingCompoundSingletonDepth3,aaa,X|aaa,CompoundingRule
+SpellingCompoundSingletonDepth3,aaa,X|aaa,CompoundingRule
+SpellingCompoundSingletonDepth3,spa,PRE+Y+X|spa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonDepth3,spa,PRE+Y+X|spa,CompoundingRule
+SpellingCompoundSingletonDepth3,spa,PRE+Y+X|spa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonDepth3,spa,PRE+Y+X|spa,CompoundingRule
+SpellingCompoundSingletonDepth3,spa,PRE+Y+X|spa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonDepth3,spa,PRE+Y+X|spa,CompoundingRule
 SpellingCompoundSingletonJunctionDeletion,p,Y|p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 SpellingCompoundSingletonJunctionDeletion,p,Z+Y|+?p,CompoundingRule
 SpellingCompoundSingletonJunctionDeletion,p,Z+Y|+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
@@ -3282,6 +4187,58 @@ P,ss+t,PRE+Z+Zo|ss+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansi
 P,ss+t,PRE+Z+Zo|ss+?t,AffixProcessRule: prefix/suffix/circumfix/infix
 P,ss+t,PRE+Z+Zo|ss+?t,CompoundingRule
 P,ss+t,PRE+Z+Zo|ss+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonMedialSuffix,apst,X+Y+SUF+Z|apst,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apst,X+Y+SUF+Z|apst,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,apst,X+Y+SUF+Z|apst,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apst,X+Y+SUF+Z|apst,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,apst,X+Y+SUF+Z|apst,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apst,X+Y+SUF+Z|apst,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,apt,X+Y+Z|apt,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,apt,X+Y+Z|apt,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,as,X+SUF|as,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apts,X+Y+Z+SUF|apts,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apts,X+Y+Z+SUF|apts,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,apts,X+Y+Z+SUF|apts,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apts,X+Y+Z+SUF|apts,CompoundingRule
+SpellingCompoundSingletonMedialSuffix,apts,X+Y+Z+SUF|apts,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonMedialSuffix,apts,X+Y+Z+SUF|apts,CompoundingRule
+SpellingCompoundSingletonMergingMark,áp,X+W|áp,CompoundingRule
+SpellingCompoundSingletonMergingMark,áp,X+W|áp,CompoundingRule
+SpellingCompoundSingletonMergingMark,́pa,W+X|́pa,CompoundingRule
+SpellingCompoundSingletonMergingMark,́pa,W+X|́pa,CompoundingRule
+SpellingCompoundSingletonMergingMark,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonQuoteBoundary,ap,"X+Y|a[+""]?p",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,ap,"X+Y|a[+""]?p",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,pa,"Y+X|p[+""]?a",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,pa,"Y+X|p[+""]?a",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,a+p,"X+Y|a[+""]?p",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,a+p,"X+Y|a[+""]?p",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,"a""p","X+Y|a[+""]?p",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,"a""p","X+Y|a[+""]?p",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,"a""a","X|a[+""]?a",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,"a""a","X|a[+""]?a",CompoundingRule
+SpellingCompoundSingletonQuoteBoundary,"a""sp","X+PRE+Y|a[+""]?sp",AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonQuoteBoundary,"a""sp","X+PRE+Y|a[+""]?sp",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"a""","X+Y|a+?[p""]",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"a""","X+Y|a+?[p""]",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"pa""","Y+W|[p""]+?a[p""]",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"pa""","Y+W|[p""]+?a[p""]",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"a""+p","W+Y|a[p""]+?[p""]",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"a""+p","W+Y|a[p""]+?[p""]",CompoundingRule
+SpellingCompoundSingletonQuoteSegment,"s""a","PRE+X|s[p""]a",AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonQuoteSegment,"as""p","X+PRE+Y|a+?s[p""][p""]",AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonQuoteSegment,"as""p","X+PRE+Y|a+?s[p""][p""]",CompoundingRule
+SpellingCompoundSingletonThaiMark,่p,X+Y|[a่]+?p,CompoundingRule
+SpellingCompoundSingletonThaiMark,่p,X+Y|[a่]+?p,CompoundingRule
+SpellingCompoundSingletonThaiMark,a่p,X+W|[a่]+?[a่]p,CompoundingRule
+SpellingCompoundSingletonThaiMark,a่p,X+W|[a่]+?[a่]p,CompoundingRule
+SpellingCompoundSingletonThaiMark,่pa,W+X|[a่]p+?[a่],CompoundingRule
+SpellingCompoundSingletonThaiMark,่pa,W+X|[a่]p+?[a่],CompoundingRule
+SpellingCompoundSingletonThaiMark,a+่p,X+W|[a่]+?[a่]p,CompoundingRule
+SpellingCompoundSingletonThaiMark,a+่p,X+W|[a่]+?[a่]p,CompoundingRule
+SpellingCompoundSingletonThaiMark,p่p,Y+W|p+?[a่]p,CompoundingRule
+SpellingCompoundSingletonThaiMark,p่p,Y+W|p+?[a่]p,CompoundingRule
+SpellingCompoundSingletonThaiMark,sa,PRE+X|s[a่],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundStrata,sa,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundStrata,ai,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundStrata,ai,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule

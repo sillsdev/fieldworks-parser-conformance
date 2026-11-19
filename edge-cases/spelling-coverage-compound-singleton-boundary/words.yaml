@@ -1,0 +1,81 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundSingletonBoundary
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 2
+fieldworks_producible: true
+words:
+  - word: "a+a"
+    note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|a+?a"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X|a+?a"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: "a+p"
+    note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|a+?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y|a+?p"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: "p+a"
+    note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+X|p+?a"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y+X|p+?a"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: "p+p"
+    note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|p+?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y|p+?p"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: "a+sa"
+    note: "C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE|a+?sa"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "a+sp"
+    note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|a+?sp"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "a+a+a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ap
+    note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|a+?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y|a+?p"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
