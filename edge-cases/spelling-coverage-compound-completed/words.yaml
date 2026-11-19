@@ -1,0 +1,80 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundCompleted
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
+words:
+  - word: a
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i]"
+        rules: []
+  - word: "á"
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i]"
+        rules: []
+  - word: xy
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i]"
+        rules: []
+  - word: aa
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i][aá(xy)i]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: "aá"
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i][aá(xy)i]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: axy
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i][aá(xy)i]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: xya
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i][aá(xy)i]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: ai
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i][aá(xy)i]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: ae
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: p
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: e
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: i
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i]"
+        rules: []
+  - word: ia
+    note: "C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)i][aá(xy)i]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"

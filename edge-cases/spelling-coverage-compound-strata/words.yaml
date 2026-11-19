@@ -1,0 +1,156 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundStrata
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
+words:
+  - word: a
+    note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: sa
+    note: "C# returns 1 analysis (PRE+ROOT|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+ROOT|s[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ai
+    note: "C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)i]; ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)i]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: saa
+    note: "C# returns 3 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]; PRE+ROOT|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: aa
+    note: "C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)i]; ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)i]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: aai
+    note: "C# returns 1 analysis (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["cr1", "SUF"]
+        exercises:
+          - "CompoundingRule"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: saai
+    note: "C# returns 2 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["PRE", "cr1", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["PRE", "cr1", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sai
+    note: "C# returns 3 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]; PRE+ROOT|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: xy
+    note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: sxy
+    note: "C# returns 1 analysis (PRE+ROOT|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+ROOT|s[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: xyi
+    note: "C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)i]; ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)i]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: aaa
+    note: "C# returns 1 analysis (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["cr1", "SUF"]
+        exercises:
+          - "CompoundingRule"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: sasa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aiai
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: saia
+    note: "C# returns 2 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["PRE", "cr1", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["PRE", "cr1", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: aia
+    note: "C# returns 1 analysis (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
+        rules: ["cr1", "SUF"]
+        exercises:
+          - "CompoundingRule"
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: asa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true

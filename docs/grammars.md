@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 154 fixtures: 6 languages and 148 edge cases.
+The list has 166 fixtures: 6 languages and 160 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 154 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 166 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -194,6 +194,18 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/head-ambiguous-compounding`: [XAmple] compounds in which either root could be the head.
 - `edge-cases/recursive-endocentric-compounding`: [XAmple] a compounding rule that applies to its own output.
 - `edge-cases/cross-stem-material-determination`: [XAmple] a suffix whose form depends on which prefix was chosen, not only on whether the pair is allowed.
+- `edge-cases/spelling-coverage-compound-affixes`: A prefix and a suffix around a compound, with aliased roots and inserted segments; derivations place the affixes before, between and after the stems.
+- `edge-cases/spelling-coverage-compound-alias-deleted`: The aliased segment loses one alias; words using it are an invalid shape in C# and the remaining aliases still spell every stem.
+- `edge-cases/spelling-coverage-compound-allomorphs`: One entry with two root allomorphs under ordinary head-then-non-head compounding.
+- `edge-cases/spelling-coverage-compound-boundary`: The compound inserts a `+` morpheme boundary between the stems, as the loader writes it.
+- `edge-cases/spelling-coverage-compound-boundary-explicit`: As the boundary fixture, with the `+` boundary declared explicitly in the character table.
+- `edge-cases/spelling-coverage-compound-completed`: The aliased segment is given a complete feature bundle, so it no longer unifies with the vowels; C# rejects the compounds that depended on it.
+- `edge-cases/spelling-coverage-compound-orders`: Two endocompounding rules, one head-first and one non-head-first, both stems licensed by the same MPR feature, plus a third entry outside the licence.
+- `edge-cases/spelling-coverage-compound-orders-asymmetric`: Two endocompounding rules, one head-first and one non-head-first, whose head and non-head MPR licences differ. C# accepts only the head-first order here.
+- `edge-cases/spelling-coverage-compound-orders-pos`: Two endocompounding rules, one head-first and one non-head-first, restricted by head and non-head part of speech.
+- `edge-cases/spelling-coverage-compound-reversed-table`: The repeated-root compound with the character table's segment definitions declared in reverse order.
+- `edge-cases/spelling-coverage-compound-strata`: The compounding rule and a prefix in the first stratum and a suffix in a second stratum sharing the same character table.
+- `edge-cases/spelling-coverage-compound-template`: An affix template with a prefix slot and a suffix slot around a compound; template-less words are rejected.
 
 ## Phonological rules: deletion, epenthesis, merge, expansion
 

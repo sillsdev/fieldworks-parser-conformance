@@ -1156,6 +1156,227 @@ SimultaneousFeeding,gigugi,GIGI|gigugi,RewriteRule Iterative (epenthesis/deletio
 SimultaneousSubruleGenuineOverlap,be,|be,RewriteRule Simultaneous
 SimultaneousSubruleGenuineOverlap,bu,|bu,RewriteRule Simultaneous
 SimultaneousSubruleGenuineOverlap,di,|di,RewriteRule Simultaneous
+SpellingCompoundAffixes,sa,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,ai,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,ai,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saa,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saa,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,aai,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,aai,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aai,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,aai,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aia,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,aia,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aia,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,aia,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,sxy,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,xyi,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,xyi,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,xyixy,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,xyixy,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,xyixy,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,xyixy,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aaa,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,aaa,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aaa,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,aaa,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aii,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,aii,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,aii,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,aii,ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,sai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,sai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundAffixes,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei],CompoundingRule
+SpellingCompoundAliasDeleted,aa,ROOT|[a(xy)ei][a(xy)ei],CompoundingRule
+SpellingCompoundAliasDeleted,axy,ROOT|[a(xy)ei][a(xy)ei],CompoundingRule
+SpellingCompoundAliasDeleted,xya,ROOT|[a(xy)ei][a(xy)ei],CompoundingRule
+SpellingCompoundAliasDeleted,ae,ROOT|[a(xy)ei][a(xy)ei],CompoundingRule
+SpellingCompoundAllomorphs,aa,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAllomorphs,ap,ROOT+ROOT|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAllomorphs,pa,ROOT+ROOT|p[aá(xy)ei],CompoundingRule
+SpellingCompoundAllomorphs,pp,ROOT|pp,CompoundingRule
+SpellingCompoundAllomorphs,áp,ROOT+ROOT|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundAllomorphs,pxy,ROOT+ROOT|p[aá(xy)ei],CompoundingRule
+SpellingCompoundAllomorphs,xyxy,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundAllomorphs,ae,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,aa,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,aa,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundary,aá,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,aá,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundary,axy,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,axy,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundary,a+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,a+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundary,xya,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,xya,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundary,xy+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundary,xy+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundaryExplicit,aa,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundaryExplicit,aa,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundaryExplicit,aá,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundaryExplicit,aá,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundaryExplicit,axy,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundaryExplicit,axy,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundaryExplicit,a+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundaryExplicit,a+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundaryExplicit,xya,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundaryExplicit,xya,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundBoundaryExplicit,xy+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],CompoundingRule
+SpellingCompoundBoundaryExplicit,xy+a,ROOT|[aá(xy)ei]+?[aá(xy)ei],Boundary markers (CharacterDefinitionTable)
+SpellingCompoundCompleted,aa,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundCompleted,aá,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundCompleted,axy,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundCompleted,xya,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundCompleted,ai,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundCompleted,ia,ROOT|[aá(xy)i][aá(xy)i],CompoundingRule
+SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,ap,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrders,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,pa,Y+X|p[aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,pa,Y+X|p[aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,pa,Y+X|p[aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,pa,Y+X|p[aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,aa,X|[aá(xy)ei][aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,aa,X|[aá(xy)ei][aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,aa,X|[aá(xy)ei][aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,pp,Y|pp,CompoundingRule
+SpellingCompoundOrders,pp,Y|pp,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,pp,Y|pp,MPR features/groups
+SpellingCompoundOrders,pp,Y|pp,CompoundingRule
+SpellingCompoundOrders,pp,Y|pp,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,pp,Y|pp,MPR features/groups
+SpellingCompoundOrders,áp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrders,áp,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,áp,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrders,áp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrders,áp,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,áp,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrders,pxy,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,pxy,Y+X|p[aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,pxy,Y+X|p[aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,pxy,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,pxy,Y+X|p[aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,pxy,Y+X|p[aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrders,xyp,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,xyp,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrders,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrders,xyp,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,xyp,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrders,ae,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,ae,X|[aá(xy)ei][aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrders,ae,X|[aá(xy)ei][aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,ae,X|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundOrders,ae,X|[aá(xy)ei][aá(xy)ei],MPR features/groups
+SpellingCompoundOrders,ae,X|[aá(xy)ei][aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrdersAsymmetric,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrdersAsymmetric,ap,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrdersAsymmetric,ap,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrdersAsymmetric,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrdersAsymmetric,pa,Y+X|p[aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrdersAsymmetric,pa,Y+X|p[aá(xy)ei],MPR features/groups
+SpellingCompoundOrdersAsymmetric,áp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrdersAsymmetric,áp,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrdersAsymmetric,áp,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrdersAsymmetric,pxy,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrdersAsymmetric,pxy,Y+X|p[aá(xy)ei],CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrdersAsymmetric,pxy,Y+X|p[aá(xy)ei],MPR features/groups
+SpellingCompoundOrdersAsymmetric,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrdersAsymmetric,xyp,X+Y|[aá(xy)ei]p,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+SpellingCompoundOrdersAsymmetric,xyp,X+Y|[aá(xy)ei]p,MPR features/groups
+SpellingCompoundOrdersPos,ap,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrdersPos,pa,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrdersPos,ps,Y+Z|ps,CompoundingRule
+SpellingCompoundOrdersPos,sp,Z+Y|sp,CompoundingRule
+SpellingCompoundOrdersPos,áp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundOrdersPos,pxy,Y+X|p[aá(xy)ei],CompoundingRule
+SpellingCompoundOrdersPos,xyp,X+Y|[aá(xy)ei]p,CompoundingRule
+SpellingCompoundReversed,aa,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundReversed,aá,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundReversed,axy,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundReversed,xya,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundReversed,ae,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundStrata,sa,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,ai,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,ai,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,saa,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saa,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,aa,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,aa,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,aai,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,aai,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,sai,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,sai,PRE+ROOT|s[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,sxy,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,xyi,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,xyi,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCompoundStrata,aaa,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,aaa,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundStrata,saia,PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,aia,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundStrata,aia,ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,sai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,saa,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,saai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,saai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundTemplate,saxyi,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,saxyi,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundTemplate,sxyai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,sxyai,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
+SpellingCompoundTemplate,sxyxyi,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundTemplate,sxyxyi,TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i],CompoundingRule
 Autoseg,pan,PA+SUF|pan,AffixProcessRule: prefix/suffix/circumfix/infix
 Autoseg,pán,PAH+SUF|pán,AffixProcessRule: prefix/suffix/circumfix/infix
 StemNameRestrictedRootAllomorph,tam,ROOT|tam,Stem names
