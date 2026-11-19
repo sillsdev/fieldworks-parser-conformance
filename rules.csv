@@ -323,6 +323,7 @@ SpellingCompoundOrdersPos,cr1,ap;sp;áp;xyp
 SpellingCompoundOrdersPos,cr2,pa;ps;pxy
 SpellingCompoundPrefixFeeds,PRE,sa;sp;saa;sap;spa;spp;sxy;sxyp
 SpellingCompoundPrefixFeeds,cr1,aa;ap;pa;pp;saa;sap;spa;spp;xyp;pxy;sxyp
+SpellingCoverageCompound,cr1,aa;aá;ae
 SpellingCompoundReversed,cr1,aa;aá;axy;xya;ae
 SpellingCompoundSingletonJunctionDeletion,PRE,sa;sp;st;asa;asp;ast;psa;psp;pst;tsa;tsp;tst;saa;sap;sat;spa;spp;spt;sta;stt;s+p
 SpellingCompoundSingletonJunctionDeletion,cr1,p;aa;ap;at;pa;pp;pt;ta;tt;sp;+p;a+a;a+p;a+t;p+a;p+p;p+t;t+a;t+t;saa;sap;sat;spa;spp;spt;sta;stt;s+p

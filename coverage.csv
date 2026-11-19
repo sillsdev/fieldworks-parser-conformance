@@ -1911,6 +1911,9 @@ SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/
 SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
 SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundPrefixFeeds,sxyp,PRE+X+Y|s[aá(xy)ei]p,CompoundingRule
+SpellingCoverageCompound,aa,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCoverageCompound,aá,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
+SpellingCoverageCompound,ae,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
 SpellingCompoundReversed,aa,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,aá,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,axy,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
