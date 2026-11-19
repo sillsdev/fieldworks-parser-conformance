@@ -36,6 +36,10 @@ AdhocProhibitionVariantMainFirstEnclitic,mrRa,lara;lira
 AdhocProhibitionVariantMsaCopies,eDaV,!tada
 AdhocProhibitionVariantMsaCopies,eDiV,!tadi
 AdhocProhibitionVariantMsaCopies,mrTa,taga;tagi;!taba;!tabi
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,asa;aza
 AlphaVariableNameCollision,prDoubleAlpha,ia
 ambiguous-disagree-feature-class-bounded-rtl,prDoubleAlpha,ia
 ambiguous-disagree-feature-class-unbounded-ltr,prDoubleAlpha,ia
@@ -136,6 +140,9 @@ FeatureGatingBreadth,mrAgr,kalka;!tunka;tunpika;kalpika;!tunkapi;kalkapi
 FeatureGatingBreadth,mrPl,kalpi;tunpi;tunpika;kalpika;kalkapi
 FeatureRuleBeforeMerge,prFeature,butbut
 FeatureRuleBeforeMerge,prMerge,butbut
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,aka
 FinalTemplateMergeKey,mrFinal,sagdss
 FinalTemplateMergeKey,mrNom,sagdss
 FinalTemplateMergeKey,mrTemplateS,sagdss
@@ -258,6 +265,12 @@ partial-class-disagree-bounded-rtl-right,prDoubleAlpha,ia
 partial-class-disagree-unbounded-ltr-right,prDoubleAlpha,ia
 partial-class-disagree-unbounded-rtl-left,prDoubleAlpha,ia
 partial-class-disagree-unbounded-rtl-right,prDoubleAlpha,ia
+FeaturelessSegmentClassRewrite,prLen,aka
+FeaturelessSegmentClassRewrite,prLen,aka
+FeaturelessSegmentClassRewrite,prLen,aka
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prLen,asa;aza
 PatternRootRequiredEnvironment,mrPast,tikus;bonus
 ProcessMorphologyInPlaceMutation,mrAblaut,a
 quantified-alpha-bounded-ltr-left,prRtlBq,tcce;tace

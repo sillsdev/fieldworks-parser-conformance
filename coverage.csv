@@ -85,6 +85,14 @@ AdhocProhibitionVariantMsaCopies,tada,,MorphemeCoOccurrenceRule/AllomorphCoOccur
 AdhocProhibitionVariantMsaCopies,tadi,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 AdhocProhibitionVariantMsaCopies,taba,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 AdhocProhibitionVariantMsaCopies,tabi,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 AlphaVariableNameCollision,au,,Alpha-variable phonological environments (VariableFeature/AlphaVariables)
 AlphaVariableNameCollision,ia,AU|ia,Alpha-variable phonological environments (VariableFeature/AlphaVariables)
 ambiguous-disagree-feature-class-bounded-rtl,ii,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
@@ -297,6 +305,12 @@ FeatureGatingBreadth,kalpika,KAL+PL+AGR|kalpika,Syntactic feature agreement (Req
 FeatureGatingBreadth,tunkapi,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 FeatureGatingBreadth,kalkapi,KAL+AGR+PL|kalkapi,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 FeatureRuleBeforeMerge,butbut,ROOT|butbut,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,AKA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,ITA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FinalTemplateMergeKey,sagdss,SAG+FINAL+TEMPLATE+NOM|sagdss,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialDiscriminators,dakfa,DAK+FINTAGA|dakfa,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialRoot,dakfa,DAK+FINX|dakfa,Affix template slots (obligatory/disjunctive/ordering)
@@ -817,6 +831,19 @@ partial-class-disagree-unbounded-rtl-right,ua,,CharacterDefinitionTable pattern 
 partial-class-disagree-unbounded-rtl-right,ua,,RewriteRule direction (Dir): right-to-left
 partial-class-disagree-unbounded-rtl-right,uu,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 partial-class-disagree-unbounded-rtl-right,uu,,RewriteRule direction (Dir): right-to-left
+FeaturelessSegmentClassRewrite,aka,AKA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,ITA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,AKA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,ITA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,AKA|[ktszai][ktszai][ktszai],NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision
+FeaturelessSegmentClassRewrite,aka,AKA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aka,ITA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 PatternRootRequiredEnvironment,tikus,TIK+PAST|tikus,AffixProcessRule: prefix/suffix/circumfix/infix
 PatternRootRequiredEnvironment,bonus,BON+PAST|bonus,AffixProcessRule: prefix/suffix/circumfix/infix
 ProcessMorphologyInPlaceMutation,a,ROOT+ABLAUT|a,MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext

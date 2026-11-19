@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 140 fixtures: 6 languages and 134 edge cases.
+The list has 154 fixtures: 6 languages and 148 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 140 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 154 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -240,6 +240,20 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/strrep-rewrite-unapplication`: a rewrite undone on analysis in a grammar with no phonological features.
 - `edge-cases/chained-output-feature-override-loss`: [XAmple] two rules that each set an output feature, and a word that needs both.
 - `edge-cases/alpha-variable-name-collision`: two vowels that flip different features under one alpha variable.
+- `edge-cases/alias-output-0-literal`: a phoneme with two spellings as the output of an obligatory rewrite (variant 0), written as a literal segment: both spellings parse and the unchanged root does not.
+- `edge-cases/alias-output-0-singleton`: a phoneme with two spellings as the output of an obligatory rewrite (variant 0), written as a one-member natural class: both spellings parse and the unchanged root does not.
+- `edge-cases/alias-output-1-literal`: a phoneme with two spellings as the output of an obligatory rewrite (variant 1), written as a literal segment: both spellings parse and the unchanged root does not.
+- `edge-cases/alias-output-1-singleton`: a phoneme with two spellings as the output of an obligatory rewrite (variant 1), written as a one-member natural class: both spellings parse and the unchanged root does not.
+- `edge-cases/featureless-literal-target`: a featureless rewrite whose target is a literal segment and whose output is a class of two segments: both outputs parse as one root.
+- `edge-cases/featureless-singleton-target`: a featureless rewrite whose target is a one-member class and whose output is a class of two segments: both outputs parse as one root.
+- `edge-cases/featureless-unused-feature`: the featureless class rewrite plus one declared symbolic feature that no segment carries: the same two outputs still parse.
+- `edge-cases/partial-feature-literal-output`: a rewrite with a literal output in a grammar whose declared feature has no segment values.
+- `edge-cases/partial-feature-literal-rewrite`: a rewrite whose target and output are both literal segments, with an unused declared feature.
+- `edge-cases/partial-feature-no-rewrite`: the unused-feature grammar without any phonological rule: one surface still has two root identities.
+- `edge-cases/partial-feature-singleton-rewrite`: a rewrite whose classes are one-member classes, with an unused declared feature.
+- `edge-cases/partial-inherited-output-feature`: intervocalic lenition in a grammar whose symbolic feature covers only some segments, with the target class written as a feature class: both output spellings parse and the unchanged root does not.
+- `edge-cases/partial-inherited-output-literal`: the same lenition with the target class written as a segment class of two segments.
+- `edge-cases/partial-inherited-output-singleton`: the same lenition with the target class written as a one-member segment class.
 
 ## Alpha variables in environments
 
