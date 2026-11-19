@@ -1916,6 +1916,1323 @@ SpellingCompoundReversed,aá,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,axy,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,xya,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
 SpellingCompoundReversed,ae,ROOT|[ieaá(xy)][ieaá(xy)],CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p,Y|p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,p,Z+Y|+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p,Z+Y|+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,p,Z+Y|+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p,Z+Y|+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,aa,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,aa,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,at,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,at,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pa,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pa,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pp,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pp,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pt,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pt,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,ta,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,ta,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,tt,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,tt,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Y|sp,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sp,PRE+Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,st,PRE+Z|st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,+p,Z+Y|+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,+p,Z+Y|+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,+p,Z+Y|+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,+p,Z+Y|+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,asa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,asa,X+PRE|a+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,asp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,asp,X+PRE+Y|a+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,ast,X+PRE+Z|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,ast,X+PRE+Z|a+?st,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,a+t,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,a+t,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,psa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,psa,Y+PRE+X|p+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,psp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,psp,Y+PRE|p+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,pst,Y+PRE+Z|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,pst,Y+PRE+Z|p+?st,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p+t,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,p+t,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,tsa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,tsa,Z+PRE+X|t+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,tsp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,tsp,Z+PRE+Y|t+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,tst,Z+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,tst,Z+PRE|t+?st,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,t+a,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,t+a,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,t+t,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,t+t,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionDeletion,s+p,PRE+Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,aa,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,aa,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,at,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,at,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pa,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pa,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pp,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pp,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pt,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pt,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ta,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ta,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tt,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tt,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st,PRE+Z|st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,asa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,asa,X+PRE|a+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,asp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,asp,X+PRE+Y|a+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ast,X+PRE+Z|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,ast,X+PRE+Z|a+?st,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+t,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+t,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,psa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,psa,Y+PRE+X|p+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,psp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,psp,Y+PRE|p+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,pst,Y+PRE+Z|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,pst,Y+PRE+Z|p+?st,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+t,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+t,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tap,Z+Y|ta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tap,Z+Y|ta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,tap,Z+Y|ta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tap,Z+Y|ta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,tsa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,tsa,Z+PRE+X|t+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tsp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,tsp,Z+PRE+Y|t+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,tst,Z+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,tst,Z+PRE|t+?st,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,t+a,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,t+a,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,t+t,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,t+t,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+sa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,a+sa,X+PRE|a+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+sp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,a+sp,X+PRE+Y|a+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,a+st,X+PRE+Z|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,a+st,X+PRE+Z|a+?st,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+sa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,p+sa,Y+PRE+X|p+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+sp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,p+sp,Y+PRE|p+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,p+st,Y+PRE+Z|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,p+st,Y+PRE+Z|p+?st,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ta+p,Z+Y|ta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ta+p,Z+Y|ta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,ta+p,Z+Y|ta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,ta+p,Z+Y|ta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,t+sa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,t+sa,Z+PRE+X|t+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,t+sp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,t+sp,Z+PRE+Y|t+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,t+st,Z+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,t+st,Z+PRE|t+?st,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+a,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+a,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+a,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+t,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+t,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+t,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+t,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sa+t,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sa+t,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+p,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+p,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+p,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+t,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+t,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+t,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+t,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,sp+t,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,sp+t,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,stap,PRE+Z+Y|sta+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionEpenthesis,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st+a,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st+a,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st+a,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,st+t,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st+t,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,st+t,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st+t,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionEpenthesis,st+t,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionEpenthesis,st+t,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,aa,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,aa,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ap,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,at,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,at,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pa,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pa,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pp,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pp,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pt,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pt,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ta,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ta,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,tt,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,tt,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp,PRE+Y|sp,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,sp,Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp,Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,sp,Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp,Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,st,PRE+Z|st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,asa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,asa,X+PRE|a+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,asp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,asp,X+PRE+Y|a+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ast,X+PRE+Z|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ast,X+PRE+Z|a+?st,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+a,X|a+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+p,X+Y|a+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+t,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+t,X+Z|a+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,psa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,psa,Y+PRE+X|p+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,psp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,psp,Y+PRE|p+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,pst,Y+PRE+Z|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,pst,Y+PRE+Z|p+?st,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+a,Y+X|p+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+p,Y|p+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+t,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+t,Y+Z|p+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,tsa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,tsa,Z+PRE+X|t+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,tsp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,tsp,Z+PRE+Y|t+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,tst,Z+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,tst,Z+PRE|t+?st,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+a,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+a,Z+X|t+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+t,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+t,Z|t+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,saa,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sap,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sat,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sat,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spa,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spp,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,spt,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,spt,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sta,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,stt,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,stt,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ssp,PRE+Z+Y|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,s+p,Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,s+p,Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,s+p,Z+Y|s+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,s+p,Z+Y|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,a+sa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,a+sa,X+PRE|a+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+sp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,a+sp,X+PRE+Y|a+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,a+st,X+PRE+Z|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,a+st,X+PRE+Z|a+?st,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+sa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,p+sa,Y+PRE+X|p+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+sp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,p+sp,Y+PRE|p+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,p+st,Y+PRE+Z|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,p+st,Y+PRE+Z|p+?st,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+sa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,t+sa,Z+PRE+X|t+?sa,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+sp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,t+sp,Z+PRE+Y|t+?sp,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,t+st,Z+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,t+st,Z+PRE|t+?st,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+a,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+a,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+a,PRE+X|sa+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+t,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+t,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+t,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+t,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sa+t,PRE+X+Z|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sa+t,PRE+X+Z|sa+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+p,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+p,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+p,PRE+Y|sp+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+t,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+t,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+t,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+t,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,sp+t,PRE+Y+Z|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,sp+t,PRE+Y+Z|sp+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,st+a,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,st+a,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,st+a,PRE+Z+X|st+?a,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,st+t,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,st+t,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,st+t,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,st+t,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,st+t,PRE+Z|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,st+t,PRE+Z|st+?t,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,CompoundingRule
+SpellingCompoundSingletonJunctionFeatchange,ss+p,PRE+Z+Y|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,s,Z|s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,aa,X|a+?a,CompoundingRule
+P,aa,X|a+?a,CompoundingRule
+P,ap,X+Y|a+?p,CompoundingRule
+P,ap,X+Y|a+?p,CompoundingRule
+P,as,X+Z|a+?s,CompoundingRule
+P,as,X+Z|a+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,as,X+Z|a+?s,CompoundingRule
+P,as,X+Z|a+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,pa,Y+X|p+?a,CompoundingRule
+P,pa,Y+X|p+?a,CompoundingRule
+P,pp,Y|p+?p,CompoundingRule
+P,pp,Y|p+?p,CompoundingRule
+P,ps,Y+Z|p+?s,CompoundingRule
+P,ps,Y+Z|p+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ps,Y+Z|p+?s,CompoundingRule
+P,ps,Y+Z|p+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ta,Z+X|t+?a,CompoundingRule
+P,ta,Z+X|t+?a,CompoundingRule
+P,tp,Z+Y|t+?p,CompoundingRule
+P,tp,Z+Y|t+?p,CompoundingRule
+P,ts,Z|t+?s,CompoundingRule
+P,ts,Z|t+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ts,Z|t+?s,CompoundingRule
+P,ts,Z|t+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss,PRE+Z|ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss,PRE+Z|ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,asa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,asa,X+PRE|a+?sa,CompoundingRule
+P,asp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,asp,X+PRE+Y|a+?sp,CompoundingRule
+P,ass,X+PRE+Z|a+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ass,X+PRE+Z|a+?ss,CompoundingRule
+P,ass,X+PRE+Z|a+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+a,X|a+?a,CompoundingRule
+P,a+a,X|a+?a,CompoundingRule
+P,a+p,X+Y|a+?p,CompoundingRule
+P,a+p,X+Y|a+?p,CompoundingRule
+P,a+s,X+Z|a+?s,CompoundingRule
+P,a+s,X+Z|a+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+s,X+Z|a+?s,CompoundingRule
+P,a+s,X+Z|a+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,psa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,psa,Y+PRE+X|p+?sa,CompoundingRule
+P,psp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,psp,Y+PRE|p+?sp,CompoundingRule
+P,pss,Y+PRE+Z|p+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,pss,Y+PRE+Z|p+?ss,CompoundingRule
+P,pss,Y+PRE+Z|p+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+a,Y+X|p+?a,CompoundingRule
+P,p+a,Y+X|p+?a,CompoundingRule
+P,p+p,Y|p+?p,CompoundingRule
+P,p+p,Y|p+?p,CompoundingRule
+P,p+s,Y+Z|p+?s,CompoundingRule
+P,p+s,Y+Z|p+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+s,Y+Z|p+?s,CompoundingRule
+P,p+s,Y+Z|p+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tsa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tsa,Z+PRE+X|t+?sa,CompoundingRule
+P,tsp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tsp,Z+PRE+Y|t+?sp,CompoundingRule
+P,tss,Z+PRE|t+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tss,Z+PRE|t+?ss,CompoundingRule
+P,tss,Z+PRE|t+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+a,Z+X|t+?a,CompoundingRule
+P,t+a,Z+X|t+?a,CompoundingRule
+P,t+p,Z+Y|t+?p,CompoundingRule
+P,t+p,Z+Y|t+?p,CompoundingRule
+P,t+s,Z|t+?s,CompoundingRule
+P,t+s,Z|t+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+s,Z|t+?s,CompoundingRule
+P,t+s,Z|t+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+X|sa+?a,CompoundingRule
+P,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+X|sa+?a,CompoundingRule
+P,saa,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+X|sa+?a,CompoundingRule
+P,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+X+Y|sa+?p,CompoundingRule
+P,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+X+Y|sa+?p,CompoundingRule
+P,sap,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+X+Y|sa+?p,CompoundingRule
+P,sas,PRE+X+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sas,PRE+X+Z|sa+?s,CompoundingRule
+P,sas,PRE+X+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sas,PRE+X+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sas,PRE+X+Z|sa+?s,CompoundingRule
+P,sas,PRE+X+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sas,PRE+X+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sas,PRE+X+Z|sa+?s,CompoundingRule
+P,sas,PRE+X+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Y+X|sp+?a,CompoundingRule
+P,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Y+X|sp+?a,CompoundingRule
+P,spa,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Y+X|sp+?a,CompoundingRule
+P,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Y|sp+?p,CompoundingRule
+P,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Y|sp+?p,CompoundingRule
+P,spp,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Y|sp+?p,CompoundingRule
+P,sps,PRE+Y+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sps,PRE+Y+Z|sp+?s,CompoundingRule
+P,sps,PRE+Y+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sps,PRE+Y+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sps,PRE+Y+Z|sp+?s,CompoundingRule
+P,sps,PRE+Y+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sps,PRE+Y+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sps,PRE+Y+Z|sp+?s,CompoundingRule
+P,sps,PRE+Y+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Z+X|st+?a,CompoundingRule
+P,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Z+X|st+?a,CompoundingRule
+P,sta,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Z+X|st+?a,CompoundingRule
+P,stp,PRE+Z+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Z+Y|st+?p,CompoundingRule
+P,stp,PRE+Z+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Z+Y|st+?p,CompoundingRule
+P,stp,PRE+Z+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Z+Y|st+?p,CompoundingRule
+P,sts,PRE+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sts,PRE+Z|st+?s,CompoundingRule
+P,sts,PRE+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sts,PRE+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sts,PRE+Z|st+?s,CompoundingRule
+P,sts,PRE+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sts,PRE+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sts,PRE+Z|st+?s,CompoundingRule
+P,sts,PRE+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+sa,X+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+sa,X+PRE|a+?sa,CompoundingRule
+P,a+sp,X+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+sp,X+PRE+Y|a+?sp,CompoundingRule
+P,a+ss,X+PRE+Z|a+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+ss,X+PRE+Z|a+?ss,CompoundingRule
+P,a+ss,X+PRE+Z|a+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+sa,Y+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+sa,Y+PRE+X|p+?sa,CompoundingRule
+P,p+sp,Y+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+sp,Y+PRE|p+?sp,CompoundingRule
+P,p+ss,Y+PRE+Z|p+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+ss,Y+PRE+Z|p+?ss,CompoundingRule
+P,p+ss,Y+PRE+Z|p+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+sa,Z+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+sa,Z+PRE+X|t+?sa,CompoundingRule
+P,t+sp,Z+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+sp,Z+PRE+Y|t+?sp,CompoundingRule
+P,t+ss,Z+PRE|t+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+ss,Z+PRE|t+?ss,CompoundingRule
+P,t+ss,Z+PRE|t+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+X|sa+?a,CompoundingRule
+P,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+X|sa+?a,CompoundingRule
+P,sa+a,PRE+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+X|sa+?a,CompoundingRule
+P,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+P,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+P,sa+p,PRE+X+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+X+Y|sa+?p,CompoundingRule
+P,sa+s,PRE+X+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+s,PRE+X+Z|sa+?s,CompoundingRule
+P,sa+s,PRE+X+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+s,PRE+X+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+s,PRE+X+Z|sa+?s,CompoundingRule
+P,sa+s,PRE+X+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+s,PRE+X+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+s,PRE+X+Z|sa+?s,CompoundingRule
+P,sa+s,PRE+X+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+P,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+P,sp+a,PRE+Y+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Y+X|sp+?a,CompoundingRule
+P,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Y|sp+?p,CompoundingRule
+P,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Y|sp+?p,CompoundingRule
+P,sp+p,PRE+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Y|sp+?p,CompoundingRule
+P,sp+s,PRE+Y+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+s,PRE+Y+Z|sp+?s,CompoundingRule
+P,sp+s,PRE+Y+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+s,PRE+Y+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+s,PRE+Y+Z|sp+?s,CompoundingRule
+P,sp+s,PRE+Y+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+s,PRE+Y+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+s,PRE+Y+Z|sp+?s,CompoundingRule
+P,sp+s,PRE+Y+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Z+X|st+?a,CompoundingRule
+P,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Z+X|st+?a,CompoundingRule
+P,st+a,PRE+Z+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Z+X|st+?a,CompoundingRule
+P,st+p,PRE+Z+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Z+Y|st+?p,CompoundingRule
+P,st+p,PRE+Z+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Z+Y|st+?p,CompoundingRule
+P,st+p,PRE+Z+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Z+Y|st+?p,CompoundingRule
+P,st+s,PRE+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+s,PRE+Z|st+?s,CompoundingRule
+P,st+s,PRE+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+s,PRE+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+s,PRE+Z|st+?s,CompoundingRule
+P,st+s,PRE+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+s,PRE+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+s,PRE+Z|st+?s,CompoundingRule
+P,st+s,PRE+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+SpellingCompoundSingletonJunctionMetathesis,aa,X|aa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,aa,X|aa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,ap,X+Y|ap,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,ap,X+Y|ap,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,at,X+Z|at,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,at,X+Z|at,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,pa,Y+X|pa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,pa,Y+X|pa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,pp,Y|pp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,pp,Y|pp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,ta,Z+X|ta,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,ta,Z+X|ta,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tt,Z|tt,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tt,Z|tt,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,st,PRE+Z|st,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,asa,X+PRE|asa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,asa,X+PRE|asa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,asp,X+PRE+Y|asp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,asp,X+PRE+Y|asp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,ast,X+PRE+Z|ast,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,ast,X+PRE+Z|ast,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,psa,Y+PRE+X|psa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,psa,Y+PRE+X|psa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,psp,Y+PRE|psp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,psp,Y+PRE|psp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,pst,Y+PRE+Z|pst,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,pst,Y+PRE+Z|pst,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tsa,Z+PRE+X|tsa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,tsa,Z+PRE+X|tsa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tsp,Z+PRE+Y|tsp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,tsp,Z+PRE+Y|tsp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tst,Z+PRE|tst,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,tst,Z+PRE|tst,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,saa,PRE+X|saa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,saa,PRE+X|saa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,saa,PRE+X|saa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,saa,PRE+X|saa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,saa,PRE+X|saa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,saa,PRE+X|saa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sap,PRE+X+Y|sap,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sap,PRE+X+Y|sap,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sap,PRE+X+Y|sap,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sap,PRE+X+Y|sap,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sap,PRE+X+Y|sap,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sap,PRE+X+Y|sap,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sat,PRE+X+Z|sat,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sat,PRE+X+Z|sat,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sat,PRE+X+Z|sat,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sat,PRE+X+Z|sat,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sat,PRE+X+Z|sat,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sat,PRE+X+Z|sat,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,spa,PRE+Y+X|spa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,spa,PRE+Y+X|spa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,spa,PRE+Y+X|spa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,spa,PRE+Y+X|spa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,spa,PRE+Y+X|spa,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,spa,PRE+Y+X|spa,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,spp,PRE+Y|spp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,spp,PRE+Y|spp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sta,PRE+Z+X|sta,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sta,PRE+Z+X|sta,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sta,PRE+Z+X|sta,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sta,PRE+Z+X|sta,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,sta,PRE+Z+X|sta,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,sta,PRE+Z+X|sta,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stt,PRE+Z|stt,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stt,PRE+Z|stt,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stt,PRE+Z|stt,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stt,PRE+Z|stt,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stt,PRE+Z|stt,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stt,PRE+Z|stt,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,tp,Z+Y|tp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,MetathesisRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,AffixProcessRule: prefix/suffix/circumfix/infix
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,CompoundingRule
+SpellingCompoundSingletonJunctionMetathesis,stp,PRE+Z+Y|stp,MetathesisRule
+P,t,Zo|t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,s,Z|s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,aa,X+Xo|a+?a,CompoundingRule
+P,aa,Xo+X|a+?a,CompoundingRule
+P,aa,Xo|a+?a,CompoundingRule
+P,aa,Xo|a+?a,CompoundingRule
+P,ap,X+Yo|a+?p,CompoundingRule
+P,ap,Xo+Yo|a+?p,CompoundingRule
+P,ap,Xo+Yo|a+?p,CompoundingRule
+P,ap,Xo+Y|a+?p,CompoundingRule
+P,at,X+Zo|a+?t,CompoundingRule
+P,at,X+Zo|a+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,at,Xo+Zo|a+?t,CompoundingRule
+P,at,Xo+Zo|a+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,at,Xo+Zo|a+?t,CompoundingRule
+P,at,Xo+Zo|a+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,as,Xo+Z|a+?s,CompoundingRule
+P,as,Xo+Z|a+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,pa,Y+Xo|p+?a,CompoundingRule
+P,pa,Yo+Xo|p+?a,CompoundingRule
+P,pa,Yo+Xo|p+?a,CompoundingRule
+P,pa,Yo+X|p+?a,CompoundingRule
+P,pp,Y+Yo|p+?p,CompoundingRule
+P,pp,Yo+Y|p+?p,CompoundingRule
+P,pp,Yo|p+?p,CompoundingRule
+P,pp,Yo|p+?p,CompoundingRule
+P,pt,Y+Zo|p+?t,CompoundingRule
+P,pt,Y+Zo|p+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,pt,Yo+Zo|p+?t,CompoundingRule
+P,pt,Yo+Zo|p+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,pt,Yo+Zo|p+?t,CompoundingRule
+P,pt,Yo+Zo|p+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ps,Yo+Z|p+?s,CompoundingRule
+P,ps,Yo+Z|p+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ta,Zo+Xo|t+?a,CompoundingRule
+P,ta,Zo+Xo|t+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ta,Zo+Xo|t+?a,CompoundingRule
+P,ta,Zo+Xo|t+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ta,Zo+X|t+?a,CompoundingRule
+P,ta,Zo+X|t+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tp,Zo+Yo|t+?p,CompoundingRule
+P,tp,Zo+Yo|t+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tp,Zo+Yo|t+?p,CompoundingRule
+P,tp,Zo+Yo|t+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tp,Zo+Y|t+?p,CompoundingRule
+P,tp,Zo+Y|t+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tt,Zo|t+?t,CompoundingRule
+P,tt,Zo|t+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tt,Zo|t+?t,CompoundingRule
+P,tt,Zo|t+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ts,Zo+Z|t+?s,CompoundingRule
+P,ts,Zo+Z|t+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa,PRE+Xo|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa,PRE+Xo|sa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa,PRE+X|sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa,PRE+X|sa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa,Z+Xo|s+?a,CompoundingRule
+P,sa,Z+Xo|s+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp,PRE+Yo|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp,PRE+Yo|sp,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp,PRE+Y|sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp,PRE+Y|sp,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp,Z+Yo|s+?p,CompoundingRule
+P,sp,Z+Yo|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st,PRE+Zo|st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st,PRE+Zo|st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st,Z+Zo|s+?t,CompoundingRule
+P,st,Z+Zo|s+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss,PRE+Z|ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss,PRE+Z|ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,asa,Xo+PRE+X|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,asa,Xo+PRE+X|a+?sa,CompoundingRule
+P,asa,Xo+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,asa,Xo+PRE|a+?sa,CompoundingRule
+P,asp,Xo+PRE+Yo|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,asp,Xo+PRE+Yo|a+?sp,CompoundingRule
+P,asp,Xo+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,asp,Xo+PRE+Y|a+?sp,CompoundingRule
+P,ast,Xo+PRE+Zo|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ast,Xo+PRE+Zo|a+?st,CompoundingRule
+P,ast,Xo+PRE+Zo|a+?st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ass,Xo+PRE+Z|a+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ass,Xo+PRE+Z|a+?ss,CompoundingRule
+P,ass,Xo+PRE+Z|a+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+a,X+Xo|a+?a,CompoundingRule
+P,a+a,Xo+X|a+?a,CompoundingRule
+P,a+a,Xo|a+?a,CompoundingRule
+P,a+a,Xo|a+?a,CompoundingRule
+P,a+p,X+Yo|a+?p,CompoundingRule
+P,a+p,Xo+Yo|a+?p,CompoundingRule
+P,a+p,Xo+Yo|a+?p,CompoundingRule
+P,a+p,Xo+Y|a+?p,CompoundingRule
+P,a+t,X+Zo|a+?t,CompoundingRule
+P,a+t,X+Zo|a+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+t,Xo+Zo|a+?t,CompoundingRule
+P,a+t,Xo+Zo|a+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+t,Xo+Zo|a+?t,CompoundingRule
+P,a+t,Xo+Zo|a+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+s,Xo+Z|a+?s,CompoundingRule
+P,a+s,Xo+Z|a+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,psa,Yo+PRE+Xo|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,psa,Yo+PRE+Xo|p+?sa,CompoundingRule
+P,psa,Yo+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,psa,Yo+PRE+X|p+?sa,CompoundingRule
+P,psp,Yo+PRE+Y|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,psp,Yo+PRE+Y|p+?sp,CompoundingRule
+P,psp,Yo+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,psp,Yo+PRE|p+?sp,CompoundingRule
+P,pst,Yo+PRE+Zo|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,pst,Yo+PRE+Zo|p+?st,CompoundingRule
+P,pst,Yo+PRE+Zo|p+?st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,pss,Yo+PRE+Z|p+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,pss,Yo+PRE+Z|p+?ss,CompoundingRule
+P,pss,Yo+PRE+Z|p+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+a,Y+Xo|p+?a,CompoundingRule
+P,p+a,Yo+Xo|p+?a,CompoundingRule
+P,p+a,Yo+Xo|p+?a,CompoundingRule
+P,p+a,Yo+X|p+?a,CompoundingRule
+P,p+p,Y+Yo|p+?p,CompoundingRule
+P,p+p,Yo+Y|p+?p,CompoundingRule
+P,p+p,Yo|p+?p,CompoundingRule
+P,p+p,Yo|p+?p,CompoundingRule
+P,p+t,Y+Zo|p+?t,CompoundingRule
+P,p+t,Y+Zo|p+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+t,Yo+Zo|p+?t,CompoundingRule
+P,p+t,Yo+Zo|p+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+t,Yo+Zo|p+?t,CompoundingRule
+P,p+t,Yo+Zo|p+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+s,Yo+Z|p+?s,CompoundingRule
+P,p+s,Yo+Z|p+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tsa,Zo+PRE+Xo|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tsa,Zo+PRE+Xo|t+?sa,CompoundingRule
+P,tsa,Zo+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tsa,Zo+PRE+X|t+?sa,CompoundingRule
+P,tsp,Zo+PRE+Yo|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tsp,Zo+PRE+Yo|t+?sp,CompoundingRule
+P,tsp,Zo+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tsp,Zo+PRE+Y|t+?sp,CompoundingRule
+P,tst,Zo+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tst,Zo+PRE|t+?st,CompoundingRule
+P,tst,Zo+PRE|t+?st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,tss,Zo+PRE+Z|t+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,tss,Zo+PRE+Z|t+?ss,CompoundingRule
+P,tss,Zo+PRE+Z|t+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+a,Zo+Xo|t+?a,CompoundingRule
+P,t+a,Zo+Xo|t+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+a,Zo+Xo|t+?a,CompoundingRule
+P,t+a,Zo+Xo|t+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+a,Zo+X|t+?a,CompoundingRule
+P,t+a,Zo+X|t+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+p,Zo+Yo|t+?p,CompoundingRule
+P,t+p,Zo+Yo|t+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+p,Zo+Yo|t+?p,CompoundingRule
+P,t+p,Zo+Yo|t+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+p,Zo+Y|t+?p,CompoundingRule
+P,t+p,Zo+Y|t+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+t,Zo|t+?t,CompoundingRule
+P,t+t,Zo|t+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+t,Zo|t+?t,CompoundingRule
+P,t+t,Zo|t+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+s,Zo+Z|t+?s,CompoundingRule
+P,t+s,Zo+Z|t+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,saa,PRE+X+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+X+Xo|sa+?a,CompoundingRule
+P,saa,PRE+X+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+X+Xo|sa+?a,CompoundingRule
+P,saa,PRE+Xo+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+Xo+X|sa+?a,CompoundingRule
+P,saa,PRE+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+Xo|sa+?a,CompoundingRule
+P,saa,PRE+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+Xo|sa+?a,CompoundingRule
+P,saa,PRE+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,saa,PRE+Xo|sa+?a,CompoundingRule
+P,sap,PRE+X+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+X+Yo|sa+?p,CompoundingRule
+P,sap,PRE+X+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+X+Yo|sa+?p,CompoundingRule
+P,sap,PRE+Xo+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+Xo+Yo|sa+?p,CompoundingRule
+P,sap,PRE+Xo+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+Xo+Yo|sa+?p,CompoundingRule
+P,sap,PRE+Xo+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+Xo+Yo|sa+?p,CompoundingRule
+P,sap,PRE+Xo+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sap,PRE+Xo+Y|sa+?p,CompoundingRule
+P,sat,PRE+X+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sat,PRE+X+Zo|sa+?t,CompoundingRule
+P,sat,PRE+X+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sat,PRE+X+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sat,PRE+X+Zo|sa+?t,CompoundingRule
+P,sat,PRE+X+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sat,PRE+Xo+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sat,PRE+Xo+Zo|sa+?t,CompoundingRule
+P,sat,PRE+Xo+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sat,PRE+Xo+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sat,PRE+Xo+Zo|sa+?t,CompoundingRule
+P,sat,PRE+Xo+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sat,PRE+Xo+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sat,PRE+Xo+Zo|sa+?t,CompoundingRule
+P,sat,PRE+Xo+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sas,PRE+Xo+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sas,PRE+Xo+Z|sa+?s,CompoundingRule
+P,sas,PRE+Xo+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,spa,PRE+Y+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Y+Xo|sp+?a,CompoundingRule
+P,spa,PRE+Y+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Y+Xo|sp+?a,CompoundingRule
+P,spa,PRE+Yo+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Yo+Xo|sp+?a,CompoundingRule
+P,spa,PRE+Yo+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Yo+Xo|sp+?a,CompoundingRule
+P,spa,PRE+Yo+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Yo+Xo|sp+?a,CompoundingRule
+P,spa,PRE+Yo+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spa,PRE+Yo+X|sp+?a,CompoundingRule
+P,spp,PRE+Y+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Y+Yo|sp+?p,CompoundingRule
+P,spp,PRE+Y+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Y+Yo|sp+?p,CompoundingRule
+P,spp,PRE+Yo+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Yo+Y|sp+?p,CompoundingRule
+P,spp,PRE+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Yo|sp+?p,CompoundingRule
+P,spp,PRE+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Yo|sp+?p,CompoundingRule
+P,spp,PRE+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spp,PRE+Yo|sp+?p,CompoundingRule
+P,spt,PRE+Y+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spt,PRE+Y+Zo|sp+?t,CompoundingRule
+P,spt,PRE+Y+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,spt,PRE+Y+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spt,PRE+Y+Zo|sp+?t,CompoundingRule
+P,spt,PRE+Y+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,spt,PRE+Yo+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spt,PRE+Yo+Zo|sp+?t,CompoundingRule
+P,spt,PRE+Yo+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,spt,PRE+Yo+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spt,PRE+Yo+Zo|sp+?t,CompoundingRule
+P,spt,PRE+Yo+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,spt,PRE+Yo+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,spt,PRE+Yo+Zo|sp+?t,CompoundingRule
+P,spt,PRE+Yo+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sps,PRE+Yo+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sps,PRE+Yo+Z|sp+?s,CompoundingRule
+P,sps,PRE+Yo+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sta,PRE+Zo+Xo|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Zo+Xo|st+?a,CompoundingRule
+P,sta,PRE+Zo+Xo|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sta,PRE+Zo+Xo|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Zo+Xo|st+?a,CompoundingRule
+P,sta,PRE+Zo+Xo|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sta,PRE+Zo+Xo|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Zo+Xo|st+?a,CompoundingRule
+P,sta,PRE+Zo+Xo|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sta,PRE+Zo+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sta,PRE+Zo+X|st+?a,CompoundingRule
+P,sta,PRE+Zo+X|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stp,PRE+Zo+Yo|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Zo+Yo|st+?p,CompoundingRule
+P,stp,PRE+Zo+Yo|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stp,PRE+Zo+Yo|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Zo+Yo|st+?p,CompoundingRule
+P,stp,PRE+Zo+Yo|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stp,PRE+Zo+Yo|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Zo+Yo|st+?p,CompoundingRule
+P,stp,PRE+Zo+Yo|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stp,PRE+Zo+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stp,PRE+Zo+Y|st+?p,CompoundingRule
+P,stp,PRE+Zo+Y|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stt,PRE+Zo|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stt,PRE+Zo|st+?t,CompoundingRule
+P,stt,PRE+Zo|st+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stt,PRE+Zo|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stt,PRE+Zo|st+?t,CompoundingRule
+P,stt,PRE+Zo|st+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,stt,PRE+Zo|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,stt,PRE+Zo|st+?t,CompoundingRule
+P,stt,PRE+Zo|st+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sts,PRE+Zo+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sts,PRE+Zo+Z|st+?s,CompoundingRule
+P,sts,PRE+Zo+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ssa,PRE+Z+Xo|ss+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ssa,PRE+Z+Xo|ss+?a,CompoundingRule
+P,ssa,PRE+Z+Xo|ss+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ssa,PRE+Z+Xo|ss+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ssa,PRE+Z+Xo|ss+?a,CompoundingRule
+P,ssa,PRE+Z+Xo|ss+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ssp,PRE+Z+Yo|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ssp,PRE+Z+Yo|ss+?p,CompoundingRule
+P,ssp,PRE+Z+Yo|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ssp,PRE+Z+Yo|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ssp,PRE+Z+Yo|ss+?p,CompoundingRule
+P,ssp,PRE+Z+Yo|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sst,PRE+Z+Zo|ss+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sst,PRE+Z+Zo|ss+?t,CompoundingRule
+P,sst,PRE+Z+Zo|ss+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sst,PRE+Z+Zo|ss+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sst,PRE+Z+Zo|ss+?t,CompoundingRule
+P,sst,PRE+Z+Zo|ss+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,s+a,Z+Xo|s+?a,CompoundingRule
+P,s+a,Z+Xo|s+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,s+p,Z+Yo|s+?p,CompoundingRule
+P,s+p,Z+Yo|s+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,s+t,Z+Zo|s+?t,CompoundingRule
+P,s+t,Z+Zo|s+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+sa,Xo+PRE+X|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+sa,Xo+PRE+X|a+?sa,CompoundingRule
+P,a+sa,Xo+PRE|a+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+sa,Xo+PRE|a+?sa,CompoundingRule
+P,a+sp,Xo+PRE+Yo|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+sp,Xo+PRE+Yo|a+?sp,CompoundingRule
+P,a+sp,Xo+PRE+Y|a+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+sp,Xo+PRE+Y|a+?sp,CompoundingRule
+P,a+st,Xo+PRE+Zo|a+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+st,Xo+PRE+Zo|a+?st,CompoundingRule
+P,a+st,Xo+PRE+Zo|a+?st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,a+ss,Xo+PRE+Z|a+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,a+ss,Xo+PRE+Z|a+?ss,CompoundingRule
+P,a+ss,Xo+PRE+Z|a+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+sa,Yo+PRE+Xo|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+sa,Yo+PRE+Xo|p+?sa,CompoundingRule
+P,p+sa,Yo+PRE+X|p+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+sa,Yo+PRE+X|p+?sa,CompoundingRule
+P,p+sp,Yo+PRE+Y|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+sp,Yo+PRE+Y|p+?sp,CompoundingRule
+P,p+sp,Yo+PRE|p+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+sp,Yo+PRE|p+?sp,CompoundingRule
+P,p+st,Yo+PRE+Zo|p+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+st,Yo+PRE+Zo|p+?st,CompoundingRule
+P,p+st,Yo+PRE+Zo|p+?st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,p+ss,Yo+PRE+Z|p+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,p+ss,Yo+PRE+Z|p+?ss,CompoundingRule
+P,p+ss,Yo+PRE+Z|p+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+sa,Zo+PRE+Xo|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+sa,Zo+PRE+Xo|t+?sa,CompoundingRule
+P,t+sa,Zo+PRE+X|t+?sa,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+sa,Zo+PRE+X|t+?sa,CompoundingRule
+P,t+sp,Zo+PRE+Yo|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+sp,Zo+PRE+Yo|t+?sp,CompoundingRule
+P,t+sp,Zo+PRE+Y|t+?sp,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+sp,Zo+PRE+Y|t+?sp,CompoundingRule
+P,t+st,Zo+PRE|t+?st,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+st,Zo+PRE|t+?st,CompoundingRule
+P,t+st,Zo+PRE|t+?st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,t+ss,Zo+PRE+Z|t+?ss,AffixProcessRule: prefix/suffix/circumfix/infix
+P,t+ss,Zo+PRE+Z|t+?ss,CompoundingRule
+P,t+ss,Zo+PRE+Z|t+?ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+a,PRE+X+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+X+Xo|sa+?a,CompoundingRule
+P,sa+a,PRE+X+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+X+Xo|sa+?a,CompoundingRule
+P,sa+a,PRE+Xo+X|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+Xo+X|sa+?a,CompoundingRule
+P,sa+a,PRE+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+Xo|sa+?a,CompoundingRule
+P,sa+a,PRE+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+Xo|sa+?a,CompoundingRule
+P,sa+a,PRE+Xo|sa+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+a,PRE+Xo|sa+?a,CompoundingRule
+P,sa+p,PRE+X+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+X+Yo|sa+?p,CompoundingRule
+P,sa+p,PRE+X+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+X+Yo|sa+?p,CompoundingRule
+P,sa+p,PRE+Xo+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+Xo+Yo|sa+?p,CompoundingRule
+P,sa+p,PRE+Xo+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+Xo+Yo|sa+?p,CompoundingRule
+P,sa+p,PRE+Xo+Yo|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+Xo+Yo|sa+?p,CompoundingRule
+P,sa+p,PRE+Xo+Y|sa+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+p,PRE+Xo+Y|sa+?p,CompoundingRule
+P,sa+t,PRE+X+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+t,PRE+X+Zo|sa+?t,CompoundingRule
+P,sa+t,PRE+X+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+t,PRE+X+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+t,PRE+X+Zo|sa+?t,CompoundingRule
+P,sa+t,PRE+X+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+t,PRE+Xo+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+t,PRE+Xo+Zo|sa+?t,CompoundingRule
+P,sa+t,PRE+Xo+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+t,PRE+Xo+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+t,PRE+Xo+Zo|sa+?t,CompoundingRule
+P,sa+t,PRE+Xo+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+t,PRE+Xo+Zo|sa+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+t,PRE+Xo+Zo|sa+?t,CompoundingRule
+P,sa+t,PRE+Xo+Zo|sa+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sa+s,PRE+Xo+Z|sa+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sa+s,PRE+Xo+Z|sa+?s,CompoundingRule
+P,sa+s,PRE+Xo+Z|sa+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+a,PRE+Y+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Y+Xo|sp+?a,CompoundingRule
+P,sp+a,PRE+Y+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Y+Xo|sp+?a,CompoundingRule
+P,sp+a,PRE+Yo+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Yo+Xo|sp+?a,CompoundingRule
+P,sp+a,PRE+Yo+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Yo+Xo|sp+?a,CompoundingRule
+P,sp+a,PRE+Yo+Xo|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Yo+Xo|sp+?a,CompoundingRule
+P,sp+a,PRE+Yo+X|sp+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+a,PRE+Yo+X|sp+?a,CompoundingRule
+P,sp+p,PRE+Y+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Y+Yo|sp+?p,CompoundingRule
+P,sp+p,PRE+Y+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Y+Yo|sp+?p,CompoundingRule
+P,sp+p,PRE+Yo+Y|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Yo+Y|sp+?p,CompoundingRule
+P,sp+p,PRE+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Yo|sp+?p,CompoundingRule
+P,sp+p,PRE+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Yo|sp+?p,CompoundingRule
+P,sp+p,PRE+Yo|sp+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+p,PRE+Yo|sp+?p,CompoundingRule
+P,sp+t,PRE+Y+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+t,PRE+Y+Zo|sp+?t,CompoundingRule
+P,sp+t,PRE+Y+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+t,PRE+Y+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+t,PRE+Y+Zo|sp+?t,CompoundingRule
+P,sp+t,PRE+Y+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+t,PRE+Yo+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+t,PRE+Yo+Zo|sp+?t,CompoundingRule
+P,sp+t,PRE+Yo+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+t,PRE+Yo+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+t,PRE+Yo+Zo|sp+?t,CompoundingRule
+P,sp+t,PRE+Yo+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+t,PRE+Yo+Zo|sp+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+t,PRE+Yo+Zo|sp+?t,CompoundingRule
+P,sp+t,PRE+Yo+Zo|sp+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,sp+s,PRE+Yo+Z|sp+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,sp+s,PRE+Yo+Z|sp+?s,CompoundingRule
+P,sp+s,PRE+Yo+Z|sp+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+a,PRE+Zo+Xo|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Zo+Xo|st+?a,CompoundingRule
+P,st+a,PRE+Zo+Xo|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+a,PRE+Zo+Xo|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Zo+Xo|st+?a,CompoundingRule
+P,st+a,PRE+Zo+Xo|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+a,PRE+Zo+Xo|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Zo+Xo|st+?a,CompoundingRule
+P,st+a,PRE+Zo+Xo|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+a,PRE+Zo+X|st+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+a,PRE+Zo+X|st+?a,CompoundingRule
+P,st+a,PRE+Zo+X|st+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+p,PRE+Zo+Yo|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Zo+Yo|st+?p,CompoundingRule
+P,st+p,PRE+Zo+Yo|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+p,PRE+Zo+Yo|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Zo+Yo|st+?p,CompoundingRule
+P,st+p,PRE+Zo+Yo|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+p,PRE+Zo+Yo|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Zo+Yo|st+?p,CompoundingRule
+P,st+p,PRE+Zo+Yo|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+p,PRE+Zo+Y|st+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+p,PRE+Zo+Y|st+?p,CompoundingRule
+P,st+p,PRE+Zo+Y|st+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+t,PRE+Zo|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+t,PRE+Zo|st+?t,CompoundingRule
+P,st+t,PRE+Zo|st+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+t,PRE+Zo|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+t,PRE+Zo|st+?t,CompoundingRule
+P,st+t,PRE+Zo|st+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+t,PRE+Zo|st+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+t,PRE+Zo|st+?t,CompoundingRule
+P,st+t,PRE+Zo|st+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,st+s,PRE+Zo+Z|st+?s,AffixProcessRule: prefix/suffix/circumfix/infix
+P,st+s,PRE+Zo+Z|st+?s,CompoundingRule
+P,st+s,PRE+Zo+Z|st+?s,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss+a,PRE+Z+Xo|ss+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss+a,PRE+Z+Xo|ss+?a,CompoundingRule
+P,ss+a,PRE+Z+Xo|ss+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss+a,PRE+Z+Xo|ss+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss+a,PRE+Z+Xo|ss+?a,CompoundingRule
+P,ss+a,PRE+Z+Xo|ss+?a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss+p,PRE+Z+Yo|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss+p,PRE+Z+Yo|ss+?p,CompoundingRule
+P,ss+p,PRE+Z+Yo|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss+p,PRE+Z+Yo|ss+?p,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss+p,PRE+Z+Yo|ss+?p,CompoundingRule
+P,ss+p,PRE+Z+Yo|ss+?p,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss+t,PRE+Z+Zo|ss+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss+t,PRE+Z+Zo|ss+?t,CompoundingRule
+P,ss+t,PRE+Z+Zo|ss+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+P,ss+t,PRE+Z+Zo|ss+?t,AffixProcessRule: prefix/suffix/circumfix/infix
+P,ss+t,PRE+Z+Zo|ss+?t,CompoundingRule
+P,ss+t,PRE+Z+Zo|ss+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 SpellingCompoundStrata,sa,PRE+ROOT|s[aá(xy)ei],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundStrata,ai,ROOT+SUF|[aá(xy)ei][aá(xy)i],AffixProcessRule: prefix/suffix/circumfix/infix
 SpellingCompoundStrata,ai,ROOT|[aá(xy)ei][aá(xy)ei],CompoundingRule
