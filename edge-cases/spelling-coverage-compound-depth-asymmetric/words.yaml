@@ -1,0 +1,198 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundDepthAsymmetric
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 3
+fieldworks_producible: true
+words:
+  - word: a
+    note: "C# returns 1 analysis (X|[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá]"
+        rules: []
+  - word: p
+    note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|p"
+        rules: []
+  - word: aa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ap
+    note: "C# returns 1 analysis (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá][+-=]?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: pa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: apa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: app
+    note: "C# returns 1 analysis (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá][+-=]?p[+-=]?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: paa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aapa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aapp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: apaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: apap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: appa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: appp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: paaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: paap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: papa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: papp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ppap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pppa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: pppp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "á"
+    note: "C# returns 1 analysis (X|[aá]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá]"
+        rules: []
+  - word: t
+    note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z|t"
+        rules: []
+  - word: at
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ta
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-p"
+    note: "C# returns 1 analysis (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá][+-=]?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: "a=p"
+    note: "C# returns 1 analysis (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá][+-=]?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: "a=p-t"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-ps-t"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a=ps-t"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a=sp-t"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-p-p"
+    note: "C# returns 1 analysis (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá][+-=]?p[+-=]?p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: "a+sp+t"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-sp-t"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a=p-t-a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaaaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaaaaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-p-t-a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-ps-t-a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a=sp-t-a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-a-a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: "a-a-a-a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true

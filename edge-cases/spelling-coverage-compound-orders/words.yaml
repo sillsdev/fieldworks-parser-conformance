@@ -1,0 +1,170 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundOrders
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
+words:
+  - word: a
+    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá(xy)ei]"
+        rules: []
+  - word: p
+    note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|p"
+        rules: []
+  - word: s
+    note: "C# returns 1 analysis (Z|s): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z|s"
+        rules: []
+  - word: ap
+    note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá(xy)ei]p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "X+Y|[aá(xy)ei]p"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: pa
+    note: "C# returns 2 analyses (Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+X|p[aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "Y+X|p[aá(xy)ei]"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: aa
+    note: "C# returns 2 analyses (X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "X|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: pp
+    note: "C# returns 2 analyses (Y|pp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|pp"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "Y|pp"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: "áp"
+    note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá(xy)ei]p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "X+Y|[aá(xy)ei]p"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: pxy
+    note: "C# returns 2 analyses (Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+X|p[aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "Y+X|p[aá(xy)ei]"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: xyp
+    note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|[aá(xy)ei]p"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "X+Y|[aá(xy)ei]p"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+  - word: sa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: as
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ps
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: sp
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ss
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: paa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: app
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: e
+    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá(xy)ei]"
+        rules: []
+  - word: ae
+    note: "C# returns 2 analyses (X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+          - "MPR features/groups"
+      - signature: "X|[aá(xy)ei][aá(xy)ei]"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+          - "MPR features/groups"
+          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"

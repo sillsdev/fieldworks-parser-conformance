@@ -1,0 +1,369 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCoverage
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: Literal stems, affix processes, copy morphology, optional final slot and null-affix boundary; partial features follow ADR 0009. No fwdata round-trip witness is claimed.
+words:
+  - word: a
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: "á"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: xy
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: e
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: i
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []
+  - word: p
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: s
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: pa
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "pá"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: pxy
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: pe
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: pi
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: as
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][ps]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "ás"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][ps]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: xys
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][ps]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: es
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][ps]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: is
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][ps]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: pas
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: pes
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: pis
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: aa
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "aá"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "áa"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: axy
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: xya
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ae
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ai
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ea
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ia
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ee
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ii
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+DUP|[aá(xy)ei][aá(xy)ei]"
+        rules: ["DUP"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "ROOT+SLOT|[aá(xy)ei][aá(xy)ei]"
+        rules: ["SLOT"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "paás"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+DUP+SUF|[ps](^0)?[aá(xy)ei][aá(xy)ei][ps]"
+        rules: ["DUP", "PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+DUP+SUF|[ps](^0)?[aá(xy)ei][aá(xy)ei][ps]"
+        rules: ["DUP", "PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: paes
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+DUP+SUF|[ps](^0)?[aá(xy)ei][aá(xy)ei][ps]"
+        rules: ["DUP", "PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+DUP+SUF|[ps](^0)?[aá(xy)ei][aá(xy)ei][ps]"
+        rules: ["DUP", "PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: aeis
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: ass
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: pass
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: aaas
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: ap
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT+SUF|[aá(xy)ei][ps]"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: sa
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: ps
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: pp
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: sss
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: "p^0a"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT|[ps](^0)?[aá(xy)ei]"
+        rules: ["PRE"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "p^0ás"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "p^0es"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "a^0"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: "^0a"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    expect_fail: true
+  - word: "p^0xys"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - signature: "PRE+ROOT+SUF|[ps](^0)?[aá(xy)ei][ps]"
+        rules: ["PRE", "SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: "á"
+    note: Spelling and morphology control; every observed C# signature occurrence is retained.
+    parses:
+      - signature: "ROOT|[aá(xy)ei]"
+        rules: []

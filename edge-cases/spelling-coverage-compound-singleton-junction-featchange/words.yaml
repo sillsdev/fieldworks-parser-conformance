@@ -1,0 +1,717 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundSingletonJunctionFeatchange
+requires: [phonology, morpher-settings]
+morpher:
+  MaxRoots: 2
+fieldworks_producible: true
+words:
+  - word: a
+    note: "C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|a"
+        rules: []
+  - word: p
+    note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|p"
+        rules: []
+  - word: t
+    note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z|t"
+        rules: []
+  - word: aa
+    note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|a+?a"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X|a+?a"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: ap
+    note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|a+?p"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y|a+?p"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: at
+    note: "C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Z|a+?t"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Z|a+?t"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: pa
+    note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+X|p+?a"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y+X|p+?a"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: pp
+    note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|p+?p"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y|p+?p"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: pt
+    note: "C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+Z|p+?t"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y+Z|p+?t"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: ta
+    note: "C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+X|t+?a"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Z+X|t+?a"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: tt
+    note: "C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z|t+?t"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Z|t+?t"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: sa
+    note: "C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X|sa"
+        rules: [PRE]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: sp
+    note: "C# returns 3 analyses (PRE+Y|sp; Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y|sp"
+        rules: [PRE, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "Z+Y|s+?p"
+        rules: [cr1, pr1]
+        exercises:
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "Z+Y|s+?p"
+        rules: [cr2, pr1]
+        exercises:
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+  - word: st
+    note: "C# returns 1 analysis (PRE+Z|st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z|st"
+        rules: [PRE]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: asa
+    note: "C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE|a+?sa"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: asp
+    note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|a+?sp"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: ast
+    note: "C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Z|a+?st"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "a+a"
+    note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|a+?a"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X|a+?a"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: "a+p"
+    note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|a+?p"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y|a+?p"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: "a+t"
+    note: "C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Z|a+?t"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Z|a+?t"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: psa
+    note: "C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE+X|p+?sa"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: psp
+    note: "C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE|p+?sp"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: pst
+    note: "C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE+Z|p+?st"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "p+a"
+    note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+X|p+?a"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y+X|p+?a"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: "p+p"
+    note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y|p+?p"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y|p+?p"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: "p+t"
+    note: "C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+Z|p+?t"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Y+Z|p+?t"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: tsa
+    note: "C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+PRE+X|t+?sa"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: tsp
+    note: "C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+PRE+Y|t+?sp"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: tst
+    note: "C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+PRE|t+?st"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "t+a"
+    note: "C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+X|t+?a"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Z+X|t+?a"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: "t+t"
+    note: "C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z|t+?t"
+        rules: [cr1]
+        exercises:
+          - "CompoundingRule"
+      - signature: "Z|t+?t"
+        rules: [cr2]
+        exercises:
+          - "CompoundingRule"
+  - word: saa
+    note: "C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X|sa+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X|sa+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X|sa+?a"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sap
+    note: "C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X+Y|sa+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|sa+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|sa+?p"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sat
+    note: "C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X+Z|sa+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Z|sa+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Z|sa+?t"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: spa
+    note: "C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y+X|sp+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+X|sp+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+X|sp+?a"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: spp
+    note: "C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y|sp+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y|sp+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y|sp+?p"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: spt
+    note: "C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y+Z|sp+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+Z|sp+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+Z|sp+?t"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: sta
+    note: "C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z+X|st+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z+X|st+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z+X|st+?a"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: stt
+    note: "C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z|st+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z|st+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z|st+?t"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: ssp
+    note: "C# returns 3 analyses (PRE+Z+Y|ss+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z+Y|ss+?p"
+        rules: [PRE, cr1, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "PRE+Z+Y|ss+?p"
+        rules: [PRE, cr1, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "PRE+Z+Y|ss+?p"
+        rules: [PRE, cr2, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+  - word: "s+p"
+    note: "C# returns 2 analyses (Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+Y|s+?p"
+        rules: [cr1, pr1]
+        exercises:
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "Z+Y|s+?p"
+        rules: [cr2, pr1]
+        exercises:
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+  - word: "a+sa"
+    note: "C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE|a+?sa"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "a+sp"
+    note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Y|a+?sp"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "a+st"
+    note: "C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+PRE+Z|a+?st"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "p+sa"
+    note: "C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE+X|p+?sa"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "p+sp"
+    note: "C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE|p+?sp"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "p+st"
+    note: "C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Y+PRE+Z|p+?st"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "t+sa"
+    note: "C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+PRE+X|t+?sa"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "t+sp"
+    note: "C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+PRE+Y|t+?sp"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "t+st"
+    note: "C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "Z+PRE|t+?st"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "sa+a"
+    note: "C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X|sa+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X|sa+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X|sa+?a"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "sa+p"
+    note: "C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X+Y|sa+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|sa+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Y|sa+?p"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "sa+t"
+    note: "C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+X+Z|sa+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Z|sa+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+X+Z|sa+?t"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "sp+a"
+    note: "C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y+X|sp+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+X|sp+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+X|sp+?a"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "sp+p"
+    note: "C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y|sp+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y|sp+?p"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y|sp+?p"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "sp+t"
+    note: "C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y+Z|sp+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+Z|sp+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+Z|sp+?t"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "st+a"
+    note: "C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z+X|st+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z+X|st+?a"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z+X|st+?a"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "st+t"
+    note: "C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z|st+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z|st+?t"
+        rules: [PRE, cr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Z|st+?t"
+        rules: [PRE, cr2]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: "ss+p"
+    note: "C# returns 3 analyses (PRE+Z+Y|ss+?p): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Z+Y|ss+?p"
+        rules: [PRE, cr1, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "PRE+Z+Y|ss+?p"
+        rules: [PRE, cr1, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - signature: "PRE+Z+Y|ss+?p"
+        rules: [PRE, cr2, pr1]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

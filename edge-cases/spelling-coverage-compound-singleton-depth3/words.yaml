@@ -1,0 +1,67 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundSingletonDepth3
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 3
+fieldworks_producible: true
+words:
+  - word: apt
+    note: "C# returns 2 analyses (X+Y+Z|apt): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z|apt"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y+Z|apt"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: aapt
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ap
+    note: "C# returns 2 analyses (X+Y|ap): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y|ap"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y|ap"
+        rules: ["cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: apst
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: aaa
+    note: "C# returns 2 analyses (X|aaa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|aaa"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X|aaa"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: spa
+    note: "C# returns 3 analyses (PRE+Y+X|spa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "PRE+Y+X|spa"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+X|spa"
+        rules: ["PRE", "cr1"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "PRE+Y+X|spa"
+        rules: ["PRE", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"

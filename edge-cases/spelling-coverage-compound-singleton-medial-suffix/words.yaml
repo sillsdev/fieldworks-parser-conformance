@@ -1,0 +1,69 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: SpellingCompoundSingletonMedialSuffix
+requires: [morpher-settings]
+morpher:
+  MaxRoots: 3
+fieldworks_producible: true
+words:
+  - word: apst
+    note: "C# returns 3 analyses (X+Y+SUF+Z|apst): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+SUF+Z|apst"
+        rules: ["SUF", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+Y+SUF+Z|apst"
+        rules: ["SUF", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+Y+SUF+Z|apst"
+        rules: ["SUF", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+  - word: apt
+    note: "C# returns 2 analyses (X+Y+Z|apt): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z|apt"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "X+Y+Z|apt"
+        rules: ["cr1", "cr2"]
+        exercises:
+          - "CompoundingRule"
+  - word: aspt
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: a
+    note: "C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X|a"
+        rules: []
+  - word: as
+    note: "C# returns 1 analysis (X+SUF|as): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+SUF|as"
+        rules: ["SUF"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+  - word: apts
+    note: "C# returns 3 analyses (X+Y+Z+SUF|apts): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "X+Y+Z+SUF|apts"
+        rules: ["SUF", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+Y+Z+SUF|apts"
+        rules: ["SUF", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"
+      - signature: "X+Y+Z+SUF|apts"
+        rules: ["SUF", "cr1", "cr2"]
+        exercises:
+          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - "CompoundingRule"

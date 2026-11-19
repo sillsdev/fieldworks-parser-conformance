@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 140 fixtures: 6 languages and 134 edge cases.
+The list has 209 fixtures: 6 languages and 203 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 140 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 209 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **47 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **48 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -67,6 +67,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/infix-ambiguous-site`
 - `edge-cases/infix-interdigitation`
 - `edge-cases/loader-pattern-shapes`
+- `edge-cases/mpr-wide-inflection-classes`
 - `edge-cases/morphotactic-attribute-breadth`
 - `edge-cases/non-clitic-after-final-template-layout`
 - `edge-cases/optional-template-composite`
@@ -185,6 +186,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/adhoc-prohibition-variant-enclitic-first`: [XAmple] a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry.
 - `edge-cases/adhoc-prohibition-variant-main-first-enclitic`: [XAmple] a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry.
 - `edge-cases/adhoc-prohibition-variant-msa-copies`: [XAmple] a morpheme prohibition on one analysis of a stem that has a variant entry.
+- `edge-cases/mpr-wide-inflection-classes`: [XAmple] Ten families of 30 inflection classes (300 features) plus exception features, so one grammar carries 303 MPR features.
 
 ## Compounding
 
@@ -194,6 +196,55 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/head-ambiguous-compounding`: [XAmple] compounds in which either root could be the head.
 - `edge-cases/recursive-endocentric-compounding`: [XAmple] a compounding rule that applies to its own output.
 - `edge-cases/cross-stem-material-determination`: [XAmple] a suffix whose form depends on which prefix was chosen, not only on whether the pair is allowed.
+- `edge-cases/spelling-coverage-compound-affixes`: A prefix and a suffix around a compound, with aliased roots and inserted segments; derivations place the affixes before, between and after the stems.
+- `edge-cases/spelling-coverage-compound-alias-deleted`: The aliased segment loses one alias; words using it are an invalid shape in C# and the remaining aliases still spell every stem.
+- `edge-cases/spelling-coverage-compound-allomorphs`: One entry with two root allomorphs under ordinary head-then-non-head compounding.
+- `edge-cases/spelling-coverage-compound-boundary`: The compound inserts a `+` morpheme boundary between the stems, as the loader writes it.
+- `edge-cases/spelling-coverage-compound-boundary-explicit`: As the boundary fixture, with the `+` boundary declared explicitly in the character table.
+- `edge-cases/spelling-coverage-compound-completed`: The aliased segment is given a complete feature bundle, so it no longer unifies with the vowels; C# rejects the compounds that depended on it.
+- `edge-cases/spelling-coverage-compound-orders`: Two endocompounding rules, one head-first and one non-head-first, both stems licensed by the same MPR feature, plus a third entry outside the licence.
+- `edge-cases/spelling-coverage-compound-orders-asymmetric`: Two endocompounding rules, one head-first and one non-head-first, whose head and non-head MPR licences differ. C# accepts only the head-first order here.
+- `edge-cases/spelling-coverage-compound-orders-pos`: Two endocompounding rules, one head-first and one non-head-first, restricted by head and non-head part of speech.
+- `edge-cases/spelling-coverage-compound-reversed-table`: The repeated-root compound with the character table's segment definitions declared in reverse order.
+- `edge-cases/spelling-coverage-compound-strata`: The compounding rule and a prefix in the first stratum and a suffix in a second stratum sharing the same character table.
+- `edge-cases/spelling-coverage-compound-template`: An affix template with a prefix slot and a suffix slot around a compound; template-less words are rejected.
+- `edge-cases/spelling-coverage-compound-affix-feeds`: one compound and a free prefix and a free suffix in one stratum.
+- `edge-cases/spelling-coverage-compound-multirule`: Two compounding rules that each write a `+` boundary, one head-first and one non-head-first, with both orders in the same stratum.
+- `edge-cases/spelling-coverage-compound-multirule-affixes`: two compounding rules, a free prefix and a free suffix.
+- `edge-cases/spelling-coverage-compound-prefix-feeds`: a compound and a free prefix in one stratum.
+- `edge-cases/spelling-coverage-compound-suffix-feeds`: a compound and a free suffix in one stratum.
+- `edge-cases/spelling-coverage-compound-template-feeds`: a compound whose affixes come only from the slots of an affix template.
+- `edge-cases/spelling-coverage-compound-template-free-feeds`: a compound with a free suffix in the stratum and a prefix and suffix that exist only in an affix template.
+- `edge-cases/spelling-coverage-compound-singleton-junction-deletion`: A deletion rule removes a stem-final segment before a stem-initial segment across a compound junction that writes a boundary.
+- `edge-cases/spelling-coverage-compound-singleton-junction-epenthesis`: An epenthesis rule inserts a segment between a stem-final and a stem-initial segment across the compound junction.
+- `edge-cases/spelling-coverage-compound-singleton-junction-featchange`: A feature-change rule rewrites a stem-final segment before a stem-initial segment across the compound junction.
+- `edge-cases/spelling-coverage-compound-singleton-junction-final-change`: A one-node feature change applies only at a word-final anchor, in the same stratum as the compounding rules.
+- `edge-cases/spelling-coverage-compound-singleton-junction-metathesis`: A metathesis rule swaps a stem-final `p` and a stem-initial `t` across a compound junction with no written boundary.
+- `edge-cases/spelling-coverage-compound-singleton-junction-root-stratum-final-change`: a word-final one-node feature change in the root stratum, with the compounding rules and lexical entries in a later stratum.
+- `edge-cases/spelling-coverage-compound-repeated-root`: Two-node self-compounds of one root are accepted and structural neighbors are rejected.
+- `edge-cases/compound-allomorph-identity`: One lexical entry with two root allomorphs under a copy/copy compounding rule, so reusing one allomorph and using both give different identities.
+- `edge-cases/compound-allomorph-identity-distinct-entries`: Two entries and two endocompounding rules, one head-first and one non-head-first, covering distinct roots in each order and ambiguity.
+- `edge-cases/compound-allomorph-identity-same-spelling`: One entry whose two allomorphs spell the same string under compounding, so every pairing is a distinct derivation.
+- `edge-cases/compound-allomorph-identity-separated`: A prefix on the non-head side of a compound, so the same root recurs with another morpheme between.
+- `edge-cases/spelling-coverage-compound-depth3`: The two rules grow the head at opposite ends.
+- `edge-cases/spelling-coverage-compound-depth4`: The two rules grow the head at opposite ends.
+- `edge-cases/spelling-coverage-compound-depth-asymmetric`: The head-first rule licenses different entries on each side.
+- `edge-cases/spelling-coverage-compound-depth-limit`: The same head grows to five stems under MaxRoots.
+- `edge-cases/spelling-coverage-compound-depth-medial-suffix`: A compound grows on both sides of a suffixed stem, so a suffix can sit between two stems.
+- `edge-cases/spelling-coverage-compound-depth-mpr-output`: A compound subrule adds an MPR feature, so the next application may see a different head MPR set.
+- `edge-cases/spelling-coverage-compound-depth-mpr-restricted`: Both compounding rules restrict the same MPR feature on either side.
+- `edge-cases/spelling-coverage-compound-depth-prefix-hop`: Repeated left growth puts a prefix before the third or fourth stem and can put the head in the last stem.
+- `edge-cases/spelling-coverage-compound-depth-prefix-zone`: A suffix-first compounding rule has a prefix rule beside it.
+- `edge-cases/spelling-coverage-compound-depth-reordered-prefix`: The prefix copies both input parts in reverse order.
+- `edge-cases/spelling-coverage-compound-junction-boundary-mark`: The compound boundary is written as the code `é`, a letter that decomposes to a base plus a combining mark.
+- `edge-cases/spelling-coverage-compound-junction-mark`: A phoneme spelling that begins with a combining mark follows a root at the compound junction.
+- `edge-cases/spelling-coverage-compound-singleton-boundary`: At two stems, the literal `+` boundary is typed in accepted compounds of single-segment roots.
+- `edge-cases/spelling-coverage-compound-singleton-depth3`: Two compounding rules over single-segment roots, with no written boundary, grow past two stems.
+- `edge-cases/spelling-coverage-compound-singleton-medial-suffix`: Two single-segment stems compound; a third stem makes a suffix between stems possible.
+- `edge-cases/spelling-coverage-compound-singleton-merging-mark`: A segment U+0301 (a combining acute) follows a root, and neither compounding rule writes a boundary at the junction.
+- `edge-cases/spelling-coverage-compound-singleton-quote-boundary`: A literal double quote is a spelling of the `+` boundary used by both compounding rules.
+- `edge-cases/spelling-coverage-compound-singleton-quote-segment`: A literal double quote is a phoneme code in both a root and a prefix.
+- `edge-cases/spelling-coverage-compound-singleton-thai-mark`: Thai mai ek (U+0E48), a combining mark, is listed as a segment and starts a root.
 
 ## Phonological rules: deletion, epenthesis, merge, expansion
 
@@ -240,6 +291,25 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/strrep-rewrite-unapplication`: a rewrite undone on analysis in a grammar with no phonological features.
 - `edge-cases/chained-output-feature-override-loss`: [XAmple] two rules that each set an output feature, and a word that needs both.
 - `edge-cases/alpha-variable-name-collision`: two vowels that flip different features under one alpha variable.
+- `edge-cases/alias-output-0-literal`: a phoneme with two spellings as the output of an obligatory rewrite (variant 0), written as a literal segment: both spellings parse and the unchanged root does not.
+- `edge-cases/alias-output-0-singleton`: a phoneme with two spellings as the output of an obligatory rewrite (variant 0), written as a one-member natural class: both spellings parse and the unchanged root does not.
+- `edge-cases/alias-output-1-literal`: a phoneme with two spellings as the output of an obligatory rewrite (variant 1), written as a literal segment: both spellings parse and the unchanged root does not.
+- `edge-cases/alias-output-1-singleton`: a phoneme with two spellings as the output of an obligatory rewrite (variant 1), written as a one-member natural class: both spellings parse and the unchanged root does not.
+- `edge-cases/featureless-literal-target`: a featureless rewrite whose target is a literal segment and whose output is a class of two segments: both outputs parse as one root.
+- `edge-cases/featureless-singleton-target`: a featureless rewrite whose target is a one-member class and whose output is a class of two segments: both outputs parse as one root.
+- `edge-cases/featureless-unused-feature`: the featureless class rewrite plus one declared symbolic feature that no segment carries: the same two outputs still parse.
+- `edge-cases/partial-feature-literal-output`: a rewrite with a literal output in a grammar whose declared feature has no segment values.
+- `edge-cases/partial-feature-literal-rewrite`: a rewrite whose target and output are both literal segments, with an unused declared feature.
+- `edge-cases/partial-feature-no-rewrite`: the unused-feature grammar without any phonological rule: one surface still has two root identities.
+- `edge-cases/partial-feature-singleton-rewrite`: a rewrite whose classes are one-member classes, with an unused declared feature.
+- `edge-cases/partial-inherited-output-feature`: intervocalic lenition in a grammar whose symbolic feature covers only some segments, with the target class written as a feature class: both output spellings parse and the unchanged root does not.
+- `edge-cases/partial-inherited-output-literal`: the same lenition with the target class written as a segment class of two segments.
+- `edge-cases/partial-inherited-output-singleton`: the same lenition with the target class written as a one-member segment class.
+- `edge-cases/spelling-coverage-copy-slots`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has the base grammar.
+- `edge-cases/spelling-coverage-copy-slots-alias-deleted`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has the accented alias removed from the root definitions.
+- `edge-cases/spelling-coverage-copy-slots-completed`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has the root definition's omitted second feature filled with minus.
+- `edge-cases/spelling-coverage-copy-slots-one`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has one feature in the character table.
+- `edge-cases/spelling-coverage-copy-slots-reversed`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has the root definition's spellings declared in reverse order.
 
 ## Alpha variables in environments
 

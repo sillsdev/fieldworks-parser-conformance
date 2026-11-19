@@ -1,0 +1,41 @@
+# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
+language: CompoundIdentity
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: Fully specified literal segments and ordinary compounding or affix rules; no fwdata round-trip witness is claimed.
+words:
+  - word: a
+    note: "C# returns 2 analyses (ROOT|a): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT|a"
+        rules: []
+      - signature: "ROOT|a"
+        rules: []
+  - word: aa
+    note: "C# returns 4 analyses (ROOT+ROOT|aa; ROOT|aa): pins that this spelling is a route and its morpheme sequence."
+    parses:
+      - signature: "ROOT+ROOT|aa"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "ROOT+ROOT|aa"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "ROOT|aa"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+      - signature: "ROOT|aa"
+        rules: ["cr1"]
+        exercises:
+          - "CompoundingRule"
+  - word: aaa
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: p
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+  - word: ap
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
