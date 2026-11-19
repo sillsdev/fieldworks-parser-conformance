@@ -223,6 +223,52 @@ CliticRuleDesignation,sagdz,SAG+PAST+DEFCL|sagdz,Clitic rules (Clitics stratum) 
 CliticRuleDesignation,kolpu,KOL+NF|kolpu,Affix template slots (obligatory/disjunctive/ordering)
 CliticRuleDesignation,kolpuli,KOL+NF+PL|kolpuli,Affix template slots (obligatory/disjunctive/ordering)
 CliticStemEntry,sagd,SAG+PAST|sagd,Affix template slots (obligatory/disjunctive/ordering)
+CompoundIdentity,aa,ROOT|aa,CompoundingRule
+CompoundIdentity,ap,ROOT+ROOT|ap,CompoundingRule
+CompoundIdentity,pa,ROOT+ROOT|pa,CompoundingRule
+CompoundIdentity,pp,ROOT|pp,CompoundingRule
+CompoundIdentity,pp,X|pp,CompoundingRule
+CompoundIdentity,pp,X|pp,CompoundingRule
+CompoundIdentity,aa,X|aa,CompoundingRule
+CompoundIdentity,aa,X|aa,CompoundingRule
+CompoundIdentity,ap,X+X|ap,CompoundingRule
+CompoundIdentity,ap,X+X|ap,CompoundingRule
+CompoundIdentity,pa,X+X|pa,CompoundingRule
+CompoundIdentity,pa,X+X|pa,CompoundingRule
+CompoundIdentity,app,X+Y|app,CompoundingRule
+CompoundIdentity,app,X+Y|app,CompoundingRule
+CompoundIdentity,ppa,Y+X|ppa,CompoundingRule
+CompoundIdentity,ppa,Y+X|ppa,CompoundingRule
+CompoundIdentity,ppp,X+Y|ppp,CompoundingRule
+CompoundIdentity,ppp,X+Y|ppp,CompoundingRule
+CompoundIdentity,ppp,Y+X|ppp,CompoundingRule
+CompoundIdentity,ppp,Y+X|ppp,CompoundingRule
+CompoundIdentity,aa,ROOT+ROOT|aa,CompoundingRule
+CompoundIdentity,aa,ROOT+ROOT|aa,CompoundingRule
+CompoundIdentity,aa,ROOT|aa,CompoundingRule
+CompoundIdentity,aa,ROOT|aa,CompoundingRule
+CompoundIdentity,pa,PRE+ROOT|p(^0)?a,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,pa,ROOT+ROOT|pa,CompoundingRule
+CompoundIdentity,pp,PRE+ROOT|p(^0)?p,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,pp,ROOT|pp,CompoundingRule
+CompoundIdentity,aa,ROOT|aa,CompoundingRule
+CompoundIdentity,ap,ROOT+ROOT|ap,CompoundingRule
+CompoundIdentity,ppa,PRE+ROOT+ROOT|p(^0)?pa,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,ppa,PRE+ROOT+ROOT|p(^0)?pa,CompoundingRule
+CompoundIdentity,ppa,PRE+ROOT+ROOT|p(^0)?pa,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,ppa,PRE+ROOT+ROOT|p(^0)?pa,CompoundingRule
+CompoundIdentity,pap,PRE+ROOT+ROOT|p(^0)?ap,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,pap,PRE+ROOT+ROOT|p(^0)?ap,CompoundingRule
+CompoundIdentity,pap,PRE+ROOT+ROOT|p(^0)?ap,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,pap,PRE+ROOT+ROOT|p(^0)?ap,CompoundingRule
+CompoundIdentity,paa,PRE+ROOT|p(^0)?aa,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,paa,PRE+ROOT|p(^0)?aa,CompoundingRule
+CompoundIdentity,paa,PRE+ROOT|p(^0)?aa,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,paa,PRE+ROOT|p(^0)?aa,CompoundingRule
+CompoundIdentity,ppp,PRE+ROOT|p(^0)?pp,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,ppp,PRE+ROOT|p(^0)?pp,CompoundingRule
+CompoundIdentity,ppp,PRE+ROOT|p(^0)?pp,AffixProcessRule: prefix/suffix/circumfix/infix
+CompoundIdentity,ppp,PRE+ROOT|p(^0)?pp,CompoundingRule
 CompoundMaxApplications,ka,KA|ka,CompoundingRule
 CompoundMaxApplications,tu,TU|tu,CompoundingRule
 CompoundMaxApplications,mi,MI|mi,CompoundingRule

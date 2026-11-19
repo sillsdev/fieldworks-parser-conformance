@@ -89,6 +89,12 @@ CliticRuleDesignation,mrPl,kolpuli;!kolli
 CliticRuleDesignation,mrPlain,!sagdk
 CliticStemEntry,mrEnc,kaz
 CliticStemEntry,mrPast,sagd
+CompoundIdentity,cr1,aa;ap;pa;pp
+CompoundIdentity,cr1,pp;aa;ap;pa;app;ppa;ppp
+CompoundIdentity,cr2,pp;aa;ap;pa;app;ppa;ppp
+CompoundIdentity,cr1,aa
+CompoundIdentity,PRE,pa;pp;ppa;pap;paa;ppp
+CompoundIdentity,cr1,pa;pp;aa;ap;ppa;pap;paa;ppp
 CompoundMaxApplications,crJoin,katu;katumi;!katumiro
 CompoundingBreadth,crDecoy,!kaptu
 CompoundingBreadth,crJoin,katu;!katumi
