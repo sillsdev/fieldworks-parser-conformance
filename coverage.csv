@@ -444,6 +444,25 @@ MorphotacticAttributeBreadth,pogli,POG+POGAFX|pogli,Affix template slots (obliga
 MorphotacticAttributeBreadth,pogti,POG+PO|pogti,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,pogliti,POG+POGAFX+PO|pogliti,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 Ranavu,menulik,NPFX+TULIK|menulik,RewriteRule direction (Dir): left-to-right
+MprWide,paasi,e063+r063|paasi,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,palasai,e064+r064|palasai,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,pallasaai,e127+r127|pallasaai,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,palllasaaai,e128+r128|palllasaaai,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,pallllasaaaai,e255+r255|pallllasaaaai,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,palllllasaaaaai,e256+r256|palllllasaaaaai,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,pallllllasaaaaaai,e299+r299|pallllllasaaaaaai,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,paatu,e063+rFamily|paatu,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,palatu,e064+rFamily|palatu,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,balamu,eBoth+rAll|balamu,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,balanu,eBoth+rVariant|balanu,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,balabala,eBoth|bala+?bala,CompoundingRule
+MprWide,balabala,eBoth|bala+?bala,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+MprWide,balibala,eOne+eBoth|bali+?bala,CompoundingRule
+MprWide,balibala,eOne+eBoth|bali+?bala,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+MprWide,kibala,rOverwrite+eBoth|kibala,AffixProcessRule: prefix/suffix/circumfix/infix
+MprWide,balabalamu,eBoth+rAll|bala+?balamu,CompoundingRule
+MprWide,balabalamu,eBoth+rAll|bala+?balamu,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+MprWide,balabalamu,eBoth+rAll|bala+?balamu,AffixProcessRule: prefix/suffix/circumfix/infix
 NonCliticAfterFinalTemplateLayout,sagd,SAG+PAST|sagd,Affix template slots (obligatory/disjunctive/ordering)
 NonCliticAfterFinalTemplateLayout,sagds,SAG+PAST+ENC|sagds,Clitic rules (Clitics stratum) after a final template
 NonCliticAfterFinalTemplateLayout,sagdk,,Clitic rules (Clitics stratum) after a final template
