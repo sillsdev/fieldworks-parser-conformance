@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 216 fixtures: 6 languages and 210 edge cases.
+The list has 230 fixtures: 6 languages and 224 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 216 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 230 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -272,6 +272,20 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/interposed-optional-multi-rhs`: a rule with several output segments and an optional segment between them.
 - `edge-cases/iterative-epenthesis-cascade`: two iterative epentheses with empty targets that feed each other.
 - `edge-cases/fw-metathesis-switch-indices`: a metathesis rule authored in FieldWorks with a left environment, whose two switches HCLoader names from `StrucChange`; the swap applies only after `a`.
+- `edge-cases/metathesis-boundary-between-switches-compound`: a metathesis whose two switches are the last segment of one compound part and the first of the next, with a `+` junction between them.
+- `edge-cases/metathesis-boundary-between-switches-marker`: a metathesis whose pattern writes a boundary marker between the switches, applied where the prefix adds a second boundary.
+- `edge-cases/metathesis-boundary-between-switches-prefix`: a metathesis whose switches are split by the `+` that closes a prefix, which the matcher steps over.
+- `edge-cases/metathesis-boundary-context-left-right-to-left`: a right-to-left metathesis with a left context across the `+` that closes a prefix, where the boundary joins the group of the switch matched before it and only segments move.
+- `edge-cases/metathesis-boundary-context-right`: a metathesis with a right context across the `+` that opens a suffix, where the boundary joins the group of the switch matched before it and only segments move.
+- `edge-cases/metathesis-boundary-context-segments`: a metathesis whose right context, after segment-class switches, crosses the `+` that opens a suffix, so a root segment lands after the root's boundary.
+- `edge-cases/metathesis-boundary-morph-order-compound`: a metathesis across a compound junction with no boundary, listing the morphs in surface order after the swap.
+- `edge-cases/metathesis-boundary-morph-order-prefix-root`: a metathesis across a prefix and its root with no boundary, listing the morphs in surface order after the swap.
+- `edge-cases/metathesis-boundary-null-prefix`: a metathesis across a prefix and a null prefix `^0+`, whose boundaries stay while the root segment moves in front of them, so the null prefix is listed after the root.
+- `edge-cases/metathesis-boundary-right-to-left-prefix`: a right-to-left metathesis across the `+` that closes a prefix, where only segments move and the boundary ends up in front of the swapped pair.
+- `edge-cases/metathesis-boundary-right-to-left-suffix`: a right-to-left metathesis across the `+` that opens a suffix, where only segments move and the boundary ends up in front of the swapped pair.
+- `edge-cases/metathesis-boundary-two-suffixes`: a metathesis that swaps the last segment of one suffix with the first of the next across their boundary, keeping the morph order.
+- `edge-cases/metathesis-segment-class-union`: a metathesis whose switch is a segment natural class, which matches the union of its members' features and so also a root segment that is not a member.
+- `edge-cases/metathesis-deletion-restores-segment-between-switches`: a metathesis across a prefix boundary followed by a deletion whose analysis restores an optional segment between the switches; the founding oracle cannot parse four words it generates (sillsdev/machine#649).
 - `edge-cases/merge-then-metathesis`: a metathesis followed by a merge, undone in order on analysis.
 - `edge-cases/partial-rule-deleted-material`: partial affix rules whose inserted segment a phonological deletion rule removes from the surface form, under a final template.
 - `edge-cases/simultaneous-epenthesis-cascade`: a simultaneous epenthesis that inserts a vowel after any high vowel.

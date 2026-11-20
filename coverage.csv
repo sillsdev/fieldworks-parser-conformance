@@ -160,6 +160,9 @@ ambiguous-disagree-repeated-minus-partial-focus,ui,,CharacterDefinitionTable pat
 ambiguous-disagree-repeated-minus-partial-focus,uy,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 ambiguous-disagree-repeated-minus-partial-focus,ua,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 ambiguous-disagree-repeated-minus-partial-focus,uu,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+AuthoredNullAffixAllomorph,kaun,KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?,AffixProcessRule: prefix/suffix/circumfix/infix
+AuthoredNullAffixAllomorph,kaun,KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?,Boundary markers (CharacterDefinitionTable)
+AuthoredNullAffixAllomorph,kaun,KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?,Affix template slots (obligatory/disjunctive/ordering)
 BoundaryFirstInNarrowingLhs,kanmo,KAN+BO|kanmo,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 BoundaryFirstInNarrowingLhs,kanmo,KAN+BO|kanmo,Boundary markers (CharacterDefinitionTable)
 BoundaryFirstInNarrowingLhsStrrep,kanmo,KAN+BO|kanmo,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
@@ -462,6 +465,121 @@ MergeSubrulesPosSimultaneousTemplate,Gs,TA_V+S|Gs,RewriteSubruleDef gating: requ
 MergeSubrulesPosSimultaneousTemplate,Gs,TA_V+S|Gs,Affix template slots (obligatory/disjunctive/ordering)
 MergeThenMetathesis,aca,ATSA|aca,MetathesisRule
 MergeThenMetathesis,aca,ATSA|aca,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisBoundaryBetweenSwitchesCompound,pt,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,pt,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,p+t,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,p+t,Y+Z|p+?t,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,tp,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesCompound,t+p,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,ts,Z+PRE|t+?+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,t+s,Z+PRE|t+?+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,t++s,Z+PRE|t+?+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,st,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesMarker,s+t,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,ts,Z+PRE|t+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,t+s,Z+PRE|t+?s,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,st,,MetathesisRule
+MetathesisBoundaryBetweenSwitchesPrefix,s+t,,MetathesisRule
+MetathesisBoundaryContextLeftRightToLeft,ats,PRE+Z|at+?s,MetathesisRule
+MetathesisBoundaryContextLeftRightToLeft,at+s,PRE+Z|at+?s,MetathesisRule
+MetathesisBoundaryContextLeftRightToLeft,a+ts,,MetathesisRule
+MetathesisBoundaryContextLeftRightToLeft,a+st,,MetathesisRule
+MetathesisBoundaryContextLeftRightToLeft,ast,,MetathesisRule
+MetathesisBoundaryContextRight,tsa,Z+SUF|t+?sa,MetathesisRule
+MetathesisBoundaryContextRight,t+sa,Z+SUF|t+?sa,MetathesisRule
+MetathesisBoundaryContextRight,ts+a,,MetathesisRule
+MetathesisBoundaryContextRight,st+a,,MetathesisRule
+MetathesisBoundaryContextRight,sta,,MetathesisRule
+MetathesisBoundaryContextSegments,tsap,R0+SUF0+SUF1|t+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,tsap,R0+SUF2|t+?sap,MetathesisRule
+MetathesisBoundaryContextSegments,t+sap,R0+SUF0+SUF1|t+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,t+sap,R0+SUF2|t+?sap,MetathesisRule
+MetathesisBoundaryContextSegments,tsa+p,R0+SUF0+SUF1|t+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,t+sa+p,R0+SUF0+SUF1|t+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,ptsap,R1+SUF0+SUF1|pt+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,ptsap,R1+SUF2|pt+?sap,MetathesisRule
+MetathesisBoundaryContextSegments,pt+sap,R1+SUF0+SUF1|pt+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,pt+sap,R1+SUF2|pt+?sap,MetathesisRule
+MetathesisBoundaryContextSegments,pt+sa+p,R1+SUF0+SUF1|pt+?sa+?p,MetathesisRule
+MetathesisBoundaryContextSegments,tsapa,R0+SUF2+SUF0|t+?sap+?a,MetathesisRule
+MetathesisBoundaryContextSegments,tsapp,R0+SUF2+SUF1|t+?sap+?p,MetathesisRule
+MetathesisBoundaryContextSegments,t+sap+a,R0+SUF2+SUF0|t+?sap+?a,MetathesisRule
+MetathesisBoundaryContextSegments,stap,,MetathesisRule
+MetathesisBoundaryContextSegments,st+ap,,MetathesisRule
+MetathesisBoundaryContextSegments,sta+p,,MetathesisRule
+MetathesisBoundaryContextSegments,st+a+p,,MetathesisRule
+MetathesisBoundaryContextSegments,sap,,MetathesisRule
+MetathesisBoundaryContextSegments,tasp,,MetathesisRule
+MetathesisMorphOrderCompound,pt,Y+Z|pt,MetathesisRule
+MetathesisMorphOrderCompound,pt,Y+Z|pt,MetathesisRule
+MetathesisMorphOrderPrefixRoot,ts,Z+PRE|ts,MetathesisRule
+MetathesisBoundaryNullPrefix,ats,NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,ats,PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,ats,PRE+R0|at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at+s,NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at+s,PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at+s,PRE+R0|at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at++s,PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at^0s,PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at^0+s,PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,at+^0+s,PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,+ats,NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,^0ats,NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,^0+ats,NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,+at+s,NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s,MetathesisRule
+MetathesisBoundaryNullPrefix,atsa,NUL+PRE+R1|[(^0)(*0)(&0)∅]?+?at+?sa,MetathesisRule
+MetathesisBoundaryNullPrefix,atsa,PRE+R1+NUL|at+?[(^0)(*0)(&0)∅]?+?sa,MetathesisRule
+MetathesisBoundaryNullPrefix,atsa,PRE+R1|at+?sa,MetathesisRule
+MetathesisBoundaryNullPrefix,at+sa,NUL+PRE+R1|[(^0)(*0)(&0)∅]?+?at+?sa,MetathesisRule
+MetathesisBoundaryNullPrefix,at+sa,PRE+R1+NUL|at+?[(^0)(*0)(&0)∅]?+?sa,MetathesisRule
+MetathesisBoundaryNullPrefix,at+sa,PRE+R1|at+?sa,MetathesisRule
+MetathesisBoundaryNullPrefix,as+t,,MetathesisRule
+MetathesisBoundaryNullPrefix,ast,,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,+ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,t+s,,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,st,,MetathesisRule
+MetathesisBoundaryRightToLeftPrefix,s+t,,MetathesisRule
+MetathesisBoundaryRightToLeftSuffix,ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftSuffix,+ts,PRE+Z|+?ts,MetathesisRule
+MetathesisBoundaryRightToLeftSuffix,ta,,MetathesisRule
+MetathesisBoundaryTwoSuffixes,patsa,R0+SA+ST|p+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,p+at+sa,R0+SA+ST|p+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,p+atsa,R0+SA+ST|p+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,pat+sa,R0+SA+ST|p+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,paatsa,R1+SA+ST|pa+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,pa+at+sa,R1+SA+ST|pa+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,tp+at+sa,R2+SA+ST|tp+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,tp+atsa,R2+SA+ST|tp+?at+?sa,MetathesisRule
+MetathesisBoundaryTwoSuffixes,pasta,,MetathesisRule
+MetathesisBoundaryTwoSuffixes,p+as+ta,,MetathesisRule
+MetathesisBoundaryTwoSuffixes,pas+ta,,MetathesisRule
+MetathesisBoundaryTwoSuffixes,pats+a,,MetathesisRule
+MetathesisBoundaryTwoSuffixes,ptas,,MetathesisRule
+MetathesisBoundaryTwoSuffixes,tpats,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,t,R0|t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,t,R1|t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,ta,R2|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,ats,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,at+s,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,atsa,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,at+sa,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,ast,PRE+R1|as+?t,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,ast,PRE+R1|as+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,as+t,PRE+R1|as+?t,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,as+t,PRE+R1|as+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisSegmentClassUnion,ap,R2|ap,MetathesisRule
+MetathesisSegmentClassUnion,aap,SUF+R0|a+?ap,MetathesisRule
+MetathesisSegmentClassUnion,app,SUF+R1|a+?pp,MetathesisRule
+MetathesisSegmentClassUnion,apap,R2+SUF|ap+?ap,MetathesisRule
+MetathesisSegmentClassUnion,a+ap,SUF+R0|a+?ap,MetathesisRule
+MetathesisSegmentClassUnion,a+pp,SUF+R1|a+?pp,MetathesisRule
+MetathesisSegmentClassUnion,ap+ap,R2+SUF|ap+?ap,MetathesisRule
+MetathesisSegmentClassUnion,aa+p,,MetathesisRule
+MetathesisSegmentClassUnion,apa,,MetathesisRule
+MetathesisSegmentClassUnion,aa,,MetathesisRule
+MetathesisSegmentClassUnion,pa,,MetathesisRule
+MetathesisSegmentClassUnion,paap,,MetathesisRule
 MorphotacticAttributeBreadth,kul,KUL|kul,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,kulde,KUL+ONCE|kulde,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,kuldede,,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
