@@ -554,6 +554,17 @@ MetathesisBoundaryTwoSuffixes,pas+ta,,MetathesisRule
 MetathesisBoundaryTwoSuffixes,pats+a,,MetathesisRule
 MetathesisBoundaryTwoSuffixes,ptas,,MetathesisRule
 MetathesisBoundaryTwoSuffixes,tpats,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,t,R0|t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,t,R1|t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,ta,R2|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,ats,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,at+s,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,atsa,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,at+sa,,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,ast,PRE+R1|as+?t,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,ast,PRE+R1|as+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisDeletionRestoresSegmentBetweenSwitches,as+t,PRE+R1|as+?t,MetathesisRule
+MetathesisDeletionRestoresSegmentBetweenSwitches,as+t,PRE+R1|as+?t,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 MetathesisSegmentClassUnion,ap,R2|ap,MetathesisRule
 MetathesisSegmentClassUnion,aap,SUF+R0|a+?ap,MetathesisRule
 MetathesisSegmentClassUnion,app,SUF+R1|a+?pp,MetathesisRule
