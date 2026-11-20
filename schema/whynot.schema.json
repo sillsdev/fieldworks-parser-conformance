@@ -22,6 +22,18 @@
         "msa_guid": { "type": "string", "minLength": 1 }
       }
     },
+    "failureMorph": {
+      "description": "One morph of a failure's morphs. Same ids as morphRef, but allomorph is required only where failure's allOf says so: every morph of a failure requires it except the partner (second morph) of a MorphemeCoOccurrenceRules failure, which may carry only morpheme.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["morpheme"],
+      "properties": {
+        "morpheme": { "type": "string", "minLength": 1 },
+        "allomorph": { "type": "string", "minLength": 1 },
+        "entry_guid": { "type": "string", "minLength": 1 },
+        "msa_guid": { "type": "string", "minLength": 1 }
+      }
+    },
     "row": {
       "description": "A why-not row: given the word and the intended analysis (expect, surface order), what does the engine report? status pending is never compared; status asserted is compared by a runner that declares the why-not capability. Only the four hc_reported kinds are admitted, only the first failure per derivation is promised, and the derived context is not asserted.",
       "type": "object",
@@ -53,14 +65,17 @@
           "description": "The shared hc_reported reason, spelled as the founding oracle's FailureReason.",
           "enum": ["Environments", "AllomorphCoOccurrenceRules", "MorphemeCoOccurrenceRules", "BoundRoot", "RequiredStemName", "ExcludedStemName", "RequiredSyntacticFeatureStruct", "RequiredMprFeatures", "ExcludedMprFeatures", "ObligatorySyntacticFeatures"]
         },
-        "morphs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/morphRef" } },
+        "morphs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/failureMorph" } },
         "environment": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["allomorph_id", "index"],
+          "required": ["allomorph_id"],
           "properties": {
             "allomorph_id": { "type": "string", "minLength": 1 },
-            "index": { "type": "integer", "minimum": 0 }
+            "index": {
+              "description": "The 0-based position of the single failing alternative. Optional: an engine omits it when it cannot name that alternative. A fixture must not assert it.",
+              "type": "integer", "minimum": 0
+            }
           }
         },
         "stem_name": { "type": "string", "minLength": 1 },
@@ -81,6 +96,11 @@
         }
       },
       "allOf": [
+        {
+          "if": { "properties": { "hc_reason": { "const": "MorphemeCoOccurrenceRules" } }, "required": ["hc_reason"] },
+          "then": { "properties": { "morphs": { "prefixItems": [{ "required": ["allomorph"] }] } } },
+          "else": { "properties": { "morphs": { "items": { "required": ["allomorph"] } } } }
+        },
         {
           "if": { "properties": { "kind": { "const": "environment_unmet" } } },
           "then": { "required": ["environment"], "properties": { "hc_reason": { "const": "Environments" } } }

@@ -607,7 +607,8 @@ rows:
 - **Ids.** Each morph is `{morpheme, allomorph}`: the `MorphemeId` text and the allomorph (or morphological
   subrule) `id` in `grammar.xml`. Both are required, and the checker resolves them. `entry_guid` and `msa_guid`
   are optional FieldWorks identifiers for a caller that holds the FieldWorks model; they never appear in
-  `grammar.xml`, are not checked against it and are not compared.
+  `grammar.xml`, are not checked against it and are not compared. In `failure.morphs` only, `allomorph` may be
+  omitted on the partner of a `MorphemeCoOccurrenceRules` failure (see below); `expect` entries always carry it.
 - **Kinds.** A fixture asserts only the four kinds every engine reports from the oracle's own failure events
   (`hc_reported`): `environment_unmet`, `adhoc_prohibition`, `stem_name`, `feature_clash`. An engine may report
   other kinds (slot order, surface mismatch, engine-specific reasons); they have no fixture and no comparison.
@@ -617,8 +618,13 @@ rows:
   `RequiredMprFeatures`, `ExcludedMprFeatures` or `ObligatorySyntacticFeatures` for `feature_clash`.
 - **Per-kind detail.**
   - `environment_unmet`: `environment: {allomorph_id, index}`, the allomorph and the 0-based position in its
-    environment list. An environment has no id of its own.
+    environment list. An environment has no id of its own. `index` is optional: an engine omits it when it cannot
+    name the single failing alternative, and then writes `environment: {allomorph_id}`. A fixture must not assert
+    `index`; it names the allomorph only.
   - `adhoc_prohibition`: `morphs` is the pair, the rule's primary morph first and the offending partner second.
+    For a `MorphemeCoOccurrenceRules` failure (a morpheme-level co-occurrence rule) the partner may carry only
+    `morpheme`; its `allomorph` is optional. The primary morph always carries `allomorph`, and every `expect`
+    entry does.
   - `stem_name`: `stem_name` is the stem name's id, and `morphs` the root allomorph.
   - `feature_clash`: `features` is the FS diff, an array with one `{path, required, actual}` per mismatching path.
 - **Not asserted.** `context` (the actual left and right surface around an unmet environment) is derived by the
@@ -652,7 +658,8 @@ pass. Extra fields (`context`, `plain`, engine-specific kinds) are allowed and i
 - An `asserted` row is compared by a runner that declares `why-not`. It passes when `result`, `failure.kind`
   and `failure.hc_reason` are equal and every other `failure` field the row states is equal: `morphs` as an
   ordered list, `environment` and `stem_name` as values, `features` as a set of entries. A field the row omits
-  is not compared.
+  is not compared, and neither is a sub-field it omits: an `environment` without `index` is compared on
+  `allomorph_id` alone, and a `morphs` entry without `allomorph` is compared on `morpheme` alone.
 - A row becomes `asserted` only after the reference engine's own why-not output has been produced and read
   against the grammar by a person, as for parse rows (AGENTS.md section 2, step 3). Record the build in the
   fixture's `words.yaml` header.
