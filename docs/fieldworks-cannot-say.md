@@ -95,7 +95,7 @@ members and environments a grammar uses, not about each output byte for byte. `H
 morpheme boundary on the inside edge of every affix form and between the two parts of a compound (prefix
 1358 and 1649, suffix 1360 and 1623, circumfix 1597, reduplication 1506, 1549 and 1564, compounds 1871,
 1884, 1956, 2017 and 2044); the loader's table always has it (2761). A grammar file can write that boundary
-only if it defines one, and 76 of the 230 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
+only if it defines one, and 87 of the 231 grammars do. Most fixtures write their affix and compound outputs without the boundary, and the
 effect of that on a parse is not measured. A claim that an output is "written as HCLoader writes it" is
 therefore made only where the output carries the boundary, as in the circumfix of
 `languages/suffixing-vowel-harmony`.
