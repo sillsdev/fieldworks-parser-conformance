@@ -4928,6 +4928,23 @@ StrRepIdentityProbe,ipat,,NaturalClass: Segments vs FeatureNaturalClass/SegmentN
 StrRepRewriteUnapplication,xpuma,XMUMA|xpuma,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 SubruleMorphosyntacticGating,pat,ROOT1|pat,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
 SubruleMorphosyntacticGating,bat,ROOT1+DERIVE|bat,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
+SyncopeRedupOptionalVowelLattice,tpa,tapa|tpa,RewriteRule Simultaneous
+SyncopeRedupOptionalVowelLattice,tpnka,tapunika|tpnka,RewriteRule Simultaneous
+SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDA|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDB|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDC|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,hiihii,hii+REDA|hiihii,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,hiihii,hii+REDB|hiihii,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,hiihii,hii+REDC|hiihii,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,kaakaa,kaa+REDA|kaakaa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,kaakaa,kaa+REDB|kaakaa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,kaakaa,kaa+REDC|kaakaa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,haphapa,hapa+REDA|haphapa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,haphapa,hapa+REDB|haphapa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,haphapa,hapa+REDC|haphapa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tptpa,tapa+REDA|tptpa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tptpa,tapa+REDB|tptpa,AffixProcessRule: reduplication (ReduplicationHint)
+SyncopeRedupOptionalVowelLattice,tptpa,tapa+REDC|tptpa,AffixProcessRule: reduplication (ReduplicationHint)
 Mbalantic,pakolosa,PFXA+KOLO+SFXA|pakolosa,Affix template slots (obligatory/disjunctive/ordering)
 TruncateRulesProbe,sag,|sag,AffixProcessRule: subtraction/truncation
 TruncateRulesProbe,sas,|sas,AffixProcessRule: subtraction/truncation

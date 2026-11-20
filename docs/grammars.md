@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 230 fixtures: 6 languages and 224 edge cases.
+The list has 231 fixtures: 6 languages and 225 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 230 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 231 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -145,6 +145,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/partial-rule-truncated-material`: [XAmple] a partial suffix whose last segment an ordinary truncation rule replaces, under a final template.
 - `edge-cases/partial-rule-wrapped-material`: [XAmple] partial affix rules whose material ordinary affixes and a reduplication wrap or copy, under a final template.
 - `edge-cases/process-morphology-in-place-mutation`: tense expressed only by changing a segment of the root, with no affix.
+- `edge-cases/syncope-redup-optional-vowel-lattice`: a vowel-deletion rule with four subrules beside three same-category reduplication rules (CVV and CVCV copied twice), so un-applying the deletion offers growing runs of optional vowels to each reduplication match (22 words).
 - `edge-cases/truncate-morphotactic`: rules that remove a final or initial segment of the stem, matched by literal segment, with optional insertion.
 - `edge-cases/truncate-morphotactic-copy-u`: the truncation grammar with explicit morpheme ids and a copying suffix rule, so one surface form has several parses with different rule histories.
 - `edge-cases/truncate-morphotactic-identity`: the truncation grammar with explicit morpheme ids, so repeated signatures stay distinct rows.

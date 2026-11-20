@@ -539,6 +539,10 @@ StrRepIdentityProbe,rulePfx,pat;mat;mupat;mumat;!mwpat;mwuta;!muuta;ndpat;imat
 StrRepRewriteUnapplication,rewrite,xpuma
 SubruleMorphosyntacticGating,mrDerive,bat
 SubruleMorphosyntacticGating,prGate,pat;bat
+SyncopeRedupOptionalVowelLattice,mrRedA,tuutuu;hiihii;kaakaa;haphapa;tptpa
+SyncopeRedupOptionalVowelLattice,mrRedB,tuutuu;hiihii;kaakaa;haphapa;tptpa
+SyncopeRedupOptionalVowelLattice,mrRedC,tuutuu;hiihii;kaakaa;haphapa;tptpa
+SyncopeRedupOptionalVowelLattice,prSyncope,tpa;tpnka;hapnka;haphapa;tptpa
 Mbalantic,mrPfxA,pakolosa;!pakolola
 Mbalantic,mrPfxB,takolola;!takolosa
 Mbalantic,mrSfxA,pakolosa;!takolosa
