@@ -357,6 +357,20 @@ FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/
 FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,aka,AKA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,aka,ITA|[ktszai][ktszai][ktszai],RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FieldWorksCompoundRules,bagokesu,BAGO+KESU|bagokesu,CompoundingRule
+FieldWorksCompoundRules,bagokesure,BAGO+KESU+SUFB|bagokesure,CompoundingRule
+FieldWorksCompoundRules,bagokesure,BAGO+KESU+SUFB|bagokesure,CompoundingRule
+FieldWorksCompoundRules,mitalonu,MITA+LONU|mitalonu,CompoundingRule
+FieldWorksCompoundRules,mitalonuvi,MITA+LONU+SUFC|mitalonuvi,CompoundingRule
+FieldWorksCompoundRules,tabedisi,TABE+DISI|tabedisi,CompoundingRule
+FieldWorksCompoundRules,tabedisifu,TABE+DISI+SUFR|tabedisifu,CompoundingRule
+FieldWorksCompoundRules,tabedisizu,TABE+DISI+SUFF|tabedisizu,CompoundingRule
+FieldWorksCompoundRules,nukagelo,NUKA+GELO|nukagelo,CompoundingRule
+FieldWorksCompoundRules,nukagelofu,NUKA+GELO+SUFR|nukagelofu,CompoundingRule
+FieldWorksCompoundRules,solutamo,SOLU+TAMO|solutamo,CompoundingRule
+FieldWorksCompoundRules,solutamo,SOLU+TAMO|solutamo,CompoundingRule
+FieldWorksCompoundRules,solutamohu,SOLU+TAMO+SUFS|solutamohu,CompoundingRule
+FieldWorksCompoundRules,solutamohu,SOLU+TAMO+SUFS|solutamohu,CompoundingRule
 FinalTemplateMergeKey,sagdss,SAG+FINAL+TEMPLATE+NOM|sagdss,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialDiscriminators,dakfa,DAK+FINTAGA|dakfa,Affix template slots (obligatory/disjunctive/ordering)
 FinalTemplatePartialRoot,dakfa,DAK+FINX|dakfa,Affix template slots (obligatory/disjunctive/ordering)

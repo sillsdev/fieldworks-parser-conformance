@@ -19,3 +19,5 @@ edge-cases/adhoc-prohibition-affix-environment-copies	subTa2a	Prohibition on the
 edge-cases/adhoc-prohibition-allomorph-variant-control	aLiN	Prohibition on the Noun copy of the variant li: the prefix ta- is Verb-only, so no candidate pairs it with this copy and this rule blocks no word; tali is blocked through the Verb copy aLiV.
 edge-cases/adhoc-prohibition-variant-enclitic-first	ePa	Entry copy of the enclitic, kept because HCLoader emits it beside the clitic rule: its prohibitions never fire here (only the rule copy mrPa blocks lapa and lipa), and no word in the fixture uses the entry copy as a stem.
 edge-cases/spelling-coverage-compound-depth-asymmetric	cr2	Requires MPR feature m3 on both stems and no lexical entry carries it, so it cannot apply; its presence shows the asymmetric cr1 rows do not come from it.
+edge-cases/fieldworks-compound-rules	sufD	Used only by mitalonuzo, an expect_fail control: a derived non-head member is not accepted.
+edge-cases/fieldworks-compound-rules	sufG	Used only by nukagelowa, an expect_fail control: the overridden head category G does not reach the compound.

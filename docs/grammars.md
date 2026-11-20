@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 209 fixtures: 6 languages and 203 edge cases.
+The list has 210 fixtures: 6 languages and 204 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 209 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 210 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **48 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **49 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -58,6 +58,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/diacritic-segments`
 - `edge-cases/empty-required-template-slot`
 - `edge-cases/feature-gating-breadth`
+- `edge-cases/fieldworks-compound-rules`
 - `edge-cases/final-template-merge-key` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-discriminators` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-root` (needs `morpher-settings`)
@@ -193,6 +194,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/compounding-breadth`: [XAmple] head and non-head feature requirements, a compound output part of speech that a suffix rejects, and a switched-off compounding rule (7 words, replayed under two settings variants).
 - `edge-cases/compound-max-applications`: [XAmple] a recursive compounding rule capped at two applications, with the root limit raised to four (7 words).
 - `edge-cases/compounding-non-recursive`: [XAmple] one non-recursive compounding rule with head and non-head lexicon subsets chosen by licence features.
+- `edge-cases/fieldworks-compound-rules`: [XAmple] the compound rules FieldWorks writes, endocentric with the head last or first and with or without an overriding part of speech, and exocentric, plus a category mismatch and a disabled rule (36 words).
 - `edge-cases/head-ambiguous-compounding`: [XAmple] compounds in which either root could be the head.
 - `edge-cases/recursive-endocentric-compounding`: [XAmple] a compounding rule that applies to its own output.
 - `edge-cases/cross-stem-material-determination`: [XAmple] a suffix whose form depends on which prefix was chosen, not only on whether the pair is allowed.

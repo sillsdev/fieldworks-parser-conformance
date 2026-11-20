@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<HermitCrabInput>
+  <Language>
+    <Name>FieldWorksCompoundRules</Name>
+    <!-- Synthetic (invented CVCV stems). The shapes HCLoader.cs writes for a project with
+         NoDefaultCompounding=true and compound rules (LoadEndoCompoundingRule, LoadExoCompoundingRule):
+         crE1 endocentric HeadLast=true (right member heads: headPartsOfSpeech is the right category, output
+         copies nonhead then head); crE2 HeadLast=false; crE3 and crE4 the same with an OverridingMsa part of
+         speech (outputPartOfSpeech="posR"). In FieldWorks every endocentric rule owns an OverridingMsa; where
+         it has no part of speech (crE1, crE2) the rule has no outputPartOfSpeech, which is the "no override"
+         shape. crX1 and crX2 are the two rules the loader emits for one exocentric rule (right head, then left
+         head), both with the ToMsa part of speech; FieldWorks gives them the same name, here they differ because
+         the harness cannot attribute a fired rule to a duplicated name. Stems K and L (demu, bonu) belong to a
+         rule that is disabled in the project: the loader skips disabled rules, so the grammar has none.
+         Suffixes are derivational affix rules (required and output part of speech); sufR and sufS name
+         categories no stem has, so only a compound can take them. -->
+    <PartsOfSpeech>
+      <PartOfSpeech id="posA"><Name>leftA</Name></PartOfSpeech>
+      <PartOfSpeech id="posB"><Name>rightB</Name></PartOfSpeech>
+      <PartOfSpeech id="posC"><Name>leftC</Name></PartOfSpeech>
+      <PartOfSpeech id="posD"><Name>rightD</Name></PartOfSpeech>
+      <PartOfSpeech id="posE"><Name>leftE</Name></PartOfSpeech>
+      <PartOfSpeech id="posF"><Name>rightF</Name></PartOfSpeech>
+      <PartOfSpeech id="posG"><Name>leftG</Name></PartOfSpeech>
+      <PartOfSpeech id="posH"><Name>rightH</Name></PartOfSpeech>
+      <PartOfSpeech id="posI"><Name>leftI</Name></PartOfSpeech>
+      <PartOfSpeech id="posJ"><Name>rightJ</Name></PartOfSpeech>
+      <PartOfSpeech id="posK"><Name>leftK</Name></PartOfSpeech>
+      <PartOfSpeech id="posL"><Name>rightL</Name></PartOfSpeech>
+      <PartOfSpeech id="posR"><Name>override</Name></PartOfSpeech>
+      <PartOfSpeech id="posS"><Name>exoResult</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="t1">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="ca"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cb"><Representations><Representation>b</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cd"><Representations><Representation>d</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ce"><Representations><Representation>e</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cf"><Representations><Representation>f</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cg"><Representations><Representation>g</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ch"><Representations><Representation>h</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ci"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ck"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cl"><Representations><Representation>l</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cm"><Representations><Representation>m</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cn"><Representations><Representation>n</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="co"><Representations><Representation>o</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cp"><Representations><Representation>p</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cr"><Representations><Representation>r</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cs"><Representations><Representation>s</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ct"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cu"><Representations><Representation>u</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cv"><Representations><Representation>v</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cw"><Representations><Representation>w</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cz"><Representations><Representation>z</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered" morphologicalRules="crE1 crE2 crE3 crE4 crX1 crX2 sufA sufB sufC sufD sufF sufG sufR sufS">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="crE1" headPartsOfSpeech="posB" nonHeadPartsOfSpeech="posA">
+            <Name>EndoHeadLast</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="crE1h"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="crE1n"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="crE1n" />
+                  <CopyFromInput index="crE1h" />
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="crE2" headPartsOfSpeech="posC" nonHeadPartsOfSpeech="posD">
+            <Name>EndoHeadFirst</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="crE2h"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="crE2n"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="crE2h" />
+                  <CopyFromInput index="crE2n" />
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="crE3" headPartsOfSpeech="posF" nonHeadPartsOfSpeech="posE" outputPartOfSpeech="posR">
+            <Name>EndoHeadLastOverride</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="crE3h"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="crE3n"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="crE3n" />
+                  <CopyFromInput index="crE3h" />
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="crE4" headPartsOfSpeech="posG" nonHeadPartsOfSpeech="posH" outputPartOfSpeech="posR">
+            <Name>EndoHeadFirstOverride</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="crE4h"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="crE4n"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="crE4h" />
+                  <CopyFromInput index="crE4n" />
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="crX1" headPartsOfSpeech="posJ" nonHeadPartsOfSpeech="posI" outputPartOfSpeech="posS">
+            <Name>ExoRightHead</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="crX1h"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="crX1n"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="crX1n" />
+                  <CopyFromInput index="crX1h" />
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="crX2" headPartsOfSpeech="posI" nonHeadPartsOfSpeech="posJ" outputPartOfSpeech="posS">
+            <Name>ExoLeftHead</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="crX2h"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="crX2n"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="crX2h" />
+                  <CopyFromInput index="crX2n" />
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="sufA" requiredPartsOfSpeech="posA" outputPartOfSpeech="posA">
+            <Name>sufA</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufA0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufAs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufAs" />
+                  <InsertSegments><PhoneticShape>pa</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFA</MorphemeId>
+            <Gloss>sufA</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufB" requiredPartsOfSpeech="posB" outputPartOfSpeech="posB">
+            <Name>sufB</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufB0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufBs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufBs" />
+                  <InsertSegments><PhoneticShape>re</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFB</MorphemeId>
+            <Gloss>sufB</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufC" requiredPartsOfSpeech="posC" outputPartOfSpeech="posC">
+            <Name>sufC</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufC0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufCs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufCs" />
+                  <InsertSegments><PhoneticShape>vi</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFC</MorphemeId>
+            <Gloss>sufC</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufD" requiredPartsOfSpeech="posD" outputPartOfSpeech="posD">
+            <Name>sufD</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufD0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufDs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufDs" />
+                  <InsertSegments><PhoneticShape>zo</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFD</MorphemeId>
+            <Gloss>sufD</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufF" requiredPartsOfSpeech="posF" outputPartOfSpeech="posF">
+            <Name>sufF</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufF0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufFs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufFs" />
+                  <InsertSegments><PhoneticShape>zu</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFF</MorphemeId>
+            <Gloss>sufF</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufG" requiredPartsOfSpeech="posG" outputPartOfSpeech="posG">
+            <Name>sufG</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufG0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufGs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufGs" />
+                  <InsertSegments><PhoneticShape>wa</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFG</MorphemeId>
+            <Gloss>sufG</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufR" requiredPartsOfSpeech="posR" outputPartOfSpeech="posR">
+            <Name>sufR</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufR0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufRs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufRs" />
+                  <InsertSegments><PhoneticShape>fu</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFR</MorphemeId>
+            <Gloss>sufR</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="sufS" requiredPartsOfSpeech="posS" outputPartOfSpeech="posS">
+            <Name>sufS</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sufS0">
+                <MorphologicalInput>
+                  <PhoneticSequence id="sufSs"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="sufSs" />
+                  <InsertSegments><PhoneticShape>hu</PhoneticShape></InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFS</MorphemeId>
+            <Gloss>sufS</Gloss>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eA" partOfSpeech="posA">
+            <Allomorphs><Allomorph id="aA"><PhoneticShape>bago</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>BAGO</MorphemeId>
+            <Gloss>bago</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eB" partOfSpeech="posB">
+            <Allomorphs><Allomorph id="aB"><PhoneticShape>kesu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>KESU</MorphemeId>
+            <Gloss>kesu</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eC" partOfSpeech="posC">
+            <Allomorphs><Allomorph id="aC"><PhoneticShape>mita</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>MITA</MorphemeId>
+            <Gloss>mita</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eD" partOfSpeech="posD">
+            <Allomorphs><Allomorph id="aD"><PhoneticShape>lonu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>LONU</MorphemeId>
+            <Gloss>lonu</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eE" partOfSpeech="posE">
+            <Allomorphs><Allomorph id="aE"><PhoneticShape>tabe</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TABE</MorphemeId>
+            <Gloss>tabe</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eF" partOfSpeech="posF">
+            <Allomorphs><Allomorph id="aF"><PhoneticShape>disi</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>DISI</MorphemeId>
+            <Gloss>disi</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eG" partOfSpeech="posG">
+            <Allomorphs><Allomorph id="aG"><PhoneticShape>nuka</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>NUKA</MorphemeId>
+            <Gloss>nuka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eH" partOfSpeech="posH">
+            <Allomorphs><Allomorph id="aH"><PhoneticShape>gelo</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>GELO</MorphemeId>
+            <Gloss>gelo</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eI" partOfSpeech="posI">
+            <Allomorphs><Allomorph id="aI"><PhoneticShape>solu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>SOLU</MorphemeId>
+            <Gloss>solu</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eJ" partOfSpeech="posJ">
+            <Allomorphs><Allomorph id="aJ"><PhoneticShape>tamo</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>TAMO</MorphemeId>
+            <Gloss>tamo</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eK" partOfSpeech="posK">
+            <Allomorphs><Allomorph id="aK"><PhoneticShape>demu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>DEMU</MorphemeId>
+            <Gloss>demu</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eL" partOfSpeech="posL">
+            <Allomorphs><Allomorph id="aL"><PhoneticShape>bonu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>BONU</MorphemeId>
+            <Gloss>bonu</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
