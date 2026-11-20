@@ -1,4 +1,4 @@
-# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine PR for issue 643.
+# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine#644 (the fix for issue 643).
 # Four final templates: T1 and T2 (part of speech B), T3 (C) and T4 (A). One partial rule q needs part of speech C, so only T3 can follow a partial word; a partial entry (pa, no part of speech) is the other source of partial words. Words ending in T1, T2 or T4 after an ordinary rule have no analysis; words ending in T3 after q do.
 language: FinalTemplatePartialReachability
 inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
