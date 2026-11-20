@@ -28,42 +28,51 @@ words:
     parses:
       - signature: "R0|t"
         rules: [pd]
+        exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
       - signature: "R1|t"
         rules: [pd]
+        exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "ta"
     note: >-
       Root tap alone: pd deletes its p; control for the root PRE+R2 builds on.
     parses:
       - signature: "R2|ta"
         rules: [pd]
+        exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "ats"
     note: >-
       Known oracle limitation (sillsdev/machine#649, open): machine 1ddef2bd gives no parse. Prefix aps+ then root t: pr1 swaps s and t across the boundary and pd deletes p (apt+s, then at+s); analysis restores an optional p between t and s, and that p must not take s's place in the swap. Intended parse once #649 is fixed: PRE+R0|at+?s, rules [PRE, pd, pr1].
     expect_fail: true
+    exercises: ["MetathesisRule"]
   - word: "at+s"
     note: >-
       Known oracle limitation (sillsdev/machine#649, open): machine 1ddef2bd gives no parse. The same surface with the boundary written. Intended parse once #649 is fixed: PRE+R0|at+?s, rules [PRE, pd, pr1].
     expect_fail: true
+    exercises: ["MetathesisRule"]
   - word: "atsa"
     note: >-
       Known oracle limitation (sillsdev/machine#649, open): machine 1ddef2bd gives no parse. Prefix aps+ then root tap: pr1 swaps s and t, pd deletes both p's (at+sa); the restored p again sits between the switches. Intended parse once #649 is fixed: PRE+R2|at+?sa, rules [PRE, pd, pr1].
     expect_fail: true
+    exercises: ["MetathesisRule"]
   - word: "at+sa"
     note: >-
       Known oracle limitation (sillsdev/machine#649, open): machine 1ddef2bd gives no parse. The same surface with the boundary written. Intended parse once #649 is fixed: PRE+R2|at+?sa, rules [PRE, pd, pr1].
     expect_fail: true
+    exercises: ["MetathesisRule"]
   - word: "ast"
     note: >-
       Prefix aps+ then root pt: p separates s and t, so pr1 changes nothing in synthesis; pd deletes both p's (as+t). Control that both engines agree on.
     parses:
       - signature: "PRE+R1|as+?t"
         rules: [PRE, pd, pr1]
+        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "as+t"
     note: >-
       The same surface with the boundary written.
     parses:
       - signature: "PRE+R1|as+?t"
         rules: [PRE, pd, pr1]
+        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "p"
     note: >-
       pd deletes every p, so no word surfaces with one.

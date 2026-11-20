@@ -160,6 +160,9 @@ ambiguous-disagree-repeated-minus-partial-focus,ui,,CharacterDefinitionTable pat
 ambiguous-disagree-repeated-minus-partial-focus,uy,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 ambiguous-disagree-repeated-minus-partial-focus,ua,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 ambiguous-disagree-repeated-minus-partial-focus,uu,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+AuthoredNullAffixAllomorph,kaun,KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?,AffixProcessRule: prefix/suffix/circumfix/infix
+AuthoredNullAffixAllomorph,kaun,KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?,Boundary markers (CharacterDefinitionTable)
+AuthoredNullAffixAllomorph,kaun,KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?,Affix template slots (obligatory/disjunctive/ordering)
 BoundaryFirstInNarrowingLhs,kanmo,KAN+BO|kanmo,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 BoundaryFirstInNarrowingLhs,kanmo,KAN+BO|kanmo,Boundary markers (CharacterDefinitionTable)
 BoundaryFirstInNarrowingLhsStrrep,kanmo,KAN+BO|kanmo,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
