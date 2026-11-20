@@ -645,21 +645,46 @@ adapter implements a second command:
 ```
 
 `<queries.jsonl>` has one JSON object per line: `{"word": ..., "expect": [{"morpheme": ..., "allomorph": ...}, ...]}`.
-`<output.jsonl>` has one object per query, in any order, keyed by `word` plus `expect`:
-`{"word": ..., "expect": [...], "result": "accepted" | "rejected", "failure": {...}}`, where `failure` uses the
-same field names as the sidecar and is present exactly when `result` is `rejected`. An engine that cannot answer
-a query (a work cap, a timeout) writes `"result": "unknown"`; the harness scores that as not comparable, never as a
-pass. Extra fields (`context`, `plain`, engine-specific kinds) are allowed and ignored.
+
+`<output.jsonl>` has one JSON object per line, one per query, in any order, keyed by `word` plus `expect`.
+`schema/whynot-output.schema.json` defines a line:
+
+```json
+{"word": "tada", "expect": [ {"morpheme": "TA1", "allomorph": "subTa1a"}, {"morpheme": "DA", "allomorph": "aDa"} ],
+ "result": "rejected",
+ "failure": {"kind": "adhoc_prohibition", "hc_reason": "AllomorphCoOccurrenceRules", "morphs": [ ... ]}}
+```
+
+- `word` and `expect` are echoed from the query.
+- `result` is `rejected`, `accepted` or `unknown`.
+- `failure` is present exactly when `result` is `rejected`, in the same shape as the sidecar's `failure`
+  (`kind`, `hc_reason`, `morphs`, `environment`, `stem_name`, `features`). Its `kind` may be any string, so an
+  engine can report kinds that have no fixture; for the four fixture kinds the detail fields are required as in
+  the sidecar schema.
+- `stop` is `{reason, note?}` and is required when `result` is `unknown`: the engine did not answer (a work cap,
+  a timeout, an id it does not know, input it could not parse). A runner reports a malformed query line as
+  `unknown` with `stop.reason` set; `word` and `expect` may then be empty.
+- `notes` is optional free text.
+- Every object admits extra fields (`plain`, `position`, `provenance`, `context`, `analysis`, a `schema` tag and
+  so on). They are never compared.
+
+**Engines' native report formats are out of scope.** An engine keeps whatever report it uses for its own
+consumers (PanGloss's `report-v1`, which Motif reads, is one); its `why-not` runner maps that to this contract.
+The suite defines the runner output and the sidecar, and nothing else.
 
 ### Comparison
 
 - A `pending` row is never compared and never counts as a pass or a failure. A row stays `pending` while no
   engine can produce it, and it is authored from the grammar and loader reading, not from an engine run.
-- An `asserted` row is compared by a runner that declares `why-not`. It passes when `result`, `failure.kind`
-  and `failure.hc_reason` are equal and every other `failure` field the row states is equal: `morphs` as an
-  ordered list, `environment` and `stem_name` as values, `features` as a set of entries. A field the row omits
-  is not compared, and neither is a sub-field it omits: an `environment` without `index` is compared on
-  `allomorph_id` alone, and a `morphs` entry without `allomorph` is compared on `morpheme` alone.
+- An `asserted` row is compared by a runner that declares `why-not`, on the asserted fields only. It passes
+  when `result` matches and, for `rejected`, `failure.kind` matches and every other field the row states
+  matches (a deep subset: `hc_reason` equal; `morphs` as an ordered list; `environment` and `stem_name` as values;
+  `features` as a set of entries). A field the row omits is not compared, and neither is a sub-field it omits: an
+  `environment` without `index` is compared on `allomorph_id` alone, and a `morphs` entry without `allomorph` is
+  compared on `morpheme` alone.
+- Output `unknown` fails any asserted row, but is reported distinctly, as an engine limitation and not as a
+  wrong answer.
+- Extra output fields are ignored.
 - A row becomes `asserted` only after the reference engine's own why-not output has been produced and read
   against the grammar by a person, as for parse rows (AGENTS.md section 2, step 3). Record the build in the
   fixture's `words.yaml` header.

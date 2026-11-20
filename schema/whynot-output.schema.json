@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sillsdev/fieldworks-parser-conformance/schema/whynot-output.schema.json",
+  "title": "hc-conformance-whynot-output/v1",
+  "description": "One line of the <output.jsonl> a why-not runner writes, answering one query. See PROTOCOL.md section 11. Engine-neutral: every object admits extra fields, which the comparison ignores. An engine's native report format is its own business and out of scope; its runner maps to this one.",
+  "type": "object",
+  "required": ["word", "expect", "result"],
+  "properties": {
+    "word": {
+      "description": "Echoed from the query. May be empty only on a row that reports malformed input (result unknown with stop.reason).",
+      "type": "string"
+    },
+    "expect": {
+      "description": "Echoed from the query. May be empty only on a row that reports malformed input.",
+      "type": "array",
+      "items": { "$ref": "#/$defs/morph" }
+    },
+    "result": { "enum": ["rejected", "accepted", "unknown"] },
+    "failure": { "$ref": "#/$defs/failure" },
+    "stop": {
+      "description": "Why the engine did not answer. Required when result is unknown.",
+      "type": "object",
+      "required": ["reason"],
+      "properties": {
+        "reason": { "type": "string", "minLength": 1 },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "notes": {
+      "description": "Free text from the engine. Never compared.",
+      "anyOf": [ { "type": "string" }, { "type": "array", "items": { "type": "string" } } ]
+    }
+  },
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": { "properties": { "result": { "const": "rejected" } }, "required": ["result"] },
+      "then": { "required": ["failure"] },
+      "else": { "not": { "required": ["failure"] } }
+    },
+    {
+      "if": { "properties": { "result": { "const": "unknown" } }, "required": ["result"] },
+      "then": { "required": ["stop"] }
+    },
+    {
+      "if": { "properties": { "result": { "enum": ["rejected", "accepted"] } }, "required": ["result"] },
+      "then": { "properties": { "word": { "minLength": 1 }, "expect": { "minItems": 1 } } }
+    }
+  ],
+  "$defs": {
+    "morph": {
+      "description": "A morph named by the grammar's own ids, as in whynot.schema.json. allomorph may be absent on the partner of a MorphemeCoOccurrenceRules failure.",
+      "type": "object",
+      "required": ["morpheme"],
+      "properties": {
+        "morpheme": { "type": "string", "minLength": 1 },
+        "allomorph": { "type": "string", "minLength": 1 },
+        "entry_guid": { "type": "string", "minLength": 1 },
+        "msa_guid": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": true
+    },
+    "failure": {
+      "description": "The same shape as the fixture schema's failure, with extra fields allowed (plain, position, provenance). kind may be any string, so an engine can report kinds that have no fixture; for the four fixture kinds the detail fields are required as in the fixture schema.",
+      "type": "object",
+      "required": ["kind"],
+      "properties": {
+        "kind": { "type": "string", "minLength": 1 },
+        "hc_reason": { "type": "string", "minLength": 1 },
+        "morphs": { "type": "array", "items": { "$ref": "#/$defs/morph" } },
+        "environment": {
+          "type": "object",
+          "required": ["allomorph_id"],
+          "properties": {
+            "allomorph_id": { "type": "string", "minLength": 1 },
+            "index": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": true
+        },
+        "stem_name": { "type": "string", "minLength": 1 },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["path", "required", "actual"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "required": { "type": "string" },
+              "actual": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "environment_unmet" } }, "required": ["kind"] },
+          "then": { "required": ["hc_reason", "environment"], "properties": { "hc_reason": { "const": "Environments" } } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "adhoc_prohibition" } }, "required": ["kind"] },
+          "then": {
+            "required": ["hc_reason", "morphs"],
+            "properties": { "hc_reason": { "enum": ["AllomorphCoOccurrenceRules", "MorphemeCoOccurrenceRules"] }, "morphs": { "minItems": 2, "maxItems": 2 } }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "stem_name" } }, "required": ["kind"] },
+          "then": { "required": ["hc_reason"], "properties": { "hc_reason": { "enum": ["BoundRoot", "RequiredStemName", "ExcludedStemName"] } } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "feature_clash" } }, "required": ["kind"] },
+          "then": {
+            "required": ["hc_reason", "features"],
+            "properties": { "hc_reason": { "enum": ["RequiredSyntacticFeatureStruct", "RequiredMprFeatures", "ExcludedMprFeatures", "ObligatorySyntacticFeatures"] } }
+          }
+        }
+      ]
+    }
+  }
+}

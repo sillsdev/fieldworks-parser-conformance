@@ -59,6 +59,7 @@ def main() -> int:
     whynot_schema = json.loads((ROOT / "schema" / "whynot.schema.json").read_text(encoding="utf-8"))
     Draft202012Validator.check_schema(whynot_schema)
     whynot_validator = Draft202012Validator(whynot_schema)
+    Draft202012Validator.check_schema(json.loads((ROOT / "schema" / "whynot-output.schema.json").read_text(encoding="utf-8")))
     problems, checked = [], 0
     directories = fixture_dirs() + [
         d for d in sorted((ROOT / STRESS_GROUP).iterdir()) if (d / "words.yaml").is_file()
