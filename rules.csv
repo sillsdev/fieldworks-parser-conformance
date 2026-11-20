@@ -243,6 +243,10 @@ MetathesisBoundaryContextLeftRightToLeft,PRE,aa;ap;a+a;a+p;ats;at+s
 MetathesisBoundaryContextLeftRightToLeft,pr1,ats;at+s
 MetathesisBoundaryContextRight,SUF,aa;pa;a+a;p+a;tsa;t+sa
 MetathesisBoundaryContextRight,pr1,tsa;t+sa
+MetathesisBoundaryContextSegments,SUF0,sta;st+a;stpa;tsap;t+sap;tsa+p;t+sa+p;ptsap;pt+sap;pt+sa+p;tsapa;t+sap+a
+MetathesisBoundaryContextSegments,SUF1,stp;st+p;stpa;tsap;t+sap;tsa+p;t+sa+p;ptsap;pt+sap;pt+sa+p;tsapp
+MetathesisBoundaryContextSegments,SUF2,tsap;t+sap;ptsap;pt+sap;tsapa;tsapp;t+sap+a
+MetathesisBoundaryContextSegments,pr1,tsap;t+sap;tsa+p;t+sa+p;ptsap;pt+sap;pt+sa+p;tsapa;tsapp;t+sap+a
 MetathesisMorphOrderCompound,cr1,pp;pt;tt
 MetathesisMorphOrderCompound,pr1,pt
 MetathesisMorphOrderPrefixRoot,PRE,ts;sp
@@ -254,6 +258,11 @@ MetathesisBoundaryRightToLeftPrefix,PRE,ts;+ts;sp;s+p;sa
 MetathesisBoundaryRightToLeftPrefix,pr1,ts;+ts
 MetathesisBoundaryRightToLeftSuffix,PRE,at;a+t;ts;+ts;pt
 MetathesisBoundaryRightToLeftSuffix,pr1,ts;+ts
+MetathesisBoundaryTwoSuffixes,SA,pas;paas;tpas;p+as;pa+as;tp+as;patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp+at+sa;tp+atsa
+MetathesisBoundaryTwoSuffixes,ST,pta;pata;tpta;p+ta;pa+ta;tp+ta;patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp+at+sa;tp+atsa
+MetathesisBoundaryTwoSuffixes,pr0,patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp+at+sa;tp+atsa
+MetathesisSegmentClassUnion,SUF,aap;app;apap;a+ap;a+pp;ap+ap
+MetathesisSegmentClassUnion,pr0,ap;aap;app;apap;a+ap;a+pp;ap+ap
 MorphotacticAttributeBreadth,mrCoA,topsakatana;topsakanabu
 MorphotacticAttributeBreadth,mrCoB,topsakatana;topsakanabu
 MorphotacticAttributeBreadth,mrCoC,topsakatana

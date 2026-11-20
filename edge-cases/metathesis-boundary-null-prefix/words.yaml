@@ -47,7 +47,7 @@ words:
         rules: []
   - word: "ats"
     note: >-
-      Prefix as+ then root t, swapped to at+s; with the null prefix either outside as+ (NUL+PRE+R0) or between as+ and t. In the second case the boundaries + ^0 + are skipped after s, belong to s, and move with it past t, so C# lists the null prefix after the root (PRE+R0+NUL).
+      Prefix as+ then root t, swapped to at+s; with the null prefix either outside as+ (NUL+PRE+R0) or between as+ and t. In the second case the boundaries + ^0 + are skipped after s and join s's group; only segments move, so t moves in front of them and C# lists the null prefix after the root (PRE+R0+NUL).
     parses:
       - signature: "NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s"
         rules: [NUL, PRE, pr1]
@@ -122,7 +122,7 @@ words:
         exercises: ["MetathesisRule"]
   - word: "+at+s"
     note: >-
-      The null prefix written first and the as+ boundary moved with s.
+      The null prefix written first and t moved in front of the as+ boundary.
     parses:
       - signature: "NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s"
         rules: [NUL, PRE, pr1]

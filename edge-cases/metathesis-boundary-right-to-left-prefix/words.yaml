@@ -17,7 +17,7 @@ words:
         rules: []
   - word: "ts"
     note: >-
-      Right-to-left rule on prefix s, boundary, root t: the boundary attaches to the later switch and moves with it to the front of the pair, so the surface carries it first (+?ts) and C# lists the morphs PRE+Z.
+      Right-to-left rule on prefix s, boundary, root t: the boundary joins the group of the later switch; only segments move, so s moves after t and the boundary, which stays in place, comes first (+?ts), and C# lists the morphs PRE+Z.
     parses:
       - signature: "PRE+Z|+?ts"
         rules: [PRE, pr1]
@@ -49,7 +49,7 @@ words:
         rules: [PRE]
   - word: "t+s"
     note: >-
-      Rejected: in a right-to-left application the boundary moves to the front of the pair, so it cannot stay between the swapped segments.
+      Rejected: in a right-to-left application s moves after t and the boundary, which stays in front of the pair, so it cannot stay between the swapped segments.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "st"

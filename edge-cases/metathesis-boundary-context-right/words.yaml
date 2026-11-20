@@ -47,7 +47,7 @@ words:
         rules: [SUF]
   - word: "tsa"
     note: >-
-      Root st before suffix +a: the right context a is reached across the boundary, and C# gives the skipped boundary to t, the switch matched before it, so it moves with t and the surface is t+sa.
+      Root st before suffix +a: the right context a is reached across the boundary, and C# gives the skipped boundary to t's group, the switch matched before it; only segments move, so s moves after t and the boundary and the surface is t+sa.
     parses:
       - signature: "Z+SUF|t+?sa"
         rules: [SUF, pr1]

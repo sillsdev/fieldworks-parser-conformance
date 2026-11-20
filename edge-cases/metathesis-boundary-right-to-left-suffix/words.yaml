@@ -29,7 +29,7 @@ words:
         rules: [PRE]
   - word: "ts"
     note: >-
-      Right-to-left rule on root s, boundary, suffix t: the boundary attaches to the later switch and moves with it to the front of the pair (+?ts), so the suffix is listed before the root (PRE+Z).
+      Right-to-left rule on root s, boundary, suffix t: the boundary joins the group of the later switch; only segments move, so s moves after t and the boundary stays in front of the pair (+?ts), and the suffix is listed before the root (PRE+Z).
     parses:
       - signature: "PRE+Z|+?ts"
         rules: [PRE, pr1]

@@ -47,7 +47,7 @@ words:
         rules: [PRE]
   - word: "ats"
     note: >-
-      Right-to-left rule a _ [s t] over prefix a+ and root st: traversal meets t, then s, then steps over the boundary, which C# gives to s, so it moves with s and the surface is at+s.
+      Right-to-left rule a _ [s t] over prefix a+ and root st: traversal meets t, then s, then steps over the boundary, which C# gives to s's group; only segments move, so t moves in front of the boundary and the surface is at+s.
     parses:
       - signature: "PRE+Z|at+?s"
         rules: [PRE, pr1]
