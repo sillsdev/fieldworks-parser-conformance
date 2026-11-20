@@ -261,6 +261,9 @@ MetathesisBoundaryRightToLeftSuffix,pr1,ts;+ts
 MetathesisBoundaryTwoSuffixes,SA,pas;paas;tpas;p+as;pa+as;tp+as;patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp+at+sa;tp+atsa
 MetathesisBoundaryTwoSuffixes,ST,pta;pata;tpta;p+ta;pa+ta;tp+ta;patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp+at+sa;tp+atsa
 MetathesisBoundaryTwoSuffixes,pr0,patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp+at+sa;tp+atsa
+MetathesisDeletionRestoresSegmentBetweenSwitches,PRE,ast;as+t
+MetathesisDeletionRestoresSegmentBetweenSwitches,pd,t;ta;ast;as+t
+MetathesisDeletionRestoresSegmentBetweenSwitches,pr1,ast;as+t
 MetathesisSegmentClassUnion,SUF,aap;app;apap;a+ap;a+pp;ap+ap
 MetathesisSegmentClassUnion,pr0,ap;aap;app;apap;a+ap;a+pp;ap+ap
 MorphotacticAttributeBreadth,mrCoA,topsakatana;topsakanabu
