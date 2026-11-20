@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<!-- Synthetic discontinuous-morph environment probe. The root environment is checked separately
-     on each contiguous root piece created by the two-infix morphological rule. -->
+<!-- Synthetic discontinuous-morph environment probe. The root environment (a following u) is tested once around the whole
+     root span that the two-infix morphological rule splits, not on each contiguous piece; infix segments
+     are not the root's neighbours (machine issue 630). -->
 <HermitCrabInput>
   <Language>
     <Name>DiscontinuousMorphEnvironment</Name>

@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 211 fixtures: 6 languages and 205 edge cases.
+The list has 213 fixtures: 6 languages and 207 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 211 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 213 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **50 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **52 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -41,6 +41,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/adhoc-prohibition-variant-msa-copies`
 - `edge-cases/authored-null-affix-allomorph`
 - `edge-cases/chained-output-feature-override-loss`
+- `edge-cases/circumfix-allomorph-environment`
 - `edge-cases/circumfix-conditioned-halves`
 - `edge-cases/circumfix-cross-product-and-infix-drop`
 - `edge-cases/circumfix-in-template-slot`
@@ -75,6 +76,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/optional-template-composite`
 - `edge-cases/pattern-root-required-environment`
 - `edge-cases/recursive-endocentric-compounding`
+- `edge-cases/self-compound-root-allomorph-environment`
 - `edge-cases/shared-template-unconstrained-suffix`
 - `edge-cases/standalone-combining-mark`
 - `edge-cases/stem-name-restricted-root-allomorph`
@@ -130,7 +132,8 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/circumfix-non-first-allomorph-selection`: [XAmple] a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails.
 - `edge-cases/circumfix-reduplication-precedence`: [XAmple] one allomorph that is both circumfixing and reduplicating in the same output.
 - `edge-cases/copy-agreement-featureless-redup`: a first-consonant-and-vowel reduplication in a grammar with no phonological features, where the two copies must agree in spelling (19 words).
-- `edge-cases/discontinuous-morph-environment`: a root environment checked on each contiguous piece of a root split by a two-infix rule.
+- `edge-cases/discontinuous-morph-environment`: a root environment tested once around the whole span of a root split by a two-infix rule, not on each piece.
+- `edge-cases/circumfix-allomorph-environment`: [XAmple] one environment on a circumfix, as FieldWorks merges the two halves: a vowel before the prefix half and a consonant after the suffix half, not tested between the pieces.
 - `edge-cases/infix-ambiguous-site`: [XAmple] two infixes written as FieldWorks writes a form-allomorph infix, applied to a root with two places each could go; the oracle uses one place.
 - `edge-cases/nfa-literal-allomorph-environment`: required literal right context on a stem allomorph, with suffix and infix controls.
 - `edge-cases/infix-split-root-allomorph-environment`: a root allomorph conditioned on a following vowel, with an infix inside the root; infix segments are not the root's neighbours.
@@ -193,6 +196,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 ## Compounding
 
+- `edge-cases/self-compound-root-allomorph-environment`: [XAmple] a root with a word-final environment compounded with itself, where each copy is tested around itself.
 - `edge-cases/compounding-breadth`: [XAmple] head and non-head feature requirements, a compound output part of speech that a suffix rejects, and a switched-off compounding rule (7 words, replayed under two settings variants).
 - `edge-cases/compound-max-applications`: [XAmple] a recursive compounding rule capped at two applications, with the root limit raised to four (7 words).
 - `edge-cases/compounding-non-recursive`: [XAmple] one non-recursive compounding rule with head and non-head lexicon subsets chosen by licence features.

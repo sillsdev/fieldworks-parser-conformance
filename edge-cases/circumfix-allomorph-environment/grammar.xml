@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- Synthetic probe: a circumfix ta-...-od carrying ONE Require environment, built the way FieldWorks builds
+     it. A user enters a prefix allomorph (environment "/ V _") and a suffix allomorph (environment
+     "/ _ C"), and HCLoader.LoadCircumfixAffixProcessAllomorph merges them into one AllomorphEnvironment:
+     the left pattern is the prefix half's left context and the right pattern is the suffix half's right
+     context (HCLoader.cs:1335-1371). The environment therefore describes the neighbours of the whole
+     circumfix: the segment before ta- must be a vowel and the segment after -od must be a consonant. It is
+     not tested between the pieces, where the stem edges sit (here a vowel after ta- and a consonant
+     before -od, the reverse of what a per-piece test would need). The prefix half has no right context and
+     the suffix half no left context, so the stem pattern is the loader's bare any-segment star; like
+     circumfix-conditioned-halves this fixture leaves out the null-affix boundary markers, which the
+     environment check does not read. Outer prefixes (mi-, nk-) and suffixes (-ke, -ek) are unconditioned
+     and only supply the neighbours. The parts of speech fix the order circumfix, outer suffix, outer prefix, so
+     each word has one derivation. -->
+<HermitCrabInput>
+  <Language>
+    <Name>CircumfixAllomorphEnvironment</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posRoot"><Name>root</Name></PartOfSpeech>
+      <PartOfSpeech id="posSuf"><Name>suffixed</Name></PartOfSpeech>
+      <PartOfSpeech id="posFin"><Name>prefixed</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cB"><Representations><Representation>b</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cD"><Representations><Representation>d</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cE"><Representations><Representation>e</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cL"><Representations><Representation>l</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cM"><Representations><Representation>m</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cN"><Representations><Representation>n</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cO"><Representations><Representation>o</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+      <SegmentNaturalClass id="ncV"><Name>Vowel</Name><Segment segment="cA" /><Segment segment="cE" /><Segment segment="cI" /><Segment segment="cO" /></SegmentNaturalClass>
+      <SegmentNaturalClass id="ncC"><Name>Consonant</Name><Segment segment="cB" /><Segment segment="cD" /><Segment segment="cK" /><Segment segment="cL" /><Segment segment="cM" /><Segment segment="cN" /><Segment segment="cT" /></SegmentNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="mrCirc mrPre mrSuf">
+        <Name>Main</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="mrCirc" requiredPartsOfSpeech="posRoot" outputPartOfSpeech="posRoot">
+            <Name>circ</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subCirc">
+                <MorphologicalInput><PhoneticSequence id="subCircStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments><CopyFromInput index="subCircStem" /><InsertSegments><PhoneticShape>od</PhoneticShape></InsertSegments></MorphologicalOutput>
+                <RequiredEnvironments>
+                  <Environment>
+                    <LeftEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncV" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment>
+                    <RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncC" /></PhoneticSequence></PhoneticTemplate></RightEnvironment>
+                  </Environment>
+                </RequiredEnvironments>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>CIRC</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrPre" requiredPartsOfSpeech="posSuf" outputPartOfSpeech="posFin">
+            <Name>outerPrefix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subPreV">
+                <MorphologicalInput><PhoneticSequence id="subPreVStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><InsertSegments><PhoneticShape>mi</PhoneticShape></InsertSegments><CopyFromInput index="subPreVStem" /></MorphologicalOutput>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subPreC">
+                <MorphologicalInput><PhoneticSequence id="subPreCStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><InsertSegments><PhoneticShape>nk</PhoneticShape></InsertSegments><CopyFromInput index="subPreCStem" /></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrSuf" requiredPartsOfSpeech="posRoot" outputPartOfSpeech="posSuf">
+            <Name>outerSuffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subSufC">
+                <MorphologicalInput><PhoneticSequence id="subSufCStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="subSufCStem" /><InsertSegments><PhoneticShape>ke</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subSufV">
+                <MorphologicalInput><PhoneticSequence id="subSufVStem"><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="subSufVStem" /><InsertSegments><PhoneticShape>ek</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eRoot" partOfSpeech="posRoot">
+            <Allomorphs><Allomorph id="aRoot"><PhoneticShape>alob</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>ROOT</MorphemeId>
+            <Gloss>root</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
