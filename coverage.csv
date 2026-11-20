@@ -85,6 +85,9 @@ AdhocProhibitionVariantMsaCopies,tada,,MorphemeCoOccurrenceRule/AllomorphCoOccur
 AdhocProhibitionVariantMsaCopies,tadi,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 AdhocProhibitionVariantMsaCopies,taba,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 AdhocProhibitionVariantMsaCopies,tabi,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+AdhocProhibitionWhyNot,da,DA|da,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+AdhocProhibitionWhyNot,taga,TA+GA|taga,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+AdhocProhibitionWhyNot,tada,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

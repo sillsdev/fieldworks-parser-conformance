@@ -21,7 +21,7 @@ A FieldWorks project switches between the two with one setting (`ActiveParser`).
 
 | Engine | Phonology it needs | Grammars |
 |---|---|---|
-| XAmple | None: letters only; it ignores features and rules | 54 conformance + 6 stress, the [XAmple subset](docs/grammars.md#the-xample-subset) |
+| XAmple | None: letters only; it ignores features and rules | 55 conformance + 6 stress, the [XAmple subset](docs/grammars.md#the-xample-subset) |
 | Hermit Crab (machine) | Complete: every letter defined as a segment | all 231 + 16 |
 | PanGloss | None, incomplete or complete | all 231 + 16 |
 

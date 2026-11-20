@@ -36,6 +36,8 @@ AdhocProhibitionVariantMainFirstEnclitic,mrRa,lara;lira
 AdhocProhibitionVariantMsaCopies,eDaV,!tada
 AdhocProhibitionVariantMsaCopies,eDiV,!tadi
 AdhocProhibitionVariantMsaCopies,mrTa,taga;tagi;!taba;!tabi
+AdhocProhibitionWhyNot,mrTa,taga
+AdhocProhibitionWhyNot,subTa,!tada
 FeaturelessSegmentClassRewrite,prLen,asa;aza
 FeaturelessSegmentClassRewrite,prLen,asa;aza
 FeaturelessSegmentClassRewrite,prLen,asa;aza
