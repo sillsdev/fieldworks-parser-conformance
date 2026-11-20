@@ -239,10 +239,17 @@ MetathesisBoundaryBetweenSwitchesMarker,PRE,ts;t+s;t++s;sp;s+p;s++p
 MetathesisBoundaryBetweenSwitchesMarker,pr1,ts;t+s;t++s
 MetathesisBoundaryBetweenSwitchesPrefix,PRE,ts;sp;t+s;s+p
 MetathesisBoundaryBetweenSwitchesPrefix,pr1,ts;t+s
+MetathesisBoundaryContextLeftRightToLeft,PRE,aa;ap;a+a;a+p;ats;at+s
+MetathesisBoundaryContextLeftRightToLeft,pr1,ats;at+s
+MetathesisBoundaryContextRight,SUF,aa;pa;a+a;p+a;tsa;t+sa
+MetathesisBoundaryContextRight,pr1,tsa;t+sa
 MetathesisMorphOrderCompound,cr1,pp;pt;tt
 MetathesisMorphOrderCompound,pr1,pt
 MetathesisMorphOrderPrefixRoot,PRE,ts;sp
 MetathesisMorphOrderPrefixRoot,pr1,ts
+MetathesisBoundaryNullPrefix,NUL,t;+t;^0t;^0+t;ta;tt;ats;at+s;at++s;at^0s;at^0+s;at+^0+s;+ats;^0ats;^0+ats;+at+s;atsa;at+sa
+MetathesisBoundaryNullPrefix,PRE,ats;at+s;at++s;at^0s;at^0+s;at+^0+s;+ats;^0ats;^0+ats;+at+s;atsa;at+sa
+MetathesisBoundaryNullPrefix,pr1,ats;at+s;at++s;at^0s;at^0+s;at+^0+s;+ats;^0ats;^0+ats;+at+s;atsa;at+sa
 MetathesisBoundaryRightToLeftPrefix,PRE,ts;+ts;sp;s+p;sa
 MetathesisBoundaryRightToLeftPrefix,pr1,ts;+ts
 MetathesisBoundaryRightToLeftSuffix,PRE,at;a+t;ts;+ts;pt
