@@ -265,11 +265,14 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 - `edge-cases/change-epenthesis-prefix-deletion-chain`: the same chain with a segment change ahead of the epenthesis and the deletion (sillsdev/PanGloss#406).
 - `edge-cases/class-deletion-reinsertion-strrep`: a deletion whose target is a natural class, in a grammar with no phonological features.
+- `edge-cases/compound-after-an-insertion-keeps-the-bare-node`: an epenthesis beside a prefix, then a compounding rule that rebuilds the shape: the inserted node stays outside every morph (sillsdev/PanGloss#405).
 - `edge-cases/deletion-reapplications`: hiatus resolution that deletes a run of vowels, analysed with the deletion reapplication limit.
 - `edge-cases/deletion-reduplication-exception-composite`: deletion, reduplication and a feature-conferred exception in one word.
 - `edge-cases/deletion-reinserted-feature-unapply`: final devoicing followed by cluster simplification, undone in the right order on analysis.
 - `edge-cases/epenthesis-beside-prefix-then-prefix-deletion`: an epenthesis beside a prefix segment that a later deletion removes, with a later suffix (sillsdev/PanGloss#406).
 - `edge-cases/epenthesis-fed-merge`: an epenthesis whose output is merged by a later rule.
+- `edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix`: an epenthesis between a prefix and a root, then a metathesis that swaps the prefix segment with the inserted one, before a suffix (sillsdev/PanGloss#374).
+- `edge-cases/epenthesis-then-swap-with-root-keeps-its-edge`: the same chain with the metathesis swapping the inserted segment with the root's first segment (sillsdev/PanGloss#374).
 - `edge-cases/expansion-interposed-optional`: an expansion rule undone across an optional segment between its two output segments.
 - `edge-cases/expansion-overlapping-targets`: an expansion whose two-segment output overlaps itself in a run of vowels.
 - `edge-cases/feature-rule-before-merge`: a feature-changing rule that feeds a later merge.
@@ -303,6 +306,13 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/merge-subrules-pos-ltr-template`: a left-to-right merge with subrules gated by part of speech and a verb template.
 - `edge-cases/merge-subrules-pos-rtl-template`: the same merge applied right to left.
 - `edge-cases/merge-subrules-pos-simultaneous-template`: the same merge applied simultaneously.
+- `edge-cases/prefix-excluded-environment-after-epenthesis`: a prefix excluded before a segment that an epenthesis inserts between the prefix and the root; the inserted segment is outside the prefix's range (sillsdev/PanGloss#405).
+- `edge-cases/prefix-required-environment-after-epenthesis`: a prefix that requires a segment on its right, with an epenthesis between the prefix and the root; the inserted segment does not satisfy the requirement (sillsdev/PanGloss#405).
+- `edge-cases/prefix-required-environment-after-epenthesis-later-compound`: the same required environment with a compounding rule in a later stratum that rebuilds the shape (sillsdev/PanGloss#405).
+- `edge-cases/prefix-required-environment-after-epenthesis-later-suffix`: the same required environment with a suffix in a later stratum (sillsdev/PanGloss#405).
+- `edge-cases/root-required-environment-after-epenthesis-before-suffix`: roots that require a segment on their right, with an epenthesis between a root and a suffix; the inserted segment does not satisfy the requirement (sillsdev/PanGloss#405).
+- `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix`: a deletion, then a metathesis whose two switches sit on both sides of the deleted node, which keeps its place between them, before a suffix (sillsdev/PanGloss#405).
+- `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix`: a deletion, then a metathesis whose switches sit beside the deleted node, which stays where it was, before a suffix (sillsdev/PanGloss#405).
 
 ## Boundaries, direction and string representation
 
