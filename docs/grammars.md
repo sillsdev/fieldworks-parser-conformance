@@ -23,7 +23,7 @@ All 231 conformance and 16 stress grammars are Hermit Crab grammars, and PanGlos
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **54 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **55 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -39,6 +39,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/adhoc-prohibition-variant-enclitic-first`
 - `edge-cases/adhoc-prohibition-variant-main-first-enclitic`
 - `edge-cases/adhoc-prohibition-variant-msa-copies`
+- `edge-cases/adhoc-prohibition-whynot`
 - `edge-cases/authored-null-affix-allomorph`
 - `edge-cases/chained-output-feature-override-loss`
 - `edge-cases/circumfix-conditioned-halves`
@@ -198,6 +199,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/adhoc-prohibition-variant-enclitic-first`: [XAmple] a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry.
 - `edge-cases/adhoc-prohibition-variant-main-first-enclitic`: [XAmple] a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry.
 - `edge-cases/adhoc-prohibition-variant-msa-copies`: [XAmple] a morpheme prohibition on one analysis of a stem that has a variant entry.
+- `edge-cases/adhoc-prohibition-whynot`: [XAmple] a prefix ~ stem allomorph prohibition; carries a pending why-not row in `whynot.yaml`.
 - `edge-cases/mpr-wide-inflection-classes`: [XAmple] Ten families of 30 inflection classes (300 features) plus exception features, so one grammar carries 303 MPR features.
 
 ## Compounding

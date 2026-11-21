@@ -1,0 +1,129 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sillsdev/fieldworks-parser-conformance/schema/whynot.schema.json",
+  "title": "hc-conformance-whynot/v1",
+  "description": "The optional why-not sidecar of a fixture (whynot.yaml, next to words.yaml). See PROTOCOL.md section 11. Plain YAML only.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["rows"],
+  "properties": {
+    "rows": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/row" } }
+  },
+  "$defs": {
+    "morphRef": {
+      "description": "One morph of an intended analysis, named by the grammar's own ids: morpheme is the MorphemeId text, allomorph is the allomorph or subrule id in grammar.xml. Both are required. entry_guid and msa_guid are optional FieldWorks identifiers for callers that hold the FieldWorks model; they are never checked against grammar.xml and never compared.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["morpheme", "allomorph"],
+      "properties": {
+        "morpheme": { "type": "string", "minLength": 1 },
+        "allomorph": { "type": "string", "minLength": 1 },
+        "entry_guid": { "type": "string", "minLength": 1 },
+        "msa_guid": { "type": "string", "minLength": 1 }
+      }
+    },
+    "failureMorph": {
+      "description": "One morph of a failure's morphs. Same ids as morphRef, but allomorph is required only where failure's allOf says so: every morph of a failure requires it except the partner (second morph) of a MorphemeCoOccurrenceRules failure, which may carry only morpheme.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["morpheme"],
+      "properties": {
+        "morpheme": { "type": "string", "minLength": 1 },
+        "allomorph": { "type": "string", "minLength": 1 },
+        "entry_guid": { "type": "string", "minLength": 1 },
+        "msa_guid": { "type": "string", "minLength": 1 }
+      }
+    },
+    "row": {
+      "description": "A why-not row: given the word and the intended analysis (expect, surface order), what does the engine report? status pending is never compared; status asserted is compared by a runner that declares the why-not capability. Only the four hc_reported kinds are admitted, only the first failure per derivation is promised, and the derived context is not asserted.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["word", "status", "expect", "result"],
+      "properties": {
+        "word": { "type": "string", "minLength": 1 },
+        "note": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["pending", "asserted"] },
+        "expect": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/morphRef" } },
+        "result": { "enum": ["accepted", "rejected"] },
+        "failure": { "$ref": "#/$defs/failure" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "result": { "const": "rejected" } }, "required": ["result"] },
+          "then": { "required": ["failure"] },
+          "else": { "not": { "required": ["failure"] } }
+        }
+      ]
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "hc_reason"],
+      "properties": {
+        "kind": { "enum": ["environment_unmet", "adhoc_prohibition", "stem_name", "feature_clash"] },
+        "hc_reason": {
+          "description": "The shared hc_reported reason, spelled as the founding oracle's FailureReason.",
+          "enum": ["Environments", "AllomorphCoOccurrenceRules", "MorphemeCoOccurrenceRules", "BoundRoot", "RequiredStemName", "ExcludedStemName", "RequiredSyntacticFeatureStruct", "RequiredMprFeatures", "ExcludedMprFeatures", "ObligatorySyntacticFeatures"]
+        },
+        "morphs": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/failureMorph" } },
+        "environment": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["allomorph_id"],
+          "properties": {
+            "allomorph_id": { "type": "string", "minLength": 1 },
+            "index": {
+              "description": "The 0-based position of the single failing alternative. Optional: an engine omits it when it cannot name that alternative. A fixture must not assert it.",
+              "type": "integer", "minimum": 0
+            }
+          }
+        },
+        "stem_name": { "type": "string", "minLength": 1 },
+        "features": {
+          "description": "feature_clash: the FS diff, one entry per mismatching path.",
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "required", "actual"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "required": { "type": "string" },
+              "actual": { "type": "string" }
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "hc_reason": { "const": "MorphemeCoOccurrenceRules" } }, "required": ["hc_reason"] },
+          "then": { "properties": { "morphs": { "prefixItems": [{ "required": ["allomorph"] }] } } },
+          "else": { "properties": { "morphs": { "items": { "required": ["allomorph"] } } } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "environment_unmet" } } },
+          "then": { "required": ["environment"], "properties": { "hc_reason": { "const": "Environments" } } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "adhoc_prohibition" } } },
+          "then": {
+            "required": ["morphs"],
+            "properties": { "hc_reason": { "enum": ["AllomorphCoOccurrenceRules", "MorphemeCoOccurrenceRules"] }, "morphs": { "minItems": 2, "maxItems": 2 } }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "stem_name" } } },
+          "then": { "properties": { "hc_reason": { "enum": ["BoundRoot", "RequiredStemName", "ExcludedStemName"] } } }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "feature_clash" } } },
+          "then": {
+            "required": ["features"],
+            "properties": { "hc_reason": { "enum": ["RequiredSyntacticFeatureStruct", "RequiredMprFeatures", "ExcludedMprFeatures", "ObligatorySyntacticFeatures"] } }
+          }
+        }
+      ]
+    }
+  }
+}
