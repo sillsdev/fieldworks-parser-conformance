@@ -263,10 +263,12 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 ## Phonological rules: deletion, epenthesis, merge, expansion
 
+- `edge-cases/change-epenthesis-prefix-deletion-chain`: the same chain with a segment change ahead of the epenthesis and the deletion (sillsdev/PanGloss#406).
 - `edge-cases/class-deletion-reinsertion-strrep`: a deletion whose target is a natural class, in a grammar with no phonological features.
 - `edge-cases/deletion-reapplications`: hiatus resolution that deletes a run of vowels, analysed with the deletion reapplication limit.
 - `edge-cases/deletion-reduplication-exception-composite`: deletion, reduplication and a feature-conferred exception in one word.
 - `edge-cases/deletion-reinserted-feature-unapply`: final devoicing followed by cluster simplification, undone in the right order on analysis.
+- `edge-cases/epenthesis-beside-prefix-then-prefix-deletion`: an epenthesis beside a prefix segment that a later deletion removes, with a later suffix (sillsdev/PanGloss#406).
 - `edge-cases/epenthesis-fed-merge`: an epenthesis whose output is merged by a later rule.
 - `edge-cases/expansion-interposed-optional`: an expansion rule undone across an optional segment between its two output segments.
 - `edge-cases/expansion-overlapping-targets`: an expansion whose two-segment output overlaps itself in a run of vowels.
@@ -289,6 +291,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/metathesis-boundary-two-suffixes`: a metathesis that swaps the last segment of one suffix with the first of the next across their boundary, keeping the morph order.
 - `edge-cases/metathesis-segment-class-union`: a metathesis whose switch is a segment natural class, which matches the union of its members' features and so also a root segment that is not a member.
 - `edge-cases/metathesis-deletion-restores-segment-between-switches`: a metathesis across a prefix boundary followed by a deletion whose analysis restores an optional segment between the switches; the founding oracle cannot parse four words it generates (sillsdev/machine#649).
+- `edge-cases/null-prefix-root-initial-deletion-later-suffix`: a null prefix before a root that loses its first segment to a later deletion, with a later suffix (sillsdev/PanGloss#405).
 - `edge-cases/merge-then-metathesis`: a metathesis followed by a merge, undone in order on analysis.
 - `edge-cases/partial-rule-deleted-material`: partial affix rules whose inserted segment a phonological deletion rule removes from the surface form, under a final template.
 - `edge-cases/simultaneous-epenthesis-cascade`: a simultaneous epenthesis that inserts a vowel after any high vowel.

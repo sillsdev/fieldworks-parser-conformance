@@ -66,6 +66,11 @@ BoundaryNarrowingProbe,prPostNasal,nmo
 ChainedOutputFeatureOverrideLoss,mrInner,zudi;zudiua
 ChainedOutputFeatureOverrideLoss,mrOuter,zudu;zudua;zudiua
 ChainedOutputFeatureOverrideLoss,mrOutermost,zudua;!zudia;zudiua
+ChangeEpenthesisPrefixDeletionChain,PR0,asa;ast;asas;asts
+ChangeEpenthesisPrefixDeletionChain,SU1,sas;sts;asas;asts
+ChangeEpenthesisPrefixDeletionChain,pc0,st;asa;ast;sts;asas;asts
+ChangeEpenthesisPrefixDeletionChain,pd0,asa;ast;asas;asts
+ChangeEpenthesisPrefixDeletionChain,pe0,asa;ast;asas;asts
 CircumfixConditionedHalves,mrCirc,puaamo;puabzo;kibamo;kibbzo
 CircumfixCrossProductAndInfixDrop,mrCross,pabatidan;pabatidin;mabatidan;mabatidin
 CircumfixCrossProductAndInfixDrop,mrInfixDrop,bumat
@@ -141,6 +146,10 @@ DisjunctiveRecheckProbe,ruleD,pakza;!pakda;pitda
 DisjunctiveRecheckProbe,ruleE,pakde;pakzeta;!pakdeta
 DisjunctiveRecheckProbe,ruleT,!wakta;wokta;pakzeta
 EmptyRequiredTemplateSlot,mrule1,monua
+EpenthesisBesidePrefixThenPrefixDeletion,PR0,asa;asp;asas;asps
+EpenthesisBesidePrefixThenPrefixDeletion,SU1,sas;sps;asas;asps
+EpenthesisBesidePrefixThenPrefixDeletion,pd0,asa;asp;asas;asps
+EpenthesisBesidePrefixThenPrefixDeletion,pe0,asa;asp;asas;asps
 EpenthesisFedMerge,prEpenthesis,bd
 EpenthesisFedMerge,prMerge,bd
 ExpansionInterposedOptional,prDelete,
@@ -315,6 +324,9 @@ NfaLiteralAllomorphEnvironment,mrSuffix,gabsa
 NonCliticAfterFinalTemplateLayout,mrDeriv,!sagdk;kolk
 NonCliticAfterFinalTemplateLayout,mrEnc,sagds
 NonCliticAfterFinalTemplateLayout,mrPast,sagd;sagds
+NullPrefixRootInitialDeletionLaterSuffix,NU0,ps;psa;+ps;+psa
+NullPrefixRootInitialDeletionLaterSuffix,SU1,psa;+psa
+NullPrefixRootInitialDeletionLaterSuffix,pd0,ps;psa;+ps;+psa
 nullable-disagree-bounded-ltr-left,prDoubleAlpha,ia
 nullable-disagree-bounded-ltr-right,prDoubleAlpha,ia
 nullable-disagree-bounded-rtl-left,prDoubleAlpha,ia
