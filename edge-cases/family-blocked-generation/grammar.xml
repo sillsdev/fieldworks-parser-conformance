@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
 <!-- Family blocking in forward generation. famF holds A (aa) and B (aat); suffix T appends t, so A+T
-     and B have the same surface aat and B (a family relative) blocks A+T. Parsing reports only B.
+     and B have the same surface aat and B (a family relative) blocks A+T. C# parsing reports B twice (the lookup
+     and the blocked A+T derivation); PanGloss reports it once.
      C# Morpher.GenerateWords(A, [T]) returns B's word aat; PanGloss returned nothing (#423). -->
 <HermitCrabInput>
   <Language>
