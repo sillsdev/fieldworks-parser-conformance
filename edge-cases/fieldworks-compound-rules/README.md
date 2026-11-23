@@ -15,6 +15,6 @@ compound of two stems has no analysis until the rule exists.
 | none | disabled rule (the loader skips it) | demubonu, bonudemu |
 
 Producibility is read from `HCLoader.cs`, not witnessed by a project (see `words.yaml`). Rows come from the C#
-HermitCrab at machine 1ddef2bd (`hc-conformance --propose`); PanGloss 0.27.0 returns the same 36 rows, including the
+HermitCrab at machine e63b8863 (`hc-conformance --propose`); PanGloss 0.27.0 returns the same 36 rows, including the
 repeated signature for `bagokesure` (suffix on the head stem or on the compound) and the two analyses of the exocentric
 words (one per head choice).

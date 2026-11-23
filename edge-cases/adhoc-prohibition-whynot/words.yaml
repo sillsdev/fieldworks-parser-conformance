@@ -1,5 +1,5 @@
-# oracle-provenance: founding-oracle machine-commit=1ddef2bd verified-date=2026-11-20
-# Normal parse rows: hc-conformance self-check at Machine 1ddef2bd (see ../../PROVENANCE.md).
+# oracle-provenance: founding-oracle machine-commit=e63b8863 verified-date=2026-11-20
+# Normal parse rows: hc-conformance self-check at Machine e63b8863 (see ../../PROVENANCE.md).
 # The why-not expectation for tada lives in whynot.yaml beside this file and is PENDING RUNNER SUPPORT: no
 # engine can produce why-not results yet, so it was not taken from an engine run (PROTOCOL.md section 11).
 # Synthetic; no real language. One ad hoc allomorph prohibition on a prefix entry.

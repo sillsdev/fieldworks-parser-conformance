@@ -5,7 +5,7 @@
 #
 # This fixture pins Morpher.LexicalLookup. The #627 change proposes only the root allomorph that matched the
 # input, and skips an entry whose syntactic features do not unify with the input's. The second change only
-# saves work and must not move any row. As of 2026-11-14, the PanGloss-pinned C# oracle (machine 1ddef2bd)
+# saves work and must not move any row. As of 2026-11-14, the PanGloss-pinned C# oracle (machine e63b8863)
 # also gives "bu" no parse, matching expect_fail: true.
 
 language: LexicalLookupSiblingAllomorphs
@@ -18,7 +18,7 @@ fieldworks_producible: true
 words:
   - word: bu
     note: >-
-      The sibling case. Analysis re-inserts at most one i after u (Deletion Reapplications 0), so it reaches bui and never buii. The matched allomorph bui requires a following consonant, and nothing follows it, so synthesis rejects it. Before #627 merged, master also tried the entry's other allomorph buii, which synthesises to "bu" because prHiatusI deletes both i's, and so parsed the word through a sibling that analysis never matched. The #627 change tries only bui; the current pinned oracle (1ddef2bd) therefore gives no parse, as expected.
+      The sibling case. Analysis re-inserts at most one i after u (Deletion Reapplications 0), so it reaches bui and never buii. The matched allomorph bui requires a following consonant, and nothing follows it, so synthesis rejects it. Before #627 merged, master also tried the entry's other allomorph buii, which synthesises to "bu" because prHiatusI deletes both i's, and so parsed the word through a sibling that analysis never matched. The #627 change tries only bui; the current pinned oracle (e63b8863) therefore gives no parse, as expected.
     expect_fail: true
 
   - word: tuk

@@ -5,6 +5,10 @@ A linguist's project should parse a word the same way whichever engine runs it. 
 
 **245 conformance grammars** (6 languages, 239 edge cases) · **16 stress grammars** · **11 FieldWorks witnesses**
 
+> **Provenance note.** Many fixtures cite sillsdev/machine commit `e63b8863` as the HermitCrab build behind their expected
+> results. That commit is the tip of unmerged machine PR #615 (`hermitcrab-conformance-runner`), stacked on #500 and #556.
+> Once those PRs land, re-point every `e63b8863` citation (see [PROVENANCE.md](PROVENANCE.md)) to the merge commit on master.
+
 ## The one rule
 
 A grammar is here only if a real FieldWorks project can produce it. FieldWorks writes less than the grammar format can say,

@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle Machine 1ddef2bd2f1503717de95556116df8e4a63846d6 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19; PanGloss 0.27.0 returned the same rows)
+# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19; PanGloss 0.27.0 returned the same rows)
 language: FieldWorksCompoundRules
 inspired_by: ["synthetic FieldWorks compound-rule probe (not modeling any real language)"]
 sources:

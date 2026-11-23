@@ -3,7 +3,7 @@
 Pins `Morpher.LexicalLookup` in sillsdev/machine, as changed by [machine #627](https://github.com/sillsdev/machine/pull/627).
 
 As of 2026-11-14, #627 is merged to machine master (2026-11-12, commit `1eae2268`). PanGloss pins its C# oracle at
-machine `1ddef2bd` (`4d9b454d` plus the #627 cherry-pick); that oracle gives `bu` no parse, matching `expect_fail: true`.
+machine `e63b8863`, the tip of unmerged #615, which contains #627; that oracle gives `bu` no parse, matching `expect_fail: true`.
 
 The rows below were measured from #627 head `d26dd375` with the #615 conformance runner, before the merge. This comparison
 records the behavior at that time: pre-merge master parsed `bu` as `BU|bu`, while #627 did not. Every other word had the

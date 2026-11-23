@@ -2,7 +2,7 @@
 
 One lexical entry has two root allomorphs and a copy/copy non-recursive compounding rule. Reusing one allomorph (`aa`, `pp`) is the single identity `[m]`; using both (`ap`, `pa`) is `[m, m]`. The structural neighbors (`aaa`, an explicit boundary) are rejected.
 
-Synthetic forms. Source: sillsdev/PanGloss pull request 353. The expected rows are what C# HermitCrab (sillsdev/machine `1ddef2bd2f1503717de95556116df8e4a63846d6`, see [PROVENANCE.md](../../PROVENANCE.md)) returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
+Synthetic forms. Source: sillsdev/PanGloss pull request 353. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70`, see [PROVENANCE.md](../../PROVENANCE.md)) returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
 
 FieldWorks producibility is read from `HCLoader.cs`; no `fieldworks/` witness is claimed.
 

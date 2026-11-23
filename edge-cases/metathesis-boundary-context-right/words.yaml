@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=1ddef2bd verified-date=2026-11-19
+# oracle-provenance: founding-oracle machine-commit=e63b8863 verified-date=2026-11-19
 language: MetathesisBoundaryContextRight
 requires: [phonology]
 fieldworks_producible: true

@@ -10,7 +10,7 @@ Synthetic. One ad hoc allomorph prohibition on a prefix: the prefix ta- (`subTa`
 
 ## Status
 
-The parse rows come from the reference engine: hc-conformance self-check at Machine `1ddef2bd` passes (`words.yaml` header). The why-not row is `status: pending`, pending runner support: no engine can produce a why-not result yet, so it was written from the grammar and the loader, not from an engine run, and nothing compares it. It becomes `asserted` once the reference engine's why-not output has been read against the grammar.
+The parse rows come from the reference engine: hc-conformance self-check at Machine `e63b8863` passes (`words.yaml` header). The why-not row is `status: pending`, pending runner support: no engine can produce a why-not result yet, so it was written from the grammar and the loader, not from an engine run, and nothing compares it. It becomes `asserted` once the reference engine's why-not output has been read against the grammar.
 
 ## FieldWorks witness
 
