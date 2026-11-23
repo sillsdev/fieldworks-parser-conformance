@@ -23,7 +23,7 @@ All 231 conformance and 16 stress grammars are Hermit Crab grammars, and PanGlos
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **55 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **56 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -59,6 +59,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/deep-optional-affix-nesting`
 - `edge-cases/diacritic-segments`
 - `edge-cases/empty-required-template-slot`
+- `edge-cases/family-blocked-generation`
 - `edge-cases/feature-gating-breadth`
 - `edge-cases/fieldworks-compound-rules`
 - `edge-cases/final-template-merge-key` (needs `morpher-settings`)
@@ -154,6 +155,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 ## Templates, slots and parts of speech
 
+- `edge-cases/family-blocked-generation`: [XAmple] a stem family whose relative B shares the surface of A+T and blocks it: `aat` parses as B twice (plain lookup and the blocked A+T).
 - `edge-cases/feature-gating-breadth`: [XAmple] a rule gated on number=pl that a lexically singular root passes only after another rule has overwritten its number, in both suffix orders (10 words).
 - `edge-cases/final-template-merge-key`: [XAmple] a final template in a lower stratum, reached from two analysis orders that must merge into one parse.
 - `edge-cases/final-template-partial-discriminators`: [XAmple] rules that may or may not follow a final template, depending on whether they are partial.
