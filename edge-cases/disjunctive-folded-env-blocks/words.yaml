@@ -1,0 +1,31 @@
+# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, tip of sillsdev/machine #615; rows replayed on that build, 2026-11-23, issue sillsdev/PanGloss#444)
+language: EarlierAllomorphBreaksSynthesis
+inspired_by: ["a FieldWorks suffix with an alternate form in an environment / n _ ahead of the lexeme form"]
+sources: ["sillsdev/PanGloss#444", "Motif #316"]
+requires: []
+fieldworks_producible: true
+words:
+  - word: banku
+    note: >-
+      The one #444 shape: allomorph 0 (input stem* n, adds ka) matches ban, and with no environments its
+      disjunctive property stops allomorph 1 (input stem+, adds ku) from applying, so ban+ku has no parse.
+      The same holds when guided synthesis rejects allomorph 0 for the recorded allomorph 1.
+    expect_fail: true
+  - word: basku
+    note: >-
+      Control: allomorph 0 does not match bas (no final n), so the lexeme-form allomorph 1 applies and
+      bas+ku parses.
+    parses:
+      - signature: "BAS+DAT|basku"
+        rules: [mrDat]
+  - word: banka
+    note: >-
+      The alternate itself still parses: allomorph 0 applies to ban and yields banka.
+    parses:
+      - signature: "BAN+DAT|banka"
+        rules: [mrDat]
+  - word: ban
+    note: "Control: the bare root parses with no suffix."
+    parses:
+      - signature: "BAN|ban"
+        rules: []

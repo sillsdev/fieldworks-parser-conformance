@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 231 fixtures: 6 languages and 225 edge cases.
+The list has 232 fixtures: 6 languages and 226 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 231 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 232 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **56 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **57 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -58,6 +58,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/cross-stem-material-determination`
 - `edge-cases/deep-optional-affix-nesting`
 - `edge-cases/diacritic-segments`
+- `edge-cases/disjunctive-folded-env-blocks`
 - `edge-cases/empty-required-template-slot`
 - `edge-cases/family-blocked-generation`
 - `edge-cases/feature-gating-breadth`
@@ -183,6 +184,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 - `edge-cases/disjunctive-recheck`: allomorphs chosen in order, where the first allomorph's right environment is re-checked against the rest of the word.
 - `edge-cases/lexical-lookup-sibling-allomorphs`: a matched-allomorph lookup probe (`bu` has no parse with the #627 fix now in machine master), plus syntactic-feature homograph controls (7 words).
+- `edge-cases/disjunctive-folded-env-blocks`: [XAmple] a suffix whose earlier allomorph has its left context folded into its input pattern (no environments), so for `banku` its disjunctive property blocks the later lexeme-form allomorph and the word has no parse; `basku` and `banka` parse.
 - `edge-cases/free-fluctuating-allomorph-pair`: two allomorphs that can both apply, so a word has one parse per allomorph.
 - `edge-cases/mpr-gated-exception`: a phonological rule that a root or an affix switches off with a morphological feature.
 - `edge-cases/stem-name-restricted-root-allomorph`: [XAmple] a root allomorph that is used only when a stem name matches the word's features.
