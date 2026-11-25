@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 232 fixtures: 6 languages and 226 edge cases.
+The list has 249 fixtures: 6 languages and 243 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 232 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 249 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -319,6 +319,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/root-required-environment-after-epenthesis-before-suffix`: roots that require a segment on their right, with an epenthesis between a root and a suffix; the inserted segment does not satisfy the requirement (sillsdev/PanGloss#405).
 - `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix`: a deletion, then a metathesis whose two switches sit on both sides of the deleted node, which keeps its place between them, before a suffix (sillsdev/PanGloss#405).
 - `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix`: a deletion, then a metathesis whose switches sit beside the deleted node, which stays where it was, before a suffix (sillsdev/PanGloss#405).
+- `edge-cases/category-limited-phonological-rule`: a phonological rule whose right-hand side requires the category Verb (FieldWorks "Category", `PhSegRuleRHS.InputPOSes`): it fires on a verb root and not on a noun root with the same segments (sillsdev/motif#468).
 
 ## Boundaries, direction and string representation
 

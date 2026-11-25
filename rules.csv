@@ -66,6 +66,7 @@ BoundaryMidInNarrowingLhsStrrep,mrSfxMo,kanmo;katmo
 BoundaryMidInNarrowingLhsStrrep,prPostNasal,kanmo
 BoundaryNarrowingProbe,mrSfxBo,nmo
 BoundaryNarrowingProbe,prPostNasal,nmo
+CategoryLimitedPhonologicalRule,prVerbUI,kain;kaun
 ChainedOutputFeatureOverrideLoss,mrInner,zudi;zudiua
 ChainedOutputFeatureOverrideLoss,mrOuter,zudu;zudua;zudiua
 ChainedOutputFeatureOverrideLoss,mrOutermost,zudua;!zudia;zudiua

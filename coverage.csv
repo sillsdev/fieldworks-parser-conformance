@@ -180,6 +180,8 @@ BoundaryNarrowingProbe,nmo,KAN+BO|nmo,RewriteRule Iterative (epenthesis/deletion
 BoundaryNarrowingProbe,nmo,KAN+BO|nmo,Boundary markers (CharacterDefinitionTable)
 BoundaryNarrowingProbe,nbo,,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 BoundaryNarrowingProbe,nbo,,Boundary markers (CharacterDefinitionTable)
+CategoryLimitedPhonologicalRule,kain,KAUN_V|kain,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
+CategoryLimitedPhonologicalRule,kaun,KAUN_N|kaun,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
 ChainedOutputFeatureOverrideLoss,zud,ZUD|zud,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 ChainedOutputFeatureOverrideLoss,zudi,ZUD+INNER|zudi,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 ChainedOutputFeatureOverrideLoss,zudu,ZUD+OUTER|zudu,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)

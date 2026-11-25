@@ -1,0 +1,44 @@
+# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, tip of sillsdev/machine #615; rows proposed and replayed on that build, 2026-11-25, sillsdev/motif#468)
+language: CategoryLimitedPhonologicalRule
+inspired_by: ["a FieldWorks phonological rule whose right-hand side lists the category Verb (Black, Conceptual Introduction 6.1.2.2.1)"]
+sources: ["sillsdev/motif#468"]
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: kain
+    note: >-
+      The rule fires on the verb: the verb root kaun has u between a and n, and the rule's one right-hand
+      side requires Verb, so the surface form is kain. The noun root kaun has the same segments but is not a
+      verb, so the rule does not undo into it: kain has this one parse only.
+    parses:
+      - signature: "KAUN_V|kain"
+        rules: [prVerbUI]
+        exercises:
+          - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
+  - word: kaun
+    note: >-
+      The rule does not fire on the noun: the noun root kaun meets the rule's context (u between a and n) but
+      is not a verb, so it surfaces unchanged. The trace lists the rule for the noun parse because the
+      rule is tried and does not apply (as in subrule-morphosyntactic-gating). The verb root kaun does not
+      surface as kaun (it surfaces as kain), so kaun has this one parse only.
+    parses:
+      - signature: "KAUN_N|kaun"
+        rules: [prVerbUI]
+        exercises:
+          - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
+  - word: kaut
+    note: "Control: a verb whose u is not before n is outside the rule's context and surfaces unchanged."
+    parses:
+      - signature: "KAUT_V|kaut"
+        rules: []
+  - word: pun
+    note: "Control: a verb whose u is not after a is outside the rule's context and surfaces unchanged."
+    parses:
+      - signature: "PUN_V|pun"
+        rules: []
+  - word: kiin
+    note: "The rule's output i is not an underlying vowel of any entry, so a surface form with no root of that shape has no parse."
+    expect_fail: true
+  - word: kainn
+    note: "Control: extra material after the context has no parse."
+    expect_fail: true

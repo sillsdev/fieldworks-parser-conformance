@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<!-- A phonological rule limited to one category. The rule rewrites u as i between a and n, and its one
+     right-hand side requires the part of speech Verb. HCLoader.LoadRewriteRule reads this from a FieldWorks
+     rule's right-hand side "Category" (PhSegRuleRHS.InputPOSes) into RewriteSubrule.RequiredSyntacticFeatureStruct;
+     FieldWorks stores only a required category, never an excluded one. The verb root and the noun root have the
+     same segments (kaun), so the rule's context occurs in both; the rule fires on the verb (surface kain) and
+     does not fire on the noun (surface kaun). Black, Conceptual Introduction 6.1.2.2.1. Pins sillsdev/motif#468. -->
+<HermitCrabInput>
+  <Language>
+    <Name>CategoryLimitedPhonologicalRule</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posV"><Name>v</Name></PartOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="featCons"><Name>cons</Name><Symbols><Symbol id="consPlus">+</Symbol><Symbol id="consMinus">-</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featHigh"><Name>high</Name><Symbols><Symbol id="highPlus">+</Symbol><Symbol id="highMinus">-</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featBack"><Name>back</Name><Symbols><Symbol id="backPlus">+</Symbol><Symbol id="backMinus">-</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featNas"><Name>nasal</Name><Symbols><Symbol id="nasPlus">+</Symbol><Symbol id="nasMinus">-</Symbol></Symbols></SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="tbl">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="ca"><Representations><Representation>a</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featBack" symbolValues="backPlus" /><FeatureValue feature="featNas" symbolValues="nasMinus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="cu"><Representations><Representation>u</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featBack" symbolValues="backPlus" /><FeatureValue feature="featNas" symbolValues="nasMinus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="ci"><Representations><Representation>i</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featBack" symbolValues="backMinus" /><FeatureValue feature="featNas" symbolValues="nasMinus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="cn"><Representations><Representation>n</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featBack" symbolValues="backMinus" /><FeatureValue feature="featNas" symbolValues="nasPlus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="ck"><Representations><Representation>k</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highPlus" /><FeatureValue feature="featBack" symbolValues="backPlus" /><FeatureValue feature="featNas" symbolValues="nasMinus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="cp"><Representations><Representation>p</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featBack" symbolValues="backPlus" /><FeatureValue feature="featNas" symbolValues="nasMinus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="ct"><Representations><Representation>t</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="consPlus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /><FeatureValue feature="featBack" symbolValues="backMinus" /><FeatureValue feature="featNas" symbolValues="nasMinus" />
+        </SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncA"><Name>A</Name><FeatureValue feature="featCons" symbolValues="consMinus" /><FeatureValue feature="featHigh" symbolValues="highMinus" /></FeatureNaturalClass>
+      <FeatureNaturalClass id="ncN"><Name>N</Name><FeatureValue feature="featNas" symbolValues="nasPlus" /></FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="prVerbUI">
+        <Name>verbUToI</Name>
+        <PhoneticInput><PhoneticSequence><Segment segment="cu" /></PhoneticSequence></PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule requiredPartsOfSpeech="posV">
+            <PhoneticOutput><PhoneticSequence><Segment segment="ci" /></PhoneticSequence></PhoneticOutput>
+            <Environment>
+              <LeftEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncA" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment>
+              <RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncN" /></PhoneticSequence></PhoneticTemplate></RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" phonologicalRules="prVerbUI">
+        <Name>Main</Name>
+        <LexicalEntries>
+          <LexicalEntry id="eKaunV" partOfSpeech="posV"><Allomorphs><Allomorph id="aKaunV"><PhoneticShape>kaun</PhoneticShape></Allomorph></Allomorphs><MorphemeId>KAUN_V</MorphemeId><Gloss>kaun.v</Gloss></LexicalEntry>
+          <LexicalEntry id="eKaunN" partOfSpeech="posN"><Allomorphs><Allomorph id="aKaunN"><PhoneticShape>kaun</PhoneticShape></Allomorph></Allomorphs><MorphemeId>KAUN_N</MorphemeId><Gloss>kaun.n</Gloss></LexicalEntry>
+          <LexicalEntry id="eKautV" partOfSpeech="posV"><Allomorphs><Allomorph id="aKautV"><PhoneticShape>kaut</PhoneticShape></Allomorph></Allomorphs><MorphemeId>KAUT_V</MorphemeId><Gloss>kaut.v</Gloss></LexicalEntry>
+          <LexicalEntry id="ePunV" partOfSpeech="posV"><Allomorphs><Allomorph id="aPunV"><PhoneticShape>pun</PhoneticShape></Allomorph></Allomorphs><MorphemeId>PUN_V</MorphemeId><Gloss>pun.v</Gloss></LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
