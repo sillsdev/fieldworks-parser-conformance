@@ -151,3 +151,73 @@ words:
   - word: anampat
     note: "The prefix applies once."
     expect_fail: true
+  - word: ampatiii
+    note: "Three homophonous -i suffixes after the assimilating prefix: the same morphemes in different orders are separate analyses, so the multiset keeps duplicates."
+    parses:
+      - signature: "NEG+PAT+INN+INV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVV|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVV|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVV|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV+IVV|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN+INN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN+INN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN+INN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN+INN|am+?pat+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV+IVN|am+?pat+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+  - word: antakiii
+    note: "As ampatiii with the tak root: the same morphemes in different orders are separate analyses."
+    parses:
+      - signature: "NEG+TAK+IVN+INN+INV|an+?tak+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INN+INV|an+?tak+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INN+INV|an+?tak+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INN+INV|an+?tak+?i+?i+?i"
+        rules: [iNN, iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV+IVV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV+IVV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV+IVV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV+IVV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INN|an+?tak+?i+?i+?i"
+        rules: [iNN, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INN|an+?tak+?i+?i+?i"
+        rules: [iNN, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INN|an+?tak+?i+?i+?i"
+        rules: [iNN, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INN|an+?tak+?i+?i+?i"
+        rules: [iNN, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN+INV|an+?tak+?i+?i+?i"
+        rules: [iNV, iVN, iVV, neg, prAssim]

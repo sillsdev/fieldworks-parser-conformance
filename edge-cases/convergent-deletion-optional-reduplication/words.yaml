@@ -116,3 +116,38 @@ words:
   - word: pupupusisi
     note: "The reduplication rule applies once."
     expect_fail: true
+  - word: kakatasisisi
+    note: "Reduplication, h-deletion and three homophonous si suffixes: the multiset repeats analyses that differ only by the order of same-form affixes."
+    parses:
+      - signature: "RED+KAHTA+SINN+SINV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINN+SINV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINN+SINV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINN+SINV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINN+SINV+SIVV|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVV]
+      - signature: "RED+KAHTA+SINN+SINV+SIVV|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVV]
+      - signature: "RED+KAHTA+SINN+SINV+SIVV|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVV]
+      - signature: "RED+KAHTA+SINN+SINV+SIVV|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVV]
+      - signature: "RED+KAHTA+SINV+SIVN+SINN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVN+SINN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVN+SINN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVN+SINN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNN, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNV, siVN, siVV]
+      - signature: "RED+KAHTA+SINV+SIVV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNV, siVN, siVV]
+      - signature: "RED+KAHTA+SINV+SIVV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNV, siVN, siVV]
+      - signature: "RED+KAHTA+SINV+SIVV+SIVN|ka+?kata+?si+?si+?si"
+        rules: [prHDel, red, siNV, siVN, siVV]

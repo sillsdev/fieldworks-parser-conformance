@@ -171,3 +171,38 @@ words:
   - word: kumax
     note: "x is outside the inventory."
     expect_skip: true
+  - word: kukumasisisi
+    note: "Reduplication and three homophonous si suffixes: the multiset repeats analyses that differ only by the order of same-form affixes."
+    parses:
+      - signature: "RED+KUMA+SINN+SINV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINN+SINV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINN+SINV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINN+SINV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINN+SINV+SIVV|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVV]
+      - signature: "RED+KUMA+SINN+SINV+SIVV|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVV]
+      - signature: "RED+KUMA+SINN+SINV+SIVV|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVV]
+      - signature: "RED+KUMA+SINN+SINV+SIVV|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVV]
+      - signature: "RED+KUMA+SINV+SIVN+SINN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVN+SINN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVN+SINN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVN+SINN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNN, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNV, siVN, siVV]
+      - signature: "RED+KUMA+SINV+SIVV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNV, siVN, siVV]
+      - signature: "RED+KUMA+SINV+SIVV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNV, siVN, siVV]
+      - signature: "RED+KUMA+SINV+SIVV+SIVN|ku+?kuma+?si+?si+?si"
+        rules: [red, siNV, siVN, siVV]

@@ -92,3 +92,76 @@ words:
   - word: katsisi
     note: "-si applies once and needs a noun."
     expect_fail: true
+  - word: kataa
+    note: "Same-form a affixes across the Morphology and Clitics strata: C# keeps CLAN+CLANY and CLANY+CLAN as separate analyses."
+    parses:
+      - signature: "KAT+ANN+ANV|kat+?a+?a"
+        rules: [aNN, aNV]
+      - signature: "KAT+ANN+CLANY|kat+?a+?a"
+        rules: [aNN, clC]
+      - signature: "KAT+ANN+CLAN|kat+?a+?a"
+        rules: [aNN, clA]
+      - signature: "KAT+ANV+AVN|kat+?a+?a"
+        rules: [aNV, aVN]
+      - signature: "KAT+ANV+AVV|kat+?a+?a"
+        rules: [aNV, aVV]
+      - signature: "KAT+ANV+CLANY|kat+?a+?a"
+        rules: [aNV, clC]
+      - signature: "KAT+ANV+CLAV|kat+?a+?a"
+        rules: [aNV, clB]
+      - signature: "KAT+CLAN+CLANY|kat+?a+?a"
+        rules: [clA, clC]
+      - signature: "KAT+CLANY+CLAN|kat+?a+?a"
+        rules: [clA, clC]
+  - word: sumaa
+    note: "As kataa on a verb root."
+    parses:
+      - signature: "SUM+AVN+ANN|sum+?a+?a"
+        rules: [aNN, aVN]
+      - signature: "SUM+AVN+ANV|sum+?a+?a"
+        rules: [aNV, aVN]
+      - signature: "SUM+AVN+CLANY|sum+?a+?a"
+        rules: [aVN, clC]
+      - signature: "SUM+AVN+CLAN|sum+?a+?a"
+        rules: [aVN, clA]
+      - signature: "SUM+AVV+AVN|sum+?a+?a"
+        rules: [aVN, aVV]
+      - signature: "SUM+AVV+CLANY|sum+?a+?a"
+        rules: [aVV, clC]
+      - signature: "SUM+AVV+CLAV|sum+?a+?a"
+        rules: [aVV, clB]
+      - signature: "SUM+CLANY+CLAV|sum+?a+?a"
+        rules: [clB, clC]
+      - signature: "SUM+CLAV+CLANY|sum+?a+?a"
+        rules: [clB, clC]
+  - word: kataaa
+    note: "Three same-form a affixes: every order C# accepts is its own analysis."
+    parses:
+      - signature: "KAT+ANN+ANV+AVN|kat+?a+?a+?a"
+        rules: [aNN, aNV, aVN]
+      - signature: "KAT+ANN+ANV+AVV|kat+?a+?a+?a"
+        rules: [aNN, aNV, aVV]
+      - signature: "KAT+ANN+ANV+CLANY|kat+?a+?a+?a"
+        rules: [aNN, aNV, clC]
+      - signature: "KAT+ANN+ANV+CLAV|kat+?a+?a+?a"
+        rules: [aNN, aNV, clB]
+      - signature: "KAT+ANN+CLAN+CLANY|kat+?a+?a+?a"
+        rules: [aNN, clA, clC]
+      - signature: "KAT+ANN+CLANY+CLAN|kat+?a+?a+?a"
+        rules: [aNN, clA, clC]
+      - signature: "KAT+ANV+AVN+ANN|kat+?a+?a+?a"
+        rules: [aNN, aNV, aVN]
+      - signature: "KAT+ANV+AVN+CLANY|kat+?a+?a+?a"
+        rules: [aNV, aVN, clC]
+      - signature: "KAT+ANV+AVN+CLAN|kat+?a+?a+?a"
+        rules: [aNV, aVN, clA]
+      - signature: "KAT+ANV+AVV+AVN|kat+?a+?a+?a"
+        rules: [aNV, aVN, aVV]
+      - signature: "KAT+ANV+AVV+CLANY|kat+?a+?a+?a"
+        rules: [aNV, aVV, clC]
+      - signature: "KAT+ANV+AVV+CLAV|kat+?a+?a+?a"
+        rules: [aNV, aVV, clB]
+      - signature: "KAT+ANV+CLANY+CLAV|kat+?a+?a+?a"
+        rules: [aNV, clB, clC]
+      - signature: "KAT+ANV+CLAV+CLANY|kat+?a+?a+?a"
+        rules: [aNV, clB, clC]

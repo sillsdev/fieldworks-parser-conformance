@@ -161,7 +161,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/truncate-morphotactic-identity`: the truncation grammar with explicit morpheme ids, so repeated signatures stay distinct rows.
 - `edge-cases/truncate-morphotactic-subsumption`: a prefix rule, a leading truncation and an insertion rule over the root `ag`, so a rule can remove what an earlier rule added.
 - `edge-cases/convergent-affix-multiple-application`: [XAmple] four suffixes spelled `ta`: a noun-to-noun one that may apply twice and a verb-to-verb one that may apply three times beside two one-shot category changers, so one shape is reached with different per-rule counts; guards an analysis-side match table that must not carry a count decision from another path (15 words).
-- `edge-cases/convergent-homophonous-suffix-reduplication`: [XAmple] a CV reduplication prefix beside four homophonous category-changing suffixes and two homophonous agreement suffixes in one template slot, so the copy-agreement check runs on one shape reached by many suffix histories; guards an analysis-side match table (20 words).
+- `edge-cases/convergent-homophonous-suffix-reduplication`: [XAmple] a CV reduplication prefix beside four homophonous category-changing suffixes and two homophonous agreement suffixes in one template slot, so the copy-agreement check runs on one shape reached by many suffix histories; guards an analysis-side match table (21 words).
 - `edge-cases/convergent-zero-derivation-identity`: [XAmple] three null affixes beside two homophonous `-ti` suffixes, so un-applying a null affix returns the same shape and every rule is retried on it under a different history; guards an analysis-side match table (13 words).
 
 ## Templates, slots and parts of speech
@@ -189,7 +189,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/clitic-rule-designation`: [XAmple] rules inside and outside the clitics stratum, checked against the final template.
 - `edge-cases/clitic-stem-entry`: [XAmple] a clitic stem entry that FieldWorks loads into the clitics stratum.
 - `edge-cases/non-clitic-after-final-template-layout`: [XAmple] a clitic stratum that holds only clitics, after a non-blocking stratum with a final template.
-- `edge-cases/convergent-clitic-stratum-homophonous`: [XAmple] three enclitics in the Clitics stratum spelled like four derivational suffixes in the Morphology stratum, so one shape is reached in both strata by different rules; guards an analysis-side match table (12 words).
+- `edge-cases/convergent-clitic-stratum-homophonous`: [XAmple] three enclitics in the Clitics stratum spelled like four derivational suffixes in the Morphology stratum, so one shape is reached in both strata by different rules; guards an analysis-side match table (15 words).
 
 ## Allomorphs, stem names and exceptions
 
@@ -330,8 +330,8 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix`: a deletion, then a metathesis whose two switches sit on both sides of the deleted node, which keeps its place between them, before a suffix (sillsdev/PanGloss#405).
 - `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix`: a deletion, then a metathesis whose switches sit beside the deleted node, which stays where it was, before a suffix (sillsdev/PanGloss#405).
 - `edge-cases/category-limited-phonological-rule`: a phonological rule whose right-hand side requires the category Verb (FieldWorks "Category", `PhSegRuleRHS.InputPOSes`): it fires on a verb root and not on a noun root with the same segments (sillsdev/motif#468).
-- `edge-cases/convergent-deletion-optional-reduplication`: an h-deletion rule undone before CV reduplication and homophonous suffixes, so the shapes carry optional segments and the copy alignment takes its optional-node path; guards an analysis-side match table (14 words).
-- `edge-cases/convergent-alpha-assimilation-homophonous`: nasal place assimilation written with one feature variable, a nasal-final prefix and homophonous suffixes, so undoing the rule leaves an unresolved variable in the shape; guards an analysis-side match table (17 words).
+- `edge-cases/convergent-deletion-optional-reduplication`: an h-deletion rule undone before CV reduplication and homophonous suffixes, so the shapes carry optional segments and the copy alignment takes its optional-node path; guards an analysis-side match table (15 words).
+- `edge-cases/convergent-alpha-assimilation-homophonous`: nasal place assimilation written with one feature variable, a nasal-final prefix and homophonous suffixes, so undoing the rule leaves an unresolved variable in the shape; guards an analysis-side match table (19 words).
 
 ## Boundaries, direction and string representation
 
