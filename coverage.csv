@@ -311,6 +311,12 @@ ConvergentDeletionOptionalReduplication,kata,KAHTA|kata,AffixProcessRule: redupl
 ConvergentDeletionOptionalReduplication,kata,KAHTA|kata,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ConvergentHomophonousSuffixReduplication,kukuma,RED+KUMA|ku+?kuma,AffixProcessRule: reduplication (ReduplicationHint)
 ConvergentHomophonousSuffixReduplication,kukuma,RED+KUMA|ku+?kuma,Affix template slots (obligatory/disjunctive/ordering)
+HomophonousGates,bolu,BOLUA|bolu,MPR features/groups
+HomophonousGates,boluitma,BOLUA+DER+MA|boluitma,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
+HomophonousGates,boluitma,BOLUB+DER+MAEXC|boluitma,Affix template slots (obligatory/disjunctive/ordering)
+HomophonousGates,boluitmata,BOLUA+DER+MA+TA|boluitmata,Affix template slots (obligatory/disjunctive/ordering)
+HomophonousGates,kelesu,KELE+SG|kelesu,Stem names
+HomophonousGates,kelesusu,KELE+SG+SGNAMED|kelesusu,Stem names
 ConvergentZeroDerivationIdentity,kat,KAT+ZNN+ZNV+ZVN|kat+?∅?+?∅?+?∅?,AffixProcessRule: prefix/suffix/circumfix/infix
 CopyAgreementFeaturelessRedup,tatasi,RED+tasi|tatasi,AffixProcessRule: reduplication (ReduplicationHint)
 CopyAgreementFeaturelessRedup,papasa,RED+pasa|papasa,AffixProcessRule: reduplication (ReduplicationHint)

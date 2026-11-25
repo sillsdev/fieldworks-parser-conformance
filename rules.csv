@@ -154,6 +154,14 @@ ConvergentHomophonousSuffixReduplication,siVN,kukumasisi;titisusi;tisusi;tisusis
 ConvergentHomophonousSuffixReduplication,siVV,kukumasisi;titisusi;tisusi;tisusisi;kukumasisina;titisusina;kukumasisisi
 ConvergentHomophonousSuffixReduplication,tA,kukumasina;kukumasisina;titisuna;titisusina
 ConvergentHomophonousSuffixReduplication,tB,kukumasina;kukumasisina;titisuna;titisusina
+HomophonousGates,rDer,boluit;boluitma;boluitta;boluitmata;boluitmama;boluitmamata
+HomophonousGates,rMaExc,boluitma;boluitmata;boluitmama;boluitmamata
+HomophonousGates,rMaReq,boluitma;boluitmata;boluitmama;boluitmamata
+HomophonousGates,rMbExc,boluitma;boluitmata;boluitmama;boluitmamata
+HomophonousGates,rMbReq,boluitma;boluitmata;boluitmama;boluitmamata
+HomophonousGates,rSg,kelesu;!kelisu;kelesusu;!kelisusu;kelesuta;!kelitamasu
+HomophonousGates,rSgNamed,kelesusu;!kelisusu
+HomophonousGates,rTa,boluitta;boluitmata;boluitmamata;kelesuta
 ConvergentZeroDerivationIdentity,su,katsu;kattisu;sumsu;sumtisu
 ConvergentZeroDerivationIdentity,tiN,katti;sumti;kattiti;sumtiti;kattisu;sumtisu
 ConvergentZeroDerivationIdentity,tiV,katti;sumti;kattiti;sumtiti;kattisu;sumtisu

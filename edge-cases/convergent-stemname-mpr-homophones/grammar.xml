@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<HermitCrabInput>
+  <Language>
+    <Name>HomophonousGates</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+      <PartOfSpeech id="posV"><Name>v</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <!-- requires: [] - pure morphotactics. Every gate this grammar pins is read from the word's
+         accumulated state (exception features carried from the root, the head feature num), never
+         from the shape, so a per-word cache keyed by (rule, shape) must still honour each one. -->
+    <HeadFeatures>
+      <SymbolicFeature id="featNum"><Name>num</Name><Symbols><Symbol id="symSg">sg</Symbol><Symbol id="symPl">pl</Symbol></Symbols></SymbolicFeature>
+    </HeadFeatures>
+    <MorphologicalPhonologicalRuleFeatures>
+      <MorphologicalPhonologicalRuleFeature id="mprA">ExcA</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeature id="mprB">ExcB</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeature id="mprNotA">NotA</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeature id="mprNotB">NotB</MorphologicalPhonologicalRuleFeature>
+      <!-- HCLoader puts every MPR feature in one of three groups (LoadLanguage 181-205). A derivational
+           affix requires production restrictions (1015-1018); a slot rule excludes only the features of
+           an irregular inflection type (LoadAffixTemplate 1766), the lexEntryInflTypes group, which an
+           entry carries (LoadLexEntryOfVariant 796). -->
+      <MorphologicalPhonologicalRuleFeatureGroup matchType="all" features="mprA mprB"><Name>exceptionFeatures</Name></MorphologicalPhonologicalRuleFeatureGroup>
+      <MorphologicalPhonologicalRuleFeatureGroup matchType="all" features="mprNotA mprNotB"><Name>lexEntryInflTypes</Name></MorphologicalPhonologicalRuleFeatureGroup>
+    </MorphologicalPhonologicalRuleFeatures>
+    <StemNames>
+      <StemName id="snSg" partsOfSpeech="posV">
+        <Name>SgStem</Name>
+        <Regions>
+          <Region><AssignedHeadFeatures><FeatureValue feature="featNum" symbolValues="symSg" /></AssignedHeadFeatures></Region>
+        </Regions>
+      </StemName>
+    </StemNames>
+    <CharacterDefinitionTable id="t1">
+      <Name>Main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cb"><Representations><Representation>b</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="co"><Representations><Representation>o</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cl"><Representations><Representation>l</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cu"><Representations><Representation>u</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ci"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ct"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cm"><Representations><Representation>m</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ca"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ck"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="ce"><Representations><Representation>e</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cs"><Representations><Representation>s</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered" morphologicalRules="rDer rMaReq rMbReq rTa rSg rSgNamed">
+        <Name>S</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="rDer" requiredPartsOfSpeech="posN" outputPartOfSpeech="posV">
+            <Name>der</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sDer">
+                <MorphologicalInput><PhoneticSequence id="qDer"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qDer" /><InsertSegments><PhoneticShape>it</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>DER</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rMaReq" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>maReq</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sMaReq">
+                <MorphologicalInput requiredMPRFeatures="mprA"><PhoneticSequence id="qMaReq"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qMaReq" /><InsertSegments><PhoneticShape>ma</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>MA</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rMbReq" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>mbReq</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sMbReq">
+                <MorphologicalInput requiredMPRFeatures="mprB"><PhoneticSequence id="qMbReq"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qMbReq" /><InsertSegments><PhoneticShape>ma</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>MBREQ</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rMaExc" requiredPartsOfSpeech="posV">
+            <Name>maExc</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sMaExc">
+                <MorphologicalInput excludedMPRFeatures="mprNotA"><PhoneticSequence id="qMaExc"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qMaExc" /><InsertSegments><PhoneticShape>ma</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>MAEXC</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rMbExc" requiredPartsOfSpeech="posV">
+            <Name>mbExc</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sMbExc">
+                <MorphologicalInput excludedMPRFeatures="mprNotB"><PhoneticSequence id="qMbExc"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qMbExc" /><InsertSegments><PhoneticShape>ma</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>MBEXC</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rTa" requiredPartsOfSpeech="posV">
+            <Name>ta</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sTa">
+                <MorphologicalInput><PhoneticSequence id="qTa"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qTa" /><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TA</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rSg" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>sg</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sSg">
+                <MorphologicalInput><PhoneticSequence id="qSg"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qSg" /><InsertSegments><PhoneticShape>su</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <OutputHeadFeatures><FeatureValue feature="featNum" symbolValues="symSg" /></OutputHeadFeatures>
+            <MorphemeId>SG</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="rSgNamed" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV" requiredStemName="snSg">
+            <Name>sgNamed</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sSgNamed">
+                <MorphologicalInput><PhoneticSequence id="qSgNamed"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="qSgNamed" /><InsertSegments><PhoneticShape>su</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SGNAMED</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <AffixTemplates>
+          <AffixTemplate requiredPartsOfSpeech="posV">
+            <Name>excTemplate</Name>
+            <Slot optional="true" morphologicalRules="rMaExc rMbExc"><Name>excSlot</Name></Slot>
+            <Slot optional="true" morphologicalRules="rTa"><Name>taSlot</Name></Slot>
+          </AffixTemplate>
+        </AffixTemplates>
+        <LexicalEntries>
+          <!-- Two homophonous noun roots told apart only by an exception feature. -->
+          <LexicalEntry id="eBoluA" partOfSpeech="posN" ruleFeatures="mprA mprNotA">
+            <Allomorphs><Allomorph id="aBoluA"><PhoneticShape>bolu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>BOLUA</MorphemeId><Gloss>boluA</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eBoluB" partOfSpeech="posN" ruleFeatures="mprB mprNotB">
+            <Allomorphs><Allomorph id="aBoluB"><PhoneticShape>bolu</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>BOLUB</MorphemeId><Gloss>boluB</Gloss>
+          </LexicalEntry>
+          <!-- A verb root with a stem-named allomorph and an unnamed one. -->
+          <LexicalEntry id="eKele" partOfSpeech="posV">
+            <Allomorphs>
+              <Allomorph id="aKeleSg" stemName="snSg"><PhoneticShape>kele</PhoneticShape></Allomorph>
+              <Allomorph id="aKeliDefault"><PhoneticShape>keli</PhoneticShape></Allomorph>
+            </Allomorphs>
+            <MorphemeId>KELE</MorphemeId><Gloss>kele</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
