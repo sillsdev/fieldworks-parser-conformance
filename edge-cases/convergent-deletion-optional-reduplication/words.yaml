@@ -1,0 +1,118 @@
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
+language: ConvergentDeletionOptionalReduplication
+inspired_by: ["synthetic h-deletion before a consonant feeding CV reduplication and homophonous suffixes (not modeling any real language)"]
+sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480"]
+requires: [phonology]
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Four derivational suffixes share one form and differ only in category (noun to noun, noun to verb, verb to noun, verb to verb), as FieldWorks writes homophonous derivational affixes (HCLoader.cs LoadDerivAffixProcessRule).
+  The phonological rule is an ordinary deletion (empty output) with a right environment. Undoing it puts an
+  optional h before every consonant, so the reduplication bracket pattern [C^1][V^1] is matched on shapes
+  that carry optional segments inside and between the two copies.
+words:
+  - word: kata
+    note: "Root kahta surfaces without its h."
+    parses:
+      - signature: "KAHTA|kata"
+        rules: [prHDel]
+  - word: kakata
+    note: "Reduplication of the root's first CV; the deleted h is restored only inside the stem."
+    parses:
+      - signature: "RED+KAHTA|ka+?kata"
+        rules: [prHDel, red]
+  - word: kakatasi
+    note: "Homophonous -si over the reduplicated stem with optional h nodes in the shape."
+    parses:
+      - signature: "RED+KAHTA+SINN|ka+?kata+?si"
+        rules: [prHDel, red, siNN]
+      - signature: "RED+KAHTA+SINN|ka+?kata+?si"
+        rules: [prHDel, red, siNN]
+      - signature: "RED+KAHTA+SINV|ka+?kata+?si"
+        rules: [prHDel, red, siNV]
+      - signature: "RED+KAHTA+SINV|ka+?kata+?si"
+        rules: [prHDel, red, siNV]
+  - word: kakatasisi
+    note: "Two stacked -si: the copy rule meets the same optional-bearing shape from several paths."
+    parses:
+      - signature: "RED+KAHTA+SINN+SINV|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNN, siNV]
+      - signature: "RED+KAHTA+SINN+SINV|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNN, siNV]
+      - signature: "RED+KAHTA+SINN+SINV|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNN, siNV]
+      - signature: "RED+KAHTA+SINV+SIVN|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVN|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVN|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNV, siVN]
+      - signature: "RED+KAHTA+SINV+SIVV|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNV, siVV]
+      - signature: "RED+KAHTA+SINV+SIVV|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNV, siVV]
+      - signature: "RED+KAHTA+SINV+SIVV|ka+?kata+?si+?si"
+        rules: [prHDel, red, siNV, siVV]
+  - word: takatasi
+    note: "A copied CV that is not the stem's, with optional nodes present."
+    expect_fail: true
+  - word: kahta
+    note: "h cannot surface before a consonant."
+    expect_fail: true
+  - word: pusi
+    note: "Verb root with no h, whose last two segments equal the suffix form."
+    parses:
+      - signature: "PUSI|pusi"
+        rules: []
+  - word: pupusi
+    note: "Reduplication on the verb root."
+    parses:
+      - signature: "RED+PUSI|pu+?pusi"
+        rules: [red]
+  - word: pupusisi
+    note: "Verb-taking -si over the reduplicated verb."
+    parses:
+      - signature: "RED+PUSI+SIVN|pu+?pusi+?si"
+        rules: [red, siVN]
+      - signature: "RED+PUSI+SIVN|pu+?pusi+?si"
+        rules: [red, siVN]
+      - signature: "RED+PUSI+SIVV|pu+?pusi+?si"
+        rules: [red, siVV]
+      - signature: "RED+PUSI+SIVV|pu+?pusi+?si"
+        rules: [red, siVV]
+  - word: pupusisisi
+    note: "Two stacked -si on the verb root."
+    parses:
+      - signature: "RED+PUSI+SIVN+SINN|pu+?pusi+?si+?si"
+        rules: [red, siNN, siVN]
+      - signature: "RED+PUSI+SIVN+SINN|pu+?pusi+?si+?si"
+        rules: [red, siNN, siVN]
+      - signature: "RED+PUSI+SIVN+SINN|pu+?pusi+?si+?si"
+        rules: [red, siNN, siVN]
+      - signature: "RED+PUSI+SIVN+SINV|pu+?pusi+?si+?si"
+        rules: [red, siNV, siVN]
+      - signature: "RED+PUSI+SIVN+SINV|pu+?pusi+?si+?si"
+        rules: [red, siNV, siVN]
+      - signature: "RED+PUSI+SIVN+SINV|pu+?pusi+?si+?si"
+        rules: [red, siNV, siVN]
+      - signature: "RED+PUSI+SIVV+SIVN|pu+?pusi+?si+?si"
+        rules: [red, siVN, siVV]
+      - signature: "RED+PUSI+SIVV+SIVN|pu+?pusi+?si+?si"
+        rules: [red, siVN, siVV]
+      - signature: "RED+PUSI+SIVV+SIVN|pu+?pusi+?si+?si"
+        rules: [red, siVN, siVV]
+  - word: kakahta
+    note: "h cannot surface before a consonant, reduplicated or not."
+    expect_fail: true
+  - word: katasi
+    note: "The noun-taking -si suffixes without reduplication."
+    parses:
+      - signature: "KAHTA+SINN|kata+?si"
+        rules: [prHDel, siNN]
+      - signature: "KAHTA+SINV|kata+?si"
+        rules: [prHDel, siNV]
+  - word: kapusi
+    note: "A copied CV that is not the stem's."
+    expect_fail: true
+  - word: pupupusisi
+    note: "The reduplication rule applies once."
+    expect_fail: true

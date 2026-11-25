@@ -1,0 +1,94 @@
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
+language: ConvergentCliticStratumHomophonous
+inspired_by: ["synthetic enclitics homophonous with derivational suffixes of an inner stratum (not modeling any real language)"]
+sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs strata Morphology and Clitics"]
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Four derivational suffixes share one form and differ only in category (noun to noun, noun to verb, verb to noun, verb to verb), as FieldWorks writes homophonous derivational affixes (HCLoader.cs LoadDerivAffixProcessRule).
+  The strata are the Morphology and Clitics strata FieldWorks writes, both unordered. Three enclitics in the
+  Clitics stratum have the same form as the four derivational suffixes in the Morphology stratum, so one
+  shape is reached in both strata by different rules. The phonemes carry no phonological features.
+words:
+  - word: kat
+    note: "Bare noun root control."
+    parses:
+      - signature: "KAT|kat"
+        rules: []
+  - word: sum
+    note: "Bare verb root control."
+    parses:
+      - signature: "SUM|sum"
+        rules: []
+  - word: kata
+    note: "One -a: two noun-taking suffixes and two enclitics that accept a noun."
+    parses:
+      - signature: "KAT+ANN|kat+?a"
+        rules: [aNN]
+      - signature: "KAT+ANV|kat+?a"
+        rules: [aNV]
+      - signature: "KAT+CLANY|kat+?a"
+        rules: [clC]
+      - signature: "KAT+CLAN|kat+?a"
+        rules: [clA]
+  - word: suma
+    note: "One -a on the verb root."
+    parses:
+      - signature: "SUM+AVN|sum+?a"
+        rules: [aVN]
+      - signature: "SUM+AVV|sum+?a"
+        rules: [aVV]
+      - signature: "SUM+CLANY|sum+?a"
+        rules: [clC]
+      - signature: "SUM+CLAV|sum+?a"
+        rules: [clB]
+  - word: katsi
+    note: "The -si verbalizer alone."
+    parses:
+      - signature: "KAT+SI|kat+?si"
+        rules: [si]
+  - word: katasi
+    note: "A noun-to-noun -a under -si; an enclitic cannot stand inside a suffix."
+    parses:
+      - signature: "KAT+ANN+SI|kat+?a+?si"
+        rules: [aNN, si]
+  - word: katsia
+    note: "-a outside -si: verb-taking suffixes and enclitics."
+    parses:
+      - signature: "KAT+SI+AVN|kat+?si+?a"
+        rules: [aVN, si]
+      - signature: "KAT+SI+AVV|kat+?si+?a"
+        rules: [aVV, si]
+      - signature: "KAT+SI+CLANY|kat+?si+?a"
+        rules: [clC, si]
+      - signature: "KAT+SI+CLAV|kat+?si+?a"
+        rules: [clB, si]
+  - word: katasia
+    note: "-a on both sides of -si."
+    parses:
+      - signature: "KAT+ANN+SI+AVN|kat+?a+?si+?a"
+        rules: [aNN, aVN, si]
+      - signature: "KAT+ANN+SI+AVV|kat+?a+?si+?a"
+        rules: [aNN, aVV, si]
+      - signature: "KAT+ANN+SI+CLANY|kat+?a+?si+?a"
+        rules: [aNN, clC, si]
+      - signature: "KAT+ANN+SI+CLAV|kat+?a+?si+?a"
+        rules: [aNN, clB, si]
+  - word: sumsia
+    note: "-si needs a noun."
+    expect_fail: true
+  - word: sumasia
+    note: "The verb root is nominalized by -a before -si."
+    parses:
+      - signature: "SUM+AVN+SI+AVV|sum+?a+?si+?a"
+        rules: [aVN, aVV, si]
+      - signature: "SUM+AVN+SI+CLANY|sum+?a+?si+?a"
+        rules: [aVN, clC, si]
+      - signature: "SUM+AVN+SI+CLAV|sum+?a+?si+?a"
+        rules: [aVN, clB, si]
+  - word: akat
+    note: "No prefix exists."
+    expect_fail: true
+  - word: katsisi
+    note: "-si applies once and needs a noun."
+    expect_fail: true

@@ -1,0 +1,173 @@
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
+language: ConvergentHomophonousSuffixReduplication
+inspired_by: ["synthetic CV reduplication prefix beside homophonous category-changing suffixes (not modeling any real language)"]
+sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs LoadReduplicationPatterns"]
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Four derivational suffixes share one form and differ only in category (noun to noun, noun to verb, verb to noun, verb to verb), as FieldWorks writes homophonous derivational affixes (HCLoader.cs LoadDerivAffixProcessRule).
+  The prefix is the reduplication bracket pattern [C^1][V^1] / _ [C^1][V^1], which the loader turns into
+  two copies of the same input parts. The two agreement suffixes sit in one optional slot of a verb template
+  and are not in the stratum's rule list, as the loader places inflectional slot affixes. The phonemes carry
+  no phonological features. Affix forms are inserted with the + boundary, as the loader does.
+words:
+  - word: kuma
+    note: "Bare noun root control."
+    parses:
+      - signature: "KUMA|kuma"
+        rules: []
+  - word: kukuma
+    note: "Reduplication alone."
+    parses:
+      - signature: "RED+KUMA|ku+?kuma"
+        rules: [red]
+  - word: kumasi
+    note: "The two noun-taking -si suffixes; no reduplication."
+    parses:
+      - signature: "KUMA+SINN|kuma+?si"
+        rules: [siNN]
+      - signature: "KUMA+SINV|kuma+?si"
+        rules: [siNV]
+  - word: kukumasi
+    note: "Two -si readings times two rule orders: the copy rule is tried on kukuma once per -si that reaches it."
+    parses:
+      - signature: "RED+KUMA+SINN|ku+?kuma+?si"
+        rules: [red, siNN]
+      - signature: "RED+KUMA+SINN|ku+?kuma+?si"
+        rules: [red, siNN]
+      - signature: "RED+KUMA+SINV|ku+?kuma+?si"
+        rules: [red, siNV]
+      - signature: "RED+KUMA+SINV|ku+?kuma+?si"
+        rules: [red, siNV]
+  - word: kukumasisi
+    note: "Two stacked -si: all four suffixes reach the shape kukumasi, and each reaches kukuma again below it."
+    parses:
+      - signature: "RED+KUMA+SINN+SINV|ku+?kuma+?si+?si"
+        rules: [red, siNN, siNV]
+      - signature: "RED+KUMA+SINN+SINV|ku+?kuma+?si+?si"
+        rules: [red, siNN, siNV]
+      - signature: "RED+KUMA+SINN+SINV|ku+?kuma+?si+?si"
+        rules: [red, siNN, siNV]
+      - signature: "RED+KUMA+SINV+SIVN|ku+?kuma+?si+?si"
+        rules: [red, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVN|ku+?kuma+?si+?si"
+        rules: [red, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVN|ku+?kuma+?si+?si"
+        rules: [red, siNV, siVN]
+      - signature: "RED+KUMA+SINV+SIVV|ku+?kuma+?si+?si"
+        rules: [red, siNV, siVV]
+      - signature: "RED+KUMA+SINV+SIVV|ku+?kuma+?si+?si"
+        rules: [red, siNV, siVV]
+      - signature: "RED+KUMA+SINV+SIVV|ku+?kuma+?si+?si"
+        rules: [red, siNV, siVV]
+  - word: tikumasi
+    note: "The copy must agree with the stem's own first CV on every arrival at the shape."
+    expect_fail: true
+  - word: kumakumasi
+    note: "Only one CV is copied, never the whole stem."
+    expect_fail: true
+  - word: tisu
+    note: "Bare verb root control."
+    parses:
+      - signature: "TISU|tisu"
+        rules: []
+  - word: titisu
+    note: "Reduplication on the verb root."
+    parses:
+      - signature: "RED+TISU|ti+?tisu"
+        rules: [red]
+  - word: titisusi
+    note: "The verb-taking -si readings with reduplication."
+    parses:
+      - signature: "RED+TISU+SIVN|ti+?tisu+?si"
+        rules: [red, siVN]
+      - signature: "RED+TISU+SIVN|ti+?tisu+?si"
+        rules: [red, siVN]
+      - signature: "RED+TISU+SIVV|ti+?tisu+?si"
+        rules: [red, siVV]
+      - signature: "RED+TISU+SIVV|ti+?tisu+?si"
+        rules: [red, siVV]
+  - word: tisusi
+    note: "The two verb-taking -si suffixes."
+    parses:
+      - signature: "TISU+SIVN|tisu+?si"
+        rules: [siVN]
+      - signature: "TISU+SIVV|tisu+?si"
+        rules: [siVV]
+  - word: tisusisi
+    note: "Stacked -si on the verb root; category chains decide which pairs survive."
+    parses:
+      - signature: "TISU+SIVN+SINN|tisu+?si+?si"
+        rules: [siNN, siVN]
+      - signature: "TISU+SIVN+SINV|tisu+?si+?si"
+        rules: [siNV, siVN]
+      - signature: "TISU+SIVV+SIVN|tisu+?si+?si"
+        rules: [siVN, siVV]
+  - word: kutisusi
+    note: "A copied CV that is not the stem's."
+    expect_fail: true
+  - word: kukumana
+    note: "Agreement needs a verb; the bare noun root has no verb reading."
+    expect_fail: true
+  - word: kukumasina
+    note: "Template agreement outside a verbalizing -si: two homophonous slot fillers."
+    parses:
+      - signature: "RED+KUMA+SINV+AGRA|ku+?kuma+?si+?na"
+        rules: [red, siNV, tA]
+      - signature: "RED+KUMA+SINV+AGRA|ku+?kuma+?si+?na"
+        rules: [red, siNV, tA]
+      - signature: "RED+KUMA+SINV+AGRB|ku+?kuma+?si+?na"
+        rules: [red, siNV, tB]
+      - signature: "RED+KUMA+SINV+AGRB|ku+?kuma+?si+?na"
+        rules: [red, siNV, tB]
+  - word: kukumasisina
+    note: "Both homophonous slot fillers above two stacked -si and reduplication."
+    parses:
+      - signature: "RED+KUMA+SINN+SINV+AGRA|ku+?kuma+?si+?si+?na"
+        rules: [red, siNN, siNV, tA]
+      - signature: "RED+KUMA+SINN+SINV+AGRA|ku+?kuma+?si+?si+?na"
+        rules: [red, siNN, siNV, tA]
+      - signature: "RED+KUMA+SINN+SINV+AGRA|ku+?kuma+?si+?si+?na"
+        rules: [red, siNN, siNV, tA]
+      - signature: "RED+KUMA+SINN+SINV+AGRB|ku+?kuma+?si+?si+?na"
+        rules: [red, siNN, siNV, tB]
+      - signature: "RED+KUMA+SINN+SINV+AGRB|ku+?kuma+?si+?si+?na"
+        rules: [red, siNN, siNV, tB]
+      - signature: "RED+KUMA+SINN+SINV+AGRB|ku+?kuma+?si+?si+?na"
+        rules: [red, siNN, siNV, tB]
+      - signature: "RED+KUMA+SINV+SIVV+AGRA|ku+?kuma+?si+?si+?na"
+        rules: [red, siNV, siVV, tA]
+      - signature: "RED+KUMA+SINV+SIVV+AGRA|ku+?kuma+?si+?si+?na"
+        rules: [red, siNV, siVV, tA]
+      - signature: "RED+KUMA+SINV+SIVV+AGRA|ku+?kuma+?si+?si+?na"
+        rules: [red, siNV, siVV, tA]
+      - signature: "RED+KUMA+SINV+SIVV+AGRB|ku+?kuma+?si+?si+?na"
+        rules: [red, siNV, siVV, tB]
+      - signature: "RED+KUMA+SINV+SIVV+AGRB|ku+?kuma+?si+?si+?na"
+        rules: [red, siNV, siVV, tB]
+      - signature: "RED+KUMA+SINV+SIVV+AGRB|ku+?kuma+?si+?si+?na"
+        rules: [red, siNV, siVV, tB]
+  - word: titisuna
+    note: "Agreement directly on the reduplicated verb."
+    parses:
+      - signature: "RED+TISU+AGRA|ti+?tisu+?na"
+        rules: [red, tA]
+      - signature: "RED+TISU+AGRB|ti+?tisu+?na"
+        rules: [red, tB]
+  - word: titisusina
+    note: "Only the verb-to-verb -si can stand under agreement."
+    parses:
+      - signature: "RED+TISU+SIVV+AGRA|ti+?tisu+?si+?na"
+        rules: [red, siVV, tA]
+      - signature: "RED+TISU+SIVV+AGRA|ti+?tisu+?si+?na"
+        rules: [red, siVV, tA]
+      - signature: "RED+TISU+SIVV+AGRB|ti+?tisu+?si+?na"
+        rules: [red, siVV, tB]
+      - signature: "RED+TISU+SIVV+AGRB|ti+?tisu+?si+?na"
+        rules: [red, siVV, tB]
+  - word: kukukumasi
+    note: "The reduplication rule applies once."
+    expect_fail: true
+  - word: kumax
+    note: "x is outside the inventory."
+    expect_skip: true

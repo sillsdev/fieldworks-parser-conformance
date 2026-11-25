@@ -1,0 +1,253 @@
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
+language: ConvergentZeroDerivationIdentity
+inspired_by: ["synthetic zero derivation (conversion) between noun and verb beside homophonous overt suffixes (not modeling any real language)"]
+sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs null-affix form table"]
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Three null affixes (noun to verb, verb to noun, noun to noun) each insert only the boundary pair +∅, the
+  shape FieldWorks writes for an affix whose form is ∅. Un-applying one maps a shape to itself, so every
+  other rule is tried again on an unchanged shape under a different rule history. The two -ti suffixes are
+  homophonous and differ in category. The phonemes carry no phonological features.
+words:
+  - word: kat
+    note: "Noun root: every chain of distinct null affixes the categories allow."
+    parses:
+      - signature: "KAT+ZNN+ZNV+ZVN|kat+?∅?+?∅?+?∅?"
+        rules: [zNN, zNV, zVN]
+      - signature: "KAT+ZNN+ZNV|kat+?∅?+?∅?"
+        rules: [zNN, zNV]
+      - signature: "KAT+ZNN|kat+?∅?"
+        rules: [zNN]
+      - signature: "KAT+ZNV+ZVN+ZNN|kat+?∅?+?∅?+?∅?"
+        rules: [zNN, zNV, zVN]
+      - signature: "KAT+ZNV+ZVN|kat+?∅?+?∅?"
+        rules: [zNV, zVN]
+      - signature: "KAT+ZNV|kat+?∅?"
+        rules: [zNV]
+      - signature: "KAT|kat"
+        rules: []
+  - word: sum
+    note: "Verb root: the null chains must start with the nominalizer."
+    parses:
+      - signature: "SUM+ZVN+ZNN+ZNV|sum+?∅?+?∅?+?∅?"
+        rules: [zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNN|sum+?∅?+?∅?"
+        rules: [zNN, zVN]
+      - signature: "SUM+ZVN+ZNV|sum+?∅?+?∅?"
+        rules: [zNV, zVN]
+      - signature: "SUM+ZVN|sum+?∅?"
+        rules: [zVN]
+      - signature: "SUM|sum"
+        rules: []
+  - word: katti
+    note: "One overt -ti placed at every point of each null chain."
+    parses:
+      - signature: "KAT+TIN+ZNN+ZNV+ZVN|kat+?ti+?∅?+?∅?+?∅?"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "KAT+TIN+ZNN+ZNV|kat+?ti+?∅?+?∅?"
+        rules: [tiN, zNN, zNV]
+      - signature: "KAT+TIN+ZNN|kat+?ti+?∅?"
+        rules: [tiN, zNN]
+      - signature: "KAT+TIN+ZNV+ZVN+ZNN|kat+?ti+?∅?+?∅?+?∅?"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "KAT+TIN+ZNV+ZVN|kat+?ti+?∅?+?∅?"
+        rules: [tiN, zNV, zVN]
+      - signature: "KAT+TIN+ZNV|kat+?ti+?∅?"
+        rules: [tiN, zNV]
+      - signature: "KAT+TIN|kat+?ti"
+        rules: [tiN]
+      - signature: "KAT+ZNN+TIN+ZNV+ZVN|kat+?∅?+?ti+?∅?+?∅?"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "KAT+ZNN+TIN+ZNV|kat+?∅?+?ti+?∅?"
+        rules: [tiN, zNN, zNV]
+      - signature: "KAT+ZNN+TIN|kat+?∅?+?ti"
+        rules: [tiN, zNN]
+      - signature: "KAT+ZNN+ZNV+TIV+ZVN|kat+?∅?+?∅?+?ti+?∅?"
+        rules: [tiV, zNN, zNV, zVN]
+      - signature: "KAT+ZNN+ZNV+TIV|kat+?∅?+?∅?+?ti"
+        rules: [tiV, zNN, zNV]
+      - signature: "KAT+ZNN+ZNV+ZVN+TIN|kat+?∅?+?∅?+?∅?+?ti"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "KAT+ZNV+TIV+ZVN+ZNN|kat+?∅?+?ti+?∅?+?∅?"
+        rules: [tiV, zNN, zNV, zVN]
+      - signature: "KAT+ZNV+TIV+ZVN|kat+?∅?+?ti+?∅?"
+        rules: [tiV, zNV, zVN]
+      - signature: "KAT+ZNV+TIV|kat+?∅?+?ti"
+        rules: [tiV, zNV]
+      - signature: "KAT+ZNV+ZVN+TIN+ZNN|kat+?∅?+?∅?+?ti+?∅?"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "KAT+ZNV+ZVN+TIN|kat+?∅?+?∅?+?ti"
+        rules: [tiN, zNV, zVN]
+      - signature: "KAT+ZNV+ZVN+ZNN+TIN|kat+?∅?+?∅?+?∅?+?ti"
+        rules: [tiN, zNN, zNV, zVN]
+  - word: sumti
+    note: "The same from the verb root."
+    parses:
+      - signature: "SUM+TIV+ZVN+ZNN+ZNV|sum+?ti+?∅?+?∅?+?∅?"
+        rules: [tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+ZVN+ZNN|sum+?ti+?∅?+?∅?"
+        rules: [tiV, zNN, zVN]
+      - signature: "SUM+TIV+ZVN+ZNV|sum+?ti+?∅?+?∅?"
+        rules: [tiV, zNV, zVN]
+      - signature: "SUM+TIV+ZVN|sum+?ti+?∅?"
+        rules: [tiV, zVN]
+      - signature: "SUM+TIV|sum+?ti"
+        rules: [tiV]
+      - signature: "SUM+ZVN+TIN+ZNN+ZNV|sum+?∅?+?ti+?∅?+?∅?"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+TIN+ZNN|sum+?∅?+?ti+?∅?"
+        rules: [tiN, zNN, zVN]
+      - signature: "SUM+ZVN+TIN+ZNV|sum+?∅?+?ti+?∅?"
+        rules: [tiN, zNV, zVN]
+      - signature: "SUM+ZVN+TIN|sum+?∅?+?ti"
+        rules: [tiN, zVN]
+      - signature: "SUM+ZVN+ZNN+TIN+ZNV|sum+?∅?+?∅?+?ti+?∅?"
+        rules: [tiN, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNN+TIN|sum+?∅?+?∅?+?ti"
+        rules: [tiN, zNN, zVN]
+      - signature: "SUM+ZVN+ZNN+ZNV+TIV|sum+?∅?+?∅?+?∅?+?ti"
+        rules: [tiV, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNV+TIV|sum+?∅?+?∅?+?ti"
+        rules: [tiV, zNV, zVN]
+  - word: kattiti
+    note: "Both -ti suffixes; a null verbalizer must stand between them."
+    parses:
+      - signature: "KAT+TIN+ZNN+ZNV+TIV+ZVN|kat+?ti+?∅?+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "KAT+TIN+ZNN+ZNV+TIV|kat+?ti+?∅?+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zNV]
+      - signature: "KAT+TIN+ZNV+TIV+ZVN+ZNN|kat+?ti+?∅?+?ti+?∅?+?∅?"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "KAT+TIN+ZNV+TIV+ZVN|kat+?ti+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNV, zVN]
+      - signature: "KAT+TIN+ZNV+TIV|kat+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zNV]
+      - signature: "KAT+ZNN+TIN+ZNV+TIV+ZVN|kat+?∅?+?ti+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "KAT+ZNN+TIN+ZNV+TIV|kat+?∅?+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zNV]
+      - signature: "KAT+ZNN+ZNV+TIV+ZVN+TIN|kat+?∅?+?∅?+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "KAT+ZNV+TIV+ZVN+TIN+ZNN|kat+?∅?+?ti+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "KAT+ZNV+TIV+ZVN+TIN|kat+?∅?+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zNV, zVN]
+      - signature: "KAT+ZNV+TIV+ZVN+ZNN+TIN|kat+?∅?+?ti+?∅?+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+  - word: sumtiti
+    note: "Both -ti suffixes from the verb root."
+    parses:
+      - signature: "SUM+TIV+ZVN+TIN+ZNN+ZNV|sum+?ti+?∅?+?ti+?∅?+?∅?"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+ZVN+TIN+ZNN|sum+?ti+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNN, zVN]
+      - signature: "SUM+TIV+ZVN+TIN+ZNV|sum+?ti+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNV, zVN]
+      - signature: "SUM+TIV+ZVN+TIN|sum+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zVN]
+      - signature: "SUM+TIV+ZVN+ZNN+TIN+ZNV|sum+?ti+?∅?+?∅?+?ti+?∅?"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+ZVN+ZNN+TIN|sum+?ti+?∅?+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zVN]
+      - signature: "SUM+ZVN+TIN+ZNN+ZNV+TIV|sum+?∅?+?ti+?∅?+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+TIN+ZNV+TIV|sum+?∅?+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zNV, zVN]
+      - signature: "SUM+ZVN+ZNN+TIN+ZNV+TIV|sum+?∅?+?∅?+?ti+?∅?+?ti"
+        rules: [tiN, tiV, zNN, zNV, zVN]
+  - word: kattititi
+    note: "Each -ti applies once, so three cannot be built."
+    expect_fail: true
+  - word: tikat
+    note: "The -ti rules are suffixes."
+    expect_fail: true
+  - word: katsu
+    note: "-su needs a verb, which only the null verbalizer supplies."
+    parses:
+      - signature: "KAT+ZNN+ZNV+SU|kat+?∅?+?∅?+?su"
+        rules: [su, zNN, zNV]
+      - signature: "KAT+ZNV+SU+ZNN|kat+?∅?+?su+?∅?"
+        rules: [su, zNN, zNV]
+      - signature: "KAT+ZNV+SU|kat+?∅?+?su"
+        rules: [su, zNV]
+  - word: kattisu
+    note: "-ti and -su with null affixes between."
+    parses:
+      - signature: "KAT+TIN+ZNN+ZNV+SU|kat+?ti+?∅?+?∅?+?su"
+        rules: [su, tiN, zNN, zNV]
+      - signature: "KAT+TIN+ZNV+SU+ZNN|kat+?ti+?∅?+?su+?∅?"
+        rules: [su, tiN, zNN, zNV]
+      - signature: "KAT+TIN+ZNV+SU|kat+?ti+?∅?+?su"
+        rules: [su, tiN, zNV]
+      - signature: "KAT+ZNN+TIN+ZNV+SU|kat+?∅?+?ti+?∅?+?su"
+        rules: [su, tiN, zNN, zNV]
+      - signature: "KAT+ZNN+ZNV+TIV+SU|kat+?∅?+?∅?+?ti+?su"
+        rules: [su, tiV, zNN, zNV]
+      - signature: "KAT+ZNV+TIV+SU+ZNN|kat+?∅?+?ti+?su+?∅?"
+        rules: [su, tiV, zNN, zNV]
+      - signature: "KAT+ZNV+TIV+SU|kat+?∅?+?ti+?su"
+        rules: [su, tiV, zNV]
+  - word: sumsu
+    note: "-su on the verb root, then the null chains over the resulting noun."
+    parses:
+      - signature: "SUM+SU+ZNN+ZNV+ZVN|sum+?su+?∅?+?∅?+?∅?"
+        rules: [su, zNN, zNV, zVN]
+      - signature: "SUM+SU+ZNN+ZNV|sum+?su+?∅?+?∅?"
+        rules: [su, zNN, zNV]
+      - signature: "SUM+SU+ZNN|sum+?su+?∅?"
+        rules: [su, zNN]
+      - signature: "SUM+SU+ZNV+ZVN+ZNN|sum+?su+?∅?+?∅?+?∅?"
+        rules: [su, zNN, zNV, zVN]
+      - signature: "SUM+SU+ZNV+ZVN|sum+?su+?∅?+?∅?"
+        rules: [su, zNV, zVN]
+      - signature: "SUM+SU+ZNV|sum+?su+?∅?"
+        rules: [su, zNV]
+      - signature: "SUM+SU|sum+?su"
+        rules: [su]
+      - signature: "SUM+ZVN+ZNN+ZNV+SU|sum+?∅?+?∅?+?∅?+?su"
+        rules: [su, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNV+SU+ZNN|sum+?∅?+?∅?+?su+?∅?"
+        rules: [su, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNV+SU|sum+?∅?+?∅?+?su"
+        rules: [su, zNV, zVN]
+  - word: sumtisu
+    note: "-ti, -su and null affixes from the verb root."
+    parses:
+      - signature: "SUM+TIV+SU+ZNN+ZNV+ZVN|sum+?ti+?su+?∅?+?∅?+?∅?"
+        rules: [su, tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+SU+ZNN+ZNV|sum+?ti+?su+?∅?+?∅?"
+        rules: [su, tiV, zNN, zNV]
+      - signature: "SUM+TIV+SU+ZNN|sum+?ti+?su+?∅?"
+        rules: [su, tiV, zNN]
+      - signature: "SUM+TIV+SU+ZNV+ZVN+ZNN|sum+?ti+?su+?∅?+?∅?+?∅?"
+        rules: [su, tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+SU+ZNV+ZVN|sum+?ti+?su+?∅?+?∅?"
+        rules: [su, tiV, zNV, zVN]
+      - signature: "SUM+TIV+SU+ZNV|sum+?ti+?su+?∅?"
+        rules: [su, tiV, zNV]
+      - signature: "SUM+TIV+SU|sum+?ti+?su"
+        rules: [su, tiV]
+      - signature: "SUM+TIV+ZVN+ZNN+ZNV+SU|sum+?ti+?∅?+?∅?+?∅?+?su"
+        rules: [su, tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+ZVN+ZNV+SU+ZNN|sum+?ti+?∅?+?∅?+?su+?∅?"
+        rules: [su, tiV, zNN, zNV, zVN]
+      - signature: "SUM+TIV+ZVN+ZNV+SU|sum+?ti+?∅?+?∅?+?su"
+        rules: [su, tiV, zNV, zVN]
+      - signature: "SUM+ZVN+TIN+ZNN+ZNV+SU|sum+?∅?+?ti+?∅?+?∅?+?su"
+        rules: [su, tiN, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+TIN+ZNV+SU+ZNN|sum+?∅?+?ti+?∅?+?su+?∅?"
+        rules: [su, tiN, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+TIN+ZNV+SU|sum+?∅?+?ti+?∅?+?su"
+        rules: [su, tiN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNN+TIN+ZNV+SU|sum+?∅?+?∅?+?ti+?∅?+?su"
+        rules: [su, tiN, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNN+ZNV+TIV+SU|sum+?∅?+?∅?+?∅?+?ti+?su"
+        rules: [su, tiV, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNV+TIV+SU+ZNN|sum+?∅?+?∅?+?ti+?su+?∅?"
+        rules: [su, tiV, zNN, zNV, zVN]
+      - signature: "SUM+ZVN+ZNV+TIV+SU|sum+?∅?+?∅?+?ti+?su"
+        rules: [su, tiV, zNV, zVN]
+  - word: katx
+    note: "x is outside the inventory."
+    expect_skip: true

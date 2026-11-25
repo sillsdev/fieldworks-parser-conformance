@@ -1,0 +1,153 @@
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
+language: ConvergentAlphaAssimilationHomophonous
+inspired_by: ["synthetic nasal place assimilation written with a feature variable, a nasal-final prefix and homophonous suffixes (not modeling any real language)"]
+sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480"]
+requires: [phonology]
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Four derivational suffixes share one form and differ only in category (noun to noun, noun to verb, verb to noun, verb to verb), as FieldWorks writes homophonous derivational affixes (HCLoader.cs LoadDerivAffixProcessRule).
+  The phonological rule gives a nasal the place of a following stop through one feature variable, which
+  FieldWorks allows in phonological rules (HCLoader.cs LoadFeatureConstraints). Undoing it leaves the nasal's
+  place open, so the prefix an- is matched on a shape whose nasal is underspecified.
+words:
+  - word: pat
+    note: "Bare noun root control."
+    parses:
+      - signature: "PAT|pat"
+        rules: []
+  - word: tak
+    note: "Bare verb root control."
+    parses:
+      - signature: "TAK|tak"
+        rules: []
+  - word: kam
+    note: "Bare noun root control."
+    parses:
+      - signature: "KAM|kam"
+        rules: []
+  - word: ampat
+    note: "The prefix nasal takes the labial place of p."
+    parses:
+      - signature: "NEG+PAT|am+?pat"
+        rules: [neg, prAssim]
+  - word: antak
+    note: "The prefix nasal already has the place of t."
+    parses:
+      - signature: "NEG+TAK|an+?tak"
+        rules: [neg, prAssim]
+  - word: aŋkam
+    note: "The prefix nasal takes the dorsal place of k."
+    parses:
+      - signature: "NEG+KAM|aŋ+?kam"
+        rules: [neg, prAssim]
+  - word: ampati
+    note: "Homophonous -i above the prefix: the prefix is tried on the same underspecified shape per -i."
+    parses:
+      - signature: "NEG+PAT+INN|am+?pat+?i"
+        rules: [iNN, neg, prAssim]
+      - signature: "NEG+PAT+INN|am+?pat+?i"
+        rules: [iNN, neg, prAssim]
+      - signature: "NEG+PAT+INV|am+?pat+?i"
+        rules: [iNV, neg, prAssim]
+      - signature: "NEG+PAT+INV|am+?pat+?i"
+        rules: [iNV, neg, prAssim]
+  - word: antaki
+    note: "The same on the verb root."
+    parses:
+      - signature: "NEG+TAK+IVN|an+?tak+?i"
+        rules: [iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN|an+?tak+?i"
+        rules: [iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVV|an+?tak+?i"
+        rules: [iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV|an+?tak+?i"
+        rules: [iVV, neg, prAssim]
+  - word: aŋkami
+    note: "The same with dorsal assimilation."
+    parses:
+      - signature: "NEG+KAM+INN|aŋ+?kam+?i"
+        rules: [iNN, neg, prAssim]
+      - signature: "NEG+KAM+INN|aŋ+?kam+?i"
+        rules: [iNN, neg, prAssim]
+      - signature: "NEG+KAM+INV|aŋ+?kam+?i"
+        rules: [iNV, neg, prAssim]
+      - signature: "NEG+KAM+INV|aŋ+?kam+?i"
+        rules: [iNV, neg, prAssim]
+  - word: ampatii
+    note: "Two stacked -i."
+    parses:
+      - signature: "NEG+PAT+INN+INV|am+?pat+?i+?i"
+        rules: [iNN, iNV, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV|am+?pat+?i+?i"
+        rules: [iNN, iNV, neg, prAssim]
+      - signature: "NEG+PAT+INN+INV|am+?pat+?i+?i"
+        rules: [iNN, iNV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN|am+?pat+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN|am+?pat+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVN|am+?pat+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV|am+?pat+?i+?i"
+        rules: [iNV, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV|am+?pat+?i+?i"
+        rules: [iNV, iVV, neg, prAssim]
+      - signature: "NEG+PAT+INV+IVV|am+?pat+?i+?i"
+        rules: [iNV, iVV, neg, prAssim]
+  - word: antakii
+    note: "Two stacked -i on the verb root."
+    parses:
+      - signature: "NEG+TAK+IVN+INN|an+?tak+?i+?i"
+        rules: [iNN, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INN|an+?tak+?i+?i"
+        rules: [iNN, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INN|an+?tak+?i+?i"
+        rules: [iNN, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV|an+?tak+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV|an+?tak+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVN+INV|an+?tak+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN|an+?tak+?i+?i"
+        rules: [iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN|an+?tak+?i+?i"
+        rules: [iVN, iVV, neg, prAssim]
+      - signature: "NEG+TAK+IVV+IVN|an+?tak+?i+?i"
+        rules: [iVN, iVV, neg, prAssim]
+  - word: aŋkamii
+    note: "Two stacked -i with dorsal assimilation."
+    parses:
+      - signature: "NEG+KAM+INN+INV|aŋ+?kam+?i+?i"
+        rules: [iNN, iNV, neg, prAssim]
+      - signature: "NEG+KAM+INN+INV|aŋ+?kam+?i+?i"
+        rules: [iNN, iNV, neg, prAssim]
+      - signature: "NEG+KAM+INN+INV|aŋ+?kam+?i+?i"
+        rules: [iNN, iNV, neg, prAssim]
+      - signature: "NEG+KAM+INV+IVN|aŋ+?kam+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+KAM+INV+IVN|aŋ+?kam+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+KAM+INV+IVN|aŋ+?kam+?i+?i"
+        rules: [iNV, iVN, neg, prAssim]
+      - signature: "NEG+KAM+INV+IVV|aŋ+?kam+?i+?i"
+        rules: [iNV, iVV, neg, prAssim]
+      - signature: "NEG+KAM+INV+IVV|aŋ+?kam+?i+?i"
+        rules: [iNV, iVV, neg, prAssim]
+      - signature: "NEG+KAM+INV+IVV|aŋ+?kam+?i+?i"
+        rules: [iNV, iVV, neg, prAssim]
+  - word: anpat
+    note: "An unassimilated nasal before p cannot surface."
+    expect_fail: true
+  - word: amtak
+    note: "A labial nasal before t cannot surface."
+    expect_fail: true
+  - word: ankam
+    note: "A coronal nasal before k cannot surface."
+    expect_fail: true
+  - word: amampat
+    note: "The prefix applies once."
+    expect_fail: true
+  - word: anampat
+    note: "The prefix applies once."
+    expect_fail: true

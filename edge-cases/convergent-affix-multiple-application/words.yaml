@@ -1,0 +1,144 @@
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
+language: ConvergentAffixMultipleApplication
+inspired_by: ["synthetic iterable suffixes that are homophonous with one-shot suffixes of other categories (not modeling any real language)"]
+sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "PanGloss issue 470", "PanGloss PR 476", "FieldWorks LT-22699", "FieldWorks PR #1263 @ 0ead571c (HCLoader.cs 131-138 and 970-971)"]
+requires: []
+fieldworks_producible: true
+fieldworks_producible_notes: >-
+  Four suffixes share the form ta. The noun-to-noun one may apply twice and the verb-to-verb one three
+  times; the two category-changing ones apply once. FieldWorks writes a per-affix count from the
+  HC/AffixRules/AffixRule maxApps parser setting (HCLoader.cs 131-138 and 970-971 at FieldWorks PR #1263 @
+  0ead571c65df55e88525fe19a1a20e1d1ffe0054, unmerged: re-point on merge). The phonemes carry no
+  phonological features.
+words:
+  - word: kat
+    note: "Bare noun root control."
+    parses:
+      - signature: "KAT|kat"
+        rules: []
+  - word: katta
+    note: "The two noun-taking -ta suffixes."
+    parses:
+      - signature: "KAT+TANN|kat+?ta"
+        rules: [taNN]
+      - signature: "KAT+TANV|kat+?ta"
+        rules: [taNV]
+  - word: kattata
+    note: "The iterable noun -ta twice, or one -ta of each category chain."
+    parses:
+      - signature: "KAT+TANN+TANV|kat+?ta+?ta"
+        rules: [taNN, taNV]
+      - signature: "KAT+TANN|kat+?ta+?ta"
+        rules: [taNN]
+      - signature: "KAT+TANV+TAVN|kat+?ta+?ta"
+        rules: [taNV, taVN]
+      - signature: "KAT+TANV+TAVV|kat+?ta+?ta"
+        rules: [taNV, taVV]
+  - word: kattatata
+    note: "Three -ta: the noun -ta stops at two applications, on every path that reaches the shape."
+    parses:
+      - signature: "KAT+TANN+TANV+TAVN|kat+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN]
+      - signature: "KAT+TANN+TANV+TAVV|kat+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVV]
+      - signature: "KAT+TANN+TANV|kat+?ta+?ta+?ta"
+        rules: [taNN, taNV]
+      - signature: "KAT+TANV+TAVN+TANN|kat+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN]
+      - signature: "KAT+TANV+TAVV+TAVN|kat+?ta+?ta+?ta"
+        rules: [taNV, taVN, taVV]
+      - signature: "KAT+TANV+TAVV|kat+?ta+?ta+?ta"
+        rules: [taNV, taVV]
+  - word: kattatatata
+    note: "Four -ta: both counts are counted per path."
+    parses:
+      - signature: "KAT+TANN+TANV+TAVN|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN]
+      - signature: "KAT+TANN+TANV+TAVN|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN]
+      - signature: "KAT+TANN+TANV+TAVV+TAVN|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN, taVV]
+      - signature: "KAT+TANN+TANV+TAVV|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVV]
+      - signature: "KAT+TANN+TANV+TAVV|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVV]
+      - signature: "KAT+TANV+TAVN+TANN|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN]
+      - signature: "KAT+TANV+TAVV+TAVN+TANN|kat+?ta+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN, taVV]
+      - signature: "KAT+TANV+TAVV+TAVN|kat+?ta+?ta+?ta+?ta"
+        rules: [taNV, taVN, taVV]
+      - signature: "KAT+TANV+TAVV|kat+?ta+?ta+?ta+?ta"
+        rules: [taNV, taVV]
+  - word: sum
+    note: "Bare verb root control."
+    parses:
+      - signature: "SUM|sum"
+        rules: []
+  - word: sumta
+    note: "The two verb-taking -ta suffixes."
+    parses:
+      - signature: "SUM+TAVN|sum+?ta"
+        rules: [taVN]
+      - signature: "SUM+TAVV|sum+?ta"
+        rules: [taVV]
+  - word: sumtata
+    note: "The iterable verb -ta twice, or a category chain."
+    parses:
+      - signature: "SUM+TAVN+TANN|sum+?ta+?ta"
+        rules: [taNN, taVN]
+      - signature: "SUM+TAVN+TANV|sum+?ta+?ta"
+        rules: [taNV, taVN]
+      - signature: "SUM+TAVV+TAVN|sum+?ta+?ta"
+        rules: [taVN, taVV]
+      - signature: "SUM+TAVV|sum+?ta+?ta"
+        rules: [taVV]
+  - word: sumtatata
+    note: "Three -ta from the verb root; the verb -ta may reach three."
+    parses:
+      - signature: "SUM+TAVN+TANN+TANV|sum+?ta+?ta+?ta"
+        rules: [taNN, taNV, taVN]
+      - signature: "SUM+TAVN+TANN|sum+?ta+?ta+?ta"
+        rules: [taNN, taVN]
+      - signature: "SUM+TAVN+TANV+TAVV|sum+?ta+?ta+?ta"
+        rules: [taNV, taVN, taVV]
+      - signature: "SUM+TAVV+TAVN+TANN|sum+?ta+?ta+?ta"
+        rules: [taNN, taVN, taVV]
+      - signature: "SUM+TAVV+TAVN+TANV|sum+?ta+?ta+?ta"
+        rules: [taNV, taVN, taVV]
+      - signature: "SUM+TAVV+TAVN|sum+?ta+?ta+?ta"
+        rules: [taVN, taVV]
+      - signature: "SUM+TAVV|sum+?ta+?ta+?ta"
+        rules: [taVV]
+  - word: takat
+    note: "The -ta rules are suffixes."
+    expect_fail: true
+  - word: kattasu
+    note: "-su needs a verb, so the -ta below it is the verbalizer."
+    parses:
+      - signature: "KAT+TANV+SU|kat+?ta+?su"
+        rules: [su, taNV]
+  - word: kattatasu
+    note: "Two -ta under -su."
+    parses:
+      - signature: "KAT+TANN+TANV+SU|kat+?ta+?ta+?su"
+        rules: [su, taNN, taNV]
+      - signature: "KAT+TANV+TAVV+SU|kat+?ta+?ta+?su"
+        rules: [su, taNV, taVV]
+  - word: sumtasu
+    note: "Only the verb-to-verb -ta leaves a verb for -su."
+    parses:
+      - signature: "SUM+TAVV+SU|sum+?ta+?su"
+        rules: [su, taVV]
+  - word: sumtatasu
+    note: "Two -ta under -su from the verb root."
+    parses:
+      - signature: "SUM+TAVN+TANV+SU|sum+?ta+?ta+?su"
+        rules: [su, taNV, taVN]
+      - signature: "SUM+TAVV+SU|sum+?ta+?ta+?su"
+        rules: [su, taVV]
+  - word: sumsu
+    note: "-su directly on the verb root."
+    parses:
+      - signature: "SUM+SU|sum+?su"
+        rules: [su]

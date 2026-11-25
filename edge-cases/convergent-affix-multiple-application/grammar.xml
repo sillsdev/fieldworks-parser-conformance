@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<HermitCrabInput>
+  <Language>
+    <Name>ConvergentAffixMultipleApplication</Name><PartsOfSpeech><PartOfSpeech id="n"><Name>noun</Name></PartOfSpeech><PartOfSpeech id="v"><Name>verb</Name></PartOfSpeech></PartsOfSpeech>
+    <CharacterDefinitionTable id="table1"><Name>Main</Name><SegmentDefinitions>
+        <SegmentDefinition id="s0"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="s1"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="s2"><Representations><Representation>m</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="s3"><Representations><Representation>s</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="s4"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="s5"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="s6"><Representations><Representation>u</Representation></Representations></SegmentDefinition>
+      </SegmentDefinitions><BoundaryDefinitions><BoundaryDefinition id="bPlus"><Representations><Representation>+</Representation></Representations></BoundaryDefinition></BoundaryDefinitions></CharacterDefinitionTable>
+    <NaturalClasses><FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass><SegmentNaturalClass id="ncC"><Name>C</Name><Segment segment="s0" /><Segment segment="s1" /><Segment segment="s2" /><Segment segment="s3" /></SegmentNaturalClass><SegmentNaturalClass id="ncV"><Name>V</Name><Segment segment="s4" /><Segment segment="s5" /><Segment segment="s6" /></SegmentNaturalClass></NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="taNN taNV taVV taVN su"><Name>Morphology</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="taNN" requiredPartsOfSpeech="n" outputPartOfSpeech="n" multipleApplication="2"><Name>ta-noun-iterable</Name><MorphologicalSubrules><MorphologicalSubrule id="taNNSub"><MorphologicalInput><PhoneticSequence id="taNNStem"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="taNNStem" /><InsertSegments><PhoneticShape>+ta</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>TANN</MorphemeId></MorphologicalRule>
+          <MorphologicalRule id="taNV" requiredPartsOfSpeech="n" outputPartOfSpeech="v"><Name>ta-verbalizer</Name><MorphologicalSubrules><MorphologicalSubrule id="taNVSub"><MorphologicalInput><PhoneticSequence id="taNVStem"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="taNVStem" /><InsertSegments><PhoneticShape>+ta</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>TANV</MorphemeId></MorphologicalRule>
+          <MorphologicalRule id="taVV" requiredPartsOfSpeech="v" outputPartOfSpeech="v" multipleApplication="3"><Name>ta-verb-iterable</Name><MorphologicalSubrules><MorphologicalSubrule id="taVVSub"><MorphologicalInput><PhoneticSequence id="taVVStem"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="taVVStem" /><InsertSegments><PhoneticShape>+ta</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>TAVV</MorphemeId></MorphologicalRule>
+          <MorphologicalRule id="taVN" requiredPartsOfSpeech="v" outputPartOfSpeech="n"><Name>ta-nominalizer</Name><MorphologicalSubrules><MorphologicalSubrule id="taVNSub"><MorphologicalInput><PhoneticSequence id="taVNStem"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="taVNStem" /><InsertSegments><PhoneticShape>+ta</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>TAVN</MorphemeId></MorphologicalRule>
+          <MorphologicalRule id="su" requiredPartsOfSpeech="v" outputPartOfSpeech="n"><Name>su-nominalizer</Name><MorphologicalSubrules><MorphologicalSubrule id="suSub"><MorphologicalInput><PhoneticSequence id="suStem"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="suStem" /><InsertSegments><PhoneticShape>+su</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>SU</MorphemeId></MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="eKat" partOfSpeech="n"><Allomorphs><Allomorph id="eKatA"><PhoneticShape>kat</PhoneticShape></Allomorph></Allomorphs><MorphemeId>KAT</MorphemeId><Gloss>kat</Gloss></LexicalEntry>
+          <LexicalEntry id="eSum" partOfSpeech="v"><Allomorphs><Allomorph id="eSumA"><PhoneticShape>sum</PhoneticShape></Allomorph></Allomorphs><MorphemeId>SUM</MorphemeId><Gloss>sum</Gloss></LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

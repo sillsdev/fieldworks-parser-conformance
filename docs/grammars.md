@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 249 fixtures: 6 languages and 243 edge cases.
+The list has 256 fixtures: 6 languages and 250 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 249 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 256 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **58 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **63 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -56,6 +56,11 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/compound-max-applications` (needs `morpher-settings`)
 - `edge-cases/compounding-breadth` (needs `morpher-settings`)
 - `edge-cases/compounding-non-recursive`
+- `edge-cases/convergent-affix-multiple-application`
+- `edge-cases/convergent-clitic-stratum-homophonous`
+- `edge-cases/convergent-compound-homophonous-suffixes`
+- `edge-cases/convergent-homophonous-suffix-reduplication`
+- `edge-cases/convergent-zero-derivation-identity`
 - `edge-cases/cross-stem-material-determination`
 - `edge-cases/deep-optional-affix-nesting`
 - `edge-cases/diacritic-segments`
@@ -155,6 +160,9 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/truncate-morphotactic-copy-u`: the truncation grammar with explicit morpheme ids and a copying suffix rule, so one surface form has several parses with different rule histories.
 - `edge-cases/truncate-morphotactic-identity`: the truncation grammar with explicit morpheme ids, so repeated signatures stay distinct rows.
 - `edge-cases/truncate-morphotactic-subsumption`: a prefix rule, a leading truncation and an insertion rule over the root `ag`, so a rule can remove what an earlier rule added.
+- `edge-cases/convergent-affix-multiple-application`: [XAmple] four suffixes spelled `ta`: a noun-to-noun one that may apply twice and a verb-to-verb one that may apply three times beside two one-shot category changers, so one shape is reached with different per-rule counts; guards an analysis-side match table that must not carry a count decision from another path (15 words).
+- `edge-cases/convergent-homophonous-suffix-reduplication`: [XAmple] a CV reduplication prefix beside four homophonous category-changing suffixes and two homophonous agreement suffixes in one template slot, so the copy-agreement check runs on one shape reached by many suffix histories; guards an analysis-side match table (20 words).
+- `edge-cases/convergent-zero-derivation-identity`: [XAmple] three null affixes beside two homophonous `-ti` suffixes, so un-applying a null affix returns the same shape and every rule is retried on it under a different history; guards an analysis-side match table (13 words).
 
 ## Templates, slots and parts of speech
 
@@ -181,6 +189,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/clitic-rule-designation`: [XAmple] rules inside and outside the clitics stratum, checked against the final template.
 - `edge-cases/clitic-stem-entry`: [XAmple] a clitic stem entry that FieldWorks loads into the clitics stratum.
 - `edge-cases/non-clitic-after-final-template-layout`: [XAmple] a clitic stratum that holds only clitics, after a non-blocking stratum with a final template.
+- `edge-cases/convergent-clitic-stratum-homophonous`: [XAmple] three enclitics in the Clitics stratum spelled like four derivational suffixes in the Morphology stratum, so one shape is reached in both strata by different rules; guards an analysis-side match table (12 words).
 
 ## Allomorphs, stem names and exceptions
 
@@ -266,6 +275,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/spelling-coverage-compound-singleton-quote-boundary`: A literal double quote is a spelling of the `+` boundary used by both compounding rules.
 - `edge-cases/spelling-coverage-compound-singleton-quote-segment`: A literal double quote is a phoneme code in both a root and a prefix.
 - `edge-cases/spelling-coverage-compound-singleton-thai-mark`: Thai mai ek (U+0E48), a combining mark, is listed as a segment and starts a root.
+- `edge-cases/convergent-compound-homophonous-suffixes`: [XAmple] a right-headed noun-noun and a left-headed verb-noun endocentric compound rule beside four homophonous category-changing suffixes, so the compound path meets one shape from several histories; guards an analysis-side match table (18 words).
 
 ## Phonological rules: deletion, epenthesis, merge, expansion
 
@@ -320,6 +330,8 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix`: a deletion, then a metathesis whose two switches sit on both sides of the deleted node, which keeps its place between them, before a suffix (sillsdev/PanGloss#405).
 - `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix`: a deletion, then a metathesis whose switches sit beside the deleted node, which stays where it was, before a suffix (sillsdev/PanGloss#405).
 - `edge-cases/category-limited-phonological-rule`: a phonological rule whose right-hand side requires the category Verb (FieldWorks "Category", `PhSegRuleRHS.InputPOSes`): it fires on a verb root and not on a noun root with the same segments (sillsdev/motif#468).
+- `edge-cases/convergent-deletion-optional-reduplication`: an h-deletion rule undone before CV reduplication and homophonous suffixes, so the shapes carry optional segments and the copy alignment takes its optional-node path; guards an analysis-side match table (14 words).
+- `edge-cases/convergent-alpha-assimilation-homophonous`: nasal place assimilation written with one feature variable, a nasal-final prefix and homophonous suffixes, so undoing the rule leaves an unresolved variable in the shape; guards an analysis-side match table (17 words).
 
 ## Boundaries, direction and string representation
 
