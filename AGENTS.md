@@ -131,6 +131,13 @@ stress README table), and `check_fwdata.py` covers stress witnesses as well as f
   tests read this clone when `HC_CONFORMANCE_SUITE=<path to this clone>` is set).
   This repository cannot run an engine; CI here proves the files are well formed, not that an engine agrees
   with them.
+- Before you land, run sillsdev/machine #615's conformance gate tests against your branch. They check shape
+  producibility, `exercises:` tags, `blocked_by` rule ids and rule attribution, none of which the scripts above
+  see, and the pin in `conformance.commit` hides a failure until someone bumps it. In a checkout of machine #615
+  (`git fetch origin pull/615/head`), with `HC_CONFORMANCE_SUITE=<path to this clone>`, run
+  `dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests -c Release --filter "FullyQualifiedName~Conformance|FullyQualifiedName~FieldWorksProducibleShape"`
+  (69 tests) and do not land on a failure. A failure that is the test's expectation going stale, not your data, is
+  fixed in that pull request instead, and you say so.
 
 ## 5. Stress fixtures
 
