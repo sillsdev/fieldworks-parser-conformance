@@ -26,10 +26,10 @@
       <SegmentNaturalClass id="ncN"><Name>nOnly</Name><Segment segment="cn" /></SegmentNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="linear" morphologicalRules="mrDat">
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="mrDat">
         <Name>Main</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="mrDat" requiredPartsOfSpeech="posN" outputPartOfSpeech="posN">
+          <MorphologicalRule id="mrDat" requiredPartsOfSpeech="posN">
             <Name>mrDat</Name>
             <MorphologicalSubrules>
               <MorphologicalSubrule id="subKa">
