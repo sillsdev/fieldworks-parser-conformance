@@ -145,6 +145,7 @@ DiscontinuousMorphEnvironment,mrBadInfix,!zuexbu;!zuixdu
 DiscontinuousMorphEnvironment,mrGoodInfix,zuaubu
 DiscontinuousMorphEnvironment,mrSuffixBad,
 DiscontinuousMorphEnvironment,mrSuffixGood,zabu;zuaubu
+EarlierAllomorphBreaksSynthesis,mrDat,basku;banka
 DisjunctiveRecheckProbe,ruleD,pakza;!pakda;pitda
 DisjunctiveRecheckProbe,ruleE,pakde;pakzeta;!pakdeta
 DisjunctiveRecheckProbe,ruleT,!wakta;wokta;pakzeta
@@ -166,6 +167,7 @@ EpenthesisThenSwapEdge,pm,tsa;tsap;tsas;tsaps
 ExpansionInterposedOptional,prDelete,
 ExpansionInterposedOptional,prExpand,ii
 ExpansionOverlappingTargets,prBreak,kaaa;kaa
+FamilyBlockedGeneration,mT,
 FeatureGatingBreadth,mrAgr,kalka;!tunka;tunpika;kalpika;!tunkapi;kalkapi
 FeatureGatingBreadth,mrPl,kalpi;tunpi;tunpika;kalpika;kalkapi
 FeatureRuleBeforeMerge,prFeature,butbut
