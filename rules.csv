@@ -159,7 +159,7 @@ HomophonousGates,rMaExc,boluitma;boluitmata;boluitmama;boluitmamata
 HomophonousGates,rMaReq,boluitma;boluitmata;boluitmama;boluitmamata
 HomophonousGates,rMbExc,boluitma;boluitmata;boluitmama;boluitmamata
 HomophonousGates,rMbReq,boluitma;boluitmata;boluitmama;boluitmamata
-HomophonousGates,rSg,kelesu;!kelisu;kelesusu;!kelisusu;kelesuta;!kelitamasu
+HomophonousGates,rSg,kelesu;!kelisu;kelesusu;!kelisusu;kelesuta;!kelisumata
 HomophonousGates,rSgNamed,kelesusu;!kelisusu
 HomophonousGates,rTa,boluitta;boluitmata;boluitmamata;kelesuta
 ConvergentZeroDerivationIdentity,su,katsu;kattisu;sumsu;sumtisu

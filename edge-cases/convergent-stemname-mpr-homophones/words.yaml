@@ -143,8 +143,8 @@ words:
       - signature: "KELE+SG+TA|kelesuta"
         gloss: kele-sg-ta
         rules: [rSg, rTa]
-  - word: kelitamasu
+  - word: kelisumata
     note: >-
-      Shape-level control: the unnamed allomorph again, with other suffixes before the sg rule: sg assigns num=sg wherever it sits in the chain, so keli stays excluded and nothing parses.
+      Shape-level control in the legal slot order (sg, then the exclusion slot, then the ta slot): sg assigns num=sg, so the unnamed allomorph keli is excluded and nothing parses. Without the stem name on kele, the same word parses with maExc and with mbExc, so the stem name gate is what blocks it.
     expect_fail: true
     blocked_by: [rSg]

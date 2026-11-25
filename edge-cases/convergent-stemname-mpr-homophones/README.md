@@ -10,7 +10,7 @@ run on each arrival. Here four homophonous `ma` rules reach one shape from two r
 features, and the stem-named root allomorph `kele` against the unnamed `keli` is chosen by `num=sg`, assigned
 by a suffix. A cache keyed by rule and shape that dropped an allomorph, replayed one parent's gate result for
 another, or applied the stem name before the head feature was assigned would change a row. `kele`, `kelisu`,
-`kelisusu` and `kelitamasu` are negative controls.
+`kelisusu` and `kelisumata` are negative controls.
 
 **Why it is producible.** Required MPR features are production restrictions on derivational affixes
 (`LoadDerivAffixProcessRule`, group `exceptionFeatures`). Excluded MPR features exist only on slot rules of
