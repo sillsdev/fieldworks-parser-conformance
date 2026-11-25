@@ -27,6 +27,8 @@ not belong here, however expressible it is in the XML and however well an engine
   Do not relax `fieldworks_producible`: every fixture must carry `true`, and `scripts/check_words_schema.py`
   and the consuming engines' gates fail on anything else.
 - A new construct goes into `fieldworks-writable-shapes.tsv`, with its loader line, before a fixture may use it.
+- Exception: a construct FieldWorks cannot write today may be used once an issue or PR exists upstream to make it
+  writable, and the fixture cites it. See [ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md).
 
 ## 2. Adding, changing or deleting a fixture
 

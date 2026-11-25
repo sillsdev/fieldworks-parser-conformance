@@ -7,6 +7,9 @@ sends, so it cannot catch a regression a FieldWorks user would see. Such a fixtu
 to a producible grammar when that preserves its purpose, and deleted when it does not.
 `ConformanceFixtureGateTests.EveryFixtureIsMarkedFieldWorksProducible` enforces the rule.
 
+Refined by [ADR 0001](adr/0001-aspirational-upstream-fixtures.md): a construct FieldWorks cannot write today is
+allowed once an upstream issue or PR exists to make it writable.
+
 No fixture is kept engine-only. The constructs the suite does not test, and why FieldWorks cannot write
 each one, are in the section
 [what the XML can say but FieldWorks cannot, so we do not test it](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
