@@ -9,6 +9,12 @@ sources:
   - "machine XmlLanguageLoader.cs:868-870 and AffixProcessRule.cs:28 (multipleApplication); FieldWorks HCLoader.cs 131-138 and 970-971 at PR #1263 (0ead571c); PanGloss#470, motif#436"
 requires: []
 fieldworks_producible: true
+upstream:
+  - ref: sillsdev/FieldWorks#1263
+    kind: pr
+    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054
+    affects: loader
+    note: "per-affix maxApps (multipleApplication) becomes writable by HCLoader"
 words:
   - word: kat
     note: "bare root"

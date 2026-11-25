@@ -688,3 +688,28 @@ The suite defines the runner output and the sidecar, and nothing else.
 - A row becomes `asserted` only after the reference engine's own why-not output has been produced and read
   against the grammar by a person, as for parse rows (AGENTS.md section 2, step 3). Record the build in the
   fixture's `words.yaml` header.
+
+## 12. Upstream tags
+
+A fixture whose expected behaviour depends on an unmerged upstream change says so in `words.yaml`
+([ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md)):
+
+```yaml
+upstream:
+  - ref: sillsdev/FieldWorks#1263   # owner/repo#number
+    kind: pr                        # pr | issue
+    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054   # required for pr: full 40-hex commit the rows depend on
+    affects: loader                 # engine | loader
+    note: one line, what the fixture needs from it
+```
+
+- `affects: engine`: the C# engine lacks the behaviour without the change. A runner skips the fixture, listing it
+  with its reason, unless the build under test contains `head`. `affects: loader`: only FieldWorks `HCLoader`
+  lacks it; engines run the fixture normally, and the producibility gate accepts a shape the loader never writes
+  only while a `sillsdev/FieldWorks` loader entry is open (offline counts as open, with a note). PanGloss runs
+  every fixture regardless.
+- States, from `scripts/upstream.py` (git ancestry first, `gh` second, `pending` with a reason when `gh` is
+  unavailable): `satisfied`, `pending`, `merged` (re-point citations), `closed-unmerged` and `issue-closed`
+  (retire or re-check). `allows_never_shape()` there is the producibility rule.
+- `python3 scripts/upstream_status.py [--strict]` lists every entry by state. Tag only fixtures whose rows depend
+  on the change.

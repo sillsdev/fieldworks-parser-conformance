@@ -4,6 +4,12 @@ inspired_by: ["synthetic iterable suffixes that are homophonous with one-shot su
 sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "PanGloss issue 470", "PanGloss PR 476", "FieldWorks LT-22699", "FieldWorks PR #1263 @ 0ead571c (HCLoader.cs 131-138 and 970-971)"]
 requires: []
 fieldworks_producible: true
+upstream:
+  - ref: sillsdev/FieldWorks#1263
+    kind: pr
+    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054
+    affects: loader
+    note: "per-affix maxApps (multipleApplication) becomes writable by HCLoader"
 fieldworks_producible_notes: >-
   Four suffixes share the form ta. The noun-to-noun one may apply twice and the verb-to-verb one three
   times; the two category-changing ones apply once. FieldWorks writes a per-affix count from the
