@@ -28,3 +28,4 @@ edge-cases/prefix-required-environment-after-epenthesis-later-compound	PR0	No pa
 edge-cases/prefix-required-environment-after-epenthesis-later-compound	pe0	No parsed word uses this rule: C# gives no analysis on the routes that would, and the fixture pins that rejection.
 edge-cases/prefix-required-environment-after-epenthesis-later-suffix	PR0	No parsed word uses this rule: C# gives no analysis on the routes that would, and the fixture pins that rejection.
 edge-cases/prefix-required-environment-after-epenthesis-later-suffix	pe0	No parsed word uses this rule: C# gives no analysis on the routes that would, and the fixture pins that rejection.
+edge-cases/family-blocked-generation	mT	The suffix -t is declared so that A+T derives aat, but aat is also the lexical entry B, a family relative of A, so Word.CheckBlocking discards the A+T derivation and reseeds it as B; every aat parse therefore has rules [].
