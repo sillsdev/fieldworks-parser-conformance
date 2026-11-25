@@ -3,7 +3,7 @@
 
   python3 scripts/upstream_status.py [--machine-checkout DIR] [--strict]
 
-Exit 0 always; --strict exits 1 when any entry is merged, closed-unmerged or issue-closed (a scheduled job, not the
+Exit 0 always; --strict exits 1 when any entry is merged, closed-unmerged, issue-closed or rejected (a scheduled job, not the
 per-PR gate). Needs PyYAML (scripts/requirements.txt) and, for states, an authenticated gh.
 """
 import argparse
@@ -39,7 +39,7 @@ def main(argv=None):
             print(f"{title} [{len(found[key])}]")
             print("\n".join(found[key]))
     print(f"upstream: {total} entries, " + ", ".join(f"{len(found[k])} {k}" for k, _ in GROUPS))
-    needs = sum(len(found[k]) for k in ("merged", "closed-unmerged", "issue-closed"))
+    needs = sum(len(found[k]) for k in ("merged", "closed-unmerged", "issue-closed", "rejected"))
     return 1 if args.strict and needs else 0
 
 

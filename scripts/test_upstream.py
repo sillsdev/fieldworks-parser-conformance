@@ -114,6 +114,16 @@ class Resolve(unittest.TestCase):
         self.assertIn("jira unchecked", upstream.resolve(e, env=env, http=down)[1])
         self.assertTrue(upstream.allows_never_shape([e], env=env, http=down)[0])
 
+    def test_invalid_entries_never_reach_git_or_gh(self):
+        def boom(cmd, **kw):
+            raise AssertionError("no subprocess for an invalid entry")
+        for e in ({"ref": "machine#615", "kind": "pr", "head": HEAD40, "affects": "engine"},
+                  {"ref": "a/b#1", "kind": "pr", "head": "abc123", "affects": "engine"},
+                  {"ref": "a/b#1", "kind": "pr", "affects": "engine"}):
+            state, reason = upstream.resolve(e, self.repo, run=boom)
+            self.assertEqual(state, "pending")
+            self.assertIn("invalid entry", reason)
+
     def test_bad_ref(self):
         with self.assertRaises(ValueError):
             upstream.parse_ref("machine#615")

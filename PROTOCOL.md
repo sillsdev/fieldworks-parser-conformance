@@ -715,3 +715,9 @@ upstream:
   Fix/Won't Do gives `rejected`, other resolutions `issue-closed`. `allows_never_shape()` there is the producibility rule.
 - `python3 scripts/upstream_status.py [--strict]` lists every entry by state. Tag only fixtures whose rows depend
   on the change.
+- `upstream` is optional and additive. PanGloss ignores it. sillsdev/machine's runner rejects an unknown
+  `words.yaml` key (see section 11), so a pinned machine runner must learn `upstream` before its pin moves past
+  the commit that introduced it.
+- `allows_never_shape()` in `scripts/upstream.py` is the producibility rule that the machine
+  `FieldWorksProducibleShape` gate calls; fpc itself has no caller. `rejected` (Jira Won't Fix/Won't Do) also
+  fails `--strict`.

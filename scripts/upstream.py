@@ -19,6 +19,7 @@ import subprocess
 import urllib.request
 
 REF = re.compile(r"^([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+)#([0-9]+)$")
+HEAD40 = re.compile(r"^[0-9a-f]{40}$")
 JIRA_REF = re.compile(r"^jira:([A-Z][A-Z0-9]*-[0-9]+)$")  # FieldWorks tracks issues in Jira project LT
 REJECTED = ("won't fix", "won't do", "wontfix", "rejected")
 
@@ -101,7 +102,12 @@ def resolve_jira(key, env, http):
 
 
 def resolve(entry, machine_checkout=None, run=subprocess.run, env=None, http=http_get_json):
-    repo, number = parse_ref(entry["ref"])
+    try:
+        repo, number = parse_ref(entry.get("ref") or "")
+    except ValueError as e:
+        return "pending", f"invalid entry: {e}; treated as pending"
+    if entry.get("kind") == "pr" and not HEAD40.match(entry.get("head") or ""):
+        return "pending", "invalid entry: a pr needs a full 40-hex head; treated as pending"
     if repo == "jira":
         return resolve_jira(number, os.environ if env is None else env, http)
     is_pr = entry["kind"] == "pr"
@@ -131,7 +137,8 @@ def resolve(entry, machine_checkout=None, run=subprocess.run, env=None, http=htt
 
 def allows_never_shape(entries, run=subprocess.run, env=None, http=http_get_json):
     """FieldWorks-producible gate: a shape HCLoader never writes is allowed iff the fixture has an open
-    `affects: loader` entry for sillsdev/FieldWorks (a GitHub PR/issue or a Jira LT key). Returns (allowed, note); note is non-empty when offline."""
+    `affects: loader` entry for sillsdev/FieldWorks (a GitHub PR/issue or a Jira LT key). This is the rule the machine repository's FieldWorksProducibleShape gate
+    applies; fpc has no caller, because no fpc check reads the shape census. Returns (allowed, note); note is non-empty when offline."""
     for e in entries or []:
         if e.get("affects") != "loader" or parse_ref(e["ref"])[0] not in ("sillsdev/FieldWorks", "jira"):
             continue
