@@ -1,4 +1,4 @@
-# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check; rows from PanGloss's staged copy replayed on C#, all 15 matched except katelish, which parses once the stratum is unordered); FieldWorks producibility read from PR sillsdev/FieldWorks#1263 @ 0ead571c65df55e88525fe19a1a20e1d1ffe0054 (HCLoader.cs 131-138 and 970-971; unmerged)
+# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check; rows from PanGloss's staged copy replayed on C#, all 15 matched except katelish, which parses once the stratum is unordered); FieldWorks producibility read from PR sillsdev/FieldWorks#1263 @ 0ead571c65df55e88525fe19a1a20e1d1ffe0054 (HCLoader.cs 131-138 and 970-971; unmerged, re-point on merge)
 # What this pins: HC's per-rule multipleApplication (XmlLanguageLoader.cs:868-870, default 1 at
 # AffixProcessRule.cs:28) on a derivational affix. A Swahili-shaped verb takes CAUS (-ish) and APPL (-el)
 # up to twice each, in either order (FieldWorks strata are unordered); CTL (-ox) keeps the default and applies once. The negative rows
