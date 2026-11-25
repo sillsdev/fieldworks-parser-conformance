@@ -23,7 +23,7 @@ All 232 conformance and 16 stress grammars are Hermit Crab grammars, and PanGlos
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **57 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **58 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -40,6 +40,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/adhoc-prohibition-variant-main-first-enclitic`
 - `edge-cases/adhoc-prohibition-variant-msa-copies`
 - `edge-cases/adhoc-prohibition-whynot`
+- `edge-cases/affix-multiple-application`
 - `edge-cases/authored-null-affix-allomorph`
 - `edge-cases/chained-output-feature-override-loss`
 - `edge-cases/circumfix-conditioned-halves`
@@ -142,6 +143,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/nfa-literal-allomorph-environment`: required literal right context on a stem allomorph, with suffix and infix controls.
 - `edge-cases/infix-split-root-allomorph-environment`: a root allomorph conditioned on a following vowel, with an infix inside the root; infix segments are not the root's neighbours.
 - `edge-cases/flex-null-affix-environments`: null prefixes whose environments look at the neighbouring prefix.
+- `edge-cases/affix-multiple-application`: [XAmple] derivational suffixes with `multipleApplication` 2 (CAUS, APPL) beside a default-count suffix (CTL): two applications parse, a third and a repeat of the default are refused (15 words).
 - `edge-cases/authored-null-affix-allomorph`: [XAmple] a user-authored null suffix allomorph ("∅") beside an overt one and a zero relative marker.
 - `edge-cases/infix-interdigitation`: [XAmple] infixes inserted around a copied root, in a templatic Semitic shape.
 - `edge-cases/partial-rule-infixed-material`: [XAmple] partial affix rules whose material an ordinary infix splits, under a final template.
