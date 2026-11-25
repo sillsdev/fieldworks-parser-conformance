@@ -376,7 +376,6 @@ EpenthesisThenSwapEdge,ss,R0+SU1|ss,MetathesisRule
 EpenthesisThenSwapEdge,ss,R0+SU1|ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ExpansionInterposedOptional,ii,ROOT|ii,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ExpansionOverlappingTargets,kaaa,KAA1|kaaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
-FamilyBlockedGeneration,aa,A|aa,AffixProcessRule: prefix/suffix/circumfix/infix
 FeatureGatingBreadth,kal,KAL|kal,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 FeatureGatingBreadth,tun,TUN|tun,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 FeatureGatingBreadth,kalka,KAL+AGR|kalka,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
@@ -1208,15 +1207,6 @@ PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,AffixProc
 PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,Affix template slots (obligatory/disjunctive/ordering)
 PatternRootRequiredEnvironment,tikus,TIK+PAST|tikus,AffixProcessRule: prefix/suffix/circumfix/infix
 PatternRootRequiredEnvironment,bonus,BON+PAST|bonus,AffixProcessRule: prefix/suffix/circumfix/infix
-EpenthesisBesideMorphEnvironment,pta,PR0+R2|pta,AffixProcessRule: prefix/suffix/circumfix/infix
-EpenthesisBesideMorphEnvironment,pta,PR0+R2|pta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
-EpenthesisBesideMorphEnvironment,ta,R2|ta,AffixProcessRule: prefix/suffix/circumfix/infix
-EpenthesisBesideMorphEnvironment,ta,R2|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
-EpenthesisBesideMorphThenCompound,tt,R3|tt,AffixProcessRule: prefix/suffix/circumfix/infix
-EpenthesisBesideMorphThenCompound,tt,R3|tt,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
-EpenthesisBesideMorphThenCompound,tt,R3|tt,CompoundingRule
-EpenthesisBesideMorphEnvironment,tat,R2+SU1|tat,AffixProcessRule: prefix/suffix/circumfix/infix
-EpenthesisBesideMorphEnvironment,tat,R2+SU1|tat,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ProcessMorphologyInPlaceMutation,a,ROOT+ABLAUT|a,MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext
 quantified-alpha-bounded-ltr-left,teca,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 quantified-alpha-bounded-ltr-left,tcce,ROOT2|tcce,CharacterDefinitionTable pattern shapes: optional group / Kleene star

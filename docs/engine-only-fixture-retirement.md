@@ -15,7 +15,7 @@ The construct numbers used below are that section's row numbers.
 ## Result
 
 27 fixtures were deleted. Four were later restored as producible grammars, so 23 stay deleted
-(see "Restored" below). 133 fixtures remain (6 `languages/`, 127 `edge-cases/`), every one
+(see "Restored" below). Five more fixtures were deleted afterwards (see "Deleted"), so 28 stay deleted; the 133 below counted before they, and later additions, changed it (251 now). 133 fixtures remain (6 `languages/`, 127 `edge-cases/`), every one
 `fieldworks_producible: true`; two of them, `edge-cases/compound-max-applications` and
 `edge-cases/final-template-partial-trace`, are new. The count comes from `generated/hc-conformance-manifest.v2.json`
 (`python3 scripts/generate_manifest.py --check`), not from this page.
@@ -137,7 +137,7 @@ and **added** when it is new.
 * `edge-cases/disjunctive-recheck` (12 to 16): added `pakde`, `pakze`, `pakzeta`, `pakdeta` (the `ruleE`
   re-check witnesses). `pakda` now fails as an ordinary disjunctive stop, not as a re-check rejection.
 
-## Deleted (23)
+## Deleted (23, and 5 more below)
 
 None could be converted to a producible grammar without losing its premise, except where the doubts
 below say otherwise. The first column is the fixture name; the second is the construct (row
@@ -170,8 +170,18 @@ may need more than one construct.
 | `languages/fusional-realizational-morphology` | 3, 4, 9, 10: `RealizationalRule` `rrPast`, three custom MPR groups, `outputObligatoryFeatures` on a compound, required and excluded MPR features on the compound head (`mrCompoundConstrained`) | a fusional language with realizational tense, ablaut, stem names and constrained compounding |
 | `languages/prefixal-discontinuous-slot-dependency` | 11: MPR output from the slot rule `mrModeTrans`, required by a later slot | a prefixing language where a later slot depends on an earlier, non-adjacent one |
 
-Counts by row: 1 has 9 fixtures, 2 has 6, 3 has 2, 4 has 3, 5 has 1, 7 has 3, 8 has 1, 9 has 1,
-10 has 1, 11 has 1, 20 has 1. Rows 6 and 19 have none left: their fixtures were restored. A fixture that
+Five more were deleted after the #615 gate (`FlaggedFixturesUseNoShapeHcLoaderCannotWrite`) found shapes the loader never writes; each conversion was tried or shown impossible.
+
+| Fixture | Construct (row in fieldworks-cannot-say.md) | What it tested, and why conversion loses it |
+|---|---|---|
+| `edge-cases/family-blocked-generation` | 8: `family="famF"` on two entries (`LoadLexEntry`, 740-817: the loader never reads a family) | a family relative blocking a derivation that shares its surface: `aat` parses as B twice (lookup and the blocked A+T). Without a family nothing blocks A+T, and the A+T derivation traces no rule |
+| `edge-cases/prefix-excluded-environment-after-epenthesis` | 20: `ExcludedEnvironments` on the prefix (870, 1371, 1626, 1653: every `AllomorphEnvironment` is `Require`); 14: a right environment on a prefix | an excluded environment beside an epenthetic segment. Excluded cannot be written, and the folded required form loses the environment-versus-epenthesis check |
+| `edge-cases/prefix-required-environment-after-epenthesis` | 14: a right-hand `RequiredEnvironments` on a lone prefix (`LoadFormAffixProcessAllomorph`, 1626, 1653) | a required right environment of a prefix, with epenthesis between prefix and root: the prefix right environment is folded into the input pattern (`LoadFormAffixProcessAllomorph`, 1626-1630 at FieldWorks 183be7cc2f writes only a left environment for a prefix, 1653); the fold was tried and C# then parses pasa, past, pasat and pastt, so the fixture's purpose, an environment check refusing a node an epenthesis inserted at the morph's edge, is gone |
+| `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | 14: as above | the same environment with a compounding rule rebuilding the shape in a later stratum: the prefix right environment is folded into the input pattern (`LoadFormAffixProcessAllomorph`, 1626-1630 at FieldWorks 183be7cc2f writes only a left environment for a prefix, 1653); the fold was tried and C# then parses pasa, past, pasat and pastt, so the fixture's purpose, an environment check refusing a node an epenthesis inserted at the morph's edge, is gone |
+| `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | 14: as above | the same environment with a suffix in a later stratum: the prefix right environment is folded into the input pattern (`LoadFormAffixProcessAllomorph`, 1626-1630 at FieldWorks 183be7cc2f writes only a left environment for a prefix, 1653); the fold was tried and C# then parses pasa, past, pasat and pastt, so the fixture's purpose, an environment check refusing a node an epenthesis inserted at the morph's edge, is gone |
+
+Counts by row (the first 23): 1 has 9 fixtures, 2 has 6, 3 has 2, 4 has 3, 5 has 1, 7 has 3, 8 has 1, 9 has 1,
+10 has 1, 11 has 1, 20 has 1. The five later ones add 1 to row 8, 4 to row 14 and 1 to row 20. Rows 6 and 19 have none left: their fixtures were restored. A fixture that
 needs several rows is counted under each.
 
 ## Trace-verified surfaces lost and gained

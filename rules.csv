@@ -215,7 +215,6 @@ EpenthesisThenSwapEdge,pm,tsa;tsap;tsas;tsaps
 ExpansionInterposedOptional,prDelete,
 ExpansionInterposedOptional,prExpand,ii
 ExpansionOverlappingTargets,prBreak,kaaa;kaa
-FamilyBlockedGeneration,mT,
 FeatureGatingBreadth,mrAgr,kalka;!tunka;tunpika;kalpika;!tunkapi;kalkapi
 FeatureGatingBreadth,mrPl,kalpi;tunpi;tunpika;kalpika;kalkapi
 FeatureRuleBeforeMerge,prFeature,butbut
@@ -442,16 +441,6 @@ PartialRuleWrappedMaterial,r,lopkotr;loptkor;kaloptr;kalopkotr;lopkor;lopkontr;m
 PartialRuleWrappedMaterial,rd,lopkolopkotr;kalopkaloptr;lopkolopkontr
 PartialRuleWrappedMaterial,t,lopkotr;lopkot;lopt;loptkor;kaloptr;kalopkotr;lopkontr;milopkotr;mikaloptr;lopkolopkotr;kalopkaloptr;lopnkotr;lopkolopkontr
 PatternRootRequiredEnvironment,mrPast,tikus;bonus
-EpenthesisBesideMorphEnvironment,PR0,pta
-EpenthesisBesideMorphEnvironment,pe0,
-EpenthesisBesideMorphEnvironment,PR0,
-EpenthesisBesideMorphEnvironment,pe0,
-EpenthesisBesideMorphThenCompound,CR1,tt;tat;sat;stt
-EpenthesisBesideMorphThenCompound,PR0,
-EpenthesisBesideMorphThenCompound,pe0,
-EpenthesisBesideMorphEnvironment,PR0,
-EpenthesisBesideMorphEnvironment,SU1,tat;sat;stt
-EpenthesisBesideMorphEnvironment,pe0,
 ProcessMorphologyInPlaceMutation,mrAblaut,a
 quantified-alpha-bounded-ltr-left,prRtlBq,tcce;tace
 quantified-alpha-bounded-ltr-right,prRtlBq,ecct;ecat
