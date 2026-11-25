@@ -81,6 +81,39 @@ class Resolve(unittest.TestCase):
             self.assertEqual(state, "pending")
             self.assertIn("pending", reason)
 
+    def test_jira(self):
+        e = {"ref": "jira:LT-22699", "kind": "issue", "affects": "loader"}
+        env = {"JIRA_URL": "https://jira.example/", "JIRA_USERNAME": "u", "JIRA_API_TOKEN": "t"}
+        seen = []
+
+        def http(res):
+            def get(url, headers):
+                seen.append((url, headers))
+                return {"fields": {"status": {"name": "x"}, "resolution": res}}
+            return get
+        self.assertEqual(upstream.resolve(e, env=env, http=http(None))[0], "pending")
+        self.assertEqual(upstream.resolve(e, env=env, http=http({"name": "Fixed"}))[0], "issue-closed")
+        self.assertEqual(upstream.resolve(e, env=env, http=http({"name": "Done"}))[0], "issue-closed")
+        self.assertEqual(upstream.resolve(e, env=env, http=http({"name": "Won't Fix"}))[0], "rejected")
+        self.assertEqual(upstream.resolve(e, env=env, http=http({"name": "Won't Do"}))[0], "rejected")
+        self.assertEqual(seen[0][0], "https://jira.example/rest/api/2/issue/LT-22699?fields=status,resolution")
+        self.assertTrue(seen[0][1]["Authorization"].startswith("Basic "))
+
+    def test_jira_unchecked(self):
+        e = {"ref": "jira:LT-1", "kind": "issue", "affects": "loader"}
+
+        def boom(url, headers):
+            raise AssertionError("no http without credentials")
+        state, reason = upstream.resolve(e, env={}, http=boom)
+        self.assertEqual(state, "pending")
+        self.assertIn("jira unchecked", reason)
+
+        def down(url, headers):
+            raise OSError("offline")
+        env = {"JIRA_URL": "https://j", "JIRA_PAT_TOKEN": "p"}
+        self.assertIn("jira unchecked", upstream.resolve(e, env=env, http=down)[1])
+        self.assertTrue(upstream.allows_never_shape([e], env=env, http=down)[0])
+
     def test_bad_ref(self):
         with self.assertRaises(ValueError):
             upstream.parse_ref("machine#615")

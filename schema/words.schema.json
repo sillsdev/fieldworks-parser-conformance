@@ -24,14 +24,16 @@
         "additionalProperties": false,
         "required": ["ref", "kind", "affects", "note"],
         "properties": {
-          "ref": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#[0-9]+$" },
+          "ref": { "type": "string", "pattern": "^([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#[0-9]+|jira:[A-Z][A-Z0-9]*-[0-9]+)$" },
           "kind": { "enum": ["pr", "issue"] },
           "head": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
           "affects": { "enum": ["engine", "loader"] },
           "note": { "type": "string", "minLength": 1 }
         },
-        "if": { "properties": { "kind": { "const": "pr" } }, "required": ["kind"] },
-        "then": { "required": ["head"] }
+        "allOf": [
+          { "if": { "properties": { "kind": { "const": "pr" } }, "required": ["kind"] }, "then": { "required": ["head"] } },
+          { "if": { "properties": { "ref": { "pattern": "^jira:" } }, "required": ["ref"] }, "then": { "properties": { "kind": { "const": "issue" } } } }
+        ]
       }
     },
     "morpher": {

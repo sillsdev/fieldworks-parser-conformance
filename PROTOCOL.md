@@ -710,6 +710,8 @@ upstream:
   every fixture regardless.
 - States, from `scripts/upstream.py` (git ancestry first, `gh` second, `pending` with a reason when `gh` is
   unavailable): `satisfied`, `pending`, `merged` (re-point citations), `closed-unmerged` and `issue-closed`
-  (retire or re-check). `allows_never_shape()` there is the producibility rule.
+  (retire or re-check). FieldWorks issues live in Jira: `jira:LT-12345` is checked only when `JIRA_URL` plus
+  `JIRA_PAT_TOKEN` (or `JIRA_USERNAME` and `JIRA_API_TOKEN`) are set, else `pending` ("jira unchecked"); Won't
+  Fix/Won't Do gives `rejected`, other resolutions `issue-closed`. `allows_never_shape()` there is the producibility rule.
 - `python3 scripts/upstream_status.py [--strict]` lists every entry by state. Tag only fixtures whose rows depend
   on the change.

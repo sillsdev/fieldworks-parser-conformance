@@ -16,6 +16,7 @@ GROUPS = [
     ("merged", "MERGED: re-point header, PROVENANCE and TSV citations to the merge commit, then drop or keep the entry as history"),
     ("closed-unmerged", "CLOSED UNMERGED: decide, retire (docs/engine-only-fixture-retirement.md) or re-check"),
     ("issue-closed", "ISSUE CLOSED: decide, retire or re-check"),
+    ("rejected", "REJECTED (Jira Won't Fix/Won't Do): decide, retire or re-check"),
     ("pending", "PENDING"),
     ("satisfied", "SATISFIED"),
 ]
