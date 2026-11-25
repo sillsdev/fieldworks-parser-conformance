@@ -5,16 +5,16 @@ clitic-rule	@id	metadata		rule identity
 clitic-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
 clitic-rule	@isActive=yes	metadata		the default
 clitic-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
-clitic-rule	@multipleApplication=0	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
-clitic-rule	@multipleApplication=2	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=3	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=4	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=5	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=6	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=7	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=8	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
-clitic-rule	@multipleApplication=9	never	1079-1093	MaxApplicationCount is set only on an endocompound (1943-1945)
+clitic-rule	@multipleApplication=0	never	1079-1093	a per-affix count is clamped to 1..10 (HCLoader.cs 138 at FieldWorks 0ead571c, PR #1263, unmerged), so 0 is never written
+clitic-rule	@multipleApplication=1	metadata		the default; also what an absent or 1 HC/AffixRules maxApps gives
+clitic-rule	@multipleApplication=2	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=3	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=4	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=5	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=6	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=7	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=8	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+clitic-rule	@multipleApplication=9	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
 clitic-rule	@outputObligatoryFeatures	never	1079-1093	obligatory features are never loaded
 clitic-rule	@outputPartOfSpeech	never	1079-1093	no OutSyntacticFeatureStruct
 clitic-rule	@outputSubcategorization	never	1079-1093	subcategorization is never loaded
@@ -126,16 +126,16 @@ derivational-rule	@id	metadata		rule identity
 derivational-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
 derivational-rule	@isActive=yes	metadata		the default
 derivational-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
-derivational-rule	@multipleApplication=0	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
-derivational-rule	@multipleApplication=2	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=3	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=4	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=5	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=6	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=7	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=8	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
-derivational-rule	@multipleApplication=9	never	975-1023	MaxApplicationCount is set only on an endocompound (1943-1945)
+derivational-rule	@multipleApplication=0	never	975-1023	a per-affix count is clamped to 1..10 (HCLoader.cs 138 at FieldWorks 0ead571c, PR #1263, unmerged), so 0 is never written
+derivational-rule	@multipleApplication=1	metadata		the default; also what an absent or 1 HC/AffixRules maxApps gives
+derivational-rule	@multipleApplication=2	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=3	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=4	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=5	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=6	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=7	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=8	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+derivational-rule	@multipleApplication=9	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
 derivational-rule	@outputObligatoryFeatures	never	975-1023	obligatory features are never loaded
 derivational-rule	@outputPartOfSpeech	writes	988-989	DerivAffMsa.ToPartOfSpeech
 derivational-rule	@outputSubcategorization	never	975-1023	subcategorization is never loaded
@@ -245,16 +245,16 @@ slot-rule	@id	metadata		rule identity
 slot-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
 slot-rule	@isActive=yes	metadata		the default
 slot-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
-slot-rule	@multipleApplication=0	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
-slot-rule	@multipleApplication=2	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=3	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=4	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=5	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=6	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=7	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=8	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
-slot-rule	@multipleApplication=9	never	1025-1055	MaxApplicationCount is set only on an endocompound (1943-1945)
+slot-rule	@multipleApplication=0	never	1025-1055	a per-affix count is clamped to 1..10 (HCLoader.cs 138 at FieldWorks 0ead571c, PR #1263, unmerged), so 0 is never written
+slot-rule	@multipleApplication=1	metadata		the default; also what an absent or 1 HC/AffixRules maxApps gives
+slot-rule	@multipleApplication=2	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=3	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=4	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=5	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=6	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=7	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=8	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+slot-rule	@multipleApplication=9	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
 slot-rule	@outputObligatoryFeatures	never	1025-1055	obligatory features are never loaded
 slot-rule	@outputPartOfSpeech	never	1025-1055	LoadInflAffixProcessRule sets no OutSyntacticFeatureStruct
 slot-rule	@outputSubcategorization	never	1025-1055	subcategorization is never loaded
@@ -330,16 +330,16 @@ unslotted-rule	@id	metadata		rule identity
 unslotted-rule	@isActive=no	never	926	LoadMorphologicalRule reads no inactive state for an affix rule
 unslotted-rule	@isActive=yes	metadata		the default
 unslotted-rule	@isCliticRule	never	1079	a clitic is a rule in the Clitics stratum, never an attribute
-unslotted-rule	@multipleApplication=0	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=1	metadata		the default; no affix rule is given a cap
-unslotted-rule	@multipleApplication=2	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=3	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=4	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=5	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=6	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=7	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=8	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
-unslotted-rule	@multipleApplication=9	never	1057-1070	MaxApplicationCount is set only on an endocompound (1943-1945)
+unslotted-rule	@multipleApplication=0	never	1057-1070	a per-affix count is clamped to 1..10 (HCLoader.cs 138 at FieldWorks 0ead571c, PR #1263, unmerged), so 0 is never written
+unslotted-rule	@multipleApplication=1	metadata		the default; also what an absent or 1 HC/AffixRules maxApps gives
+unslotted-rule	@multipleApplication=2	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=3	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=4	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=5	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=6	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=7	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=8	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
+unslotted-rule	@multipleApplication=9	writes	970-971	from ParserParameters HC/AffixRules/AffixRule[@guid][@maxApps] keyed on the rule's MSA (read at 131-138), HCLoader.cs at FieldWorks 0ead571c, PR #1263 (unmerged)
 unslotted-rule	@outputObligatoryFeatures	never	1057-1070	obligatory features are never loaded
 unslotted-rule	@outputPartOfSpeech	never	1025-1070	no OutSyntacticFeatureStruct
 unslotted-rule	@outputSubcategorization	never	1057-1070	subcategorization is never loaded

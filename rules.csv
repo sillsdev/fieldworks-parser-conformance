@@ -38,8 +38,8 @@ AdhocProhibitionVariantMsaCopies,eDiV,!tadi
 AdhocProhibitionVariantMsaCopies,mrTa,taga;tagi;!taba;!tabi
 AdhocProhibitionWhyNot,mrTa,taga
 AdhocProhibitionWhyNot,subTa,!tada
-AffixMultipleApplication,mrAppl,katel;katelel;katishel;katishishelel;katishishelelox
-AffixMultipleApplication,mrCaus,katish;katishish;katishel;katishishelel;katishishelelox
+AffixMultipleApplication,mrAppl,katel;katelel;katishel;katishishelel;katishishelelox;katelish
+AffixMultipleApplication,mrCaus,katish;katishish;katishel;katishishelel;katishishelelox;katelish
 AffixMultipleApplication,mrCtl,katox;katishishelelox
 FeaturelessSegmentClassRewrite,prLen,asa;aza
 FeaturelessSegmentClassRewrite,prLen,asa;aza

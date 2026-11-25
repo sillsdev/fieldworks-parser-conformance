@@ -22,7 +22,7 @@
     </CharacterDefinitionTable>
     <NaturalClasses><FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="linear" morphologicalRules="mrCaus mrAppl mrCtl">
+      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered" morphologicalRules="mrCaus mrAppl mrCtl">
         <Name>Main</Name>
         <MorphologicalRuleDefinitions>
           <MorphologicalRule id="mrCaus" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV" multipleApplication="2">
