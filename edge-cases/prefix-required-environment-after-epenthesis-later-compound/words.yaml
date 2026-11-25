@@ -60,6 +60,7 @@ words:
     parses:
       - signature: "R3|tt"
         rules: [CR1]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "CompoundingRule"]
   - word: "ts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true

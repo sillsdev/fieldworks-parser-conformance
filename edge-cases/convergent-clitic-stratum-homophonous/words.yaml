@@ -25,6 +25,7 @@ words:
     parses:
       - signature: "KAT+ANN|kat+?a"
         rules: [aNN]
+        exercises: ["Clitics stratum: clitic designation by stratum name alone", "AffixProcessRule: prefix/suffix/circumfix/infix"]
       - signature: "KAT+ANV|kat+?a"
         rules: [aNV]
       - signature: "KAT+CLANY|kat+?a"

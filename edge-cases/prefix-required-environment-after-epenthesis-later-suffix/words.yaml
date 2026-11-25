@@ -183,6 +183,7 @@ words:
     parses:
       - signature: "R2+SU1|tat"
         rules: [SU1]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "tas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true

@@ -88,6 +88,8 @@ AdhocProhibitionVariantMsaCopies,tabi,,MorphemeCoOccurrenceRule/AllomorphCoOccur
 AdhocProhibitionWhyNot,da,DA|da,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 AdhocProhibitionWhyNot,taga,TA+GA|taga,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
 AdhocProhibitionWhyNot,tada,,MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+AffixMultipleApplication,katish,KAT+CAUS|katish,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
+AffixMultipleApplication,katish,KAT+CAUS|katish,AffixProcessRule: prefix/suffix/circumfix/infix
 FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
@@ -188,6 +190,8 @@ ChainedOutputFeatureOverrideLoss,zudu,ZUD+OUTER|zudu,Syntactic feature agreement
 ChainedOutputFeatureOverrideLoss,zudua,ZUD+OUTER+OUTERMOST|zudua,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 ChainedOutputFeatureOverrideLoss,zudia,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 ChainedOutputFeatureOverrideLoss,zudiua,ZUD+INNER+OUTER+OUTERMOST|zudiua,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+ChangeEpenthesisPrefixDeletionChain,st,R1|st,AffixProcessRule: prefix/suffix/circumfix/infix
+ChangeEpenthesisPrefixDeletionChain,st,R1|st,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 CircumfixConditionedHalves,puaamo,CIRC+ROOTAA|puaamo,AffixProcessRule: prefix/suffix/circumfix/infix
 CircumfixConditionedHalves,puabzo,CIRC+ROOTAB|puabzo,AffixProcessRule: prefix/suffix/circumfix/infix
 CircumfixConditionedHalves,kibamo,CIRC+ROOTBA|kibamo,AffixProcessRule: prefix/suffix/circumfix/infix
@@ -231,6 +235,8 @@ CliticRuleDesignation,sagdz,SAG+PAST+DEFCL|sagdz,Clitic rules (Clitics stratum) 
 CliticRuleDesignation,kolpu,KOL+NF|kolpu,Affix template slots (obligatory/disjunctive/ordering)
 CliticRuleDesignation,kolpuli,KOL+NF+PL|kolpuli,Affix template slots (obligatory/disjunctive/ordering)
 CliticStemEntry,sagd,SAG+PAST|sagd,Affix template slots (obligatory/disjunctive/ordering)
+CompoundAfterInsertion,apas,R1+SU0|apas,CompoundingRule
+CompoundAfterInsertion,apas,R1+SU0|apas,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 CompoundIdentity,aa,ROOT|aa,CompoundingRule
 CompoundIdentity,ap,ROOT+ROOT|ap,CompoundingRule
 CompoundIdentity,pa,ROOT+ROOT|pa,CompoundingRule
@@ -293,6 +299,19 @@ CompoundingNonRecursive,fasubel,HEADA+NONHEADOK|fasubel,CompoundingRule
 CompoundingNonRecursive,fasuzon,,CompoundingRule
 CompoundingNonRecursive,tikubel,HEADB+NONHEADOK|tikubel,CompoundingRule
 CompoundingNonRecursive,numobel,,CompoundingRule
+ConvergentAffixMultipleApplication,katta,KAT+TANN|kat+?ta,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
+ConvergentAffixMultipleApplication,katta,KAT+TANN|kat+?ta,AffixProcessRule: prefix/suffix/circumfix/infix
+ConvergentAlphaAssimilationHomophonous,ampat,NEG+PAT|am+?pat,Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+ConvergentAlphaAssimilationHomophonous,ampat,NEG+PAT|am+?pat,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+ConvergentCliticStratumHomophonous,kata,KAT+ANN|kat+?a,Clitics stratum: clitic designation by stratum name alone
+ConvergentCliticStratumHomophonous,kata,KAT+ANN|kat+?a,AffixProcessRule: prefix/suffix/circumfix/infix
+ConvergentCompoundHomophonousSuffixes,katkat,KAT|kat+?kat,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
+ConvergentCompoundHomophonousSuffixes,katkat,KAT|kat+?kat,AffixProcessRule: prefix/suffix/circumfix/infix
+ConvergentDeletionOptionalReduplication,kata,KAHTA|kata,AffixProcessRule: reduplication (ReduplicationHint)
+ConvergentDeletionOptionalReduplication,kata,KAHTA|kata,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+ConvergentHomophonousSuffixReduplication,kukuma,RED+KUMA|ku+?kuma,AffixProcessRule: reduplication (ReduplicationHint)
+ConvergentHomophonousSuffixReduplication,kukuma,RED+KUMA|ku+?kuma,Affix template slots (obligatory/disjunctive/ordering)
+ConvergentZeroDerivationIdentity,kat,KAT+ZNN+ZNV+ZVN|kat+?∅?+?∅?+?∅?,AffixProcessRule: prefix/suffix/circumfix/infix
 CopyAgreementFeaturelessRedup,tatasi,RED+tasi|tatasi,AffixProcessRule: reduplication (ReduplicationHint)
 CopyAgreementFeaturelessRedup,papasa,RED+pasa|papasa,AffixProcessRule: reduplication (ReduplicationHint)
 CopyAgreementFeaturelessRedup,tutusa,RED+tuka|t[uú]t[uú]sa,AffixProcessRule: reduplication (ReduplicationHint)
@@ -330,6 +349,8 @@ LatinDiacriticProbe,añota,,NaturalClass: Segments vs FeatureNaturalClass/Segmen
 LatinDiacriticProbe,gölta,,NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision
 LatinDiacriticProbe,gül,,Boundary markers (CharacterDefinitionTable)
 DiscontinuousMorphEnvironment,zuaubu,GOOD+GINF+SUFG|zuaubu,AffixProcessRule: prefix/suffix/circumfix/infix
+EarlierAllomorphBreaksSynthesis,basku,BAS+DAT|basku,Disjunctive allomorphs / free-fluctuation
+EarlierAllomorphBreaksSynthesis,basku,BAS+DAT|basku,AffixProcessRule: prefix/suffix/circumfix/infix
 DisjunctiveRecheckProbe,wak,|wak,Disjunctive allomorphs / free-fluctuation
 DisjunctiveRecheckProbe,wok,,Disjunctive allomorphs / free-fluctuation
 DisjunctiveRecheckProbe,wakta,,Disjunctive allomorphs / free-fluctuation
@@ -345,9 +366,17 @@ DisjunctiveRecheckProbe,pakdeta,,Disjunctive allomorphs / free-fluctuation
 DisjunctiveRecheckProbe,gray,|gray,Disjunctive allomorphs / free-fluctuation
 DisjunctiveRecheckProbe,grey,|grey,Disjunctive allomorphs / free-fluctuation
 EmptyRequiredTemplateSlot,monua,+|monu+?a,Affix template slots (obligatory/disjunctive/ordering)
+EpenthesisBesidePrefixThenPrefixDeletion,asa,PR0+R0|asa,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesidePrefixThenPrefixDeletion,asa,PR0+R0|asa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisBesidePrefixThenPrefixDeletion,asa,PR0+R0|asa,Boundary markers (CharacterDefinitionTable)
 EpenthesisFedMerge,bd,ROOT|bd,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisThenSwapEdge,ss,R0+SU1|ss,MetathesisRule
+EpenthesisThenSwapEdge,ss,R0+SU1|ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisThenSwapEdge,ss,R0+SU1|ss,MetathesisRule
+EpenthesisThenSwapEdge,ss,R0+SU1|ss,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ExpansionInterposedOptional,ii,ROOT|ii,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ExpansionOverlappingTargets,kaaa,KAA1|kaaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FamilyBlockedGeneration,aa,A|aa,AffixProcessRule: prefix/suffix/circumfix/infix
 FeatureGatingBreadth,kal,KAL|kal,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 FeatureGatingBreadth,tun,TUN|tun,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 FeatureGatingBreadth,kalka,KAL+AGR|kalka,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
@@ -449,8 +478,11 @@ InfixAmbiguousSite,migume,MIME+AFTER|migume,AffixProcessRule: prefix/suffix/circ
 InfixAmbiguousSite,mimgue,MIME+BEFORE|mimgue,AffixProcessRule: prefix/suffix/circumfix/infix
 Gezmara,kpfotab,KTB+PFV|kpfotab,AffixProcessRule: prefix/suffix/circumfix/infix
 Gezmara,kcvotab,KTB+CONV|kcvotab,AffixProcessRule: prefix/suffix/circumfix/infix
+InfixSplitRootAllomorphEnvironment,gabsa,ROOT+SFX|gabsa,AffixProcessRule: prefix/suffix/circumfix/infix
 interposed-optional-multi-rhs,de,ABC|de,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 IterativeEpenthesisCascade,uotaa,BOTH|uotaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+LexicalLookupSiblingAllomorphs,tuk,TUIK|tuk,AffixProcessRule: prefix/suffix/circumfix/infix
+LexicalLookupSiblingAllomorphs,tuk,TUIK|tuk,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 LiteralHashAffixContext,ara,PFX_AR+ROOT_A|ara,AffixProcessRule: prefix/suffix/circumfix/infix
 LiteralHashAffixContext,ra,PFX_R+ROOT_A|ra,AffixProcessRule: prefix/suffix/circumfix/infix
 LiteralHashAffixContext,raa,PFX_RA+ROOT_A|raa,AffixProcessRule: prefix/suffix/circumfix/infix
@@ -629,10 +661,14 @@ MprWide,kibala,rOverwrite+eBoth|kibala,AffixProcessRule: prefix/suffix/circumfix
 MprWide,balabalamu,eBoth+rAll|bala+?balamu,CompoundingRule
 MprWide,balabalamu,eBoth+rAll|bala+?balamu,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
 MprWide,balabalamu,eBoth+rAll|bala+?balamu,AffixProcessRule: prefix/suffix/circumfix/infix
+NfaLiteralAllomorphEnvironment,gabsa,ROOT+SFX|gabsa,AffixProcessRule: prefix/suffix/circumfix/infix
 NonCliticAfterFinalTemplateLayout,sagd,SAG+PAST|sagd,Affix template slots (obligatory/disjunctive/ordering)
 NonCliticAfterFinalTemplateLayout,sagds,SAG+PAST+ENC|sagds,Clitic rules (Clitics stratum) after a final template
 NonCliticAfterFinalTemplateLayout,sagdk,,Clitic rules (Clitics stratum) after a final template
 NonCliticAfterFinalTemplateLayout,kolk,KOL+DERIV|kolk,Clitic rules (Clitics stratum) after a final template
+NullPrefixRootInitialDeletionLaterSuffix,ps,NU0+R0|+?ps,AffixProcessRule: prefix/suffix/circumfix/infix
+NullPrefixRootInitialDeletionLaterSuffix,ps,NU0+R0|+?ps,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+NullPrefixRootInitialDeletionLaterSuffix,ps,NU0+R0|+?ps,Boundary markers (CharacterDefinitionTable)
 nullable-disagree-bounded-ltr-left,ii,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 nullable-disagree-bounded-ltr-left,iy,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 nullable-disagree-bounded-ltr-left,ia,AU|ia,CharacterDefinitionTable pattern shapes: optional group / Kleene star
@@ -1172,6 +1208,15 @@ PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,AffixProc
 PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,Affix template slots (obligatory/disjunctive/ordering)
 PatternRootRequiredEnvironment,tikus,TIK+PAST|tikus,AffixProcessRule: prefix/suffix/circumfix/infix
 PatternRootRequiredEnvironment,bonus,BON+PAST|bonus,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,pta,PR0+R2|pta,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,pta,PR0+R2|pta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisBesideMorphEnvironment,ta,R2|ta,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,ta,R2|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisBesideMorphThenCompound,tt,R3|tt,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphThenCompound,tt,R3|tt,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisBesideMorphThenCompound,tt,R3|tt,CompoundingRule
+EpenthesisBesideMorphEnvironment,tat,R2+SU1|tat,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,tat,R2+SU1|tat,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ProcessMorphologyInPlaceMutation,a,ROOT+ABLAUT|a,MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext
 quantified-alpha-bounded-ltr-left,teca,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 quantified-alpha-bounded-ltr-left,tcce,ROOT2|tcce,CharacterDefinitionTable pattern shapes: optional group / Kleene star
@@ -1475,6 +1520,8 @@ RightToLeftSegmentsEnvironment,a,ROOT2|a,RewriteRule direction (Dir): right-to-l
 RightToLeftSegmentsEnvironment,ay,,RewriteRule direction (Dir): right-to-left
 RightToLeftSegmentsEnvironment,e,,RewriteRule direction (Dir): right-to-left
 RightToLeftSegmentsEnvironment,y,,RewriteRule direction (Dir): right-to-left
+EpenthesisBesideMorphEnvironment,tas,R2+SU0|tas,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,tas,R2+SU0|tas,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 SharedTemplateUnconstrainedSuffix,mivd,NROOT+IVERB+PAST|mivd,Affix template slots (obligatory/disjunctive/ordering)
 SimultaneousExpansionTerminates,biiiibiiii,ROOT|biiiibiiii,RewriteRule Simultaneous
 SimultaneousFeeding,gigugu,GIGI|gigugu,RewriteRule Simultaneous
@@ -4933,6 +4980,12 @@ StrRepIdentityProbe,ipat,,NaturalClass: Segments vs FeatureNaturalClass/SegmentN
 StrRepRewriteUnapplication,xpuma,XMUMA|xpuma,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 SubruleMorphosyntacticGating,pat,ROOT1|pat,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
 SubruleMorphosyntacticGating,bat,ROOT1+DERIVE|bat,RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level
+DeletionBetweenSwitches,pa,NU0+R1|+?pa,MetathesisRule
+DeletionBetweenSwitches,pa,NU0+R1|+?pa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+DeletionBetweenSwitches,pa,NU0+R1|+?pa,Boundary markers (CharacterDefinitionTable)
+DeletionThenSwap,sp,NU0+R0|+?sp,MetathesisRule
+DeletionThenSwap,sp,NU0+R0|+?sp,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+DeletionThenSwap,sp,NU0+R0|+?sp,Boundary markers (CharacterDefinitionTable)
 SyncopeRedupOptionalVowelLattice,tpa,tapa|tpa,RewriteRule Simultaneous
 SyncopeRedupOptionalVowelLattice,tpnka,tapunika|tpnka,RewriteRule Simultaneous
 SyncopeRedupOptionalVowelLattice,tuutuu,tuu+REDA|tuutuu,AffixProcessRule: reduplication (ReduplicationHint)

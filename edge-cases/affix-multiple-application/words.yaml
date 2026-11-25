@@ -20,6 +20,7 @@ words:
     parses:
       - signature: "KAT+CAUS|katish"
         rules: [mrCaus]
+        exercises: ["Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)", "AffixProcessRule: prefix/suffix/circumfix/infix"]
   - word: katishish
     note: "CAUS twice: the pinned count of 2"
     parses:

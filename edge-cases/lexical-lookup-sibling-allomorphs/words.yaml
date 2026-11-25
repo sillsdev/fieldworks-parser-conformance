@@ -27,6 +27,7 @@ words:
     parses:
       - signature: "TUIK|tuk"
         rules: [prHiatusI]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
 
   - word: bak
     note: >-

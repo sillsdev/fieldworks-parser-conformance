@@ -65,6 +65,7 @@ words:
     parses:
       - signature: "NU0+R0|+?sp"
         rules: [NU0, pd0, pm]
+        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "NU0+R1|+?sp"
         rules: [NU0, pd0, pm]
       - signature: "R0|sp"

@@ -50,6 +50,7 @@ words:
     parses:
       - signature: "NU0+R0|+?ps"
         rules: [NU0, pd0]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "NU0+R1|+?ps"
         rules: [NU0, pd0]
       - signature: "R0|ps"

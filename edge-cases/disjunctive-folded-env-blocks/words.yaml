@@ -18,6 +18,7 @@ words:
     parses:
       - signature: "BAS+DAT|basku"
         rules: [mrDat]
+        exercises: ["Disjunctive allomorphs / free-fluctuation", "AffixProcessRule: prefix/suffix/circumfix/infix"]
   - word: banka
     note: >-
       The alternate itself still parses: allomorph 0 applies to ban and yields banka.

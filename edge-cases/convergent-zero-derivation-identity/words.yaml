@@ -15,6 +15,7 @@ words:
     parses:
       - signature: "KAT+ZNN+ZNV+ZVN|kat+?∅?+?∅?+?∅?"
         rules: [zNN, zNV, zVN]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix"]
       - signature: "KAT+ZNN+ZNV|kat+?∅?+?∅?"
         rules: [zNN, zNV]
       - signature: "KAT+ZNN|kat+?∅?"

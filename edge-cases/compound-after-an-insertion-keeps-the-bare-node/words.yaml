@@ -327,6 +327,7 @@ words:
     parses:
       - signature: "R1+SU0|apas"
         rules: [SU0, pe0]
+        exercises: ["CompoundingRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "appa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true

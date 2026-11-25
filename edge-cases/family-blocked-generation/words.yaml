@@ -10,6 +10,7 @@ words:
     parses:
       - signature: "A|aa"
         rules: []
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix"]
   - word: aat
     note: >-
       Two C# derivations share this signature and are intentionally repeated: the plain lookup of B,

@@ -184,6 +184,7 @@ words:
     parses:
       - signature: "R2+SU0|tas"
         rules: [SU0]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "tpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true

@@ -38,6 +38,7 @@ words:
     parses:
       - signature: "NU0+R1|+?pa"
         rules: [NU0, pd0, pm0]
+        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "R1|pa"
         rules: [pd0, pm0]
   - word: "pp"

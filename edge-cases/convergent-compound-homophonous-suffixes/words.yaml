@@ -25,6 +25,7 @@ words:
     parses:
       - signature: "KAT|kat+?kat"
         rules: [cmpNN]
+        exercises: ["CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)", "AffixProcessRule: prefix/suffix/circumfix/infix"]
   - word: katkatkat
     note: "Three stems exceed the stem limit."
     expect_fail: true

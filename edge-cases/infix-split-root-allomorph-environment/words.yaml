@@ -17,6 +17,7 @@ words:
     parses:
       - signature: "ROOT+SFX|gabsa"
         rules: [mrSuffix]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix"]
   - word: gabas
     note: >-
       Word-final root: gabs / _ V does not apply, so the elsewhere form gabas parses.

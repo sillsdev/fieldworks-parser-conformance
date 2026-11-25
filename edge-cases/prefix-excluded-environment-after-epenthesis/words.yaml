@@ -153,6 +153,7 @@ words:
     parses:
       - signature: "PR0+R2|pta"
         rules: [PR0]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "ptp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true

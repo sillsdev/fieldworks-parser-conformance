@@ -50,8 +50,8 @@ ambiguous-disagree-feature-class-bounded-rtl,prDoubleAlpha,ia
 ambiguous-disagree-feature-class-unbounded-ltr,prDoubleAlpha,ia
 ambiguous-disagree-mixed-plus-class,prDoubleAlpha,ia
 ambiguous-disagree-repeated-minus-partial-focus,prDoubleAlpha,ii
-AuthoredNullAffixAllomorph,mrPst,kaun;katta
-AuthoredNullAffixAllomorph,mrRel,kaun;katta
+AuthoredNullAffixAllomorph,mrPst,kaun;katta;!kaunta;!kaun0;!kat0
+AuthoredNullAffixAllomorph,mrRel,kaun;katta;!kaun0;!kat0
 BoundaryFirstInNarrowingLhs,mrSfxBo,kanmo;katbo
 BoundaryFirstInNarrowingLhs,mrSfxMo,kanmo;katmo
 BoundaryFirstInNarrowingLhs,prPostNasal,kanmo

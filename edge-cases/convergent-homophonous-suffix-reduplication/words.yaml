@@ -21,6 +21,7 @@ words:
     parses:
       - signature: "RED+KUMA|ku+?kuma"
         rules: [red]
+        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)", "Affix template slots (obligatory/disjunctive/ordering)"]
   - word: kumasi
     note: "The two noun-taking -si suffixes; no reduplication."
     parses:
