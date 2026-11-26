@@ -676,6 +676,7 @@ TwoMergesCascadeEnv,prFront,teK;tek
 TwoMergesCascadeEnv,prMerge,teK;KT;KTa
 TwoMergesCascadeEnv,prMergeBdry,teK
 UnboundedIterativeQuantifierExpansion,prIterUnbounded,ect;ecct;eccccct
+VariantCliticTypedForm,mrKe,take;keke
 WordBoundaryAffixRewrite,mrPrefixAR,ara
 WordBoundaryAffixRewrite,mrPrefixR,ta
 WordBoundaryAffixRewrite,mrPrefixRA,taa

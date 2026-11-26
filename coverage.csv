@@ -5069,6 +5069,10 @@ UnboundedIterativeQuantifierExpansion,at,ROOT4|at,CharacterDefinitionTable patte
 UnboundedIterativeQuantifierExpansion,act,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 UnboundedIterativeQuantifierExpansion,acct,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 UnboundedIterativeQuantifierExpansion,accccct,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+VariantCliticTypedForm,ke,TA|ke,Clitics stratum: clitic designation by stratum name alone
+VariantCliticTypedForm,take,TA+TA|take,Clitics stratum: clitic designation by stratum name alone
+VariantCliticTypedForm,keke,TA+TA|keke,Clitics stratum: clitic designation by stratum name alone
+VariantCliticTypedForm,keta,,Clitics stratum: clitic designation by stratum name alone
 WordBoundaryAffixRewrite,ta,PFX_R+ROOT_A|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 WordBoundaryAffixRewrite,ta,ROOT_RA|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 WordBoundaryAffixRewrite,taa,PFX_RA+ROOT_A|taa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
