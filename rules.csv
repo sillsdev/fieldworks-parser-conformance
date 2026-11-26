@@ -347,6 +347,10 @@ MetathesisBoundaryTwoSuffixes,pr0,patsa;p+at+sa;p+atsa;pat+sa;paatsa;pa+at+sa;tp
 MetathesisDeletionRestoresSegmentBetweenSwitches,PRE,ast;as+t
 MetathesisDeletionRestoresSegmentBetweenSwitches,pd,t;ta;ast;as+t
 MetathesisDeletionRestoresSegmentBetweenSwitches,pr1,ast;as+t
+MetathesisMiddleContextEmptiedEdges,PR0,st
+MetathesisMiddleContextEmptiedEdges,PR1,p+t
+MetathesisMiddleContextEmptiedEdges,pd0,st;p+t
+MetathesisMiddleContextEmptiedEdges,pr0,
 MetathesisSegmentClassUnion,SUF,aap;app;apap;a+ap;a+pp;ap+ap
 MetathesisSegmentClassUnion,pr0,ap;aap;app;apap;a+ap;a+pp;ap+ap
 MetathesisSwapThenGap,NU0,psa;psaa
