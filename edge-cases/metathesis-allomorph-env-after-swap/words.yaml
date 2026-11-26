@@ -1,0 +1,55 @@
+# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; the staged grammar was converted to a producible shape and every row replayed unchanged)
+language: MetathesisAllomorphEnvAfterSwap
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: "ta"
+    note: >-
+      Root ta alone: no prefix, so no swap, and the word-final right environment holds.
+    parses:
+      - signature: "Z|ta"
+        rules: []
+  - word: "tsa"
+    note: >-
+      Prefix s then root ta: the rule swaps s and t, so the root's range runs t..a and wraps the prefix. C# reads Range.End.Next from the end of that range, finds the word end, and the required word-final environment holds.
+    parses:
+      - signature: "Z+PRE|t+?sa"
+        rules: [PRE, pr1]
+        exercises: ["MetathesisRule"]
+  - word: "t+sa"
+    note: >-
+      The same surface with the boundary written; the boundary stays between the swapped segments.
+    parses:
+      - signature: "Z+PRE|t+?sa"
+        rules: [PRE, pr1]
+        exercises: ["MetathesisRule"]
+  - word: "sta"
+    note: >-
+      Never a surface: the obligatory rule rewrites st to ts, and C# rejects it.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
+  - word: "taa"
+    note: >-
+      Root taa alone: its required right environment needs a segment after the root, and nothing follows, so C# rejects it.
+    expect_fail: true
+  - word: "tsaa"
+    note: >-
+      Prefix s then root taa after the swap: the required right environment needs a segment after the root's range, and the range runs to the word end (past the wrapped prefix), so C# rejects it. An engine that ends the root at t sees the prefix there and wrongly accepts.
+    expect_fail: true
+    exercises: ["MetathesisRule"]
+  - word: "tsap"
+    note: >-
+      Root ta followed by p: the required word-final environment fails, so C# rejects it.
+    expect_fail: true
+  - word: "sp"
+    note: >-
+      Prefix s then root p: p is not a switch target, so nothing swaps (PRE+Y).
+    parses:
+      - signature: "PRE+Y|s+?p"
+        rules: [PRE]
+  - word: "p"
+    note: >-
+      Root p alone.
+    parses:
+      - signature: "Y|p"
+        rules: []

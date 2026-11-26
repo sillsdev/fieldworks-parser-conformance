@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 255 fixtures: 6 languages and 249 edge cases.
+The list has 256 fixtures: 6 languages and 250 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 255 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 256 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -298,6 +298,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/fw-metathesis-switch-indices`: a metathesis rule authored in FieldWorks with a left environment, whose two switches HCLoader names from `StrucChange`; the swap applies only after `a`.
 - `edge-cases/metathesis-boundary-between-switches-compound`: a metathesis whose two switches are the last segment of one compound part and the first of the next, with a `+` junction between them.
 - `edge-cases/metathesis-boundary-between-switches-marker`: a metathesis whose pattern writes a boundary marker between the switches, applied where the prefix adds a second boundary.
+- `edge-cases/metathesis-allomorph-env-after-swap`: a prefix swapped with the root's first segment, then a root allomorph's required right environment that reads the swapped extent (PanGloss#380).
 - `edge-cases/metathesis-boundary-between-switches-prefix`: a metathesis whose switches are split by the `+` that closes a prefix, which the matcher steps over.
 - `edge-cases/metathesis-boundary-context-left-right-to-left`: a right-to-left metathesis with a left context across the `+` that closes a prefix, where the boundary joins the group of the switch matched before it and only segments move.
 - `edge-cases/metathesis-boundary-context-right`: a metathesis with a right context across the `+` that opens a suffix, where the boundary joins the group of the switch matched before it and only segments move.

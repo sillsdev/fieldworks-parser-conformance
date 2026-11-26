@@ -314,6 +314,8 @@ MergeSubrulesPosSimultaneousTemplate,mrSfxS,Gs
 MergeSubrulesPosSimultaneousTemplate,prMerge,F;Gs;FF
 MergeThenMetathesis,mtTS,aca
 MergeThenMetathesis,prMergeST,aca
+MetathesisAllomorphEnvAfterSwap,PRE,tsa;t+sa;sp
+MetathesisAllomorphEnvAfterSwap,pr1,tsa;t+sa
 MetathesisBoundaryBetweenSwitchesCompound,cr1,pp;pt;tt;p+p;p+t;t+t
 MetathesisBoundaryBetweenSwitchesCompound,pr1,pt;p+t
 MetathesisBoundaryBetweenSwitchesMarker,PRE,ts;t+s;t++s;sp;s+p;s++p

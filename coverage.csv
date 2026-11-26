@@ -507,6 +507,10 @@ MergeSubrulesPosSimultaneousTemplate,Gs,TA_V+S|Gs,RewriteSubruleDef gating: requ
 MergeSubrulesPosSimultaneousTemplate,Gs,TA_V+S|Gs,Affix template slots (obligatory/disjunctive/ordering)
 MergeThenMetathesis,aca,ATSA|aca,MetathesisRule
 MergeThenMetathesis,aca,ATSA|aca,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisAllomorphEnvAfterSwap,tsa,Z+PRE|t+?sa,MetathesisRule
+MetathesisAllomorphEnvAfterSwap,t+sa,Z+PRE|t+?sa,MetathesisRule
+MetathesisAllomorphEnvAfterSwap,sta,,MetathesisRule
+MetathesisAllomorphEnvAfterSwap,tsaa,,MetathesisRule
 MetathesisBoundaryBetweenSwitchesCompound,pt,Y+Z|p+?t,MetathesisRule
 MetathesisBoundaryBetweenSwitchesCompound,pt,Y+Z|p+?t,MetathesisRule
 MetathesisBoundaryBetweenSwitchesCompound,p+t,Y+Z|p+?t,MetathesisRule
