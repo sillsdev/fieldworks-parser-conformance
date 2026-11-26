@@ -349,6 +349,10 @@ MetathesisDeletionRestoresSegmentBetweenSwitches,pd,t;ta;ast;as+t
 MetathesisDeletionRestoresSegmentBetweenSwitches,pr1,ast;as+t
 MetathesisSegmentClassUnion,SUF,aap;app;apap;a+ap;a+pp;ap+ap
 MetathesisSegmentClassUnion,pr0,ap;aap;app;apap;a+ap;a+pp;ap+ap
+MetathesisSwapThenGap,NU0,psa;psaa
+MetathesisSwapThenGap,SU1,psaa
+MetathesisSwapThenGap,pd0,psa;psaa
+MetathesisSwapThenGap,pm0,psa;psaa
 MorphotacticAttributeBreadth,mrCoA,topsakatana;topsakanabu
 MorphotacticAttributeBreadth,mrCoB,topsakatana;topsakanabu
 MorphotacticAttributeBreadth,mrCoC,topsakatana

@@ -626,6 +626,17 @@ MetathesisSegmentClassUnion,apa,,MetathesisRule
 MetathesisSegmentClassUnion,aa,,MetathesisRule
 MetathesisSegmentClassUnion,pa,,MetathesisRule
 MetathesisSegmentClassUnion,paap,,MetathesisRule
+MetathesisSwapThenGap,+sp,,MetathesisRule
+MetathesisSwapThenGap,+spa,,MetathesisRule
+MetathesisSwapThenGap,sp,,MetathesisRule
+MetathesisSwapThenGap,spa,,MetathesisRule
+MetathesisSwapThenGap,spaa,,MetathesisRule
+MetathesisSwapThenGap,+spaa,,MetathesisRule
+MetathesisSwapThenGap,psa,NU0+R1|+?psa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisSwapThenGap,psa,R1|psa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisSwapThenGap,psaa,NU0+R1+SU1|+?psaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisSwapThenGap,psaa,NU0+R1+SU1|+?psaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+MetathesisSwapThenGap,psaa,R1+SU1|psaa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 MorphotacticAttributeBreadth,kul,KUL|kul,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,kulde,KUL+ONCE|kulde,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 MorphotacticAttributeBreadth,kuldede,,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)

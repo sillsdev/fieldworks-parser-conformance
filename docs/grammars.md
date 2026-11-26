@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 256 fixtures: 6 languages and 250 edge cases.
+The list has 257 fixtures: 6 languages and 251 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 256 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 257 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -311,6 +311,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/metathesis-boundary-two-suffixes`: a metathesis that swaps the last segment of one suffix with the first of the next across their boundary, keeping the morph order.
 - `edge-cases/metathesis-segment-class-union`: a metathesis whose switch is a segment natural class, which matches the union of its members' features and so also a root segment that is not a member.
 - `edge-cases/metathesis-deletion-restores-segment-between-switches`: a metathesis across a prefix boundary followed by a deletion whose analysis restores an optional segment between the switches; the founding oracle cannot parse four words it generates (sillsdev/machine#649).
+- `edge-cases/metathesis-swap-then-gap`: a metathesis swap followed by a deletion whose analysis restores an optional segment between the switches; the founding oracle cannot parse six words it generates (sillsdev/machine#649, PanGloss#411).
 - `edge-cases/null-prefix-root-initial-deletion-later-suffix`: a null prefix before a root that loses its first segment to a later deletion, with a later suffix (sillsdev/PanGloss#405).
 - `edge-cases/merge-then-metathesis`: a metathesis followed by a merge, undone in order on analysis.
 - `edge-cases/partial-rule-deleted-material`: partial affix rules whose inserted segment a phonological deletion rule removes from the surface form, under a final template.
