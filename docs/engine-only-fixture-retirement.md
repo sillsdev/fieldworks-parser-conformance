@@ -18,7 +18,7 @@ The construct numbers used below are that section's row numbers.
 ## Result
 
 27 fixtures were deleted. Four were later restored as producible grammars, so 23 stay deleted
-(see "Restored" below). Five more fixtures were deleted afterwards (see "Deleted"), so 28 stay deleted. The counts below date from the first retirement, when 133 fixtures remained (6 `languages/`, 127 `edge-cases/`), every one
+(see "Restored" below). Five more fixtures were deleted afterwards (see "Deleted"); three of those five were restored as aspirational (see "Restored as aspirational"), so 25 stay deleted. The counts below date from the first retirement, when 133 fixtures remained (6 `languages/`, 127 `edge-cases/`), every one
 `fieldworks_producible: true`; two of them, `edge-cases/compound-max-applications` and
 `edge-cases/final-template-partial-trace`, are new. The suite holds 251 now; the current count comes from `generated/hc-conformance-manifest.v2.json`
 (`python3 scripts/generate_manifest.py --check`), not from this page.
@@ -173,19 +173,34 @@ may need more than one construct.
 | `languages/fusional-realizational-morphology` | 3, 4, 9, 10: `RealizationalRule` `rrPast`, three custom MPR groups, `outputObligatoryFeatures` on a compound, required and excluded MPR features on the compound head (`mrCompoundConstrained`) | a fusional language with realizational tense, ablaut, stem names and constrained compounding |
 | `languages/prefixal-discontinuous-slot-dependency` | 11: MPR output from the slot rule `mrModeTrans`, required by a later slot | a prefixing language where a later slot depends on an earlier, non-adjacent one |
 
-Five more were deleted after the #615 gate (`FlaggedFixturesUseNoShapeHcLoaderCannotWrite`) found shapes the loader never writes; each conversion was tried or shown impossible.
+Five more were deleted after the #615 gate (the three `prefix-required-environment-after-epenthesis*` rows are no longer in this list; they were restored, see below) (`FlaggedFixturesUseNoShapeHcLoaderCannotWrite`) found shapes the loader never writes; each conversion was tried or shown impossible.
 
 | Fixture | Construct (row in fieldworks-cannot-say.md) | What it tested, and why conversion loses it |
 |---|---|---|
 | `edge-cases/family-blocked-generation` | 8: `family="famF"` on two entries (`LoadLexEntry`, 740-817: the loader never reads a family) | a family relative blocking a derivation that shares its surface: `aat` parses as B twice (lookup and the blocked A+T). Without a family nothing blocks A+T, and the A+T derivation traces no rule |
 | `edge-cases/prefix-excluded-environment-after-epenthesis` | 20: `ExcludedEnvironments` on the prefix (870, 1372, 1627, 1654: every `AllomorphEnvironment` is `Require`); 14: a right environment on a prefix | an excluded environment beside an epenthetic segment. Excluded cannot be written, and the folded required form loses the environment-versus-epenthesis check |
-| `edge-cases/prefix-required-environment-after-epenthesis` | 14: a right-hand `RequiredEnvironments` on a lone prefix (`LoadFormAffixProcessAllomorph`, 1627, 1654) | a required right environment of a prefix, with epenthesis between prefix and root: the prefix right environment is folded into the input pattern (`LoadFormAffixProcessAllomorph`, 1630-1654 at FieldWorks 183be7cc2f writes only a left environment for a prefix, added at 1654); the fold was tried and C# then parses pasa, past, pasat and pastt, so the fixture's purpose, an environment check refusing a node an epenthesis inserted at the morph's edge, is gone |
-| `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | 14: as above | the same environment with a compounding rule rebuilding the shape in a later stratum: the prefix right environment is folded into the input pattern (`LoadFormAffixProcessAllomorph`, 1630-1654 at FieldWorks 183be7cc2f writes only a left environment for a prefix, added at 1654); the fold was tried and C# then parses pasa, past, pasat and pastt, so the fixture's purpose, an environment check refusing a node an epenthesis inserted at the morph's edge, is gone |
-| `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | 14: as above | the same environment with a suffix in a later stratum: the prefix right environment is folded into the input pattern (`LoadFormAffixProcessAllomorph`, 1630-1654 at FieldWorks 183be7cc2f writes only a left environment for a prefix, added at 1654); the fold was tried and C# then parses pasa, past, pasat and pastt, so the fixture's purpose, an environment check refusing a node an epenthesis inserted at the morph's edge, is gone |
 
 Counts by row (the first 23): 1 has 9 fixtures, 2 has 6, 3 has 2, 4 has 3, 5 has 1, 7 has 3, 8 has 1, 9 has 1,
-10 has 1, 11 has 1, 20 has 1. The five later ones add 1 to row 8, 4 to row 14 and 1 to row 20. Rows 6 and 19 have none left: their fixtures were restored. A fixture that
+10 has 1, 11 has 1, 20 has 1. The five later ones added 1 to row 8, 4 to row 14 and 1 to row 20; three of the row 14 ones were restored, leaving 1 each in rows 8, 14 and 20. Rows 6 and 19 have none left: their fixtures were restored. A fixture that
 needs several rows is counted under each.
+
+## Restored as aspirational
+
+Three of the five fixtures deleted after the #615 gate were restored on 2026-11-25 (fpc issue #56,
+[ADR 0001](adr/0001-aspirational-upstream-fixtures.md)), because FieldWorks Jira
+[LT-22922](https://jira.sil.org/browse/LT-22922) is open: it asks `HCLoader` to keep a prefix's right-hand
+environment as an environment instead of folding it into the input pattern (row 14 of
+fieldworks-cannot-say.md). Each carries `upstream: [{ref: "jira:LT-22922", kind: issue, affects: loader}]` in
+its `words.yaml`. Their rows are unchanged from the commit that deleted them.
+
+| Fixture | Construct | Upstream |
+|---|---|---|
+| `edge-cases/prefix-required-environment-after-epenthesis` | 14: a right-hand `RequiredEnvironments` on a lone prefix | LT-22922 |
+| `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | 14: as above | LT-22922 |
+| `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | 14: as above | LT-22922 |
+
+If LT-22922 is closed unfixed (`scripts/upstream_status.py` reports `issue-closed` or `rejected`), retire the three
+again and put their rows back in the "Deleted" table above (their rows are in the history of this file at 16a7368).
 
 ## Trace-verified surfaces lost and gained
 

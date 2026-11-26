@@ -449,6 +449,15 @@ PartialRuleWrappedMaterial,r,lopkotr;loptkor;kaloptr;kalopkotr;lopkor;lopkontr;m
 PartialRuleWrappedMaterial,rd,lopkolopkotr;kalopkaloptr;lopkolopkontr
 PartialRuleWrappedMaterial,t,lopkotr;lopkot;lopt;loptkor;kaloptr;kalopkotr;lopkontr;milopkotr;mikaloptr;lopkolopkotr;kalopkaloptr;lopnkotr;lopkolopkontr
 PatternRootRequiredEnvironment,mrPast,tikus;bonus
+EpenthesisBesideMorphEnvironment,PR0,
+EpenthesisBesideMorphEnvironment,SU9,satatat
+EpenthesisBesideMorphEnvironment,pe0,
+EpenthesisBesideMorphThenCompound,CR1,tt;tat;sat;stt
+EpenthesisBesideMorphThenCompound,PR0,
+EpenthesisBesideMorphThenCompound,pe0,
+EpenthesisBesideMorphEnvironment,PR0,
+EpenthesisBesideMorphEnvironment,SU1,tat;sat;stt
+EpenthesisBesideMorphEnvironment,pe0,
 ProcessMorphologyInPlaceMutation,mrAblaut,a
 quantified-alpha-bounded-ltr-left,prRtlBq,tcce;tace
 quantified-alpha-bounded-ltr-right,prRtlBq,ecct;ecat

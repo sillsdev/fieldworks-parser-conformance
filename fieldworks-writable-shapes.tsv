@@ -47,11 +47,11 @@ clitic-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoAffi
 clitic-rule/subrule	@id	metadata		
 clitic-rule/subrule	@isActive=no	never	1079-1093	an allomorph has no inactive state in the loader
 clitic-rule/subrule	@isActive=yes	metadata		
-clitic-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+clitic-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require; LT-22922 (open) covers only a prefix's right-hand required environment
 clitic-rule/subrule	MorphologicalInput	metadata		
 clitic-rule/subrule	MorphologicalOutput	metadata		
 clitic-rule/subrule	Properties	metadata		
-clitic-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+clitic-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape); a prefix's right-hand environment is not written (folded into the input pattern): open upstream issue FieldWorks Jira LT-22922
 clitic-rule/subrule	RequiredFootFeatures	never	208	no foot feature
 clitic-rule/subrule	RequiredHeadFeatures	never	1196-1210	a clitic form is loaded as a stem allomorph, which carries no MsEnvFeatures
 clitic-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature
@@ -168,11 +168,11 @@ derivational-rule/output	ModifyFromInput	writes	1383-1654	the output actions of 
 derivational-rule/subrule	@id	metadata		
 derivational-rule/subrule	@isActive=no	never	975-1023	an allomorph has no inactive state in the loader
 derivational-rule/subrule	@isActive=yes	metadata		
-derivational-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+derivational-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require; LT-22922 (open) covers only a prefix's right-hand required environment
 derivational-rule/subrule	MorphologicalInput	metadata		
 derivational-rule/subrule	MorphologicalOutput	metadata		
 derivational-rule/subrule	Properties	metadata		
-derivational-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+derivational-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape); a prefix's right-hand environment is not written (folded into the input pattern): open upstream issue FieldWorks Jira LT-22922
 derivational-rule/subrule	RequiredFootFeatures	never	208	no foot feature
 derivational-rule/subrule	RequiredHeadFeatures	writes	1174-1175	MoAffixAllomorph.MsEnvFeatures (a lone affix form; not a circumfix or an affix process, checked by shape)
 derivational-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature
@@ -287,11 +287,11 @@ slot-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoAffixP
 slot-rule/subrule	@id	metadata		
 slot-rule/subrule	@isActive=no	never	1025-1055	an allomorph has no inactive state in the loader
 slot-rule/subrule	@isActive=yes	metadata		
-slot-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+slot-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require; LT-22922 (open) covers only a prefix's right-hand required environment
 slot-rule/subrule	MorphologicalInput	metadata		
 slot-rule/subrule	MorphologicalOutput	metadata		
 slot-rule/subrule	Properties	metadata		
-slot-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+slot-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape); a prefix's right-hand environment is not written (folded into the input pattern): open upstream issue FieldWorks Jira LT-22922
 slot-rule/subrule	RequiredFootFeatures	never	208	no foot feature
 slot-rule/subrule	RequiredHeadFeatures	writes	1174-1175	MoAffixAllomorph.MsEnvFeatures (a lone affix form; not a circumfix or an affix process, checked by shape)
 slot-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature
@@ -371,11 +371,11 @@ unslotted-rule/output	ModifyFromInput	writes	1383-1654	the output actions of MoA
 unslotted-rule/subrule	@id	metadata		
 unslotted-rule/subrule	@isActive=no	never	1057-1070	an allomorph has no inactive state in the loader
 unslotted-rule/subrule	@isActive=yes	metadata		
-unslotted-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require
+unslotted-rule/subrule	ExcludedEnvironments	never	1371, 1626, 1653	every AllomorphEnvironment is ConstraintType.Require; LT-22922 (open) covers only a prefix's right-hand required environment
 unslotted-rule/subrule	MorphologicalInput	metadata		
 unslotted-rule/subrule	MorphologicalOutput	metadata		
 unslotted-rule/subrule	Properties	metadata		
-unslotted-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape)
+unslotted-rule/subrule	RequiredEnvironments	writes	1371, 1626, 1653	only on a lone prefix, a lone suffix or a circumfix (checked by shape); a prefix's right-hand environment is not written (folded into the input pattern): open upstream issue FieldWorks Jira LT-22922
 unslotted-rule/subrule	RequiredFootFeatures	never	208	no foot feature
 unslotted-rule/subrule	RequiredHeadFeatures	writes	1174-1175	MoAffixAllomorph.MsEnvFeatures (a lone affix form; not a circumfix or an affix process, checked by shape)
 unslotted-rule/subrule	VariableFeatures	never	1095-1190	no affix allomorph carries a variable feature

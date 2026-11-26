@@ -1213,6 +1213,14 @@ PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,AffixProc
 PartialRuleWrappedMaterial,lopkolopkontr,LOP+PK+RD+N+T+R|lopkolopkontr,Affix template slots (obligatory/disjunctive/ordering)
 PatternRootRequiredEnvironment,tikus,TIK+PAST|tikus,AffixProcessRule: prefix/suffix/circumfix/infix
 PatternRootRequiredEnvironment,bonus,BON+PAST|bonus,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,ta,R2|ta,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,ta,R2|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisBesideMorphEnvironment,satatat,R0+SU9|satatat,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphThenCompound,tt,R3|tt,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphThenCompound,tt,R3|tt,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+EpenthesisBesideMorphThenCompound,tt,R3|tt,CompoundingRule
+EpenthesisBesideMorphEnvironment,tat,R2+SU1|tat,AffixProcessRule: prefix/suffix/circumfix/infix
+EpenthesisBesideMorphEnvironment,tat,R2+SU1|tat,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 ProcessMorphologyInPlaceMutation,a,ROOT+ABLAUT|a,MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext
 quantified-alpha-bounded-ltr-left,teca,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 quantified-alpha-bounded-ltr-left,tcce,ROOT2|tcce,CharacterDefinitionTable pattern shapes: optional group / Kleene star
