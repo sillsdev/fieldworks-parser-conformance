@@ -5073,6 +5073,9 @@ VariantCliticTypedForm,ke,TA|ke,Clitics stratum: clitic designation by stratum n
 VariantCliticTypedForm,take,TA+TA|take,Clitics stratum: clitic designation by stratum name alone
 VariantCliticTypedForm,keke,TA+TA|keke,Clitics stratum: clitic designation by stratum name alone
 VariantCliticTypedForm,keta,,Clitics stratum: clitic designation by stratum name alone
+VariantComplexFormRef,ta,TA|ta,Variant entries (sense-less entry loaded under its component entry's MSA)
+VariantComplexFormRef,tu,TA|tu,Variant entries (sense-less entry loaded under its component entry's MSA)
+VariantComplexFormRef,tata,,Variant entries (sense-less entry loaded under its component entry's MSA)
 WordBoundaryAffixRewrite,ta,PFX_R+ROOT_A|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 WordBoundaryAffixRewrite,ta,ROOT_RA|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 WordBoundaryAffixRewrite,taa,PFX_RA+ROOT_A|taa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

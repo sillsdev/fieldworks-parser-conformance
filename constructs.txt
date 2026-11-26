@@ -45,3 +45,4 @@ CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntacti
 Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 Tracing (TraceType)
 Element deactivation (isActive) across loader collections
+Variant entries (sense-less entry loaded under its component entry's MSA)

@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 259 fixtures: 6 languages and 253 edge cases.
+The list has 260 fixtures: 6 languages and 254 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 259 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 260 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **64 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **65 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -94,6 +94,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/strrep-identity`
 - `edge-cases/template-category-sharing`
 - `edge-cases/variant-clitic-typed-form`
+- `edge-cases/variant-complex-form-ref-senseless-entry`
 - `languages/suffixing-evidential-adjacency-chain`
 
 #### Stress subset
@@ -205,6 +206,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/convergent-stemname-mpr-homophones`: [XAmple] homophonous `ma` suffixes gated by required and excluded exception features on two homophonous roots, and a stem-named root allomorph chosen by a head feature a suffix assigns, beside two homophonous `su` suffixes one of which requires the stem name; guards an analysis-side match table that must still run every gate on each arrival (15 words).
 - `edge-cases/guess-roots-settings`: root guessing turned on and off for the same words.
 - `edge-cases/loader-pattern-shapes`: [XAmple] lexical entries whose shape names a natural class.
+- `edge-cases/variant-complex-form-ref-senseless-entry`: [XAmple] a sense-less entry whose only entry ref is a complex-form ref, which HCLoader loads as a variant of its component (PanGloss#174).
 
 ## Ad hoc prohibitions
 
