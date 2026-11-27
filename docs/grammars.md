@@ -373,7 +373,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/partial-feature-no-rewrite`: the unused-feature grammar without any phonological rule: one surface still has two root identities.
 - `edge-cases/partial-feature-singleton-rewrite`: a rewrite whose classes are one-member classes, with an unused declared feature.
 - `edge-cases/partial-inherited-output-feature`: intervocalic lenition in a grammar whose symbolic feature covers only some segments, with the target class written as a feature class: both output spellings parse and the unchanged root does not.
-- `edge-cases/partial-inherited-output-literal`: the same lenition with the target class written as a segment class of two segments.
+- `edge-cases/partial-inherited-output-literal`: the same lenition with the target class written as a segment class of two segments, plus two rules whose output is the segment class {s,z}: it drops voice, so a voiceless input gives s, a voiced input gives z, and only an input with no voice value gives both.
 - `edge-cases/partial-inherited-output-singleton`: the same lenition with the target class written as a one-member segment class.
 - `edge-cases/spelling-coverage-copy-slots`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has the base grammar.
 - `edge-cases/spelling-coverage-copy-slots-alias-deleted`: Root aliases, compatible distinct definitions, prefix and suffix insertion, an optional final slot and copied underlying nodes with independently chosen spellings; this variant has the accented alias removed from the root definitions.

@@ -18,6 +18,8 @@
           <Symbol id="f0Z">Z</Symbol>
           <Symbol id="f0A">A</Symbol>
           <Symbol id="f0I">I</Symbol>
+          <Symbol id="f0P">P</Symbol>
+          <Symbol id="f0B">B</Symbol>
         </Symbols>
       </SymbolicFeature>
       <SymbolicFeature id="voice">
@@ -72,6 +74,20 @@
           <FeatureValue feature="f0" symbolValues="f0I" />
           <FeatureValue feature="voice" symbolValues="voiceminus" />
         </SegmentDefinition>
+        <SegmentDefinition id="cP">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f0" symbolValues="f0P" />
+          <FeatureValue feature="voice" symbolValues="voiceminus" />
+        </SegmentDefinition>
+        <SegmentDefinition id="cB">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f0" symbolValues="f0B" />
+          <FeatureValue feature="voice" symbolValues="voiceplus" />
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
@@ -89,6 +105,11 @@
         <Name>S</Name>
         <FeatureValue feature="f0" symbolValues="f0S" />
       </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncSZ">
+        <Name>SZ</Name>
+        <Segment segment="cS" />
+        <Segment segment="cZ" />
+      </SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
       <PhonologicalRule id="prLen">
@@ -124,9 +145,75 @@
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
+      <PhonologicalRule id="prSibVoiceless">
+        <Name>voicelessToSibilant</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cP" />
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncSZ" />
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV" />
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV" />
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prSibVoiced">
+        <Name>voicedToSibilant</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cB" />
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncSZ" />
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV" />
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV" />
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" phonologicalRules="prLen">
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" phonologicalRules="prLen prSibVoiceless prSibVoiced">
         <Name>Main</Name>
         <LexicalEntries>
           <LexicalEntry id="eAka" partOfSpeech="posV">
@@ -146,6 +233,24 @@
             </Allomorphs>
             <MorphemeId>ITA</MorphemeId>
             <Gloss>ita</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIpi" partOfSpeech="posV">
+            <Allomorphs>
+              <Allomorph id="aIpi">
+                <PhoneticShape>ipi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>IPI</MorphemeId>
+            <Gloss>ipi</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIbi" partOfSpeech="posV">
+            <Allomorphs>
+              <Allomorph id="aIbi">
+                <PhoneticShape>ibi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>IBI</MorphemeId>
+            <Gloss>ibi</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
