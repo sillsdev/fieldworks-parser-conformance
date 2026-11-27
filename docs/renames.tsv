@@ -44,3 +44,11 @@ edge-cases/partial-class-disagree-bounded-rtl-right	edge-cases/partial-class-dis
 edge-cases/partial-class-disagree-unbounded-ltr-right	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/partial-class-disagree-unbounded-rtl-left	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/partial-class-disagree-unbounded-rtl-right	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-bounded-ltr-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-bounded-rtl-left	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-bounded-rtl-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-plain-ltr-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-unbounded-ltr-left	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-unbounded-ltr-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-unbounded-rtl-left	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/nullable-disagree-unbounded-rtl-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
