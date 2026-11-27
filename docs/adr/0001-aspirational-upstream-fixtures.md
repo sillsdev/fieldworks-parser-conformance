@@ -1,6 +1,8 @@
 # Fixtures may be aspirational for upstream Machine and FieldWorks
 
-Status: accepted (owner, 2026-11-25)
+Status: accepted (owner, 2026-11-25); amended by [ADR 0007](0007-exceptions-live-in-status-yaml.md)
+
+Amended 2026-11-27: exceptions move from the `upstream` field to `status.yaml` once epic S1 lands; see [ADR 0007](0007-exceptions-live-in-status-yaml.md).
 
 ## Context
 

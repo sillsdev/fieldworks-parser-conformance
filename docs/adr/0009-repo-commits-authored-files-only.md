@@ -1,0 +1,41 @@
+# The repo commits authored files only; no-parse words may be generated
+
+Status: accepted (owner, 2026-11-27)
+
+## Context
+
+Committed derived files (two manifests, `coverage.csv`, `rules.csv`) change on almost every pull request, conflict, and
+need the consuming engine's runner to regenerate (AGENTS.md section 2a). The 2026-11-27 API review estimated 14 steps and 3 pull
+requests to add one test case. Separately, some test cases need long lists of words that cannot parse, which are
+mechanical to derive from an alphabet and a length.
+
+## Decision
+
+- The repo commits only authored files: grammars, words, `status.yaml`, READMEs, `renames.tsv`, PROTOCOL and docs.
+- Everything derived (manifests, `coverage.csv`, `rules.csv`) comes from one script. Consumers and CI generate their own copies.
+- The reader index `docs/grammars.md`, with a computed tier column, is committed and checked for freshness.
+- Machine #615 changes to generate what it needs.
+- A test case's no-parse words may be generated from a declared rule: an alphabet up to a length, minus listed words,
+  expanded deterministically by a reference script shipped in the suite. The format is decided in epic S5. The rule is limited
+  to no-parse words.
+
+## Consequences
+
+- Adding a test case becomes: write the two files, run one check, push to main once the gate passes (AGENTS.md, Landing).
+- No derived file can go stale in a pull request, because none is committed. The one committed index is guarded by a check.
+- Generated no-parse words stay reproducible without bloating `words.yaml`; analyses are never generated, so ADR 0002 holds.
+- Today: the manifests, `coverage.csv` and `rules.csv` are committed and hashed, `scripts/generate_manifest.py --check` and
+  `scripts/check_coverage.py` enforce them, and no word generation exists. Until S1 and Machine #615 accept the change,
+  AGENTS.md section 2a applies unchanged.
+
+## Alternatives considered
+
+- **Keep derived files committed and checked.** Rejected: constant churn and merge conflicts for no information the script cannot recompute.
+- **Commit the index nowhere.** Rejected: readers browsing the repo would have no catalogue; a checked index costs little.
+- **Generate analyses as well.** Rejected: results come only from the reference run ([ADR 0002](0002-reference-is-the-only-source-of-expected-results.md)).
+
+## Sources
+
+- test262 generated tests: <https://github.com/tc39/test262/blob/main/CONTRIBUTING.md>
+- Machine #615, the conformance runner: <https://github.com/sillsdev/machine/pull/615>
+- Machine #506 and #556 (deterministic output): <https://github.com/sillsdev/machine/pull/506>, <https://github.com/sillsdev/machine/pull/556>

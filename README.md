@@ -70,7 +70,7 @@ needs an engine fix, so CI never runs a commit that cannot be fetched.
 | Consume the suite | [docs/consuming.md](docs/consuming.md) |
 | Contribute | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Time an engine | [stress/README.md](stress/README.md) |
-| Look up a term | [docs/glossary.md](docs/glossary.md) |
+| Look up a term | [GLOSSARY.md](GLOSSARY.md) |
 | See what FieldWorks cannot say | [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md) |
 | Trace where results came from | [PROVENANCE.md](PROVENANCE.md) |
 | Find every document | [docs/README.md](docs/README.md) |
