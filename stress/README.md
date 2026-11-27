@@ -81,7 +81,8 @@ Five fixtures (`allomorph-list-density`, `prefix-class-density`, `env-bantu-conc
 `env-zero-allomorphs`) once wrote their stem-side context as a RequiredEnvironments on a lone prefix or suffix. HCLoader
 never writes that, so the 68 subrules now carry the same context in the input pattern, as HCLoader does, and no expected
 row changed. The env- fixtures were built for the environment input prefilter, which these grammars no longer
-exercise; they stay as allomorph-gating workloads. Their names are kept, and the names overstate what they
+exercise; they stay as allomorph-gating workloads. Their names are kept on purpose: sillsdev/machine reads
+the stress fixture names, so a rename is a coordinated pin bump there, which the suite owners have declined for now. The names overstate what they
 now cover: only `env-zero-allomorphs` has any `RequiredEnvironments`, two left environments on a lone prefix.
 
 **Open item: a near-side density fixture.** The only environments HCLoader can write on an affix are a right
