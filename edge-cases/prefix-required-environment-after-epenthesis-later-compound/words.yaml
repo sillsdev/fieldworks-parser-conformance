@@ -8,11 +8,6 @@ sources:
   - "FieldWorks HCLoader.LoadAffixProcessRule, LoadRewriteRule (epenthesis), LoadCompoundingRule"
 requires: [phonology]
 fieldworks_producible: true
-upstream:
-  - ref: "jira:LT-22922"
-    kind: issue
-    affects: loader
-    note: "HCLoader keeps a prefix's right-hand environment instead of folding it into the input pattern"
 words:
   - word: "a"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."

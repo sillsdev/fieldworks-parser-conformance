@@ -1,9 +1,9 @@
 # oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged by PanGloss#388; the grammar is the issue's probe, kept whole, and every staged row replayed unchanged). The three expect_fail rows record that ba6dfa10 gives no parse for words its own synthesis generates.
-# Known oracle limitation, sillsdev/machine#619 (open; divergence 127): AnalysisMetathesisRuleSpec drops everything between the
+# Reference defect sillsdev/machine#619 (open; divergence 127; tracked in status.yaml): AnalysisMetathesisRuleSpec drops everything between the
 # switch groups, so analysis of pr0 (s p t -> t p s) looks for adjacent switches and cannot undo the swap. Checked
 # against the #619 fix (293f6f8d applied to ba6dfa10): tps, tp+s and t+ps then parse as R0+PR0+PR1 and R2+PR0+PR1, and
 # the control st is unchanged. Without the deletion pd0 the three words are still rejected, so pd0 is not what fails.
-# When #619 is fixed and a pin includes it, flip the three rows to the parses in their notes.
+# When #619 is fixed and the reference commit includes it, flip the three rows to the intended answers in status.yaml and delete their status.yaml rows.
 language: MetathesisMiddleContextEmptiedEdges
 inspired_by: ["synthetic metathesis rule with a middle segment and a deletion (not modeling any real language)"]
 sources: ["sillsdev/PanGloss#388", "sillsdev/machine#619", "FieldWorks HCLoader.LoadMetathesisRule (switches and middle context), HCLoader.LoadRewriteRule (a -> 0), HCLoader.LoadAffixProcessRule (prefixes s+, p+)"]
@@ -12,17 +12,17 @@ fieldworks_producible: true
 words:
   - word: tps
     note: >-
-      Known oracle limitation (sillsdev/machine#619, open): machine ba6dfa10 gives no parse. Rule pr0 is `s p t -> t p s`, with the middle `p` between the switches; prefixes PR0 `s+` and PR1 `p+` on root t make `s+p+t`, which pr0 turns into `t+p+s` (shown as tps). Analysis drops the middle context and cannot undo the swap. Intended parse once #619 is fixed: R0+PR0+PR1 and R2+PR0+PR1.
+      Rule pr0 is `s p t -> t p s`, with the middle `p` between the switches; prefixes PR0 `s+` and PR1 `p+` on root t make `s+p+t`, which pr0 turns into `t+p+s` (shown as tps). Analysis drops the middle context and cannot undo the swap. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "tp+s"
     note: >-
-      Known oracle limitation (sillsdev/machine#619, open): machine ba6dfa10 gives no parse. As tps with a boundary after the middle segment. Intended parse once #619 is fixed: R0+PR0+PR1 and R2+PR0+PR1.
+      As tps with a boundary after the middle segment. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "t+ps"
     note: >-
-      Known oracle limitation (sillsdev/machine#619, open): machine ba6dfa10 gives no parse. As tps with a boundary after the first switch. Intended parse once #619 is fixed: R0+PR0+PR1 and R2+PR0+PR1.
+      As tps with a boundary after the first switch. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: st

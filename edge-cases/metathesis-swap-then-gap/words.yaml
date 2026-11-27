@@ -1,9 +1,9 @@
 # oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged by PanGloss#411; the staged grammar's inverted switch order was converted to the producible one and every row replayed unchanged). The six expect_fail rows record that ba6dfa10 gives no parse for words its own synthesis generates.
-# Known oracle limitation, sillsdev/machine#649 (open; divergence 132): analysis un-applies the deletion pd0 first and
+# Reference defect sillsdev/machine#649 (open; divergence 132; tracked in status.yaml): analysis un-applies the deletion pd0 first and
 # restores an optional t between the switches of pm0, so the optional t joins the first switch's capture and
 # AnalysisMetathesisRuleSpec pairs the captures node by node: the swap is never undone and no root matches. Same
-# mechanism as metathesis-deletion-restores-segment-between-switches. When #649 is fixed and a pin includes it, flip the
-# six rows to the parses in their notes.
+# mechanism as metathesis-deletion-restores-segment-between-switches. When #649 is fixed and the reference commit includes it, flip the
+# six rows to the intended answers in status.yaml and delete their status.yaml rows.
 language: MetathesisSwapThenGap
 inspired_by: ["synthetic metathesis rule followed by a deletion that restores an optional node between the switches (not modeling any real language)"]
 sources: ["sillsdev/PanGloss#411", "sillsdev/machine#649", "FieldWorks HCLoader.LoadMetathesisRule (the switches), HCLoader.LoadRewriteRule (t -> 0), HCLoader.LoadAffixProcessRule (prefix +, suffix a)"]
@@ -12,32 +12,32 @@ fieldworks_producible: true
 words:
   - word: "+sp"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine ba6dfa10 gives no parse. Root pst: pm0 swaps `p s` to `s p`, and pd0 then deletes `t`; hc.dll generates `+sp` from NU0+R2 but cannot parse it, because analysis restores `t?` between the switches and pairs it with a switch. Intended parse once #649 is fixed: NU0+R2.
+      Root pst: pm0 swaps `p s` to `s p`, and pd0 then deletes `t`; hc.dll generates `+sp` from NU0+R2 but cannot parse it, because analysis restores `t?` between the switches and pairs it with a switch. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "+spa"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine ba6dfa10 gives no parse. As +sp, with root tpsa (R0) or pst plus suffix SU1. Intended parse once #649 is fixed: NU0+R0 and NU0+R2+SU1.
+      As +sp, with root tpsa (R0) or pst plus suffix SU1. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: sp
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine ba6dfa10 gives no parse. As +sp without the NU0 prefix. Intended parse once #649 is fixed: R2 (and NU0+R2, whose prefix is a bare boundary).
+      As +sp without the NU0 prefix. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: spa
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine ba6dfa10 gives no parse. As +spa without the NU0 prefix. Intended parse once #649 is fixed: R0, R2+SU1 and the NU0 variants.
+      As +spa without the NU0 prefix. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: spaa
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine ba6dfa10 gives no parse. Root tpsa plus suffix SU1 `a`. Intended parse once #649 is fixed: R0+SU1.
+      Root tpsa plus suffix SU1 `a`. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "+spaa"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine ba6dfa10 gives no parse. As spaa with the NU0 prefix. Intended parse once #649 is fixed: NU0+R0+SU1.
+      As spaa with the NU0 prefix. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: psa

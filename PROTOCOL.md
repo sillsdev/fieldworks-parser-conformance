@@ -698,35 +698,51 @@ The suite defines the runner output and the sidecar, and nothing else.
   against the grammar by a person, as for parse rows (AGENTS.md section 2, step 3). Record the build in the
   fixture's `words.yaml` header.
 
-## 12. Upstream tags
+## 12. Exceptions: `status.yaml`
 
-A fixture whose expected behaviour depends on an unmerged upstream change says so in `words.yaml`
-([ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md)):
+Every tracked departure from the reference lives in one file, `status.yaml` at the suite root
+([ADR 0007](docs/adr/0007-exceptions-live-in-status-yaml.md), which amends
+[ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md)). `schema/status.schema.json` is its schema. A row is
+keyed by test case plus, where the exception is per word, the word:
 
 ```yaml
-upstream:
-  - ref: sillsdev/FieldWorks#1263   # owner/repo#number
-    kind: pr                        # pr | issue
-    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054   # required for pr: full 40-hex commit the rows depend on
-    affects: loader                 # engine | loader
-    note: one line, what the fixture needs from it
+version: 1
+exceptions:
+  - case: edge-cases/affix-multiple-application      # the test case's id: its directory path
+    kind: pending-upstream                           # reference-defect | pending-upstream
+    ref: sillsdev/FieldWorks#1263                    # owner/repo#number or jira:KEY-123
+    ref_type: pr                                     # pr | issue
+    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054   # a pr only: the full 40-hex commit the rows depend on
+    affects: loader                                  # engine | loader
+    reason: one line: what the test case needs from it
+  - case: edge-cases/metathesis-swap-then-gap
+    word: sp                                         # a row about one word
+    kind: reference-defect
+    ref: sillsdev/machine#649
+    ref_type: issue
+    affects: engine
+    reason: the reference gives no parse
+    intended: R2 (and NU0+R2)                        # required on a word row: the answer the reference should give
 ```
 
-- `affects: engine`: the C# engine lacks the behaviour without the change. A runner skips the fixture, listing it
-  with its reason, unless the build under test contains `head`. `affects: loader`: only FieldWorks `HCLoader`
-  lacks it; engines run the fixture normally, and the producibility gate accepts a shape the loader never writes
-  only while a `sillsdev/FieldWorks` loader entry is open (offline counts as open, with a note). PanGloss runs
-  every fixture regardless.
+- A word's expected result stays what the reference returns ([ADR 0002](docs/adr/0002-reference-is-the-only-source-of-expected-results.md)).
+  A word row records the intended answer beside it, so the reference gate failing when the fix lands is the signal to
+  delete the row. Closing an exception is deleting its row.
+- `kind`: `reference-defect` is a word or test case the reference gets wrong today; `pending-upstream` is a test case
+  that depends on a change not yet merged (ADR 0001's allowance). Consumer divergences never enter this file.
+- `affects: engine` on a whole-test-case row: a runner skips the test case, listing it with its reason, unless the
+  build under test contains `head`. `affects: loader`: only FieldWorks `HCLoader` lacks the behaviour; engines run the
+  test case normally, and the producibility gate accepts a shape the loader never writes only while a
+  `sillsdev/FieldWorks` row for that test case is open (offline counts as open, with a note). PanGloss runs every
+  test case regardless. A word row never causes a skip.
 - States, from `scripts/upstream.py` (git ancestry first, `gh` second, `pending` with a reason when `gh` is
-  unavailable): `satisfied`, `pending`, `merged` (re-point citations), `closed-unmerged` and `issue-closed`
-  (retire or re-check). FieldWorks issues live in Jira: `jira:LT-12345` is checked only when `JIRA_URL` plus
-  `JIRA_PAT_TOKEN` (or `JIRA_USERNAME` and `JIRA_API_TOKEN`) are set, else `pending` ("jira unchecked"); Won't
-  Fix/Won't Do gives `rejected`, other resolutions `issue-closed`. `allows_never_shape()` there is the producibility rule.
-- `python3 scripts/upstream_status.py [--strict]` lists every entry by state. Tag only fixtures whose rows depend
-  on the change.
-- `upstream` is optional and additive. PanGloss ignores it. sillsdev/machine's runner rejects an unknown
-  `words.yaml` key (see section 11), so a pinned machine runner must learn `upstream` before its pin moves past
-  the commit that introduced it.
+  unavailable): `satisfied`, `pending`, `merged` (re-point the reference commit, delete the row), `closed-unmerged`
+  and `issue-closed` (retire or re-check). FieldWorks issues live in Jira: `jira:LT-12345` is checked only when
+  `JIRA_URL` plus `JIRA_PAT_TOKEN` (or `JIRA_USERNAME` and `JIRA_API_TOKEN`) are set, else `pending` ("jira
+  unchecked"); Won't Fix/Won't Do gives `rejected`, other resolutions `issue-closed`.
+- `python3 scripts/suite.py status [--strict]` lists every row by state; `--strict` fails on `merged`,
+  `closed-unmerged`, `issue-closed` and `rejected`. `python3 scripts/suite.py check` validates the file.
+- `status.yaml` is optional and additive. PanGloss ignores it. sillsdev/machine's runner reads it. `words.yaml` has no
+  `upstream` key.
 - `allows_never_shape()` in `scripts/upstream.py` is the producibility rule that the machine
-  `FieldWorksProducibleShape` gate calls; fpc itself has no caller. `rejected` (Jira Won't Fix/Won't Do) also
-  fails `--strict`.
+  `FieldWorksProducibleShape` gate applies to the rows of a test case; fpc itself has no caller.

@@ -190,8 +190,8 @@ Three of the five fixtures deleted after the #615 gate were restored on 2026-11-
 [ADR 0001](adr/0001-aspirational-upstream-fixtures.md)), because FieldWorks Jira
 [LT-22922](https://jira.sil.org/browse/LT-22922) is open: it asks `HCLoader` to keep a prefix's right-hand
 environment as an environment instead of folding it into the input pattern (row 14 of
-fieldworks-cannot-say.md). Each carries `upstream: [{ref: "jira:LT-22922", kind: issue, affects: loader}]` in
-its `words.yaml`. Their rows are unchanged from the commit that deleted them.
+fieldworks-cannot-say.md). Each has a `pending-upstream` row for `jira:LT-22922` (`affects: loader`) in
+`status.yaml`. Their rows are unchanged from the commit that deleted them.
 
 | Fixture | Construct | Upstream |
 |---|---|---|
@@ -199,7 +199,7 @@ its `words.yaml`. Their rows are unchanged from the commit that deleted them.
 | `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | 14: as above | LT-22922 |
 | `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | 14: as above | LT-22922 |
 
-If LT-22922 is closed unfixed (`scripts/upstream_status.py` reports `issue-closed` or `rejected`), retire the three
+If LT-22922 is closed unfixed (`python3 scripts/suite.py status` reports `issue-closed` or `rejected`), retire the three
 again and put their rows back in the "Deleted" table above (their rows are in the history of this file at 16a7368).
 
 ## Trace-verified surfaces lost and gained
