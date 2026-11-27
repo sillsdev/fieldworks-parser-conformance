@@ -558,6 +558,14 @@ independently (a fixture updated in place, a manifest hand-edited, a partial che
 op naming a guid that isn't even in the project it's about to run against is a worse failure mode
 than a mismatched hash caught up front.
 
+`phonology-mutations.yaml` also carries `grammar_sha256`, the SHA-256 of the fixture's `grammar.xml` as text with
+line endings normalised (the hash the manifest uses), recorded when the witness was authored or regenerated.
+`scripts/check_fwdata.py` fails when it no longer matches, because the witness may then project to a different
+grammar than the fixture states. A witness without the field is accepted only while its fixture is listed in
+`fieldworks-stale-witnesses.tsv`, the known-stale allowlist; regenerating a witness adds the field and removes the
+row. Each `WritingSystemStore/*.ldml` must be minimal: only the top-level elements `identity`, `layout`,
+`characters`, `delimiters`, `collations` and `special`, and at most 64 KiB.
+
 `phonology-mutations.yaml`'s v1 vocabulary is exactly:
 
 - Two operations: `remove_phoneme` (`guid`, `assert_representations`, `require_unreferenced`) and
