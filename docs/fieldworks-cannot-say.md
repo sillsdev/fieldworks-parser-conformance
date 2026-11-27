@@ -86,8 +86,8 @@ words.
 partial rule, derivational rule, clitic rule, compounding rule, template, slot, stratum, stem name, lexical
 entry, root allomorph, phonological and metathesis rules, co-occurrence rules) it says per DTD attribute and
 element whether `HCLoader.cs` writes it, with the line. sillsdev/machine's `FieldWorksProducibleShapeTests` reads it and fails
-a flagged fixture that uses a member the table calls `never` or does not list, so a new construct must be
-added to the table with a loader line before a flagged fixture may use it. The conditions a row cannot say
+a test case that uses a member the table calls `never` or does not list, so a new construct must be
+added to the table with a loader line before a test case may use it. The conditions a row cannot say
 (rows 14, 16 and 25 to 27, and a cap on an exocompound) are checked in that project's `FieldWorksWritableShapes`.
 
 **What "producible" does not cover: the `+` boundary.** The flag and the census above are about which
@@ -99,6 +99,19 @@ only if it defines one, and 87 of the 231 grammars do. Most fixtures write their
 effect of that on a parse is not measured. A claim that an output is "written as HCLoader writes it" is
 therefore made only where the output carries the boundary, as in the circumfix of
 `languages/suffixing-vowel-harmony`.
+
+**XML-only controls.** A value the census marks `omitted` or `inert` is one a round trip cannot return, so
+a test case is rewritten without it (PROTOCOL.md section 9). The only values kept are those a word depends
+on, listed here with the reason. The loader drops the value, so the project loads to the same grammar as the
+file without it.
+
+| Test case | Value | Census status | Word that depends on it | Why it stays |
+|---|---|---|---|---|
+| `edge-cases/compounding-breadth` | `CompoundingRule isActive="no"` (`crDecoy`) | `omitted` (`HCLoader.cs` 254) | `kaptu`, `blocked_by: [crDecoy]` | `kaptu` is the negative control for the inactive flag: `crDecoy` would join with a "p", and it is refused because the rule is inactive. A project that disables a compound rule loads without it, so the word fails there too. |
+
+Removed under the same rule (issue #28): the two `isActive="no"` co-occurrence rules and
+`cyclicity="cyclic"` and `phonologicalRuleOrder="simultaneous"` from `edge-cases/morphotactic-attribute-breadth`.
+No word depended on any of them.
 
 The 23 fixtures removed for these constructs, each mapped to the construct that disqualified it, are in
 [`docs/engine-only-fixture-retirement.md`](engine-only-fixture-retirement.md).

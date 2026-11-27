@@ -8,7 +8,6 @@ edge-cases/final-template-partial-discriminators	mrZTagSlot	Mandatory slot rule 
 edge-cases/interposed-optional-multi-rhs	delete	Vacuous in forward synthesis; its inverse inserts an optional x between merge targets during analysis, which is the regression trigger.
 edge-cases/literal-hash-affix-context	prFinal	Requires a literal # boundary absent from every authored shape; unchanged suffix forms and rejected rewritten neighbors pin that it must not fire.
 edge-cases/literal-hash-affix-context	prInitial	Requires a literal # boundary absent from every authored shape; unchanged prefix forms and rejected rewritten neighbors pin that it must not fire.
-edge-cases/morphotactic-attribute-breadth	subCoA	Allomorph of an isolated stacking suffix whose co-occurrence rules were removed; only its rule is exercised.
 edge-cases/morphotactic-attribute-breadth	subExA	Primary of an exclude AllomorphCoOccurrenceRule; words exercise the exclusion, not the allomorph.
 edge-cases/morphotactic-attribute-breadth	subExC	Named by the adjacency-variant exclude rules; "toplane" exercises the exclusion, not the allomorph.
 edge-cases/morphotactic-attribute-breadth	subExD	Named by the adjacency-variant exclude rules; "toplane" exercises the exclusion, not the allomorph.

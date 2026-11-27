@@ -25,7 +25,7 @@
 #
 # COVERAGE LOST, NAMED PLAINLY: CompoundingSubrule@isActive="no" (per-subrule deactivation) is no
 # longer exercised by ANY fixture in this corpus, producible or not. CompoundingRule@isActive="no"
-# itself (crDecoy, above) stays covered by kaptu. HeadRequiredHeadFeatures and NonHeadRequiredHeadFeatures
+# itself (crDecoy, above) stays covered by kaptu. It is an XML-only control: the loader drops a disabled compound rule (HCLoader.cs 254), kept because kaptu depends on it and listed in docs/fieldworks-cannot-say.md. HeadRequiredHeadFeatures and NonHeadRequiredHeadFeatures
 # are no longer exercised either: they are unproducible (README row 24).
 
 language: CompoundingBreadth

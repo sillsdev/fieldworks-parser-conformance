@@ -2,12 +2,8 @@
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
 <!-- Morphotactic attribute breadth. Closes the coverage-ledger entries that need no phonological
      feature system: repetition caps, partial rules/entries, bound allomorphs, non-final templates,
-     co-occurrence rules, and MPR feature groups. Stratum cyclicity and phonologicalRuleOrder are
-     declared below (Main) purely for the enumerated value's presence in a document: grep the whole
-     of src/SIL.Machine.Morphology.HermitCrab for "Cyclicity"/"PhonologicalRuleOrder" and Stratum.cs's
-     own property list, and neither exists anywhere outside the DTD and XmlLanguageLoader's unread
-     Stratum attribute text; the loader never even reads them into a discarded local, let alone acts
-     on them. No fixture can make either surface observable; that is a product gap, not a modeling gap.
+     co-occurrence rules, and MPR feature groups. Stratum cyclicity and phonologicalRuleOrder are not declared: the loader never writes them and the
+     engine never reads them, so no word could observe either.
 
      Converted to fieldworks_producible: true (see words.yaml history note for the prior state and
      what did not survive). Two independent, previously unrecorded findings drove the biggest changes
@@ -39,8 +35,8 @@
      template-then-stratum-rule ordering only exists via the Unordered ApplyTemplates-then-
      ApplyMorphologicalRules recursion in SynthesisStratumRule.cs.
 
-     Every decoy carries isActive="no" and is named by the word whose outcome observes it, per
-     words.yaml's neutralizes: lists. -->
+     The isActive="no" co-occurrence decoys, cyclicity="cyclic" and phonologicalRuleOrder="simultaneous"
+     were removed: no word observed them and a round trip cannot return them (issue #28). -->
 <HermitCrabInput>
   <Language>
     <Name>MorphotacticAttributeBreadth</Name>
@@ -95,18 +91,7 @@
       <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <!-- cyclicity="cyclic" and phonologicalRuleOrder="simultaneous" are both non-default. This
-           stratum declares no phonological rules, so the rule-order value is a load-time property
-           here rather than an observable ordering; the ledger records it accordingly. Neither
-           attribute has a producibility question of its own: Stratum.cs carries no corresponding
-           engine property at all (see the file header), so HCLoader has no path to write either
-           value regardless; the DTD default and any explicit value are equally unreachable from a
-           real project, and equally inert in the engine. morphologicalRuleOrder="unordered" (below)
-           is the one Stratum attribute that IS engine-real and IS HCLoader-producible (HCLoader
-           hardcodes Unordered on every Stratum it builds; see the file header for why this fixture
-           had to move off "linear" to convert). -->
-      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" cyclicity="cyclic"
-               phonologicalRuleOrder="simultaneous"
+      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered"
                morphologicalRules="mrRep1 mrGrpSetB mrGrpSetA mrGrpReq"
                isActive="yes">
         <Name>Main</Name>
@@ -419,10 +404,6 @@
       <!-- type="exclude": HCLoader-producible (its two co-occurrence loaders build Exclude
            constraints only). EXA immediately right of EXB forbidden. -->
       <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrExA" otherMorphemes="mrExB" adjacency="adjacentToRight" />
-      <!-- isActive="no" decoy: HCLoader DOES have a Disabled-filter equivalent for
-           MorphemeCoOccurrenceRule (unlike LexicalEntry/Allomorph/Stratum/etc.), so this is
-           producible. Reuses CoA/CoC harmlessly (inactive, so it never actually fires). -->
-      <MorphemeCoOccurrenceRule isActive="no" type="exclude" primaryMorpheme="mrCoA" otherMorphemes="mrCoC" adjacency="anywhere" />
     </MorphemeCoOccurrenceRules>
     <AllomorphCoOccurrenceRules>
       <!-- type="exclude": EXA and EXB may never co-occur anywhere in the same word. -->
@@ -434,10 +415,6 @@
       <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subExC" otherAllomorphs="subExD" adjacency="adjacentToRight" />
       <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subExD" otherAllomorphs="subExC" adjacency="somewhereToLeft" />
       <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subExC" otherAllomorphs="subExD" adjacency="somewhereToRight" />
-      <!-- isActive="no" decoy, preserved from the pre-conversion grammar's own isActive-toggle
-           coverage: on unrelated material (CoA/CoC), so activating it would invalidate topsakatana
-           without touching exASlot/exBSlot/exCSlot/exDSlot's own words. -->
-      <AllomorphCoOccurrenceRule isActive="no" type="exclude" primaryAllomorph="subCoA" otherAllomorphs="subCoC" adjacency="anywhere" />
     </AllomorphCoOccurrenceRules>
   </Language>
 </HermitCrabInput>

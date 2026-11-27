@@ -512,6 +512,11 @@ affix process, a cap on an exocompound, and MPR features outside the
 three loader groups. A new construct goes into the table, with its loader line, before a test case may
 use it.
 
+**`omitted` and `inert` values count under the round trip.** A value the loader filters out or never writes is
+one a round trip cannot return, so a test case does not keep it: the grammar is rewritten without it. The one
+exception is a value that a word in the test case depends on (a negative control that observes it). That value
+stays, and `docs/fieldworks-cannot-say.md` lists it under "XML-only controls" with its reason.
+
 Because the claim is authored, not derived, a mechanical checker built against it may only prove it **wrong** — by
 finding a construct in a test case's `grammar.xml` that matches a `never` row of the census or one of the mechanical
 checks above. A checker cannot see the absence of an HCLoader code path; it can only see that a construct is used,
