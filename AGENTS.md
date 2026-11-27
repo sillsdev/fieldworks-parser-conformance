@@ -41,6 +41,11 @@ not belong here, however expressible it is in the XML and however well an engine
 
 ## 2. Adding, changing or deleting a fixture
 
+**Any new grammar need goes through [building-grammars](.claude/skills/building-grammars/SKILL.md) first**: a reference
+bug or pending upstream change to record, a staged PanGloss case, a behaviour no test case detects, a generator
+finding, a changed expected result, and any merge, retirement or rename. It decides whether a test case is added and
+where, and which route in "Landing" applies; the steps below are the mechanics.
+
 A fixture is a directory under `languages/` or `edge-cases/` holding `grammar.xml` and `words.yaml`, and
 optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/what-it-is.md) and
 [docs/consuming.md](docs/consuming.md) ("Consuming the suite from another repository") describe the files; `schema/words.schema.json` and
@@ -65,7 +70,8 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 6. Regenerate the manifest (section 2a), then read the `git diff`. The manifest should move only for the
    fixtures you touched.
 7. Delete a fixture by removing its directory and its line in `docs/grammars.md`, then regenerating. Remove a
-   `dead-rules-allowed.tsv` line that names it.
+   `dead-rules-allowed.tsv` line that names it, and append its row to `docs/renames.tsv` (columns and rules in
+   [building-grammars](.claude/skills/building-grammars/maintaining.md#rename-and-telling-the-consumers)).
 8. Tell the consuming engines. sillsdev/machine and PanGloss each pin a commit of `main` in `conformance.commit`,
    so a change reaches an engine when it bumps that pin. Their own self-check is regenerated on their side, not
    here. The order of the pull requests, and what each pin names at each step, is in

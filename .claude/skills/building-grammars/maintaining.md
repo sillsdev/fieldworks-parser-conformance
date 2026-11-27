@@ -1,0 +1,93 @@
+# Maintaining the suite: merge, retire, remove a word, rename, review
+
+Part of [building-grammars](SKILL.md); its terms and its "until epic S1 lands" note apply here. Merges,
+retirements, renames and format changes go through a PR with a sonnet-reviewer LAND verdict (AGENTS.md,
+"Landing").
+
+**Detection is the guardrail** ([ADR 0008](../../../docs/adr/0008-value-is-detection.md)):
+
+- the last detector of a bug is never removed;
+- the last word carrying a behaviour label is never removed;
+- language profiles (`languages/*`) are retired only by owner decision;
+- C# code paths only nominate a test case: removal needs a written reason the path is incidental;
+- a merged grammar keeps every member's behaviour labels.
+
+Merge waves wait for the behaviour-label vocabulary (epic S1 sub-issue). Until then judge by `exercises`,
+`constructs.txt`, the exceptions and the bug builds.
+
+## Merge: fold a family into a survivor
+
+Eligible when the members form a **family** and no cannot-merge reason (SKILL.md section 2) holds between
+them. Read the grammars, not a line count.
+
+| Kind | When | Words |
+|---|---|---|
+| **union** | grammars identical apart from `<Name>` and comments, or one is a superset that replays the other's results | the survivor is an existing member and keeps its id; absorbed words replay |
+| **variants** | grammars identical, only `morpher:` settings differ | one `variants:` run per absorbed test case |
+| **rebuild** | members share a word list and differ in one parameter | each member becomes a **cell**: its own rule, segments and words, so cells cannot interact |
+
+1. List members, survivor id and kind. The survivor id is not in `docs/renames.tsv` and is not an existing
+   directory other than a member.
+2. Write the survivor's grammar; for a rebuild, a cell map from each member's rules and words to the survivor's.
+3. Take every result from the reference with `--propose`.
+4. **Replay.** Every absorbed word's result is unchanged (rebuild: matches under the cell map). A mismatch
+   means the cells interact: leave that member out and say `interaction` in the family README.
+5. **Detection.** For each bug a member detects, the survivor still fails on the bug build; each member's
+   behaviour labels are carried over. A member that cannot be shown stays out.
+6. Carry over notes, citations and exceptions (re-keyed to the survivor).
+7. Remove the absorbed directories, append one `docs/renames.tsv` line per absorbed id, run the checks.
+8. The commit body carries the cell map, the replay and detection results, the test case count before and
+   after, and the changed-result table.
+
+One family per commit.
+
+## Retire
+
+Retire a test case only when each of these is checked and written in the commit body:
+
+1. It is not the last detector of any bug and no exception names it.
+2. It carries no behaviour label that no other word carries.
+3. It is not a language profile, unless the owner decided to retire it.
+4. If a C# code path is unique to it, the commit gives the reason the path is incidental.
+5. A named test case covers what it detected (this is `covered_by`).
+
+Then remove the directory, append its `docs/renames.tsv` line, run the checks.
+
+## Remove a word
+
+Only for one of these, named in the commit body: **result was wrong** (cite the finding), **merge** (the cell
+map names the word that stands for it), or **generated no-parse word** (ADR 0009). Never remove the last word
+carrying a behaviour label or the only word that fails on a bug build.
+
+## Rename, and telling the consumers
+
+Consumers pin the suite by commit ([ADR 0005](../../../docs/adr/0005-consumer-contract-and-test-case-identity.md)),
+so a rename, merge or retirement lands on `main` first and consumers follow at their next bump. Rename only as
+part of a merge, or when an id states the opposite of what the test case now pins. An id is its directory path,
+is never reused once retired, and never encodes tier, status or exception state.
+
+**`docs/renames.tsv` is a contract.** Tab-separated, one header line, columns in this order:
+
+| Column | Value |
+|---|---|
+| `old_id` | the removed test case's path (`edge-cases/<name>`, `languages/<name>`) |
+| `new_id` | the replacing id, or the literal `retired` |
+| `covered_by` | for `retired`, the id that covers what it detected; otherwise empty |
+| `wave` | the wave that removed it, named `wave-YYYY-MM-DD`; never empty |
+
+Lines are appended, never edited or removed. Each settled wave gets a git tag with the same name.
+
+After the commit lands, `git grep` the removed ids in the consumers' checkouts and open one issue in each
+consumer's repository with the suite commit, the new lines and the hits.
+
+## Periodic review
+
+Run it each quarter, or when the test case count has grown by 10% since the last review.
+
+1. List candidates: test cases whose every bug and behaviour label is detected elsewhere; families of four or
+   more members that differ in one parameter; exceptions that `scripts/upstream_status.py` reports resolved;
+   dead-rule lines a word now exercises; behaviour labels carried by one word.
+2. Comment on the review issue with each candidate and a decision (merge, retire, re-point, keep with reason).
+3. Apply accepted decisions with this page, one family per commit.
+
+Done when the review issue lists every candidate with a decision and the date.
