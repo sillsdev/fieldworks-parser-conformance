@@ -66,6 +66,11 @@ words:
         rules: ["cr1"]
     exercises:
       - "CompoundingRule > boundary marker at the junction"
+  - word: "a++a"
+    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    expect_fail: true
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
