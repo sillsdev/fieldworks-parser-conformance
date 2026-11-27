@@ -402,6 +402,11 @@ NarrowingBoundaryFirstAlphaLhs,mrFA,aafa
 NarrowingBoundaryFirstAlphaLhs,mrPA,aafa
 NarrowingBoundaryFirstAlphaLhs,mrVA,aava
 NarrowingBoundaryFirstAlphaLhs,prSpirant,aafa;aava
+NarrowingBoundaryOrderAlphaLhs,mrBA,aava
+NarrowingBoundaryOrderAlphaLhs,mrFA,aafa
+NarrowingBoundaryOrderAlphaLhs,mrPA,aafa
+NarrowingBoundaryOrderAlphaLhs,mrVA,aava
+NarrowingBoundaryOrderAlphaLhs,prSpirant,aafa;aava
 NfaLiteralAllomorphEnvironment,mrInfix,ginabas
 NfaLiteralAllomorphEnvironment,mrSuffix,gabsa
 NonCliticAfterFinalTemplateLayout,mrDeriv,!sagdk;kolk

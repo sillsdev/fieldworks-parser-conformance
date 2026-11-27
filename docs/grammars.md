@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 261 fixtures: 6 languages and 255 edge cases.
+The list has 262 fixtures: 6 languages and 256 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,7 +19,7 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 261 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 262 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
@@ -347,6 +347,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/boundary-mid-in-narrowing-lhs-strrep`: a merge with a boundary in the middle of its target, with no phonological features.
 - `edge-cases/boundary-narrowing-probe`: a suffix-initial consonant that becomes a nasal after a nasal.
 - `edge-cases/narrowing-boundary-first-alpha-lhs`: a spirantization whose input is a boundary then a stop with an alpha voicing variable, undone by narrowing (PanGloss#33).
+- `edge-cases/narrowing-boundary-order-alpha-lhs`: the same spirantization with a vowel before the boundary, so the rule's input is three nodes and its output two (PanGloss#33).
 - `edge-cases/literal-hash-affix-context`: a literal `#` marker in an environment, which is not a word-edge anchor.
 - `edge-cases/word-boundary-affix-rewrite`: a word-edge anchor in a rule that rewrites the edges of prefixes and roots.
 - `edge-cases/right-to-left-anchor-environment`: a spreading rule whose reach depends on the scan direction.
