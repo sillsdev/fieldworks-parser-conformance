@@ -114,7 +114,8 @@ own copy; none of these files is read from a checkout of this repository.
 Before a merge or retirement, `scripts/fixture_value.py` says which bugs a test case detects and which engine code only
 it reaches (ADR 0008). `bugs` lists every cited bug and the test cases citing it; `detection` replays the suite on a bug
 build and the reference and names the words that differ; `coverage` runs one instrumented reference run per test case
-(about 30 minutes, needs `dotnet-coverage`). The reports are derived: attach them to the issue that uses them, never
+(about 30 minutes, needs `dotnet-coverage`). Run `detection` and `coverage` under `stile admit --jobs 8`, waiting while it
+exits 10. The reports are derived: attach them to the issue that uses them, never
 commit them. They inform the decision and never make it: coverage only nominates, and the last detector of a bug stays.
 `python3 scripts/fixture_value.py --help` has the builds-file format.
 

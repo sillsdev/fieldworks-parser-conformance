@@ -48,6 +48,10 @@ class DetectionTests(unittest.TestCase):
         text = fv.render_detection({"machine#1": {"citing": ["a", "b"], "detectors": {"a": ["w"]}, "also": {}}, "_baseline_failing": {}})
         self.assertIn("LAST DETECTOR", text)
 
+    def test_also_detector_is_not_last(self):
+        text = fv.render_detection({"machine#1": {"citing": ["a"], "detectors": {"a": ["w"]}, "also": {"z": ["v"]}}, "_baseline_failing": {}})
+        self.assertNotIn("LAST DETECTOR", text)
+
 
 if __name__ == "__main__":
     unittest.main()

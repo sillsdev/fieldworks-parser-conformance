@@ -112,7 +112,7 @@ def cmd_bugs(args) -> int:
 
 def cmd_candidates(args) -> int:
     lines = []
-    for bug in sorted(b for b in cited_bugs() if b.startswith("machine#")):
+    for bug in sorted(b for b in cited_bugs(Path(args.suite)) if b.startswith("machine#")):
         number = bug.split("#")[1]
         log = subprocess.run(
             ["git", "-C", args.machine, "log", args.ref, "--format=%h %s", "-E", f"--grep=#{number}\\b"],
@@ -189,8 +189,9 @@ def render_detection(result: dict) -> str:
         r = result[bug]
         out.append(f"## {bug}")
         out.append(f"- citing test cases: {len(r['citing'])}; detectors among them: {len(r['detectors'])}")
-        if len(r["detectors"]) == 1:
-            out.append("- LAST DETECTOR (only one test case detects it): " + next(iter(r["detectors"])))
+        every = {**r["detectors"], **r.get("also", {})}
+        if len(every) == 1 and r["detectors"]:
+            out.append("- LAST DETECTOR (only one test case detects it): " + next(iter(every)))
         if not r["detectors"]:
             out.append("- no citing test case fails on the bug build (not a detection, or the build does not reproduce it)")
         for case, words in r["detectors"].items():
