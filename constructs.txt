@@ -1,19 +1,15 @@
-# HermitCrab grammar-model construct checklist
+# HermitCrab grammar-model construct checklist: the top level of the behaviour-label vocabulary
 #
-# This is the coverage-report key set: every languages/<name>/words.yaml and
-# edge-cases/<name>/words.yaml's per-parse and per-word "exercises:" entries are
-# expected to draw their values verbatim from this list. It is a data file, not compiled code, so a
-# new construct can be added here the moment a fixture needs it, without touching the harness.
+# A word's behaviour labels are its `exercises` entries (per word and per parse; a generated no-parse rule carries
+# them for its words). Each label is a line of this file, verbatim, or a child label in labels.tsv, which names a
+# sub-behaviour or an interaction below one of these lines (ADR 0008; PROTOCOL.md section 14). A label in neither
+# file fails `python3 scripts/suite.py check`, and so does a word with no label.
 #
-# Format: one construct per line. Blank lines and lines starting with "#" are ignored. A line's
-# text (verbatim, including punctuation) is the key the coverage report (--coverage-report)
-# cross-references against every word's/parse's "exercises:" entries, emitting coverage.csv and
-# flagging both zero-coverage constructs and dead rules (grammar.xml rule ids no word exercises,
-# emitted in rules.csv). This file IS the grammar-model construct checklist; add a new row's
-# construct text here the moment a fixture needs it, so the report picks it up.
-#
-# The harness treats an "exercises:" value that ISN'T in this file as a soft warning (a genuinely
-# new construct, or a typo) -- never a hard error.
+# Format: one construct per line. Blank lines and lines starting with "#" are ignored. A line's text (verbatim,
+# including punctuation) is the key the derived coverage.csv, labels.csv and rules.csv cross-reference. Add a line
+# here only when a word needs a behaviour no existing label or child label names, and say in the pull request which
+# labels you checked it against. A new line is a top-level label; prefer a child in labels.tsv when the behaviour
+# is a part of, or an interaction with, an existing construct.
 
 Stratum (Linear/Unordered rule order)
 AffixProcessRule: prefix/suffix/circumfix/infix

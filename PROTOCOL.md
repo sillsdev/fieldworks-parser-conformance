@@ -751,11 +751,11 @@ generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5            # min_length is optional and defaults to 1
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
-    exercises: [phonological-rule]   # optional: the behaviour label of every generated word (ADR 0008)
+    exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]   # required: the behaviour labels of every generated word (section 14)
 ```
 
 - **Meaning.** Every string of `min_length` to `max_length` symbols over `alphabet` that is not listed under `words` is a
-  word with `expect_fail: true`, the rule's `note`, and the rule's `exercises` when present. The rule can only say "no
+  word with `expect_fail: true`, the rule's `note`, and the rule's `exercises`. The rule can only say "no
   parse": it never produces `parses`, `expect_skip`, `blocked_by` or any other field, so every expected analysis still
   comes from the reference (ADR 0002). A word that must parse, or that needs its own note, is simply listed under `words`
   and the rule skips it.
@@ -773,3 +773,31 @@ generated_no_parse:
   with `min_length` above `max_length`. A rule says nothing about words outside its space; list those under `words`.
 - **Consumers.** Machine's runner and PanGloss's harness expand the rule before they run the test case. A consumer that
   does not know the key must refuse the test case rather than run only its listed words.
+
+## 14. Behaviour labels: `exercises`
+
+A test case is valued by the behaviours its words pin ([ADR 0008](docs/adr/0008-value-is-detection.md)), so every word names
+them. The field is `exercises`, a list of behaviour labels, on a word and on each of its parses; the field name is unchanged,
+so no consumer needs to accept a new key.
+
+- **Vocabulary.** A label is a line of `constructs.txt` (the top level: the constructs), or a line of `labels.tsv`, the child
+  levels. A child label is written `Parent > child`, with the parent's text verbatim, and may chain (`A > b > c`); it names a
+  sub-behaviour of its parent, or an interaction with it. A word carries a label by listing its whole text. A word that carries a
+  child label need not also list the parent; the derived table credits the parent for it.
+- **Every word carries a label.** A word with analyses is labelled when each analysis has a label of its own or the word has
+  one (the word's labels apply to every analysis). A word with no analysis (`expect_fail`, `expect_skip`) needs a label on the
+  word. Labels are per word so a failing word points to one behaviour; a grammar may test several behaviours. A merged
+  grammar keeps every label its members carried.
+- **Generated words carry their rule's labels.** A `generated_no_parse` rule (section 13) has a required, non-empty `exercises`
+  list, and every word it generates carries exactly that list. A label sits on the rule, not on each word, so a rule that spans
+  words with different behaviours is split into rules, one per behaviour (use `min_length`, `max_length` and listed `words`).
+  No other field of the rule changes: the rule still says only "no parse".
+- **Admission.** A new label is admitted only when it names something no existing label does. Each line of `labels.tsv`
+  records the existing labels it was checked against (its parent first, then its siblings and the neighbours it could be
+  confused with) and what it means. Variant runs (`variants:`) repeat the default words and are not labelled.
+- **Checks.** `python3 scripts/suite.py check` fails on a label in neither file, a `labels.tsv` line with a missing parent,
+  a missing checked label or no word carrying it, a word or generated rule without a label.
+- **The table.** `python3 scripts/suite.py labels` lists every label with its test case and word counts, and
+  `python3 scripts/suite.py labels "<label>"` lists the words carrying one (a construct includes its children's). `generate`
+  writes the same table as `labels.csv` (label, test case, word, words; a generated rule is one row naming `generated_no_parse[i]`
+  with the number of words it spans). It is derived and never committed (ADR 0009).

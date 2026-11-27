@@ -27,9 +27,9 @@ A merged grammar keeps every label of its members.
 - A test case is a candidate for removal when every bug it detects and every label it carries is covered elsewhere, subject to items 3 and 4: a language profile is retired only by owner decision, and a code path only nominates, so removal needs a written reason the path is incidental.
 - Merging is safe because labels, not directory names, are the unit that must survive; combined grammars lose no checks.
 - Cost: every word needs a label.
-- Today: words carry an `exercises` tag, per word and per parse, and `constructs.txt` lists the 31 constructs. The sub-behaviour
-  and interaction vocabulary and the per-word label requirement are not built. Until its behaviour-label sub-issue lands,
-  `exercises` and `constructs.txt` apply and merge waves wait for the vocabulary.
+- Today: words carry their behaviour labels in `exercises`, per word and per parse; `constructs.txt` is the top level and `labels.tsv` holds
+  the child levels, with the existing labels each was checked against. `python3 scripts/suite.py check` fails on a word with no label
+  or a label outside the vocabulary, and `python3 scripts/suite.py labels` prints the label-to-words table (PROTOCOL.md section 14).
 
 ## Alternatives considered
 

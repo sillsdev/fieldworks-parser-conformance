@@ -106,7 +106,7 @@ own copy; none of these files is read from a checkout of this repository.
 | File | Change it when |
 |---|---|
 | `dead-rules-allowed.tsv` | a fixture declares a rule on purpose that no word exercises (add a row with the reason), or a word now exercises an allowed rule (delete the row). |
-| `constructs.txt` | the checklist of constructs gains or loses an entry. |
+| `constructs.txt`, `labels.tsv` | a word needs a behaviour no existing label names: add a child line to `labels.tsv` (with the labels you checked it against), or a construct to `constructs.txt` only when no parent fits. Every word must carry a label. |
 | `fieldworks-writable-shapes.tsv` | the loader census changes (section 1). |
 | `reference.commit` | the reference engine build changes (ADR 0003). |
 
@@ -169,7 +169,7 @@ the links and the privacy lint.
   This repository cannot run an engine; CI here proves the files are well formed, not that an engine agrees
   with them.
 - Before you land, run sillsdev/machine #615's conformance gate tests against your branch. They check shape
-  producibility, `exercises:` tags, `blocked_by` rule ids and rule attribution, none of which the scripts above
+  producibility, `exercises:` labels, `blocked_by` rule ids and rule attribution, none of which the scripts above
   see, and the pin in `conformance.commit` hides a failure until someone bumps it. In a checkout of machine #615
   (`git fetch origin pull/658/head`, the #615 runner plus the status.yaml reader, until #658 lands), with `HC_CONFORMANCE_SUITE=<path to this clone>`, run
   `dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests -c Release --filter "FullyQualifiedName~Conformance|FullyQualifiedName~FieldWorksProducibleShape|FullyQualifiedName~StatusYaml"`
