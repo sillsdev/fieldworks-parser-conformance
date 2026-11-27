@@ -14,7 +14,7 @@ import json
 import sys
 
 import derive
-from suite import ROOT, fixture_dirs, fixture_id, load_words
+from suite import ROOT, fixture_dirs, fixture_id, load_expanded_words
 
 OUT_OF_SCOPE = "Tracing (TraceType)"
 
@@ -66,7 +66,7 @@ def main() -> int:
     for directory in fixture_dirs():
         fid = fixture_id(directory)
         known = set(derive.rule_ids(directory / "grammar.xml"))
-        for word in load_words(directory / "words.yaml")["words"]:
+        for word in load_expanded_words(directory / "words.yaml"):
             if word.get("expect_fail") or word.get("expect_skip"):
                 for label in word.get("blocked_by") or []:
                     if label not in known:

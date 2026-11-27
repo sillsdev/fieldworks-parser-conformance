@@ -7,7 +7,7 @@ Needs PyYAML and jsonschema (scripts/requirements.txt); the report also needs an
 import json
 import sys
 
-from suite import ROOT, fixture_dirs, fixture_id, load_words, STRESS_GROUP
+from suite import ROOT, fixture_dirs, fixture_id, load_expanded_words, load_words, STRESS_GROUP
 from upstream import resolve
 
 STATUS = ROOT / "status.yaml"
@@ -32,7 +32,7 @@ def test_cases() -> dict:
     """Every test case id (conformance and stress) -> the set of its words."""
     found = {}
     for d in fixture_dirs() + fixture_dirs(groups=(STRESS_GROUP,)):
-        found[fixture_id(d)] = {w["word"] for w in load_words(d / "words.yaml")["words"]}
+        found[fixture_id(d)] = {w["word"] for w in load_expanded_words(d / "words.yaml")}
     return found
 
 

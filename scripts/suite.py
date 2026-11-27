@@ -3,6 +3,7 @@
     python3 scripts/suite.py check                 run every check (this is what CI runs)
     python3 scripts/suite.py generate [--out DIR]  write the derived files: both manifests, coverage.csv, rules.csv
     python3 scripts/suite.py status [--strict]     list the rows of status.yaml by upstream state
+    python3 scripts/suite.py expand CASE           print a test case's words with generated no-parse words expanded
 
 Also the shared helpers the checks import. Standard library only; PyYAML is used when installed.
 """
@@ -59,12 +60,58 @@ def load_words(path: Path):
     return _yaml.safe_load(read_text(path))
 
 
+MAX_GENERATED_SPACE = 100_000
+
+
+def generated_space_size(rule: dict) -> int:
+    """How many words one generated_no_parse rule spans (before listed words are removed)."""
+    alphabet = len(rule["alphabet"])
+    return sum(alphabet ** length for length in range(rule.get("min_length", 1), rule["max_length"] + 1))
+
+
+def expand_words(data: dict) -> list:
+    """The word list a test case means: its listed `words`, then the words its `generated_no_parse` rules expand to.
+
+    This is the reference expander (PROTOCOL.md section 13); every consumer must produce exactly this list, as a
+    multiset, and may order it as it likes. Each rule is walked in file order, by length from `min_length` (default
+    1) up to `max_length`, and within a length in alphabet order (the first alphabet entry varies slowest). A word
+    that is listed under `words`, or was produced by an earlier rule, is skipped, so a listed word always wins. Every
+    generated word is `{word, note, expect_fail: true}` plus the rule's `exercises` when it has one. Analyses are
+    never generated.
+    """
+    import itertools
+
+    words = list(data["words"])
+    seen = {w["word"] for w in words}
+    for rule in data.get("generated_no_parse") or []:
+        if generated_space_size(rule) > MAX_GENERATED_SPACE:
+            raise ValueError(f"generated_no_parse rule spans more than {MAX_GENERATED_SPACE} words: {rule}")
+        for length in range(rule.get("min_length", 1), rule["max_length"] + 1):
+            for symbols in itertools.product(rule["alphabet"], repeat=length):
+                text = "".join(symbols)
+                if text in seen:
+                    continue
+                seen.add(text)
+                entry = {"word": text, "note": rule["note"], "expect_fail": True}
+                if "exercises" in rule:
+                    entry["exercises"] = list(rule["exercises"])
+                words.append(entry)
+    return words
+
+
+def load_expanded_words(path: Path) -> list:
+    """The expanded word list of a words.yaml (listed words, then generated no-parse words)."""
+    return expand_words(load_words(path))
+
+
 def words_summary(path: Path):
     """Return (language, case_count, expect_crash) for a words.yaml."""
     if _yaml is not None:
         data = load_words(path)
-        return data["language"], len(data["words"]), bool(data.get("expect_crash", False))
+        return data["language"], len(expand_words(data)), bool(data.get("expect_crash", False))
     text = read_text(path)
+    if re.search(r"^generated_no_parse:", text, re.M):
+        raise RuntimeError("PyYAML is required to count a test case with generated_no_parse: pip install -r scripts/requirements.txt")
     language = re.search(r"^language:\s*(.+?)\s*$", text, re.M).group(1).strip("\"'")
     crash = re.search(r"^expect_crash:\s*true\s*$", text, re.M) is not None
     count, in_words = 0, False
@@ -117,6 +164,8 @@ def main(argv=None) -> int:
     sub.add_parser("check", help="run every check")
     generate = sub.add_parser("generate", help="write the derived files")
     generate.add_argument("--out", default=str(ROOT / "generated"), help="directory to write into (default: generated/, untracked)")
+    expand = sub.add_parser("expand", help="print a test case's expanded word list as JSON (the reference expander)")
+    expand.add_argument("case", help="a test case directory or its words.yaml")
     status = sub.add_parser("status", help="list status.yaml rows by upstream state")
     status.add_argument("--machine-checkout", help="a sillsdev/machine checkout, for engine ancestry")
     status.add_argument("--strict", action="store_true", help="exit 1 if any row needs action")
@@ -128,6 +177,14 @@ def main(argv=None) -> int:
 
         for name in derive.write_all(Path(args.out)):
             print(f"wrote {Path(args.out) / name}")
+        return 0
+    if args.command == "expand":
+        import json
+
+        target = Path(args.case)
+        words = load_expanded_words(target / "words.yaml" if target.is_dir() else target)
+        json.dump(words, sys.stdout, ensure_ascii=False, indent=1)
+        print()
         return 0
     import exceptions
 

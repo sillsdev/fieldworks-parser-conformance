@@ -739,3 +739,33 @@ exceptions:
   `upstream` key.
 - `allows_never_shape()` in `scripts/upstream.py` is the producibility rule that the machine
   `FieldWorksProducibleShape` gate applies to the rows of a test case; fpc itself has no caller.
+
+## 13. Generated no-parse words: `generated_no_parse`
+
+A test case whose probe is "every short string over a small alphabet" does not list the strings that cannot parse
+([ADR 0009](docs/adr/0009-repo-commits-authored-files-only.md)). It declares a rule in `words.yaml`, and `words` lists only what has
+its own result:
+
+```yaml
+generated_no_parse:
+  - alphabet: [a, p, t, s]
+    max_length: 5            # min_length is optional and defaults to 1
+    note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises: [phonological-rule]   # optional: the behaviour label of every generated word (ADR 0008)
+```
+
+- **Meaning.** Every string of `min_length` to `max_length` symbols over `alphabet` that is not listed under `words` is a
+  word with `expect_fail: true`, the rule's `note`, and the rule's `exercises` when present. The rule can only say "no
+  parse": it never produces `parses`, `expect_skip`, `blocked_by` or any other field, so every expected analysis still
+  comes from the reference (ADR 0002). A word that must parse, or that needs its own note, is simply listed under `words`
+  and the rule skips it.
+- **The expansion** is defined by `expand_words` in `scripts/suite.py`; `python3 scripts/suite.py expand <test case>`
+  prints it as JSON. A consumer may call the script or reimplement it, and either way must produce the same multiset of
+  words. The word list a test case means is its listed `words` in file order, then each rule in file order: lengths
+  ascending, and within a length the alphabet's order with the first entry varying slowest (`a p t s` gives `aa ap at as pa ...`).
+  A word already listed or produced by an earlier rule is skipped. A symbol is one alphabet entry, so an entry may be longer than one
+  character.
+- **Limits.** A rule may span at most 100,000 words. A rule is checked by the schema, and `suite.py check` fails a rule
+  with `min_length` above `max_length`. A rule says nothing about words outside its space; list those under `words`.
+- **Consumers.** Machine's runner and PanGloss's harness expand the rule before they run the test case. A consumer that
+  does not know the key must refuse the test case rather than run only its listed words.

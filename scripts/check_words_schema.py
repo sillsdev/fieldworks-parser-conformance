@@ -9,7 +9,7 @@ import json
 import re
 import sys
 
-from suite import ROOT, STRESS_GROUP, fixture_dirs, fixture_id, load_words
+from suite import ROOT, STRESS_GROUP, MAX_GENERATED_SPACE, expand_words, fixture_dirs, generated_space_size, fixture_id, load_words
 
 try:
     from jsonschema import Draft202012Validator
@@ -33,7 +33,7 @@ def whynot_problems(directory, validator, words) -> list:
     xml = (directory / "grammar.xml").read_text(encoding="utf-8")
     ids = set(re.findall(r'\bid="([^"]+)"', xml))
     morphemes = set(re.findall(r"<MorphemeId>([^<]+)</MorphemeId>", xml))
-    listed = {w["word"]: w for w in words.get("words", [])}
+    listed = {w["word"]: w for w in expand_words(words)}
     for row in data["rows"]:
         where = f"{name}/whynot.yaml: word {row['word']}"
         if row["word"] not in listed:
@@ -71,6 +71,11 @@ def main() -> int:
         for error in sorted(validator.iter_errors(data), key=lambda e: list(e.absolute_path)):
             where = "/".join(str(p) for p in error.absolute_path) or "(root)"
             problems.append(f"{name}/words.yaml: {where}: {error.message[:200]}")
+        for rule in data.get("generated_no_parse") or []:
+            if rule.get("min_length", 1) > rule.get("max_length", 1):
+                problems.append(f"{name}/words.yaml: generated_no_parse: min_length exceeds max_length in {rule['alphabet']}")
+            elif generated_space_size(rule) > MAX_GENERATED_SPACE:
+                problems.append(f"{name}/words.yaml: generated_no_parse spans more than {MAX_GENERATED_SPACE} words: {rule['alphabet']}")
         problems += whynot_problems(directory, whynot_validator, data)
         if "fieldworks_producible" in data:
             problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")

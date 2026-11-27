@@ -59,7 +59,7 @@ in the protocol. `words.yaml` is the single ground truth: front matter (`languag
 `blocked_by` (well-formed input, zero valid analyses), or `expect_skip` (the oracle throws
 `InvalidShapeException`, e.g. an undeclared segment — status "SKIPPED", not "ok"). Optional fields:
 `provenance` (bug/PR reference), `guess` (a `LexicalGuess` parse),
-`budget_ms`/`expect_crash` (edge-cases only). Signature comparison treats the members of each bracketed
+`budget_ms`/`expect_crash` (edge-cases only). A test case may also declare `generated_no_parse` rules (PROTOCOL.md section 13): its words are then the listed words plus the no-parse words the rules expand to, and `python3 scripts/suite.py expand <test case>` prints that list. Signature comparison treats the members of each bracketed
 class `[...]` as a set (`|b[ae]t` equals `|b[ea]t`; PROTOCOL.md section 4, sillsdev/machine#573).
 Signatures are authored-and-verified, never blindly
 regenerated: a consuming engine's self-check fails on a mismatch, and a proposed patch is for a human to accept. Full schema: `schema/words.schema.json`.
