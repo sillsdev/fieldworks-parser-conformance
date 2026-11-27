@@ -36,3 +36,6 @@ edge-cases/merge-subrules-pos-rtl-template	edge-cases/merge-subrules-pos-templat
 edge-cases/merge-subrules-pos-simultaneous-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27-2
 edge-cases/partial-inherited-output-literal	edge-cases/partial-inherited-output-target		wave-2026-11-27-2
 edge-cases/partial-inherited-output-singleton	edge-cases/partial-inherited-output-target		wave-2026-11-27-2
+edge-cases/overridden-alpha-bounded-rtl-left	edge-cases/overridden-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/overridden-alpha-plain-ltr-left	edge-cases/overridden-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/overridden-alpha-unbounded-ltr-left	edge-cases/overridden-alpha-bounded-ltr-left		wave-2026-11-27-3
