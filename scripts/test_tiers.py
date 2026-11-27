@@ -20,6 +20,15 @@ class TierRules(unittest.TestCase):
         got = tiers.compute(excepted={plain})
         self.assertEqual(got[plain], ("regression", "exception in status.yaml"))
 
+    def test_the_only_citer_of_a_bug_is_at_least_regression(self):
+        import fixture_value
+
+        found = tiers.facts()
+        sole = [next(iter(c)) for c in fixture_value.cited_bugs().values() if len(c) == 1 and next(iter(c)) in found]
+        self.assertTrue(sole)
+        for case in sole:
+            self.assertIn(self.all[case][0], ("core", "regression"), case)
+
     def test_each_label_has_at_most_two_carriers_by_size(self):
         found = tiers.facts()
         for label in {l for f in found.values() for l in f["labels"]}:

@@ -7,9 +7,10 @@
 Never authored: a tier is not a key in words.yaml and never part of an id (Q5). It follows from data the suite holds.
 
   core        languages/*; a test case with a fieldworks/ witness; or one of the two carriers of a behaviour
-              label (the label is an `exercises` construct today, and #75 replaces it; carriers are the test
+              label (today an `exercises` value, which #75 replaces; carriers are the test
               cases with that label, fewest words first, then id)
-  regression  not core, and it has a row in status.yaml or 300 or more words
+  regression  not core, and it has an exception in status.yaml, is the only test case citing some bug, or has
+              300 or more words
   extended    the rest
 
 Consumers' own divergences are not recorded here: they live in the consumer's repo under its issue (ADR 0007).
@@ -49,7 +50,7 @@ def facts(root: Path = ROOT) -> dict:
 
 
 def compute(root: Path = ROOT, excepted=None) -> dict:
-    """id -> (tier, why). `excepted` is the set of test cases with a status.yaml row,"""
+    """id -> (tier, why). `excepted` is the set of test cases with an exception in status.yaml,"""
     import exceptions
 
     if excepted is None:
@@ -60,6 +61,12 @@ def compute(root: Path = ROOT, excepted=None) -> dict:
         holders = sorted((f["words"], case) for case, f in found.items() if label in f["labels"])
         for _, case in holders[:CARRIERS_PER_LABEL]:
             carriers.setdefault(case, []).append(label)
+    import fixture_value
+
+    sole = {}
+    for bug, cases in fixture_value.cited_bugs(root).items():
+        if len(cases & found.keys()) == 1 and len(cases) == 1:
+            sole.setdefault(next(iter(cases)), []).append(bug)
     result = {}
     for case, f in found.items():
         why = []
@@ -71,8 +78,9 @@ def compute(root: Path = ROOT, excepted=None) -> dict:
             why.append("carries " + ", ".join(carriers[case]))
         if why:
             result[case] = ("core", "; ".join(why))
-        elif case in excepted or f["words"] >= REGRESSION_WORDS:
+        elif case in excepted or case in sole or f["words"] >= REGRESSION_WORDS:
             why = (["exception in status.yaml"] if case in excepted else []) + (
+                ["only test case citing " + ", ".join(sorted(sole[case]))] if case in sole else []) + (
                 [f"{f['words']} words"] if f["words"] >= REGRESSION_WORDS else [])
             result[case] = ("regression", "; ".join(why))
         else:
@@ -90,9 +98,9 @@ def block(tiers: dict) -> str:
         "**extended** on the full run. It is computed by `scripts/tiers.py` from data the suite holds, never authored, "
         "and never part of an id; `scripts/check_grammars_md.py` fails when this table is stale. "
         "A test case is core when it is a language profile, has a FieldWorks witness, or is one "
-        "of the two smallest carriers of a behaviour label (an `exercises` construct until #75 replaces it; "
-        "fewest words first, then id). Otherwise it is regression when it has a row in `status.yaml` or 300 or more "
-        "words, and extended when it has neither.",
+        "of the two smallest carriers of a behaviour label (today an `exercises` value; #75 replaces it; "
+        "fewest words first, then id). Otherwise it is regression when it has an exception in `status.yaml`, is the only test case citing some bug (the last "
+        "detector of a bug is never removed, ADR 0008), or has 300 or more words, and extended when it has none of these.",
         "",
         f"{count['core']} core, {count['regression']} regression, {count['extended']} extended.",
         "",
