@@ -9,7 +9,7 @@ produce does not belong in the suite, however expressible it is in the XML; see
 [what FieldWorks cannot produce](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 
 A test fails if a fixture directory is missing from this page, listed twice, or listed here but gone.
-The list has 262 fixtures: 6 languages and 256 edge cases.
+The list has 263 fixtures: 6 languages and 257 edge cases.
 
 ## Which engines run which grammars
 
@@ -19,11 +19,11 @@ Engines need different amounts of phonology: what a grammar says about sounds, i
 - **Hermit Crab** needs a complete phonology: every letter of every form and word is defined as a segment. An undefined letter makes the word unanalyzable, and FieldWorks' Hermit Crab loader drops allomorphs it cannot segment. It needs features only where a rule or natural class uses them.
 - **PanGloss** runs grammars with no phonology, with incomplete phonology or with complete phonology. For incomplete phonology ("underdefined" in PanGloss's own terms) it supplies provisional definitions where FieldWorks' Hermit Crab loader drops material.
 
-All 262 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
+All 263 conformance and 16 stress grammars are Hermit Crab grammars, and PanGloss runs all of them. The suite has no grammar with incomplete phonology today; that is a gap.
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **65 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **66 conformance grammars and 6 stress grammars**. Each of their fixture lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -96,6 +96,7 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/variant-clitic-typed-form`
 - `edge-cases/variant-complex-form-ref-senseless-entry`
 - `languages/suffixing-evidential-adjacency-chain`
+- `edge-cases/zero-width-morpheme-identity`
 
 #### Stress subset
 
@@ -165,6 +166,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/convergent-affix-multiple-application`: [XAmple] four suffixes spelled `ta`: a noun-to-noun one that may apply twice and a verb-to-verb one that may apply three times beside two one-shot category changers, so one shape is reached with different per-rule counts; guards an analysis-side match table that must not carry a count decision from another path (15 words).
 - `edge-cases/convergent-homophonous-suffix-reduplication`: [XAmple] a CV reduplication prefix beside four homophonous category-changing suffixes and two homophonous agreement suffixes in one template slot, so the copy-agreement check runs on one shape reached by many suffix histories; guards an analysis-side match table (21 words).
 - `edge-cases/convergent-zero-derivation-identity`: [XAmple] three null affixes beside two homophonous `-ti` suffixes, so un-applying a null affix returns the same shape and every rule is retried on it under a different history; guards an analysis-side match table (13 words).
+- `edge-cases/zero-width-morpheme-identity`: [XAmple] a zero-width noun-to-verb rule beside two overt category toggles, so the same surface is reached through different rule histories (machine#506); `sagui` is pinned from the C# run (4 words).
 
 ## Templates, slots and parts of speech
 

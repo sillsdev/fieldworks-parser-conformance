@@ -225,6 +225,8 @@ CliticEncliticAndProclitic,zsagds,PROC+SAG+PAST+ENC|zsagds,Clitics stratum: clit
 CliticFlexLayoutBlockingMorphology,sagdi,SAG+PAST|sagdi,Affix template slots (obligatory/disjunctive/ordering)
 CliticFlexLayoutBlockingMorphology,sagdis,SAG+PAST+ENC|sagdis,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 CliticFlexLayoutBlockingMorphology,sagdk,,Clitic rules (Clitics stratum) after a final template
+CliticFlexLayoutBlockingMorphology,sagdip,SAG+PAST+LATE|sagdip,Clitic rules (Clitics stratum) after a final template
+CliticFlexLayoutBlockingMorphology,sagdips,SAG+PAST+LATE+ENC|sagdips,Clitic rules (Clitics stratum) after a final template
 CliticProcliticAfterFinalTemplate,psag,PRE+SAG|psag,Affix template slots (obligatory/disjunctive/ordering)
 CliticProcliticAfterFinalTemplate,zpsag,PROC+PRE+SAG|zpsag,Clitics stratum: clitic designation by stratum name alone
 CliticProcliticAfterFinalTemplate,kpsag,,Clitics stratum: clitic designation by stratum name alone
@@ -700,6 +702,8 @@ NonCliticAfterFinalTemplateLayout,sagd,SAG+PAST|sagd,Affix template slots (oblig
 NonCliticAfterFinalTemplateLayout,sagds,SAG+PAST+ENC|sagds,Clitic rules (Clitics stratum) after a final template
 NonCliticAfterFinalTemplateLayout,sagdk,,Clitic rules (Clitics stratum) after a final template
 NonCliticAfterFinalTemplateLayout,kolk,KOL+DERIV|kolk,Clitic rules (Clitics stratum) after a final template
+NonCliticAfterFinalTemplateLayout,sagdp,,Clitic rules (Clitics stratum) after a final template
+NonCliticAfterFinalTemplateLayout,kolp,KOL+LATE|kolp,Affix template slots (obligatory/disjunctive/ordering)
 NullPrefixRootInitialDeletionLaterSuffix,ps,NU0+R0|+?ps,AffixProcessRule: prefix/suffix/circumfix/infix
 NullPrefixRootInitialDeletionLaterSuffix,ps,NU0+R0|+?ps,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 NullPrefixRootInitialDeletionLaterSuffix,ps,NU0+R0|+?ps,Boundary markers (CharacterDefinitionTable)
@@ -5016,6 +5020,13 @@ StemNameRestrictedRootAllomorph,kapom,ROOT+PERS1|kapom,Stem names
 StemNameRestrictedRootAllomorph,tamom,,Stem names
 StemNameRestrictedRootAllomorph,tamur,ROOT+PERS2|tamur,Stem names
 StemNameRestrictedRootAllomorph,kapur,,Stem names
+StemNameRestrictedRootAllomorph,kapat,ROOT+PLURAL|kapat,Stem names
+StemNameRestrictedRootAllomorph,tamat,,Stem names
+StemNameRestrictedRootAllomorph,kapurat,ROOT+PERS2+PLURAL|kapurat,Stem names
+StemNameRestrictedRootAllomorph,kapak,ROOT+NEEDSP|kapak,Stem names
+StemNameRestrictedRootAllomorph,mopom,MOP+PERS1|mopom,Stem names
+StemNameRestrictedRootAllomorph,mopak,,Stem names
+StemNameRestrictedRootAllomorph,mopat,,Stem names
 StrRepIdentityProbe,pat,+|[(^0)∅]?+?pat,NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision
 StrRepIdentityProbe,pat,|pat,NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision
 StrRepIdentityProbe,mat,+|[(^0)∅]?+?mat,NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision
@@ -5109,6 +5120,12 @@ WordBoundaryAffixRewrite,ta,PFX_R+ROOT_A|ta,RewriteRule Iterative (epenthesis/de
 WordBoundaryAffixRewrite,ta,ROOT_RA|ta,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 WordBoundaryAffixRewrite,taa,PFX_RA+ROOT_A|taa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 WordBoundaryAffixRewrite,at,ROOT_A+SFX_R|at,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+ZeroWidthMorphemeIdentity,sag,ROOT+THIRD|sag,AffixProcessRule: prefix/suffix/circumfix/infix
+ZeroWidthMorphemeIdentity,sag,ROOT+THIRD|sag,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+ZeroWidthMorphemeIdentity,sagi,ROOT+THIRD+B2A|sagi,AffixProcessRule: prefix/suffix/circumfix/infix
+ZeroWidthMorphemeIdentity,sagi,ROOT+THIRD+B2A|sagi,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+ZeroWidthMorphemeIdentity,sagui,ROOT+A2B+B2A+THIRD|sagui,AffixProcessRule: prefix/suffix/circumfix/infix
+ZeroWidthMorphemeIdentity,sagui,ROOT+A2B+B2A+THIRD|sagui,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 MetathesisPhaseIsolation,idil,,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 MetathesisPhaseIsolation,nui,NIU|nui,MetathesisRule
 MetathesisPhaseIsolation,niu,,MetathesisRule
@@ -5249,6 +5266,25 @@ SuffixingExtensionSlotOrdering,daleh,DAL+STEMREQ|daleh,Ordinary/realizational ru
 SuffixingExtensionSlotOrdering,daheh,,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 SuffixingExtensionSlotOrdering,dalizeh,DAL+RECURSUF+STEMREQ|dalizeh,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
 SuffixingExtensionSlotOrdering,dalehiz,DAL+STEMREQ+RECURSUF|dalehiz,Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)
+SuffixingExtensionSlotOrdering,daxep,DAX1+NUMPL7|daxep,Stem names
+SuffixingExtensionSlotOrdering,daxep,DAX2+NUMPL7|daxep,Stem names
+SuffixingExtensionSlotOrdering,daxepeh,DAX2+NUMPL7+STEMALT|daxepeh,Stem names
+SuffixingExtensionSlotOrdering,bamybyk,BAM+CXPLURAL+CXNEED1PL|bamybyk,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,bemybyk,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,bamyk,BAM+CXNEED1PL|bamyk,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,bemyn,BEM+CXNEED2|bemyn,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,bamyn,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,bimyn,BIM+CXNEED2|bimyn,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,bimyk,BIM+CXNEED1PL|bimyk,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wamwa,WAM+FORMAGREE|wamwa,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wamwi,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wemwi,WEM+FORMAGREE|wemwi,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wemwa,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wimwa,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wimwi,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wemwz,WEM+RULEAGREE|wemwz,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wamwz,,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
+SuffixingExtensionSlotOrdering,wimwz,WIM+RULEAGREE|wimwz,Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)
 SuffixingVowelHarmony,semitide,SEMIT+PAST|semitide,Affix template slots (obligatory/disjunctive/ordering)
 SuffixingVowelHarmony,semitide,SEMIT+PAST|semitide,RewriteRule Simultaneous
 SuffixingVowelHarmony,semitile,SEMIT+PRES|semitile,Affix template slots (obligatory/disjunctive/ordering)
