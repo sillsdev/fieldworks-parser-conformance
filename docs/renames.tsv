@@ -39,3 +39,8 @@ edge-cases/partial-inherited-output-singleton	edge-cases/partial-inherited-outpu
 edge-cases/overridden-alpha-bounded-rtl-left	edge-cases/overridden-alpha-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/overridden-alpha-plain-ltr-left	edge-cases/overridden-alpha-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/overridden-alpha-unbounded-ltr-left	edge-cases/overridden-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/partial-class-disagree-bounded-rtl-left	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/partial-class-disagree-bounded-rtl-right	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/partial-class-disagree-unbounded-ltr-right	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/partial-class-disagree-unbounded-rtl-left	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/partial-class-disagree-unbounded-rtl-right	edge-cases/partial-class-disagree-bounded-ltr-left		wave-2026-11-27-3
