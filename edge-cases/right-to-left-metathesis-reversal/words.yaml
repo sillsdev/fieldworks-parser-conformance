@@ -1,14 +1,11 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # Synthetic construct-shaped probe. Rows were replayed at sillsdev/machine ba6dfa106 (#615 tip).
 
 language: RightToLeftMetathesisReversal
 inspired_by: ["synthetic right-to-left metathesis-reversal probe (not modeling any real language)"]
 sources: []
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: sq
     note: >-

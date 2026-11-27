@@ -1,5 +1,5 @@
-# Text files are stored with LF endings and checked out with LF on every platform, so that the hashes in
-# generated/hc-conformance-manifest.v2.json do not depend on a checkout setting.
+# Text files are stored with LF endings and checked out with LF on every platform, so that
+# the hashes in the derived manifest do not depend on a checkout setting.
 * text=auto eol=lf
 
 # A FieldWorks project is hashed on its raw bytes (phonology-mutations.yaml base_sha256). Never convert it.

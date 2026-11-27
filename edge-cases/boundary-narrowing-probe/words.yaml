@@ -1,10 +1,8 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c598
 # C# hc.dll replay; see STAGING.md.
 language: BoundaryNarrowingProbe
 inspired_by: ["synthetic boundary-initial narrowing probe"]
 sources: ["PanGloss issue 14"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: nmo
     note: "The suffix-initial b becomes m after the nasal."

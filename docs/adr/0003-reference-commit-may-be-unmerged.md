@@ -22,9 +22,9 @@ The reference commit may be an unmerged Machine commit, provided that:
 - A single pin means a bump is one-line and reviewable; no result header names a different build.
 - Risk: an unreachable commit invalidates every result at once, hence the tag requirement. A stale pin after merge
   is bounded to one wave by the re-point rule.
-- Today: `reference.commit` holds `ba6dfa106` and CI builds it. The tag in sillsdev/machine and the "one wave" re-point are
-  owner discipline, not checked by a script. Until epic S1 lands, `PROVENANCE.md` and per-test-case `# oracle-provenance:`
-  header lines also name builds; they are to be reduced to the one pin.
+- Today: `reference.commit` holds `ba6dfa106` and CI builds it. It is the only recorded build: `PROVENANCE.md` and the per-test-case
+  `# oracle-provenance:` headers are gone. The tag in sillsdev/machine and the "one wave" re-point are owner discipline, not
+  checked by a script.
 
 ## Alternatives considered
 

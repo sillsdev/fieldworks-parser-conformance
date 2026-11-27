@@ -21,9 +21,10 @@ and #556 fixes the multiset.
 - Order differences are never failures. Count differences are, so a consumer that over- or under-generates is caught.
 - A duplicate is a visible, trackable item with an upstream link rather than a normalised-away accident.
 - The deterministic single-threaded run means regenerating results from the same reference commit gives the same bytes.
-- Today: PROTOCOL.md sections 3 and 4 already sort signatures without deduplicating and compare them as a multiset, so this ADR matches current
-  behaviour. The reference run being single-threaded and deterministic is not enforced: nothing in the suite or CI requires it, and `reference.commit` with #556 fixes the multiset, not the order. What is not built until S1 lands: exception rows for duplicates, because `status.yaml` does not exist; the existing
-  duplicate-bearing cases are explained in `words.yaml` notes.
+- Today: PROTOCOL.md sections 3 and 4 sort signatures without deduplicating and compare them as a multiset, so this ADR matches
+  current behaviour. The reference run being single-threaded and deterministic is not enforced: nothing in the suite or CI
+  requires it, and `reference.commit` with #556 fixes the multiset, not the order. Duplicate-bearing exceptions are `status.yaml`
+  rows; the existing duplicate-bearing cases are also explained in `words.yaml` notes.
 
 ## Alternatives considered
 

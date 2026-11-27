@@ -1,13 +1,10 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # Recorded with hc.dll, Machine 18cf242f.
 language: quantified-alpha-unbounded-rtl-left
 inspired_by: ["synthetic repeated feature agreement"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: teca
     note: "Negative control for quantified alpha unbounded rtl left: 'teca' must complete with no analysis."

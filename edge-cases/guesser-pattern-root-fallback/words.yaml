@@ -1,14 +1,11 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: rust-only
 language: GuesserPatternRootFallback
 inspired_by: ["synthetic guesser probe (not modeling any real language)"]
 sources:
   - "docs/hermitcrab-rust-port-audit.md (sec 2 'Partially ported', sec 3 item 1: Guesser API surface)"
   - "docs/p11-guesser-api-design.md (guesser engine design + fixture plan sec 6)"
 requires: []
-fieldworks_producible: true
 words:
   - word: kad
     note: >-

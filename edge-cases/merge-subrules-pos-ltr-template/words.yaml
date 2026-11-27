@@ -1,6 +1,4 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Direction variant independently self-checked with the same complete expectations.
-# original oracle-provenance: founding-oracle
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
 # built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
 #
@@ -16,7 +14,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: F
     note: The noun TA_N fused by the noun subrule.

@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging). Rows for isi, izi, ipi and ibi: machine ba6dfa10, 2026-11-27, hc-conformance --propose
 language: FeaturelessSegmentClassRewrite
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Single-valued feature structures and an omitted segment feature, as emitted by HCLoader LoadFeatureStruct and LoadNaturalClass. No multi-valued feature specification is used. The rules for isi and izi write a PhRegularRule structural change that is a natural-class context over the segments s and z, which HCLoader reads through LoadPatternNode and TryLoadSimpleContext; p and b carry a voice value and k does not. No fwdata round-trip witness is claimed.
 words:

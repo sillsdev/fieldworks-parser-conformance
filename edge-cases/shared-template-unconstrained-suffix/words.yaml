@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=a20bce12 verified-date=2026-09-15
 # Expected identities follow forward derivations, not a Rust parser run.
 language: SharedTemplateUnconstrainedSuffix
 inspired_by: ["synthetic shared-template probe, not a model of a real language"]
@@ -7,7 +6,6 @@ sources:
   - "https://github.com/sillsdev/machine/pull/493"
   - "tests/SIL.Machine.Morphology.HermitCrab.Tests/AffixTemplateTests.cs: SameRuleUsedInMultipleTemplates_AffixHasNoRequiredFeatures"
 requires: []
-fieldworks_producible: true
 words:
   - word: mi
     note: The noun root has no applicable inflection template.

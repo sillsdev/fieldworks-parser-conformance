@@ -1,4 +1,3 @@
-# oracle-provenance: hc.dll built from sillsdev/machine PR 627 head d26dd375 (with the #615 conformance runner; the lookup code is the same as at d10da372 apart from trace order), verified-date=2026-11-12
 # These rows were measured from PR 627 head d26dd375 before it merged. At the time, pre-merge master and
 # PR 627 differed on exactly one word, "bu": pre-merge master parsed it as BU, while PR 627 did not.
 # Every other row matched on those two builds (see README.md).
@@ -14,7 +13,6 @@ sources:
   - "sillsdev/machine pull request 627: LexicalLookup only uses the allomorphs found by SearchRootAllomorphs"
   - "FieldWorks HCLoader.LoadRootAllomorph, HCLoader.cs (an allomorph's Require environment); the rule is prHiatusI, i -> 0 / [+high -cons] _, at the default Deletion Reapplications 0"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: bu
     note: >-

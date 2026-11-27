@@ -1,9 +1,7 @@
-# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
 language: ConvergentCliticStratumHomophonous
 inspired_by: ["synthetic enclitics homophonous with derivational suffixes of an inner stratum (not modeling any real language)"]
 sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs strata Morphology and Clitics"]
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Four derivational suffixes share one form and differ only in category (noun to noun, noun to verb, verb to noun, verb to verb), as FieldWorks writes homophonous derivational affixes (HCLoader.cs LoadDerivAffixProcessRule).
   The strata are the Morphology and Clitics strata FieldWorks writes, both unordered. Three enclitics in the

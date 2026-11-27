@@ -1,11 +1,9 @@
-# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine#644 (the fix for issue 643).
 # Partial rules pk (suffix ko) and pc (prefix ka) apply to the stem, and the phonological deletion rule prDel (run with DelReapps 1) removes the o of ko or the a of ka from the surface form. The final template T1 closes the word.
 language: PartialRuleDeletedMaterial
 inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
 sources:
   - "https://github.com/sillsdev/machine/issues/643"
 requires: [phonology, morpher-settings]
-fieldworks_producible: true
 morpher:
   DelReapps: 1
 words:

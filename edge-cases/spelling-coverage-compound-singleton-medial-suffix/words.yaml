@@ -1,9 +1,7 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: SpellingCompoundSingletonMedialSuffix
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: apst
     note: "C# returns 3 analyses (X+Y+SUF+Z|apst): pins that this spelling is a route and its morpheme sequence."

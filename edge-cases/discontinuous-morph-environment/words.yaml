@@ -5,7 +5,6 @@ sources:
 requires: []
 # FieldWorks verdict relies on the task-provided HCLoader.cs facts; that external source is not in
 # this worktree. MoStemAllomorph.PhoneEnvRC and MoAffixAllomorph.PositionRS cover these constructs.
-fieldworks_producible: true
 words:
   - word: dom
     note: Unrestricted bare control root; no infix and no environment constraint.

@@ -1,5 +1,4 @@
 # Rows kapat to mopat were added on 2026-11-27 from the C# self-check at sillsdev/machine ba6dfa10 (hc-conformance --propose); the earlier rows are from the oracle named below.
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (words kapat, tamat, kapurat, kapak, mopom, mopak, mopat)
 # The grammar gained a second region (num=pl) on snP1, a second stem name snP2 (pers=1), mrPlural, mrNeedsP (requiredStemName snP1) and the entry mop. HCLoader.cs loads every non-empty region of a stem name and writes requiredStemName on a derivational rule (LoadDerivAffixProcessRule). None of the earlier words changed.
 # Oracle: pangloss (`pg_parse::Morpher`, driven directly via a temporary probe test -- see
 # STAGING.md's "Verification" section), NOT the C# founding oracle. Signatures below are
@@ -10,7 +9,6 @@ inspired_by: ["synthetic principal-parts / stem-alternation probe (not modeling 
 sources:
   - "rust/crates/pg-foma/src/capability.rs, CharacteristicKind::StemName's own doc"
 requires: []
-fieldworks_producible: true
 words:
   - word: tam
     note: The unrestricted default allomorph, bare -- no featPers assigned at all, which is outside snP1's region, so the excluded-match check is satisfied trivially.

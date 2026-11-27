@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598. Rows for ucdt, ucdcdt, ocdcdcdt, odct and the four expect_fail words: machine ba6dfa10, 2026-11-27, hc-conformance --propose (from PanGloss#45)
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # Synthetic construct-shaped mimic -- see STAGING.md and grammar.xml's own header comment. Verified
 # against the C# founding oracle (hc.dll, via hc-conformance.exe self-check): signatures match
 # exactly; `rules:` fields below are transcribed from the oracle's own trace output.
@@ -18,7 +16,6 @@ inspired_by: ["synthetic right-to-left bounded-quantifier rewrite probe (not mod
 sources:
   - "docs/conformance/representative-typology-basis.md S1.2.2 (Right-to-left rewrite: additional in-scope pattern shapes)"
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   The second rule (prRtlBq2, ucdt and the words after it) has a PhIterationContext (minimum 1, maximum 2) whose member is a PhSequenceContext of two simple contexts, which HCLoader LoadPatternNode loads as a Quantifier over a Group. Not round-tripped through FieldWorks, so no witness is claimed.
 words:

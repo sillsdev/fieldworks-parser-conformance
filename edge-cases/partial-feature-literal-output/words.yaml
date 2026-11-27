@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: FeaturelessSegmentClassRewrite
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Adds one unused symbolic phonological feature to the existing featureless
   segment-class rewrite fixture. Segments carry no values for it. This is the

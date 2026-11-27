@@ -1,13 +1,10 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # hc.dll, Machine 18cf242f.
 language: partial-class-disagree-bounded-rtl-left
 inspired_by: ["synthetic feature disagreement with a two-member partial segment class"]
 sources: ["HCLoader.cs:2338-2344,2745-2770,2799-2808"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Negative control for partial class disagree bounded rtl left: 'ii' must complete with no analysis."

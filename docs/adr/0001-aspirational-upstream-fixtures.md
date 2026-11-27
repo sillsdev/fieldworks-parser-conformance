@@ -28,9 +28,9 @@ affix `maxApps` writable); the oracle builds at the tip of unmerged machine PR #
   `fieldworks-writable-shapes.tsv` and `fieldworks-cannot-say.md` cites that issue or PR.
 - **Before landing.** The upstream issue or PR is filed. The C# rows come from a real run; if the C#
   engine lacks the capability, they come from a build of the Machine PR, and the build SHA is recorded.
-- **Citation.** The `words.yaml` oracle header and `PROVENANCE.md` name the issue or PR (and the SHA for a PR).
+- **Citation.** The `status.yaml` row names the issue or PR (and the SHA for a PR).
 - **Re-point on merge.** When the upstream change merges, update those citations to the merged commit or
   release, and the table rows with them.
 - **If upstream rejects it.** The fixture is retired under the retirement doc: converted to a
   producible grammar if that keeps its purpose, otherwise deleted.
-- **Machine-readable.** The dependency is recorded in the `upstream` field of `words.yaml` ([PROTOCOL.md](../../PROTOCOL.md) section 12); `scripts/upstream_status.py` reports when it merges or closes.
+- **Machine-readable.** The dependency is recorded in a `status.yaml` row ([PROTOCOL.md](../../PROTOCOL.md) section 12); `python3 scripts/suite.py status` reports when it merges or closes.

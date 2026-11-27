@@ -35,6 +35,8 @@ def main() -> int:
     for directory, subdirs, files in os.walk(ROOT):
         subdirs[:] = [d for d in subdirs if d not in SKIP_DIRS]
         for name in files:
+            if name == ".git":  # a linked worktree's pointer file, not a tracked file
+                continue
             path = os.path.join(directory, name)
             relative = os.path.relpath(path, ROOT).replace(os.sep, "/")
             scanned += 1

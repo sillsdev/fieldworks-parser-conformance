@@ -13,29 +13,7 @@
     "requires": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "budget_ms": { "type": "integer", "minimum": 1 },
     "expect_crash": { "type": "boolean" },
-    "fieldworks_producible": { "type": "boolean" },
-    "fieldworks_producible_notes": { "type": "string", "minLength": 1 },
-    "upstream": {
-      "description": "Upstream issues or pull requests this fixture's expected behaviour depends on (PROTOCOL.md section 12, ADR 0001). affects engine: sillsdev/machine lacks the behaviour without the change, so C# rows are valid only on a build containing head. affects loader: only FieldWorks HCLoader lacks it, so the producibility gate accepts the cited never-written shape while the ref is open.",
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["ref", "kind", "affects", "note"],
-        "properties": {
-          "ref": { "type": "string", "pattern": "^([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#[0-9]+|jira:[A-Z][A-Z0-9]*-[0-9]+)$" },
-          "kind": { "enum": ["pr", "issue"] },
-          "head": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
-          "affects": { "enum": ["engine", "loader"] },
-          "note": { "type": "string", "minLength": 1 }
-        },
-        "allOf": [
-          { "if": { "properties": { "kind": { "const": "pr" } }, "required": ["kind"] }, "then": { "required": ["head"] } },
-          { "if": { "properties": { "ref": { "pattern": "^jira:" } }, "required": ["ref"] }, "then": { "properties": { "kind": { "const": "issue" } } } }
-        ]
-      }
-    },
+    "fieldworks_producible_notes": { "type": "string", "minLength": 1, "description": "Optional free-text evidence for the loader claim: the HCLoader.cs function and line, and which parts are inferred. Every test case is FieldWorks-producible by scope (ADR 0004); there is no flag." },
     "morpher": {
       "description": "Morpher host settings this fixture's ground truth was generated under, keyed by FieldWorks <ParserParameters><HC> element name; absent means the PROTOCOL.md section 8 defaults. A fixture with this block must also require morpher-settings.",
       "type": "object",
@@ -62,15 +40,6 @@
     }
   },
   "allOf": [
-    {
-      "description": "fieldworks_producible: false requires notes naming the offending construct(s) and citing HCLoader evidence -- see PROTOCOL.md's FieldWorks producibility section.",
-      "if": {
-        "type": "object",
-        "properties": { "fieldworks_producible": { "const": false } },
-        "required": ["fieldworks_producible"]
-      },
-      "then": { "required": ["fieldworks_producible_notes"] }
-    },
     {
       "description": "A morpher block is a capability requirement: an engine that cannot apply it must skip the fixture, not run it at the defaults.",
       "if": { "type": "object", "anyOf": [{ "required": ["morpher"] }, { "required": ["variants"] }] },

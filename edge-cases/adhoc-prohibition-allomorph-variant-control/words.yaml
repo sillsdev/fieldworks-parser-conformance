@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c598 verified-date=2026-10-31
 # Replayed on hc.dll at Machine aab4c598 (see STAGING.md): the rows below are the oracle's own output.
 # Synthetic; no real language. The grammar is the per-copy form HCLoader emits for a stem entry with two MoStemMsas
 # (Verb, Noun) and a variant entry that borrows both: the variant is loaded once per main MSA, each copy with its
@@ -11,7 +10,6 @@ language: AdhocProhibitionAllomorphVariantControl
 inspired_by: ["an allomorph prohibition on a variant entry's allomorph must not reach the main entry that shares its MSAs"]
 sources: ["HCLoader.cs:782-852 (LoadLexEntryOfVariant)", "HCLoader.cs:2212-2236 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: la
     note: >-

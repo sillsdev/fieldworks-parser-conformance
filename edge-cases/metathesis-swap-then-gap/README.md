@@ -10,7 +10,7 @@ the mechanism is that of `metathesis-deletion-restores-segment-between-switches`
 The six rows are `expect_fail: true`: they pin what the C# oracle does today, which #649 calls a bug, and each note
 says the parse it should give once #649 is fixed. `psa` and `psaa` are controls both engines agree on (the `t` of `ptsa` is
 deleted, so no swap is needed). Removing `pd0` and the `t` of the roots makes all six words parse in C#, so the
-deletion alone causes the rejection. No `upstream:` tag: its rows do not depend on an unmerged change (an `affects: engine` tag would make runners skip the fixture on builds without it); the repository's practice for an open Machine bug is a `Known oracle limitation` note, as in the sibling fixture.
+deletion alone causes the rejection. Each of the six has a `reference-defect` row in `status.yaml` with the intended answer.
 
 **FieldWorks-producible.** A metathesis rule, a deletion rewrite rule, a prefix process and a suffix process
 (`HCLoader.LoadMetathesisRule`, `LoadRewriteRule`, `LoadAffixProcessRule`). The staged grammar named the earlier

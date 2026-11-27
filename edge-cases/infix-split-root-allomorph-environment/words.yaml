@@ -1,15 +1,13 @@
-# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check); the ginabas row is expect_fail
 # because that build gives it no parse.
-# History: the rows were first taken with the fix in sillsdev/machine#631 (commit 7e5d5a64), where ginabas parses as
-# gabas + infix. #631 was CLOSED UNMERGED on 2026-11-12 and sillsdev/machine#630 is still open, so the oracle at
-# 4d9b454d has no such fix and ginabas has no parse there. ginabas is pinned to that outcome and its note records
-# the intended behaviour. When #630 is fixed upstream and a pin includes it, flip ginabas back to the parse below.
+# History: the rows were first taken with the fix in sillsdev/machine#631, where ginabas parses as gabas + infix.
+# #631 was closed unmerged and sillsdev/machine#630 is still open, so the reference has no such fix and ginabas has no
+# parse. ginabas is pinned to that outcome; status.yaml records the intended answer. When #630 is fixed upstream and
+# the reference commit includes it, flip ginabas to the intended parse and delete its status.yaml row.
 language: InfixSplitRootAllomorphEnvironment
 inspired_by: ["synthetic allomorph environment and infixation probe (not modeling any real language)"]
 sources:
   - "sillsdev/machine issue 630: Allomorph.IsWordValid tested environments once per root piece"
 requires: []
-fieldworks_producible: true
 words:
   - word: gabsa
     note: >-
@@ -26,11 +24,10 @@ words:
         rules: []
   - word: ginabas
     note: >-
-      Known oracle limitation (sillsdev/machine#630, open; the fix in #631 was closed unmerged). The infix splits gabas
-      into g and abas; the infix's i follows the first piece but is not the root's right context, and the root is
-      word-final, so gabs / _ V does not apply and should not block gabas. The oracle at 4d9b454d tests the allomorph
-      environment at each piece, counts gabs as applicable, and so no parse results. Intended parse once #630 is
-      fixed: ROOT+INF|ginabas with rule mrInfix.
+      The infix splits gabas into g and abas; the infix's i follows the first piece but is not the root's right context,
+      and the root is word-final, so gabs / _ V does not apply and should not block gabas. The reference tests the
+      allomorph environment at each piece, counts gabs as applicable, and so gives no parse. status.yaml records the
+      intended answer.
     expect_fail: true
   - word: ginabsa
     note: >-

@@ -1,11 +1,9 @@
-# oracle-provenance: founding-oracle
 language: TruncateRulesProbeIdentity
 inspired_by: ["synthetic AffixProcessRule truncation probe (Machine #480 truncate-morphotactic)"]
 sources:
   - "Machine #480 truncate-morphotactic at fa8d9b25; companion adds explicit MorphemeId values"
   - "Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e"
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: Bare root32 positive control.

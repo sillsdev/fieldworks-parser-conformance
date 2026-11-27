@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sillsdev/fieldworks-parser-conformance/schema/status.schema.json",
+  "title": "status.yaml",
+  "description": "Every tracked departure from the reference (ADR 0007), one row each. A row without `word` concerns the whole test case; a row with `word` records the answer the reference should give. PROTOCOL.md section 12.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "exceptions"],
+  "properties": {
+    "version": { "const": 1 },
+    "exceptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["case", "kind", "ref", "ref_type", "affects", "reason"],
+        "properties": {
+          "case": { "type": "string", "pattern": "^(languages|edge-cases|stress/edge-cases)/[^/]+$", "description": "The test case's id: its directory path." },
+          "word": { "type": "string", "minLength": 1, "description": "A word of the test case; absent for a row about the whole test case." },
+          "kind": { "enum": ["reference-defect", "pending-upstream"] },
+          "ref": { "type": "string", "pattern": "^([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#[0-9]+|jira:[A-Z][A-Z0-9]*-[0-9]+)$", "description": "The upstream issue or pull request: owner/repo#number or jira:KEY-123." },
+          "ref_type": { "enum": ["pr", "issue"] },
+          "head": { "type": "string", "pattern": "^[0-9a-f]{40}$", "description": "A pr's full 40-hex head commit the rows depend on." },
+          "affects": { "enum": ["engine", "loader"], "description": "engine: the reference lacks the behaviour. loader: only FieldWorks HCLoader lacks it." },
+          "reason": { "type": "string", "minLength": 1 },
+          "intended": { "type": "string", "minLength": 1, "description": "The answer the reference should give; required on a word row." }
+        },
+        "allOf": [
+          { "if": { "properties": { "ref_type": { "const": "pr" } }, "required": ["ref_type"] }, "then": { "required": ["head"] }, "else": { "not": { "required": ["head"] } } },
+          { "if": { "properties": { "ref": { "pattern": "^jira:" } }, "required": ["ref"] }, "then": { "properties": { "ref_type": { "const": "issue" } } } },
+          { "if": { "required": ["word"] }, "then": { "required": ["intended"] }, "else": { "not": { "required": ["intended"] } } }
+        ]
+      }
+    }
+  }
+}

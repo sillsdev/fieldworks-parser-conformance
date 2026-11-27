@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-commit=e63b8863 verified-date=2026-11-19
 language: MetathesisBoundaryRightToLeftPrefix
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "p"
     note: >-

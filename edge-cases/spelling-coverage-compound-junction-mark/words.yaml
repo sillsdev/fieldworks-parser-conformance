@@ -1,9 +1,7 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: SpellingCompoundJunctionMark
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: "aṕ"
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?[t́]): pins that this spelling is a route and its morpheme sequence."

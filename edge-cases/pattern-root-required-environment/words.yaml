@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=25ddf914 verified-date=2026-09-02
 # rust/tools/oracle-conformance.ps1 -Scope local: hc-conformance.exe self-check PASSED (every
 # word's signature matched; no rules-attribution mismatch either).
 language: PatternRootRequiredEnvironment
@@ -10,7 +8,6 @@ sources:
   - "rust/crates/pg-foma/src/emit.rs (collect_roots' pattern_regex_body gate, eager_route_drops_root_spellings)"
   - "rust/crates/pg-foma/src/capability.rs (EagerRouteDropsRootSpellingsCheck / surface-probe.root-spelling-cap)"
 requires: []
-fieldworks_producible: true
 words:
   - word: tik
     note: >-

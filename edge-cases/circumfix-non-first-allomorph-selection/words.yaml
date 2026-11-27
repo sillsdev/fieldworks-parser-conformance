@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=caa4ddde verified-date=2026-08-31
 # RECONCILED 2026-08-31: rust/tools/oracle-conformance.ps1's hc-conformance.exe self-check PASSED
 # against every word below (signature AND traced rules: both matched). Any older "NOT the C#
 # founding oracle" / "Oracle: pangloss" sentence elsewhere in this file's own header describes how
@@ -16,7 +14,6 @@ inspired_by: ["synthetic non-first-allomorph circumfix probe (not modeling any r
 sources:
   - "docs/conformance/circumfix-structural-composite-census.md (census C1)"
 requires: []
-fieldworks_producible: true
 words:
   - word: mit
     note: ROOT bare, no mrMixed applied -- a plain control.

@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c598 verified-date=2026-10-31
 # Replayed on hc.dll at Machine aab4c598 (see STAGING.md): the rows below are the oracle's own output.
 # Synthetic; no real language. The grammar is the per-copy form HCLoader emits for an enclitic entry (a clitic
 # rule of the Clitics stratum, without a part of speech, plus a stem entry copy) and a stem entry with two MoStemMsas (Verb, Noun) and a
@@ -11,7 +10,6 @@ language: AdhocProhibitionVariantEncliticFirst
 inspired_by: ["a morpheme prohibition whose first morpheme is an enclitic must hold for the variant entries that borrow the stem MSA it names"]
 sources: ["HCLoader.cs:782-852 (LoadLexEntryOfVariant)", "HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: la
     note: >-

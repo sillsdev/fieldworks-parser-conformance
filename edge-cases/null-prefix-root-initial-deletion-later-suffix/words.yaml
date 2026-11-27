@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=e63b8863 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-20, none taken from PanGloss)
 # Pins sillsdev/PanGloss#405: a null prefix NU0 (inserts the boundary +) before a root whose first segment a later
 # phonological rule (pd0: t -> 0) deletes, with a later suffix SU1 (+a). Roots R0 = tps and R1 = pts both surface as
 # ps once pd0 deletes the t. For psa C# gives R0+NU0+SU1 and NU0+R1+SU1 (the null prefix on either side of the
@@ -10,7 +9,6 @@ sources:
   - "sillsdev/PanGloss issue 405: C# analyses a null or inserted segment beside a prefix that a later rule deletes"
   - "FieldWorks HCLoader.LoadAffixProcessRule (prefix and null prefix), HCLoader.LoadRewriteRule (the deletion, epenthesis and change)"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "a"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."

@@ -27,9 +27,8 @@ source of expected results.
 - A fix in Machine shows up as a red C# gate on exactly the words concerned, not as silent drift.
 - Cost: a consumer that is right and the reference that is wrong still needs an exception row and an upstream issue
   before the suite will say so.
-- Today: wrong-reference words are marked in prose ("Known oracle limitation" appears 16 times in 4 `words.yaml` files) and pending
-  upstream work in the `upstream` block ([PROTOCOL.md](../../PROTOCOL.md) section 12). Until epic S1 lands `status.yaml`
-  with the intended-answer field, those mechanisms apply and the intended answer is not machine-readable.
+- Today: `status.yaml` holds a row per exception, and a word row carries the intended answer (`intended:`) that `suite.py check`
+  validates. The 14 words that carried a "Known oracle limitation" prose note are all `status.yaml` rows now.
 
 ## Alternatives considered
 

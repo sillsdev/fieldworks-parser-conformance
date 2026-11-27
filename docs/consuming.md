@@ -12,7 +12,7 @@ instead. Both run it through their own runners. Their gates, ledgers and
 coverage measurements live in their own repositories. To change the
 suite, read [AGENTS.md](../AGENTS.md). Where a fixture or document names a ledger, a test or a source path
 of one of those repositories, it is a historical or cross-repository reference, not a file here.
-The commit hashes cited in fixtures are plain text, explained in [PROVENANCE.md](../PROVENANCE.md).
+The one engine build behind every expected row is the commit in `reference.commit`; hashes cited in prose are history.
 
 ## What passing means today
 
@@ -33,7 +33,7 @@ cannot express. Two representations of the same ground truth also meant a perman
 has been deleted, along with `schema/conformance-corpus.schema.json`.
 
 What that product genuinely contributed was provenance, not case data, so that is what survives as
-`generated/hc-conformance-manifest.v2.json` (`hc-conformance-manifest/v2`, `schema/conformance-manifest.schema.json`): one entry per fixture carrying `fixtureId`, `category`, `displayLanguage`, `grammarPath`,
+the derived manifest `hc-conformance-manifest.v2.json` (`hc-conformance-manifest/v2`, `schema/conformance-manifest.schema.json`): one entry per fixture carrying `fixtureId`, `category`, `displayLanguage`, `grammarPath`,
 `grammarSha256`, `wordsPath`, `wordsSha256`, `caseCount`, and `expectedCrash`, plus top-level
 `dtdPath`, `dtdSha256`, `sourceHash`, and the three format-version identifiers
 (`hc-conformance-manifest/v2`, `hc-conformance-words/v1`, `sil-machine-hermit-crab-input-xml/v1`).
@@ -43,8 +43,7 @@ relative to the root of this repository, with no leading directory name (`edge-c
 never relative to the manifest itself. A consumer that clones this repository into `conformance/` prepends
 that itself. Version 2 dropped the `conformance/` prefix that version 1 carried.
 
-Regenerate with `python3 scripts/generate_manifest.py`; `python3 scripts/generate_manifest.py --check` verifies
-the checked-in bytes and exits nonzero on drift. CI also validates every grammar against the DTD and every
+The manifest is not committed: `python3 scripts/suite.py generate` writes it, and a consumer generates its own copy. CI also validates every grammar against the DTD and every
 `words.yaml` against `schema/words.schema.json`.
 
 The DTD is published at `HermitCrabInput.dtd` and is the authoritative copy; sillsdev/machine keeps an
@@ -65,7 +64,7 @@ class `[...]` as a set (`|b[ae]t` equals `|b[ea]t`; PROTOCOL.md section 4, sills
 Signatures are authored-and-verified, never blindly
 regenerated: a consuming engine's self-check fails on a mismatch, and a proposed patch is for a human to accept. Full schema: `schema/words.schema.json`.
 
-Fixture and case totals are summed from `generated/hc-conformance-manifest.v2.json`, not hand-copied:
+Fixture and case totals are summed from the derived manifest, not hand-copied:
 two prose totals have already drifted from the manifest twice. The numbers line of the root README is
-checked against the disk by `scripts/check_grammars_md.py`, and `python3 scripts/generate_manifest.py --check`
-verifies the manifest's per-fixture `caseCount`.
+checked against the disk by `scripts/check_grammars_md.py`, and `python3 scripts/suite.py check`
+derives the manifest's per-fixture `caseCount` fresh.

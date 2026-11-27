@@ -7,7 +7,6 @@ inspired_by: ["Bantu verb with stratum-level extension chain and a required TAM 
 sources:
   - "synthetic stress fixture (not a specific language)"
 requires: []
-fieldworks_producible: true
 budget_ms: 60000
 words:
   - word: mtumilan

@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged rows first taken at c2454760, which contains sillsdev/machine#539)
 #
 # Pins a narrowing rule whose input is a vowel, a boundary and a stop carrying an alpha voicing variable (V + [stop alpha-voice] -> V [fricative alpha-voice], three nodes to two); the analysis has to undo the rule by narrowing across the boundary with the variable resolved from the surface fricative.
 
@@ -7,7 +6,6 @@ inspired_by: ["synthetic probe for PanGloss#33 (not modeling any real language)"
 sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: aafa
     note: AA+FA (underlying f, boundary survives as an optional marker) and AA+PA (p spirantized after the boundary, alpha-voice kept).

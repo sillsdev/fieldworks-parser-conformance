@@ -1,13 +1,10 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=18cf242f verified-date=2026-10-09
 language: LiteralHashAffixContext
 inspired_by: ["synthetic prefix, suffix, and root-initial rewrite control"]
 sources:
   - "PanGloss boundary-prefix-rule implementation brief"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ta
     note: "A literal # boundary marker in the left context is not a word-edge anchor."

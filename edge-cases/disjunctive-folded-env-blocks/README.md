@@ -22,6 +22,6 @@ later, which is the explanation gap in PanGloss#444.
 | `ban` | bare root | control |
 
 The rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70`, the tip of
-machine #615, see [PROVENANCE.md](../../PROVENANCE.md)) returned in `hc-conformance` self-check mode.
+machine #615 returned in `hc-conformance` self-check mode.
 FieldWorks producibility is read from `HCLoader.cs` (`LoadFormAffixProcessAllomorph`); no `fieldworks/` witness is
 claimed.

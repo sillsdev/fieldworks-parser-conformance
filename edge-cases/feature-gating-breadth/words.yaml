@@ -24,7 +24,6 @@ inspired_by: ["synthetic head feature gating probe (not modeling any real langua
 sources:
   - "conformance/semantic-coverage-counterfactuals.tsv unobservable feature-gating surfaces"
 requires: []
-fieldworks_producible: true
 words:
   - word: kal
     note: Bare lexically plural root.

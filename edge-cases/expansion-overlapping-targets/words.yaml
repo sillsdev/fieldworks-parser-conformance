@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
 # built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
 #
@@ -17,7 +16,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: kaaa
     note: >-

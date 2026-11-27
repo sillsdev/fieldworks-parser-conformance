@@ -39,7 +39,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
   - "https://github.com/sillsdev/machine/issues/507"
 requires: []
-fieldworks_producible: true
 words:
   - word: sagftf
     note: >-

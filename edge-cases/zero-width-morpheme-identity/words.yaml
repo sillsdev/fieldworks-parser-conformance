@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (every row from the C# self-check at that pin, hc-conformance --propose, one thread; none from PanGloss)
 # Synthetic; no real language. Root sag (N), two toggle rules (mrA2B: N -> V, +u; mrB2A: V -> N, +i) and a zero-width rule
 # (mrThird: N -> V, copies the stem and inserts nothing). Staged by PanGloss as zero-width-morpheme-identity-stability for
 # sillsdev/machine#506, where fresh-process runs of an earlier build gave three different answers for sagui.
@@ -11,7 +10,6 @@ sources:
   - "https://github.com/sillsdev/machine/issues/506"
   - "https://github.com/sillsdev/machine/issues/500"
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: >-

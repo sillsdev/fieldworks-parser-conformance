@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check, six identical runs; row values read with --propose)
 # Every row is what the C# engine does, not what a reader might expect: at an ambiguous infix site it applies the
 # rule at ONE place (see README.md). Do not "fix" the expect_fail rows.
 
@@ -7,7 +6,6 @@ inspired_by: ["synthetic infix at an ambiguous site (not modeling any real langu
 sources:
   - "FieldWorks HCLoader.LoadFormAffixProcessAllomorph (infix and infixing-interfix branch): left = any* + left context, right = right context + any*"
 requires: []
-fieldworks_producible: true
 words:
   - word: mime
     note: Bare root, no infix; the control.

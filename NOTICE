@@ -15,7 +15,9 @@ FieldWorks witnesses (edge-cases/*/fieldworks/, languages/*/fieldworks/)
   by FieldWorks (https://github.com/sillsdev/FieldWorks, LGPL-2.1) on top of
   LibLCM (https://github.com/sillsdev/liblcm, LGPL-2.1). The files hold only
   invented test data plus the standard lists and defaults that FieldWorks and
-  LibLCM write into every new project. The versions are in PROVENANCE.md.
+  LibLCM write into every new project. The witnesses were produced against
+  FieldWorks 9.3.10.1452 and LibLCM 11.0.0.55173; the writing-system files carry CLDR revision
+  1f9188eccdd20d6b71d82723bbd185f439d50196.
 
 Writing system files (fieldworks/WritingSystemStore/*.ldml)
   LDML files written by LibLCM from the SIL Locale Data Repository, which

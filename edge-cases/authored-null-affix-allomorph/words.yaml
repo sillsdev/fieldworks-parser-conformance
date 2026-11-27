@@ -1,11 +1,9 @@
-# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check, --propose)
 # A suffix entry whose allomorph form is the authored null form "∅" (U+2205), as FieldWorks stores it, beside an
 # overt allomorph, plus a zero-marked relative suffix. The null morph is a real morph of the bare word.
 language: AuthoredNullAffixAllomorph
 inspired_by: ["a FieldWorks suffix entry with an authored null allomorph (sillsdev/motif#362)"]
 sources: ["https://github.com/sillsdev/motif/issues/362", "FieldWorks HCLoader.LoadFormAffixProcessAllomorph"]
 requires: []
-fieldworks_producible: true
 words:
   - word: kaun
     note: The null tense allomorph (after n) and the zero relative marker both fill their required slots, so the bare stem parses with two null morphs.

@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 # Every signature and traced rule list below is OBSERVED from the C# founding oracle: the hc-conformance
 # self-check (in-process hc.dll Morpher, MaxDegreeOfParallelism 1, DeletionReapplications = 1 from the
 # morpher: block below) built from the integrate-conformance-framework branch of sillsdev/machine (2026-10-22)
@@ -20,7 +19,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs"
 requires: [phonology, morpher-settings]
-fieldworks_producible: true
 morpher:
   DelReapps: 1
 words:

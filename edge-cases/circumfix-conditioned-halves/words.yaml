@@ -1,13 +1,10 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=f150e2a0 verified-date=2026-09-16
 language: CircumfixConditionedHalves
 inspired_by: ["synthetic circumfix cross-product with live per-side V/C conditioning (not modeling any real language)"]
 sources:
   - "docs/research/circumfix-cross-product-loading.md"
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   This is the IsCircumfix() cross-product shape (HCLoader.cs:1051-1082): one prefix-half allomorph x
   suffix-half allomorph pairing per MorphologicalSubrule, with each half's phonological context

@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=ed5cf05d verified-date=2026-10-26
 # Expected parses are derived from the HC clitic and final-template rules (Machine #529); the engine run only confirms them.
 # The Morphology stratum is blocking (it holds a phonological rule), so the final-template state is cleared when it ends:
 # the ordinary rule mrLate in the next stratum applies after the final template (sagdip, sagdips), and the enclitic
@@ -11,7 +10,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs: IsBlockingStratum"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: sagdi
     note: >-

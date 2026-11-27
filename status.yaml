@@ -1,0 +1,149 @@
+# Exceptions: every tracked departure from the reference (ADR 0007). Format and meaning: PROTOCOL.md section 12.
+# A row without `word` concerns the whole test case; a row with `word` records the answer the reference should give.
+# Closing an exception is deleting its row, at the moment the reference gate turns red (ADR 0002).
+version: 1
+exceptions:
+  - case: edge-cases/affix-multiple-application
+    kind: pending-upstream
+    ref: "sillsdev/FieldWorks#1263"
+    ref_type: pr
+    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054
+    affects: loader
+    reason: "per-affix maxApps (multipleApplication) becomes writable by HCLoader"
+  - case: edge-cases/convergent-affix-multiple-application
+    kind: pending-upstream
+    ref: "sillsdev/FieldWorks#1263"
+    ref_type: pr
+    head: 0ead571c65df55e88525fe19a1a20e1d1ffe0054
+    affects: loader
+    reason: "per-affix maxApps (multipleApplication) becomes writable by HCLoader"
+  - case: edge-cases/prefix-required-environment-after-epenthesis
+    kind: pending-upstream
+    ref: "jira:LT-22922"
+    ref_type: issue
+    affects: loader
+    reason: "HCLoader keeps a prefix's right-hand environment instead of folding it into the input pattern"
+  - case: edge-cases/prefix-required-environment-after-epenthesis-later-compound
+    kind: pending-upstream
+    ref: "jira:LT-22922"
+    ref_type: issue
+    affects: loader
+    reason: "HCLoader keeps a prefix's right-hand environment instead of folding it into the input pattern"
+  - case: edge-cases/prefix-required-environment-after-epenthesis-later-suffix
+    kind: pending-upstream
+    ref: "jira:LT-22922"
+    ref_type: issue
+    affects: loader
+    reason: "HCLoader keeps a prefix's right-hand environment instead of folding it into the input pattern"
+  - case: edge-cases/metathesis-deletion-restores-segment-between-switches
+    word: "ats"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "PRE+R0|at+?s, rules [PRE, pd, pr1]"
+  - case: edge-cases/metathesis-deletion-restores-segment-between-switches
+    word: "at+s"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "PRE+R0|at+?s, rules [PRE, pd, pr1]"
+  - case: edge-cases/metathesis-deletion-restores-segment-between-switches
+    word: "atsa"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "PRE+R2|at+?sa, rules [PRE, pd, pr1]"
+  - case: edge-cases/metathesis-deletion-restores-segment-between-switches
+    word: "at+sa"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "PRE+R2|at+?sa, rules [PRE, pd, pr1]"
+  - case: edge-cases/metathesis-swap-then-gap
+    word: "+sp"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "NU0+R2"
+  - case: edge-cases/metathesis-swap-then-gap
+    word: "+spa"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "NU0+R0 and NU0+R2+SU1"
+  - case: edge-cases/metathesis-swap-then-gap
+    word: "sp"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "R2 (and NU0+R2, whose prefix is a bare boundary)"
+  - case: edge-cases/metathesis-swap-then-gap
+    word: "spa"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "R0, R2+SU1 and the NU0 variants"
+  - case: edge-cases/metathesis-swap-then-gap
+    word: "spaa"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "R0+SU1"
+  - case: edge-cases/metathesis-swap-then-gap
+    word: "+spaa"
+    kind: reference-defect
+    ref: "sillsdev/machine#649"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis restores an optional segment between the switches of a metathesis rule and cannot undo the swap (sillsdev/machine#649, open)."
+    intended: "NU0+R0+SU1"
+  - case: edge-cases/metathesis-middle-context-emptied-edges
+    word: "tps"
+    kind: reference-defect
+    ref: "sillsdev/machine#619"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis of a metathesis rule drops the middle context and cannot undo the swap (sillsdev/machine#619, open)."
+    intended: "R0+PR0+PR1 and R2+PR0+PR1"
+  - case: edge-cases/metathesis-middle-context-emptied-edges
+    word: "tp+s"
+    kind: reference-defect
+    ref: "sillsdev/machine#619"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis of a metathesis rule drops the middle context and cannot undo the swap (sillsdev/machine#619, open)."
+    intended: "R0+PR0+PR1 and R2+PR0+PR1"
+  - case: edge-cases/metathesis-middle-context-emptied-edges
+    word: "t+ps"
+    kind: reference-defect
+    ref: "sillsdev/machine#619"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: analysis of a metathesis rule drops the middle context and cannot undo the swap (sillsdev/machine#619, open)."
+    intended: "R0+PR0+PR1 and R2+PR0+PR1"
+  - case: edge-cases/infix-split-root-allomorph-environment
+    word: "ginabas"
+    kind: reference-defect
+    ref: "sillsdev/machine#630"
+    ref_type: issue
+    affects: engine
+    reason: "The reference gives no parse: it tests the root allomorph environment at each infix piece (sillsdev/machine#630, open; the fix in #631 was closed unmerged)."
+    intended: "ROOT+INF|ginabas with rule mrInfix"

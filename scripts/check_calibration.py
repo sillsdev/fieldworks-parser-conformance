@@ -2,7 +2,7 @@
 """Check the calibration families under calibration/ (batch A scale families, batch B structural families).
 
 For each family: grammar.xml is the DTD-valid output of scripts/calib_a_gen.py (batch A) or scripts/calib_b_gen.py (batch B) (regenerated and compared byte
-for byte), words.yaml passes schema/words.schema.json with fieldworks_producible true, words.txt lists exactly
+for byte), words.yaml passes schema/words.schema.json with no `fieldworks_producible` key, words.txt lists exactly
 the words of words.yaml (plus the cap-words.work-cap-N.yaml file, whose name must carry the cap), every word is 5 to 40 characters, and calibration/README.md names
 the family. Needs PyYAML, jsonschema and lxml or xmllint (pip install -r scripts/requirements.txt).
 """
@@ -11,6 +11,7 @@ import sys
 
 import calib_a_gen
 import calib_b_gen
+import derive
 import check_dtd
 from suite import ROOT, load_words
 
@@ -49,8 +50,8 @@ def check_lexsize(validator, readme, grammars):
         data = load_words(d / "words.yaml")
         for error in validator.iter_errors(data):
             problems.append(f"{name}/words.yaml: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:160]}")
-        if data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
         yaml_words = [w["word"] for w in data["words"]]
         lists[name] = yaml_words
         if (d / "words.txt").read_text(encoding="utf-8").split() != yaml_words:
@@ -68,10 +69,10 @@ def check_isolation(readme):
     """Calibration words must never reach a conformance or engine run: no calibration path in either manifest, no
     calibration directory in a category the consumers enumerate, and the warning header everywhere."""
     problems = []
-    for manifest in sorted((ROOT / "generated").glob("*manifest*.json")):
-        text = manifest.read_text(encoding="utf-8")
+    for built in (derive.manifest(), derive.stress_manifest()):
+        text = derive.serialize(built).decode("utf-8")
         if "calibration" in text or any(n in text for n in list(calib_a_gen.FAMILIES) + list(calib_a_gen.LEXSIZES) + list(calib_b_gen.FAMILIES)):
-            problems.append(f"{manifest.name} mentions a calibration path")
+            problems.append(f"{built['formatVersion']} mentions a calibration path")
     names = set(calib_a_gen.FAMILIES) | set(calib_a_gen.LEXSIZES) | set(calib_b_gen.FAMILIES)
     for cat in CONSUMER_CATEGORIES:
         base = ROOT / cat
@@ -112,8 +113,8 @@ def main() -> int:
         data = load_words(d / "words.yaml")
         for error in validator.iter_errors(data):
             problems.append(f"{name}/words.yaml: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:160]}")
-        if data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
         yaml_words = [w["word"] for w in data["words"]]
         cap_yaml = d / calib_a_gen.CAP_YAML
         cap_words = []
@@ -152,8 +153,8 @@ def main() -> int:
         data = load_words(d / "words.yaml")
         for error in validator.iter_errors(data):
             problems.append(f"{name}/words.yaml: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:160]}")
-        if data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
         yaml_words = [w["word"] for w in data["words"]]
         if (d / "words.txt").read_text(encoding="utf-8").split() != yaml_words:
             problems.append(f"{name}: words.txt does not list the words of words.yaml in order")

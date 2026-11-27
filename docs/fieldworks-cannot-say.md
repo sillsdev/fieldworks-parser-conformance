@@ -7,7 +7,7 @@ standard of evidence, then lists every construct the XML can say and FieldWorks 
 authors HermitCrab XML; it builds a grammar from a LibLCM project through `HCLoader.cs`, and that
 loader reaches less than the XML can say. A grammar that needs something the loader never writes does
 not belong here, however expressible it is in the XML and however well an engine handles it. Every
-fixture records the verdict as `fieldworks_producible: true` in its `words.yaml`. The constructs left
+test case is in scope only on that ground; there is no flag ([ADR 0004](adr/0004-scope-fieldworks-producible-only.md)). The constructs left
 out, why FieldWorks cannot write each one, and the 23 fixtures removed for using them are in
 [what the XML can say but FieldWorks cannot, so we do not test it](#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 [`grammars.md`](grammars.md) lists every grammar that remains.
@@ -15,7 +15,7 @@ out, why FieldWorks cannot write each one, and the 23 fixtures removed for using
 **The standard is the round trip.** "Producible" means a real FieldWorks project round-trips to the grammar: a
 project built in FieldWorks (LibLCM), put through `HCLoader.cs`, yields the fixture's `grammar.xml`. That the
 loader source could write a construct is weaker evidence. Until a fixture has a FieldWorks witness (a
-`fieldworks/` directory, [PROTOCOL.md](../PROTOCOL.md) section 10), its `fieldworks_producible: true` is a claim
+`fieldworks/` directory, [PROTOCOL.md](../PROTOCOL.md) section 10), its producibility is a claim
 read from the loader. Only the 11 fixtures that carry a witness are certified today (all under `edge-cases/`);
 the other 220 of the 231 fixtures rest on the loader reading alone.
 

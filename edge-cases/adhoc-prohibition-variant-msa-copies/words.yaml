@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c598 verified-date=2026-10-31
 # Replayed on hc.dll at Machine aab4c598 (see README.md): the rows below are the oracle's own output.
 # Synthetic; no real language. The grammar is the per-copy form HCLoader emits for a stem entry with
 # two MoStemMsas (Verb, Noun) and a variant entry that borrows both: the variant is loaded once per
@@ -11,7 +10,6 @@ language: AdhocProhibitionVariantMsaCopies
 inspired_by: ["a morpheme prohibition on a main entry's MSA must also hold for the variant entries that borrow that MSA"]
 sources: ["HCLoader.cs:728-735 (AddEntry)", "HCLoader.cs:782-852 (LoadLexEntryOfVariant)", "HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

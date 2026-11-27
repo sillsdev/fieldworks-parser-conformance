@@ -13,7 +13,7 @@ The stress fixtures follow the one rule of the suite: only what a real FieldWork
 "Producible" means a real FieldWorks project round-trips to the grammar: a project built in FieldWorks, put
 through `HCLoader.cs`, yields the fixture's `grammar.xml`.
 
-All 16 fixtures carry `fieldworks_producible: true`. That is a claim read from the loader, not a certificate.
+All 16 fixtures are claims read from the loader, not certificates.
 **0 of 16 stress fixtures carry a FieldWorks witness** (a `fieldworks/` directory,
 [PROTOCOL.md](../PROTOCOL.md) section 10), so none is certified; the 9 certified fixtures in this repository are
 all conformance fixtures. Issue [#1](https://github.com/sillsdev/fieldworks-parser-conformance/issues/1) tracks
@@ -28,7 +28,7 @@ Expected output is a parity check, not a conformance claim. The original parses 
 the engine of sillsdev/machine#480 and reviewed against the grammars. An optimization must return the same parses. The measure of a
 change is the number of work steps, not wall-clock time; each `budget_ms` is only a guard against a hang.
 The `master` commit and the #480 build were not recorded and could not be recovered, so the baseline is the one
-named in the Stress fixtures section of [PROVENANCE.md](../PROVENANCE.md): all 16 fixtures pass at sillsdev/machine
+named here: all 16 fixtures pass at sillsdev/machine
 `ba6dfa10`, in three identical runs, with no row changed. There were 18 fixtures at the import; `mpr-bantu-concord`
 and `mpr-inflection-classes` were removed (below), which leaves 16.
 
@@ -50,7 +50,7 @@ them. A consumer that scans the mount recursively for `grammar.xml` would still 
 `[Explicit]` and `[Category("Stress")]`, so a plain `dotnet test` skips it. `generated/stress-manifest.v2.json`
 records the path and SHA-256 of each fixture's `grammar.xml` and `words.yaml`, so a consumer can detect a changed
 stress fixture the way it detects a changed conformance fixture. It is separate from, and does not change, the
-conformance manifest `generated/hc-conformance-manifest.v2.json`.
+conformance manifest (`python3 scripts/suite.py generate`).
 
 ## The fixtures
 

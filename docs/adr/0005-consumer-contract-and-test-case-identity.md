@@ -25,7 +25,7 @@ html5lib-tests) keep names stable and track renames explicitly rather than promi
 - Ids that cannot change when a test case's status changes mean an exception ([ADR 0007](0007-exceptions-live-in-status-yaml.md))
   never forces a rename.
 - Cost: a directory path is a long, language-flavoured name that cannot be tidied later, so names are chosen once.
-- Today: no `docs/renames.tsv` exists and no wave tags exist. Until epic S1 and the first merge wave land, consumers learn of
+- Today: no `docs/renames.tsv` exists and no wave tags exist. Until the first merge wave lands, consumers learn of
   removals from pull request descriptions. The first wave that renames or removes a test case creates the file.
 
 ## Alternatives considered

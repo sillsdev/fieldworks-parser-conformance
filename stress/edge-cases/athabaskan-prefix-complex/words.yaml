@@ -5,7 +5,6 @@
 language: StressAthabaskanPrefixComplex
 inspired_by: ["Athabaskan-style verb prefix complex (synthetic; not modeling a real language)"]
 requires: []
-fieldworks_producible: true
 budget_ms: 120000
 words:
   - word: "tatianakan"

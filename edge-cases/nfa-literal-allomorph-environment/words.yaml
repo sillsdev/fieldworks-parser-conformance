@@ -1,11 +1,9 @@
-# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check, --propose)
 language: NfaLiteralAllomorphEnvironment
 inspired_by: ["synthetic literal root-allomorph environment and infixation probe"]
 sources:
   - "FieldWorks HCLoader.LoadRootAllomorph and LoadEnvironmentPattern"
   - "sillsdev/PanGloss issue 300"
 requires: []
-fieldworks_producible: true
 words:
   - word: gabsa
     note: The suffix a supplies the literal right context for the conditioned gabs allomorph.

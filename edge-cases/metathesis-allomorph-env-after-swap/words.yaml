@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; the staged grammar was converted to a producible shape and every row replayed unchanged)
 language: MetathesisAllomorphEnvAfterSwap
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "ta"
     note: >-

@@ -7,7 +7,6 @@ inspired_by: ["synthetic right-to-left inline-pre-segmented-environment rewrite 
 sources:
   - "openspec/changes/plan-construct-coverage-completion task 4.2 (RightToLeftRewrite: additional in-scope pattern shapes -- Segments)"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ey
     note: >-

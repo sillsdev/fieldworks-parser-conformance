@@ -1,13 +1,10 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # hc.dll, Machine 18cf242f.
 language: ambiguous-disagree-mixed-plus-class
 inspired_by: ["synthetic mixed alpha class membership"]
 sources: ["HCLoader.cs:2745-2770,2799-2808"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Negative control for ambiguous disagree mixed plus class: 'ii' must complete with no analysis."

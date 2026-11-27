@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
 # built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
 #
@@ -21,7 +20,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/CharacterDefinitionTable.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: kanmo
     note: KAN+BO (kan+bo -> kanmo, boundary absorbed) and KAN+MO (kan+mo, no rule). KAN+BO is the witness.

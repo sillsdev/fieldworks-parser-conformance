@@ -1,6 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=e63b8863 (hc-conformance self-check, verified 2026-11-20); the ats, at+s, atsa and at+sa rows are expect_fail
 # because that build gives them no parse.
-# The intended parses (PRE+R0|at+?s and PRE+R2|at+?sa) are recorded in each row's note. They are the forward
+# The intended parses (PRE+R0|at+?s and PRE+R2|at+?sa) are recorded in status.yaml. They are the forward
 # synthesis of the grammar, which machine e63b8863's own GenerateWords reproduces ("ats" from R0+PRE, "atsa" from R2+PRE).
 # Forward synthesis (S0 applies pr1, then pd):
 #   PRE+R0: PRE writes "aps+" before root "t": aps+t. pr1 swaps s and t across the boundary: apt+s.
@@ -20,7 +19,6 @@ sources:
   - "sillsdev/machine issue 520: POS-scoped deletion blocks metathesis analysis of other words"
   - "FieldWorks HCLoader.LoadMetathesisRule (the switches), HCLoader.LoadRewriteRule (p -> 0), HCLoader.LoadAffixProcessRule (prefix aps+)"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "t"
     note: >-
@@ -41,22 +39,22 @@ words:
         exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
   - word: "ats"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine e63b8863 gives no parse. Prefix aps+ then root t: pr1 swaps s and t across the boundary and pd deletes p (apt+s, then at+s); analysis restores an optional p between t and s, and that p must not take s's place in the swap. Intended parse once #649 is fixed: PRE+R0|at+?s, rules [PRE, pd, pr1].
+      Prefix aps+ then root t: pr1 swaps s and t across the boundary and pd deletes p (apt+s, then at+s); analysis restores an optional p between t and s, and that p must not take s's place in the swap. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "at+s"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine e63b8863 gives no parse. The same surface with the boundary written. Intended parse once #649 is fixed: PRE+R0|at+?s, rules [PRE, pd, pr1].
+      The same surface with the boundary written. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "atsa"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine e63b8863 gives no parse. Prefix aps+ then root tap: pr1 swaps s and t, pd deletes both p's (at+sa); the restored p again sits between the switches. Intended parse once #649 is fixed: PRE+R2|at+?sa, rules [PRE, pd, pr1].
+      Prefix aps+ then root tap: pr1 swaps s and t, pd deletes both p's (at+sa); the restored p again sits between the switches. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "at+sa"
     note: >-
-      Known oracle limitation (sillsdev/machine#649, open): machine e63b8863 gives no parse. The same surface with the boundary written. Intended parse once #649 is fixed: PRE+R2|at+?sa, rules [PRE, pd, pr1].
+      The same surface with the boundary written. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises: ["MetathesisRule"]
   - word: "ast"

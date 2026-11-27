@@ -1,7 +1,7 @@
 # Engine-only fixture retirement: decision record
 
 **Decision (owner).** The conformance suite keeps only grammars a real FieldWorks project can
-produce, that is, fixtures marked `fieldworks_producible: true`. A fixture that needs a construct
+produce, that is, fixtures a real project can produce. A fixture that needs a construct
 `HCLoader.cs` (FieldWorks `ParserCore`) cannot emit tests the engine against input FieldWorks never
 sends, so it cannot catch a regression a FieldWorks user would see. Such a fixture is converted
 to a producible grammar when that preserves its purpose, and deleted when it does not.
@@ -19,9 +19,9 @@ The construct numbers used below are that section's row numbers.
 
 27 fixtures were deleted. Four were later restored as producible grammars, so 23 stay deleted
 (see "Restored" below). Five more fixtures were deleted afterwards (see "Deleted"); three of those five were restored as aspirational (see "Restored as aspirational"), so 25 stay deleted. The counts below date from the first retirement, when 133 fixtures remained (6 `languages/`, 127 `edge-cases/`), every one
-`fieldworks_producible: true`; two of them, `edge-cases/compound-max-applications` and
-`edge-cases/final-template-partial-trace`, are new. The suite holds more now, and its count changes with every fixture; the current count comes from `generated/hc-conformance-manifest.v2.json`
-(`python3 scripts/generate_manifest.py --check`), not from this page.
+is producible; two of them, `edge-cases/compound-max-applications` and
+`edge-cases/final-template-partial-trace`, are new. The suite holds more now, and its count changes with every fixture; the current count comes from the generated manifest
+(`python3 scripts/suite.py generate`), not from this page.
 
 ## Marked producible without a grammar change
 
@@ -190,8 +190,8 @@ Three of the five fixtures deleted after the #615 gate were restored on 2026-11-
 [ADR 0001](adr/0001-aspirational-upstream-fixtures.md)), because FieldWorks Jira
 [LT-22922](https://jira.sil.org/browse/LT-22922) is open: it asks `HCLoader` to keep a prefix's right-hand
 environment as an environment instead of folding it into the input pattern (row 14 of
-fieldworks-cannot-say.md). Each carries `upstream: [{ref: "jira:LT-22922", kind: issue, affects: loader}]` in
-its `words.yaml`. Their rows are unchanged from the commit that deleted them.
+fieldworks-cannot-say.md). Each has a `pending-upstream` row for `jira:LT-22922` (`affects: loader`) in
+`status.yaml`. Their rows are unchanged from the commit that deleted them.
 
 | Fixture | Construct | Upstream |
 |---|---|---|
@@ -199,7 +199,7 @@ its `words.yaml`. Their rows are unchanged from the commit that deleted them.
 | `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | 14: as above | LT-22922 |
 | `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | 14: as above | LT-22922 |
 
-If LT-22922 is closed unfixed (`scripts/upstream_status.py` reports `issue-closed` or `rejected`), retire the three
+If LT-22922 is closed unfixed (`python3 scripts/suite.py status` reports `issue-closed` or `rejected`), retire the three
 again and put their rows back in the "Deleted" table above (their rows are in the history of this file at 16a7368).
 
 ## Trace-verified surfaces lost and gained

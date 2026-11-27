@@ -1,13 +1,10 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # hc.dll, Machine 18cf242f.
 language: nullable-disagree-unbounded-ltr-right
 inspired_by: ["synthetic feature disagreement at a word edge"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Negative control for nullable disagree unbounded ltr right: 'ii' must complete with no analysis."

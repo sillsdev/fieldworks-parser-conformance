@@ -2,7 +2,7 @@
 """Check the shape of every fieldworks/ witness directory, in fixtures and stress (PROTOCOL.md section 10).
 
 Structural only: the directory holds exactly project.fwdata, phonology-mutations.yaml and
-WritingSystemStore/*.ldml; the fixture is fieldworks_producible: true; phonology-mutations.yaml is
+WritingSystemStore/*.ldml; phonology-mutations.yaml is
 version 1 and its base_sha256 equals the SHA-256 of the exact bytes of project.fwdata; and
 project.fwdata and every .ldml are well-formed XML.
 
@@ -53,9 +53,6 @@ def main() -> int:
         if entries != ["WritingSystemStore", "phonology-mutations.yaml", "project.fwdata"]:
             problems.append(f"{name}: unexpected contents {entries}")
             continue
-        words = (directory / "words.yaml").read_text(encoding="utf-8-sig")
-        if not re.search(r"^fieldworks_producible:\s*true\s*$", words, re.M):
-            problems.append(f"{name}: the fixture is not fieldworks_producible: true")
         store = witness / "WritingSystemStore"
         for item in sorted(store.iterdir()):
             if item.suffix != ".ldml":

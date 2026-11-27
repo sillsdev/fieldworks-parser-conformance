@@ -1,4 +1,3 @@
-# oracle-provenance: forward-synthesis
 #
 # REGRESSION PIN FOR AN ANALYSIS PARSE LOSS FIXED BY sillsdev/machine#494. Every word here records
 # the founding oracle's own output except `zudiua`, whose expected parse was derived from the grammar
@@ -53,7 +52,6 @@ sources:
   - "perf/pr494-priority-union:docs/pr494-review.md (section 4, OverrideLoss_TenseFlipFlop)"
   - "PanGloss rust/crates/pg-parse/tests/exact_analysis_fs_recall.rs (fix/exact-analysis-fs branch)"
 requires: []
-fieldworks_producible: true
 words:
   - word: zud
     note: Bare root, unaffixed, untensed. Control that the grammar loads and the root parses on its own.

@@ -33,7 +33,6 @@ inspired_by: ["synthetic loader-semantics probe (not modeling any real language)
 sources:
   - "rust/parity-out/audit/phase2/C-loader-parity.md (Phase-2 audit C finding N3)"
 requires: []
-fieldworks_producible: true
 words:
   - word: bat
     note: >-

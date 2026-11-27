@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c598 verified-date=2026-10-31
 # Replayed on hc.dll at Machine aab4c598 (see README.md): the rows below are the oracle's own output.
 # Synthetic; no real language. The grammar is the per-copy form HCLoader emits for a prefix entry whose
 # one allomorph carries two MoInflAffMsas (MergeMSAs off, so equal MSAs stay separate): two
@@ -10,7 +9,6 @@ language: AdhocProhibitionAffixMsaCopies
 inspired_by: ["a prefix entry with two equal affix MSAs (MergeMSAs off) compiles to two morphological rules; an ad hoc allomorph prohibition names the one prefix allomorph, and HCLoader attaches it to every copy"]
 sources: ["HCLoader.cs:2163-2189 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

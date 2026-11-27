@@ -47,7 +47,7 @@ def run_oracle(root, propose=False):
 
 def write_draft(fx, words, parses, header):
     out = [header, f"language: {yq(CAMEL.get(fx.name, fx.name))}", "sources: []", f"requires: [{REQ.get(fx.name, '')}]",
-           "fieldworks_producible: true", "budget_ms: 600000", "words:"]
+           "budget_ms: 600000", "words:"]
     for w in words:
         entries = parses.get(w)
         if entries == []:
@@ -111,9 +111,8 @@ def main():
     shutil.copy(work / "grammar.xml", out / "grammar.xml")
     (out / "words.txt").write_text("\n".join(words) + "\n", encoding="utf-8", newline="\n")
     notes = json.load(open(work / "notes.json")) if (work / "notes.json").exists() else {}
-    lines = [header, f"language: {yq(CAMEL.get(fam, fam))}", "sources: []", f"requires: [{REQ.get(fam, '')}]", "fieldworks_producible: true",
+    lines = [header, f"language: {yq(CAMEL.get(fam, fam))}", "sources: []", f"requires: [{REQ.get(fam, '')}]",
              "budget_ms: 600000",
-             "# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace",
              "words:"]
     for (rung, w, ln, cost, npar) in ladder:
         npp = len(parses[w])

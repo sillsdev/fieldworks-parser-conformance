@@ -211,7 +211,6 @@ inspired_by: ["synthetic probe of FieldWorks HCLoader's irregular-inflection sub
 sources:
   - "Src/LexText/ParserCore/HCLoader.cs:626-807,1702-1804 (LoadLexEntryOfVariant, LoadAffixTemplate, LoadNullAffixProcessRule)"
 requires: []
-fieldworks_producible: true
 words:
   # Deliberately bogus expected parses on every word below (signature "BOGUS|bogus") so the
   # self-check harness reports a mismatch, and therefore prints the REAL actual signature(s) for
@@ -337,7 +336,6 @@ inspired_by: ["synthetic probe of an author-added ad hoc co-occurrence prohibiti
 sources:
   - "Src/LexText/ParserCore/HCLoader.cs:341-350,2213-2239 (LoadMorphemeCoOccurrenceRules, IMoMorphAdhocProhib projection)"
 requires: []
-fieldworks_producible: true
 words:
   # Same deliberately-bogus-expected-parses probe technique as edge-cases/substitute-mpr-probe: every
   # word below is expected to mismatch so the harness prints the real "got [...]" signature.

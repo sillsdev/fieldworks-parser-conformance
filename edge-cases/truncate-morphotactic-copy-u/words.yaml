@@ -1,11 +1,9 @@
-# oracle-provenance: founding-oracle combined Machine #500+#506 corrected C# oracle
 language: TruncateRulesProbeCopyU
 inspired_by: ["Machine #480 truncate-morphotactic with the retained-host copy-U discriminator"]
 sources:
   - "Machine #480 truncate-morphotactic rules; A/B/C subtrees unchanged from the explicit-ID companion"
   - "Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e"
 requires: []
-fieldworks_producible: true
 words:
   - word: gau
     note: "Nine parses, including the A/B/C histories followed by U; preserve the duplicate ROOT+C+A+U identity with both application histories."

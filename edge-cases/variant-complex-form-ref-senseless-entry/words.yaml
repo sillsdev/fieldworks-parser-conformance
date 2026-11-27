@@ -1,11 +1,9 @@
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged by PanGloss#174 with rows from aab4c598, all three replayed unchanged)
 # Synthetic; no real language. tu is a sense-less entry whose one LexEntryRef is a complex-form ref (no variant types) to ta;
 # HCLoader loads every entry ref of a sense-less entry as a variant source (HCLoader.cs:639-668, GetInflTypes 706-710).
 language: VariantComplexFormRef
 inspired_by: ["a sense-less entry whose only entry ref is a complex-form ref is a variant of its component for HCLoader"]
 sources: ["HCLoader.cs:639-668 (LoadLexEntries)", "HCLoader.cs:706-710 (GetInflTypes)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: ta
     note: >-

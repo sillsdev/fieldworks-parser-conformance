@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=ed5cf05d verified-date=2026-10-26
 # Expected parses are derived from the HC clitic and final-template rules (Machine #529); the engine run only confirms them.
 language: CliticProcliticAfterFinalTemplate
 inspired_by: ["synthetic proclitic-outside-final-template probe, not a model of a real language"]
@@ -7,7 +6,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs: IsBlockingStratum"
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: >-

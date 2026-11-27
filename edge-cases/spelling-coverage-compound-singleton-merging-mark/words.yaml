@@ -1,9 +1,7 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: SpellingCompoundSingletonMergingMark
 requires: [morpher-settings]
 morpher:
   MaxRoots: 2
-fieldworks_producible: true
 words:
   - word: "́p"
     note: "C# returns 1 analysis (W|́p): pins that this spelling is a route and its morpheme sequence."

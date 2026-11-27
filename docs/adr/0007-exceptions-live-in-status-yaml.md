@@ -21,8 +21,8 @@ without reading every `words.yaml`.
 - One resolver answers "what is known wrong, and where is the upstream fix". Re-pointing an upstream ref no longer rehashes a test case.
 - Closing an exception is deleting a row, at the moment the C# gate turns red ([ADR 0002](0002-reference-is-the-only-source-of-expected-results.md)).
 - Consumers read one file for exceptions and keep their own divergences elsewhere, so the suite never carries a consumer's quirks.
-- Today: `status.yaml` does not exist. Until epic S1 lands it, the `upstream` field ([PROTOCOL.md](../../PROTOCOL.md) section 12) and
-  `scripts/upstream_status.py` apply, plus the prose notes.
+- Today: `status.yaml` exists, with schema `schema/status.schema.json`. `python3 scripts/suite.py status` reports each row
+  (`scripts/exceptions.py`); `suite.py check` validates them. The `upstream` field of `words.yaml` is gone.
 
 ## Alternatives considered
 

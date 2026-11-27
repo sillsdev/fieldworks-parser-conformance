@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=f150e2a0 verified-date=2026-09-16
 # Synthetic construct-shaped mimic -- see STAGING.md and grammar.xml's own header comment.
 
 language: CrossStemMaterialDetermination
@@ -9,7 +7,6 @@ inspired_by: ["synthetic cross-stem material-determination probe (not modeling a
 sources:
   - "cross-stem material-determination containment regression"
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   The FieldWorks "class-changing affix" pattern. Each derivational prefix writes one inflection class
   (MoDerivAffMsa.ToInflectionClassRA -> OutMprFeatures, HCLoader.cs:954-955); the suffix is an

@@ -1,9 +1,7 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: MprWide
 inspired_by: [synthetic inflection-class families]
 sources: [PanGloss issue 150]
 requires: []
-fieldworks_producible: true
 words:
   - word: paa
     note: bare boundary class

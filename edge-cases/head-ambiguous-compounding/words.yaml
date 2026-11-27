@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
 # Equal flat signatures retain both analyses and distinct rule-trace sets.
@@ -13,7 +12,6 @@ sources:
   - "rust/crates/pg-parse/src/identity.rs (AnalysisIdentity::root_index)"
   - "rust/crates/pg-foma/tests/cross_compiler_equivalence_gate.rs (RED-1's uflexc compound-loop fix)"
 requires: []
-fieldworks_producible: true
 words:
   - word: dak
     note: DAK bare root, no compounding -- a plain control.

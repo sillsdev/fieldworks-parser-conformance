@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-11-11
 # Every row is what the C# oracle (SIL.Machine.Morphology.HermitCrab at the commit above, built as the
 # hc-conformance self-check runner) does. The runner's --propose output for the 22 words below was read against
 # the rules and then confirmed by the self-check, which passes every word, signature and traced rule. Two other
@@ -24,7 +23,6 @@ sources:
   - "sillsdev/machine#635 and sillsdev/PanGloss#236: optional-vowel lattice growth under un-applied deletion, and the cost of reduplication matching over it"
   - "AnalysisMorphologicalTransform.cs HasDisagreeingCopies/CanAlign (machine aab4c598)"
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Read from HCLoader.cs at FieldWorks 620cd9903; NOT proven by a FieldWorks witness. Reduplication is an
   MoAffixProcess: LoadAffixProcessAllomorph (1383-1488) writes one input pattern per input part and a
