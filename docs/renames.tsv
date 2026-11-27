@@ -34,3 +34,5 @@ edge-cases/featureless-singleton-target	edge-cases/featureless-target		wave-2026
 edge-cases/merge-subrules-pos-ltr-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27
 edge-cases/merge-subrules-pos-rtl-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27
 edge-cases/merge-subrules-pos-simultaneous-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27
+edge-cases/partial-inherited-output-literal	edge-cases/partial-inherited-output-target		wave-2026-11-27
+edge-cases/partial-inherited-output-singleton	edge-cases/partial-inherited-output-target		wave-2026-11-27

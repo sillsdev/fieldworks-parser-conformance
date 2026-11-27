@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<HermitCrabInput>
+  <Language>
+    <Name>PartialInheritedOutputTarget</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posV_literal">
+        <Name>V_literal</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_singleton">
+        <Name>V_singleton</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="f0_literal">
+        <Name>f0_literal</Name>
+        <Symbols>
+          <Symbol id="f0K_literal">K</Symbol>
+          <Symbol id="f0T_literal">T</Symbol>
+          <Symbol id="f0S_literal">S</Symbol>
+          <Symbol id="f0Z_literal">Z</Symbol>
+          <Symbol id="f0A_literal">A</Symbol>
+          <Symbol id="f0I_literal">I</Symbol>
+          <Symbol id="f0P_literal">P</Symbol>
+          <Symbol id="f0B_literal">B</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="voice_literal">
+        <Name>voice_literal</Name>
+        <Symbols>
+          <Symbol id="voiceplus_literal">plus</Symbol>
+          <Symbol id="voiceminus_literal">minus</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f0_singleton">
+        <Name>f0_singleton</Name>
+        <Symbols>
+          <Symbol id="f0K_singleton">K</Symbol>
+          <Symbol id="f0T_singleton">T</Symbol>
+          <Symbol id="f0S_singleton">S</Symbol>
+          <Symbol id="f0Z_singleton">Z</Symbol>
+          <Symbol id="f0A_singleton">A</Symbol>
+          <Symbol id="f0I_singleton">I</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="voice_singleton">
+        <Name>voice_singleton</Name>
+        <Symbols>
+          <Symbol id="voiceplus_singleton">plus</Symbol>
+          <Symbol id="voiceminus_singleton">minus</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_literal">cell literal</Symbol>
+          <Symbol id="cell_singleton">cell singleton</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="tbl_literal">
+      <Name>Main_literal</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cK_literal">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0K_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_literal">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0T_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceminus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_literal">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0S_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceminus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cZ_literal">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0S_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceplus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_literal">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0A_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceminus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_literal">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0I_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceminus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_literal">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0P_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceminus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cB_literal">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f0_literal" symbolValues="f0B_literal"/>
+          <FeatureValue feature="voice_literal" symbolValues="voiceplus_literal"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_singleton">
+          <Representations>
+            <Representation>u</Representation>
+          </Representations>
+          <FeatureValue feature="f0_singleton" symbolValues="f0K_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_singleton">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f0_singleton" symbolValues="f0T_singleton"/>
+          <FeatureValue feature="voice_singleton" symbolValues="voiceminus_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_singleton">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f0_singleton" symbolValues="f0S_singleton"/>
+          <FeatureValue feature="voice_singleton" symbolValues="voiceminus_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cZ_singleton">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f0_singleton" symbolValues="f0S_singleton"/>
+          <FeatureValue feature="voice_singleton" symbolValues="voiceplus_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_singleton">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+          <FeatureValue feature="f0_singleton" symbolValues="f0A_singleton"/>
+          <FeatureValue feature="voice_singleton" symbolValues="voiceminus_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_singleton">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="f0_singleton" symbolValues="f0I_singleton"/>
+          <FeatureValue feature="voice_singleton" symbolValues="voiceminus_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <SegmentNaturalClass id="ncV_literal">
+        <Name>V_literal</Name>
+        <Segment segment="cA_literal"/>
+        <Segment segment="cI_literal"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncK_literal">
+        <Name>K_literal</Name>
+        <Segment segment="cK_literal"/>
+        <Segment segment="cT_literal"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncS_literal">
+        <Name>S_literal</Name>
+        <FeatureValue feature="f0_literal" symbolValues="f0S_literal"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncSZ_literal">
+        <Name>SZ_literal</Name>
+        <Segment segment="cS_literal"/>
+        <Segment segment="cZ_literal"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncV_singleton">
+        <Name>V_singleton</Name>
+        <Segment segment="cA_singleton"/>
+        <Segment segment="cI_singleton"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncK_singleton">
+        <Name>K_singleton</Name>
+        <Segment segment="cK_singleton"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncS_singleton">
+        <Name>S_singleton</Name>
+        <FeatureValue feature="f0_singleton" symbolValues="f0S_singleton"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="prLen_literal">
+        <Name>intervocalicLenition_literal</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cK_literal"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncS_literal"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prSibVoiceless_literal">
+        <Name>voicelessToSibilant_literal</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cP_literal"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncSZ_literal"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prSibVoiced_literal">
+        <Name>voicedToSibilant_literal</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cB_literal"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncSZ_literal"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prLen_singleton">
+        <Name>intervocalicLenition_singleton</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncK_singleton"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncS_singleton"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_singleton"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_singleton"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl_literal" morphologicalRuleOrder="unordered" phonologicalRules="prLen_literal prSibVoiceless_literal prSibVoiced_literal prLen_singleton">
+        <Name>Main_literal</Name>
+        <LexicalEntries>
+          <LexicalEntry id="eAka_literal" partOfSpeech="posV_literal">
+            <Allomorphs>
+              <Allomorph id="aAka_literal">
+                <PhoneticShape>aka</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AKA_literal</MorphemeId>
+            <Gloss>aka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIta_literal" partOfSpeech="posV_literal">
+            <Allomorphs>
+              <Allomorph id="aIta_literal">
+                <PhoneticShape>ita</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ITA_literal</MorphemeId>
+            <Gloss>ita</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIpi_literal" partOfSpeech="posV_literal">
+            <Allomorphs>
+              <Allomorph id="aIpi_literal">
+                <PhoneticShape>ipi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>IPI_literal</MorphemeId>
+            <Gloss>ipi</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIbi_literal" partOfSpeech="posV_literal">
+            <Allomorphs>
+              <Allomorph id="aIbi_literal">
+                <PhoneticShape>ibi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>IBI_literal</MorphemeId>
+            <Gloss>ibi</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAka_singleton" partOfSpeech="posV_singleton">
+            <Allomorphs>
+              <Allomorph id="aAka_singleton">
+                <PhoneticShape>eue</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AKA_singleton</MorphemeId>
+            <Gloss>aka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIta_singleton" partOfSpeech="posV_singleton">
+            <Allomorphs>
+              <Allomorph id="aIta_singleton">
+                <PhoneticShape>ode</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ITA_singleton</MorphemeId>
+            <Gloss>ita</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
