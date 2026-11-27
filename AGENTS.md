@@ -104,6 +104,10 @@ it never opens one. The PanGloss `xample-projector` tool produces and reads them
   other witnesses use, so identical writing systems stay byte-identical.
 - `phonology-mutations.yaml` carries `version: 1` and a `base_sha256` equal to the SHA-256 of
   `project.fwdata`. Recompute it whenever the project changes. `scripts/check_fwdata.py` checks it.
+- It also carries `grammar_sha256`, the SHA-256 of `grammar.xml` (line endings normalised, as the manifest hashes
+  it). Set it only when the witness was authored or regenerated against that grammar; never update it to make the
+  check pass after editing `grammar.xml`. A grammar edit that makes a witness stale is a failure until the witness
+  is regenerated. Witnesses that predate the field are listed in `fieldworks-stale-witnesses.tsv` until then.
 - `.gitattributes` marks `*.fwdata` binary: its exact bytes are hashed, so do not let an editor or a checkout
   change its line endings.
 - No file may carry a username, email address, or local path. `scripts/privacy_lint.py` fails on them.

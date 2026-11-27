@@ -1,0 +1,11 @@
+# Witnesses whose grammar.xml was edited after the witness was authored, so the witness may no longer project to
+# the current grammar. scripts/check_fwdata.py lets a witness without grammar_sha256 stand only while it is listed here.
+# Regenerating a witness (issue #2, needs the Windows tool run of issue #1) adds grammar_sha256 to its
+# phonology-mutations.yaml and deletes its row. Columns, tab-separated: fixture id, why.
+edge-cases/adhoc-prohibition-affix-environment-copies	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored; a right environment on two prefix copies was folded into the input pattern (issue #2)
+edge-cases/adhoc-prohibition-affix-msa-copies	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored (issue #2)
+edge-cases/adhoc-prohibition-allomorph-variant-control	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored (issue #2)
+edge-cases/adhoc-prohibition-circumfix-pairings	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored (issue #2)
+edge-cases/adhoc-prohibition-stem-msa-copies	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored (issue #2)
+edge-cases/adhoc-prohibition-variant-msa-copies	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored (issue #2)
+edge-cases/deep-optional-affix-nesting	grammar.xml lost its slot outputPartOfSpeech attributes after the witness was authored (issue #2)
