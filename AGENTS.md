@@ -67,9 +67,8 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
    verdict changed, update `fieldworks-writable-shapes.tsv`. Cite the `HCLoader.cs` function and line, and
    the FieldWorks commit you read. If you delete a fixture for this reason, add its row to the table in
    [docs/engine-only-fixture-retirement.md](docs/engine-only-fixture-retirement.md).
-6. Regenerate the manifest (section 2a), then read the `git diff`. The manifest should move only for the
-   fixtures you touched.
-7. Delete a fixture by removing its directory and its line in `docs/grammars.md`, then regenerating. Remove a
+6. Run `python3 scripts/suite.py check`. Nothing derived is committed, so there is no diff to read.
+7. Delete a fixture by removing its directory and its line in `docs/grammars.md`. Remove a
    `dead-rules-allowed.tsv` line that names it, and append its entry to `docs/renames.tsv` (columns and rules in
    [building-grammars](.claude/skills/building-grammars/maintaining.md#rename-and-telling-the-consumers)).
 8. Tell the consuming engines. sillsdev/machine and PanGloss each pin a commit of `main` in `conformance.commit`,
@@ -77,23 +76,20 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
    here. The order of the pull requests, and what each pin names at each step, is in
    [.claude/skills/land-a-conformance-change/SKILL.md](.claude/skills/land-a-conformance-change/SKILL.md).
 
-### 2a. Generated files
+### 2a. Derived files
 
-| File | Written by | Checked by |
-|---|---|---|
-| `generated/hc-conformance-manifest.v2.json` | `python3 scripts/generate_manifest.py` | `python3 scripts/generate_manifest.py --check`, and CI |
-| `generated/stress-manifest.v2.json` | the same command | the same `--check`, and CI |
-| `coverage.csv`, `rules.csv` | the consuming engine's coverage report (sillsdev/machine's runner: `--coverage-report`) | `python3 scripts/check_coverage.py` (every coverage row and every rule row that has words, re-derived from `words.yaml`), CI, and that engine's CI |
+Nothing derived is committed (ADR 0009). `python3 scripts/suite.py generate` writes them into the untracked
+`generated/` directory (`--out DIR` writes elsewhere); `python3 scripts/suite.py check` proves they generate and hold
+their invariants.
 
-- The stress manifest lists `stress/edge-cases/*` in the same layout and is kept apart from the conformance
-  manifest, which consumers pin: changing a stress fixture changes only the stress manifest.
-- The manifest hashes `grammar.xml` and `words.yaml` of every fixture, the DTD, `constructs.txt`,
-  `parity-check.py` and the two schemas. Editing a fixture `README.md`, a file under `docs/`, or this file
-  changes nothing generated.
-- `coverage.csv` and `rules.csv` are derived from `words.yaml` and `constructs.txt`. There is no Python generator
-  here: regenerate them with the consuming engine's runner and commit the result in this repository.
-  `scripts/check_coverage.py` fails when a row is stale or missing; it cannot list the rules a grammar declares
-  but no word exercises, so it checks only that those rows name a real id.
+| File | Holds |
+|---|---|
+| `hc-conformance-manifest.v2.json` | one entry per fixture, with hashes of `grammar.xml` and `words.yaml`, the DTD, `constructs.txt`, `parity-check.py` and the schemas; what consumers pin |
+| `stress-manifest.v2.json` | the same for `stress/edge-cases/*`, kept apart so a stress change moves only it |
+| `coverage.csv`, `rules.csv` | language x word x construct, and language x grammar rule x exercising words, re-derived from `words.yaml`, `grammar.xml` and `constructs.txt` |
+
+Editing a fixture `README.md`, a file under `docs/`, or this file changes nothing derived. A consumer generates its
+own copy; none of these files is read from a checkout of this repository.
 
 ### 2b. Hand-edited files with no generator
 
@@ -134,19 +130,14 @@ it never opens one. The PanGloss `xample-projector` tool produces and reads them
 Run each command from the repository root and read the output. Do not push on a partial run.
 
 ```
-python3 scripts/generate_manifest.py --check
-python3 scripts/check_words_schema.py
-python3 scripts/check_dtd.py
-python3 scripts/check_grammars_md.py
-python3 scripts/check_fwdata.py
-python3 scripts/check_coverage.py
+python3 -m unittest discover -s scripts -p 'test_*.py'
+python3 scripts/suite.py check
 python3 parity-check.py
-python3 scripts/check_links.py
-python3 scripts/privacy_lint.py
 ```
 
-`generate_manifest.py --check` covers both manifests, `check_grammars_md.py` covers both fixture lists (and the
-stress README table), and `check_fwdata.py` covers stress witnesses as well as fixture witnesses.
+`suite.py check` runs the `status.yaml` check, the words schema, the derived files, the DTD, the docs lists (both
+fixture lists and the stress README table), the FieldWorks witnesses (stress ones too), the calibration families,
+the links and the privacy lint.
 
 - `check_words_schema.py` needs PyYAML and jsonschema, and `check_dtd.py` needs lxml or `xmllint`; CI
   installs them (`pip install -r scripts/requirements.txt`). The other scripts use the standard library only.
@@ -186,9 +177,9 @@ a witness yet (0 of 16), and `stress/README.md` states the count.
 | Expected output means | what the oracle engine does, read against the rules; each word pins one behaviour | parity: an optimization must return the same parses; the words are a workload, and a changed row is the failure |
 | Measure | pass or fail | work steps, never wall time; `budget_ms` only guards against a hang |
 | `words.yaml` starts with | front matter | `# kind: stress (...)`, then `budget_ms` |
-| `exercises`, coverage, `rules.csv`, `dead-rules-allowed.tsv` | yes | none; no ledger counts them |
+| `exercises`, derived coverage, `dead-rules-allowed.tsv` | yes | none; no ledger counts them |
 | Fixture `README.md` | optional | none; `stress/README.md` describes every fixture in one table |
-| Listed in | `docs/grammars.md` bullets, `generated/hc-conformance-manifest.v2.json` | the `docs/grammars.md` "Stress grammars" bullets, the `stress/README.md` table and `generated/stress-manifest.v2.json` |
+| Listed in | `docs/grammars.md` bullets, the derived conformance manifest | the `docs/grammars.md` "Stress grammars" bullets, the `stress/README.md` table and the derived stress manifest |
 | Run by | the consumer's default runner | only on request, through the consumer's opt-in stress category |
 
 **Adding or changing a stress fixture.**
@@ -213,9 +204,8 @@ a witness yet (0 of 16), and `stress/README.md` states the count.
    record; cite the issue. Update the witness sentence if a witness was added.
 6. Add a bullet to the "Stress grammars" section of [docs/grammars.md](docs/grammars.md) and keep its count sentence
    true. Update the counts in [docs/README.md](docs/README.md) (`stress/ ... 16 timing` and "The 16 timing grammars") and the numbers line of the root README.
-7. Run `python3 scripts/generate_manifest.py` and read the diff. Only `generated/stress-manifest.v2.json` may
-   move; if the conformance manifest moves, you changed something it hashes.
-8. Delete a fixture by removing its directory, its README row and its bullet, and regenerating. Rename one only
+7. Run `python3 scripts/suite.py check`.
+8. Delete a fixture by removing its directory, its README row and its bullet. Rename one only
    with the consumers in step 9: the directory name `stress/` and the fixture names are read by sillsdev/machine.
 9. Tell the consumers (section 2, step 8). sillsdev/machine's stress test and runner discover the directory
    themselves; a rename or a changed row there is a bump of its pin.

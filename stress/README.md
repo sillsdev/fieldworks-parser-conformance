@@ -50,7 +50,7 @@ them. A consumer that scans the mount recursively for `grammar.xml` would still 
 `[Explicit]` and `[Category("Stress")]`, so a plain `dotnet test` skips it. `generated/stress-manifest.v2.json`
 records the path and SHA-256 of each fixture's `grammar.xml` and `words.yaml`, so a consumer can detect a changed
 stress fixture the way it detects a changed conformance fixture. It is separate from, and does not change, the
-conformance manifest `generated/hc-conformance-manifest.v2.json`.
+conformance manifest (`python3 scripts/suite.py generate`).
 
 ## The fixtures
 

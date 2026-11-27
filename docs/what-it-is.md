@@ -25,12 +25,11 @@ scripts/             the checks CI runs, and the manifest generator
 PROTOCOL.md          the adapter contract: CLI shape, TSV format, signature algorithm
 ```
 
-Per `generated/hc-conformance-manifest.v2.json`, today that is **231 fixtures — 6 under
+Per the derived conformance manifest, today that is **231 fixtures — 6 under
 `languages/`, 225 under `edge-cases/` — holding 3856 words in total**, computed by summing the
 manifest's own `caseCount` field per fixture rather than counted by hand. A `- word:` line count of the
-YAML is higher (3900) because variant blocks repeat words; variant rows are not counted. Regenerate the manifest
-with `python3 scripts/generate_manifest.py`; `python3 scripts/generate_manifest.py --check` fails the build if the
-checked-in file has drifted from what a fresh scan produces.
+YAML is higher (3900) because variant blocks repeat words; variant rows are not counted. Generate the manifest
+with `python3 scripts/suite.py generate`; it is never committed.
 
 ## The fixture contract: exactly two authored files
 
@@ -52,7 +51,7 @@ generated 409KB JSON file — and that file carried *less* than the 383KB of aut
 built from, because the authored comments hold reasoning (why a fixture exists, what it pins) that
 JSON cannot express. It has been deleted, along with its schema. What a manifest genuinely
 contributes is provenance and integrity, not case data, so that is the only generated artifact that
-survives: `generated/hc-conformance-manifest.v2.json` (`schema/conformance-manifest.schema.json`),
+survives: `hc-conformance-manifest.v2.json` (`schema/conformance-manifest.schema.json`),
 one entry per fixture carrying `fixtureId`, `category`, `displayLanguage`, both files' paths and
 SHA-256 hashes, `caseCount`, and `expectedCrash`. A consumer reads the manifest to discover fixtures
 and verify integrity, then reads `grammar.xml` and `words.yaml` directly for the grammar and the

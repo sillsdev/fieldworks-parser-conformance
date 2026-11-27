@@ -152,14 +152,8 @@ Suite PR, from `<suite clone>` ([AGENTS.md](../../../AGENTS.md) section 4; the l
 `.github/workflows/checks.yml`):
 
 ```
-python3 scripts/generate_manifest.py --check
-python3 scripts/check_words_schema.py
-python3 scripts/check_dtd.py
-python3 scripts/check_grammars_md.py
-python3 scripts/check_fwdata.py
+python3 scripts/suite.py check
 python3 parity-check.py
-python3 scripts/check_links.py
-python3 scripts/privacy_lint.py
 ```
 
 Then run machine's runner against the suite branch, from `<machine clone>` with `<hc>` meaning
