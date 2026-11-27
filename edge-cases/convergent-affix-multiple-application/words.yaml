@@ -21,7 +21,6 @@ words:
     parses:
       - signature: "KAT+TANN|kat+?ta"
         rules: [taNN]
-        exercises: ["Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)", "AffixProcessRule: prefix/suffix/circumfix/infix"]
       - signature: "KAT+TANV|kat+?ta"
         rules: [taNV]
     exercises:

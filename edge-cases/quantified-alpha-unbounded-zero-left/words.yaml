@@ -10,141 +10,93 @@ words:
     note: "Negative control for quantified alpha unbounded zero left: 'a' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: e
     note: "Positive witness for quantified alpha unbounded zero left: 'e' must retain the declared analysis."
     parses:
       - signature: "ZERO|e"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: ca
     note: "Negative control for quantified alpha unbounded zero left: 'ca' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: ce
     note: "Positive witness for quantified alpha unbounded zero left: 'ce' must retain the declared analysis."
     parses:
       - signature: "ONE|ce"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tca
     note: "Positive witness for quantified alpha unbounded zero left: 'tca' must retain the declared analysis."
     parses:
       - signature: "MIXEDONE|tca"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tce
     note: "Negative control for quantified alpha unbounded zero left: 'tce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: ta
     note: "Negative control for quantified alpha unbounded zero left: 'ta' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: te
     note: "Positive witness for quantified alpha unbounded zero left: 'te' must retain the declared analysis."
     parses:
       - signature: "TRIG|te"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: ttca
     note: "Positive witness for quantified alpha unbounded zero left: 'ttca' must retain the declared analysis."
     parses:
       - signature: "MIXED|ttca"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: ttce
     note: "Negative control for quantified alpha unbounded zero left: 'ttce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tcca
     note: "Positive witness for quantified alpha unbounded zero left: 'tcca' must retain the declared analysis."
     parses:
       - signature: "ROOT2|tcca"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tcce
     note: "Negative control for quantified alpha unbounded zero left: 'tcce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tccca
     note: "Positive witness for quantified alpha unbounded zero left: 'tccca' must retain the declared analysis."
     parses:
       - signature: "ROOT3|tccca"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tccce
     note: "Negative control for quantified alpha unbounded zero left: 'tccce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: taca
     note: "Negative control for quantified alpha unbounded zero left: 'taca' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"
   - word: tace
     note: "Negative control for quantified alpha unbounded zero left: 'tace' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment"

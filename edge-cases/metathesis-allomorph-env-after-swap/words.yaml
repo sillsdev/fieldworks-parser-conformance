@@ -8,7 +8,6 @@ words:
       - signature: "Z|ta"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"
   - word: "tsa"
     note: >-
@@ -16,7 +15,6 @@ words:
     parses:
       - signature: "Z+PRE|t+?sa"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > allomorph environment after the swap"
   - word: "t+sa"
@@ -25,7 +23,6 @@ words:
     parses:
       - signature: "Z+PRE|t+?sa"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > allomorph environment after the swap"
   - word: "sta"
@@ -33,28 +30,24 @@ words:
       Never a surface: the obligatory rule rewrites st to ts, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"
   - word: "taa"
     note: >-
       Root taa alone: its required right environment needs a segment after the root, and nothing follows, so C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"
   - word: "tsaa"
     note: >-
       Prefix s then root taa after the swap: the required right environment needs a segment after the root's range, and the range runs to the word end (past the wrapped prefix), so C# rejects it. An engine that ends the root at t sees the prefix there and wrongly accepts.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"
   - word: "tsap"
     note: >-
       Root ta followed by p: the required word-final environment fails, so C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"
   - word: "sp"
     note: >-
@@ -63,7 +56,6 @@ words:
       - signature: "PRE+Y|s+?p"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"
   - word: "p"
     note: >-
@@ -72,5 +64,4 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > allomorph environment after the swap"

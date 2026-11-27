@@ -4,19 +4,20 @@ import unittest
 import suite
 
 
-class Labelled(unittest.TestCase):
-    def test_a_rejection_needs_its_own_label(self):
-        self.assertTrue(suite.unlabelled({"word": "a", "expect_fail": True}))
-        self.assertFalse(suite.unlabelled({"word": "a", "expect_fail": True, "exercises": ["x"]}))
+class OneLabel(unittest.TestCase):
+    def test_a_word_with_no_label_fails(self):
+        self.assertIsNotNone(suite.label_problem({"word": "a", "expect_fail": True}))
+        self.assertIsNotNone(suite.label_problem({"word": "a", "parses": [{"signature": "R|a", "rules": []}]}))
 
-    def test_a_skip_needs_its_own_label(self):
-        self.assertTrue(suite.unlabelled({"word": "a", "expect_skip": True, "parses": []}))
+    def test_one_label_on_the_word_or_on_its_parses_passes(self):
+        self.assertIsNone(suite.label_problem({"word": "a", "expect_fail": True, "exercises": ["x"]}))
+        parses = [{"signature": "R|a", "rules": [], "exercises": ["x"]}, {"signature": "S|a", "rules": [], "exercises": ["x"]}]
+        self.assertIsNone(suite.label_problem({"word": "a", "parses": parses}))
+        self.assertIsNone(suite.label_problem({"word": "a", "exercises": ["x"], "parses": parses}))
 
-    def test_every_analysis_needs_a_label_of_its_own_or_the_words(self):
-        parses = [{"signature": "R|a", "rules": [], "exercises": ["x"]}, {"signature": "S|a", "rules": []}]
-        self.assertTrue(suite.unlabelled({"word": "a", "parses": parses}))
-        self.assertFalse(suite.unlabelled({"word": "a", "parses": parses, "exercises": ["y"]}))
-        self.assertFalse(suite.unlabelled({"word": "a", "parses": parses[:1]}))
+    def test_a_second_label_anywhere_fails(self):
+        self.assertIsNotNone(suite.label_problem({"word": "a", "exercises": ["x", "y"]}))
+        self.assertIsNotNone(suite.label_problem({"word": "a", "exercises": ["x"], "parses": [{"exercises": ["y"]}]}))
 
     def test_word_labels_join_the_words_and_its_parses_without_repeats(self):
         word = {"exercises": ["x"], "parses": [{"exercises": ["x", "y"]}, {"exercises": ["z"]}]}

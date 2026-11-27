@@ -16,7 +16,7 @@ The list has 263 fixtures: 6 languages and 257 edge cases.
 
 The tier says how often a consumer should run a test case: **core** on every pull request, **regression** and **extended** on the full run. It is computed by `scripts/tiers.py` from data the suite holds, never authored, and never part of an id; `scripts/check_grammars_md.py` fails when this table is stale. A test case is core when it is a language profile, has a FieldWorks witness, or is one of the two smallest carriers of a behaviour label (a vocabulary label, constructs.txt or labels.tsv; fewest words first, then id). Otherwise it is regression when it has an exception in `status.yaml`, is the only test case citing some bug (the last detector of a bug is never removed, ADR 0008), or has 300 or more words, and extended when it has none of these.
 
-108 core, 17 regression, 138 extended.
+112 core, 17 regression, 134 extended.
 
 | test case | tier | why |
 | --- | --- | --- |
@@ -37,14 +37,14 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/alpha-variable-name-collision` | core | carries Alpha-variable phonological environments (VariableFeature/AlphaVariables) |
 | `edge-cases/ambiguous-disagree-feature-class-bounded-rtl` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat |
 | `edge-cases/ambiguous-disagree-feature-class-unbounded-ltr` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat |
-| `edge-cases/ambiguous-disagree-mixed-plus-class` | extended |  |
-| `edge-cases/ambiguous-disagree-repeated-minus-partial-focus` | extended |  |
-| `edge-cases/authored-null-affix-allomorph` | extended |  |
+| `edge-cases/ambiguous-disagree-mixed-plus-class` | core | carries Alpha-variable phonological environments (VariableFeature/AlphaVariables) |
+| `edge-cases/ambiguous-disagree-repeated-minus-partial-focus` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star |
+| `edge-cases/authored-null-affix-allomorph` | core | carries AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph |
 | `edge-cases/boundary-first-in-narrowing-lhs` | extended |  |
 | `edge-cases/boundary-first-in-narrowing-lhs-strrep` | extended |  |
 | `edge-cases/boundary-leftover-in-narrowing-lhs-strrep` | extended |  |
 | `edge-cases/boundary-mid-in-narrowing-lhs-strrep` | extended |  |
-| `edge-cases/boundary-narrowing-probe` | core | carries Boundary markers (CharacterDefinitionTable), MorphologicalOutputAction: CopyFromInput/InsertSegments, RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side |
+| `edge-cases/boundary-narrowing-probe` | core | carries Boundary markers (CharacterDefinitionTable), RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side |
 | `edge-cases/category-limited-phonological-rule` | core | carries RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level |
 | `edge-cases/chained-output-feature-override-loss` | core | carries Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures) |
 | `edge-cases/change-epenthesis-prefix-deletion-chain` | extended |  |
@@ -63,10 +63,10 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/compound-after-an-insertion-keeps-the-bare-node` | regression | 757 words |
 | `edge-cases/compound-allomorph-identity` | extended |  |
 | `edge-cases/compound-allomorph-identity-distinct-entries` | extended |  |
-| `edge-cases/compound-allomorph-identity-same-spelling` | extended |  |
+| `edge-cases/compound-allomorph-identity-same-spelling` | core | carries CompoundingRule |
 | `edge-cases/compound-allomorph-identity-separated` | extended |  |
 | `edge-cases/compound-max-applications` | core | carries CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features) |
-| `edge-cases/compounding-breadth` | core | carries CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features), Element deactivation (isActive) across loader collections |
+| `edge-cases/compounding-breadth` | core | carries CompoundingRule, CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features), Element deactivation (isActive) across loader collections |
 | `edge-cases/compounding-non-recursive` | extended |  |
 | `edge-cases/convergent-affix-multiple-application` | core | carries Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable) |
 | `edge-cases/convergent-alpha-assimilation-homophonous` | extended |  |
@@ -82,7 +82,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/deletion-reapplications` | extended |  |
 | `edge-cases/deletion-reduplication-exception-composite` | core | carries AffixProcessRule: reduplication (ReduplicationHint), MPR features/groups, RewriteRule direction (Dir): left-to-right |
 | `edge-cases/deletion-reinserted-feature-unapply` | extended |  |
-| `edge-cases/diacritic-segments` | core | carries MorphologicalOutputAction: CopyFromInput/InsertSegments |
+| `edge-cases/diacritic-segments` | core | carries MorphologicalOutputAction: CopyFromInput/InsertSegments, NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision |
 | `edge-cases/discontinuous-morph-environment` | extended |  |
 | `edge-cases/disjunctive-folded-env-blocks` | core | carries Disjunctive allomorphs / free-fluctuation |
 | `edge-cases/disjunctive-recheck` | extended |  |
@@ -104,13 +104,13 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/final-template-partial-reachability` | extended |  |
 | `edge-cases/final-template-partial-root` | extended |  |
 | `edge-cases/final-template-partial-trace` | core | carries Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability |
-| `edge-cases/flex-null-affix-environments` | regression | only test case citing machine#597 |
+| `edge-cases/flex-null-affix-environments` | core | carries AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph |
 | `edge-cases/free-fluctuating-allomorph-pair` | core | carries Disjunctive allomorphs / free-fluctuation |
 | `edge-cases/fw-metathesis-switch-indices` | core | FieldWorks witness; carries MetathesisRule > switch indices |
 | `edge-cases/geminate-under-merge` | extended |  |
 | `edge-cases/guess-roots-settings` | core | carries Guesser/LexicalGuess |
 | `edge-cases/guesser-pattern-root-fallback` | core | carries Guesser/LexicalGuess |
-| `edge-cases/head-ambiguous-compounding` | core | carries CompoundingRule, CompoundingRule > head selection |
+| `edge-cases/head-ambiguous-compounding` | core | carries CompoundingRule > head selection |
 | `edge-cases/infix-ambiguous-site` | regression | only test case citing ?#39, ?#638, pangloss#297, pangloss#299 |
 | `edge-cases/infix-interdigitation` | extended |  |
 | `edge-cases/infix-split-root-allomorph-environment` | regression | exception in status.yaml; only test case citing machine#631 |
@@ -118,24 +118,24 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/iterative-epenthesis-cascade` | extended |  |
 | `edge-cases/lexical-lookup-sibling-allomorphs` | regression | only test case citing ?#627, machine#627 |
 | `edge-cases/literal-hash-affix-context` | extended |  |
-| `edge-cases/loader-pattern-shapes` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star |
+| `edge-cases/loader-pattern-shapes` | core | carries Boundary markers (CharacterDefinitionTable), CharacterDefinitionTable pattern shapes: optional group / Kleene star |
 | `edge-cases/merge-subrules-pos-ltr-template` | core | carries RewriteRule direction (Dir): left-to-right |
-| `edge-cases/merge-subrules-pos-rtl-template` | core | carries RewriteRule direction (Dir): right-to-left |
+| `edge-cases/merge-subrules-pos-rtl-template` | extended |  |
 | `edge-cases/merge-subrules-pos-simultaneous-template` | extended |  |
-| `edge-cases/merge-then-metathesis` | core | carries MetathesisRule, MetathesisRule > interaction with a rewrite rule |
+| `edge-cases/merge-then-metathesis` | core | carries MetathesisRule > interaction with a rewrite rule |
 | `edge-cases/metathesis-allomorph-env-after-swap` | core | carries MetathesisRule > allomorph environment after the swap |
 | `edge-cases/metathesis-boundary-between-switches-compound` | core | carries MetathesisRule > boundary between the switched segments |
 | `edge-cases/metathesis-boundary-between-switches-marker` | extended |  |
 | `edge-cases/metathesis-boundary-between-switches-prefix` | core | carries MetathesisRule > boundary between the switched segments |
-| `edge-cases/metathesis-boundary-context-left-right-to-left` | core | carries MetathesisRule > boundary in the switch context |
+| `edge-cases/metathesis-boundary-context-left-right-to-left` | extended |  |
 | `edge-cases/metathesis-boundary-context-right` | core | carries MetathesisRule > boundary in the switch context |
-| `edge-cases/metathesis-boundary-context-segments` | extended |  |
+| `edge-cases/metathesis-boundary-context-segments` | core | carries MetathesisRule > boundary in the switch context |
 | `edge-cases/metathesis-boundary-morph-order-compound` | core | carries MetathesisRule > morph order across the switch |
 | `edge-cases/metathesis-boundary-morph-order-prefix-root` | core | carries MetathesisRule > morph order across the switch |
 | `edge-cases/metathesis-boundary-null-prefix` | core | carries MetathesisRule > null prefix |
 | `edge-cases/metathesis-boundary-right-to-left-prefix` | extended |  |
 | `edge-cases/metathesis-boundary-right-to-left-suffix` | core | carries MetathesisRule > right-to-left application |
-| `edge-cases/metathesis-boundary-two-suffixes` | extended |  |
+| `edge-cases/metathesis-boundary-two-suffixes` | core | carries MetathesisRule |
 | `edge-cases/metathesis-deletion-restores-segment-between-switches` | regression | exception in status.yaml; only test case citing machine#520 |
 | `edge-cases/metathesis-middle-context-emptied-edges` | regression | exception in status.yaml; only test case citing machine#619, pangloss#388, pangloss-divergence-127 |
 | `edge-cases/metathesis-segment-class-union` | core | carries MetathesisRule > segment-class union in the switch |
@@ -143,15 +143,15 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/morphotactic-attribute-breadth` | extended |  |
 | `edge-cases/mpr-gated-exception` | extended |  |
 | `edge-cases/mpr-wide-inflection-classes` | extended |  |
-| `edge-cases/narrowing-boundary-first-alpha-lhs` | core | carries Alpha-variable phonological environments (VariableFeature/AlphaVariables), RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side |
+| `edge-cases/narrowing-boundary-first-alpha-lhs` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side |
 | `edge-cases/narrowing-boundary-order-alpha-lhs` | extended |  |
 | `edge-cases/nfa-literal-allomorph-environment` | regression | only test case citing pangloss#300 |
 | `edge-cases/non-clitic-after-final-template-layout` | core | carries Clitic rules (Clitics stratum) after a final template |
 | `edge-cases/null-prefix-root-initial-deletion-later-suffix` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule |
-| `edge-cases/nullable-disagree-bounded-ltr-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment |
-| `edge-cases/nullable-disagree-bounded-ltr-right` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment |
-| `edge-cases/nullable-disagree-bounded-rtl-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment |
-| `edge-cases/nullable-disagree-bounded-rtl-right` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment |
+| `edge-cases/nullable-disagree-bounded-ltr-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat |
+| `edge-cases/nullable-disagree-bounded-ltr-right` | extended |  |
+| `edge-cases/nullable-disagree-bounded-rtl-left` | extended |  |
+| `edge-cases/nullable-disagree-bounded-rtl-right` | extended |  |
 | `edge-cases/nullable-disagree-plain-ltr-right` | extended |  |
 | `edge-cases/nullable-disagree-unbounded-ltr-left` | extended |  |
 | `edge-cases/nullable-disagree-unbounded-ltr-right` | extended |  |
@@ -170,7 +170,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/partial-class-disagree-unbounded-rtl-right` | extended |  |
 | `edge-cases/partial-feature-literal-output` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification |
 | `edge-cases/partial-feature-literal-rewrite` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification |
-| `edge-cases/partial-feature-no-rewrite` | core | carries NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision |
+| `edge-cases/partial-feature-no-rewrite` | extended |  |
 | `edge-cases/partial-feature-singleton-rewrite` | extended |  |
 | `edge-cases/partial-inherited-output-feature` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature |
 | `edge-cases/partial-inherited-output-literal` | extended |  |
@@ -197,8 +197,8 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/quantified-alpha-unbounded-zero-left` | extended |  |
 | `edge-cases/quantified-alpha-unbounded-zero-right` | extended |  |
 | `edge-cases/recursive-endocentric-compounding` | core | carries CompoundingRule > recursion |
-| `edge-cases/right-to-left-anchor-environment` | extended |  |
-| `edge-cases/right-to-left-bounded-quantifier-rewrite` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat |
+| `edge-cases/right-to-left-anchor-environment` | core | carries RewriteRule direction (Dir): right-to-left |
+| `edge-cases/right-to-left-bounded-quantifier-rewrite` | regression | only test case citing ?#465, pangloss#45 |
 | `edge-cases/right-to-left-metathesis-reversal` | core | carries MetathesisRule > right-to-left application |
 | `edge-cases/right-to-left-segments-environment` | core | carries RewriteRule direction (Dir): right-to-left |
 | `edge-cases/root-required-environment-after-epenthesis-before-suffix` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule |
@@ -221,11 +221,11 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/spelling-coverage-compound-depth-mpr-output` | core | carries CompoundingRule > MPR on the compound |
 | `edge-cases/spelling-coverage-compound-depth-mpr-restricted` | core | carries CompoundingRule > MPR on the compound |
 | `edge-cases/spelling-coverage-compound-depth-prefix-hop` | extended |  |
-| `edge-cases/spelling-coverage-compound-depth-prefix-zone` | core | carries CompoundingRule > depth limit, CompoundingRule > feeds affixation |
-| `edge-cases/spelling-coverage-compound-depth-reordered-prefix` | core | carries CompoundingRule > depth limit, CompoundingRule > feeds affixation |
+| `edge-cases/spelling-coverage-compound-depth-prefix-zone` | core | carries CompoundingRule > depth limit |
+| `edge-cases/spelling-coverage-compound-depth-reordered-prefix` | core | carries CompoundingRule > depth limit |
 | `edge-cases/spelling-coverage-compound-depth3` | extended |  |
 | `edge-cases/spelling-coverage-compound-depth4` | extended |  |
-| `edge-cases/spelling-coverage-compound-junction-boundary-mark` | core | carries CompoundingRule, CompoundingRule > boundary marker at the junction, CompoundingRule > junction phonology |
+| `edge-cases/spelling-coverage-compound-junction-boundary-mark` | core | carries CompoundingRule > boundary marker at the junction |
 | `edge-cases/spelling-coverage-compound-junction-mark` | core | carries CompoundingRule > junction phonology |
 | `edge-cases/spelling-coverage-compound-multirule` | core | carries CompoundingRule > several rewrite rules |
 | `edge-cases/spelling-coverage-compound-multirule-affixes` | core | carries CompoundingRule > several rewrite rules |
@@ -241,14 +241,14 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/spelling-coverage-compound-singleton-junction-epenthesis` | extended |  |
 | `edge-cases/spelling-coverage-compound-singleton-junction-featchange` | extended |  |
 | `edge-cases/spelling-coverage-compound-singleton-junction-final-change` | extended |  |
-| `edge-cases/spelling-coverage-compound-singleton-junction-metathesis` | extended |  |
+| `edge-cases/spelling-coverage-compound-singleton-junction-metathesis` | core | carries CompoundingRule > junction phonology |
 | `edge-cases/spelling-coverage-compound-singleton-junction-root-stratum-final-change` | extended |  |
-| `edge-cases/spelling-coverage-compound-singleton-medial-suffix` | extended |  |
+| `edge-cases/spelling-coverage-compound-singleton-medial-suffix` | core | carries CompoundingRule > feeds affixation |
 | `edge-cases/spelling-coverage-compound-singleton-merging-mark` | extended |  |
 | `edge-cases/spelling-coverage-compound-singleton-quote-boundary` | extended |  |
 | `edge-cases/spelling-coverage-compound-singleton-quote-segment` | extended |  |
 | `edge-cases/spelling-coverage-compound-singleton-thai-mark` | extended |  |
-| `edge-cases/spelling-coverage-compound-strata` | extended |  |
+| `edge-cases/spelling-coverage-compound-strata` | core | carries CompoundingRule > feeds affixation |
 | `edge-cases/spelling-coverage-compound-suffix-feeds` | extended |  |
 | `edge-cases/spelling-coverage-compound-template` | extended |  |
 | `edge-cases/spelling-coverage-compound-template-feeds` | extended |  |
@@ -264,7 +264,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/strrep-rewrite-unapplication` | regression | only test case citing machine#538, pangloss-divergence-071 |
 | `edge-cases/subrule-morphosyntactic-gating` | core | carries RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level |
 | `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix` | extended |  |
-| `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix` | core | carries Boundary markers (CharacterDefinitionTable), MetathesisRule, MetathesisRule > interaction with a rewrite rule |
+| `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix` | core | carries MetathesisRule > interaction with a rewrite rule |
 | `edge-cases/syncope-redup-optional-vowel-lattice` | regression | only test case citing machine#635, pangloss#236, pangloss#237 |
 | `edge-cases/template-category-sharing` | extended |  |
 | `edge-cases/truncate-morphotactic` | regression | only test case citing LT-21939 |
@@ -272,17 +272,17 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/truncate-morphotactic-identity` | extended |  |
 | `edge-cases/truncate-morphotactic-subsumption` | core | carries AffixProcessRule: subtraction/truncation |
 | `edge-cases/two-merges-cascade-env` | extended |  |
-| `edge-cases/unbounded-iterative-quantifier-expansion` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star, CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat |
+| `edge-cases/unbounded-iterative-quantifier-expansion` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat |
 | `edge-cases/variant-clitic-typed-form` | extended |  |
 | `edge-cases/variant-complex-form-ref-senseless-entry` | core | carries Variant entries (sense-less entry loaded under its component entry's MSA) |
 | `edge-cases/word-boundary-affix-rewrite` | extended |  |
 | `edge-cases/zero-width-morpheme-identity` | core | carries Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures) |
-| `languages/metathesis-phase-isolation` | core | language profile |
+| `languages/metathesis-phase-isolation` | core | language profile; carries MetathesisRule |
 | `languages/polysynthetic-stratal-derivation-chain` | core | language profile; carries Stratum (Linear/Unordered rule order) |
 | `languages/suffixing-evidential-adjacency-chain` | core | language profile |
 | `languages/suffixing-extension-slot-ordering` | core | language profile |
 | `languages/suffixing-vowel-harmony` | core | language profile |
-| `languages/templatic-root-modification` | core | language profile; carries MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext |
+| `languages/templatic-root-modification` | core | language profile; carries MorphologicalOutputAction: CopyFromInput/InsertSegments, MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext |
 <!-- tiers:end -->
 
 ## Which engines run which grammars

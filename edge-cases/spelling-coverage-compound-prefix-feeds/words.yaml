@@ -8,7 +8,6 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -16,21 +15,17 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: s
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aa
     note: "C# returns 1 analysis (X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: ap
@@ -38,23 +33,18 @@ words:
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: as
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pa
     note: "C# returns 1 analysis (Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: pp
@@ -62,15 +52,12 @@ words:
     parses:
       - signature: "Y|pp"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: ps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -90,129 +77,104 @@ words:
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: paa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: saa
     note: "C# returns 2 analyses (PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: sap
@@ -220,35 +182,22 @@ words:
     parses:
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: sas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spa
     note: "C# returns 2 analyses (PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: spp
@@ -256,525 +205,434 @@ words:
     parses:
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: sps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aaap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aaas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aaps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aasa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aasp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: appa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: appp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apsa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apsp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: apss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aspa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aspp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: assa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: assp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: asss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: paaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: paap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: paas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: papa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: papp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: paps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pasa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pasp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppsa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppsp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ppss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pspa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pspp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pssa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: pssp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: psss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: saaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: saap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: saas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: saps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sasa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sasp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spsa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spsp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: spss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sspa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sspp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sssa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sssp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: ssss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: xy
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -782,15 +640,12 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: xyp
     note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: pxy
@@ -798,8 +653,6 @@ words:
     parses:
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: sxy
@@ -814,19 +667,12 @@ words:
     parses:
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: psxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"

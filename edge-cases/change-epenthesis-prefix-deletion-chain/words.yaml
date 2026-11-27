@@ -21,7 +21,8 @@ words:
     parses:
       - signature: "R1|st"
         rules: [pc0]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "asa"
     note: "C# e63b8863 returns 1 analysis (PR0+R0|asa): pins the morpheme sequence."
     parses:

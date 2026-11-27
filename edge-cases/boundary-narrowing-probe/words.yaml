@@ -9,16 +9,12 @@ words:
     parses:
       - signature: "KAN+BO|nmo"
         rules: [mrSfxBo, prPostNasal]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "Boundary markers (CharacterDefinitionTable)"
   - word: nbo
     note: "Obligatory narrowing blocks this spelling."
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Boundary markers (CharacterDefinitionTable)"
   - word: n
     note: "Bare-root control."

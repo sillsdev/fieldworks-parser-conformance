@@ -8,7 +8,6 @@ words:
       - signature: "X|a"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "p"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "st"
     note: >-
@@ -26,7 +24,6 @@ words:
       - signature: "Z|st"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "aa"
     note: >-
@@ -35,7 +32,6 @@ words:
       - signature: "X+SUF|a+?a"
         rules: [SUF]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "pa"
     note: >-
@@ -44,7 +40,6 @@ words:
       - signature: "Y+SUF|p+?a"
         rules: [SUF]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "a+a"
     note: >-
@@ -53,7 +48,6 @@ words:
       - signature: "X+SUF|a+?a"
         rules: [SUF]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "p+a"
     note: >-
@@ -62,7 +56,6 @@ words:
       - signature: "Y+SUF|p+?a"
         rules: [SUF]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "tsa"
     note: >-
@@ -70,7 +63,6 @@ words:
     parses:
       - signature: "Z+SUF|t+?sa"
         rules: [SUF, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "t+sa"
@@ -79,7 +71,6 @@ words:
     parses:
       - signature: "Z+SUF|t+?sa"
         rules: [SUF, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "ts+a"
@@ -87,19 +78,16 @@ words:
       The boundary left before the context, where the pre-fix Rust HC put it: C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "st+a"
     note: >-
       Never a surface: the obligatory rule rewrites st+a, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "sta"
     note: >-
       Never a surface: the obligatory rule rewrites it, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"

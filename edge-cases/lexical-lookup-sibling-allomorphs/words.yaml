@@ -27,7 +27,8 @@ words:
     parses:
       - signature: "TUIK|tuk"
         rules: [prHiatusI]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: bak
     note: >-
@@ -36,7 +37,7 @@ words:
       - signature: "BAK|bak"
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Disjunctive allomorphs / free-fluctuation"
 
   - word: baak
     note: >-
@@ -45,7 +46,7 @@ words:
       - signature: "BAK|baak"
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Disjunctive allomorphs / free-fluctuation"
 
   - word: tak
     note: >-

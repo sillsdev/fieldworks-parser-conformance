@@ -1,15 +1,15 @@
-# HermitCrab grammar-model construct checklist: the top level of the behaviour-label vocabulary
+# HermitCrab behaviour labels, top level: the grammar-model checklist
 #
 # A word's behaviour labels are its `exercises` entries (per word and per parse; a generated no-parse rule carries
 # them for its words). Each label is a line of this file, verbatim, or a child label in labels.tsv, which names a
 # sub-behaviour or an interaction below one of these lines (ADR 0008; PROTOCOL.md section 14). A label in neither
-# file fails `python3 scripts/suite.py check`, and so does a word with no label.
+# file fails `python3 scripts/suite.py check`, and so does a word that does not carry exactly one label.
 #
-# Format: one construct per line. Blank lines and lines starting with "#" are ignored. A line's text (verbatim,
+# Format: one label per line. Blank lines and lines starting with "#" are ignored. A line's text (verbatim,
 # including punctuation) is the key the derived coverage.csv, labels.csv and rules.csv cross-reference. Add a line
 # here only when a word needs a behaviour no existing label or child label names, and say in the pull request which
 # labels you checked it against. A new line is a top-level label; prefer a child in labels.tsv when the behaviour
-# is a part of, or an interaction with, an existing construct.
+# is a part of, or an interaction with, an existing label.
 
 Stratum (Linear/Unordered rule order)
 AffixProcessRule: prefix/suffix/circumfix/infix

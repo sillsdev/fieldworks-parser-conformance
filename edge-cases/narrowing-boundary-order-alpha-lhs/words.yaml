@@ -12,7 +12,6 @@ words:
     parses:
       - signature: "AA+FA|aa+?fa"
         rules: [mrFA, prSpirant]
-        exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Alpha-variable phonological environments (VariableFeature/AlphaVariables)", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "AA+PA|aafa"
         rules: [mrPA, prSpirant]
     exercises:

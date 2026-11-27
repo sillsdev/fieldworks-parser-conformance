@@ -8,8 +8,6 @@ words:
       - signature: "X|a"
         rules: []
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "p"
     note: >-
@@ -18,8 +16,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "st"
     note: >-
@@ -28,8 +24,6 @@ words:
       - signature: "Z|st"
         rules: []
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "aa"
     note: >-
@@ -38,8 +32,6 @@ words:
       - signature: "PRE+X|a+?a"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "ap"
     note: >-
@@ -48,8 +40,6 @@ words:
       - signature: "PRE+Y|a+?p"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "a+a"
     note: >-
@@ -58,8 +48,6 @@ words:
       - signature: "PRE+X|a+?a"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "a+p"
     note: >-
@@ -68,8 +56,6 @@ words:
       - signature: "PRE+Y|a+?p"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "ats"
     note: >-
@@ -77,9 +63,7 @@ words:
     parses:
       - signature: "PRE+Z|at+?s"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "at+s"
     note: >-
@@ -87,31 +71,23 @@ words:
     parses:
       - signature: "PRE+Z|at+?s"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "a+ts"
     note: >-
       The boundary left after the context, where the pre-fix Rust HC put it: C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "a+st"
     note: >-
       Never a surface: the obligatory rule rewrites a+st, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"
   - word: "ast"
     note: >-
       Never a surface: the obligatory rule rewrites it, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
-      - "MetathesisRule > boundary in the switch context"
       - "MetathesisRule > right-to-left application"

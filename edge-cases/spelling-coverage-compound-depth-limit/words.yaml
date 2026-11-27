@@ -9,7 +9,6 @@ words:
       - signature: "X|[aá]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -17,20 +16,14 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: aa
     note: "C# returns 2 analyses (X|[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: ap
@@ -38,13 +31,8 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: pa
@@ -52,13 +40,8 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: pp
@@ -66,13 +49,8 @@ words:
     parses:
       - signature: "Y|p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y|p[+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aaa
@@ -80,19 +58,10 @@ words:
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aap
@@ -100,19 +69,10 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: apa
@@ -120,19 +80,10 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: app
@@ -140,19 +91,10 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: paa
@@ -160,19 +102,10 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: pap
@@ -180,19 +113,10 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: ppa
@@ -200,19 +124,10 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: ppp
@@ -220,19 +135,10 @@ words:
     parses:
       - signature: "Y|p[+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y|p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y|p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aaaa
@@ -240,24 +146,12 @@ words:
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aaap
@@ -265,24 +159,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aapa
@@ -290,24 +172,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aapp
@@ -315,24 +185,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: apaa
@@ -340,24 +198,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: apap
@@ -365,24 +211,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: appa
@@ -390,24 +224,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: appp
@@ -415,24 +237,12 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: paaa
@@ -440,24 +250,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: paap
@@ -465,24 +263,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: papa
@@ -490,24 +276,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: papp
@@ -515,24 +289,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: ppaa
@@ -540,24 +302,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: ppap
@@ -565,24 +315,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: pppa
@@ -590,24 +328,12 @@ words:
     parses:
       - signature: "Y+X|p[+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y+X|p[+-=]?p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: pppp
@@ -615,24 +341,12 @@ words:
     parses:
       - signature: "Y|p[+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y|p[+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y|p[+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Y|p[+-=]?p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "á"
@@ -641,7 +355,6 @@ words:
       - signature: "X|[aá]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: t
     note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
@@ -649,20 +362,14 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: at
     note: "C# returns 2 analyses (X+Z|[aá][+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Z|[aá][+-=]?t"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Z|[aá][+-=]?t"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: ta
@@ -670,13 +377,8 @@ words:
     parses:
       - signature: "Z+X|t[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "Z+X|t[+-=]?[aá]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a-p"
@@ -684,13 +386,8 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a=p"
@@ -698,13 +395,8 @@ words:
     parses:
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a=p-t"
@@ -712,94 +404,59 @@ words:
     parses:
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a-ps-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a=ps-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a=sp-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a-p-p"
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a+sp+t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a-sp-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a=p-t-a"
     note: "C# returns 4 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aaaaa
@@ -807,87 +464,51 @@ words:
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: aaaaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a-p-t-a"
     note: "C# returns 4 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a-ps-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a=sp-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > depth limit"
   - word: "a-a-a"
     note: "C# returns 3 analyses (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"
   - word: "a-a-a-a"
@@ -895,23 +516,11 @@ words:
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
     exercises:
       - "CompoundingRule > depth limit"

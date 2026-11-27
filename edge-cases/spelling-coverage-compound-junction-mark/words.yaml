@@ -8,12 +8,8 @@ words:
     parses:
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: apt
@@ -21,12 +17,8 @@ words:
     parses:
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: at
@@ -34,12 +26,8 @@ words:
     parses:
       - signature: "X+Z|[aá][+-=]?[t́]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Z|[aá][+-=]?[t́]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sa

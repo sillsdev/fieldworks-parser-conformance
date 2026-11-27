@@ -8,7 +8,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "t"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "ts"
     note: >-
@@ -25,7 +23,6 @@ words:
     parses:
       - signature: "PRE+Z|+?ts"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > right-to-left application"
   - word: "+ts"
@@ -34,7 +31,6 @@ words:
     parses:
       - signature: "PRE+Z|+?ts"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > right-to-left application"
   - word: "sp"
@@ -44,7 +40,6 @@ words:
       - signature: "PRE+Y|s+?p"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "s+p"
     note: >-
@@ -53,7 +48,6 @@ words:
       - signature: "PRE+Y|s+?p"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "sa"
     note: >-
@@ -62,26 +56,22 @@ words:
       - signature: "PRE+X|s+?a"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "t+s"
     note: >-
       Rejected: in a right-to-left application s moves after t and the boundary, which stays in front of the pair, so it cannot stay between the swapped segments.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "st"
     note: >-
       Never a surface: the obligatory rule rewrites st to ts, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "s+t"
     note: >-
       Never a surface: the obligatory rule rewrites s+t to +ts, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"

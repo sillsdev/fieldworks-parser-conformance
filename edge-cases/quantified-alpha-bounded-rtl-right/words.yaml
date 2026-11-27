@@ -10,143 +10,92 @@ words:
     note: "Negative control for quantified alpha bounded rtl right: 'acet' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ecct
     note: "Positive witness for quantified alpha bounded rtl right: 'ecct' must retain the declared analysis."
     parses:
       - signature: "ROOT2|ecct"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: accct
     note: "Positive witness for quantified alpha bounded rtl right: 'accct' must retain the declared analysis."
     parses:
       - signature: "ROOT3|accct"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: acat
     note: "Negative control for quantified alpha bounded rtl right: 'acat' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: acct
     note: "Negative control for quantified alpha bounded rtl right: 'acct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: et
     note: "Negative control for quantified alpha bounded rtl right: 'et' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: at
     note: "Negative control for quantified alpha bounded rtl right: 'at' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ecat
     note: "Positive witness for quantified alpha bounded rtl right: 'ecat' must retain the declared analysis."
     parses:
       - signature: "ROOT1|ecat"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: etct
     note: "Negative control for quantified alpha bounded rtl right: 'etct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ctat
     note: "Negative control for quantified alpha bounded rtl right: 'ctat' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ctet
     note: "Negative control for quantified alpha bounded rtl right: 'ctet' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: accccct
     note: "Negative control for quantified alpha bounded rtl right: 'accccct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: eccccct
     note: "Negative control for quantified alpha bounded rtl right: 'eccccct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: eccct
     note: "Negative control for quantified alpha bounded rtl right: 'eccct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ecet
     note: "Negative control for quantified alpha bounded rtl right: 'ecet' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: actt
     note: "Positive witness for quantified alpha bounded rtl right: 'actt' must retain the declared analysis."
     parses:
       - signature: "MIXED|actt"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ectt
     note: "Negative control for quantified alpha bounded rtl right: 'ectt' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"

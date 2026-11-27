@@ -15,13 +15,14 @@ words:
       - signature: "KUMA|kuma"
         rules: []
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kukuma
     note: "Reduplication alone."
     parses:
       - signature: "RED+KUMA|ku+?kuma"
         rules: [red]
-        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)", "Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kumasi
     note: "The two noun-taking -si suffixes; no reduplication."
     parses:
@@ -30,7 +31,7 @@ words:
       - signature: "KUMA+SINV|kuma+?si"
         rules: [siNV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kukumasi
     note: "Two -si readings times two rule orders: the copy rule is tried on kukuma once per -si that reaches it."
     parses:
@@ -83,7 +84,7 @@ words:
       - signature: "TISU|tisu"
         rules: []
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: titisu
     note: "Reduplication on the verb root."
     parses:
@@ -112,7 +113,7 @@ words:
       - signature: "TISU+SIVV|tisu+?si"
         rules: [siVV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: tisusisi
     note: "Stacked -si on the verb root; category chains decide which pairs survive."
     parses:
@@ -123,7 +124,7 @@ words:
       - signature: "TISU+SIVV+SIVN|tisu+?si+?si"
         rules: [siVN, siVV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kutisusi
     note: "A copied CV that is not the stem's."
     expect_fail: true
@@ -207,7 +208,7 @@ words:
     note: "x is outside the inventory."
     expect_skip: true
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kukumasisisi
     note: "Reduplication and three homophonous si suffixes: the multiset repeats analyses that differ only by the order of same-form affixes."
     parses:

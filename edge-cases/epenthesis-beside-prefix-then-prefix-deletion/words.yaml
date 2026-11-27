@@ -28,7 +28,8 @@ words:
     parses:
       - signature: "PR0+R0|asa"
         rules: [PR0, pd0, pe0]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Boundary markers (CharacterDefinitionTable)"]
+    exercises:
+      - "Boundary markers (CharacterDefinitionTable)"
   - word: "asp"
     note: "C# e63b8863 returns 1 analysis (PR0+R1|asp): pins the morpheme sequence."
     parses:

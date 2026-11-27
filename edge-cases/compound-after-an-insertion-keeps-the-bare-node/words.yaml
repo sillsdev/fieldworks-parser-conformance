@@ -26,7 +26,8 @@ words:
     parses:
       - signature: "R1+SU0|apas"
         rules: [SU0, pe0]
-        exercises: ["CompoundingRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "CompoundingRule"
   - word: "apta"
     note: "C# e63b8863 returns this analysis."
     parses:

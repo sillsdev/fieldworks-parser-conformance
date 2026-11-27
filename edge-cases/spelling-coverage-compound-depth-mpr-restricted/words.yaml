@@ -9,8 +9,6 @@ words:
       - signature: "X|[aá]"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -18,336 +16,194 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aa
     note: "C# returns 2 analyses (X|[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá][+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X|[aá][+-=]?[aá]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: ap
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: pa
     note: "C# returns 2 analyses (Y+X|p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Y+X|p[+-=]?[aá]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: pp
     note: "C# returns 2 analyses (Y|p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y|p[+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Y|p[+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aaa
     note: "C# returns 2 analyses (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aap
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: apa
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: app
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: paa
     note: "C# returns 2 analyses (Y+X|p[+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Y+X|p[+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: pap
     note: "C# returns 2 analyses (Y+X|p[+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Y+X|p[+-=]?[aá][+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: ppa
     note: "C# returns 2 analyses (Y+X|p[+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Y+X|p[+-=]?p[+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: ppp
     note: "C# returns 2 analyses (Y|p[+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y|p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Y|p[+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aaap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: apaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: apap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: appa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: appp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: paaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: paap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: papa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: papp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: ppaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: ppap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: pppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: pppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "á"
     note: "C# returns 1 analysis (X|[aá]): pins that this spelling is a route and its morpheme sequence."
@@ -355,8 +211,6 @@ words:
       - signature: "X|[aá]"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: t
     note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
@@ -364,216 +218,127 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: at
     note: "C# returns 2 analyses (X+Z|[aá][+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Z|[aá][+-=]?t"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Z|[aá][+-=]?t"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: ta
     note: "C# returns 2 analyses (Z+X|t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Z+X|t[+-=]?[aá]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "Z+X|t[+-=]?[aá]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-p"
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a=p"
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a=p-t"
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-ps-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a=ps-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a=sp-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-p-p"
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X+Y|[aá][+-=]?p[+-=]?p"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a+sp+t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-sp-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a=p-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aaaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: aaaaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-p-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-ps-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a=sp-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-a-a"
     note: "C# returns 2 analyses (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
       - signature: "X|[aá][+-=]?[aá][+-=]?[aá]"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"
   - word: "a-a-a-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > depth limit"
       - "CompoundingRule > MPR on the compound"

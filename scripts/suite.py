@@ -99,14 +99,15 @@ def word_labels(word: dict) -> list:
     return found
 
 
-def unlabelled(word: dict) -> bool:
-    """True when some analysis of the word carries no label. A word with analyses is labelled when each analysis
-    has a label of its own or the word has one; a word with none (a rejection, a skip) needs its own."""
-    own = word.get("exercises") or []
-    parses = word.get("parses") or []
-    if word.get("expect_fail") or word.get("expect_skip") or not parses:
-        return not own
-    return any(not (own or parse.get("exercises")) for parse in parses)
+def label_problem(word: dict):
+    """Why a word breaks the one-label rule, or None. A word carries exactly one behaviour label: the distinct labels of
+    the word and of all its parses together number one (a parse may repeat the word's label, never add another)."""
+    found = word_labels(word)
+    if not found:
+        return "has no behaviour label"
+    if len(found) > 1:
+        return f"carries {len(found)} behaviour labels, not one: {'; '.join(found)}"
+    return None
 
 
 MAX_GENERATED_SPACE = 100_000

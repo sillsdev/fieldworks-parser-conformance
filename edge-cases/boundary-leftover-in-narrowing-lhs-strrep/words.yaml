@@ -23,9 +23,6 @@ words:
         rules: [mrSfxMo, prPostNasal]
       - signature: "KAN+BO|kamo"
         rules: [mrSfxBo, prPostNasal]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
   - word: kanbo

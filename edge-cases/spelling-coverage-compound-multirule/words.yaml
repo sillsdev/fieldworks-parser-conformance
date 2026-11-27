@@ -8,7 +8,6 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xy
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -16,7 +15,6 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -24,27 +22,19 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: aa
     note: "C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: axy
@@ -52,14 +42,8 @@ words:
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: ap
@@ -67,35 +51,22 @@ words:
     parses:
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "a+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xya
     note: "C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: xyxy
@@ -103,14 +74,8 @@ words:
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: xyp
@@ -118,35 +83,22 @@ words:
     parses:
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "xy+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: pa
     note: "C# returns 2 analyses (Y+X|p+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: pxy
@@ -154,14 +106,8 @@ words:
     parses:
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: pp
@@ -169,131 +115,102 @@ words:
     parses:
       - signature: "Y|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "Y|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "p+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+xy"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "++"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: aaxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: aap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "aa+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: axya
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: axyxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: axyp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "axy+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: apa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: apxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "ap+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "a+a"
     note: "C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "a+xy"
@@ -301,14 +218,8 @@ words:
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "a+p"
@@ -316,107 +227,82 @@ words:
     parses:
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "a++"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xyaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xyaxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xyap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "xya+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xyxya
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xyxyxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xyxyp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "xyxy+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xypa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xypxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: xypp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "xyp+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "xy+a"
     note: "C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "xy+xy"
@@ -424,14 +310,8 @@ words:
     parses:
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X|[aá(xy)ei]+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "xy+p"
@@ -439,107 +319,82 @@ words:
     parses:
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "X+Y|[aá(xy)ei]+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "xy++"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: paa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: paxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: pap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "pa+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: pxya
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: pxyxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: pxyp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "pxy+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: ppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: ppxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: ppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "pp+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "p+a"
     note: "C# returns 2 analyses (Y+X|p+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "p+xy"
@@ -547,14 +402,8 @@ words:
     parses:
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "Y+X|p+?[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "p+p"
@@ -562,139 +411,112 @@ words:
     parses:
       - signature: "Y|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "Y|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
     exercises:
       - "CompoundingRule > several rewrite rules"
   - word: "p++"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+aa"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+axy"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+ap"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+a+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+xya"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+xyxy"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+xyp"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+xy+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+pa"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+pxy"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+pp"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+p+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "++a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "++xy"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "++p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "+++"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "aa+a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "a+pp"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "pp+a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"
   - word: "ap+p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > several rewrite rules"

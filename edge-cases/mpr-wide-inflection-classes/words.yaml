@@ -184,9 +184,8 @@ words:
     parses:
       - signature: "eBoth|bala+?bala"
         rules: [compound]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: balabali
     note: nonhead missing high exception gate blocks
     expect_fail: true
@@ -197,9 +196,8 @@ words:
     parses:
       - signature: "eOne+eBoth|bali+?bala"
         rules: [compound]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: balubala
     note: head missing high exception gate blocks
     expect_fail: true
@@ -222,10 +220,8 @@ words:
     parses:
       - signature: "eBoth+rAll|bala+?balamu"
         rules: ["compound", "rAll"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balu
     note: irregular root exists independently of excluded slot
     parses:

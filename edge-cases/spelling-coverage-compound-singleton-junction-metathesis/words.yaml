@@ -9,7 +9,6 @@ words:
       - signature: "X|a"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -17,7 +16,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: t
     note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
@@ -25,19 +23,14 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: aa
     note: "C# returns 2 analyses (X|aa): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|aa"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|aa"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ap
@@ -45,12 +38,8 @@ words:
     parses:
       - signature: "X+Y|ap"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y|ap"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: at
@@ -58,12 +47,8 @@ words:
     parses:
       - signature: "X+Z|at"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Z|at"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pa
@@ -71,12 +56,8 @@ words:
     parses:
       - signature: "Y+X|pa"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y+X|pa"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pp
@@ -84,12 +65,8 @@ words:
     parses:
       - signature: "Y|pp"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y|pp"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ta
@@ -97,12 +74,8 @@ words:
     parses:
       - signature: "Z+X|ta"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Z+X|ta"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tt
@@ -110,12 +83,8 @@ words:
     parses:
       - signature: "Z|tt"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Z|tt"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sa
@@ -144,9 +113,6 @@ words:
     parses:
       - signature: "X+PRE|asa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: asp
@@ -154,9 +120,6 @@ words:
     parses:
       - signature: "X+PRE+Y|asp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ast
@@ -164,9 +127,6 @@ words:
     parses:
       - signature: "X+PRE+Z|ast"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: psa
@@ -174,9 +134,6 @@ words:
     parses:
       - signature: "Y+PRE+X|psa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: psp
@@ -184,9 +141,6 @@ words:
     parses:
       - signature: "Y+PRE|psp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pst
@@ -194,9 +148,6 @@ words:
     parses:
       - signature: "Y+PRE+Z|pst"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tsa
@@ -204,9 +155,6 @@ words:
     parses:
       - signature: "Z+PRE+X|tsa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tsp
@@ -214,9 +162,6 @@ words:
     parses:
       - signature: "Z+PRE+Y|tsp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tst
@@ -224,9 +169,6 @@ words:
     parses:
       - signature: "Z+PRE|tst"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: saa
@@ -234,19 +176,10 @@ words:
     parses:
       - signature: "PRE+X|saa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|saa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|saa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sap
@@ -254,19 +187,10 @@ words:
     parses:
       - signature: "PRE+X+Y|sap"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|sap"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|sap"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sat
@@ -274,19 +198,10 @@ words:
     parses:
       - signature: "PRE+X+Z|sat"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Z|sat"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Z|sat"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: spa
@@ -294,19 +209,10 @@ words:
     parses:
       - signature: "PRE+Y+X|spa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|spa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|spa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: spp
@@ -314,19 +220,10 @@ words:
     parses:
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sta
@@ -334,19 +231,10 @@ words:
     parses:
       - signature: "PRE+Z+X|sta"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Z+X|sta"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Z+X|sta"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: stt
@@ -354,19 +242,10 @@ words:
     parses:
       - signature: "PRE+Z|stt"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Z|stt"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Z|stt"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tp
@@ -374,24 +253,12 @@ words:
     parses:
       - signature: "Z+Y|tp"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "Z+Y|tp"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "Z+Y|tp"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "Z+Y|tp"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "MetathesisRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: stp
@@ -399,51 +266,25 @@ words:
     parses:
       - signature: "PRE+Z+Y|stp"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "PRE+Z+Y|stp"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "PRE+Z+Y|stp"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "PRE+Z+Y|stp"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "PRE+Z+Y|stp"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "MetathesisRule"
       - signature: "PRE+Z+Y|stp"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "MetathesisRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pt
     note: "C# finds no analysis for this word."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: spt
     note: "C# finds no analysis for this word."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"

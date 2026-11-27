@@ -40,14 +40,12 @@ words:
       - signature: "BOLUA+DER+MA|boluitma"
         gloss: boluA-der-ma
         rules: [rDer, rMaReq]
-        exercises: ["RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"]
       - signature: "BOLUA+DER+MBEXC|boluitma"
         gloss: boluA-der-mbExc
         rules: [rDer, rMbExc]
       - signature: "BOLUB+DER+MAEXC|boluitma"
         gloss: boluB-der-maExc
         rules: [rDer, rMaExc]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
       - signature: "BOLUB+DER+MBREQ|boluitma"
         gloss: boluB-der-mbReq
         rules: [rDer, rMbReq]
@@ -72,7 +70,6 @@ words:
       - signature: "BOLUA+DER+MA+TA|boluitmata"
         gloss: boluA-der-ma-ta
         rules: [rDer, rMaReq, rTa]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
       - signature: "BOLUA+DER+MBEXC+TA|boluitmata"
         gloss: boluA-der-mbExc-ta
         rules: [rDer, rMbExc, rTa]

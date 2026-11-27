@@ -13,42 +13,36 @@ words:
       Root pst: pm0 swaps `p s` to `s p`, and pd0 then deletes `t`; hc.dll generates `+sp` from NU0+R2 but cannot parse it, because analysis restores `t?` between the switches and pairs it with a switch. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "+spa"
     note: >-
       As +sp, with root tpsa (R0) or pst plus suffix SU1. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: sp
     note: >-
       As +sp without the NU0 prefix. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: spa
     note: >-
       As +spa without the NU0 prefix. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: spaa
     note: >-
       Root tpsa plus suffix SU1 `a`. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "+spaa"
     note: >-
       As spaa with the NU0 prefix. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: psa
     note: >-

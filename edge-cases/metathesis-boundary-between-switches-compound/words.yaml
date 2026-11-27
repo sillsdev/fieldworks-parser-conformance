@@ -8,7 +8,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "t"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "pp"
     note: >-
@@ -26,7 +24,6 @@ words:
       - signature: "Y|p+?p"
         rules: [cr1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "pt"
     note: >-
@@ -34,10 +31,8 @@ words:
     parses:
       - signature: "Y+Z|p+?t"
         rules: [cr1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "Y+Z|p+?t"
         rules: [cr1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary between the switched segments"
   - word: "tt"
@@ -47,7 +42,6 @@ words:
       - signature: "Z|t+?t"
         rules: [cr1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "p+p"
     note: >-
@@ -56,7 +50,6 @@ words:
       - signature: "Y|p+?p"
         rules: [cr1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "p+t"
     note: >-
@@ -64,10 +57,8 @@ words:
     parses:
       - signature: "Y+Z|p+?t"
         rules: [cr1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "Y+Z|p+?t"
         rules: [cr1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary between the switched segments"
   - word: "t+t"
@@ -77,19 +68,16 @@ words:
       - signature: "Z|t+?t"
         rules: [cr1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "tp"
     note: >-
       Never a surface: the obligatory rule rewrites tp to pt, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"
   - word: "t+p"
     note: >-
       Never a surface: the obligatory rule rewrites t+p to p+t, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary between the switched segments"

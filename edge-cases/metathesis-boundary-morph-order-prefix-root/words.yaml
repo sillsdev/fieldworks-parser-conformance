@@ -8,7 +8,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"
   - word: "t"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"
   - word: "ts"
     note: >-
@@ -25,7 +23,6 @@ words:
     parses:
       - signature: "Z+PRE|ts"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > morph order across the switch"
   - word: "sp"
@@ -35,5 +32,4 @@ words:
       - signature: "PRE+Y|sp"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"

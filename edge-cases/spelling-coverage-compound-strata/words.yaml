@@ -8,7 +8,6 @@ words:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sa
     note: "C# returns 1 analysis (PRE+ROOT|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -22,12 +21,8 @@ words:
     parses:
       - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: saa
@@ -35,18 +30,10 @@ words:
     parses:
       - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: aa
@@ -54,12 +41,8 @@ words:
     parses:
       - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: aai
@@ -67,9 +50,6 @@ words:
     parses:
       - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["cr1", "SUF"]
-        exercises:
-          - "CompoundingRule"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: saai
@@ -77,14 +57,8 @@ words:
     parses:
       - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "cr1", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "cr1", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: sai
@@ -92,18 +66,10 @@ words:
     parses:
       - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: xy
@@ -112,7 +78,6 @@ words:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: sxy
     note: "C# returns 1 analysis (PRE+ROOT|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -126,12 +91,8 @@ words:
     parses:
       - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: aaa
@@ -139,36 +100,25 @@ words:
     parses:
       - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["cr1", "SUF"]
-        exercises:
-          - "CompoundingRule"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: sasa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: aiai
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: saia
     note: "C# returns 2 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "cr1", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "cr1", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: aia
@@ -176,14 +126,10 @@ words:
     parses:
       - signature: "ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["cr1", "SUF"]
-        exercises:
-          - "CompoundingRule"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: asa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"

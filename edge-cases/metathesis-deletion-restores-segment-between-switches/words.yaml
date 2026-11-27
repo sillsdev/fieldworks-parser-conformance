@@ -42,28 +42,24 @@ words:
       Prefix aps+ then root t: pr1 swaps s and t across the boundary and pd deletes p (apt+s, then at+s); analysis restores an optional p between t and s, and that p must not take s's place in the swap. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "at+s"
     note: >-
       The same surface with the boundary written. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "atsa"
     note: >-
       Prefix aps+ then root tap: pr1 swaps s and t, pd deletes both p's (at+sa); the restored p again sits between the switches. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "at+sa"
     note: >-
       The same surface with the boundary written. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "ast"
     note: >-
@@ -71,7 +67,6 @@ words:
     parses:
       - signature: "PRE+R1|as+?t"
         rules: [PRE, pd, pr1]
-        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
     exercises:
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "as+t"
@@ -80,7 +75,6 @@ words:
     parses:
       - signature: "PRE+R1|as+?t"
         rules: [PRE, pd, pr1]
-        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
     exercises:
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "p"
@@ -88,12 +82,10 @@ words:
       pd deletes every p, so no word surfaces with one.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "atap"
     note: >-
       The unswapped, undeleted shape of PRE+R2 cannot surface: pr1 and pd are obligatory.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"

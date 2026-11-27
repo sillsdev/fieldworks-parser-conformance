@@ -59,9 +59,8 @@ words:
     parses:
       - signature: "X+PRE+Y|a+?s[p\"][p\"]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: "s\"s\"s\"a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true

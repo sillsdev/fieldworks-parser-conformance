@@ -75,9 +75,8 @@ words:
       - signature: "KTB+P1SG|katabit"
         gloss: write-1SG.PERF
         rules: [mrPerf1sg, prEpenthesis]
-        exercises:
-          - "RewriteRule Simultaneous"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: katabt
     note: The raw, unepenthesized concatenation of katab+"-t" -- prEpenthesis is obligatory wherever its C_C environment holds, so this surface form can never itself be a valid analysis (see katabit).
@@ -282,7 +281,6 @@ words:
     blocked_by: [prSimulFeeding, prIterFeedingControl]
     exercises:
       - "RewriteRule Simultaneous"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: iktub
     note: >-

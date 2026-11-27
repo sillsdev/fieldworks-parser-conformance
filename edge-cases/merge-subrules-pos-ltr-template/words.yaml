@@ -27,10 +27,8 @@ words:
     parses:
       - signature: "TA_V+S|Gs"
         rules: [mrSfxS, prMerge]
-        exercises:
-          - "RewriteRule direction (Dir): left-to-right"
-          - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
   - word: FF
     note: TATA fused at both sites (left to right scan).
     parses:

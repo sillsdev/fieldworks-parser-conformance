@@ -14,7 +14,6 @@ words:
     parses:
       - signature: "DAK+FINX|dakfa"
         rules: [mrFinX]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
@@ -25,7 +24,6 @@ words:
     expect_fail: true
     blocked_by: [mrGateX]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pakga
@@ -36,7 +34,6 @@ words:
       - signature: "PAK+GATEX|pakga"
         rules: [mrGateX]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pakfa
@@ -45,7 +42,6 @@ words:
       so the final template never applies and this string has no analysis.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pakfaga
@@ -56,7 +52,6 @@ words:
       that the lexical-entry half of Morpher.IsPartial was suspected to protect (issue 551).
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pibgb
@@ -65,14 +60,12 @@ words:
       - signature: "PIB+GATEY|pibgb"
         rules: [mrGateY]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pibfb
     note: Partial root in the template's own stratum. The final template does not apply to it.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pibfbgb
@@ -80,7 +73,6 @@ words:
       Same-stratum counterpart of pakfaga. Also has no analysis, for the same reason.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nibfb
@@ -88,7 +80,6 @@ words:
     parses:
       - signature: "NIB+FINY|nibfb"
         rules: [mrFinY]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
@@ -98,5 +89,4 @@ words:
     expect_fail: true
     blocked_by: [mrGateY]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"

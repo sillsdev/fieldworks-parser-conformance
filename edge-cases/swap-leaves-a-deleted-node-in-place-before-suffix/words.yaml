@@ -12,7 +12,6 @@ words:
     parses:
       - signature: "NU0+R0|+?sp"
         rules: [NU0, pd0, pm]
-        exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "NU0+R1|+?sp"
         rules: [NU0, pd0, pm]
       - signature: "R0|sp"
@@ -20,7 +19,6 @@ words:
       - signature: "R1|sp"
         rules: [pd0, pm]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: "spa"
     note: "C# e63b8863 returns this analysis."
@@ -34,12 +32,10 @@ words:
       - signature: "R1+SU1|spa"
         rules: [SU1, pd0, pm]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"

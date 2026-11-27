@@ -19,7 +19,6 @@ words:
       - signature: "DAK|dak"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > head selection"
 
   - word: imo
@@ -28,7 +27,6 @@ words:
       - signature: "IMO|imo"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > head selection"
 
   - word: dakimo
@@ -47,12 +45,8 @@ words:
     parses:
       - signature: "DAK+IMO|dakimo"
         rules: [crLeftHead]
-        exercises:
-          - "CompoundingRule"
       - signature: "DAK+IMO|dakimo"
         rules: [crRightHead]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > head selection"
 
@@ -67,5 +61,4 @@ words:
     expect_fail: true
     blocked_by: [crLeftHead, crRightHead]
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > head selection"

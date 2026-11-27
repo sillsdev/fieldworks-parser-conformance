@@ -27,21 +27,15 @@ words:
         rules: [mtTS, prMergeST]
       - signature: "ATSA|aca"
         rules: [mtTS, prMergeST]
-        exercises:
-          - "MetathesisRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: atsa
     note: Underlying shape of ATSA; the metathesis is obligatory, so this never surfaces.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"
   - word: asta
     note: Underlying shape of ASTA; the merge is obligatory, so this never surfaces.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > interaction with a rewrite rule"

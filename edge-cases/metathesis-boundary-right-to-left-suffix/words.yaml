@@ -8,7 +8,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "s"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "Z|s"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "at"
     note: >-
@@ -26,7 +24,6 @@ words:
       - signature: "X+PRE|a+?t"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "a+t"
     note: >-
@@ -35,7 +32,6 @@ words:
       - signature: "X+PRE|a+?t"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "ts"
     note: >-
@@ -43,7 +39,6 @@ words:
     parses:
       - signature: "PRE+Z|+?ts"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > right-to-left application"
   - word: "+ts"
@@ -52,7 +47,6 @@ words:
     parses:
       - signature: "PRE+Z|+?ts"
         rules: [PRE, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > right-to-left application"
   - word: "pt"
@@ -62,12 +56,10 @@ words:
       - signature: "Y+PRE|p+?t"
         rules: [PRE]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: "ta"
     note: >-
       Never a surface in this grammar: no root or affix makes it, and C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"

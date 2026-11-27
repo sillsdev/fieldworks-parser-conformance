@@ -34,7 +34,8 @@ words:
     parses:
       - signature: "NEG+PAT|am+?pat"
         rules: [neg, prAssim]
-        exercises: ["Alpha-variable phonological environments (VariableFeature/AlphaVariables)", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: antak
     note: "The prefix nasal already has the place of t."
     parses:

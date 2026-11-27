@@ -8,7 +8,6 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -16,17 +15,12 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: ap
     note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
       - "CompoundingRule > constituent order"
   - word: pa
@@ -34,33 +28,23 @@ words:
     parses:
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
       - "CompoundingRule > constituent order"
   - word: aa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: pp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: "áp"
     note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
       - "CompoundingRule > constituent order"
   - word: pxy
@@ -68,10 +52,6 @@ words:
     parses:
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
       - "CompoundingRule > constituent order"
   - word: xyp
@@ -79,29 +59,22 @@ words:
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
-          - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
-          - "MPR features/groups"
     exercises:
       - "CompoundingRule > constituent order"
   - word: paa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: aap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: e
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -109,11 +82,9 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"
   - word: ae
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > constituent order"

@@ -8,19 +8,10 @@ words:
     parses:
       - signature: "X+Y+SUF+Z|apst"
         rules: ["SUF", "cr1", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF+Z|apst"
         rules: ["SUF", "cr1", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF+Z|apst"
         rules: ["SUF", "cr1", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: apt
@@ -28,19 +19,14 @@ words:
     parses:
       - signature: "X+Y+Z|apt"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y+Z|apt"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"
   - word: aspt
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: a
     note: "C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence."
@@ -48,7 +34,6 @@ words:
       - signature: "X|a"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > feeds affixation"
   - word: as
     note: "C# returns 1 analysis (X+SUF|as): pins that this spelling is a route and its morpheme sequence."
@@ -62,18 +47,9 @@ words:
     parses:
       - signature: "X+Y+Z+SUF|apts"
         rules: ["SUF", "cr1", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+Z+SUF|apts"
         rules: ["SUF", "cr1", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+Z+SUF|apts"
         rules: ["SUF", "cr1", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > feeds affixation"

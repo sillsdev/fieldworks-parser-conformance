@@ -14,7 +14,6 @@ words:
     parses:
       - signature: "R0|akta"
         rules: [prule1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > switch indices"
   - word: atka
@@ -22,7 +21,6 @@ words:
       Underlying form, never a surface: the obligatory rule rewrites atk to akt, so atka has no analysis.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > switch indices"
   - word: aktas
     note: >-
@@ -30,7 +28,6 @@ words:
     parses:
       - signature: "R0+A|akta+?s"
         rules: [mrule1, prule1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > switch indices"
   - word: atkas
@@ -38,7 +35,6 @@ words:
       Suffixed underlying form: no analysis for the same reason.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > switch indices"
   - word: itka
     note: >-
@@ -46,7 +42,6 @@ words:
     parses:
       - signature: "R1|itka"
         rules: []
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > switch indices"
   - word: ikta
@@ -54,7 +49,6 @@ words:
       Control: the swapped form of R1 has no analysis because the rule never applied to it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > switch indices"
   - word: itkas
     note: >-
@@ -62,7 +56,6 @@ words:
     parses:
       - signature: "R1+A|itka+?s"
         rules: [mrule1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > switch indices"
   - word: tika
@@ -71,7 +64,6 @@ words:
     parses:
       - signature: "R2|tika"
         rules: []
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > switch indices"
   - word: tikas
@@ -80,7 +72,6 @@ words:
     parses:
       - signature: "R2+A|tika+?s"
         rules: [mrule1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > switch indices"
   - word: kita
@@ -88,12 +79,10 @@ words:
       Control: the metathesized form of nothing; R2 never swaps t and k.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > switch indices"
   - word: kitas
     note: >-
       Control: as kita, suffixed.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > switch indices"

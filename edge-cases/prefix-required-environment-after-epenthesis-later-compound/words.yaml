@@ -26,7 +26,8 @@ words:
     parses:
       - signature: "R3|tt"
         rules: [CR1]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "CompoundingRule"]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "sa"
     note: "C# e63b8863 returns this analysis."
     parses:

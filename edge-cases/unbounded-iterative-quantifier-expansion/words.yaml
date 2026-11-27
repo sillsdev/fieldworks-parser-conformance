@@ -25,8 +25,6 @@ words:
     parses:
       - signature: "ROOT1|ect"
         rules: [prIterUnbounded]
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
@@ -39,8 +37,6 @@ words:
     parses:
       - signature: "ROOT2|ecct"
         rules: [prIterUnbounded]
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
@@ -57,8 +53,6 @@ words:
     parses:
       - signature: "ROOT3|eccccct"
         rules: [prIterUnbounded]
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
@@ -73,8 +67,6 @@ words:
     parses:
       - signature: "ROOT4|at"
         rules: []
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
@@ -87,7 +79,6 @@ words:
     provenance: "docs/conformance/representative-typology-basis.md S1.2.6"
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: acct
@@ -95,7 +86,6 @@ words:
     provenance: "docs/conformance/representative-typology-basis.md S1.2.6"
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: accccct
@@ -103,5 +93,4 @@ words:
     provenance: "docs/conformance/representative-typology-basis.md S1.2.6"
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"

@@ -22,10 +22,6 @@ words:
     parses:
       - signature: "TAK+SFX|teK"
         rules: [mrSfxA, prFront, prMerge, prMergeBdry]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "TAKA|teK"
         rules: [prFront, prMerge, prMergeBdry]
     exercises:

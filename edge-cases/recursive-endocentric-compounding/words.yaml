@@ -20,8 +20,6 @@ words:
     parses:
       - signature: "ROOT1|tevi"
         rules: []
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > recursion"
 
@@ -30,8 +28,6 @@ words:
     parses:
       - signature: "ROOT2|mafl"
         rules: []
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > recursion"
 
@@ -40,8 +36,6 @@ words:
     parses:
       - signature: "ROOT3|isra"
         rules: []
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > recursion"
 
@@ -57,8 +51,6 @@ words:
     parses:
       - signature: "ROOT1+ROOT2|tevimafl"
         rules: [cr1]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > recursion"
 
@@ -68,8 +60,6 @@ words:
     parses:
       - signature: "ROOT2+ROOT3|maflisra"
         rules: [cr1]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > recursion"
 
@@ -97,5 +87,4 @@ words:
     expect_fail: true
     blocked_by: [cr1]
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > recursion"

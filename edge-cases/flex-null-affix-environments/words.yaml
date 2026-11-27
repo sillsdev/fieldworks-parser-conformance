@@ -11,18 +11,17 @@ words:
       - signature: "ROOT|sag"
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: zsag
     note: The null prefix has z on its left when the outer real prefix is present.
     provenance: "https://github.com/sillsdev/machine/issues/597"
     parses:
       - signature: "PZ+NP+ROOT|z+?[(^0)(*0)(&0)∅]?+?sag"
         rules: [mrNP, mrPZ]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "PZ+ROOT|z+?sag"
         rules: [mrPZ]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: tsag
     note: The null prefix requires z, not t, on its left.
     provenance: "https://github.com/sillsdev/machine/issues/597"
@@ -30,7 +29,7 @@ words:
       - signature: "PT+ROOT|t+?sag"
         rules: [mrPT]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: sagz
     note: The null suffix has z on its right when the outer real suffix is present.
     provenance: "https://github.com/sillsdev/machine/issues/597"
@@ -40,7 +39,7 @@ words:
       - signature: "ROOT+SZ|sag+?z"
         rules: [mrSZ]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: sagt
     note: The null suffix requires z, not t, on its right.
     provenance: "https://github.com/sillsdev/machine/issues/597"
@@ -48,4 +47,4 @@ words:
       - signature: "ROOT+ST|sag+?t"
         rules: [mrST]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"

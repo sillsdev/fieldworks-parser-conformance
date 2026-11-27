@@ -107,9 +107,8 @@ words:
       - signature: "MI+3SGU|mu+?i"
         gloss: come-3SG
         rules: [mrUSuffix, mrComplexMeta]
-        exercises:
-          - "MetathesisRule"
-          - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "MetathesisRule"
 
   - word: mi
     note: MI ("come", posComplexMeta) bare root, no suffix -- mrComplexMeta has no i +BND u site, so nothing fires.
@@ -142,9 +141,8 @@ words:
       - signature: "SULAT+AV|sumulat"
         gloss: write-AV
         rules: [mrInfixUm]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: sulat
     note: SULAT bare root, no infix -- a plain control.
@@ -163,9 +161,8 @@ words:
       - signature: "NMLZ+ADIL|keadilan"
         gloss: NMLZ-just
         rules: [mrCircum]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: adil
     note: ADIL bare root, no circumfix -- a plain control.
@@ -218,9 +215,8 @@ words:
       - signature: "RDPL+HASA|hasaasa"
         gloss: RED.FULL-carry
         rules: [mrRedupFull, prHDel]
-        exercises:
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
 
   - word: hasahasa
     note: The un-deleted fully reduplicated shape. prHDel is obligatory between vowels, so synthesis of RDPL+HASA always yields "hasaasa" and this surface has no analysis.
@@ -237,9 +233,8 @@ words:
       - signature: "RDP+HASA|haasa"
         gloss: RED-carry
         rules: [mrRedupCV, prHDel]
-        exercises:
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
 
   - word: titula
     note: >-
@@ -262,9 +257,8 @@ words:
       - signature: "RDPI+HASA|hiasa"
         gloss: RED.I-carry
         rules: [mrRedupHi, prHDel]
-        exercises:
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
 
   - word: tula
     note: TULA bare root, no reduplication -- a plain control.
@@ -308,9 +302,8 @@ words:
       - signature: "BAHA+LNK|bahain"
         gloss: flood-LNK
         rules: [mrLnk]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: baha
     note: BAHA bare root, no linker -- a plain control.
@@ -333,9 +326,8 @@ words:
       - signature: "KTB+PERF|katibɯd"
         gloss: arrange-PERF
         rules: [mrPerf, prNonContig]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: katabɯd
     note: The raw, un-raised underlying shape of the perf form -- prNonContig obligatorily raises the "a" before a voiced consonant, so this surface form can never itself be a valid analysis (see katibɯd).

@@ -8,8 +8,6 @@ words:
     parses:
       - signature: "AKA|a[sz]a"
         rules: [prLen]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: aza
@@ -17,15 +15,12 @@ words:
     parses:
       - signature: "AKA|a[sz]a"
         rules: [prLen]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: aka
     note: Obligatory rewrite prevents the unchanged root from surfacing.
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: isi
     note: >-
@@ -33,8 +28,6 @@ words:
     parses:
       - signature: "IPI|isi"
         rules: [prSibVoiceless]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: izi
@@ -43,19 +36,15 @@ words:
     parses:
       - signature: "IBI|izi"
         rules: [prSibVoiced]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: ipi
     note: IPI's own underlying shape is not a surface form, because the rule is obligatory between vowels.
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: ibi
     note: IBI's own underlying shape is not a surface form, because the rule is obligatory between vowels.
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"

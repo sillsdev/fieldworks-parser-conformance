@@ -22,9 +22,6 @@ words:
     parses:
       - signature: "KAN+BO|kanmo"
         rules: [mrSfxBo, prPostNasal]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "KAN+MO|kan+?mo"
         rules: [mrSfxMo, prPostNasal]
     exercises:

@@ -62,7 +62,7 @@
         "min_length": { "type": "integer", "minimum": 1, "default": 1 },
         "max_length": { "type": "integer", "minimum": 1 },
         "note": { "type": "string", "minLength": 1, "description": "The note every generated word carries." },
-        "exercises": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true, "description": "The behaviour labels of every generated word (ADR 0008; PROTOCOL.md section 14). Required: a generated word carries its rule's labels." }
+        "exercises": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true, "description": "The behaviour label of every generated word (ADR 0008; PROTOCOL.md section 14). Required, exactly one: a generated word carries its rule's label." }
       }
     },
     "variant": {

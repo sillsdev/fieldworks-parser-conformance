@@ -8,12 +8,8 @@ words:
     parses:
       - signature: "X|a+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|a+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"
   - word: "a+p"
@@ -21,12 +17,8 @@ words:
     parses:
       - signature: "X+Y|a+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y|a+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"
   - word: "p+a"
@@ -34,12 +26,8 @@ words:
     parses:
       - signature: "Y+X|p+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y+X|p+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"
   - word: "p+p"
@@ -47,12 +35,8 @@ words:
     parses:
       - signature: "Y|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"
   - word: "a+sa"
@@ -60,9 +44,6 @@ words:
     parses:
       - signature: "X+PRE|a+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"
   - word: "a+sp"
@@ -70,27 +51,19 @@ words:
     parses:
       - signature: "X+PRE+Y|a+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"
   - word: "a+a+a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > boundary marker at the junction"
   - word: ap
     note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|a+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y|a+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > boundary marker at the junction"

@@ -780,24 +780,26 @@ A test case is valued by the behaviours its words pin ([ADR 0008](docs/adr/0008-
 them. The field is `exercises`, a list of behaviour labels, on a word and on each of its parses; the field name is unchanged,
 so no consumer needs to accept a new key.
 
-- **Vocabulary.** A label is a line of `constructs.txt` (the top level: the constructs), or a line of `labels.tsv`, the child
+- **Vocabulary.** A label is a line of `constructs.txt` (the top level), or a line of `labels.tsv`, the child
   levels. A child label is written `Parent > child`, with the parent's text verbatim, and may chain (`A > b > c`); it names a
   sub-behaviour of its parent, or an interaction with it. A word carries a label by listing its whole text. A word that carries a
   child label need not also list the parent; the derived table credits the parent for it.
-- **Every word carries a label.** A word with analyses is labelled when each analysis has a label of its own or the word has
-  one (the word's labels apply to every analysis). A word with no analysis (`expect_fail`, `expect_skip`) needs a label on the
-  word. Labels are per word so a failing word points to one behaviour; a grammar may test several behaviours. A merged
+- **Every word carries exactly one label.** The distinct labels of a word and of all its parses together number one: a parse
+  may repeat the word's label, never add another, and a word with no analysis (`expect_fail`, `expect_skip`) carries it on the
+  word. A failing word therefore points to one behaviour: the one its expected result depends on. A child label implies its
+  parent, so a word that carries a child does not list the parent. Where a result depends on two behaviours interacting, the
+  label is an interaction child that no existing label names. A grammar may test several behaviours, one per word. A merged
   grammar keeps every label its members carried.
-- **Generated words carry their rule's labels.** A `generated_no_parse` rule (section 13) has a required, non-empty `exercises`
-  list, and every word it generates carries exactly that list. A label sits on the rule, not on each word, so a rule that spans
+- **Generated words carry their rule's label.** A `generated_no_parse` rule (section 13) has a required `exercises` list of exactly one
+  label, and every word it generates carries it. A label sits on the rule, not on each word, so a rule that spans
   words with different behaviours is split into rules, one per behaviour (use `min_length`, `max_length` and listed `words`).
   No other field of the rule changes: the rule still says only "no parse".
 - **Admission.** A new label is admitted only when it names something no existing label does. Each line of `labels.tsv`
   records the existing labels it was checked against (its parent first, then its siblings and the neighbours it could be
   confused with) and what it means. Variant runs (`variants:`) repeat the default words and are not labelled.
 - **Checks.** `python3 scripts/suite.py check` fails on a label in neither file, a `labels.tsv` line with a missing parent,
-  a missing checked label or no word carrying it, a word or generated rule without a label.
+  a missing checked label or no word carrying it, a word, or a generated rule, that does not carry exactly one label.
 - **The table.** `python3 scripts/suite.py labels` lists every label with its test case and word counts, and
-  `python3 scripts/suite.py labels "<label>"` lists the words carrying one (a construct includes its children's). `generate`
-  writes the same table as `labels.csv` (label, test case, word, words; a generated rule is one row naming `generated_no_parse[i]`
-  with the number of words it spans). It is derived and never committed (ADR 0009).
+  `python3 scripts/suite.py labels "<label>"` lists the words carrying one (a top-level label includes its children's). `generate`
+  writes the same table as `labels.csv` (label, test case, word, words, source; a generated rule is one row with source `generated`, naming `generated_no_parse[i]`
+  with the number of words it spans, so generated words are counted apart from listed ones). It is derived and never committed (ADR 0009).

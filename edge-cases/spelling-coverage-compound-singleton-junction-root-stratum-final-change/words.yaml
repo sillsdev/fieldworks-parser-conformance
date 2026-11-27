@@ -9,7 +9,6 @@ words:
       - signature: "X|a"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: p
     note: "C# returns 2 analyses (Yo|p; Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -19,7 +18,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: t
     note: "C# returns 1 analysis (Zo|t): pins that this spelling is a route and its morpheme sequence."
@@ -39,27 +37,18 @@ words:
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: aa
     note: "C# returns 4 analyses (X+Xo|a+?a; Xo+X|a+?a; Xo|a+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Xo|a+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+X|a+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo|a+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo|a+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ap
@@ -67,20 +56,12 @@ words:
     parses:
       - signature: "X+Yo|a+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+Yo|a+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+Yo|a+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+Y|a+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: at
@@ -88,19 +69,10 @@ words:
     parses:
       - signature: "X+Zo|a+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Xo+Zo|a+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Xo+Zo|a+?t"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: as
@@ -108,36 +80,24 @@ words:
     parses:
       - signature: "Xo+Z|a+?s"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: pa
     note: "C# returns 4 analyses (Y+Xo|p+?a; Yo+Xo|p+?a; Yo+X|p+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+Xo|p+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+Xo|p+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+Xo|p+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+X|p+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pp
@@ -145,20 +105,12 @@ words:
     parses:
       - signature: "Y+Yo|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+Y|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pt
@@ -166,19 +118,10 @@ words:
     parses:
       - signature: "Y+Zo|p+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Yo+Zo|p+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Yo+Zo|p+?t"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ps
@@ -186,35 +129,22 @@ words:
     parses:
       - signature: "Yo+Z|p+?s"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: ta
     note: "C# returns 3 analyses (Zo+Xo|t+?a; Zo+X|t+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Zo+Xo|t+?a"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+Xo|t+?a"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+X|t+?a"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tp
@@ -222,19 +152,10 @@ words:
     parses:
       - signature: "Zo+Yo|t+?p"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+Yo|t+?p"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+Y|t+?p"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tt
@@ -242,14 +163,8 @@ words:
     parses:
       - signature: "Zo|t+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo|t+?t"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ts
@@ -257,35 +172,22 @@ words:
     parses:
       - signature: "Zo+Z|t+?s"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: sa
     note: "C# returns 3 analyses (PRE+Xo|sa; PRE+X|sa; Z+Xo|s+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+Xo|sa"
         rules: ["PRE", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+X|sa"
         rules: ["PRE", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Z+Xo|s+?a"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sp
@@ -293,19 +195,10 @@ words:
     parses:
       - signature: "PRE+Yo|sp"
         rules: ["PRE", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Y|sp"
         rules: ["PRE", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Z+Yo|s+?p"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: st
@@ -313,14 +206,8 @@ words:
     parses:
       - signature: "PRE+Zo|st"
         rules: ["PRE", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Z+Zo|s+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ss
@@ -328,58 +215,45 @@ words:
     parses:
       - signature: "PRE+Z|ss"
         rules: ["PRE", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "s+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: "+a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: "+p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: "+t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: "+s"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: "++"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
       - "CompoundingRule > junction phonology"
   - word: asa
     note: "C# returns 2 analyses (Xo+PRE+X|a+?sa; Xo+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Xo+PRE+X|a+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Xo+PRE|a+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: asp
@@ -387,14 +261,8 @@ words:
     parses:
       - signature: "Xo+PRE+Yo|a+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Xo+PRE+Y|a+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ast
@@ -402,10 +270,6 @@ words:
     parses:
       - signature: "Xo+PRE+Zo|a+?st"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ass
@@ -413,10 +277,6 @@ words:
     parses:
       - signature: "Xo+PRE+Z|a+?ss"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+a"
@@ -424,20 +284,12 @@ words:
     parses:
       - signature: "X+Xo|a+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+X|a+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo|a+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo|a+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+p"
@@ -445,20 +297,12 @@ words:
     parses:
       - signature: "X+Yo|a+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+Yo|a+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+Yo|a+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Xo+Y|a+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+t"
@@ -466,19 +310,10 @@ words:
     parses:
       - signature: "X+Zo|a+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Xo+Zo|a+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Xo+Zo|a+?t"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+s"
@@ -486,9 +321,6 @@ words:
     parses:
       - signature: "Xo+Z|a+?s"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: psa
@@ -496,14 +328,8 @@ words:
     parses:
       - signature: "Yo+PRE+Xo|p+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Yo+PRE+X|p+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: psp
@@ -511,14 +337,8 @@ words:
     parses:
       - signature: "Yo+PRE+Y|p+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Yo+PRE|p+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pst
@@ -526,10 +346,6 @@ words:
     parses:
       - signature: "Yo+PRE+Zo|p+?st"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: pss
@@ -537,10 +353,6 @@ words:
     parses:
       - signature: "Yo+PRE+Z|p+?ss"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+a"
@@ -548,20 +360,12 @@ words:
     parses:
       - signature: "Y+Xo|p+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+Xo|p+?a"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+Xo|p+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+X|p+?a"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+p"
@@ -569,20 +373,12 @@ words:
     parses:
       - signature: "Y+Yo|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo+Y|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo|p+?p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Yo|p+?p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+t"
@@ -590,19 +386,10 @@ words:
     parses:
       - signature: "Y+Zo|p+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Yo+Zo|p+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Yo+Zo|p+?t"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+s"
@@ -610,9 +397,6 @@ words:
     parses:
       - signature: "Yo+Z|p+?s"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tsa
@@ -620,14 +404,8 @@ words:
     parses:
       - signature: "Zo+PRE+Xo|t+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Zo+PRE+X|t+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tsp
@@ -635,14 +413,8 @@ words:
     parses:
       - signature: "Zo+PRE+Yo|t+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Zo+PRE+Y|t+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tst
@@ -650,10 +422,6 @@ words:
     parses:
       - signature: "Zo+PRE|t+?st"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: tss
@@ -661,10 +429,6 @@ words:
     parses:
       - signature: "Zo+PRE+Z|t+?ss"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+a"
@@ -672,19 +436,10 @@ words:
     parses:
       - signature: "Zo+Xo|t+?a"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+Xo|t+?a"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+X|t+?a"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+p"
@@ -692,19 +447,10 @@ words:
     parses:
       - signature: "Zo+Yo|t+?p"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+Yo|t+?p"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo+Y|t+?p"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+t"
@@ -712,14 +458,8 @@ words:
     parses:
       - signature: "Zo|t+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "Zo|t+?t"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+s"
@@ -727,9 +467,6 @@ words:
     parses:
       - signature: "Zo+Z|t+?s"
         rules: ["cr2", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: saa
@@ -737,34 +474,16 @@ words:
     parses:
       - signature: "PRE+X+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+X|sa+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo|sa+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sap
@@ -772,34 +491,16 @@ words:
     parses:
       - signature: "PRE+X+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Yo|sa+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Y|sa+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sat
@@ -807,34 +508,14 @@ words:
     parses:
       - signature: "PRE+X+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+X+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Xo+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Xo+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Xo+Zo|sa+?t"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sas
@@ -842,10 +523,6 @@ words:
     parses:
       - signature: "PRE+Xo+Z|sa+?s"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: spa
@@ -853,34 +530,16 @@ words:
     parses:
       - signature: "PRE+Y+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Xo|sp+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+X|sp+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: spp
@@ -888,34 +547,16 @@ words:
     parses:
       - signature: "PRE+Y+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Y|sp+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo|sp+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: spt
@@ -923,34 +564,14 @@ words:
     parses:
       - signature: "PRE+Y+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Y+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Yo+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Yo+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Yo+Zo|sp+?t"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sps
@@ -958,10 +579,6 @@ words:
     parses:
       - signature: "PRE+Yo+Z|sp+?s"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sta
@@ -969,28 +586,12 @@ words:
     parses:
       - signature: "PRE+Zo+Xo|st+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Xo|st+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Xo|st+?a"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+X|st+?a"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: stp
@@ -998,28 +599,12 @@ words:
     parses:
       - signature: "PRE+Zo+Yo|st+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Yo|st+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Yo|st+?p"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Y|st+?p"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: stt
@@ -1027,22 +612,10 @@ words:
     parses:
       - signature: "PRE+Zo|st+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo|st+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo|st+?t"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sts
@@ -1050,10 +623,6 @@ words:
     parses:
       - signature: "PRE+Zo+Z|st+?s"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ssa
@@ -1061,16 +630,8 @@ words:
     parses:
       - signature: "PRE+Z+Xo|ss+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Z+Xo|ss+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: ssp
@@ -1078,16 +639,8 @@ words:
     parses:
       - signature: "PRE+Z+Yo|ss+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Z+Yo|ss+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: sst
@@ -1095,16 +648,8 @@ words:
     parses:
       - signature: "PRE+Z+Zo|ss+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Z+Zo|ss+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "s+a"
@@ -1112,9 +657,6 @@ words:
     parses:
       - signature: "Z+Xo|s+?a"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "s+p"
@@ -1122,9 +664,6 @@ words:
     parses:
       - signature: "Z+Yo|s+?p"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "s+t"
@@ -1132,9 +671,6 @@ words:
     parses:
       - signature: "Z+Zo|s+?t"
         rules: ["cr1", "pr1"]
-        exercises:
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+sa"
@@ -1142,14 +678,8 @@ words:
     parses:
       - signature: "Xo+PRE+X|a+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Xo+PRE|a+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+sp"
@@ -1157,14 +687,8 @@ words:
     parses:
       - signature: "Xo+PRE+Yo|a+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Xo+PRE+Y|a+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+st"
@@ -1172,10 +696,6 @@ words:
     parses:
       - signature: "Xo+PRE+Zo|a+?st"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "a+ss"
@@ -1183,10 +703,6 @@ words:
     parses:
       - signature: "Xo+PRE+Z|a+?ss"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+sa"
@@ -1194,14 +710,8 @@ words:
     parses:
       - signature: "Yo+PRE+Xo|p+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Yo+PRE+X|p+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+sp"
@@ -1209,14 +719,8 @@ words:
     parses:
       - signature: "Yo+PRE+Y|p+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Yo+PRE|p+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+st"
@@ -1224,10 +728,6 @@ words:
     parses:
       - signature: "Yo+PRE+Zo|p+?st"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "p+ss"
@@ -1235,10 +735,6 @@ words:
     parses:
       - signature: "Yo+PRE+Z|p+?ss"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+sa"
@@ -1246,14 +742,8 @@ words:
     parses:
       - signature: "Zo+PRE+Xo|t+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Zo+PRE+X|t+?sa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+sp"
@@ -1261,14 +751,8 @@ words:
     parses:
       - signature: "Zo+PRE+Yo|t+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Zo+PRE+Y|t+?sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+st"
@@ -1276,10 +760,6 @@ words:
     parses:
       - signature: "Zo+PRE|t+?st"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "t+ss"
@@ -1287,10 +767,6 @@ words:
     parses:
       - signature: "Zo+PRE+Z|t+?ss"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sa+a"
@@ -1298,34 +774,16 @@ words:
     parses:
       - signature: "PRE+X+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+X|sa+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo|sa+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo|sa+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sa+p"
@@ -1333,34 +791,16 @@ words:
     parses:
       - signature: "PRE+X+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Yo|sa+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Yo|sa+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Xo+Y|sa+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sa+t"
@@ -1368,34 +808,14 @@ words:
     parses:
       - signature: "PRE+X+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+X+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Xo+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Xo+Zo|sa+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Xo+Zo|sa+?t"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sa+s"
@@ -1403,10 +823,6 @@ words:
     parses:
       - signature: "PRE+Xo+Z|sa+?s"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sp+a"
@@ -1414,34 +830,16 @@ words:
     parses:
       - signature: "PRE+Y+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Xo|sp+?a"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Xo|sp+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+X|sp+?a"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sp+p"
@@ -1449,34 +847,16 @@ words:
     parses:
       - signature: "PRE+Y+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo+Y|sp+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo|sp+?p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Yo|sp+?p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sp+t"
@@ -1484,34 +864,14 @@ words:
     parses:
       - signature: "PRE+Y+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Y+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Yo+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Yo+Zo|sp+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Yo+Zo|sp+?t"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "sp+s"
@@ -1519,10 +879,6 @@ words:
     parses:
       - signature: "PRE+Yo+Z|sp+?s"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "st+a"
@@ -1530,28 +886,12 @@ words:
     parses:
       - signature: "PRE+Zo+Xo|st+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Xo|st+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Xo|st+?a"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+X|st+?a"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "st+p"
@@ -1559,28 +899,12 @@ words:
     parses:
       - signature: "PRE+Zo+Yo|st+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Yo|st+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Yo|st+?p"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo+Y|st+?p"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "st+t"
@@ -1588,22 +912,10 @@ words:
     parses:
       - signature: "PRE+Zo|st+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo|st+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Zo|st+?t"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "st+s"
@@ -1611,10 +923,6 @@ words:
     parses:
       - signature: "PRE+Zo+Z|st+?s"
         rules: ["PRE", "cr2", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "ss+a"
@@ -1622,16 +930,8 @@ words:
     parses:
       - signature: "PRE+Z+Xo|ss+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Z+Xo|ss+?a"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "ss+p"
@@ -1639,16 +939,8 @@ words:
     parses:
       - signature: "PRE+Z+Yo|ss+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Z+Yo|ss+?p"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"
   - word: "ss+t"
@@ -1656,15 +948,7 @@ words:
     parses:
       - signature: "PRE+Z+Zo|ss+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "PRE+Z+Zo|ss+?t"
         rules: ["PRE", "cr1", "pr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
     exercises:
       - "CompoundingRule > junction phonology"

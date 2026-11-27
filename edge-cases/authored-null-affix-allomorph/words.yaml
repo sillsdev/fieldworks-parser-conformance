@@ -11,7 +11,8 @@ words:
     parses:
       - signature: "KAUN+PST+REL|kaun+?[(^0)(*0)(&0)∅]?+?[(^0)(*0)(&0)∅]?"
         rules: [mrPst, mrRel]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Boundary markers (CharacterDefinitionTable)", "Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: katta
     note: After t the overt -ta tense allomorph applies and the zero relative marker still fills its slot.
     provenance: "https://github.com/sillsdev/motif/issues/362"
@@ -19,25 +20,25 @@ words:
       - signature: "KAT+PST+REL|kat+?ta+?[(^0)(*0)(&0)∅]?"
         rules: [mrPst, mrRel]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: kaunta
     note: The overt -ta allomorph is conditioned to follow t, so it cannot follow n.
     provenance: "https://github.com/sillsdev/motif/issues/362"
     expect_fail: true
     blocked_by: [mrPst]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: kaun0
     note: The null allomorph is the boundary ∅, not the literal segment 0, so a word ending in the real segment 0 does not parse.
     provenance: "https://github.com/sillsdev/motif/issues/362"
     expect_fail: true
     blocked_by: [mrPst, mrRel]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"
   - word: kat0
     note: Neither tense allomorph adds a literal 0 after t, so this word does not parse either.
     provenance: "https://github.com/sillsdev/motif/issues/362"
     expect_fail: true
     blocked_by: [mrPst, mrRel]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph"

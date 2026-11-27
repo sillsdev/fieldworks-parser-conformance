@@ -8,7 +8,6 @@ words:
       - signature: "R0|st"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "pst"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "R1|pst"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "sta"
     note: >-
@@ -26,7 +24,6 @@ words:
       - signature: "R0+SUF0|st+?a"
         rules: [SUF0]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "stp"
     note: >-
@@ -35,7 +32,6 @@ words:
       - signature: "R0+SUF1|st+?p"
         rules: [SUF1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "st+a"
     note: >-
@@ -44,7 +40,6 @@ words:
       - signature: "R0+SUF0|st+?a"
         rules: [SUF0]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "st+p"
     note: >-
@@ -53,7 +48,6 @@ words:
       - signature: "R0+SUF1|st+?p"
         rules: [SUF1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "stpa"
     note: >-
@@ -62,7 +56,6 @@ words:
       - signature: "R0+SUF1+SUF0|st+?p+?a"
         rules: [SUF1, SUF0]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "tsap"
     note: >-
@@ -70,10 +63,8 @@ words:
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R0+SUF2|t+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "t+sap"
@@ -82,10 +73,8 @@ words:
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R0+SUF2|t+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "tsa+p"
@@ -94,7 +83,6 @@ words:
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "t+sa+p"
@@ -103,7 +91,6 @@ words:
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "ptsap"
@@ -112,10 +99,8 @@ words:
     parses:
       - signature: "R1+SUF0+SUF1|pt+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R1+SUF2|pt+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "pt+sap"
@@ -124,10 +109,8 @@ words:
     parses:
       - signature: "R1+SUF0+SUF1|pt+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R1+SUF2|pt+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "pt+sa+p"
@@ -136,7 +119,6 @@ words:
     parses:
       - signature: "R1+SUF0+SUF1|pt+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "tsapa"
@@ -145,7 +127,6 @@ words:
     parses:
       - signature: "R0+SUF2+SUF0|t+?sap+?a"
         rules: [SUF2, SUF0, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "tsapp"
@@ -154,7 +135,6 @@ words:
     parses:
       - signature: "R0+SUF2+SUF1|t+?sap+?p"
         rules: [SUF2, SUF1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "t+sap+a"
@@ -163,7 +143,6 @@ words:
     parses:
       - signature: "R0+SUF2+SUF0|t+?sap+?a"
         rules: [SUF2, SUF0, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > boundary in the switch context"
   - word: "stap"
@@ -171,40 +150,34 @@ words:
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "st+ap"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "sta+p"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "st+a+p"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "sap"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"
   - word: "tasp"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > boundary in the switch context"

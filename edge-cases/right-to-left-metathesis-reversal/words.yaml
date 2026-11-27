@@ -16,8 +16,6 @@ words:
     parses:
       - signature: "ROOT1|sq"
         rules: [mrRtlReversal]
-        exercises:
-          - "MetathesisRule"
     exercises:
       - "MetathesisRule > right-to-left application"
 
@@ -30,8 +28,6 @@ words:
     parses:
       - signature: "ROOT2|tr"
         rules: [mrRtlReversal]
-        exercises:
-          - "MetathesisRule"
     exercises:
       - "MetathesisRule > right-to-left application"
 
@@ -44,14 +40,12 @@ words:
       never-applicable.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
 
   - word: rt
     note: ROOT2's own RAW underlying shape, queried directly -- same reasoning as "qs" (should have metathesized to "tr").
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
 
   - word: sr
@@ -62,14 +56,12 @@ words:
       the members of the two classes.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
 
   - word: tq
     note: The remaining spurious combination -- same reasoning as "sr".
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
 
   - word: qsr
@@ -81,8 +73,6 @@ words:
     parses:
       - signature: "ROOT3|qsr"
         rules: [mrRtlReversal]
-        exercises:
-          - "MetathesisRule"
     exercises:
       - "MetathesisRule > right-to-left application"
   - word: rqs
@@ -92,11 +82,9 @@ words:
       "qsr" does not.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"
   - word: qrs
     note: ROOT3's raw underlying shape. The rule is obligatory where a window matches, so it is not a surface form.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > right-to-left application"

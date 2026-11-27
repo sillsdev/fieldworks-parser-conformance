@@ -11,9 +11,6 @@ words:
     parses:
       - signature: "LOP+PK+T+R|lopkotr"
         rules: [pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -22,7 +19,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: lopkot
@@ -31,9 +27,6 @@ words:
     parses:
       - signature: "LOP+PK+T|lopkot"
         rules: [pk, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -43,8 +36,6 @@ words:
     parses:
       - signature: "LOP+T|lopt"
         rules: [t]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -53,7 +44,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: lopotr
@@ -61,7 +51,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: loptkor
@@ -70,9 +59,6 @@ words:
     parses:
       - signature: "LOP+T+PK+R|loptkor"
         rules: [t, pk, r]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -81,7 +67,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: kaloptr
@@ -90,14 +75,8 @@ words:
     parses:
       - signature: "PC+LOP+T+R|kaloptr"
         rules: [pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+T+R|kaloptr"
         rules: [pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -107,24 +86,12 @@ words:
     parses:
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -133,7 +100,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: loptkr
@@ -141,7 +107,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: lopkor
@@ -159,9 +124,6 @@ words:
     parses:
       - signature: "LOP+PK+IX+T+R|lopkxotr"
         rules: [pk, ix, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -171,9 +133,6 @@ words:
     parses:
       - signature: "LOP+PK+IX+T|lopkxot"
         rules: [pk, ix, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
@@ -182,7 +141,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: lopxtr
@@ -190,7 +148,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: kalxoptr
@@ -198,7 +155,6 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"
 
   - word: lopkxoxtr
@@ -206,5 +162,4 @@ words:
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: infixed material"

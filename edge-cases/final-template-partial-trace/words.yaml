@@ -47,7 +47,6 @@ words:
     parses:
       - signature: "SAG+NONFINAL+TAIL+FINAL|sagftf"
         rules: [mrNonFinal, mrTail, mrFinal]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
@@ -59,7 +58,6 @@ words:
     expect_fail: true
     blocked_by: [mrPartial]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: sagfq
@@ -67,7 +65,6 @@ words:
     parses:
       - signature: "SAG+FINAL+PARTIAL|sagfq"
         rules: [mrFinal, mrPartial]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
@@ -76,7 +73,6 @@ words:
     expect_fail: true
     blocked_by: [mrTail]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: sagf
@@ -84,6 +80,5 @@ words:
     parses:
       - signature: "SAG+FINAL|sagf"
         rules: [mrFinal]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"

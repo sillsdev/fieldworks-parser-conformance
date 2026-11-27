@@ -8,8 +8,6 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
@@ -17,15 +15,11 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: s
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: i
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -33,122 +27,78 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aa
     note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ap
     note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: as
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ai
     note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pa
     note: "C# returns 3 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF|p[aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pp
     note: "C# returns 2 analyses (Y|pp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y|pp"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y|pp"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pi
     note: "C# returns 3 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF|p[aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "Y+X|p[aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -168,8 +118,6 @@ words:
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: si
     note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -183,1143 +131,649 @@ words:
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ip
     note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y|[aá(xy)ei]p"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: is
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ii
     note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
         rules: ["SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|[aá(xy)ei][aá(xy)ei]"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aaa
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aap
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aai
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: apa
     note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: api
     note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: asa
     note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: asp
     note: "C# returns 1 analysis (X+PRE+Y|[aá(xy)ei]sp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+PRE+Y|[aá(xy)ei]sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: asi
     note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aia
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aip
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ais
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aii
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: paa
     note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pap
     note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF|p[aá(xy)i]p"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pai
     note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ppa
     note: "C# returns 3 analyses (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF|pp[aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+SUF|pp[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+SUF|pp[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ppi
     note: "C# returns 3 analyses (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF|pp[aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+SUF|pp[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+SUF|pp[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: psa
     note: "C# returns 1 analysis (Y+PRE+X|ps[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+PRE+X|ps[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: psp
     note: "C# returns 1 analysis (Y+PRE|psp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+PRE|psp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: psi
     note: "C# returns 1 analysis (Y+PRE+X|ps[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+PRE+X|ps[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pia
     note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pip
     note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF|p[aá(xy)i]p"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pis
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: pii
     note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: saa
     note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sap
     note: "C# returns 3 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sai
     note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: spa
     note: "C# returns 5 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+Y+SUF|sp[aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+Y+SUF|sp[aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: spp
     note: "C# returns 3 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y|spp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: spi
     note: "C# returns 5 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+Y+SUF|sp[aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+Y+SUF|sp[aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|sp[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ssa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ssp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ssi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sia
     note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sip
     note: "C# returns 3 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y|s[aá(xy)ei]p"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sis
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sii
     note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iaa
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iap
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ias
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iai
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ipa
     note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ipp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ips
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: ipi
     note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: isa
     note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: isp
     note: "C# returns 1 analysis (X+PRE+Y|[aá(xy)ei]sp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+PRE+Y|[aá(xy)ei]sp"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: isi
     note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iia
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iip
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iis
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: iii
     note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: saip
     note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sapi
     note: "C# returns 6 analyses (PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
         rules: ["PRE", "SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
         rules: ["PRE", "SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
         rules: ["PRE", "SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: saipi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sapii
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: aipi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: apii
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: paip
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: xy
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
@@ -1327,107 +781,53 @@ words:
       - signature: "X|[aá(xy)ei]"
         rules: []
     exercises:
-      - "CompoundingRule"
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sxyi
     note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: saixy
     note: "C# returns 9 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["PRE", "SUF", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"
   - word: sxyip
     note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
         rules: ["PRE", "SUF", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
     exercises:
-      - "CompoundingRule > feeds affixation"
       - "CompoundingRule > several rewrite rules"

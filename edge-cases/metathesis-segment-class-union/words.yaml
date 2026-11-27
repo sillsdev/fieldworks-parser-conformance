@@ -8,7 +8,6 @@ words:
       - signature: "R0|a"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"
   - word: "p"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "R1|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"
   - word: "ap"
     note: >-
@@ -25,7 +23,6 @@ words:
     parses:
       - signature: "R2|ap"
         rules: [pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "aap"
@@ -34,7 +31,6 @@ words:
     parses:
       - signature: "SUF+R0|a+?ap"
         rules: [SUF, pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "app"
@@ -43,7 +39,6 @@ words:
     parses:
       - signature: "SUF+R1|a+?pp"
         rules: [SUF, pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "apap"
@@ -52,7 +47,6 @@ words:
     parses:
       - signature: "R2+SUF|ap+?ap"
         rules: [SUF, pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "a+ap"
@@ -61,7 +55,6 @@ words:
     parses:
       - signature: "SUF+R0|a+?ap"
         rules: [SUF, pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "a+pp"
@@ -70,7 +63,6 @@ words:
     parses:
       - signature: "SUF+R1|a+?pp"
         rules: [SUF, pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "ap+ap"
@@ -79,7 +71,6 @@ words:
     parses:
       - signature: "R2+SUF|ap+?ap"
         rules: [SUF, pr0]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > segment-class union in the switch"
   - word: "aa+p"
@@ -87,33 +78,28 @@ words:
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"
   - word: "apa"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"
   - word: "aa"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"
   - word: "pa"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"
   - word: "paap"
     note: >-
       C# rejects it.
     expect_fail: true
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > segment-class union in the switch"

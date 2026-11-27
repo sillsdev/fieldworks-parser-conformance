@@ -13,7 +13,8 @@ words:
     parses:
       - signature: "KAHTA|kata"
         rules: [prHDel]
-        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kakata
     note: "Reduplication of the root's first CV; the deleted h is restored only inside the stem."
     parses:

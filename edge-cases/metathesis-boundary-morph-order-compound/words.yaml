@@ -8,7 +8,6 @@ words:
       - signature: "Y|p"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"
   - word: "t"
     note: >-
@@ -17,7 +16,6 @@ words:
       - signature: "Z|t"
         rules: []
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"
   - word: "pp"
     note: >-
@@ -26,7 +24,6 @@ words:
       - signature: "Y|pp"
         rules: [cr1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"
   - word: "pt"
     note: >-
@@ -34,10 +31,8 @@ words:
     parses:
       - signature: "Y+Z|pt"
         rules: [cr1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "Y+Z|pt"
         rules: [cr1, pr1]
-        exercises: ["MetathesisRule"]
     exercises:
       - "MetathesisRule > morph order across the switch"
   - word: "tt"
@@ -47,5 +42,4 @@ words:
       - signature: "Z|tt"
         rules: [cr1]
     exercises:
-      - "MetathesisRule"
       - "MetathesisRule > morph order across the switch"
