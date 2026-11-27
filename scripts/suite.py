@@ -90,6 +90,7 @@ CHECKS = (
     ("docs/grammars.md and stress/README.md list every test case", "check_grammars_md"),
     ("FieldWorks witnesses are well formed", "check_fwdata"),
     ("Calibration families are well formed", "check_calibration"),
+    ("docs/renames.tsv is a sound, append-only contract", "check_renames"),
     ("Relative links resolve", "check_links"),
     ("No private paths, emails or user names", "privacy_lint"),
 )

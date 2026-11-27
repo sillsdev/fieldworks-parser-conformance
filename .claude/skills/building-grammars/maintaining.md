@@ -72,7 +72,7 @@ is never reused for a different test case once retired, and never encodes tier, 
 | `covered_by` | for `retired`, the id that covers what it detected; otherwise empty |
 | `wave` | the wave that removed it, named `wave-YYYY-MM-DD`; never empty |
 
-Lines are appended, never edited or removed. Each settled wave gets a git tag with the same name.
+Lines are appended, never edited or removed. Restoring a retired test case appends `X`, `X`, empty, `wave`, and each id's last entry rules; a retired id never becomes another id's `new_id`. Each settled wave gets a git tag with the same name.
 
 The consumer contract is the `docs/renames.tsv` entries plus the wave tag. After the wave lands, notify the
 PanGloss lead with the tag and the new entries.
