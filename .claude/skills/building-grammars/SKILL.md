@@ -30,7 +30,7 @@ This skill decides whether a need gets a new test case, builds it, and keeps the
 
 > **Until epic S1 lands** the ADRs' "Today" notes apply: exceptions are the `upstream` field
 > (PROTOCOL.md section 12) and prose notes, the manifests, `coverage.csv` and `rules.csv` stay committed
-> (AGENTS.md section 2a), words carry `exercises` and `constructs.txt` lists the 31 constructs, and merge waves
+> (AGENTS.md section 2a), words carry `exercises` and `constructs.txt` is the top level of the behaviour-label vocabulary, and merge waves
 > wait for the behaviour-label vocabulary. Use `scripts/upstream_status.py` for exception status.
 
 Terms used here beyond the glossary: a **detector** is a test case (or word) that fails when a behaviour or
@@ -57,7 +57,7 @@ Then classify the change with land-a-conformance-change section 1.
 Take the first rung that fits. Paste the evidence into the commit body.
 
 1. **Already detected.** `git grep` the issue id, behaviour label and word shape across `*/words.yaml`,
-   `*/README.md` and the exceptions. If a test case already fails on the bug build, add or update its exception
+   `*/README.md`, and the exception notes (`upstream` fields and "Known oracle limitation (machine#N, open)" notes until `status.yaml` exists). If a test case already fails on the bug build, add or update its exception
    if one is due, and stop.
 2. **Add words** to a test case whose grammar already produces the case, unchanged.
 3. **Extend a grammar** only when every existing word replays unchanged under `--propose`. A moved result means
@@ -74,7 +74,7 @@ Take the first rung that fits. Paste the evidence into the commit body.
    language profile also needs typological territory none of the existing profiles covers.
 
 A staged family or a matrix is one test case with one cell per member (a rebuild merge in
-[maintaining.md](maintaining.md)). A new id must not appear in `docs/renames.tsv`: ids are never reused.
+[maintaining.md](maintaining.md)). A new id must not be a retired id of a different test case (`docs/renames.tsv`); restoring the same retired test case under its old id is allowed.
 Done when the commit body names the rung, its evidence and, for rungs 4 and 5, the reason.
 
 ## 3. Build
@@ -87,8 +87,9 @@ Done when the commit body names the rung, its evidence and, for rungs 4 and 5, t
    Show both by mutation: change the varying feature, run `--propose`, confirm the detecting word's result
    flips and the control's does not. Record the mutation in the README. No-parse words may be generated from a
    declared rule (ADR 0009); the format is decided in epic S5, so until then list them.
-4. **Results from the reference only.** Run the reference's runner with `--propose`, apply its patch
-   unedited, run it again. Never edit a result by hand or take one from a consumer. Read every result against
+4. **Results from the reference only.** In a sillsdev/machine checkout at `ba6dfa106`, run
+   `dotnet run --project src/SIL.Machine.Morphology.HermitCrab.Conformance -c Release -- --fixtures <suite clone> --propose`,
+   apply its patch unedited, run it again. Never edit a result by hand or take one from a consumer. Read every result against
    the rules; one you cannot explain is reported as a finding.
 5. **Check.** AGENTS.md section 4.
 
@@ -96,14 +97,14 @@ Done when the second `--propose` run prints no patch and the checks pass.
 
 ## 4. Exceptions
 
-Exceptions live only in one `status.yaml` at the suite root (ADR 0007), keyed by test case, plus word where
+Exceptions live only in one `status.yaml` at the suite root (ADR 0007; created in epic S1), keyed by test case, plus word where
 needed. Each has a kind, an upstream ref and a reason:
 
 - **reference defect**: the reference is wrong. Keep the C# result as the expected result and record the
   intended answer, so the gate fails when the fix lands; then delete the exception (ADR 0002).
 - **pending upstream**: results come from a build of the upstream PR (ADR 0001).
 
-An exception with no upstream issue or PR is not admissible: file the issue first. A duplicate analysis caused
+Until `status.yaml` exists, follow the existing `expect_fail` precedent: keep the C# result and give the word a note "Known oracle limitation (machine#N, open)" with the intended answer. An exception with no upstream issue or PR is not admissible: file the issue first. A duplicate analysis caused
 by a C# bug is an exception, never deduplicated (ADR 0006). Never write a tier; it is computed.
 
 ## 5. Changed results

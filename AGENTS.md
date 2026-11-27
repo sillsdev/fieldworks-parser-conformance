@@ -70,7 +70,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 6. Regenerate the manifest (section 2a), then read the `git diff`. The manifest should move only for the
    fixtures you touched.
 7. Delete a fixture by removing its directory and its line in `docs/grammars.md`, then regenerating. Remove a
-   `dead-rules-allowed.tsv` line that names it, and append its row to `docs/renames.tsv` (columns and rules in
+   `dead-rules-allowed.tsv` line that names it, and append its entry to `docs/renames.tsv` (columns and rules in
    [building-grammars](.claude/skills/building-grammars/maintaining.md#rename-and-telling-the-consumers)).
 8. Tell the consuming engines. sillsdev/machine and PanGloss each pin a commit of `main` in `conformance.commit`,
    so a change reaches an engine when it bumps that pin. Their own self-check is regenerated on their side, not

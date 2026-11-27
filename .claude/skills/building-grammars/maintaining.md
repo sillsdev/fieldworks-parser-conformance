@@ -1,8 +1,8 @@
 # Maintaining the suite: merge, retire, remove a word, rename, review
 
 Part of [building-grammars](SKILL.md); its terms and its "until epic S1 lands" note apply here. Merges,
-retirements, renames and format changes go through a PR with a sonnet-reviewer LAND verdict (AGENTS.md,
-"Landing").
+retirements, renames, and changes to the file format or to PROTOCOL.md go through a PR with a
+sonnet-reviewer LAND verdict (AGENTS.md, "Landing").
 
 **Detection is the guardrail** ([ADR 0008](../../../docs/adr/0008-value-is-detection.md)):
 
@@ -13,7 +13,7 @@ retirements, renames and format changes go through a PR with a sonnet-reviewer L
 - a merged grammar keeps every member's behaviour labels.
 
 Merge waves wait for the behaviour-label vocabulary (epic S1 sub-issue). Until then judge by `exercises`,
-`constructs.txt`, the exceptions and the bug builds.
+`constructs.txt`, the exception notes and the bug builds.
 
 ## Merge: fold a family into a survivor
 
@@ -26,8 +26,8 @@ them. Read the grammars, not a line count.
 | **variants** | grammars identical, only `morpher:` settings differ | one `variants:` run per absorbed test case |
 | **rebuild** | members share a word list and differ in one parameter | each member becomes a **cell**: its own rule, segments and words, so cells cannot interact |
 
-1. List members, survivor id and kind. The survivor id is not in `docs/renames.tsv` and is not an existing
-   directory other than a member.
+1. List members, survivor id and kind. The survivor id is not a retired id of a different test case
+   (`docs/renames.tsv`) and is not an existing directory other than a member.
 2. Write the survivor's grammar; for a rebuild, a cell map from each member's rules and words to the survivor's.
 3. Take every result from the reference with `--propose`.
 4. **Replay.** Every absorbed word's result is unchanged (rebuild: matches under the cell map). A mismatch
@@ -38,8 +38,6 @@ them. Read the grammars, not a line count.
 7. Remove the absorbed directories, append one `docs/renames.tsv` line per absorbed id, run the checks.
 8. The commit body carries the cell map, the replay and detection results, the test case count before and
    after, and the changed-result table.
-
-One family per commit.
 
 ## Retire
 
@@ -62,8 +60,7 @@ carrying a behaviour label or the only word that fails on a bug build.
 ## Rename, and telling the consumers
 
 Consumers pin the suite by commit ([ADR 0005](../../../docs/adr/0005-consumer-contract-and-test-case-identity.md)),
-so a rename, merge or retirement lands on `main` first and consumers follow at their next bump. Rename only as
-part of a merge, or when an id states the opposite of what the test case now pins. An id is its directory path,
+so a rename, merge or retirement lands on `main` first and consumers follow at their next bump. An id is its directory path,
 is never reused once retired, and never encodes tier, status or exception state.
 
 **`docs/renames.tsv` is a contract.** Tab-separated, one header line, columns in this order:
@@ -77,17 +74,11 @@ is never reused once retired, and never encodes tier, status or exception state.
 
 Lines are appended, never edited or removed. Each settled wave gets a git tag with the same name.
 
-After the commit lands, `git grep` the removed ids in the consumers' checkouts and open one issue in each
-consumer's repository with the suite commit, the new lines and the hits.
+The consumer contract is the `docs/renames.tsv` entries plus the wave tag. After the wave lands, notify the
+PanGloss lead with the tag and the new entries.
 
 ## Periodic review
 
-Run it each quarter, or when the test case count has grown by 10% since the last review.
-
-1. List candidates: test cases whose every bug and behaviour label is detected elsewhere; families of four or
-   more members that differ in one parameter; exceptions that `scripts/upstream_status.py` reports resolved;
-   dead-rule lines a word now exercises; behaviour labels carried by one word.
-2. Comment on the review issue with each candidate and a decision (merge, retire, re-point, keep with reason).
-3. Apply accepted decisions with this page, one family per commit.
-
-Done when the review issue lists every candidate with a decision and the date.
+When asked for one, list the test cases whose every bug and behaviour label is detected elsewhere, and
+exceptions that `scripts/upstream_status.py` reports resolved. Report each candidate with a proposed decision
+(merge, retire, keep with reason) to the requester; apply accepted decisions with this page.
