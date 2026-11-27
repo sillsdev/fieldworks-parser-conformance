@@ -26,8 +26,11 @@ them. Read the grammars, not a line count.
 | **variants** | grammars identical, only `morpher:` settings differ | one `variants:` run per absorbed test case |
 | **rebuild** | members share a word list and differ in one parameter | each member becomes a **cell**: its own rule, segments and words, so cells cannot interact (see "Building cells") |
 
-1. List members, survivor id and kind. The survivor id is not a retired id of a different test case
-   (`docs/renames.tsv`) and is not an existing directory other than a member.
+1. List members, the survivor and the kind. **The survivor is one existing member and keeps that member's id; a merge never
+   invents a new id** (ADR 0005). The merged test case lives in that member's directory, and every other member maps to it
+   in `docs/renames.tsv`. Example: folding `quantified-alpha-unbounded-rtl-right` into `quantified-alpha-bounded-ltr-left` keeps
+   `edge-cases/quantified-alpha-bounded-ltr-left` and appends `edge-cases/quantified-alpha-unbounded-rtl-right<TAB>edge-cases/quantified-alpha-bounded-ltr-left<TAB><TAB>wave-YYYY-MM-DD`.
+   Pick the member whose name is most general, or the first by name.
 2. Write the survivor's grammar; for a rebuild, a cell map from each member's rules and words to the survivor's.
 3. Take every result from the reference with `--propose`.
 4. **Replay.** Every member word's result is unchanged (rebuild: matches under the cell map). A mismatch
@@ -49,7 +52,7 @@ them. Read the grammars, not a line count.
 A cell is a member's grammar with every name moved so that no segment, class, rule or word of one cell is
 visible to another:
 
-- **Letters.** Cell 1 keeps its letters; each later cell takes letters used by no member (a letter map per cell).
+- **Letters.** Cell 1 keeps its letters; each later cell takes letters used by no member (a letter map per cell; when the ASCII letters run out, take letters of the Latin-1 block).
   Map the words' input and the surface part of each expected signature with it. Words that share letters would be
   parsed by every cell's roots and the results would multiply.
 - **Ids.** Suffix every XML id, rule id and `MorphemeId` with `_<cell>`, and say so in the README, so that a
@@ -58,7 +61,7 @@ visible to another:
   character table.
 - **A grammar with a feature system needs one more feature.** An unspecified feature matches anything, so a class
   or segment context of one cell accepts the other cells' segments (a first build without it mismatched nearly every
-  word). Add one symbolic feature `cell` with one symbol per cell and give every segment its cell's value. A
+  word). Add one symbolic feature `cell` with one symbol per cell, give every segment its cell's value, and give every feature-defined natural class its cell's value too. A
   grammar with no feature system needs nothing, which is why `alias-output-0-*` and `alias-output-1-*` are not one
   test case.
 - **Words and notes.** Prefix each word's `note` with `[cell <name>]`; each word keeps its own behaviour label.
