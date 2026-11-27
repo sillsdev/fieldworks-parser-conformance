@@ -87,7 +87,7 @@ Done when the commit body names the rung, its evidence and, for rungs 4 and 5, t
    Show both by mutation: change the varying feature, run `--propose`, confirm the detecting word's result
    flips and the control's does not. Record the mutation in the README. No-parse words may be generated from a
    declared rule (ADR 0009); the format is decided in epic S5, so until then list them.
-4. **Results from the reference only.** In a sillsdev/machine checkout at `ba6dfa106`, run
+4. **Results from the reference only.** In a sillsdev/machine checkout at `reference.commit` (tag `fpc-ref-<first 8 characters>`), run
    `dotnet run --project src/SIL.Machine.Morphology.HermitCrab.Conformance -c Release -- --fixtures <suite clone> --propose`,
    apply its patch unedited, run it again. Never edit a result by hand or take one from a consumer. Read every result against
    the rules; one you cannot explain is reported as a finding.
