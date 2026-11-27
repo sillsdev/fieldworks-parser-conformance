@@ -4,8 +4,7 @@ Status: accepted (owner, 2026-11-27)
 
 ## Context
 
-The reference engine lives in sillsdev/machine. The behaviour the suite needs (ordering fixes, the conformance runner, writable
-affix `maxApps`) sits in open pull requests, so master alone cannot generate or verify the results. The current
+The reference engine lives in sillsdev/machine. The fixes the suite depends on sit in open pull requests, so master alone cannot generate or verify the results. The current
 reference commit, `ba6dfa106`, is the tip of machine #615, which is stacked on #500 and #556. Machine #506 showed analysis
 order varies under parallelism and that #556 makes the multiset deterministic, so an older master would give unstable results.
 

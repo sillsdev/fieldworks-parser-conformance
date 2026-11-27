@@ -6,7 +6,7 @@ Status: accepted (owner, 2026-11-27)
 
 A word can have several analyses, and an engine may return them in any order and may return the same analysis twice. Comparing sorted
 strings hides duplicates and makes order a test failure. Machine #506 showed the C# result order varies under parallel analysis,
-and #556 fixes the multiset though not the order.
+and #556 fixes the multiset.
 
 ## Decision
 
@@ -22,7 +22,7 @@ and #556 fixes the multiset though not the order.
 - A duplicate is a visible, trackable item with an upstream link rather than a normalised-away accident.
 - The deterministic single-threaded run means regenerating results from the same reference commit gives the same bytes.
 - Today: PROTOCOL.md sections 3 and 4 already sort signatures without deduplicating and compare them as a multiset, so this ADR matches current
-  behaviour. What is not built until S1 lands: exception rows for duplicates, because `status.yaml` does not exist; the existing
+  behaviour. The reference run being single-threaded and deterministic is not enforced: nothing in the suite or CI requires it, and `reference.commit` with #556 fixes the multiset, not the order. What is not built until S1 lands: exception rows for duplicates, because `status.yaml` does not exist; the existing
   duplicate-bearing cases are explained in `words.yaml` notes.
 
 ## Alternatives considered
@@ -30,3 +30,9 @@ and #556 fixes the multiset though not the order.
 - **Compare sets (deduplicate).** Rejected: it hides an engine returning the same parse twice, which FieldWorks would display twice.
 - **Compare ordered lists.** Rejected: order is nondeterministic under parallelism in the reference itself.
 - **Key on surface form only.** Rejected: two analyses with the same surface form and different morphemes are different parses.
+
+## Sources
+
+- test262 interpretation rules: <https://github.com/tc39/test262/blob/main/INTERPRETING.md>
+- Machine pull requests #506 (order varies under parallelism) and #556 (multiset fix): <https://github.com/sillsdev/machine/pull/506>, <https://github.com/sillsdev/machine/pull/556>
+- Differential testing: <https://en.wikipedia.org/wiki/Differential_testing>

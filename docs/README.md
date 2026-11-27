@@ -15,7 +15,7 @@ The one rule: the suite holds only what a real FieldWorks project can produce. T
 |---|---|
 | [../README.md](../README.md) | the front page: what the suite is, the three projects, a quick start |
 | [what-it-is.md](what-it-is.md) | the suite, the fixture contract, the two-file format |
-| [glossary.md](glossary.md) | one line for each term the suite uses |
+| [../GLOSSARY.md](../GLOSSARY.md) | the canonical terms the suite uses |
 | [grammars.md](grammars.md) | every grammar in the suite, one line each, grouped by area, and which engines run which |
 
 ### Implementing an engine

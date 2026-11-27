@@ -6,42 +6,36 @@ FieldWorks can produce. The terms below are canonical in prose; file and script 
 ## Language
 
 **Test case**:
-A directory holding `grammar.xml` and `words.yaml`. Its id is its directory path.
-_Avoid_: fixture (in prose; it remains in file and script names), row, case
+A directory holding `grammar.xml` and `words.yaml`.
+_Avoid_: fixture (in prose; it remains in code and file names only)
 
 **Grammar**:
 The `grammar.xml` inside a test case.
-_Avoid_: fixture
+_Avoid_: fixture (in prose)
 
 **Word**:
 An input string with its expected result.
-_Avoid_: row, entry
+_Avoid_: row
 
 **Analysis**:
 One parse the reference returns for a word.
-_Avoid_: parse result, row
 
 **Signature**:
 Morph ids plus surface form; the key for comparing analyses.
-_Avoid_: fingerprint, key
 
 ## Reference and results
 
 **Reference**:
-The C# HermitCrab engine, the only source of expected results.
-_Avoid_: oracle, ground truth
-
-**Reference commit**:
-The pinned commit of the reference.
-_Avoid_: oracle build
+The C# engine; the reference commit is the pinned commit of it.
+_Avoid_: oracle
 
 **Exception**:
 A tracked departure from the reference, of kind reference defect or pending upstream.
-_Avoid_: known limitation, aspirational, oracle limitation, divergence (unqualified)
+_Avoid_: known limitation, aspirational, divergence (unqualified)
 
 **Consumer divergence**:
 A difference a consumer records in its own repo.
-_Avoid_: divergence (unqualified), exception
+_Avoid_: divergence (unqualified)
 
 ## Value and structure
 
@@ -51,18 +45,37 @@ _Avoid_: construct, exercises tag
 
 **Language profile**:
 A realistic grammar representing a language type.
-_Avoid_: language fixture
 
 **Family**:
 Test cases that differ in one parameter.
-_Avoid_: group, series
 
 ## Landing
 
 **Wave**:
 A batch of merges and retirements landed together, with a tag.
-_Avoid_: batch, release
 
 **Consumer**:
 A pinned user of the suite, such as PanGloss or Machine.
-_Avoid_: client, downstream
+
+## Supporting terms
+
+**Witness**:
+A real FieldWorks project stored with a test case as evidence that FieldWorks can produce its grammar.
+
+**FieldWorks-producible**:
+A grammar a real FieldWorks project can produce through the loader.
+
+**Adapter**:
+A program that runs an engine over a test case's words and reports its analyses in the suite's exchange format.
+
+**Capability profile**:
+The set of capabilities an engine declares; a test case needing one the engine lacks is skipped for that engine.
+
+**Stress test case**:
+A grammar kept for timing and optimisation-parity work, not for conformance.
+
+**Ledger**:
+A consumer's own record of what its test cases cover; it lives in the consumer's repo.
+
+**XAmple subset**:
+The grammars with no phonological features and no phonological rules, so XAmple loses nothing by ignoring them; a descriptive label only.

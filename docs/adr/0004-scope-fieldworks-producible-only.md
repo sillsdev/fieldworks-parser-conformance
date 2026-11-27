@@ -17,14 +17,13 @@ Separately, issue #23 asked for XAmple as a second reference.
 - The exception is ADR 0001's pending-upstream allowance: a grammar needing a construct that an open FieldWorks or Machine
   change would make writable may be kept.
 - XAmple is out of scope as a second reference. [ADR 0002](0002-reference-is-the-only-source-of-expected-results.md) allows one
-  source of expected results. XAmple compatibility is at most a descriptive label. Issue #23 is closed with this reasoning.
+  source of expected results. XAmple compatibility is at most a descriptive label, never a source of results. Issue #23 is closed with this reasoning.
 
 ## Consequences
 
 - Every test case answers "could a FieldWorks user hit this?" with yes, or with a cited upstream change that would make it so.
 - A consumer's engine-only cases have a home that is not this suite, so the suite stays small enough to review.
-- XAmple-subset grammars remain visible as a computed label in the reader index, not as a source of results.
-- Today: `fieldworks_producible: true` is carried by every `words.yaml` (279) and the DTD census is
+- Today: `fieldworks_producible: true` is carried by every `words.yaml` (263 conformance plus 16 stress = 279; 295 with calibration) and the DTD census is
   `fieldworks-writable-shapes.tsv`. The field is a flag that is never `false`, so it carries no information; epic S1 drops it, and the
   evidence moves to the census and witnesses. Until S1 lands, the field is still required by the schema check and consumer gates.
   Issue #23 is closed when this ADR lands.

@@ -5,8 +5,8 @@ Status: accepted (owner, 2026-11-27)
 ## Context
 
 Committed derived files (two manifests, `coverage.csv`, `rules.csv`) change on almost every pull request, conflict, and
-need the consuming engine's runner to regenerate (AGENTS.md section 2a). The API review counted 14 steps and 3 pull requests
-to add one test case. Separately, some test cases need long lists of words that cannot parse, which are
+need the consuming engine's runner to regenerate (AGENTS.md section 2a). The 2026-11-27 API review estimated 14 steps and 3 pull
+requests to add one test case. Separately, some test cases need long lists of words that cannot parse, which are
 mechanical to derive from an alphabet and a length.
 
 ## Decision
@@ -21,7 +21,7 @@ mechanical to derive from an alphabet and a length.
 
 ## Consequences
 
-- Adding a test case becomes: write the two files, run one check, open the pull request.
+- Adding a test case becomes: write the two files, run one check, push to main once the gate passes (AGENTS.md, Landing).
 - No derived file can go stale in a pull request, because none is committed. The one committed index is guarded by a check.
 - Generated no-parse words stay reproducible without bloating `words.yaml`; analyses are never generated, so ADR 0002 holds.
 - Today: the manifests, `coverage.csv` and `rules.csv` are committed and hashed, `scripts/generate_manifest.py --check` and
@@ -33,3 +33,9 @@ mechanical to derive from an alphabet and a length.
 - **Keep derived files committed and checked.** Rejected: constant churn and merge conflicts for no information the script cannot recompute.
 - **Commit the index nowhere.** Rejected: readers browsing the repo would have no catalogue; a checked index costs little.
 - **Generate analyses as well.** Rejected: results come only from the reference run ([ADR 0002](0002-reference-is-the-only-source-of-expected-results.md)).
+
+## Sources
+
+- test262 generated tests: <https://github.com/tc39/test262/blob/main/CONTRIBUTING.md>
+- Machine #615, the conformance runner: <https://github.com/sillsdev/machine/pull/615>
+- Machine #506 and #556 (deterministic output): <https://github.com/sillsdev/machine/pull/506>, <https://github.com/sillsdev/machine/pull/556>

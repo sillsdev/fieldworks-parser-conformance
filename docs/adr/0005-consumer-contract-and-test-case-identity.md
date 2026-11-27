@@ -34,3 +34,9 @@ html5lib-tests) keep names stable and track renames explicitly rather than promi
 - **Ids that encode tier or status.** Rejected: every promotion or exception change would be a rename.
 - **Semantic-version releases with compatibility promises.** Rejected: the suite is pinned by commit and changes shape too often to promise anything.
 - **Allow reuse of retired ids.** Rejected: an old pin would silently mean a different test case.
+
+## Sources
+
+- test262 contribution rules: <https://github.com/tc39/test262/blob/main/CONTRIBUTING.md>
+- JSON Schema Test Suite: <https://github.com/json-schema-org/JSON-Schema-Test-Suite/blob/main/README.md>
+- toml-test: <https://github.com/toml-lang/toml-test/blob/master/README.md>
