@@ -11,6 +11,7 @@
          on phonological segments, so no PhonologicalFeatureSystem is needed either. -->
     <HeadFeatures>
       <SymbolicFeature id="featPers"><Name>pers</Name><Symbols><Symbol id="symP1">1</Symbol><Symbol id="symP2">2</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featNum"><Name>num</Name><Symbols><Symbol id="symSg">sg</Symbol><Symbol id="symPl">pl</Symbol></Symbols></SymbolicFeature>
     </HeadFeatures>
     <!-- ONE StemName region, covering only featPers=1 - the smallest grammar that can distinguish
          RootAllomorphDef::stem_name's two halves (C# StemName.IsRequiredMatch/IsExcludedMatch):
@@ -20,6 +21,15 @@
     <StemNames>
       <StemName id="snP1" partsOfSpeech="posV">
         <Name>PrincipalPartP1</Name>
+        <Regions>
+          <Region><AssignedHeadFeatures><FeatureValue feature="featPers" symbolValues="symP1" /></AssignedHeadFeatures></Region>
+          <!-- A second region (HCLoader.cs loads every non-empty region): num=pl. A word is inside the stem name when it is inside either region. -->
+          <Region><AssignedHeadFeatures><FeatureValue feature="featNum" symbolValues="symPl" /></AssignedHeadFeatures></Region>
+        </Regions>
+      </StemName>
+      <!-- snP2 has one region, pers=1, the same as snP1's first. The default allomorph is already excluded there, so adding it changes no earlier word. -->
+      <StemName id="snP2" partsOfSpeech="posV">
+        <Name>PrincipalPartP1Other</Name>
         <Regions>
           <Region><AssignedHeadFeatures><FeatureValue feature="featPers" symbolValues="symP1" /></AssignedHeadFeatures></Region>
         </Regions>
@@ -42,7 +52,7 @@
       <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered" morphologicalRules="mrPers1 mrPers2">
+      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered" morphologicalRules="mrPers1 mrPers2 mrPlural mrNeedsP">
         <Name>S</Name>
         <MorphologicalRuleDefinitions>
           <!-- Assigns featPers=1 - puts the word's FS inside snP1's region, so the stemName="snP1"
@@ -71,6 +81,29 @@
             <OutputHeadFeatures><FeatureValue feature="featPers" symbolValues="symP2" /></OutputHeadFeatures>
             <MorphemeId>PERS2</MorphemeId>
           </MorphologicalRule>
+          <!-- Added with the second region: mrPlural assigns num=pl; mrNeedsP requires stem name snP1 (HCLoader.cs LoadDerivAffixProcessRule) and assigns pers=1. -->
+          <MorphologicalRule id="mrPlural" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV">
+            <Name>plural</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subPlural">
+                <MorphologicalInput><PhoneticSequence id="stemPlural"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemPlural" /><InsertSegments><PhoneticShape>at</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <OutputHeadFeatures><FeatureValue feature="featNum" symbolValues="symPl" /></OutputHeadFeatures>
+            <MorphemeId>PLURAL</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrNeedsP" requiredPartsOfSpeech="posV" outputPartOfSpeech="posV" requiredStemName="snP1">
+            <Name>needsP</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subNeedsP">
+                <MorphologicalInput><PhoneticSequence id="stemNeedsP"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemNeedsP" /><InsertSegments><PhoneticShape>ak</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <OutputHeadFeatures><FeatureValue feature="featPers" symbolValues="symP1" /></OutputHeadFeatures>
+            <MorphemeId>NEEDSP</MorphemeId>
+          </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
           <!-- One morpheme, two root allomorphs: "tam" unrestricted (valid only OUTSIDE snP1's
@@ -84,6 +117,14 @@
             </Allomorphs>
             <MorphemeId>ROOT</MorphemeId>
             <Gloss>root</Gloss>
+          </LexicalEntry>
+          <!-- mop carries snP2, not snP1: mrNeedsP (requiredStemName snP1) refuses it even though the word is inside snP2's region. -->
+          <LexicalEntry id="eMop" partOfSpeech="posV">
+            <Allomorphs>
+              <Allomorph id="aMop" stemName="snP2"><PhoneticShape>mop</PhoneticShape></Allomorph>
+            </Allomorphs>
+            <MorphemeId>MOP</MorphemeId>
+            <Gloss>mop</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

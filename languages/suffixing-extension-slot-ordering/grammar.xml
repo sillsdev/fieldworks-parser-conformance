@@ -18,6 +18,8 @@
       <PartOfSpeech id="posV6"><Name>vAgreement</Name></PartOfSpeech>
       <!-- G5 (code-coverage-driven, second sweep): mrRecurSuf/mrStemReq below. -->
       <PartOfSpeech id="posV7"><Name>vSecondSweep</Name></PartOfSpeech>
+      <!-- Nested head feature values and per-form required head features (posV8 below). -->
+      <PartOfSpeech id="posV8"><Name>vNestedFeatures</Name></PartOfSpeech>
       <!-- Bucket-2 coverage: two MORE phonological subrules (prPhonoReq/prPhonoExcl) both target
            the SAME nasal+voiceless-bilabial environment prNasalMutation does, so each needs its OWN
            dedicated POS - otherwise a root built for one MPR-gated test would spuriously satisfy the
@@ -73,6 +75,10 @@
           <Symbol id="symPl">pl</Symbol>
         </Symbols>
       </SymbolicFeature>
+      <!-- A ComplexFeature (HCLoader.LoadFeatureSystem writes one for every feature that is not closed) whose value is a nested
+           structure of featPers and featNum (HCLoader.LoadFeatureStruct, IFsComplexValue). -->
+      <SymbolicFeature id="featPers"><Name>pers</Name><Symbols><Symbol id="symP1">1</Symbol><Symbol id="symP2">2</Symbol></Symbols></SymbolicFeature>
+      <ComplexFeature id="cfAgr"><Name>agr</Name></ComplexFeature>
     </HeadFeatures>
     <!-- MPR features and groups, spelled as HCLoader writes them. LoadLanguage builds exactly three
          MprFeatureGroups and puts every MPR feature it creates in one of them: "exceptionFeatures"
@@ -316,7 +322,7 @@
       <Stratum
         characterDefinitionTable="table1"
         morphologicalRuleOrder="unordered"
-        morphologicalRules="mrExtX mrExtY mrEndZ mrEndW mrEndH mrRedup mrCaus mrAppl mrFV mrNumPl mrAgr mrRecurSuf mrStemReq mrStemAlt mrPhonoDestroy mrPhXSource"
+        morphologicalRules="mrExtX mrExtY mrEndZ mrEndW mrEndH mrRedup mrCaus mrAppl mrFV mrNumPl mrAgr mrRecurSuf mrStemReq mrStemAlt mrPhonoDestroy mrPhXSource mrNumPl7 mrCxPlural mrCxNeed1Pl mrCxNeed2 mrFormAgree mrRuleAgree"
         phonologicalRules="prNasalMutation prPhonoReq prPhonoExcl"
       >
         <Name>Main</Name>
@@ -525,6 +531,83 @@
             </MorphologicalSubrules>
             <MorphemeId>PHXSRC</MorphemeId>
           </MorphologicalRule>
+                  <!-- Second-sweep stem-name region: assigns featNum=pl to a posV7 word (the rule mrNumPl does the same for posV6), so a plural posV7 word exists for snG6's region. -->
+          <MorphologicalRule id="mrNumPl7" requiredPartsOfSpeech="posV7" outputPartOfSpeech="posV7">
+            <Name>numPl7</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subNumPl7">
+                <MorphologicalInput><PhoneticSequence id="stemNumPl7"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemNumPl7" /><InsertSegments><PhoneticShape>ep</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <OutputHeadFeatures><FeatureValue feature="featNum" symbolValues="symPl" /></OutputHeadFeatures>
+            <MorphemeId>NUMPL7</MorphemeId>
+          </MorphologicalRule>
+          <!-- ===================== nested head features and per-form required head features (posV8) =====================
+               mrCxPlural assigns agr[num=pl]; mrCxNeed1Pl requires agr[pers=1, num=pl] and mrCxNeed2 requires agr[pers=2]; the roots carry agr[pers=...].
+               mrFormAgree is one rule whose two affix forms each carry their own required head features (the subrule's RequiredHeadFeatures:
+               HCLoader.LoadAffixProcessAllomorphs sets a lone form's MsEnvFeatures from it, lines 1174-1175), -wa for num=sg and -wi for num=pl;
+               mrRuleAgree puts a num=pl requirement on the rule (the MSA's FromMsFeatures, lines 982-983). -->
+          <MorphologicalRule id="mrCxPlural" requiredPartsOfSpeech="posV8" outputPartOfSpeech="posV8">
+            <Name>cxPlural</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subCxPlural">
+                <MorphologicalInput><PhoneticSequence id="stemCxPlural"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemCxPlural" /><InsertSegments><PhoneticShape>yb</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <OutputHeadFeatures><FeatureValue feature="cfAgr"><FeatureValue feature="featNum" symbolValues="symPl" /></FeatureValue></OutputHeadFeatures>
+            <MorphemeId>CXPLURAL</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrCxNeed1Pl" requiredPartsOfSpeech="posV8" outputPartOfSpeech="posV8">
+            <Name>cxNeed1Pl</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subCxNeed1Pl">
+                <MorphologicalInput><PhoneticSequence id="stemCxNeed1Pl"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemCxNeed1Pl" /><InsertSegments><PhoneticShape>yk</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <RequiredHeadFeatures><FeatureValue feature="cfAgr"><FeatureValue feature="featPers" symbolValues="symP1" /><FeatureValue feature="featNum" symbolValues="symPl" /></FeatureValue></RequiredHeadFeatures>
+            <MorphemeId>CXNEED1PL</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrCxNeed2" requiredPartsOfSpeech="posV8" outputPartOfSpeech="posV8">
+            <Name>cxNeed2</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subCxNeed2">
+                <MorphologicalInput><PhoneticSequence id="stemCxNeed2"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemCxNeed2" /><InsertSegments><PhoneticShape>yn</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <RequiredHeadFeatures><FeatureValue feature="cfAgr"><FeatureValue feature="featPers" symbolValues="symP2" /></FeatureValue></RequiredHeadFeatures>
+            <MorphemeId>CXNEED2</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrFormAgree" requiredPartsOfSpeech="posV8" outputPartOfSpeech="posV8">
+            <Name>formAgree</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subFormAgree1">
+                <MorphologicalInput><PhoneticSequence id="stemFormAgree1"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemFormAgree1" /><InsertSegments><PhoneticShape>wa</PhoneticShape></InsertSegments></MorphologicalOutput>
+                <RequiredHeadFeatures><FeatureValue feature="featNum" symbolValues="symSg" /></RequiredHeadFeatures>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subFormAgree2">
+                <MorphologicalInput><PhoneticSequence id="stemFormAgree2"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemFormAgree2" /><InsertSegments><PhoneticShape>wi</PhoneticShape></InsertSegments></MorphologicalOutput>
+                <RequiredHeadFeatures><FeatureValue feature="featNum" symbolValues="symPl" /></RequiredHeadFeatures>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>FORMAGREE</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrRuleAgree" requiredPartsOfSpeech="posV8" outputPartOfSpeech="posV8">
+            <Name>ruleAgree</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subRuleAgree">
+                <MorphologicalInput><PhoneticSequence id="stemRuleAgree"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemRuleAgree" /><InsertSegments><PhoneticShape>wz</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <RequiredHeadFeatures><FeatureValue feature="featNum" symbolValues="symPl" /></RequiredHeadFeatures>
+            <MorphemeId>RULEAGREE</MorphemeId>
+          </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <AffixTemplates>
           <AffixTemplate requiredPartsOfSpeech="posV4">
@@ -657,6 +740,40 @@
             <Allomorphs><Allomorph id="aDah"><PhoneticShape>dah</PhoneticShape></Allomorph></Allomorphs>
             <MorphemeId>DAH</MorphemeId>
             <Gloss>climb</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eBam" partOfSpeech="posV8">
+            <Allomorphs><Allomorph id="aBam"><PhoneticShape>bam</PhoneticShape></Allomorph></Allomorphs>
+            <AssignedHeadFeatures><FeatureValue feature="cfAgr"><FeatureValue feature="featPers" symbolValues="symP1" /></FeatureValue></AssignedHeadFeatures>
+            <MorphemeId>BAM</MorphemeId>
+            <Gloss>bam</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eBem" partOfSpeech="posV8">
+            <Allomorphs><Allomorph id="aBem"><PhoneticShape>bem</PhoneticShape></Allomorph></Allomorphs>
+            <AssignedHeadFeatures><FeatureValue feature="cfAgr"><FeatureValue feature="featPers" symbolValues="symP2" /></FeatureValue></AssignedHeadFeatures>
+            <MorphemeId>BEM</MorphemeId>
+            <Gloss>bem</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eBim" partOfSpeech="posV8">
+            <Allomorphs><Allomorph id="aBim"><PhoneticShape>bim</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>BIM</MorphemeId>
+            <Gloss>bim</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eWam" partOfSpeech="posV8">
+            <Allomorphs><Allomorph id="aWam"><PhoneticShape>wam</PhoneticShape></Allomorph></Allomorphs>
+            <AssignedHeadFeatures><FeatureValue feature="featNum" symbolValues="symSg" /></AssignedHeadFeatures>
+            <MorphemeId>WAM</MorphemeId>
+            <Gloss>wam</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eWem" partOfSpeech="posV8">
+            <Allomorphs><Allomorph id="aWem"><PhoneticShape>wem</PhoneticShape></Allomorph></Allomorphs>
+            <AssignedHeadFeatures><FeatureValue feature="featNum" symbolValues="symPl" /></AssignedHeadFeatures>
+            <MorphemeId>WEM</MorphemeId>
+            <Gloss>wem</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eWim" partOfSpeech="posV8">
+            <Allomorphs><Allomorph id="aWim"><PhoneticShape>wim</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>WIM</MorphemeId>
+            <Gloss>wim</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

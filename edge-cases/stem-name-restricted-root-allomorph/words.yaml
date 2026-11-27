@@ -1,3 +1,6 @@
+# Rows kapat to mopat were added on 2026-11-27 from the C# self-check at sillsdev/machine ba6dfa10 (hc-conformance --propose); the earlier rows are from the oracle named below.
+# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (words kapat, tamat, kapurat, kapak, mopom, mopak, mopat)
+# The grammar gained a second region (num=pl) on snP1, a second stem name snP2 (pers=1), mrPlural, mrNeedsP (requiredStemName snP1) and the entry mop. HCLoader.cs loads every non-empty region of a stem name and writes requiredStemName on a derivational rule (LoadDerivAffixProcessRule). None of the earlier words changed.
 # Oracle: pangloss (`pg_parse::Morpher`, driven directly via a temporary probe test -- see
 # STAGING.md's "Verification" section), NOT the C# founding oracle. Signatures below are
 # transcribed verbatim from that run, not hand-derived.
@@ -65,3 +68,63 @@ words:
     expect_fail: true
     exercises:
       - "Stem names"
+
+  - word: kapat
+    note: >-
+      The snP1 allomorph with mrPlural (num=pl). The word carries no person, so it is outside snP1's first region,
+      but num=pl is snP1's second region: the allomorph is valid. Only the second region admits it.
+    parses:
+      - signature: "ROOT+PLURAL|kapat"
+        gloss: root-PLURAL
+        rules: [mrPlural]
+        exercises: ["Stem names"]
+
+  - word: tamat
+    note: >-
+      The default allomorph with num=pl: the word is inside snP1's second region, which excludes the default
+      allomorph.
+    expect_fail: true
+    exercises: ["Stem names"]
+
+  - word: kapurat
+    note: >-
+      pers=2 then num=pl: pers=2 is outside the first region but the word is inside the second, so the snP1
+      allomorph is valid. Control: kapur, with pers=2 alone, is refused.
+    parses:
+      - signature: "ROOT+PERS2+PLURAL|kapurat"
+        gloss: root-2-PLURAL
+        rules: [mrPers2, mrPlural]
+        exercises: ["Stem names"]
+
+  - word: kapak
+    note: >-
+      The snP1 allomorph with mrNeedsP, which requires stem name snP1 and assigns pers=1 (inside the first
+      region).
+    parses:
+      - signature: "ROOT+NEEDSP|kapak"
+        gloss: root-NEEDSP
+        rules: [mrNeedsP]
+        exercises: ["Stem names"]
+
+  - word: mopom
+    note: >-
+      mop carries snP2, whose one region is pers=1, and mrPers1 puts the word in it. Control for mopak.
+    parses:
+      - signature: "MOP+PERS1|mopom"
+        gloss: mop-1
+        rules: [mrPers1]
+        exercises: ["Stem names"]
+
+  - word: mopak
+    note: >-
+      The word is inside snP2's region, so mop is valid by itself, but mrNeedsP requires stem name snP1 and mop
+      carries snP2: only requiredStemName refuses it.
+    expect_fail: true
+    blocked_by: [mrNeedsP]
+    exercises: ["Stem names"]
+
+  - word: mopat
+    note: >-
+      num=pl is not in snP2's only region (pers=1), so mop is refused.
+    expect_fail: true
+    exercises: ["Stem names"]

@@ -1,3 +1,5 @@
+# Rows daxep to wimwz were added on 2026-11-27 from the C# self-check at sillsdev/machine ba6dfa10 (hc-conformance --propose); the earlier rows are from the oracle named below.
+# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (words daxep, daxepeh, bamybyk .. wimwz)
 # HAND DERIVATION (authored BEFORE running the oracle -- see grammar.xml for the rule definitions
 # these derivations reason from).
 #
@@ -665,3 +667,178 @@ words:
         rules: [mrStemReq, mrRecurSuf]
         exercises:
           - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
+
+  - word: daxep
+    note: >-
+      DAX1 or DAX2 with mrNumPl7 (-ep), which assigns num=pl. Both entries carry the snG6 allomorph in a
+      num=pl region, so both are valid here; the word has two parses.
+    parses:
+      - signature: "DAX1+NUMPL7|daxep"
+        gloss: dax1-PL
+        rules: [mrNumPl7]
+        exercises:
+          - "Stem names"
+      - signature: "DAX2+NUMPL7|daxep"
+        gloss: dax2-PL
+        rules: [mrNumPl7]
+        exercises:
+          - "Stem names"
+
+  - word: daxepeh
+    note: >-
+      DAX2 plural with mrStemAlt (-eh). Only DAX2 has the allomorph that mrStemAlt needs, so only one
+      parse survives.
+    parses:
+      - signature: "DAX2+NUMPL7+STEMALT|daxepeh"
+        gloss: dax2-PL-STEMALT
+        rules: [mrNumPl7, mrStemAlt]
+        exercises:
+          - "Stem names"
+
+  - word: bamybyk
+    note: >-
+      BAM (agr[pers=1]) + mrCxPlural (assigns agr[num=pl], merged with the root's pers=1 inside the nested
+      value) + mrCxNeed1Pl (requires agr[pers=1, num=pl]). Both halves come from different sources, so the
+      nested value must merge (HCLoader.LoadFeatureStruct, IFsComplexValue).
+    parses:
+      - signature: "BAM+CXPLURAL+CXNEED1PL|bamybyk"
+        gloss: bam-CXPLURAL-CXNEED1PL
+        rules: [mrCxPlural, mrCxNeed1Pl]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: bemybyk
+    note: >-
+      BEM has agr[pers=2], so after mrCxPlural the nested value is [pers=2, num=pl], which conflicts with
+      mrCxNeed1Pl's pers=1. Control for bamybyk: the nested value is compared per leaf.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: bamyk
+    note: >-
+      BAM + mrCxNeed1Pl alone. The rule-level required head feature is checked by unification, so the
+      absent num leaf does not block: the word parses although num=pl was never assigned.
+    parses:
+      - signature: "BAM+CXNEED1PL|bamyk"
+        gloss: bam-CXNEED1PL
+        rules: [mrCxNeed1Pl]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: bemyn
+    note: >-
+      BEM (agr[pers=2]) + mrCxNeed2 (requires agr[pers=2]).
+    parses:
+      - signature: "BEM+CXNEED2|bemyn"
+        gloss: bem-CXNEED2
+        rules: [mrCxNeed2]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: bamyn
+    note: >-
+      BAM has agr[pers=1], which conflicts with mrCxNeed2's pers=2. Control for bemyn.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: bimyn
+    note: >-
+      BIM carries no agr at all. The rule-level requirement unifies with the empty structure, so mrCxNeed2
+      still applies.
+    parses:
+      - signature: "BIM+CXNEED2|bimyn"
+        gloss: bim-CXNEED2
+        rules: [mrCxNeed2]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: bimyk
+    note: >-
+      As bimyn: BIM has no agr, and mrCxNeed1Pl's rule-level requirement does not block an absent value.
+    parses:
+      - signature: "BIM+CXNEED1PL|bimyk"
+        gloss: bim-CXNEED1PL
+        rules: [mrCxNeed1Pl]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wamwa
+    note: >-
+      WAM (num=sg) + mrFormAgree. The rule has two forms, -wa requiring num=sg and -wi requiring num=pl on
+      the subrule itself (HCLoader.LoadAffixProcessAllomorphs, lines 1174-1175); -wa applies.
+    parses:
+      - signature: "WAM+FORMAGREE|wamwa"
+        gloss: wam-FORMAGREE
+        rules: [mrFormAgree]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wamwi
+    note: >-
+      WAM is num=sg, so the -wi form, which requires num=pl, is refused.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wemwi
+    note: >-
+      WEM (num=pl) + mrFormAgree: the -wi form applies.
+    parses:
+      - signature: "WEM+FORMAGREE|wemwi"
+        gloss: wem-FORMAGREE
+        rules: [mrFormAgree]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wemwa
+    note: >-
+      WEM is num=pl, so the -wa form, which requires num=sg, is refused.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wimwa
+    note: >-
+      WIM carries no num. A subrule's own required head features are stricter than a rule's: a word
+      lacking the feature is refused, so -wa does not apply.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wimwi
+    note: >-
+      As wimwa for the -wi form: no num on the word, so the subrule requirement fails.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wemwz
+    note: >-
+      WEM (num=pl) + mrRuleAgree, whose rule-level requirement is num=pl (the MSA's FromMsFeatures,
+      HCLoader.LoadDerivAffixProcessRule lines 982-983).
+    parses:
+      - signature: "WEM+RULEAGREE|wemwz"
+        gloss: wem-RULEAGREE
+        rules: [mrRuleAgree]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wamwz
+    note: >-
+      WAM is num=sg, which conflicts with mrRuleAgree's num=pl.
+    expect_fail: true
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
+
+  - word: wimwz
+    note: >-
+      WIM has no num; the rule-level requirement unifies with it, so mrRuleAgree applies. Contrast wimwa,
+      where the same absent value blocks a subrule requirement.
+    parses:
+      - signature: "WIM+RULEAGREE|wimwz"
+        gloss: wim-RULEAGREE
+        rules: [mrRuleAgree]
+        exercises:
+          - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
