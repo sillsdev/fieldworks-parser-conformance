@@ -1,101 +1,1160 @@
-# Graduation rechecks complete word/status/signature multiplicities and rule traces.
-# Earlier provenance comments below describe the original authoring history.
-# Recorded with hc.dll, Machine 18cf242f.
 language: quantified-alpha-bounded-ltr-left
-inspired_by: ["synthetic repeated feature agreement"]
-sources: ["HCLoader.cs:2338-2344,2745-2770"]
-requires: [phonology]
+inspired_by:
+  - synthetic repeated feature agreement
+sources:
+  - HCLoader.cs:2338-2344,2745-2770
+requires:
+  - phonology
 words:
   - word: teca
-    note: "Negative control for quantified alpha bounded ltr left: 'teca' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''teca'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tcce
-    note: "Positive witness for quantified alpha bounded ltr left: 'tcce' must retain the declared analysis."
+    note: '[cell bounded-ltr-left] Positive witness for quantified alpha bounded ltr left: ''tcce'' must retain the declared analysis.'
     parses:
-      - signature: "ROOT2|tcce"
-        rules: ["prRtlBq"]
+      - signature: ROOT2_bounded-ltr-left|tcce
+        rules:
+          - prRtlBq_bounded-ltr-left
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tccca
-    note: "Positive witness for quantified alpha bounded ltr left: 'tccca' must retain the declared analysis."
+    note: '[cell bounded-ltr-left] Positive witness for quantified alpha bounded ltr left: ''tccca'' must retain the declared analysis.'
     parses:
-      - signature: "ROOT3|tccca"
+      - signature: ROOT3_bounded-ltr-left|tccca
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: taca
-    note: "Negative control for quantified alpha bounded ltr left: 'taca' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''taca'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tcca
-    note: "Negative control for quantified alpha bounded ltr left: 'tcca' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tcca'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: te
-    note: "Negative control for quantified alpha bounded ltr left: 'te' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''te'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ta
-    note: "Negative control for quantified alpha bounded ltr left: 'ta' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''ta'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tace
-    note: "Positive witness for quantified alpha bounded ltr left: 'tace' must retain the declared analysis."
+    note: '[cell bounded-ltr-left] Positive witness for quantified alpha bounded ltr left: ''tace'' must retain the declared analysis.'
     parses:
-      - signature: "ROOT1|tace"
-        rules: ["prRtlBq"]
+      - signature: ROOT1_bounded-ltr-left|tace
+        rules:
+          - prRtlBq_bounded-ltr-left
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tcte
-    note: "Negative control for quantified alpha bounded ltr left: 'tcte' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tcte'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tatc
-    note: "Negative control for quantified alpha bounded ltr left: 'tatc' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tatc'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tetc
-    note: "Negative control for quantified alpha bounded ltr left: 'tetc' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tetc'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tccccca
-    note: "Negative control for quantified alpha bounded ltr left: 'tccccca' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tccccca'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tccccce
-    note: "Negative control for quantified alpha bounded ltr left: 'tccccce' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tccccce'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tccce
-    note: "Negative control for quantified alpha bounded ltr left: 'tccce' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tccce'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: tece
-    note: "Negative control for quantified alpha bounded ltr left: 'tece' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''tece'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ttca
-    note: "Positive witness for quantified alpha bounded ltr left: 'ttca' must retain the declared analysis."
+    note: '[cell bounded-ltr-left] Positive witness for quantified alpha bounded ltr left: ''ttca'' must retain the declared analysis.'
     parses:
-      - signature: "MIXED|ttca"
+      - signature: MIXED_bounded-ltr-left|ttca
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ttce
-    note: "Negative control for quantified alpha bounded ltr left: 'ttce' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for quantified alpha bounded ltr left: ''ttce'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bdfg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''acet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fddg
+    note: '[cell bounded-ltr-right] Positive witness for quantified alpha bounded ltr right: ''ecct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_bounded-ltr-right|fddg
+        rules:
+          - prRtlBq_bounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bdddg
+    note: '[cell bounded-ltr-right] Positive witness for quantified alpha bounded ltr right: ''accct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_bounded-ltr-right|bdddg
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bdbg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''acat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bddg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''acct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''et'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''at'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fdbg
+    note: '[cell bounded-ltr-right] Positive witness for quantified alpha bounded ltr right: ''ecat'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_bounded-ltr-right|fdbg
+        rules:
+          - prRtlBq_bounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fgdg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''etct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: dgbg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''ctat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: dgfg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''ctet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bdddddg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''accccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fdddddg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''eccccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fdddg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''eccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fdfg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''ecet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bdgg
+    note: '[cell bounded-ltr-right] Positive witness for quantified alpha bounded ltr right: ''actt'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_bounded-ltr-right|bdgg
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fdgg
+    note: '[cell bounded-ltr-right] Negative control for quantified alpha bounded ltr right: ''ectt'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lkjh
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''teca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljjk
+    note: '[cell bounded-rtl-left] Positive witness for quantified alpha bounded rtl left: ''tcce'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_bounded-rtl-left|ljjk
+        rules:
+          - prRtlBq_bounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljjjh
+    note: '[cell bounded-rtl-left] Positive witness for quantified alpha bounded rtl left: ''tccca'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_bounded-rtl-left|ljjjh
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lhjh
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''taca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljjh
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tcca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lk
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''te'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lh
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''ta'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lhjk
+    note: '[cell bounded-rtl-left] Positive witness for quantified alpha bounded rtl left: ''tace'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_bounded-rtl-left|lhjk
+        rules:
+          - prRtlBq_bounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljlk
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tcte'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lhlj
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tatc'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lklj
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tetc'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljjjjjh
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tccccca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljjjjjk
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tccccce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ljjjk
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tccce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lkjk
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''tece'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lljh
+    note: '[cell bounded-rtl-left] Positive witness for quantified alpha bounded rtl left: ''ttca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_bounded-rtl-left|lljh
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lljk
+    note: '[cell bounded-rtl-left] Negative control for quantified alpha bounded rtl left: ''ttce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mnop
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''acet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: onnp
+    note: '[cell bounded-rtl-right] Positive witness for quantified alpha bounded rtl right: ''ecct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_bounded-rtl-right|onnp
+        rules:
+          - prRtlBq_bounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mnnnp
+    note: '[cell bounded-rtl-right] Positive witness for quantified alpha bounded rtl right: ''accct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_bounded-rtl-right|mnnnp
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mnmp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''acat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mnnp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''acct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: op
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''et'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''at'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: onmp
+    note: '[cell bounded-rtl-right] Positive witness for quantified alpha bounded rtl right: ''ecat'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_bounded-rtl-right|onmp
+        rules:
+          - prRtlBq_bounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: opnp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''etct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: npmp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''ctat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: npop
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''ctet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mnnnnnp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''accccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: onnnnnp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''eccccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: onnnp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''eccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: onop
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''ecet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mnpp
+    note: '[cell bounded-rtl-right] Positive witness for quantified alpha bounded rtl right: ''actt'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_bounded-rtl-right|mnpp
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: onpp
+    note: '[cell bounded-rtl-right] Negative control for quantified alpha bounded rtl right: ''ectt'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: q
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''a'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: s
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''e'' must retain the declared analysis.'
+    parses:
+      - signature: ZERO_bounded-zero-left|s
+        rules:
+          - prRtlBq_bounded-zero-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: rq
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''ca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: rs
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''ce'' must retain the declared analysis.'
+    parses:
+      - signature: ONE_bounded-zero-left|rs
+        rules:
+          - prRtlBq_bounded-zero-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vrq
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''tca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXEDONE_bounded-zero-left|vrq
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vrs
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''tce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vq
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''ta'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vs
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''te'' must retain the declared analysis.'
+    parses:
+      - signature: TRIG_bounded-zero-left|vs
+        rules:
+          - prRtlBq_bounded-zero-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vvrq
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''ttca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_bounded-zero-left|vvrq
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vvrs
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''ttce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vrrq
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''tcca'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_bounded-zero-left|vrrq
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vrrs
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''tcce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vrrrq
+    note: '[cell bounded-zero-left] Positive witness for quantified alpha bounded zero left: ''tccca'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_bounded-zero-left|vrrrq
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vrrrs
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''tccce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vqrq
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''taca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: vqrs
+    note: '[cell bounded-zero-left] Negative control for quantified alpha bounded zero left: ''tace'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: w
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''a'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: z
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''e'' must retain the declared analysis.'
+    parses:
+      - signature: ZERO_bounded-zero-right|z
+        rules:
+          - prRtlBq_bounded-zero-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wx
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''ac'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zx
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''ec'' must retain the declared analysis.'
+    parses:
+      - signature: ONE_bounded-zero-right|zx
+        rules:
+          - prRtlBq_bounded-zero-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wxà
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''act'' must retain the declared analysis.'
+    parses:
+      - signature: MIXEDONE_bounded-zero-right|wxà
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zxà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''ect'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''at'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zà
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''et'' must retain the declared analysis.'
+    parses:
+      - signature: TRIG_bounded-zero-right|zà
+        rules:
+          - prRtlBq_bounded-zero-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wxàà
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''actt'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_bounded-zero-right|wxàà
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zxàà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''ectt'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wxxà
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''acct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_bounded-zero-right|wxxà
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zxxà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''ecct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wxxxà
+    note: '[cell bounded-zero-right] Positive witness for quantified alpha bounded zero right: ''accct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_bounded-zero-right|wxxxà
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zxxxà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''eccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: wxwà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''acat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: zxwà
+    note: '[cell bounded-zero-right] Negative control for quantified alpha bounded zero right: ''ecat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: äãâá
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''teca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äââã
+    note: '[cell unbounded-ltr-left] Positive witness for quantified alpha unbounded ltr left: ''tcce'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_unbounded-ltr-left|äââã
+        rules:
+          - prRtlBq_unbounded-ltr-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äâââá
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tccca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äáâá
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''taca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äââá
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tcca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äã
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''te'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äá
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''ta'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äáâã
+    note: '[cell unbounded-ltr-left] Positive witness for quantified alpha unbounded ltr left: ''tace'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_unbounded-ltr-left|äáâã
+        rules:
+          - prRtlBq_unbounded-ltr-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äâäã
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tcte'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äáäâ
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tatc'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äãäâ
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tetc'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äâââââá
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tccccca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äâââââã
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tccccce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äâââã
+    note: '[cell unbounded-ltr-left] Positive witness for quantified alpha unbounded ltr left: ''tccce'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_unbounded-ltr-left|äâââã
+        rules:
+          - prRtlBq_unbounded-ltr-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äãâã
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''tece'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ääâá
+    note: '[cell unbounded-ltr-left] Positive witness for quantified alpha unbounded ltr left: ''ttca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_unbounded-ltr-left|ääâá
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ääâã
+    note: '[cell unbounded-ltr-left] Negative control for quantified alpha unbounded ltr left: ''ttce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åæçè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''acet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çææè
+    note: '[cell unbounded-ltr-right] Positive witness for quantified alpha unbounded ltr right: ''ecct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_unbounded-ltr-right|çææè
+        rules:
+          - prRtlBq_unbounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åæææè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''accct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åæåè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''acat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åææè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''acct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''et'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''at'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çæåè
+    note: '[cell unbounded-ltr-right] Positive witness for quantified alpha unbounded ltr right: ''ecat'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_unbounded-ltr-right|çæåè
+        rules:
+          - prRtlBq_unbounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çèæè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''etct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: æèåè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''ctat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: æèçè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''ctet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åæææææè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''accccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çæææææè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''eccccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çæææè
+    note: '[cell unbounded-ltr-right] Positive witness for quantified alpha unbounded ltr right: ''eccct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_unbounded-ltr-right|çæææè
+        rules:
+          - prRtlBq_unbounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çæçè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''ecet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åæèè
+    note: '[cell unbounded-ltr-right] Positive witness for quantified alpha unbounded ltr right: ''actt'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_unbounded-ltr-right|åæèè
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çæèè
+    note: '[cell unbounded-ltr-right] Negative control for quantified alpha unbounded ltr right: ''ectt'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìëêé
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''teca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêêë
+    note: '[cell unbounded-rtl-left] Positive witness for quantified alpha unbounded rtl left: ''tcce'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_unbounded-rtl-left|ìêêë
+        rules:
+          - prRtlBq_unbounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêêêé
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tccca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìéêé
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''taca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêêé
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tcca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìë
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''te'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìé
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''ta'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìéêë
+    note: '[cell unbounded-rtl-left] Positive witness for quantified alpha unbounded rtl left: ''tace'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_unbounded-rtl-left|ìéêë
+        rules:
+          - prRtlBq_unbounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêìë
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tcte'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìéìê
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tatc'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìëìê
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tetc'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêêêêêé
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tccccca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêêêêêë
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tccccce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìêêêë
+    note: '[cell unbounded-rtl-left] Positive witness for quantified alpha unbounded rtl left: ''tccce'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_unbounded-rtl-left|ìêêêë
+        rules:
+          - prRtlBq_unbounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìëêë
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''tece'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ììêé
+    note: '[cell unbounded-rtl-left] Positive witness for quantified alpha unbounded rtl left: ''ttca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_unbounded-rtl-left|ììêé
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ììêë
+    note: '[cell unbounded-rtl-left] Negative control for quantified alpha unbounded rtl left: ''ttce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íîïð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''acet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïîîð
+    note: '[cell unbounded-rtl-right] Positive witness for quantified alpha unbounded rtl right: ''ecct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_unbounded-rtl-right|ïîîð
+        rules:
+          - prRtlBq_unbounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íîîîð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''accct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íîíð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''acat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íîîð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''acct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''et'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''at'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïîíð
+    note: '[cell unbounded-rtl-right] Positive witness for quantified alpha unbounded rtl right: ''ecat'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT1_unbounded-rtl-right|ïîíð
+        rules:
+          - prRtlBq_unbounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïðîð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''etct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: îðíð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''ctat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: îðïð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''ctet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íîîîîîð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''accccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïîîîîîð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''eccccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïîîîð
+    note: '[cell unbounded-rtl-right] Positive witness for quantified alpha unbounded rtl right: ''eccct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_unbounded-rtl-right|ïîîîð
+        rules:
+          - prRtlBq_unbounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïîïð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''ecet'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: íîðð
+    note: '[cell unbounded-rtl-right] Positive witness for quantified alpha unbounded rtl right: ''actt'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_unbounded-rtl-right|íîðð
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ïîðð
+    note: '[cell unbounded-rtl-right] Negative control for quantified alpha unbounded rtl right: ''ectt'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ñ
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''a'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ó
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''e'' must retain the declared analysis.'
+    parses:
+      - signature: ZERO_unbounded-zero-left|ó
+        rules:
+          - prRtlBq_unbounded-zero-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: òñ
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''ca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: òó
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''ce'' must retain the declared analysis.'
+    parses:
+      - signature: ONE_unbounded-zero-left|òó
+        rules:
+          - prRtlBq_unbounded-zero-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôòñ
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''tca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXEDONE_unbounded-zero-left|ôòñ
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôòó
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''tce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôñ
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''ta'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôó
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''te'' must retain the declared analysis.'
+    parses:
+      - signature: TRIG_unbounded-zero-left|ôó
+        rules:
+          - prRtlBq_unbounded-zero-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôôòñ
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''ttca'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_unbounded-zero-left|ôôòñ
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôôòó
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''ttce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôòòñ
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''tcca'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_unbounded-zero-left|ôòòñ
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôòòó
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''tcce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôòòòñ
+    note: '[cell unbounded-zero-left] Positive witness for quantified alpha unbounded zero left: ''tccca'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_unbounded-zero-left|ôòòòñ
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôòòòó
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''tccce'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôñòñ
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''taca'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ôñòó
+    note: '[cell unbounded-zero-left] Negative control for quantified alpha unbounded zero left: ''tace'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õ
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''a'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: ø
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''e'' must retain the declared analysis.'
+    parses:
+      - signature: ZERO_unbounded-zero-right|ø
+        rules:
+          - prRtlBq_unbounded-zero-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õö
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''ac'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øö
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''ec'' must retain the declared analysis.'
+    parses:
+      - signature: ONE_unbounded-zero-right|øö
+        rules:
+          - prRtlBq_unbounded-zero-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õöù
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''act'' must retain the declared analysis.'
+    parses:
+      - signature: MIXEDONE_unbounded-zero-right|õöù
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øöù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''ect'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''at'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øù
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''et'' must retain the declared analysis.'
+    parses:
+      - signature: TRIG_unbounded-zero-right|øù
+        rules:
+          - prRtlBq_unbounded-zero-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õöùù
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''actt'' must retain the declared analysis.'
+    parses:
+      - signature: MIXED_unbounded-zero-right|õöùù
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øöùù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''ectt'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õööù
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''acct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT2_unbounded-zero-right|õööù
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øööù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''ecct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õöööù
+    note: '[cell unbounded-zero-right] Positive witness for quantified alpha unbounded zero right: ''accct'' must retain the declared analysis.'
+    parses:
+      - signature: ROOT3_unbounded-zero-right|õöööù
+        rules: []
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øöööù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''eccct'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: õöõù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''acat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
+  - word: øöõù
+    note: '[cell unbounded-zero-right] Negative control for quantified alpha unbounded zero right: ''ecat'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'

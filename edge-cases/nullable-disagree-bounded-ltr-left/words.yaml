@@ -1,90 +1,755 @@
-# Graduation rechecks complete word/status/signature multiplicities and rule traces.
-# Earlier provenance comments below describe the original authoring history.
-# hc.dll, Machine 18cf242f.
 language: nullable-disagree-bounded-ltr-left
-inspired_by: ["synthetic feature disagreement at a word edge"]
-sources: ["HCLoader.cs:2338-2344,2745-2770"]
-requires: [phonology]
+inspired_by:
+  - synthetic feature disagreement at a word edge
+sources:
+  - HCLoader.cs:2338-2344,2745-2770
+requires:
+  - phonology
 words:
   - word: ii
-    note: "Negative control for nullable disagree bounded ltr left: 'ii' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''ii'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: iy
-    note: "Negative control for nullable disagree bounded ltr left: 'iy' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''iy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ia
-    note: "Positive witness for nullable disagree bounded ltr left: 'ia' must retain the declared analysis."
+    note: '[cell bounded-ltr-left] Positive witness for nullable disagree bounded ltr left: ''ia'' must retain the declared analysis.'
     parses:
-      - signature: "AU|ia"
-        rules: ["prDoubleAlpha"]
+      - signature: AU_bounded-ltr-left|ia
+        rules:
+          - prDoubleAlpha_bounded-ltr-left
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: iu
-    note: "Negative control for nullable disagree bounded ltr left: 'iu' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''iu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: yi
-    note: "Negative control for nullable disagree bounded ltr left: 'yi' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''yi'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: yy
-    note: "Negative control for nullable disagree bounded ltr left: 'yy' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''yy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ya
-    note: "Negative control for nullable disagree bounded ltr left: 'ya' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''ya'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: yu
-    note: "Negative control for nullable disagree bounded ltr left: 'yu' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''yu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ai
-    note: "Negative control for nullable disagree bounded ltr left: 'ai' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''ai'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ay
-    note: "Negative control for nullable disagree bounded ltr left: 'ay' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''ay'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: aa
-    note: "Negative control for nullable disagree bounded ltr left: 'aa' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''aa'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: au
-    note: "Negative control for nullable disagree bounded ltr left: 'au' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''au'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ui
-    note: "Negative control for nullable disagree bounded ltr left: 'ui' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''ui'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: uy
-    note: "Negative control for nullable disagree bounded ltr left: 'uy' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''uy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ua
-    note: "Negative control for nullable disagree bounded ltr left: 'ua' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''ua'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: uu
-    note: "Negative control for nullable disagree bounded ltr left: 'uu' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for nullable disagree bounded ltr left: ''uu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: dd
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: dg
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: db
+    note: '[cell bounded-ltr-right] Positive witness for nullable disagree bounded ltr right: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_bounded-ltr-right|db
+        rules:
+          - prDoubleAlpha_bounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: df
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gd
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gg
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gb
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gf
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bd
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bg
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bb
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bf
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fd
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fg
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fb
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ff
+    note: '[cell bounded-ltr-right] Negative control for nullable disagree bounded ltr right: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: jj
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: jl
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: jh
+    note: '[cell bounded-rtl-left] Positive witness for nullable disagree bounded rtl left: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_bounded-rtl-left|jh
+        rules:
+          - prDoubleAlpha_bounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: jk
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lj
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ll
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lh
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: lk
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: hj
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: hl
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: hh
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: hk
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: kj
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: kl
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: kh
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: kk
+    note: '[cell bounded-rtl-left] Negative control for nullable disagree bounded rtl left: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: nn
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: np
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: nm
+    note: '[cell bounded-rtl-right] Positive witness for nullable disagree bounded rtl right: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_bounded-rtl-right|nm
+        rules:
+          - prDoubleAlpha_bounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: 'no'
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: pn
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: pp
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: pm
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: po
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mn
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mp
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mm
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: mo
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: 'on'
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: op
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: om
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: oo
+    note: '[cell bounded-rtl-right] Negative control for nullable disagree bounded rtl right: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: rr
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: rv
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: rq
+    note: '[cell plain-ltr-right] Positive witness for nullable disagree plain ltr right: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_plain-ltr-right|rq
+        rules:
+          - prDoubleAlpha_plain-ltr-right
+        exercises:
+          - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: rs
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: vr
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: vv
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: vq
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: vs
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: qr
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: qv
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: qq
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: qs
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: sr
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: sv
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: sq
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: ss
+    note: '[cell plain-ltr-right] Negative control for nullable disagree plain ltr right: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: xx
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: xà
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: xw
+    note: '[cell unbounded-ltr-left] Positive witness for nullable disagree unbounded ltr left: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_unbounded-ltr-left|xw
+        rules:
+          - prDoubleAlpha_unbounded-ltr-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: xz
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: àx
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: àà
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: àw
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: àz
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: wx
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: wà
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ww
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: wz
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: zx
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: zà
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: zw
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: zz
+    note: '[cell unbounded-ltr-left] Negative control for nullable disagree unbounded ltr left: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ââ
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: âä
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: âá
+    note: '[cell unbounded-ltr-right] Positive witness for nullable disagree unbounded ltr right: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_unbounded-ltr-right|âá
+        rules:
+          - prDoubleAlpha_unbounded-ltr-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: âã
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äâ
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ää
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äá
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: äã
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: áâ
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: áä
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: áá
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: áã
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ãâ
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ãä
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ãá
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ãã
+    note: '[cell unbounded-ltr-right] Negative control for nullable disagree unbounded ltr right: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ææ
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: æè
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: æå
+    note: '[cell unbounded-rtl-left] Positive witness for nullable disagree unbounded rtl left: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_unbounded-rtl-left|æå
+        rules:
+          - prDoubleAlpha_unbounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: æç
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: èæ
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: èè
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: èå
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: èç
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åæ
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åè
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åå
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: åç
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çæ
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çè
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çå
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: çç
+    note: '[cell unbounded-rtl-left] Negative control for nullable disagree unbounded rtl left: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: êê
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: êì
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: êé
+    note: '[cell unbounded-rtl-right] Positive witness for nullable disagree unbounded rtl right: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_unbounded-rtl-right|êé
+        rules:
+          - prDoubleAlpha_unbounded-rtl-right
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: êë
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìê
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìì
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìé
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ìë
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: éê
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: éì
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: éé
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: éë
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ëê
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ëì
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ëé
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ëë
+    note: '[cell unbounded-rtl-right] Negative control for nullable disagree unbounded rtl right: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'

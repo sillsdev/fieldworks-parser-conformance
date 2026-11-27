@@ -1,118 +1,987 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
 <HermitCrabInput>
   <Language>
     <Name>quantified-alpha-bounded-ltr-left</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="posN">
-        <Name>N</Name>
+      <PartOfSpeech id="posN_bounded-ltr-left">
+        <Name>N_bounded-ltr-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-ltr-right">
+        <Name>N_bounded-ltr-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-rtl-left">
+        <Name>N_bounded-rtl-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-rtl-right">
+        <Name>N_bounded-rtl-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-zero-left">
+        <Name>N_bounded-zero-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-zero-right">
+        <Name>N_bounded-zero-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-ltr-left">
+        <Name>N_unbounded-ltr-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-ltr-right">
+        <Name>N_unbounded-ltr-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-rtl-left">
+        <Name>N_unbounded-rtl-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-rtl-right">
+        <Name>N_unbounded-rtl-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-zero-left">
+        <Name>N_unbounded-zero-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-zero-right">
+        <Name>N_unbounded-zero-right</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="featCons">
-        <Name>cons</Name>
+      <SymbolicFeature id="featCons_bounded-ltr-left">
+        <Name>cons_bounded-ltr-left</Name>
         <Symbols>
-          <Symbol id="fConsPlus">+</Symbol>
-          <Symbol id="fConsMinus">-</Symbol>
+          <Symbol id="fConsPlus_bounded-ltr-left">+</Symbol>
+          <Symbol id="fConsMinus_bounded-ltr-left">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featVoice">
-        <Name>voice</Name>
+      <SymbolicFeature id="featVoice_bounded-ltr-left">
+        <Name>voice_bounded-ltr-left</Name>
         <Symbols>
-          <Symbol id="fVoicePlus">+</Symbol>
-          <Symbol id="fVoiceMinus">-</Symbol>
+          <Symbol id="fVoicePlus_bounded-ltr-left">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-ltr-left">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featHigh">
-        <Name>high</Name>
+      <SymbolicFeature id="featHigh_bounded-ltr-left">
+        <Name>high_bounded-ltr-left</Name>
         <Symbols>
-          <Symbol id="fHighLow">low</Symbol>
-          <Symbol id="fHighMid">mid</Symbol>
-          <Symbol id="fHighNA">na</Symbol>
+          <Symbol id="fHighLow_bounded-ltr-left">low</Symbol>
+          <Symbol id="fHighMid_bounded-ltr-left">mid</Symbol>
+          <Symbol id="fHighNA_bounded-ltr-left">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_bounded-ltr-right">
+        <Name>cons_bounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_bounded-ltr-right">+</Symbol>
+          <Symbol id="fConsMinus_bounded-ltr-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_bounded-ltr-right">
+        <Name>voice_bounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_bounded-ltr-right">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-ltr-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_bounded-ltr-right">
+        <Name>high_bounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="fHighLow_bounded-ltr-right">low</Symbol>
+          <Symbol id="fHighMid_bounded-ltr-right">mid</Symbol>
+          <Symbol id="fHighNA_bounded-ltr-right">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_bounded-rtl-left">
+        <Name>cons_bounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_bounded-rtl-left">+</Symbol>
+          <Symbol id="fConsMinus_bounded-rtl-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_bounded-rtl-left">
+        <Name>voice_bounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_bounded-rtl-left">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-rtl-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_bounded-rtl-left">
+        <Name>high_bounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="fHighLow_bounded-rtl-left">low</Symbol>
+          <Symbol id="fHighMid_bounded-rtl-left">mid</Symbol>
+          <Symbol id="fHighNA_bounded-rtl-left">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_bounded-rtl-right">
+        <Name>cons_bounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_bounded-rtl-right">+</Symbol>
+          <Symbol id="fConsMinus_bounded-rtl-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_bounded-rtl-right">
+        <Name>voice_bounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_bounded-rtl-right">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-rtl-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_bounded-rtl-right">
+        <Name>high_bounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="fHighLow_bounded-rtl-right">low</Symbol>
+          <Symbol id="fHighMid_bounded-rtl-right">mid</Symbol>
+          <Symbol id="fHighNA_bounded-rtl-right">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_bounded-zero-left">
+        <Name>cons_bounded-zero-left</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_bounded-zero-left">+</Symbol>
+          <Symbol id="fConsMinus_bounded-zero-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_bounded-zero-left">
+        <Name>voice_bounded-zero-left</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_bounded-zero-left">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-zero-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_bounded-zero-left">
+        <Name>high_bounded-zero-left</Name>
+        <Symbols>
+          <Symbol id="fHighLow_bounded-zero-left">low</Symbol>
+          <Symbol id="fHighMid_bounded-zero-left">mid</Symbol>
+          <Symbol id="fHighNA_bounded-zero-left">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_bounded-zero-right">
+        <Name>cons_bounded-zero-right</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_bounded-zero-right">+</Symbol>
+          <Symbol id="fConsMinus_bounded-zero-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_bounded-zero-right">
+        <Name>voice_bounded-zero-right</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_bounded-zero-right">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-zero-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_bounded-zero-right">
+        <Name>high_bounded-zero-right</Name>
+        <Symbols>
+          <Symbol id="fHighLow_bounded-zero-right">low</Symbol>
+          <Symbol id="fHighMid_bounded-zero-right">mid</Symbol>
+          <Symbol id="fHighNA_bounded-zero-right">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_unbounded-ltr-left">
+        <Name>cons_unbounded-ltr-left</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_unbounded-ltr-left">+</Symbol>
+          <Symbol id="fConsMinus_unbounded-ltr-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_unbounded-ltr-left">
+        <Name>voice_unbounded-ltr-left</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_unbounded-ltr-left">+</Symbol>
+          <Symbol id="fVoiceMinus_unbounded-ltr-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_unbounded-ltr-left">
+        <Name>high_unbounded-ltr-left</Name>
+        <Symbols>
+          <Symbol id="fHighLow_unbounded-ltr-left">low</Symbol>
+          <Symbol id="fHighMid_unbounded-ltr-left">mid</Symbol>
+          <Symbol id="fHighNA_unbounded-ltr-left">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_unbounded-ltr-right">
+        <Name>cons_unbounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_unbounded-ltr-right">+</Symbol>
+          <Symbol id="fConsMinus_unbounded-ltr-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_unbounded-ltr-right">
+        <Name>voice_unbounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_unbounded-ltr-right">+</Symbol>
+          <Symbol id="fVoiceMinus_unbounded-ltr-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_unbounded-ltr-right">
+        <Name>high_unbounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="fHighLow_unbounded-ltr-right">low</Symbol>
+          <Symbol id="fHighMid_unbounded-ltr-right">mid</Symbol>
+          <Symbol id="fHighNA_unbounded-ltr-right">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_unbounded-rtl-left">
+        <Name>cons_unbounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_unbounded-rtl-left">+</Symbol>
+          <Symbol id="fConsMinus_unbounded-rtl-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_unbounded-rtl-left">
+        <Name>voice_unbounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_unbounded-rtl-left">+</Symbol>
+          <Symbol id="fVoiceMinus_unbounded-rtl-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_unbounded-rtl-left">
+        <Name>high_unbounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="fHighLow_unbounded-rtl-left">low</Symbol>
+          <Symbol id="fHighMid_unbounded-rtl-left">mid</Symbol>
+          <Symbol id="fHighNA_unbounded-rtl-left">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_unbounded-rtl-right">
+        <Name>cons_unbounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_unbounded-rtl-right">+</Symbol>
+          <Symbol id="fConsMinus_unbounded-rtl-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_unbounded-rtl-right">
+        <Name>voice_unbounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_unbounded-rtl-right">+</Symbol>
+          <Symbol id="fVoiceMinus_unbounded-rtl-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_unbounded-rtl-right">
+        <Name>high_unbounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="fHighLow_unbounded-rtl-right">low</Symbol>
+          <Symbol id="fHighMid_unbounded-rtl-right">mid</Symbol>
+          <Symbol id="fHighNA_unbounded-rtl-right">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_unbounded-zero-left">
+        <Name>cons_unbounded-zero-left</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_unbounded-zero-left">+</Symbol>
+          <Symbol id="fConsMinus_unbounded-zero-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_unbounded-zero-left">
+        <Name>voice_unbounded-zero-left</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_unbounded-zero-left">+</Symbol>
+          <Symbol id="fVoiceMinus_unbounded-zero-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_unbounded-zero-left">
+        <Name>high_unbounded-zero-left</Name>
+        <Symbols>
+          <Symbol id="fHighLow_unbounded-zero-left">low</Symbol>
+          <Symbol id="fHighMid_unbounded-zero-left">mid</Symbol>
+          <Symbol id="fHighNA_unbounded-zero-left">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_unbounded-zero-right">
+        <Name>cons_unbounded-zero-right</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_unbounded-zero-right">+</Symbol>
+          <Symbol id="fConsMinus_unbounded-zero-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_unbounded-zero-right">
+        <Name>voice_unbounded-zero-right</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_unbounded-zero-right">+</Symbol>
+          <Symbol id="fVoiceMinus_unbounded-zero-right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_unbounded-zero-right">
+        <Name>high_unbounded-zero-right</Name>
+        <Symbols>
+          <Symbol id="fHighLow_unbounded-zero-right">low</Symbol>
+          <Symbol id="fHighMid_unbounded-zero-right">mid</Symbol>
+          <Symbol id="fHighNA_unbounded-zero-right">na</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_bounded-ltr-left">cell bounded-ltr-left</Symbol>
+          <Symbol id="cell_bounded-ltr-right">cell bounded-ltr-right</Symbol>
+          <Symbol id="cell_bounded-rtl-left">cell bounded-rtl-left</Symbol>
+          <Symbol id="cell_bounded-rtl-right">cell bounded-rtl-right</Symbol>
+          <Symbol id="cell_bounded-zero-left">cell bounded-zero-left</Symbol>
+          <Symbol id="cell_bounded-zero-right">cell bounded-zero-right</Symbol>
+          <Symbol id="cell_unbounded-ltr-left">cell unbounded-ltr-left</Symbol>
+          <Symbol id="cell_unbounded-ltr-right">cell unbounded-ltr-right</Symbol>
+          <Symbol id="cell_unbounded-rtl-left">cell unbounded-rtl-left</Symbol>
+          <Symbol id="cell_unbounded-rtl-right">cell unbounded-rtl-right</Symbol>
+          <Symbol id="cell_unbounded-zero-left">cell unbounded-zero-left</Symbol>
+          <Symbol id="cell_unbounded-zero-right">cell unbounded-zero-right</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t1_bounded-ltr-left">
+      <Name>Main_bounded-ltr-left</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="ca">
+        <SegmentDefinition id="ca_bounded-ltr-left">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsMinus" />
-          <FeatureValue feature="featVoice" symbolValues="fVoicePlus" />
-          <FeatureValue feature="featHigh" symbolValues="fHighLow" />
+          <FeatureValue feature="featCons_bounded-ltr-left" symbolValues="fConsMinus_bounded-ltr-left"/>
+          <FeatureValue feature="featVoice_bounded-ltr-left" symbolValues="fVoicePlus_bounded-ltr-left"/>
+          <FeatureValue feature="featHigh_bounded-ltr-left" symbolValues="fHighLow_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="ce">
+        <SegmentDefinition id="ce_bounded-ltr-left">
           <Representations>
             <Representation>e</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsMinus" />
-          <FeatureValue feature="featVoice" symbolValues="fVoicePlus" />
-          <FeatureValue feature="featHigh" symbolValues="fHighMid" />
+          <FeatureValue feature="featCons_bounded-ltr-left" symbolValues="fConsMinus_bounded-ltr-left"/>
+          <FeatureValue feature="featVoice_bounded-ltr-left" symbolValues="fVoicePlus_bounded-ltr-left"/>
+          <FeatureValue feature="featHigh_bounded-ltr-left" symbolValues="fHighMid_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cc">
+        <SegmentDefinition id="cc_bounded-ltr-left">
           <Representations>
             <Representation>c</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsPlus" />
-          <FeatureValue feature="featVoice" symbolValues="fVoicePlus" />
-          <FeatureValue feature="featHigh" symbolValues="fHighNA" />
+          <FeatureValue feature="featCons_bounded-ltr-left" symbolValues="fConsPlus_bounded-ltr-left"/>
+          <FeatureValue feature="featVoice_bounded-ltr-left" symbolValues="fVoicePlus_bounded-ltr-left"/>
+          <FeatureValue feature="featHigh_bounded-ltr-left" symbolValues="fHighNA_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="ct">
+        <SegmentDefinition id="ct_bounded-ltr-left">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsPlus" />
-          <FeatureValue feature="featVoice" symbolValues="fVoiceMinus" />
-          <FeatureValue feature="featHigh" symbolValues="fHighNA" />
+          <FeatureValue feature="featCons_bounded-ltr-left" symbolValues="fConsPlus_bounded-ltr-left"/>
+          <FeatureValue feature="featVoice_bounded-ltr-left" symbolValues="fVoiceMinus_bounded-ltr-left"/>
+          <FeatureValue feature="featHigh_bounded-ltr-left" symbolValues="fHighNA_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_bounded-ltr-right">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-ltr-right" symbolValues="fConsMinus_bounded-ltr-right"/>
+          <FeatureValue feature="featVoice_bounded-ltr-right" symbolValues="fVoicePlus_bounded-ltr-right"/>
+          <FeatureValue feature="featHigh_bounded-ltr-right" symbolValues="fHighLow_bounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_bounded-ltr-right">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-ltr-right" symbolValues="fConsMinus_bounded-ltr-right"/>
+          <FeatureValue feature="featVoice_bounded-ltr-right" symbolValues="fVoicePlus_bounded-ltr-right"/>
+          <FeatureValue feature="featHigh_bounded-ltr-right" symbolValues="fHighMid_bounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_bounded-ltr-right">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-ltr-right" symbolValues="fConsPlus_bounded-ltr-right"/>
+          <FeatureValue feature="featVoice_bounded-ltr-right" symbolValues="fVoicePlus_bounded-ltr-right"/>
+          <FeatureValue feature="featHigh_bounded-ltr-right" symbolValues="fHighNA_bounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_bounded-ltr-right">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-ltr-right" symbolValues="fConsPlus_bounded-ltr-right"/>
+          <FeatureValue feature="featVoice_bounded-ltr-right" symbolValues="fVoiceMinus_bounded-ltr-right"/>
+          <FeatureValue feature="featHigh_bounded-ltr-right" symbolValues="fHighNA_bounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_bounded-rtl-left">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-left" symbolValues="fConsMinus_bounded-rtl-left"/>
+          <FeatureValue feature="featVoice_bounded-rtl-left" symbolValues="fVoicePlus_bounded-rtl-left"/>
+          <FeatureValue feature="featHigh_bounded-rtl-left" symbolValues="fHighLow_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_bounded-rtl-left">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-left" symbolValues="fConsMinus_bounded-rtl-left"/>
+          <FeatureValue feature="featVoice_bounded-rtl-left" symbolValues="fVoicePlus_bounded-rtl-left"/>
+          <FeatureValue feature="featHigh_bounded-rtl-left" symbolValues="fHighMid_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_bounded-rtl-left">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-left" symbolValues="fConsPlus_bounded-rtl-left"/>
+          <FeatureValue feature="featVoice_bounded-rtl-left" symbolValues="fVoicePlus_bounded-rtl-left"/>
+          <FeatureValue feature="featHigh_bounded-rtl-left" symbolValues="fHighNA_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_bounded-rtl-left">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-left" symbolValues="fConsPlus_bounded-rtl-left"/>
+          <FeatureValue feature="featVoice_bounded-rtl-left" symbolValues="fVoiceMinus_bounded-rtl-left"/>
+          <FeatureValue feature="featHigh_bounded-rtl-left" symbolValues="fHighNA_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_bounded-rtl-right">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-right" symbolValues="fConsMinus_bounded-rtl-right"/>
+          <FeatureValue feature="featVoice_bounded-rtl-right" symbolValues="fVoicePlus_bounded-rtl-right"/>
+          <FeatureValue feature="featHigh_bounded-rtl-right" symbolValues="fHighLow_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_bounded-rtl-right">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-right" symbolValues="fConsMinus_bounded-rtl-right"/>
+          <FeatureValue feature="featVoice_bounded-rtl-right" symbolValues="fVoicePlus_bounded-rtl-right"/>
+          <FeatureValue feature="featHigh_bounded-rtl-right" symbolValues="fHighMid_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_bounded-rtl-right">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-right" symbolValues="fConsPlus_bounded-rtl-right"/>
+          <FeatureValue feature="featVoice_bounded-rtl-right" symbolValues="fVoicePlus_bounded-rtl-right"/>
+          <FeatureValue feature="featHigh_bounded-rtl-right" symbolValues="fHighNA_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_bounded-rtl-right">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-rtl-right" symbolValues="fConsPlus_bounded-rtl-right"/>
+          <FeatureValue feature="featVoice_bounded-rtl-right" symbolValues="fVoiceMinus_bounded-rtl-right"/>
+          <FeatureValue feature="featHigh_bounded-rtl-right" symbolValues="fHighNA_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_bounded-zero-left">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-left" symbolValues="fConsMinus_bounded-zero-left"/>
+          <FeatureValue feature="featVoice_bounded-zero-left" symbolValues="fVoicePlus_bounded-zero-left"/>
+          <FeatureValue feature="featHigh_bounded-zero-left" symbolValues="fHighLow_bounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_bounded-zero-left">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-left" symbolValues="fConsMinus_bounded-zero-left"/>
+          <FeatureValue feature="featVoice_bounded-zero-left" symbolValues="fVoicePlus_bounded-zero-left"/>
+          <FeatureValue feature="featHigh_bounded-zero-left" symbolValues="fHighMid_bounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_bounded-zero-left">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-left" symbolValues="fConsPlus_bounded-zero-left"/>
+          <FeatureValue feature="featVoice_bounded-zero-left" symbolValues="fVoicePlus_bounded-zero-left"/>
+          <FeatureValue feature="featHigh_bounded-zero-left" symbolValues="fHighNA_bounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_bounded-zero-left">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-left" symbolValues="fConsPlus_bounded-zero-left"/>
+          <FeatureValue feature="featVoice_bounded-zero-left" symbolValues="fVoiceMinus_bounded-zero-left"/>
+          <FeatureValue feature="featHigh_bounded-zero-left" symbolValues="fHighNA_bounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_bounded-zero-right">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-right" symbolValues="fConsMinus_bounded-zero-right"/>
+          <FeatureValue feature="featVoice_bounded-zero-right" symbolValues="fVoicePlus_bounded-zero-right"/>
+          <FeatureValue feature="featHigh_bounded-zero-right" symbolValues="fHighLow_bounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_bounded-zero-right">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-right" symbolValues="fConsMinus_bounded-zero-right"/>
+          <FeatureValue feature="featVoice_bounded-zero-right" symbolValues="fVoicePlus_bounded-zero-right"/>
+          <FeatureValue feature="featHigh_bounded-zero-right" symbolValues="fHighMid_bounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_bounded-zero-right">
+          <Representations>
+            <Representation>x</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-right" symbolValues="fConsPlus_bounded-zero-right"/>
+          <FeatureValue feature="featVoice_bounded-zero-right" symbolValues="fVoicePlus_bounded-zero-right"/>
+          <FeatureValue feature="featHigh_bounded-zero-right" symbolValues="fHighNA_bounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_bounded-zero-right">
+          <Representations>
+            <Representation>à</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-zero-right" symbolValues="fConsPlus_bounded-zero-right"/>
+          <FeatureValue feature="featVoice_bounded-zero-right" symbolValues="fVoiceMinus_bounded-zero-right"/>
+          <FeatureValue feature="featHigh_bounded-zero-right" symbolValues="fHighNA_bounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_unbounded-ltr-left">
+          <Representations>
+            <Representation>á</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-left" symbolValues="fConsMinus_unbounded-ltr-left"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-left" symbolValues="fVoicePlus_unbounded-ltr-left"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-left" symbolValues="fHighLow_unbounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_unbounded-ltr-left">
+          <Representations>
+            <Representation>ã</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-left" symbolValues="fConsMinus_unbounded-ltr-left"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-left" symbolValues="fVoicePlus_unbounded-ltr-left"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-left" symbolValues="fHighMid_unbounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_unbounded-ltr-left">
+          <Representations>
+            <Representation>â</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-left" symbolValues="fConsPlus_unbounded-ltr-left"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-left" symbolValues="fVoicePlus_unbounded-ltr-left"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-left" symbolValues="fHighNA_unbounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_unbounded-ltr-left">
+          <Representations>
+            <Representation>ä</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-left" symbolValues="fConsPlus_unbounded-ltr-left"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-left" symbolValues="fVoiceMinus_unbounded-ltr-left"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-left" symbolValues="fHighNA_unbounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_unbounded-ltr-right">
+          <Representations>
+            <Representation>å</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-right" symbolValues="fConsMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-right" symbolValues="fVoicePlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-right" symbolValues="fHighLow_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_unbounded-ltr-right">
+          <Representations>
+            <Representation>ç</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-right" symbolValues="fConsMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-right" symbolValues="fVoicePlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-right" symbolValues="fHighMid_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_unbounded-ltr-right">
+          <Representations>
+            <Representation>æ</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-right" symbolValues="fConsPlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-right" symbolValues="fVoicePlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-right" symbolValues="fHighNA_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_unbounded-ltr-right">
+          <Representations>
+            <Representation>è</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-ltr-right" symbolValues="fConsPlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featVoice_unbounded-ltr-right" symbolValues="fVoiceMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="featHigh_unbounded-ltr-right" symbolValues="fHighNA_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_unbounded-rtl-left">
+          <Representations>
+            <Representation>é</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-left" symbolValues="fConsMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-left" symbolValues="fVoicePlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-left" symbolValues="fHighLow_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_unbounded-rtl-left">
+          <Representations>
+            <Representation>ë</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-left" symbolValues="fConsMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-left" symbolValues="fVoicePlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-left" symbolValues="fHighMid_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_unbounded-rtl-left">
+          <Representations>
+            <Representation>ê</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-left" symbolValues="fConsPlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-left" symbolValues="fVoicePlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-left" symbolValues="fHighNA_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_unbounded-rtl-left">
+          <Representations>
+            <Representation>ì</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-left" symbolValues="fConsPlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-left" symbolValues="fVoiceMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-left" symbolValues="fHighNA_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_unbounded-rtl-right">
+          <Representations>
+            <Representation>í</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-right" symbolValues="fConsMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-right" symbolValues="fVoicePlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-right" symbolValues="fHighLow_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_unbounded-rtl-right">
+          <Representations>
+            <Representation>ï</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-right" symbolValues="fConsMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-right" symbolValues="fVoicePlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-right" symbolValues="fHighMid_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_unbounded-rtl-right">
+          <Representations>
+            <Representation>î</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-right" symbolValues="fConsPlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-right" symbolValues="fVoicePlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-right" symbolValues="fHighNA_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_unbounded-rtl-right">
+          <Representations>
+            <Representation>ð</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-rtl-right" symbolValues="fConsPlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featVoice_unbounded-rtl-right" symbolValues="fVoiceMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="featHigh_unbounded-rtl-right" symbolValues="fHighNA_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_unbounded-zero-left">
+          <Representations>
+            <Representation>ñ</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-left" symbolValues="fConsMinus_unbounded-zero-left"/>
+          <FeatureValue feature="featVoice_unbounded-zero-left" symbolValues="fVoicePlus_unbounded-zero-left"/>
+          <FeatureValue feature="featHigh_unbounded-zero-left" symbolValues="fHighLow_unbounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_unbounded-zero-left">
+          <Representations>
+            <Representation>ó</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-left" symbolValues="fConsMinus_unbounded-zero-left"/>
+          <FeatureValue feature="featVoice_unbounded-zero-left" symbolValues="fVoicePlus_unbounded-zero-left"/>
+          <FeatureValue feature="featHigh_unbounded-zero-left" symbolValues="fHighMid_unbounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_unbounded-zero-left">
+          <Representations>
+            <Representation>ò</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-left" symbolValues="fConsPlus_unbounded-zero-left"/>
+          <FeatureValue feature="featVoice_unbounded-zero-left" symbolValues="fVoicePlus_unbounded-zero-left"/>
+          <FeatureValue feature="featHigh_unbounded-zero-left" symbolValues="fHighNA_unbounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_unbounded-zero-left">
+          <Representations>
+            <Representation>ô</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-left" symbolValues="fConsPlus_unbounded-zero-left"/>
+          <FeatureValue feature="featVoice_unbounded-zero-left" symbolValues="fVoiceMinus_unbounded-zero-left"/>
+          <FeatureValue feature="featHigh_unbounded-zero-left" symbolValues="fHighNA_unbounded-zero-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_unbounded-zero-right">
+          <Representations>
+            <Representation>õ</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-right" symbolValues="fConsMinus_unbounded-zero-right"/>
+          <FeatureValue feature="featVoice_unbounded-zero-right" symbolValues="fVoicePlus_unbounded-zero-right"/>
+          <FeatureValue feature="featHigh_unbounded-zero-right" symbolValues="fHighLow_unbounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_unbounded-zero-right">
+          <Representations>
+            <Representation>ø</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-right" symbolValues="fConsMinus_unbounded-zero-right"/>
+          <FeatureValue feature="featVoice_unbounded-zero-right" symbolValues="fVoicePlus_unbounded-zero-right"/>
+          <FeatureValue feature="featHigh_unbounded-zero-right" symbolValues="fHighMid_unbounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cc_unbounded-zero-right">
+          <Representations>
+            <Representation>ö</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-right" symbolValues="fConsPlus_unbounded-zero-right"/>
+          <FeatureValue feature="featVoice_unbounded-zero-right" symbolValues="fVoicePlus_unbounded-zero-right"/>
+          <FeatureValue feature="featHigh_unbounded-zero-right" symbolValues="fHighNA_unbounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ct_unbounded-zero-right">
+          <Representations>
+            <Representation>ù</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_unbounded-zero-right" symbolValues="fConsPlus_unbounded-zero-right"/>
+          <FeatureValue feature="featVoice_unbounded-zero-right" symbolValues="fVoiceMinus_unbounded-zero-right"/>
+          <FeatureValue feature="featHigh_unbounded-zero-right" symbolValues="fHighNA_unbounded-zero-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-right"/>
         </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <SegmentNaturalClass id="ncVowel">
-        <Name>Vowel</Name>
-        <Segment segment="ca" />
+      <SegmentNaturalClass id="ncVowel_bounded-ltr-left">
+        <Name>Vowel_bounded-ltr-left</Name>
+        <Segment segment="ca_bounded-ltr-left"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncCons">
-        <Name>Cons</Name>
-        <Segment segment="cc" />
+      <SegmentNaturalClass id="ncCons_bounded-ltr-left">
+        <Name>Cons_bounded-ltr-left</Name>
+        <Segment segment="cc_bounded-ltr-left"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncTrig">
-        <Name>Trigger</Name>
-        <Segment segment="ct" />
+      <SegmentNaturalClass id="ncTrig_bounded-ltr-left">
+        <Name>Trigger_bounded-ltr-left</Name>
+        <Segment segment="ct_bounded-ltr-left"/>
       </SegmentNaturalClass>
-      <FeatureNaturalClass id="ncAny">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="ncAny_bounded-ltr-left">
+        <Name>Any_bounded-ltr-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-ltr-right">
+        <Name>Vowel_bounded-ltr-right</Name>
+        <Segment segment="ca_bounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_bounded-ltr-right">
+        <Name>Cons_bounded-ltr-right</Name>
+        <Segment segment="cc_bounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_bounded-ltr-right">
+        <Name>Trigger_bounded-ltr-right</Name>
+        <Segment segment="ct_bounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_bounded-ltr-right">
+        <Name>Any_bounded-ltr-right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-right"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-rtl-left">
+        <Name>Vowel_bounded-rtl-left</Name>
+        <Segment segment="ca_bounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_bounded-rtl-left">
+        <Name>Cons_bounded-rtl-left</Name>
+        <Segment segment="cc_bounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_bounded-rtl-left">
+        <Name>Trigger_bounded-rtl-left</Name>
+        <Segment segment="ct_bounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_bounded-rtl-left">
+        <Name>Any_bounded-rtl-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-rtl-right">
+        <Name>Vowel_bounded-rtl-right</Name>
+        <Segment segment="ca_bounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_bounded-rtl-right">
+        <Name>Cons_bounded-rtl-right</Name>
+        <Segment segment="cc_bounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_bounded-rtl-right">
+        <Name>Trigger_bounded-rtl-right</Name>
+        <Segment segment="ct_bounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_bounded-rtl-right">
+        <Name>Any_bounded-rtl-right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-zero-left">
+        <Name>Vowel_bounded-zero-left</Name>
+        <Segment segment="ca_bounded-zero-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_bounded-zero-left">
+        <Name>Cons_bounded-zero-left</Name>
+        <Segment segment="cc_bounded-zero-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_bounded-zero-left">
+        <Name>Trigger_bounded-zero-left</Name>
+        <Segment segment="ct_bounded-zero-left"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_bounded-zero-left">
+        <Name>Any_bounded-zero-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_bounded-zero-left"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-zero-right">
+        <Name>Vowel_bounded-zero-right</Name>
+        <Segment segment="ca_bounded-zero-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_bounded-zero-right">
+        <Name>Cons_bounded-zero-right</Name>
+        <Segment segment="cc_bounded-zero-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_bounded-zero-right">
+        <Name>Trigger_bounded-zero-right</Name>
+        <Segment segment="ct_bounded-zero-right"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_bounded-zero-right">
+        <Name>Any_bounded-zero-right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_bounded-zero-right"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-ltr-left">
+        <Name>Vowel_unbounded-ltr-left</Name>
+        <Segment segment="ca_unbounded-ltr-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_unbounded-ltr-left">
+        <Name>Cons_unbounded-ltr-left</Name>
+        <Segment segment="cc_unbounded-ltr-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_unbounded-ltr-left">
+        <Name>Trigger_unbounded-ltr-left</Name>
+        <Segment segment="ct_unbounded-ltr-left"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_unbounded-ltr-left">
+        <Name>Any_unbounded-ltr-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-left"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-ltr-right">
+        <Name>Vowel_unbounded-ltr-right</Name>
+        <Segment segment="ca_unbounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_unbounded-ltr-right">
+        <Name>Cons_unbounded-ltr-right</Name>
+        <Segment segment="cc_unbounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_unbounded-ltr-right">
+        <Name>Trigger_unbounded-ltr-right</Name>
+        <Segment segment="ct_unbounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_unbounded-ltr-right">
+        <Name>Any_unbounded-ltr-right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-rtl-left">
+        <Name>Vowel_unbounded-rtl-left</Name>
+        <Segment segment="ca_unbounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_unbounded-rtl-left">
+        <Name>Cons_unbounded-rtl-left</Name>
+        <Segment segment="cc_unbounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_unbounded-rtl-left">
+        <Name>Trigger_unbounded-rtl-left</Name>
+        <Segment segment="ct_unbounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_unbounded-rtl-left">
+        <Name>Any_unbounded-rtl-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-rtl-right">
+        <Name>Vowel_unbounded-rtl-right</Name>
+        <Segment segment="ca_unbounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_unbounded-rtl-right">
+        <Name>Cons_unbounded-rtl-right</Name>
+        <Segment segment="cc_unbounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_unbounded-rtl-right">
+        <Name>Trigger_unbounded-rtl-right</Name>
+        <Segment segment="ct_unbounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_unbounded-rtl-right">
+        <Name>Any_unbounded-rtl-right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-zero-left">
+        <Name>Vowel_unbounded-zero-left</Name>
+        <Segment segment="ca_unbounded-zero-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_unbounded-zero-left">
+        <Name>Cons_unbounded-zero-left</Name>
+        <Segment segment="cc_unbounded-zero-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_unbounded-zero-left">
+        <Name>Trigger_unbounded-zero-left</Name>
+        <Segment segment="ct_unbounded-zero-left"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_unbounded-zero-left">
+        <Name>Any_unbounded-zero-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-left"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-zero-right">
+        <Name>Vowel_unbounded-zero-right</Name>
+        <Segment segment="ca_unbounded-zero-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_unbounded-zero-right">
+        <Name>Cons_unbounded-zero-right</Name>
+        <Segment segment="cc_unbounded-zero-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_unbounded-zero-right">
+        <Name>Trigger_unbounded-zero-right</Name>
+        <Segment segment="ct_unbounded-zero-right"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_unbounded-zero-right">
+        <Name>Any_unbounded-zero-right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_unbounded-zero-right"/>
       </FeatureNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
-      <PhonologicalRule id="prRtlBq" multipleApplicationOrder="leftToRightIterative">
-        <Name>rtlBoundedQuantifierDemo</Name>
+      <PhonologicalRule id="prRtlBq_bounded-ltr-left" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-ltr-left</Name>
         <VariableFeatures>
-          <VariableFeature id="varVoice" name="α" phonologicalFeature="featVoice" />
+          <VariableFeature id="varVoice_bounded-ltr-left" name="α" phonologicalFeature="featVoice_bounded-ltr-left"/>
         </VariableFeatures>
         <PhoneticInput>
           <PhoneticSequence>
-            <SimpleContext naturalClass="ncVowel" />
+            <SimpleContext naturalClass="ncVowel_bounded-ltr-left"/>
           </PhoneticSequence>
         </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
             <PhoneticOutput>
               <PhoneticSequence>
-                <Segment segment="ce" />
+                <Segment segment="ce_bounded-ltr-left"/>
               </PhoneticSequence>
             </PhoneticOutput>
             <Environment>
               <LeftEnvironment>
                 <PhoneticTemplate initialBoundaryCondition="true">
                   <PhoneticSequence>
-                    <SimpleContext naturalClass="ncTrig" />
+                    <SimpleContext naturalClass="ncTrig_bounded-ltr-left"/>
                     <OptionalSegmentSequence min="2" max="2">
-                      <SimpleContext naturalClass="ncAny">
+                      <SimpleContext naturalClass="ncAny_bounded-ltr-left">
                         <AlphaVariables>
-                          <AlphaVariable variableFeature="varVoice" polarity="plus" />
+                          <AlphaVariable variableFeature="varVoice_bounded-ltr-left" polarity="plus"/>
                         </AlphaVariables>
                       </SimpleContext>
                     </OptionalSegmentSequence>
@@ -123,46 +992,978 @@
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_bounded-ltr-right" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-ltr-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_bounded-ltr-right" name="α" phonologicalFeature="featVoice_bounded-ltr-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-ltr-right"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_bounded-ltr-right"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="2" max="2">
+                      <SimpleContext naturalClass="ncAny_bounded-ltr-right">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_bounded-ltr-right" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                    <SimpleContext naturalClass="ncTrig_bounded-ltr-right"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_bounded-rtl-left" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-rtl-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_bounded-rtl-left" name="α" phonologicalFeature="featVoice_bounded-rtl-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-rtl-left"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_bounded-rtl-left"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncTrig_bounded-rtl-left"/>
+                    <OptionalSegmentSequence min="2" max="2">
+                      <SimpleContext naturalClass="ncAny_bounded-rtl-left">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_bounded-rtl-left" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_bounded-rtl-right" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-rtl-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_bounded-rtl-right" name="α" phonologicalFeature="featVoice_bounded-rtl-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-rtl-right"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_bounded-rtl-right"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="2" max="2">
+                      <SimpleContext naturalClass="ncAny_bounded-rtl-right">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_bounded-rtl-right" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                    <SimpleContext naturalClass="ncTrig_bounded-rtl-right"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_bounded-zero-left" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-zero-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_bounded-zero-left" name="α" phonologicalFeature="featVoice_bounded-zero-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-zero-left"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_bounded-zero-left"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="2">
+                      <SimpleContext naturalClass="ncAny_bounded-zero-left">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_bounded-zero-left" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_bounded-zero-right" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-zero-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_bounded-zero-right" name="α" phonologicalFeature="featVoice_bounded-zero-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-zero-right"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_bounded-zero-right"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="2">
+                      <SimpleContext naturalClass="ncAny_bounded-zero-right">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_bounded-zero-right" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_unbounded-ltr-left" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_unbounded-ltr-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_unbounded-ltr-left" name="α" phonologicalFeature="featVoice_unbounded-ltr-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-ltr-left"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_unbounded-ltr-left"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncTrig_unbounded-ltr-left"/>
+                    <OptionalSegmentSequence min="2" max="-1">
+                      <SimpleContext naturalClass="ncAny_unbounded-ltr-left">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_unbounded-ltr-left" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_unbounded-ltr-right" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_unbounded-ltr-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_unbounded-ltr-right" name="α" phonologicalFeature="featVoice_unbounded-ltr-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-ltr-right"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_unbounded-ltr-right"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="2" max="-1">
+                      <SimpleContext naturalClass="ncAny_unbounded-ltr-right">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_unbounded-ltr-right" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                    <SimpleContext naturalClass="ncTrig_unbounded-ltr-right"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_unbounded-rtl-left" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlBoundedQuantifierDemo_unbounded-rtl-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_unbounded-rtl-left" name="α" phonologicalFeature="featVoice_unbounded-rtl-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-rtl-left"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_unbounded-rtl-left"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncTrig_unbounded-rtl-left"/>
+                    <OptionalSegmentSequence min="2" max="-1">
+                      <SimpleContext naturalClass="ncAny_unbounded-rtl-left">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_unbounded-rtl-left" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_unbounded-rtl-right" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlBoundedQuantifierDemo_unbounded-rtl-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_unbounded-rtl-right" name="α" phonologicalFeature="featVoice_unbounded-rtl-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-rtl-right"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_unbounded-rtl-right"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="2" max="-1">
+                      <SimpleContext naturalClass="ncAny_unbounded-rtl-right">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_unbounded-rtl-right" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                    <SimpleContext naturalClass="ncTrig_unbounded-rtl-right"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_unbounded-zero-left" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_unbounded-zero-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_unbounded-zero-left" name="α" phonologicalFeature="featVoice_unbounded-zero-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-zero-left"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_unbounded-zero-left"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncAny_unbounded-zero-left">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_unbounded-zero-left" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlBq_unbounded-zero-right" multipleApplicationOrder="leftToRightIterative">
+        <Name>rtlBoundedQuantifierDemo_unbounded-zero-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varVoice_unbounded-zero-right" name="α" phonologicalFeature="featVoice_unbounded-zero-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-zero-right"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_unbounded-zero-right"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncAny_unbounded-zero-right">
+                        <AlphaVariables>
+                          <AlphaVariable variableFeature="varVoice_unbounded-zero-right" polarity="plus"/>
+                        </AlphaVariables>
+                      </SimpleContext>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="t1" phonologicalRules="prRtlBq">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t1_bounded-ltr-left" phonologicalRules="prRtlBq_bounded-ltr-left prRtlBq_bounded-ltr-right prRtlBq_bounded-rtl-left prRtlBq_bounded-rtl-right prRtlBq_bounded-zero-left prRtlBq_bounded-zero-right prRtlBq_unbounded-ltr-left prRtlBq_unbounded-ltr-right prRtlBq_unbounded-rtl-left prRtlBq_unbounded-rtl-right prRtlBq_unbounded-zero-left prRtlBq_unbounded-zero-right">
+        <Name>Main_bounded-ltr-left</Name>
         <LexicalEntries>
-          <LexicalEntry id="eRoot1">
+          <LexicalEntry id="eRoot1_bounded-ltr-left">
             <Allomorphs>
-              <Allomorph id="aRoot1">
+              <Allomorph id="aRoot1_bounded-ltr-left">
                 <PhoneticShape>taca</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ROOT1</MorphemeId>
+            <MorphemeId>ROOT1_bounded-ltr-left</MorphemeId>
             <Gloss>root1</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot2">
+          <LexicalEntry id="eRoot2_bounded-ltr-left">
             <Allomorphs>
-              <Allomorph id="aRoot2">
+              <Allomorph id="aRoot2_bounded-ltr-left">
                 <PhoneticShape>tcca</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ROOT2</MorphemeId>
+            <MorphemeId>ROOT2_bounded-ltr-left</MorphemeId>
             <Gloss>root2</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot3">
+          <LexicalEntry id="eRoot3_bounded-ltr-left">
             <Allomorphs>
-              <Allomorph id="aRoot3">
+              <Allomorph id="aRoot3_bounded-ltr-left">
                 <PhoneticShape>tccca</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ROOT3</MorphemeId>
+            <MorphemeId>ROOT3_bounded-ltr-left</MorphemeId>
             <Gloss>root3</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eMixed">
+          <LexicalEntry id="eMixed_bounded-ltr-left">
             <Allomorphs>
-              <Allomorph id="aMixed">
+              <Allomorph id="aMixed_bounded-ltr-left">
                 <PhoneticShape>ttca</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>MIXED</MorphemeId>
+            <MorphemeId>MIXED_bounded-ltr-left</MorphemeId>
             <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_bounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aRoot1_bounded-ltr-right">
+                <PhoneticShape>bdbg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_bounded-ltr-right</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_bounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aRoot2_bounded-ltr-right">
+                <PhoneticShape>bddg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_bounded-ltr-right</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_bounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aRoot3_bounded-ltr-right">
+                <PhoneticShape>bdddg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_bounded-ltr-right</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_bounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aMixed_bounded-ltr-right">
+                <PhoneticShape>bdgg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_bounded-ltr-right</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_bounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aRoot1_bounded-rtl-left">
+                <PhoneticShape>lhjh</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_bounded-rtl-left</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_bounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aRoot2_bounded-rtl-left">
+                <PhoneticShape>ljjh</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_bounded-rtl-left</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_bounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aRoot3_bounded-rtl-left">
+                <PhoneticShape>ljjjh</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_bounded-rtl-left</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_bounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aMixed_bounded-rtl-left">
+                <PhoneticShape>lljh</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_bounded-rtl-left</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_bounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aRoot1_bounded-rtl-right">
+                <PhoneticShape>mnmp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_bounded-rtl-right</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_bounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aRoot2_bounded-rtl-right">
+                <PhoneticShape>mnnp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_bounded-rtl-right</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_bounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aRoot3_bounded-rtl-right">
+                <PhoneticShape>mnnnp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_bounded-rtl-right</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_bounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aMixed_bounded-rtl-right">
+                <PhoneticShape>mnpp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_bounded-rtl-right</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aRoot1_bounded-zero-left">
+                <PhoneticShape>vqrq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_bounded-zero-left</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aRoot2_bounded-zero-left">
+                <PhoneticShape>vrrq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_bounded-zero-left</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aRoot3_bounded-zero-left">
+                <PhoneticShape>vrrrq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_bounded-zero-left</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aMixed_bounded-zero-left">
+                <PhoneticShape>vvrq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_bounded-zero-left</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraZERO_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloZERO_bounded-zero-left">
+                <PhoneticShape>q</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ZERO_bounded-zero-left</MorphemeId>
+            <Gloss>ZERO</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraONE_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloONE_bounded-zero-left">
+                <PhoneticShape>rq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ONE_bounded-zero-left</MorphemeId>
+            <Gloss>ONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraMIXEDONE_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloMIXEDONE_bounded-zero-left">
+                <PhoneticShape>vrq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXEDONE_bounded-zero-left</MorphemeId>
+            <Gloss>MIXEDONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraTRIG_bounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloTRIG_bounded-zero-left">
+                <PhoneticShape>vq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TRIG_bounded-zero-left</MorphemeId>
+            <Gloss>TRIG</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aRoot1_bounded-zero-right">
+                <PhoneticShape>wxwà</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_bounded-zero-right</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aRoot2_bounded-zero-right">
+                <PhoneticShape>wxxà</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_bounded-zero-right</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aRoot3_bounded-zero-right">
+                <PhoneticShape>wxxxà</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_bounded-zero-right</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aMixed_bounded-zero-right">
+                <PhoneticShape>wxàà</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_bounded-zero-right</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraZERO_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloZERO_bounded-zero-right">
+                <PhoneticShape>w</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ZERO_bounded-zero-right</MorphemeId>
+            <Gloss>ZERO</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraONE_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloONE_bounded-zero-right">
+                <PhoneticShape>wx</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ONE_bounded-zero-right</MorphemeId>
+            <Gloss>ONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraMIXEDONE_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloMIXEDONE_bounded-zero-right">
+                <PhoneticShape>wxà</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXEDONE_bounded-zero-right</MorphemeId>
+            <Gloss>MIXEDONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraTRIG_bounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloTRIG_bounded-zero-right">
+                <PhoneticShape>wà</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TRIG_bounded-zero-right</MorphemeId>
+            <Gloss>TRIG</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_unbounded-ltr-left">
+            <Allomorphs>
+              <Allomorph id="aRoot1_unbounded-ltr-left">
+                <PhoneticShape>äáâá</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_unbounded-ltr-left</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_unbounded-ltr-left">
+            <Allomorphs>
+              <Allomorph id="aRoot2_unbounded-ltr-left">
+                <PhoneticShape>äââá</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_unbounded-ltr-left</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_unbounded-ltr-left">
+            <Allomorphs>
+              <Allomorph id="aRoot3_unbounded-ltr-left">
+                <PhoneticShape>äâââá</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_unbounded-ltr-left</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_unbounded-ltr-left">
+            <Allomorphs>
+              <Allomorph id="aMixed_unbounded-ltr-left">
+                <PhoneticShape>ääâá</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_unbounded-ltr-left</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_unbounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aRoot1_unbounded-ltr-right">
+                <PhoneticShape>åæåè</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_unbounded-ltr-right</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_unbounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aRoot2_unbounded-ltr-right">
+                <PhoneticShape>åææè</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_unbounded-ltr-right</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_unbounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aRoot3_unbounded-ltr-right">
+                <PhoneticShape>åæææè</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_unbounded-ltr-right</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_unbounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aMixed_unbounded-ltr-right">
+                <PhoneticShape>åæèè</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_unbounded-ltr-right</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_unbounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aRoot1_unbounded-rtl-left">
+                <PhoneticShape>ìéêé</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_unbounded-rtl-left</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_unbounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aRoot2_unbounded-rtl-left">
+                <PhoneticShape>ìêêé</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_unbounded-rtl-left</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_unbounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aRoot3_unbounded-rtl-left">
+                <PhoneticShape>ìêêêé</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_unbounded-rtl-left</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_unbounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aMixed_unbounded-rtl-left">
+                <PhoneticShape>ììêé</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_unbounded-rtl-left</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_unbounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aRoot1_unbounded-rtl-right">
+                <PhoneticShape>íîíð</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_unbounded-rtl-right</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_unbounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aRoot2_unbounded-rtl-right">
+                <PhoneticShape>íîîð</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_unbounded-rtl-right</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_unbounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aRoot3_unbounded-rtl-right">
+                <PhoneticShape>íîîîð</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_unbounded-rtl-right</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_unbounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aMixed_unbounded-rtl-right">
+                <PhoneticShape>íîðð</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_unbounded-rtl-right</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aRoot1_unbounded-zero-left">
+                <PhoneticShape>ôñòñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_unbounded-zero-left</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aRoot2_unbounded-zero-left">
+                <PhoneticShape>ôòòñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_unbounded-zero-left</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aRoot3_unbounded-zero-left">
+                <PhoneticShape>ôòòòñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_unbounded-zero-left</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="aMixed_unbounded-zero-left">
+                <PhoneticShape>ôôòñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_unbounded-zero-left</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraZERO_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloZERO_unbounded-zero-left">
+                <PhoneticShape>ñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ZERO_unbounded-zero-left</MorphemeId>
+            <Gloss>ZERO</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraONE_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloONE_unbounded-zero-left">
+                <PhoneticShape>òñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ONE_unbounded-zero-left</MorphemeId>
+            <Gloss>ONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraMIXEDONE_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloMIXEDONE_unbounded-zero-left">
+                <PhoneticShape>ôòñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXEDONE_unbounded-zero-left</MorphemeId>
+            <Gloss>MIXEDONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraTRIG_unbounded-zero-left">
+            <Allomorphs>
+              <Allomorph id="alloTRIG_unbounded-zero-left">
+                <PhoneticShape>ôñ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TRIG_unbounded-zero-left</MorphemeId>
+            <Gloss>TRIG</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aRoot1_unbounded-zero-right">
+                <PhoneticShape>õöõù</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_unbounded-zero-right</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aRoot2_unbounded-zero-right">
+                <PhoneticShape>õööù</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_unbounded-zero-right</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aRoot3_unbounded-zero-right">
+                <PhoneticShape>õöööù</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_unbounded-zero-right</MorphemeId>
+            <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eMixed_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="aMixed_unbounded-zero-right">
+                <PhoneticShape>õöùù</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXED_unbounded-zero-right</MorphemeId>
+            <Gloss>mixed</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraZERO_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloZERO_unbounded-zero-right">
+                <PhoneticShape>õ</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ZERO_unbounded-zero-right</MorphemeId>
+            <Gloss>ZERO</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraONE_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloONE_unbounded-zero-right">
+                <PhoneticShape>õö</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ONE_unbounded-zero-right</MorphemeId>
+            <Gloss>ONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraMIXEDONE_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloMIXEDONE_unbounded-zero-right">
+                <PhoneticShape>õöù</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MIXEDONE_unbounded-zero-right</MorphemeId>
+            <Gloss>MIXEDONE</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="extraTRIG_unbounded-zero-right">
+            <Allomorphs>
+              <Allomorph id="alloTRIG_unbounded-zero-right">
+                <PhoneticShape>õù</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TRIG_unbounded-zero-right</MorphemeId>
+            <Gloss>TRIG</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

@@ -4,79 +4,370 @@
   <Language>
     <Name>partial-class-disagree-bounded-ltr-left</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="posN">
-        <Name>n</Name>
+      <PartOfSpeech id="posN_bounded-ltr-left">
+        <Name>n_bounded-ltr-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-rtl-left">
+        <Name>n_bounded-rtl-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-rtl-right">
+        <Name>n_bounded-rtl-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-ltr-right">
+        <Name>n_unbounded-ltr-right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-rtl-left">
+        <Name>n_unbounded-rtl-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_unbounded-rtl-right">
+        <Name>n_unbounded-rtl-right</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="featBack">
-        <Name>back</Name>
+      <SymbolicFeature id="featBack_bounded-ltr-left">
+        <Name>back_bounded-ltr-left</Name>
         <Symbols>
-          <Symbol id="bkPlus">+bk</Symbol>
-          <Symbol id="bkMinus">-bk</Symbol>
+          <Symbol id="bkPlus_bounded-ltr-left">+bk</Symbol>
+          <Symbol id="bkMinus_bounded-ltr-left">-bk</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featRound">
-        <Name>round</Name>
+      <SymbolicFeature id="featRound_bounded-ltr-left">
+        <Name>round_bounded-ltr-left</Name>
         <Symbols>
-          <Symbol id="rdMinus">-rd</Symbol>
-          <Symbol id="rdPlus">+rd</Symbol>
+          <Symbol id="rdMinus_bounded-ltr-left">-rd</Symbol>
+          <Symbol id="rdPlus_bounded-ltr-left">+rd</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_bounded-rtl-left">
+        <Name>back_bounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="bkPlus_bounded-rtl-left">+bk</Symbol>
+          <Symbol id="bkMinus_bounded-rtl-left">-bk</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featRound_bounded-rtl-left">
+        <Name>round_bounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="rdMinus_bounded-rtl-left">-rd</Symbol>
+          <Symbol id="rdPlus_bounded-rtl-left">+rd</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_bounded-rtl-right">
+        <Name>back_bounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="bkPlus_bounded-rtl-right">+bk</Symbol>
+          <Symbol id="bkMinus_bounded-rtl-right">-bk</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featRound_bounded-rtl-right">
+        <Name>round_bounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="rdMinus_bounded-rtl-right">-rd</Symbol>
+          <Symbol id="rdPlus_bounded-rtl-right">+rd</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_unbounded-ltr-right">
+        <Name>back_unbounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="bkPlus_unbounded-ltr-right">+bk</Symbol>
+          <Symbol id="bkMinus_unbounded-ltr-right">-bk</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featRound_unbounded-ltr-right">
+        <Name>round_unbounded-ltr-right</Name>
+        <Symbols>
+          <Symbol id="rdMinus_unbounded-ltr-right">-rd</Symbol>
+          <Symbol id="rdPlus_unbounded-ltr-right">+rd</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_unbounded-rtl-left">
+        <Name>back_unbounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="bkPlus_unbounded-rtl-left">+bk</Symbol>
+          <Symbol id="bkMinus_unbounded-rtl-left">-bk</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featRound_unbounded-rtl-left">
+        <Name>round_unbounded-rtl-left</Name>
+        <Symbols>
+          <Symbol id="rdMinus_unbounded-rtl-left">-rd</Symbol>
+          <Symbol id="rdPlus_unbounded-rtl-left">+rd</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_unbounded-rtl-right">
+        <Name>back_unbounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="bkPlus_unbounded-rtl-right">+bk</Symbol>
+          <Symbol id="bkMinus_unbounded-rtl-right">-bk</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featRound_unbounded-rtl-right">
+        <Name>round_unbounded-rtl-right</Name>
+        <Symbols>
+          <Symbol id="rdMinus_unbounded-rtl-right">-rd</Symbol>
+          <Symbol id="rdPlus_unbounded-rtl-right">+rd</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_bounded-ltr-left">cell bounded-ltr-left</Symbol>
+          <Symbol id="cell_bounded-rtl-left">cell bounded-rtl-left</Symbol>
+          <Symbol id="cell_bounded-rtl-right">cell bounded-rtl-right</Symbol>
+          <Symbol id="cell_unbounded-ltr-right">cell unbounded-ltr-right</Symbol>
+          <Symbol id="cell_unbounded-rtl-left">cell unbounded-rtl-left</Symbol>
+          <Symbol id="cell_unbounded-rtl-right">cell unbounded-rtl-right</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="tbl">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="tbl_bounded-ltr-left">
+      <Name>Main_bounded-ltr-left</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cI">
+        <SegmentDefinition id="cI_bounded-ltr-left">
           <Representations>
             <Representation>i</Representation>
           </Representations>
-          <FeatureValue feature="featBack" symbolValues="bkMinus" />
-          <FeatureValue feature="featRound" symbolValues="rdMinus" />
+          <FeatureValue feature="featBack_bounded-ltr-left" symbolValues="bkMinus_bounded-ltr-left"/>
+          <FeatureValue feature="featRound_bounded-ltr-left" symbolValues="rdMinus_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cY">
+        <SegmentDefinition id="cY_bounded-ltr-left">
           <Representations>
             <Representation>y</Representation>
           </Representations>
-          <FeatureValue feature="featBack" symbolValues="bkMinus" />
-          <FeatureValue feature="featRound" symbolValues="rdPlus" />
+          <FeatureValue feature="featBack_bounded-ltr-left" symbolValues="bkMinus_bounded-ltr-left"/>
+          <FeatureValue feature="featRound_bounded-ltr-left" symbolValues="rdPlus_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_bounded-ltr-left">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="featBack" symbolValues="bkPlus" />
-          <FeatureValue feature="featRound" symbolValues="rdMinus" />
+          <FeatureValue feature="featBack_bounded-ltr-left" symbolValues="bkPlus_bounded-ltr-left"/>
+          <FeatureValue feature="featRound_bounded-ltr-left" symbolValues="rdMinus_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cU">
+        <SegmentDefinition id="cU_bounded-ltr-left">
           <Representations>
             <Representation>u</Representation>
           </Representations>
-          <FeatureValue feature="featBack" symbolValues="bkPlus" />
-          <FeatureValue feature="featRound" symbolValues="rdPlus" />
+          <FeatureValue feature="featBack_bounded-ltr-left" symbolValues="bkPlus_bounded-ltr-left"/>
+          <FeatureValue feature="featRound_bounded-ltr-left" symbolValues="rdPlus_bounded-ltr-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-ltr-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_bounded-rtl-left">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-left" symbolValues="bkMinus_bounded-rtl-left"/>
+          <FeatureValue feature="featRound_bounded-rtl-left" symbolValues="rdMinus_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cY_bounded-rtl-left">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-left" symbolValues="bkMinus_bounded-rtl-left"/>
+          <FeatureValue feature="featRound_bounded-rtl-left" symbolValues="rdPlus_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_bounded-rtl-left">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-left" symbolValues="bkPlus_bounded-rtl-left"/>
+          <FeatureValue feature="featRound_bounded-rtl-left" symbolValues="rdMinus_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cU_bounded-rtl-left">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-left" symbolValues="bkPlus_bounded-rtl-left"/>
+          <FeatureValue feature="featRound_bounded-rtl-left" symbolValues="rdPlus_bounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_bounded-rtl-right">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-right" symbolValues="bkMinus_bounded-rtl-right"/>
+          <FeatureValue feature="featRound_bounded-rtl-right" symbolValues="rdMinus_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cY_bounded-rtl-right">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-right" symbolValues="bkMinus_bounded-rtl-right"/>
+          <FeatureValue feature="featRound_bounded-rtl-right" symbolValues="rdPlus_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_bounded-rtl-right">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-right" symbolValues="bkPlus_bounded-rtl-right"/>
+          <FeatureValue feature="featRound_bounded-rtl-right" symbolValues="rdMinus_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cU_bounded-rtl-right">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_bounded-rtl-right" symbolValues="bkPlus_bounded-rtl-right"/>
+          <FeatureValue feature="featRound_bounded-rtl-right" symbolValues="rdPlus_bounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_unbounded-ltr-right">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-ltr-right" symbolValues="bkMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="featRound_unbounded-ltr-right" symbolValues="rdMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cY_unbounded-ltr-right">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-ltr-right" symbolValues="bkMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="featRound_unbounded-ltr-right" symbolValues="rdPlus_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_unbounded-ltr-right">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-ltr-right" symbolValues="bkPlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featRound_unbounded-ltr-right" symbolValues="rdMinus_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cU_unbounded-ltr-right">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-ltr-right" symbolValues="bkPlus_unbounded-ltr-right"/>
+          <FeatureValue feature="featRound_unbounded-ltr-right" symbolValues="rdPlus_unbounded-ltr-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-ltr-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_unbounded-rtl-left">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-left" symbolValues="bkMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="featRound_unbounded-rtl-left" symbolValues="rdMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cY_unbounded-rtl-left">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-left" symbolValues="bkMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="featRound_unbounded-rtl-left" symbolValues="rdPlus_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_unbounded-rtl-left">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-left" symbolValues="bkPlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featRound_unbounded-rtl-left" symbolValues="rdMinus_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cU_unbounded-rtl-left">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-left" symbolValues="bkPlus_unbounded-rtl-left"/>
+          <FeatureValue feature="featRound_unbounded-rtl-left" symbolValues="rdPlus_unbounded-rtl-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_unbounded-rtl-right">
+          <Representations>
+            <Representation>x</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-right" symbolValues="bkMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="featRound_unbounded-rtl-right" symbolValues="rdMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cY_unbounded-rtl-right">
+          <Representations>
+            <Representation>à</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-right" symbolValues="bkMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="featRound_unbounded-rtl-right" symbolValues="rdPlus_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_unbounded-rtl-right">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-right" symbolValues="bkPlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featRound_unbounded-rtl-right" symbolValues="rdMinus_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cU_unbounded-rtl-right">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+          <FeatureValue feature="featBack_unbounded-rtl-right" symbolValues="bkPlus_unbounded-rtl-right"/>
+          <FeatureValue feature="featRound_unbounded-rtl-right" symbolValues="rdPlus_unbounded-rtl-right"/>
+          <FeatureValue feature="cell" symbolValues="cell_unbounded-rtl-right"/>
         </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <SegmentNaturalClass id="ncVowel"><Name>vowels</Name><Segment segment="cI" /><Segment segment="cA" /></SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-ltr-left">
+        <Name>vowels_bounded-ltr-left</Name>
+        <Segment segment="cI_bounded-ltr-left"/>
+        <Segment segment="cA_bounded-ltr-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-rtl-left">
+        <Name>vowels_bounded-rtl-left</Name>
+        <Segment segment="cA_bounded-rtl-left"/>
+        <Segment segment="cU_bounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-rtl-right">
+        <Name>vowels_bounded-rtl-right</Name>
+        <Segment segment="cI_bounded-rtl-right"/>
+        <Segment segment="cY_bounded-rtl-right"/>
+        <Segment segment="cA_bounded-rtl-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-ltr-right">
+        <Name>vowels_unbounded-ltr-right</Name>
+        <Segment segment="cI_unbounded-ltr-right"/>
+        <Segment segment="cA_unbounded-ltr-right"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-rtl-left">
+        <Name>vowels_unbounded-rtl-left</Name>
+        <Segment segment="cI_unbounded-rtl-left"/>
+        <Segment segment="cY_unbounded-rtl-left"/>
+        <Segment segment="cA_unbounded-rtl-left"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_unbounded-rtl-right">
+        <Name>vowels_unbounded-rtl-right</Name>
+        <Segment segment="cA_unbounded-rtl-right"/>
+        <Segment segment="cU_unbounded-rtl-right"/>
+      </SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
-      <PhonologicalRule id="prDoubleAlpha" multipleApplicationOrder="leftToRightIterative">
-        <Name>doubleAlphaFlip</Name>
+      <PhonologicalRule id="prDoubleAlpha_bounded-ltr-left" multipleApplicationOrder="leftToRightIterative">
+        <Name>doubleAlphaFlip_bounded-ltr-left</Name>
         <VariableFeatures>
-          <VariableFeature id="varBack" name="α" phonologicalFeature="featBack" />
-          <VariableFeature id="varRound" name="β" phonologicalFeature="featRound" />
+          <VariableFeature id="varBack_bounded-ltr-left" name="α" phonologicalFeature="featBack_bounded-ltr-left"/>
+          <VariableFeature id="varRound_bounded-ltr-left" name="β" phonologicalFeature="featRound_bounded-ltr-left"/>
         </VariableFeatures>
         <PhoneticInput>
           <PhoneticSequence>
-            <SimpleContext naturalClass="ncVowel">
+            <SimpleContext naturalClass="ncVowel_bounded-ltr-left">
               <AlphaVariables>
-                <AlphaVariable variableFeature="varBack" polarity="plus" />
+                <AlphaVariable variableFeature="varBack_bounded-ltr-left" polarity="plus"/>
               </AlphaVariables>
             </SimpleContext>
-            <SimpleContext naturalClass="ncVowel">
+            <SimpleContext naturalClass="ncVowel_bounded-ltr-left">
               <AlphaVariables>
-                <AlphaVariable variableFeature="varRound" polarity="plus" />
+                <AlphaVariable variableFeature="varRound_bounded-ltr-left" polarity="plus"/>
               </AlphaVariables>
             </SimpleContext>
           </PhoneticSequence>
@@ -85,14 +376,14 @@
           <PhonologicalSubrule>
             <PhoneticOutput>
               <PhoneticSequence>
-                <SimpleContext naturalClass="ncVowel">
+                <SimpleContext naturalClass="ncVowel_bounded-ltr-left">
                   <AlphaVariables>
-                    <AlphaVariable variableFeature="varBack" polarity="minus" />
+                    <AlphaVariable variableFeature="varBack_bounded-ltr-left" polarity="minus"/>
                   </AlphaVariables>
                 </SimpleContext>
-                <SimpleContext naturalClass="ncVowel">
+                <SimpleContext naturalClass="ncVowel_bounded-ltr-left">
                   <AlphaVariables>
-                    <AlphaVariable variableFeature="varRound" polarity="minus" />
+                    <AlphaVariable variableFeature="varRound_bounded-ltr-left" polarity="minus"/>
                   </AlphaVariables>
                 </SimpleContext>
               </PhoneticSequence>
@@ -102,7 +393,7 @@
                 <PhoneticTemplate initialBoundaryCondition="true">
                   <PhoneticSequence>
                     <OptionalSegmentSequence min="0" max="1">
-                      <SimpleContext naturalClass="ncVowel" />
+                      <SimpleContext naturalClass="ncVowel_bounded-ltr-left"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </PhoneticTemplate>
@@ -111,18 +402,313 @@
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
+      <PhonologicalRule id="prDoubleAlpha_bounded-rtl-left" multipleApplicationOrder="rightToLeftIterative">
+        <Name>doubleAlphaFlip_bounded-rtl-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varBack_bounded-rtl-left" name="α" phonologicalFeature="featBack_bounded-rtl-left"/>
+          <VariableFeature id="varRound_bounded-rtl-left" name="β" phonologicalFeature="featRound_bounded-rtl-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-rtl-left">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varBack_bounded-rtl-left" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+            <SimpleContext naturalClass="ncVowel_bounded-rtl-left">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varRound_bounded-rtl-left" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncVowel_bounded-rtl-left">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varBack_bounded-rtl-left" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+                <SimpleContext naturalClass="ncVowel_bounded-rtl-left">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varRound_bounded-rtl-left" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="1">
+                      <SimpleContext naturalClass="ncVowel_bounded-rtl-left"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prDoubleAlpha_bounded-rtl-right" multipleApplicationOrder="rightToLeftIterative">
+        <Name>doubleAlphaFlip_bounded-rtl-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varBack_bounded-rtl-right" name="α" phonologicalFeature="featBack_bounded-rtl-right"/>
+          <VariableFeature id="varRound_bounded-rtl-right" name="β" phonologicalFeature="featRound_bounded-rtl-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-rtl-right">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varBack_bounded-rtl-right" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+            <SimpleContext naturalClass="ncVowel_bounded-rtl-right">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varRound_bounded-rtl-right" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncVowel_bounded-rtl-right">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varBack_bounded-rtl-right" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+                <SimpleContext naturalClass="ncVowel_bounded-rtl-right">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varRound_bounded-rtl-right" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="1">
+                      <SimpleContext naturalClass="ncVowel_bounded-rtl-right"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prDoubleAlpha_unbounded-ltr-right" multipleApplicationOrder="leftToRightIterative">
+        <Name>doubleAlphaFlip_unbounded-ltr-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varBack_unbounded-ltr-right" name="α" phonologicalFeature="featBack_unbounded-ltr-right"/>
+          <VariableFeature id="varRound_unbounded-ltr-right" name="β" phonologicalFeature="featRound_unbounded-ltr-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-ltr-right">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varBack_unbounded-ltr-right" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+            <SimpleContext naturalClass="ncVowel_unbounded-ltr-right">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varRound_unbounded-ltr-right" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncVowel_unbounded-ltr-right">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varBack_unbounded-ltr-right" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+                <SimpleContext naturalClass="ncVowel_unbounded-ltr-right">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varRound_unbounded-ltr-right" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncVowel_unbounded-ltr-right"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prDoubleAlpha_unbounded-rtl-left" multipleApplicationOrder="rightToLeftIterative">
+        <Name>doubleAlphaFlip_unbounded-rtl-left</Name>
+        <VariableFeatures>
+          <VariableFeature id="varBack_unbounded-rtl-left" name="α" phonologicalFeature="featBack_unbounded-rtl-left"/>
+          <VariableFeature id="varRound_unbounded-rtl-left" name="β" phonologicalFeature="featRound_unbounded-rtl-left"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-rtl-left">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varBack_unbounded-rtl-left" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+            <SimpleContext naturalClass="ncVowel_unbounded-rtl-left">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varRound_unbounded-rtl-left" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncVowel_unbounded-rtl-left">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varBack_unbounded-rtl-left" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+                <SimpleContext naturalClass="ncVowel_unbounded-rtl-left">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varRound_unbounded-rtl-left" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncVowel_unbounded-rtl-left"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prDoubleAlpha_unbounded-rtl-right" multipleApplicationOrder="rightToLeftIterative">
+        <Name>doubleAlphaFlip_unbounded-rtl-right</Name>
+        <VariableFeatures>
+          <VariableFeature id="varBack_unbounded-rtl-right" name="α" phonologicalFeature="featBack_unbounded-rtl-right"/>
+          <VariableFeature id="varRound_unbounded-rtl-right" name="β" phonologicalFeature="featRound_unbounded-rtl-right"/>
+        </VariableFeatures>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_unbounded-rtl-right">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varBack_unbounded-rtl-right" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+            <SimpleContext naturalClass="ncVowel_unbounded-rtl-right">
+              <AlphaVariables>
+                <AlphaVariable variableFeature="varRound_unbounded-rtl-right" polarity="plus"/>
+              </AlphaVariables>
+            </SimpleContext>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncVowel_unbounded-rtl-right">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varBack_unbounded-rtl-right" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+                <SimpleContext naturalClass="ncVowel_unbounded-rtl-right">
+                  <AlphaVariables>
+                    <AlphaVariable variableFeature="varRound_unbounded-rtl-right" polarity="minus"/>
+                  </AlphaVariables>
+                </SimpleContext>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncVowel_unbounded-rtl-right"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="tbl" phonologicalRules="prDoubleAlpha">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="tbl_bounded-ltr-left" phonologicalRules="prDoubleAlpha_bounded-ltr-left prDoubleAlpha_bounded-rtl-left prDoubleAlpha_bounded-rtl-right prDoubleAlpha_unbounded-ltr-right prDoubleAlpha_unbounded-rtl-left prDoubleAlpha_unbounded-rtl-right">
+        <Name>Main_bounded-ltr-left</Name>
         <LexicalEntries>
-          <LexicalEntry id="eAu" partOfSpeech="posN">
+          <LexicalEntry id="eAu_bounded-ltr-left" partOfSpeech="posN_bounded-ltr-left">
             <Allomorphs>
-              <Allomorph id="aAu">
+              <Allomorph id="aAu_bounded-ltr-left">
                 <PhoneticShape>au</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>AU</MorphemeId>
+            <MorphemeId>AU_bounded-ltr-left</MorphemeId>
+            <Gloss>au</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAu_bounded-rtl-left" partOfSpeech="posN_bounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aAu_bounded-rtl-left">
+                <PhoneticShape>bf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AU_bounded-rtl-left</MorphemeId>
+            <Gloss>au</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAu_bounded-rtl-right" partOfSpeech="posN_bounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aAu_bounded-rtl-right">
+                <PhoneticShape>hk</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AU_bounded-rtl-right</MorphemeId>
+            <Gloss>au</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAu_unbounded-ltr-right" partOfSpeech="posN_unbounded-ltr-right">
+            <Allomorphs>
+              <Allomorph id="aAu_unbounded-ltr-right">
+                <PhoneticShape>mo</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AU_unbounded-ltr-right</MorphemeId>
+            <Gloss>au</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAu_unbounded-rtl-left" partOfSpeech="posN_unbounded-rtl-left">
+            <Allomorphs>
+              <Allomorph id="aAu_unbounded-rtl-left">
+                <PhoneticShape>qs</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AU_unbounded-rtl-left</MorphemeId>
+            <Gloss>au</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAu_unbounded-rtl-right" partOfSpeech="posN_unbounded-rtl-right">
+            <Allomorphs>
+              <Allomorph id="aAu_unbounded-rtl-right">
+                <PhoneticShape>wz</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AU_unbounded-rtl-right</MorphemeId>
             <Gloss>au</Gloss>
           </LexicalEntry>
         </LexicalEntries>

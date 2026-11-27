@@ -1,90 +1,340 @@
-# Graduation rechecks complete word/status/signature multiplicities and rule traces.
-# Earlier provenance comments below describe the original authoring history.
-# hc.dll, Machine 18cf242f.
 language: overridden-alpha-bounded-ltr-left
-inspired_by: ["synthetic vowel neutralization with alpha environment"]
-sources: ["HCLoader.cs:2033-2067,2338-2344,2745-2770,2799-2808"]
-requires: [phonology]
+inspired_by:
+  - synthetic vowel neutralization with alpha environment
+sources:
+  - HCLoader.cs:2033-2067,2338-2344,2745-2770,2799-2808
+requires:
+  - phonology
 words:
   - word: ii
-    note: "Positive witness for overridden alpha bounded ltr left: 'ii' must retain the declared analysis."
+    note: '[cell bounded-ltr-left] Positive witness for overridden alpha bounded ltr left: ''ii'' must retain the declared analysis.'
     parses:
-      - signature: "IU|ii"
-        rules: ["prDoubleAlpha"]
+      - signature: IU_bounded-ltr-left|ii
+        rules:
+          - prDoubleAlpha_bounded-ltr-left
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: iy
-    note: "Negative control for overridden alpha bounded ltr left: 'iy' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''iy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ia
-    note: "Negative control for overridden alpha bounded ltr left: 'ia' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''ia'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: iu
-    note: "Negative control for overridden alpha bounded ltr left: 'iu' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''iu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: yi
-    note: "Negative control for overridden alpha bounded ltr left: 'yi' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''yi'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: yy
-    note: "Negative control for overridden alpha bounded ltr left: 'yy' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''yy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ya
-    note: "Negative control for overridden alpha bounded ltr left: 'ya' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''ya'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: yu
-    note: "Negative control for overridden alpha bounded ltr left: 'yu' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''yu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ai
-    note: "Negative control for overridden alpha bounded ltr left: 'ai' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''ai'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ay
-    note: "Negative control for overridden alpha bounded ltr left: 'ay' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''ay'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: aa
-    note: "Negative control for overridden alpha bounded ltr left: 'aa' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''aa'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: au
-    note: "Negative control for overridden alpha bounded ltr left: 'au' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''au'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ui
-    note: "Negative control for overridden alpha bounded ltr left: 'ui' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''ui'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: uy
-    note: "Negative control for overridden alpha bounded ltr left: 'uy' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''uy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: ua
-    note: "Negative control for overridden alpha bounded ltr left: 'ua' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''ua'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
   - word: uu
-    note: "Negative control for overridden alpha bounded ltr left: 'uu' must complete with no analysis."
+    note: '[cell bounded-ltr-left] Negative control for overridden alpha bounded ltr left: ''uu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: dd
+    note: '[cell bounded-rtl-left] Positive witness for overridden alpha bounded rtl left: ''ii'' must retain the declared analysis.'
+    parses:
+      - signature: IU_bounded-rtl-left|dd
+        rules:
+          - prDoubleAlpha_bounded-rtl-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: dg
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: db
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''ia'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: df
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gd
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gg
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gb
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: gf
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bd
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bg
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bb
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: bf
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fd
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fg
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: fb
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: ff
+    note: '[cell bounded-rtl-left] Negative control for overridden alpha bounded rtl left: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+  - word: jj
+    note: '[cell plain-ltr-left] Positive witness for overridden alpha plain ltr left: ''ii'' must retain the declared analysis.'
+    parses:
+      - signature: IU_plain-ltr-left|jj
+        rules:
+          - prDoubleAlpha_plain-ltr-left
+        exercises:
+          - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: jl
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: jh
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''ia'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: jk
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: lj
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: ll
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: lh
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: lk
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hj
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hl
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hh
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hk
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kj
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kl
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kh
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kk
+    note: '[cell plain-ltr-left] Negative control for overridden alpha plain ltr left: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: nn
+    note: '[cell unbounded-ltr-left] Positive witness for overridden alpha unbounded ltr left: ''ii'' must retain the declared analysis.'
+    parses:
+      - signature: IU_unbounded-ltr-left|nn
+        rules:
+          - prDoubleAlpha_unbounded-ltr-left
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: np
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: nm
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''ia'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: 'no'
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: pn
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: pp
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: pm
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: po
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: mn
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: mp
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: mm
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: mo
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: 'on'
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: op
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: om
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: oo
+    note: '[cell unbounded-ltr-left] Negative control for overridden alpha unbounded ltr left: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
