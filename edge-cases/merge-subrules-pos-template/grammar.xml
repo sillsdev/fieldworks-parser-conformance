@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<HermitCrabInput>
+  <Language>
+    <Name>MergeSubrulesPosTemplate</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN_ltr">
+        <Name>n_ltr</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_ltr">
+        <Name>v_ltr</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_rtl">
+        <Name>n_rtl</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_rtl">
+        <Name>v_rtl</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_simultaneous">
+        <Name>n_simultaneous</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_simultaneous">
+        <Name>v_simultaneous</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="featCons_ltr">
+        <Name>cons_ltr</Name>
+        <Symbols>
+          <Symbol id="consPlus_ltr">+cons</Symbol>
+          <Symbol id="consMinus_ltr">-cons</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featSyl_ltr">
+        <Name>syl_ltr</Name>
+        <Symbols>
+          <Symbol id="sylPlus_ltr">+syl</Symbol>
+          <Symbol id="sylMinus_ltr">-syl</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featTone_ltr">
+        <Name>tone_ltr</Name>
+        <Symbols>
+          <Symbol id="toneHi_ltr">hi</Symbol>
+          <Symbol id="toneLo_ltr">lo</Symbol>
+          <Symbol id="toneNone_ltr">none</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featStrid_ltr">
+        <Name>strid_ltr</Name>
+        <Symbols>
+          <Symbol id="stridPlus_ltr">+strid</Symbol>
+          <Symbol id="stridMinus_ltr">-strid</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_rtl">
+        <Name>cons_rtl</Name>
+        <Symbols>
+          <Symbol id="consPlus_rtl">+cons</Symbol>
+          <Symbol id="consMinus_rtl">-cons</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featSyl_rtl">
+        <Name>syl_rtl</Name>
+        <Symbols>
+          <Symbol id="sylPlus_rtl">+syl</Symbol>
+          <Symbol id="sylMinus_rtl">-syl</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featTone_rtl">
+        <Name>tone_rtl</Name>
+        <Symbols>
+          <Symbol id="toneHi_rtl">hi</Symbol>
+          <Symbol id="toneLo_rtl">lo</Symbol>
+          <Symbol id="toneNone_rtl">none</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featStrid_rtl">
+        <Name>strid_rtl</Name>
+        <Symbols>
+          <Symbol id="stridPlus_rtl">+strid</Symbol>
+          <Symbol id="stridMinus_rtl">-strid</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_simultaneous">
+        <Name>cons_simultaneous</Name>
+        <Symbols>
+          <Symbol id="consPlus_simultaneous">+cons</Symbol>
+          <Symbol id="consMinus_simultaneous">-cons</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featSyl_simultaneous">
+        <Name>syl_simultaneous</Name>
+        <Symbols>
+          <Symbol id="sylPlus_simultaneous">+syl</Symbol>
+          <Symbol id="sylMinus_simultaneous">-syl</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featTone_simultaneous">
+        <Name>tone_simultaneous</Name>
+        <Symbols>
+          <Symbol id="toneHi_simultaneous">hi</Symbol>
+          <Symbol id="toneLo_simultaneous">lo</Symbol>
+          <Symbol id="toneNone_simultaneous">none</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featStrid_simultaneous">
+        <Name>strid_simultaneous</Name>
+        <Symbols>
+          <Symbol id="stridPlus_simultaneous">+strid</Symbol>
+          <Symbol id="stridMinus_simultaneous">-strid</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_ltr">cell ltr</Symbol>
+          <Symbol id="cell_rtl">cell rtl</Symbol>
+          <Symbol id="cell_simultaneous">cell simultaneous</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="tbl_ltr">
+      <Name>Main_ltr</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cT_ltr">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_ltr" symbolValues="consPlus_ltr"/>
+          <FeatureValue feature="featSyl_ltr" symbolValues="sylMinus_ltr"/>
+          <FeatureValue feature="featTone_ltr" symbolValues="toneNone_ltr"/>
+          <FeatureValue feature="featStrid_ltr" symbolValues="stridMinus_ltr"/>
+          <FeatureValue feature="cell" symbolValues="cell_ltr"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_ltr">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_ltr" symbolValues="consPlus_ltr"/>
+          <FeatureValue feature="featSyl_ltr" symbolValues="sylMinus_ltr"/>
+          <FeatureValue feature="featTone_ltr" symbolValues="toneNone_ltr"/>
+          <FeatureValue feature="featStrid_ltr" symbolValues="stridPlus_ltr"/>
+          <FeatureValue feature="cell" symbolValues="cell_ltr"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_ltr">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_ltr" symbolValues="consMinus_ltr"/>
+          <FeatureValue feature="featSyl_ltr" symbolValues="sylPlus_ltr"/>
+          <FeatureValue feature="featTone_ltr" symbolValues="toneNone_ltr"/>
+          <FeatureValue feature="featStrid_ltr" symbolValues="stridMinus_ltr"/>
+          <FeatureValue feature="cell" symbolValues="cell_ltr"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cF_ltr">
+          <Representations>
+            <Representation>F</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_ltr" symbolValues="consPlus_ltr"/>
+          <FeatureValue feature="featSyl_ltr" symbolValues="sylPlus_ltr"/>
+          <FeatureValue feature="featTone_ltr" symbolValues="toneHi_ltr"/>
+          <FeatureValue feature="featStrid_ltr" symbolValues="stridMinus_ltr"/>
+          <FeatureValue feature="cell" symbolValues="cell_ltr"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_ltr">
+          <Representations>
+            <Representation>G</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_ltr" symbolValues="consPlus_ltr"/>
+          <FeatureValue feature="featSyl_ltr" symbolValues="sylPlus_ltr"/>
+          <FeatureValue feature="featTone_ltr" symbolValues="toneLo_ltr"/>
+          <FeatureValue feature="featStrid_ltr" symbolValues="stridMinus_ltr"/>
+          <FeatureValue feature="cell" symbolValues="cell_ltr"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_rtl">
+          <Representations>
+            <Representation>u</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_rtl" symbolValues="consPlus_rtl"/>
+          <FeatureValue feature="featSyl_rtl" symbolValues="sylMinus_rtl"/>
+          <FeatureValue feature="featTone_rtl" symbolValues="toneNone_rtl"/>
+          <FeatureValue feature="featStrid_rtl" symbolValues="stridMinus_rtl"/>
+          <FeatureValue feature="cell" symbolValues="cell_rtl"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_rtl">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_rtl" symbolValues="consPlus_rtl"/>
+          <FeatureValue feature="featSyl_rtl" symbolValues="sylMinus_rtl"/>
+          <FeatureValue feature="featTone_rtl" symbolValues="toneNone_rtl"/>
+          <FeatureValue feature="featStrid_rtl" symbolValues="stridPlus_rtl"/>
+          <FeatureValue feature="cell" symbolValues="cell_rtl"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_rtl">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_rtl" symbolValues="consMinus_rtl"/>
+          <FeatureValue feature="featSyl_rtl" symbolValues="sylPlus_rtl"/>
+          <FeatureValue feature="featTone_rtl" symbolValues="toneNone_rtl"/>
+          <FeatureValue feature="featStrid_rtl" symbolValues="stridMinus_rtl"/>
+          <FeatureValue feature="cell" symbolValues="cell_rtl"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cF_rtl">
+          <Representations>
+            <Representation>H</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_rtl" symbolValues="consPlus_rtl"/>
+          <FeatureValue feature="featSyl_rtl" symbolValues="sylPlus_rtl"/>
+          <FeatureValue feature="featTone_rtl" symbolValues="toneHi_rtl"/>
+          <FeatureValue feature="featStrid_rtl" symbolValues="stridMinus_rtl"/>
+          <FeatureValue feature="cell" symbolValues="cell_rtl"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_rtl">
+          <Representations>
+            <Representation>J</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_rtl" symbolValues="consPlus_rtl"/>
+          <FeatureValue feature="featSyl_rtl" symbolValues="sylPlus_rtl"/>
+          <FeatureValue feature="featTone_rtl" symbolValues="toneLo_rtl"/>
+          <FeatureValue feature="featStrid_rtl" symbolValues="stridMinus_rtl"/>
+          <FeatureValue feature="cell" symbolValues="cell_rtl"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_simultaneous">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_simultaneous" symbolValues="consPlus_simultaneous"/>
+          <FeatureValue feature="featSyl_simultaneous" symbolValues="sylMinus_simultaneous"/>
+          <FeatureValue feature="featTone_simultaneous" symbolValues="toneNone_simultaneous"/>
+          <FeatureValue feature="featStrid_simultaneous" symbolValues="stridMinus_simultaneous"/>
+          <FeatureValue feature="cell" symbolValues="cell_simultaneous"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_simultaneous">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_simultaneous" symbolValues="consPlus_simultaneous"/>
+          <FeatureValue feature="featSyl_simultaneous" symbolValues="sylMinus_simultaneous"/>
+          <FeatureValue feature="featTone_simultaneous" symbolValues="toneNone_simultaneous"/>
+          <FeatureValue feature="featStrid_simultaneous" symbolValues="stridPlus_simultaneous"/>
+          <FeatureValue feature="cell" symbolValues="cell_simultaneous"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_simultaneous">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_simultaneous" symbolValues="consMinus_simultaneous"/>
+          <FeatureValue feature="featSyl_simultaneous" symbolValues="sylPlus_simultaneous"/>
+          <FeatureValue feature="featTone_simultaneous" symbolValues="toneNone_simultaneous"/>
+          <FeatureValue feature="featStrid_simultaneous" symbolValues="stridMinus_simultaneous"/>
+          <FeatureValue feature="cell" symbolValues="cell_simultaneous"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cF_simultaneous">
+          <Representations>
+            <Representation>K</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_simultaneous" symbolValues="consPlus_simultaneous"/>
+          <FeatureValue feature="featSyl_simultaneous" symbolValues="sylPlus_simultaneous"/>
+          <FeatureValue feature="featTone_simultaneous" symbolValues="toneHi_simultaneous"/>
+          <FeatureValue feature="featStrid_simultaneous" symbolValues="stridMinus_simultaneous"/>
+          <FeatureValue feature="cell" symbolValues="cell_simultaneous"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_simultaneous">
+          <Representations>
+            <Representation>L</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_simultaneous" symbolValues="consPlus_simultaneous"/>
+          <FeatureValue feature="featSyl_simultaneous" symbolValues="sylPlus_simultaneous"/>
+          <FeatureValue feature="featTone_simultaneous" symbolValues="toneLo_simultaneous"/>
+          <FeatureValue feature="featStrid_simultaneous" symbolValues="stridMinus_simultaneous"/>
+          <FeatureValue feature="cell" symbolValues="cell_simultaneous"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny_ltr">
+        <Name>Any_ltr</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_rtl">
+        <Name>Any_rtl</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_simultaneous">
+        <Name>Any_simultaneous</Name>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="prMerge_ltr" multipleApplicationOrder="leftToRightIterative">
+        <Name>mergeTaByPos_ltr</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cT_ltr"/>
+            <Segment segment="cA_ltr"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule requiredPartsOfSpeech="posN_ltr">
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cF_ltr"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+          </PhonologicalSubrule>
+          <PhonologicalSubrule requiredPartsOfSpeech="posV_ltr">
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cG_ltr"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prMerge_rtl" multipleApplicationOrder="rightToLeftIterative">
+        <Name>mergeTaByPos_rtl</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cT_rtl"/>
+            <Segment segment="cA_rtl"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule requiredPartsOfSpeech="posN_rtl">
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cF_rtl"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+          </PhonologicalSubrule>
+          <PhonologicalSubrule requiredPartsOfSpeech="posV_rtl">
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cG_rtl"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prMerge_simultaneous" multipleApplicationOrder="simultaneous">
+        <Name>mergeTaByPos_simultaneous</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cT_simultaneous"/>
+            <Segment segment="cA_simultaneous"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule requiredPartsOfSpeech="posN_simultaneous">
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cF_simultaneous"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+          </PhonologicalSubrule>
+          <PhonologicalSubrule requiredPartsOfSpeech="posV_simultaneous">
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cG_simultaneous"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl_ltr" morphologicalRuleOrder="unordered" phonologicalRules="prMerge_ltr prMerge_rtl prMerge_simultaneous">
+        <Name>Main_ltr</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="mrSfxS_ltr" requiredPartsOfSpeech="posV_ltr">
+            <Name>sfxS_ltr</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subSfxS_ltr">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemS_ltr">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_ltr"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemS_ltr"/>
+                  <InsertSegments>
+                    <PhoneticShape>s</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>S_ltr</MorphemeId>
+            <Gloss>s</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrSfxS_rtl" requiredPartsOfSpeech="posV_rtl">
+            <Name>sfxS_rtl</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subSfxS_rtl">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemS_rtl">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_rtl"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemS_rtl"/>
+                  <InsertSegments>
+                    <PhoneticShape>o</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>S_rtl</MorphemeId>
+            <Gloss>s</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrSfxS_simultaneous" requiredPartsOfSpeech="posV_simultaneous">
+            <Name>sfxS_simultaneous</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subSfxS_simultaneous">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemS_simultaneous">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_simultaneous"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemS_simultaneous"/>
+                  <InsertSegments>
+                    <PhoneticShape>d</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>S_simultaneous</MorphemeId>
+            <Gloss>s</Gloss>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <AffixTemplates>
+          <AffixTemplate requiredPartsOfSpeech="posV_ltr">
+            <Name>verb_ltr</Name>
+            <Slot morphologicalRules="mrSfxS_ltr">
+              <Name>suffix_ltr</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_rtl">
+            <Name>verb_rtl</Name>
+            <Slot morphologicalRules="mrSfxS_rtl">
+              <Name>suffix_rtl</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_simultaneous">
+            <Name>verb_simultaneous</Name>
+            <Slot morphologicalRules="mrSfxS_simultaneous">
+              <Name>suffix_simultaneous</Name>
+            </Slot>
+          </AffixTemplate>
+        </AffixTemplates>
+        <LexicalEntries>
+          <LexicalEntry id="eTaN_ltr" partOfSpeech="posN_ltr">
+            <Allomorphs>
+              <Allomorph id="aTaN_ltr">
+                <PhoneticShape>ta</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_N_ltr</MorphemeId>
+            <Gloss>ta.n</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTaV_ltr" partOfSpeech="posV_ltr">
+            <Allomorphs>
+              <Allomorph id="aTaV_ltr">
+                <PhoneticShape>ta</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_V_ltr</MorphemeId>
+            <Gloss>ta.v</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTata_ltr" partOfSpeech="posN_ltr">
+            <Allomorphs>
+              <Allomorph id="aTata_ltr">
+                <PhoneticShape>tata</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TATA_ltr</MorphemeId>
+            <Gloss>tata</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTaN_rtl" partOfSpeech="posN_rtl">
+            <Allomorphs>
+              <Allomorph id="aTaN_rtl">
+                <PhoneticShape>ue</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_N_rtl</MorphemeId>
+            <Gloss>ta.n</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTaV_rtl" partOfSpeech="posV_rtl">
+            <Allomorphs>
+              <Allomorph id="aTaV_rtl">
+                <PhoneticShape>ue</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_V_rtl</MorphemeId>
+            <Gloss>ta.v</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTata_rtl" partOfSpeech="posN_rtl">
+            <Allomorphs>
+              <Allomorph id="aTata_rtl">
+                <PhoneticShape>ueue</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TATA_rtl</MorphemeId>
+            <Gloss>tata</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTaN_simultaneous" partOfSpeech="posN_simultaneous">
+            <Allomorphs>
+              <Allomorph id="aTaN_simultaneous">
+                <PhoneticShape>fg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_N_simultaneous</MorphemeId>
+            <Gloss>ta.n</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTaV_simultaneous" partOfSpeech="posV_simultaneous">
+            <Allomorphs>
+              <Allomorph id="aTaV_simultaneous">
+                <PhoneticShape>fg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_V_simultaneous</MorphemeId>
+            <Gloss>ta.v</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eTata_simultaneous" partOfSpeech="posN_simultaneous">
+            <Allomorphs>
+              <Allomorph id="aTata_simultaneous">
+                <PhoneticShape>fgfg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TATA_simultaneous</MorphemeId>
+            <Gloss>tata</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

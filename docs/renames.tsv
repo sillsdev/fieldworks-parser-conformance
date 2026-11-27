@@ -31,3 +31,6 @@ edge-cases/alias-output-1-literal	edge-cases/alias-output-with-features		wave-20
 edge-cases/alias-output-1-singleton	edge-cases/alias-output-with-features		wave-2026-11-27
 edge-cases/featureless-literal-target	edge-cases/featureless-target		wave-2026-11-27
 edge-cases/featureless-singleton-target	edge-cases/featureless-target		wave-2026-11-27
+edge-cases/merge-subrules-pos-ltr-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27
+edge-cases/merge-subrules-pos-rtl-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27
+edge-cases/merge-subrules-pos-simultaneous-template	edge-cases/merge-subrules-pos-template		wave-2026-11-27

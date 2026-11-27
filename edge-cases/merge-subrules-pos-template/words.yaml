@@ -1,0 +1,159 @@
+language: MergeSubrulesPosTemplate
+inspired_by:
+  - synthetic part-of-speech-gated syllabary merge (not modeling any real language)
+sources:
+  - src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs
+  - src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs
+requires:
+  - phonology
+words:
+  - word: F
+    note: '[cell ltr] The noun TA_N fused by the noun subrule.'
+    parses:
+      - signature: TA_N_ltr|F
+        rules:
+          - prMerge_ltr
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: Gs
+    note: '[cell ltr] The verb TA_V with the mandatory template suffix, fused by the verb subrule.'
+    parses:
+      - signature: TA_V_ltr+S_ltr|Gs
+        rules:
+          - mrSfxS_ltr
+          - prMerge_ltr
+    exercises:
+      - 'RewriteRule direction (Dir): left-to-right'
+  - word: FF
+    note: '[cell ltr] TATA fused at both sites (left to right scan).'
+    parses:
+      - signature: TATA_ltr|FF
+        rules:
+          - prMerge_ltr
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: G
+    note: '[cell ltr] A verb without its mandatory template suffix is not a word, and no noun fuses to G.'
+    expect_fail: true
+    exercises:
+      - Affix template slots (obligatory/disjunctive/ordering)
+  - word: Fs
+    note: '[cell ltr] The suffix is verb-only and reachable only through the verb template; no verb fuses to F.'
+    expect_fail: true
+    exercises:
+      - Affix template slots (obligatory/disjunctive/ordering)
+  - word: ta
+    note: '[cell ltr] The merge is obligatory for both parts of speech.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: tas
+    note: '[cell ltr] Same, under the suffix.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: tata
+    note: '[cell ltr] Same, two sites.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: H
+    note: '[cell rtl] The noun TA_N fused by the noun subrule.'
+    parses:
+      - signature: TA_N_rtl|H
+        rules:
+          - prMerge_rtl
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: Jo
+    note: '[cell rtl] The verb TA_V with the mandatory template suffix, fused by the verb subrule.'
+    parses:
+      - signature: TA_V_rtl+S_rtl|Jo
+        rules:
+          - mrSfxS_rtl
+          - prMerge_rtl
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: HH
+    note: '[cell rtl] TATA fused at both sites (right-to-left scan).'
+    parses:
+      - signature: TATA_rtl|HH
+        rules:
+          - prMerge_rtl
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: J
+    note: '[cell rtl] A verb without its mandatory template suffix is not a word, and no noun fuses to G.'
+    expect_fail: true
+    exercises:
+      - Affix template slots (obligatory/disjunctive/ordering)
+  - word: Ho
+    note: '[cell rtl] The suffix is verb-only and reachable only through the verb template; no verb fuses to F.'
+    expect_fail: true
+    exercises:
+      - Affix template slots (obligatory/disjunctive/ordering)
+  - word: ue
+    note: '[cell rtl] The merge is obligatory for both parts of speech.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: ueo
+    note: '[cell rtl] Same, under the suffix.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: ueue
+    note: '[cell rtl] Same, two sites.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: K
+    note: '[cell simultaneous] The noun TA_N fused by the noun subrule.'
+    parses:
+      - signature: TA_N_simultaneous|K
+        rules:
+          - prMerge_simultaneous
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: Ld
+    note: '[cell simultaneous] The verb TA_V with the mandatory template suffix, fused by the verb subrule.'
+    parses:
+      - signature: TA_V_simultaneous+S_simultaneous|Ld
+        rules:
+          - mrSfxS_simultaneous
+          - prMerge_simultaneous
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: KK
+    note: '[cell simultaneous] TATA fused at both sites (simultaneously scan).'
+    parses:
+      - signature: TATA_simultaneous|KK
+        rules:
+          - prMerge_simultaneous
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: L
+    note: '[cell simultaneous] A verb without its mandatory template suffix is not a word, and no noun fuses to G.'
+    expect_fail: true
+    exercises:
+      - Affix template slots (obligatory/disjunctive/ordering)
+  - word: Kd
+    note: '[cell simultaneous] The suffix is verb-only and reachable only through the verb template; no verb fuses to F.'
+    expect_fail: true
+    exercises:
+      - Affix template slots (obligatory/disjunctive/ordering)
+  - word: fg
+    note: '[cell simultaneous] The merge is obligatory for both parts of speech.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: fgd
+    note: '[cell simultaneous] Same, under the suffix.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
+  - word: fgfg
+    note: '[cell simultaneous] Same, two sites.'
+    expect_fail: true
+    exercises:
+      - 'RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level'
