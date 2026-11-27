@@ -6,10 +6,11 @@ WritingSystemStore/*.ldml; the fixture is fieldworks_producible: true; phonology
 version 1 and its base_sha256 equals the SHA-256 of the exact bytes of project.fwdata; and
 project.fwdata and every .ldml are well-formed XML.
 
-Freshness (issue #2): phonology-mutations.yaml carries grammar_sha256, the SHA-256 of the fixture's grammar.xml
-(text, line endings normalised, as the manifest hashes it), and it must still match. A witness without it
-must be listed in fieldworks-stale-witnesses.tsv; a listed witness that has the field, or whose fixture has
-no witness, is a stale row. Each .ldml must be minimal: only the six top-level elements that define a
+Freshness (issue #2): fieldworks-witness-grammars.tsv records the SHA-256 of the grammar.xml each witness was
+authored against (text, line endings normalised, as the manifest hashes it), and it must still match. A witness
+not listed there must be listed in fieldworks-stale-witnesses.tsv; a witness in both files, or a row whose fixture
+has no witness, is a stale row. (The hash is not in phonology-mutations.yaml: its key vocabulary is v1 and
+sillsdev/machine's gate rejects any other key.) Each .ldml must be minimal: only the six top-level elements that define a
 writing system and at most LDML_MAX_BYTES. Standard library only.
 """
 import hashlib
@@ -20,21 +21,27 @@ import xml.etree.ElementTree as ET
 from suite import ROOT, STRESS_GROUP, fixture_dirs, fixture_id, sha256_text
 
 STALE_FILE = ROOT / "fieldworks-stale-witnesses.tsv"
+HASH_FILE = ROOT / "fieldworks-witness-grammars.tsv"
 LDML_ELEMENTS = {"identity", "layout", "characters", "delimiters", "collations", "special"}
 LDML_MAX_BYTES = 65536
 
 
-def read_stale():
-    if not STALE_FILE.is_file():
-        return set()
-    rows = (line.split("\t")[0].strip() for line in STALE_FILE.read_text(encoding="utf-8").splitlines()
-            if line.strip() and not line.startswith("#"))
-    return set(rows)
+def read_table(path):
+    """Tab-separated rows (comment lines skipped) as {first column: second column}."""
+    if not path.is_file():
+        return {}
+    rows = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.strip() and not line.startswith("#"):
+            first, _, rest = line.partition("\t")
+            rows[first.strip()] = rest.strip()
+    return rows
 
 
 def main() -> int:
     problems, checked = [], 0
-    stale = read_stale()
+    stale = set(read_table(STALE_FILE))
+    hashes = read_table(HASH_FILE)
     seen = set()
     for directory in fixture_dirs() + fixture_dirs(groups=(STRESS_GROUP,)):
         witness = directory / "fieldworks"
@@ -81,18 +88,19 @@ def main() -> int:
             problems.append(f"{name}: base_sha256 {declared.group(1)[:12]}... != project.fwdata {actual[:12]}...")
         fixture = fixture_id(directory)
         seen.add(fixture)
-        grammar = re.search(r"^grammar_sha256:\s*([0-9a-f]{64})\s*$", manifest, re.M)
-        if grammar:
+        recorded = hashes.get(fixture)
+        if recorded:
             current = sha256_text(directory / "grammar.xml")
-            if grammar.group(1) != current:
-                problems.append(f"{name}: grammar_sha256 {grammar.group(1)[:12]}... != grammar.xml {current[:12]}...; "
+            if recorded != current:
+                problems.append(f"{name}: {HASH_FILE.name} has {recorded[:12]}... but grammar.xml is {current[:12]}...; "
                                 "the witness is stale, regenerate it (do not just update the hash)")
             if fixture in stale:
-                problems.append(f"{fixture}: listed in {STALE_FILE.name} but its witness has grammar_sha256; delete the row")
+                problems.append(f"{fixture}: listed in both {STALE_FILE.name} and {HASH_FILE.name}; keep one row")
         elif fixture not in stale:
-            problems.append(f"{name}/phonology-mutations.yaml: grammar_sha256 missing and {fixture} is not in {STALE_FILE.name}")
-    for fixture in sorted(stale - seen):
-        problems.append(f"{STALE_FILE.name}: {fixture} has no witness; delete the row")
+            problems.append(f"{fixture}: no row in {HASH_FILE.name} or {STALE_FILE.name}")
+    for table, rows in ((STALE_FILE, stale), (HASH_FILE, set(hashes))):
+        for fixture in sorted(rows - seen):
+            problems.append(f"{table.name}: {fixture} has no witness; delete the row")
     for problem in problems:
         print(problem)
     print(f"fwdata: {checked} witness directories, {len(problems)} problems")

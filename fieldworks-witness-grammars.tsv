@@ -1,0 +1,10 @@
+# The grammar.xml each FieldWorks witness was authored against: fixture id, then the SHA-256 of grammar.xml (text,
+# line endings normalised, as the manifest hashes it). Tab-separated. scripts/check_fwdata.py fails when a hash no
+# longer matches, because the witness may then project to a different grammar. Never update a hash to make the check
+# pass after editing grammar.xml: regenerate the witness first. A witness not listed here must be listed in
+# fieldworks-stale-witnesses.tsv. The hash lives here, not in phonology-mutations.yaml, because that file's key
+# vocabulary is v1 and sillsdev/machine's gate rejects any other key.
+edge-cases/adhoc-prohibition-variant-enclitic-first	a34e518229850e47fa699e6f5a74ba7d6a07c69ebea3fba3233a310111cfdb8e
+edge-cases/adhoc-prohibition-variant-main-first-enclitic	d2d54f82ef1890ab01b608403a35af8374ce47b2485a52271fdd8c580489a2a9
+edge-cases/empty-required-template-slot	6db95e9baebaf08eab440a4c262c248b5c1189f959eee0228d25fd27b5cf8e39
+edge-cases/fw-metathesis-switch-indices	95c856be92c4912542c917a5236729ca594544f2804b22de3acd3b6a9c6a3d46

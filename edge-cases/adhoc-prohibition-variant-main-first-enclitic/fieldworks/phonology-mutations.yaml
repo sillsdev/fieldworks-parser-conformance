@@ -1,6 +1,5 @@
 version: 1
 base_sha256: f0296b09fbd3a84b1f623f9f657f99f3c21d40a707f8620a241583e73b7f86e3
-grammar_sha256: d2d54f82ef1890ab01b608403a35af8374ce47b2485a52271fdd8c580489a2a9
 cases:
   - id: empty-phoneme-inventory
     operations:
