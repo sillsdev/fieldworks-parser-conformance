@@ -14,15 +14,17 @@ detection (ADR 0008 items 1 and 4). The builds file is JSON, kept outside the re
 
   {"fixed": {"runner": "/path/to/hc-conformance"},
    "bugs": {"machine#653": {"runner": "/path/to/hc-conformance-at-bug-build"},
-            "pangloss#58":  {"runner": "/path/to/hc-conformance", "adapter": "/path/to/pangloss batch {grammar} {words} {output}"}}}
+            "pangloss#58":  {"runner": "/path/to/hc-conformance", "adapter": "/path/to/old-pangloss batch {grammar} {words} {output}",
+                            "fixed": {"runner": "/path/to/hc-conformance", "adapter": "/path/to/new-pangloss batch {grammar} {words} {output}"}}}}
 
 `runner` is a built `hc-conformance` (a DLL, an executable, or a command line). Without `adapter` the C# engine
 inside that runner is the engine under test, so a C# bug build is the reference runner rebuilt with the fix
 reverted. With `adapter` the runner only drives an external engine through the batch contract (PROTOCOL.md), so a
 PanGloss bug build is a PanGloss binary from before its fix. The fixed build is the reference runner at
-reference.commit. The suite is replayed whole, once per build (44 s), and a word is a detection of a bug when it
+reference.commit, or a bug's own `fixed` entry (the same engine after its fix) for a consumer's bug. The suite is replayed whole, once per build (44 s), and a word is a detection of a bug when it
 fails on the bug build and passes on the fixed build; test cases that do not cite the bug are reported as well,
-marked, since they detect it too.
+marked, since they detect it too. Make a bug's `fixed` build the commit that holds the fix, not a later release:
+every other fix between the two builds shows up as an `also` detector.
 
 coverage. `--runner` is the reference runner's DLL. Each test case is copied into a one-case suite and run under
 `dotnet-coverage collect` filtered to the engine's source files; cobertura output gives lines and branch
@@ -153,9 +155,15 @@ def run_suite(spec: dict, suite: Path) -> dict:
 def detection(builds: dict, suite: Path = ROOT) -> dict:
     """{bug: {"citing": [...], "detectors": {test case: [words]}, "also": {test case: [words]}}}"""
     cited = cited_bugs(suite)
-    baseline = run_suite(builds["fixed"], suite)
+    baselines = {}
     result = {}
     for bug, spec in builds["bugs"].items():
+        # A bug build of another engine than the reference is compared with that engine's own fixed build.
+        fixed = spec.get("fixed", builds["fixed"])
+        key = json.dumps(fixed, sort_keys=True)
+        if key not in baselines:
+            baselines[key] = run_suite(fixed, suite)
+        baseline = baselines[key]
         failed = run_suite(spec, suite)
         detectors = {}
         for case, words in failed.items():
@@ -168,7 +176,8 @@ def detection(builds: dict, suite: Path = ROOT) -> dict:
             "detectors": {c: w for c, w in sorted(detectors.items()) if c in citing},
             "also": {c: w for c, w in sorted(detectors.items()) if c not in citing},
         }
-    result["_baseline_failing"] = {c: sorted(w) for c, w in sorted(baseline.items())}
+    result["_baseline_failing"] = {c: sorted(w) for c, w in sorted(baselines[json.dumps(builds["fixed"], sort_keys=True)].items())} \
+        if json.dumps(builds["fixed"], sort_keys=True) in baselines else {}
     return result
 
 
