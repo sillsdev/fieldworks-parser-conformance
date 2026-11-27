@@ -20,6 +20,8 @@ words:
     parses:
       - signature: "KTB|kotab"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: kpfotab
     note: >-
@@ -54,6 +56,8 @@ words:
     parses:
       - signature: "TSU|[ጸፀ]a"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: ፀa
     note: >-
@@ -65,6 +69,8 @@ words:
     parses:
       - signature: "TSU|[ጸፀ]a"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: ጸan
     note: TSU + mrGlyphSuf ("-n"), exercising the merged segment inside real morphology, not just a bare-root tokenization check.
@@ -72,3 +78,5 @@ words:
     parses:
       - signature: "TSU+GLYPHSUF|[ጸፀ]an"
         rules: [mrGlyphSuf]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

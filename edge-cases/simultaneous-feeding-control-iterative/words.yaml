@@ -12,12 +12,18 @@ words:
       - signature: "GABA|gaga"
         gloss: gaga-control
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: gigigi
     note: Underlying control shape; the obligatory rewrite changes its two eligible positions, so the raw shape is rejected.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: gigugu
     note: "Simultaneous-shaped negative: iterative application bleeds the second overlapping rewrite."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: gigugi
     note: "Iterative discriminating positive: the first rewrite changes the environment seen by the second match."
     parses:

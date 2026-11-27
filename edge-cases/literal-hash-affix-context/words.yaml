@@ -9,10 +9,14 @@ words:
   - word: ta
     note: "A literal # boundary marker in the left context is not a word-edge anchor."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: taa
     note: The same literal-marker context must not rewrite a two-segment prefix either.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: ara
     note: A prefix whose r is internal remains unchanged under the literal-marker rule.
@@ -31,6 +35,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "ROOT_RA|ra"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: raa
     note: "The two-segment r prefix remains unchanged when the literal # is absent from the shape."
@@ -43,16 +49,22 @@ words:
   - word: at
     note: "A literal # boundary marker in the right context is not a word-edge anchor."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: a
     note: Bare root control.
     parses:
       - signature: "ROOT_A|a"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: ata
     note: The internal r of the ar prefix remains literal under the left boundary context.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: ar
     note: The root-plus-suffix parses without the right literal # boundary marker.

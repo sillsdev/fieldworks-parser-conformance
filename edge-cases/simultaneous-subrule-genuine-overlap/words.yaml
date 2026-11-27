@@ -46,6 +46,8 @@ words:
     provenance: "hc.dll batch output, verbatim (ADR 0001's named unverified-oracle configuration)"
     expect_fail: true
     blocked_by: [prOverlapDemo]
+    exercises:
+      - "RewriteRule Simultaneous"
 
   # ---- Non-overlapping controls: each subrule alone, at a position only it matches -----------
   - word: bu
@@ -78,12 +80,16 @@ words:
     provenance: "hc.dll batch output, verbatim"
     expect_fail: true
     blocked_by: [prOverlapDemo]
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: pi
     note: The underlying shape of PI, likewise never a valid surface.
     provenance: "hc.dll batch output, verbatim"
     expect_fail: true
     blocked_by: [prOverlapDemo]
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: pe
     note: >-
@@ -92,6 +98,8 @@ words:
     provenance: "hc.dll batch output, verbatim"
     expect_fail: true
     blocked_by: [prOverlapDemo]
+    exercises:
+      - "RewriteRule Simultaneous"
 
   # ---- Wrong-output controls: right vowel, wrong consonant for that vowel's subrule ----------
   - word: bi
@@ -101,6 +109,8 @@ words:
     provenance: "hc.dll batch output, verbatim"
     expect_fail: true
     blocked_by: [prOverlapDemo]
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: du
     note: >-
@@ -109,3 +119,5 @@ words:
     provenance: "hc.dll batch output, verbatim"
     expect_fail: true
     blocked_by: [prOverlapDemo]
+    exercises:
+      - "RewriteRule Simultaneous"

@@ -7,33 +7,33 @@ words:
     parses:
       - signature: "ROOT|a"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: p
     note: "C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|p"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: pa
     note: "C# returns 2 analyses (PRE+ROOT|p(^0)?a; ROOT+ROOT|pa): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+ROOT|p(^0)?a"
         rules: ["PRE"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "ROOT+ROOT|pa"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: pp
     note: "C# returns 2 analyses (PRE+ROOT|p(^0)?p; ROOT|pp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+ROOT|p(^0)?p"
         rules: ["PRE"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - signature: "ROOT|pp"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: aa
     note: "C# returns 1 analysis (ROOT|aa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -53,65 +53,59 @@ words:
     parses:
       - signature: "PRE+ROOT+ROOT|p(^0)?pa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT+ROOT|p(^0)?pa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: pap
     note: "C# returns 2 analyses (PRE+ROOT+ROOT|p(^0)?ap): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+ROOT+ROOT|p(^0)?ap"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT+ROOT|p(^0)?ap"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: pppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: apa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: paa
     note: "C# returns 2 analyses (PRE+ROOT|p(^0)?aa): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+ROOT|p(^0)?aa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT|p(^0)?aa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: ppp
     note: "C# returns 2 analyses (PRE+ROOT|p(^0)?pp): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+ROOT|p(^0)?pp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+ROOT|p(^0)?pp"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: aapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"

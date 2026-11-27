@@ -44,6 +44,8 @@ words:
     parses:
       - signature: "TULIK|tulik"
         rules: []
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: menulik
     note: >-
@@ -71,6 +73,8 @@ words:
     parses:
       - signature: "BALO|balo"
         rules: []
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: membalo
     note: >-
@@ -82,12 +86,16 @@ words:
     parses:
       - signature: "NPFX+BALO|membalo"
         rules: [mrNPfx, prNasalAssimBilabial]
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: sanit
     note: SANIT bare root, no MPR feature -- a plain control for the MPR-exclusion pair below.
     parses:
       - signature: "SANIT|sanit"
         rules: []
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: sanitan
     note: SANIT + mrSuf ("-an") -- no MPR feature on this root, so mrSuf's excludedMPRFeatures="mprException" gate is vacuously satisfied and the rule applies normally.
@@ -95,12 +103,16 @@ words:
     parses:
       - signature: "SANIT+SUF|sanitan"
         rules: [mrSuf]
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: vokad
     note: VOKAD bare root (carries ruleFeatures="mprException") -- a plain control.
     parses:
       - signature: "VOKAD|vokad"
         rules: []
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: vokadan
     note: >-
@@ -133,6 +145,8 @@ words:
           rule's exclusion GATES on it. sanitan (SANIT, no mprException) is the plain control that
           shows mrSuf fires normally when the feature is simply absent, so vokadan's block is
           attributable to the gate, not to mrSuf never applying at all.
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: vokadi
     note: >-
@@ -143,6 +157,8 @@ words:
     parses:
       - signature: "VOKAD+SUFALT|vokadi"
         rules: [mrSufAlt]
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: menanukam
     note: >-
@@ -179,6 +195,8 @@ words:
           lets the deletion through, producing NPFX+TANUK+DELEXCLSRC|menanukam -- the PresentGatedForm
           arm: the feature is PRESENT (conferred by the affix, never by TANUK's own declaration) and
           the rule's exclusion GATES on it.
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: mentanukam
     note: >-
@@ -197,9 +215,13 @@ words:
         rules: [mrNPfx, mrDelExclSrc, prNasalAssimAlveolar]
       - signature: "NPFX+TANUK+DELEXCLSRC|mentanukam"
         rules: [mrDelExclSrc, mrNPfx, prNasalAssimAlveolar]
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: tanuk
     note: TANUK bare root, no prefix or suffix -- a plain control.
     parses:
       - signature: "TANUK|tanuk"
         rules: []
+    exercises:
+      - "RewriteRule direction (Dir): left-to-right"

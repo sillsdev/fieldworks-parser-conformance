@@ -21,6 +21,8 @@ words:
     parses:
       - signature: "ROOT|tolu"
         rules: []
+    exercises:
+      - "MPR features/groups"
 
   - word: patoluka
     note: >-
@@ -55,6 +57,8 @@ words:
     provenance: "cross-stem material-determination containment regression"
     expect_fail: true
     blocked_by: [mrSfx]
+    exercises:
+      - "MPR features/groups"
 
   - word: butoluka
     note: >-
@@ -64,3 +68,5 @@ words:
     provenance: "cross-stem material-determination containment regression"
     expect_fail: true
     blocked_by: [mrSfx]
+    exercises:
+      - "MPR features/groups"

@@ -36,3 +36,5 @@ words:
       Negative control: both synthesis rules are obligatory, so the unmodified lexical form is not
       a surface word.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

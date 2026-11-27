@@ -18,6 +18,8 @@ words:
       - signature: "TIK|tik"
         gloss: tik
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: tikus
     note: >-
@@ -36,6 +38,8 @@ words:
       - signature: "BON|bon"
         gloss: bon
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: bonus
     note: >-
@@ -54,9 +58,13 @@ words:
       guess-only pattern ePattern, which never fires in ordinary (non-guess) lookup -- zero
       analyses.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: tikbon
     note: >-
       Negative control: concatenation of the two ordinary roots with no CompoundingRule declared
       to join them, and "bon" is not the PAST suffix's output shape -- zero analyses.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

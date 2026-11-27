@@ -10,97 +10,81 @@ words:
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'ii' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: iy
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'iy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ia
     note: "Positive witness for ambiguous disagree feature class bounded rtl: 'ia' must retain the declared analysis."
     parses:
       - signature: "AU|[iy]a"
         rules: ["prDoubleAlpha"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: iu
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'iu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: yi
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'yi' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: yy
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'yy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ya
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'ya' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: yu
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'yu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ai
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'ai' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ay
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'ay' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: aa
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'aa' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: au
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'au' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ui
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'ui' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: uy
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'uy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ua
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'ua' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: uu
     note: "Negative control for ambiguous disagree feature class bounded rtl: 'uu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"

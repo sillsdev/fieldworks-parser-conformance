@@ -14,64 +14,75 @@ words:
     parses:
       - signature: "R0|akta"
         rules: [prule1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: atka
     note: >-
       Underlying form, never a surface: the obligatory rule rewrites atk to akt, so atka has no analysis.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: aktas
     note: >-
       As akta plus the suffix: the rule applies after the suffix is added (suffix first, then metathesis).
     parses:
       - signature: "R0+A|akta+?s"
         rules: [mrule1, prule1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: atkas
     note: >-
       Suffixed underlying form: no analysis for the same reason.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: itka
     note: >-
       Control: the left environment is i, not a, so the rule does not apply to R1 and its own form is the surface.
     parses:
       - signature: "R1|itka"
         rules: []
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: ikta
     note: >-
       Control: the swapped form of R1 has no analysis because the rule never applied to it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: itkas
     note: >-
       Control: suffixed R1 surfaces unchanged.
     parses:
       - signature: "R1+A|itka+?s"
         rules: [mrule1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: tika
     note: >-
       Control: R2 has no a before tk, so it surfaces unchanged.
     parses:
       - signature: "R2|tika"
         rules: []
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: tikas
     note: >-
       Control: suffixed R2 surfaces unchanged.
     parses:
       - signature: "R2+A|tika+?s"
         rules: [mrule1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: kita
     note: >-
       Control: the metathesized form of nothing; R2 never swaps t and k.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"
   - word: kitas
     note: >-
       Control: as kita, suffixed.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > switch indices"

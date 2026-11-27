@@ -112,6 +112,8 @@ words:
         gloss: pak
         rules: []
         exercises: []
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
 
   - word: pit
     note: PIT bare root, no suffix -- the other plain control root used by the affix-disjunctivity rows below.
@@ -120,6 +122,8 @@ words:
         gloss: pit
         rules: []
         exercises: []
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
 
   - word: pakza
     note: >-

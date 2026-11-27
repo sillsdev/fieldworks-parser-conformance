@@ -10,109 +10,92 @@ words:
     note: "Negative control for quantified alpha bounded rtl left: 'teca' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tcce
     note: "Positive witness for quantified alpha bounded rtl left: 'tcce' must retain the declared analysis."
     parses:
       - signature: "ROOT2|tcce"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tccca
     note: "Positive witness for quantified alpha bounded rtl left: 'tccca' must retain the declared analysis."
     parses:
       - signature: "ROOT3|tccca"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: taca
     note: "Negative control for quantified alpha bounded rtl left: 'taca' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tcca
     note: "Negative control for quantified alpha bounded rtl left: 'tcca' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: te
     note: "Negative control for quantified alpha bounded rtl left: 'te' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ta
     note: "Negative control for quantified alpha bounded rtl left: 'ta' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tace
     note: "Positive witness for quantified alpha bounded rtl left: 'tace' must retain the declared analysis."
     parses:
       - signature: "ROOT1|tace"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tcte
     note: "Negative control for quantified alpha bounded rtl left: 'tcte' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tatc
     note: "Negative control for quantified alpha bounded rtl left: 'tatc' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tetc
     note: "Negative control for quantified alpha bounded rtl left: 'tetc' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tccccca
     note: "Negative control for quantified alpha bounded rtl left: 'tccccca' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tccccce
     note: "Negative control for quantified alpha bounded rtl left: 'tccccce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tccce
     note: "Negative control for quantified alpha bounded rtl left: 'tccce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: tece
     note: "Negative control for quantified alpha bounded rtl left: 'tece' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ttca
     note: "Positive witness for quantified alpha bounded rtl left: 'ttca' must retain the declared analysis."
     parses:
       - signature: "MIXED|ttca"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ttce
     note: "Negative control for quantified alpha bounded rtl left: 'ttce' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"

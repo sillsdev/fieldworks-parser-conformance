@@ -8,6 +8,8 @@ words:
     parses:
       - signature: "W|́p"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: "áp"
     note: "C# returns 2 analyses (X+W|áp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -33,6 +35,8 @@ words:
   - word: "ápa"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|sa): pins that this word has a route and its morpheme sequence."
     parses:

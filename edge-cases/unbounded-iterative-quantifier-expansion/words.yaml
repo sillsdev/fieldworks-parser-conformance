@@ -25,8 +25,8 @@ words:
     parses:
       - signature: "ROOT1|ect"
         rules: [prIterUnbounded]
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: ecct
     note: >-
@@ -37,8 +37,8 @@ words:
     parses:
       - signature: "ROOT2|ecct"
         rules: [prIterUnbounded]
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: eccccct
     note: >-
@@ -53,8 +53,8 @@ words:
     parses:
       - signature: "ROOT3|eccccct"
         rules: [prIterUnbounded]
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: at
     note: >-
@@ -67,8 +67,8 @@ words:
     parses:
       - signature: "ROOT4|at"
         rules: []
-        exercises:
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: act
     note: >-
@@ -79,18 +79,18 @@ words:
     provenance: "docs/conformance/representative-typology-basis.md S1.2.6"
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: acct
     note: ROOT2's own RAW underlying shape, queried directly -- same reasoning as "act" (should have rewritten to "ecct").
     provenance: "docs/conformance/representative-typology-basis.md S1.2.6"
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
 
   - word: accccct
     note: ROOT3's own RAW underlying shape, queried directly -- same reasoning as "act" (should have rewritten to "eccccct"), at the same high occurrence count as the genuine-unboundedness positive witness above.
     provenance: "docs/conformance/representative-typology-basis.md S1.2.6"
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"

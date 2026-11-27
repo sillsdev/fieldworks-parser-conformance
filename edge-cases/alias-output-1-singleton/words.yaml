@@ -20,3 +20,5 @@ words:
   - word: aka
     note: Obligatory rewrite prevents the unchanged root from surfacing.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

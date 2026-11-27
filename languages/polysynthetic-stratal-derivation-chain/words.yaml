@@ -66,6 +66,8 @@ words:
         gloss: land
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: nunaliq
     note: NUNA + DERIV ("-liq", posN->posV verbalizer) in the deep Derivation stratum -- verbalized, not yet inflected.
@@ -85,9 +87,8 @@ words:
       - signature: "NUNA+DERIV+INFL|nunaliqvuq"
         gloss: land-VBLZ-3SG.IND
         rules: [mrDeriv, mrInfl]
-        exercises:
-          - "Stratum (Linear/Unordered rule order)"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "Stratum (Linear/Unordered rule order)"
 
   - word: nunavuq
     note: INFL attempted directly on the bare noun "nuna" -- mrInfl requires a posV stem, but nothing verbalized "nuna" (posN), so inflection can never attach. Zero parses (inflection presupposes the derivation stratum ran).
@@ -127,15 +128,11 @@ words:
       - signature: "AKU+TATN|aku+?tat"
         gloss: meat-shadow
         rules: [mrCompoundHN]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "AKU+TATV|aku+?tat"
         gloss: meat-tie
         rules: [mrCompoundHN]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "Boundary markers (CharacterDefinitionTable)"
 
   - word: pitat
     note: TAT's verb reading (TATV, posV1) with the pi- prefix, standalone (no compounding) -- proves mrPrefixPi1 works in isolation, so akupitat's rejection below is specifically the non-head-must-be-a-root constraint.
@@ -194,15 +191,11 @@ words:
       - signature: "SILA+NUKN|sila+?nuk"
         gloss: weather-horn
         rules: [mrCompoundNH]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "SILA+NUKV|sila+?nuk"
         gloss: weather-pull
         rules: [mrCompoundNH]
-        exercises:
-          - "CompoundingRule"
-          - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "Boundary markers (CharacterDefinitionTable)"
 
   - word: silamanuk
     note: >-

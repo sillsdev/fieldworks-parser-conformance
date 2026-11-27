@@ -20,24 +20,24 @@ words:
     parses:
       - signature: "ROOT1|tevi"
         rules: []
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > recursion"
 
   - word: mafl
     note: ROOT2 bare root -- a plain control.
     parses:
       - signature: "ROOT2|mafl"
         rules: []
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > recursion"
 
   - word: isra
     note: ROOT3 bare root -- a plain control.
     parses:
       - signature: "ROOT3|isra"
         rules: []
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > recursion"
 
   - word: tevimafl
     note: >-
@@ -51,8 +51,8 @@ words:
     parses:
       - signature: "ROOT1+ROOT2|tevimafl"
         rules: [cr1]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > recursion"
 
   - word: maflisra
     note: ROOT2(head)+ROOT3(nonhead) via one application of cr1 -- a second depth-1 positive control (different root pair, same shape as tevimafl).
@@ -60,8 +60,8 @@ words:
     parses:
       - signature: "ROOT2+ROOT3|maflisra"
         rules: [cr1]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > recursion"
 
   - word: tevimaflisra
     note: >-
@@ -87,4 +87,4 @@ words:
     expect_fail: true
     blocked_by: [cr1]
     exercises:
-      - "CompoundingRule"
+      - "CompoundingRule > recursion"

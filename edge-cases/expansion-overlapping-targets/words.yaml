@@ -30,6 +30,8 @@ words:
         rules: [prBreak]
       - signature: "KAAA|kaaa"
         rules: [prBreak]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kaa
     note: "Control with one site: KA (kA -> kaa) and KAA3 (no rule)."
     parses:
@@ -37,9 +39,15 @@ words:
         rules: [prBreak]
       - signature: "KAA3|kaa"
         rules: [prBreak]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kAa
     note: Underlying shape of KAA1; breaking is obligatory, so a long vowel never surfaces.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kA
     note: Underlying shape of KA; same reason.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

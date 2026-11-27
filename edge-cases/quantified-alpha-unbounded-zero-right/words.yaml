@@ -10,93 +10,93 @@ words:
     note: "Negative control for quantified alpha unbounded zero right: 'a' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: e
     note: "Positive witness for quantified alpha unbounded zero right: 'e' must retain the declared analysis."
     parses:
       - signature: "ZERO|e"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: ac
     note: "Negative control for quantified alpha unbounded zero right: 'ac' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: ec
     note: "Positive witness for quantified alpha unbounded zero right: 'ec' must retain the declared analysis."
     parses:
       - signature: "ONE|ec"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: act
     note: "Positive witness for quantified alpha unbounded zero right: 'act' must retain the declared analysis."
     parses:
       - signature: "MIXEDONE|act"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: ect
     note: "Negative control for quantified alpha unbounded zero right: 'ect' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: at
     note: "Negative control for quantified alpha unbounded zero right: 'at' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: et
     note: "Positive witness for quantified alpha unbounded zero right: 'et' must retain the declared analysis."
     parses:
       - signature: "TRIG|et"
         rules: ["prRtlBq"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: actt
     note: "Positive witness for quantified alpha unbounded zero right: 'actt' must retain the declared analysis."
     parses:
       - signature: "MIXED|actt"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: ectt
     note: "Negative control for quantified alpha unbounded zero right: 'ectt' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: acct
     note: "Positive witness for quantified alpha unbounded zero right: 'acct' must retain the declared analysis."
     parses:
       - signature: "ROOT2|acct"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: ecct
     note: "Negative control for quantified alpha unbounded zero right: 'ecct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: accct
     note: "Positive witness for quantified alpha unbounded zero right: 'accct' must retain the declared analysis."
     parses:
       - signature: "ROOT3|accct"
         rules: []
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: eccct
     note: "Negative control for quantified alpha unbounded zero right: 'eccct' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: acat
     note: "Negative control for quantified alpha unbounded zero right: 'acat' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"
   - word: ecat
     note: "Negative control for quantified alpha unbounded zero right: 'ecat' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat"

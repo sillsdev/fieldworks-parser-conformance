@@ -18,6 +18,8 @@ words:
     note: >-
       The sibling case. Analysis re-inserts at most one i after u (Deletion Reapplications 0), so it reaches bui and never buii. The matched allomorph bui requires a following consonant, and nothing follows it, so synthesis rejects it. Before #627 merged, master also tried the entry's other allomorph buii, which synthesises to "bu" because prHiatusI deletes both i's, and so parsed the word through a sibling that analysis never matched. The #627 change tries only bui; the current pinned oracle (e63b8863) therefore gives no parse, as expected.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: tuk
     note: >-
@@ -25,7 +27,8 @@ words:
     parses:
       - signature: "TUIK|tuk"
         rules: [prHiatusI]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: bak
     note: >-
@@ -33,6 +36,8 @@ words:
     parses:
       - signature: "BAK|bak"
         rules: []
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
 
   - word: baak
     note: >-
@@ -40,6 +45,8 @@ words:
     parses:
       - signature: "BAK|baak"
         rules: []
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
 
   - word: tak
     note: >-
@@ -49,6 +56,8 @@ words:
         rules: []
       - signature: "TAKV|tak"
         rules: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: takt
     note: >-
@@ -56,6 +65,8 @@ words:
     parses:
       - signature: "TAKN+NSUF|takt"
         rules: [mrNounSuf]
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: taksa
     note: >-
@@ -63,3 +74,5 @@ words:
     parses:
       - signature: "TAKV+VSUF|taksa"
         rules: [mrVerbSuf]
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"

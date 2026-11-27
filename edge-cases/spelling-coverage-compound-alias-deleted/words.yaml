@@ -7,11 +7,15 @@ words:
     parses:
       - signature: "ROOT|[a(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: xy
     note: "C# returns 1 analysis (ROOT|[a(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[a(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: aa
     note: "C# returns 1 analysis (ROOT|[a(xy)ei][a(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -43,17 +47,27 @@ words:
   - word: ap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: p
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: e
     note: "C# returns 1 analysis (ROOT|[a(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[a(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: "á"
     note: C# rejects this input as an invalid shape.
     expect_skip: true
+    exercises:
+      - "CompoundingRule"
   - word: "aá"
     note: C# rejects this input as an invalid shape.
     expect_skip: true
+    exercises:
+      - "CompoundingRule"

@@ -12,2284 +12,3799 @@ words:
     parses:
       - signature: "R1|ap"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: "ta"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R0|ta"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: "apas"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1+SU0|apas"
         rules: [SU0, pe0]
-        exercises: ["CompoundingRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "CompoundingRule"
   - word: "apta"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1+R0|apta"
         rules: [KO1]
+    exercises:
+      - "CompoundingRule"
   - word: "tata"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R0|tata"
         rules: [KO1]
+    exercises:
+      - "CompoundingRule"
   - word: "paaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paappp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paappt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaptp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaptt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapsp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapst"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paapss"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatpp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatpt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paattp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paattt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatsp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatst"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paatss"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaspp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paaspt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paastp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paastt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paassp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasst"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paasss"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pappaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pappap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pappat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pappas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papppa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pappta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pappsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paptsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papsap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papsat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papsas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papsta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "papssa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pataaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pataap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pataat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pataas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pataps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patpap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patpat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patpas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patppa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patpta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patpsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pattsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patsap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patsat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patsas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patsta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "patssa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paspap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paspat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paspas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pasppa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paspta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "paspsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pastsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "passsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppppaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pppsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppttaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pptsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppsasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppstaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ppssaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptppaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptpsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptttaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pttsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptsasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptstaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ptssaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psppaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pspsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psttaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pstsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "pssasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psstaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "psssaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taappp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taappt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaptp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaptt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapsp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapst"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taapss"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatpp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatpt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taattp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taattt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatsp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatst"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taatss"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaspp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taaspt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taastp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taastt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasts"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taassp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasst"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taasss"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tappaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tappap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tappat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tappas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapppa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tappta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tappsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taptsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapsap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapsat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapsas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapsta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tapssa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tataaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tataap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tataat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tataas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tataps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatpap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatpat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatpas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatppa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatpta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatpsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tattsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatsap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatsat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatsas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatsta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tatssa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taspap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taspat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taspas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasppa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taspta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "taspsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tastsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tassaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tassap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tassat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tassas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tassta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tasssa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpppaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tppsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpttaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tptsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpsasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpstaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tpssaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttppaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttpsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttttaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tttsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttsasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttstaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "ttssaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaapp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaapt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaaps"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaatp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaatt"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaats"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaasp"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaast"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaass"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsapaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsapap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsapat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsapas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsappa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsapta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsapsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsataa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsatap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsatat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsatas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsatpa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsatta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsatsa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsasaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsasap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsasat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsasas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsaspa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsasta"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsassa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsppaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsptaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tspsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstpaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsttaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tstsaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssaaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssaap"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssaat"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssaas"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssapa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssata"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tssasa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsspaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsstaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "tsssaa"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises:
+      - "CompoundingRule"

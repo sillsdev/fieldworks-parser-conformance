@@ -20,6 +20,8 @@ words:
     parses:
       - signature: "ROOTAA|aa"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: puaamo
     note: "ROOTAA + mrCirc's subVV (prefix pu-, suffix -mo) -- a V-initial, V-final stem satisfies subVV's own embedded first-segment [V] and last-segment [V] stem-pattern gates."
@@ -59,6 +61,8 @@ words:
       C-final stem, which satisfies neither of subVV's embedded [V] stem-pattern gates -- must not
       parse. No other subrule shares the literal pu-...-mo affix pair.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: puabmo
     note: >-
@@ -66,7 +70,11 @@ words:
       C-final stem -- only the first-segment [V] gate holds, the last-segment [V] gate does not, so
       this must still fail (proves the stem pattern requires BOTH embedded gates, not just one).
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: aamo
     note: "Structurally invalid control -- missing the required leading prefix material entirely."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

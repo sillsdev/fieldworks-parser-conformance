@@ -12,8 +12,8 @@ sonnet-reviewer LAND verdict (AGENTS.md, "Landing").
 - C# code paths only nominate a test case: removal needs a written reason the path is incidental;
 - a merged grammar keeps every member's behaviour labels.
 
-Merge waves wait for the behaviour-label vocabulary (epic S1 sub-issue). Until then judge by `exercises`,
-`constructs.txt`, the exception notes and the bug builds.
+Judge by the behaviour labels (`python3 scripts/suite.py labels "<label>"` lists the words carrying one, and a top-level label
+includes its children), the exception notes and the bug builds. A label on one test case only is a unique check.
 
 ## Merge: fold a family into a survivor
 

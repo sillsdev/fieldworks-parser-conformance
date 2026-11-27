@@ -78,7 +78,8 @@ stress/              16 timing and optimisation-parity grammars (not conformance
                      docs/grammars.md and that README list each; the derived stress manifest hashes them
 docs/grammars.md     one line for every fixture above; scripts/check_grammars_md.py keeps it complete
 dead-rules-allowed.tsv  rules a fixture declares on purpose that no word exercises, with the reason
-constructs.txt       the checklist vocabulary of construct tags that `exercises:` values are drawn from
+constructs.txt       the top level of the behaviour-label vocabulary, which `exercises:` values are drawn from
+labels.tsv          the child levels of that vocabulary, each with the labels it was checked against
 fieldworks-writable-shapes.tsv  the census of which DTD members HCLoader.cs writes (see below)
 HermitCrabInput.dtd  the published grammar DTD (the authoritative copy)
 schema/              Draft 2020-12 contracts for the authoring and product formats

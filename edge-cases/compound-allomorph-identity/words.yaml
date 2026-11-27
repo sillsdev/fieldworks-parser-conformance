@@ -7,11 +7,15 @@ words:
     parses:
       - signature: "ROOT|a"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: p
     note: "C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|p"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: aa
     note: "C# returns 1 analysis (ROOT|aa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -43,6 +47,10 @@ words:
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: "a^0p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"

@@ -22,6 +22,8 @@ words:
     parses:
       - signature: "ROOT|gabas"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ginabas
     note: >-
       The infix splits gabas into g and abas; the infix's i follows the first piece but is not the root's right context,
@@ -29,6 +31,8 @@ words:
       allomorph environment at each piece, counts gabs as applicable, and so gives no parse. status.yaml records the
       intended answer.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ginabsa
     note: >-
       The infix splits gabs into g and abs; the suffix a follows the last piece, so gabs / _ V holds and the root parses as gabs. Two rule orders (infix then suffix, suffix then infix) give the same surface.
@@ -37,19 +41,29 @@ words:
         rules: [mrInfix, mrSuffix]
       - signature: "ROOT+INF+SFX|ginabsa"
         rules: [mrSuffix, mrInfix]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ginabs
     note: >-
       Rejection: gabs is word-final with the infix inside it, so gabs / _ V does not hold at the last piece and no other form fits.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: gabs
     note: >-
       Rejection: gabs / _ V needs a vowel after the root.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: gabasa
     note: >-
       Rejection: a vowel follows the root, so gabs / _ V applies and blocks the elsewhere form gabas; gabs does not spell this word.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ginabasa
     note: >-
       Rejection: as gabasa with the infix inside the root; a vowel follows the last piece, so gabs / _ V blocks gabas.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

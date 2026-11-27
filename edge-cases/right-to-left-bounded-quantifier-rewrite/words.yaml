@@ -29,9 +29,8 @@ words:
     parses:
       - signature: "ROOT1|acet"
         rules: [prRtlBq]
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
 
   - word: ecct
     note: >-
@@ -43,9 +42,8 @@ words:
     parses:
       - signature: "ROOT2|ecct"
         rules: [prRtlBq]
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
 
   - word: accct
     note: >-
@@ -59,9 +57,8 @@ words:
     parses:
       - signature: "ROOT3|accct"
         rules: []
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
 
   - word: acat
     note: >-
@@ -85,54 +82,46 @@ words:
     parses:
       - signature: "ROOT4|ucdt"
         rules: [prRtlBq2]
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
   - word: ucdcdt
     note: ROOT5 underlying ocdcdt, two (c d) pairs, within the bound of two.
     parses:
       - signature: "ROOT5|ucdcdt"
         rules: [prRtlBq2]
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
   - word: ocdcdcdt
     note: ROOT6, three pairs exceed the bound of two, so o stays. The load-bearing negative that the group is bounded.
     parses:
       - signature: "ROOT6|ocdcdcdt"
         rules: []
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
   - word: odct
     note: ROOT7 underlying odct, the control for the order of the group's children. The environment needs c before d, and odct has d before c, so o stays. A reversal that left the two children in document order would read the group as d then c, match here, and rewrite o to u.
     parses:
       - signature: "ROOT7|odct"
         rules: []
-        exercises:
-          - "RewriteRule direction (Dir): right-to-left"
-          - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "RewriteRule direction (Dir): right-to-left"
   - word: ocdt
     note: Raw ROOT4, the rule is obligatory, so it is not a surface form.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
   - word: ocdcdt
     note: Raw ROOT5, the rule is obligatory.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
   - word: ucdcdcdt
     note: Not derivable, three pairs never trigger the rule.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
   - word: udct
     note: Not derivable, the rule never fires on ROOT7.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"

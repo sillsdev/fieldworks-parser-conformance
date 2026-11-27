@@ -48,6 +48,8 @@ words:
         gloss: year
         rules: []
         exercises: []
+    exercises:
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: café
     note: >-
@@ -59,6 +61,8 @@ words:
         gloss: coffee
         rules: []
         exercises: []
+    exercises:
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: göl
     note: >-
@@ -69,6 +73,8 @@ words:
         gloss: lake
         rules: []
         exercises: []
+    exercises:
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: kelî
     note: >-
@@ -79,6 +85,8 @@ words:
         gloss: word
         rules: []
         exercises: []
+    exercises:
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: años
     note: >-
@@ -90,10 +98,8 @@ words:
       - signature: "YEAR+PL|años"
         gloss: year-PL
         rules: [rPl]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: cafés
     note: >-
@@ -105,10 +111,8 @@ words:
       - signature: "COFFEE+PL|cafés"
         gloss: coffee-PL
         rules: [rPl]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: göls
     note: göl + rPl ("-s"), the diacritic-MEDIAL affixed case, mirroring años.
@@ -117,10 +121,8 @@ words:
       - signature: "LAKE+PL|göls"
         gloss: lake-PL
         rules: [rPl]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: kelîs
     note: kelî + rPl ("-s"), the diacritic-FINAL affixed case, mirroring cafés.
@@ -129,10 +131,8 @@ words:
       - signature: "WORD+PL|kelîs"
         gloss: word-PL
         rules: [rPl]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: caféta
     note: >-
@@ -145,11 +145,8 @@ words:
       - signature: "COFFEE+DIM|caféta"
         gloss: coffee-DIM
         rules: [rDim]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: kelîta
     note: >-
@@ -160,11 +157,8 @@ words:
       - signature: "WORD+DIM|kelîta"
         gloss: word-DIM
         rules: [rDim]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
+    exercises:
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
 
   - word: añota
     note: >-

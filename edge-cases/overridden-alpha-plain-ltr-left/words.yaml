@@ -16,45 +16,75 @@ words:
   - word: iy
     note: "Negative control for overridden alpha plain ltr left: 'iy' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ia
     note: "Negative control for overridden alpha plain ltr left: 'ia' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: iu
     note: "Negative control for overridden alpha plain ltr left: 'iu' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: yi
     note: "Negative control for overridden alpha plain ltr left: 'yi' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: yy
     note: "Negative control for overridden alpha plain ltr left: 'yy' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ya
     note: "Negative control for overridden alpha plain ltr left: 'ya' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: yu
     note: "Negative control for overridden alpha plain ltr left: 'yu' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ai
     note: "Negative control for overridden alpha plain ltr left: 'ai' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ay
     note: "Negative control for overridden alpha plain ltr left: 'ay' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aa
     note: "Negative control for overridden alpha plain ltr left: 'aa' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: au
     note: "Negative control for overridden alpha plain ltr left: 'au' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ui
     note: "Negative control for overridden alpha plain ltr left: 'ui' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: uy
     note: "Negative control for overridden alpha plain ltr left: 'uy' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ua
     note: "Negative control for overridden alpha plain ltr left: 'ua' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: uu
     note: "Negative control for overridden alpha plain ltr left: 'uu' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"

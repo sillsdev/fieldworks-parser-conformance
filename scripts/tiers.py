@@ -7,7 +7,7 @@
 Never authored: a tier is not a key in words.yaml and never part of an id (Q5). It follows from data the suite holds.
 
   core        languages/*; a test case with a fieldworks/ witness; or one of the two carriers of a behaviour
-              label (today an `exercises` value, which #75 replaces; carriers are the test
+              label (a vocabulary label: constructs.txt or labels.tsv; carriers are the test
               cases with that label, fewest words first, then id)
   regression  not core, and it has an exception in status.yaml, is the only test case citing some bug, or has
               300 or more words
@@ -98,7 +98,7 @@ def block(tiers: dict) -> str:
         "**extended** on the full run. It is computed by `scripts/tiers.py` from data the suite holds, never authored, "
         "and never part of an id; `scripts/check_grammars_md.py` fails when this table is stale. "
         "A test case is core when it is a language profile, has a FieldWorks witness, or is one "
-        "of the two smallest carriers of a behaviour label (today an `exercises` value; #75 replaces it; "
+        "of the two smallest carriers of a behaviour label (a vocabulary label, constructs.txt or labels.tsv; "
         "fewest words first, then id). Otherwise it is regression when it has an exception in `status.yaml`, is the only test case citing some bug (the last "
         "detector of a bug is never removed, ADR 0008), or has 300 or more words, and extended when it has none of these.",
         "",

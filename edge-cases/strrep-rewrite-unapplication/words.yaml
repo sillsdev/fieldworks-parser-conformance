@@ -23,17 +23,27 @@ words:
     parses:
       - signature: "MUMA|muma"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: xuma
     note: No m target; the root remains unchanged.
     parses:
       - signature: "XUMA|xuma"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: xmuma
     note: The underlying root is not its surface because the post-x m must rewrite.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: puma
     note: The reverse application requires a preceding x.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: xpuua
     note: Only the rewritten m may widen; the untouched second m cannot disappear.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

@@ -10,97 +10,81 @@ words:
     note: "Negative control for nullable disagree unbounded rtl left: 'ii' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: iy
     note: "Negative control for nullable disagree unbounded rtl left: 'iy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ia
     note: "Positive witness for nullable disagree unbounded rtl left: 'ia' must retain the declared analysis."
     parses:
       - signature: "AU|ia"
         rules: ["prDoubleAlpha"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: iu
     note: "Negative control for nullable disagree unbounded rtl left: 'iu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: yi
     note: "Negative control for nullable disagree unbounded rtl left: 'yi' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: yy
     note: "Negative control for nullable disagree unbounded rtl left: 'yy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ya
     note: "Negative control for nullable disagree unbounded rtl left: 'ya' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: yu
     note: "Negative control for nullable disagree unbounded rtl left: 'yu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ai
     note: "Negative control for nullable disagree unbounded rtl left: 'ai' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ay
     note: "Negative control for nullable disagree unbounded rtl left: 'ay' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: aa
     note: "Negative control for nullable disagree unbounded rtl left: 'aa' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: au
     note: "Negative control for nullable disagree unbounded rtl left: 'au' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ui
     note: "Negative control for nullable disagree unbounded rtl left: 'ui' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: uy
     note: "Negative control for nullable disagree unbounded rtl left: 'uy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ua
     note: "Negative control for nullable disagree unbounded rtl left: 'ua' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: uu
     note: "Negative control for nullable disagree unbounded rtl left: 'uu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
-      - "RewriteRule direction (Dir): right-to-left"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"

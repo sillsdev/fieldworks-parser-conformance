@@ -1,8 +1,9 @@
 """The suite's one script: every check, the generator of derived files, and the exception report.
 
     python3 scripts/suite.py check                 run every check (this is what CI runs)
-    python3 scripts/suite.py generate [--out DIR]  write the derived files: both manifests, coverage.csv, rules.csv, core-tier.txt
+    python3 scripts/suite.py generate [--out DIR]  write the derived files: both manifests, coverage.csv, rules.csv, labels.csv, core-tier.txt
     python3 scripts/suite.py status [--strict]     list the rows of status.yaml by upstream state
+    python3 scripts/suite.py labels [LABEL]        print the label-to-words table (or one label's words); never committed
     python3 scripts/suite.py expand CASE           print a test case's words with generated no-parse words expanded
 
 Also the shared helpers the checks import. Standard library only; PyYAML is used when installed.
@@ -58,6 +59,55 @@ def load_words(path: Path):
     if _yaml is None:
         raise RuntimeError("PyYAML is required: pip install -r scripts/requirements.txt")
     return _yaml.safe_load(read_text(path))
+
+
+LABEL_SEP = " > "
+
+
+def _data_lines(path: Path):
+    for number, line in enumerate(read_text(path).split("\n"), 1):
+        if line.strip() and not line.lstrip().startswith("#"):
+            yield number, line
+
+
+def constructs(root: Path = ROOT) -> list:
+    """The top level of the behaviour-label vocabulary: the lines of constructs.txt."""
+    return [line.strip() for _, line in _data_lines(root / "constructs.txt")]
+
+
+def child_labels(root: Path = ROOT) -> dict:
+    """The lower levels, from labels.tsv: {label: (checked_against list, meaning)}, in file order."""
+    found = {}
+    for number, line in _data_lines(root / "labels.tsv"):
+        columns = [c.strip() for c in line.split("\t")]
+        if len(columns) != 3 or not all(columns):
+            raise SystemExit(f"labels.tsv:{number}: expected label, checked_against and meaning separated by tabs")
+        found[columns[0]] = ([c for c in columns[1].split(";") if c], columns[2])
+    return found
+
+
+def vocabulary(root: Path = ROOT) -> list:
+    """Every behaviour label a word may carry: the constructs, then the child labels."""
+    return constructs(root) + list(child_labels(root))
+
+
+def word_labels(word: dict) -> list:
+    """The behaviour labels of a listed or generated word: its own, then those of its parses, without repeats."""
+    found = list(word.get("exercises") or [])
+    for parse in word.get("parses") or []:
+        found += [label for label in parse.get("exercises") or [] if label not in found]
+    return found
+
+
+def label_problem(word: dict):
+    """Why a word breaks the one-label rule, or None. A word carries exactly one behaviour label: the distinct labels of
+    the word and of all its parses together number one (a parse may repeat the word's label, never add another)."""
+    found = word_labels(word)
+    if not found:
+        return "has no behaviour label"
+    if len(found) > 1:
+        return f"carries {len(found)} behaviour labels, not one: {'; '.join(found)}"
+    return None
 
 
 MAX_GENERATED_SPACE = 100_000
@@ -134,6 +184,7 @@ CHECKS = (
     ("words.yaml matches the schema", "check_words_schema"),
     ("derived files generate and their invariants hold", "check_derived"),
     ("grammar.xml matches the DTD", "check_dtd"),
+    ("every word carries a behaviour label from the vocabulary", "check_labels"),
     ("docs/grammars.md and stress/README.md list every test case", "check_grammars_md"),
     ("FieldWorks witnesses are well formed", "check_fwdata"),
     ("Calibration families are well formed", "check_calibration"),
@@ -166,6 +217,8 @@ def main(argv=None) -> int:
     generate.add_argument("--out", default=str(ROOT / "generated"), help="directory to write into (default: generated/, untracked)")
     expand = sub.add_parser("expand", help="print a test case's expanded word list as JSON (the reference expander)")
     expand.add_argument("case", help="a test case directory or its words.yaml")
+    labels = sub.add_parser("labels", help="the label-to-words table: duplicates and unique checks")
+    labels.add_argument("label", nargs="?", help="list the test cases and words carrying this label; a construct lists its children's words too")
     status = sub.add_parser("status", help="list status.yaml rows by upstream state")
     status.add_argument("--machine-checkout", help="a sillsdev/machine checkout, for engine ancestry")
     status.add_argument("--strict", action="store_true", help="exit 1 if any row needs action")
@@ -178,6 +231,10 @@ def main(argv=None) -> int:
         for name in derive.write_all(Path(args.out)):
             print(f"wrote {Path(args.out) / name}")
         return 0
+    if args.command == "labels":
+        import derive
+
+        return derive.print_labels(args.label)
     if args.command == "expand":
         import json
 

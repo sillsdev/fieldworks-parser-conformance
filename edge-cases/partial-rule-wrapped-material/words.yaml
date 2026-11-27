@@ -11,14 +11,15 @@ words:
     parses:
       - signature: "LOP+PK+T+R|lopkotr"
         rules: [pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: loptr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopkot
     note: >-
@@ -26,9 +27,8 @@ words:
     parses:
       - signature: "LOP+PK+T|lopkot"
         rules: [pk, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopt
     note: >-
@@ -36,18 +36,22 @@ words:
     parses:
       - signature: "LOP+T|lopt"
         rules: [t]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopktr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopotr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: loptkor
     note: >-
@@ -55,14 +59,15 @@ words:
     parses:
       - signature: "LOP+T+PK+R|loptkor"
         rules: [t, pk, r]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopkotkor
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: kaloptr
     note: >-
@@ -70,14 +75,10 @@ words:
     parses:
       - signature: "PC+LOP+T+R|kaloptr"
         rules: [pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+T+R|kaloptr"
         rules: [pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: kalopkotr
     note: >-
@@ -85,34 +86,28 @@ words:
     parses:
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LOP+PK+T+R|kalopkotr"
         rules: [pc, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: loptrko
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: loptkr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopkor
     note: >-
@@ -129,9 +124,8 @@ words:
     parses:
       - signature: "LOP+PK+N+T+R|lopkontr"
         rules: [pk, n, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: milopkotr
     note: >-
@@ -139,24 +133,14 @@ words:
     parses:
       - signature: "M+LOP+PK+T+R|milopkotr"
         rules: [m, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+LOP+PK+T+R|milopkotr"
         rules: [m, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+LOP+PK+T+R|milopkotr"
         rules: [m, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+LOP+PK+T+R|milopkotr"
         rules: [m, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: mikaloptr
     note: >-
@@ -164,29 +148,16 @@ words:
     parses:
       - signature: "M+PC+LOP+T+R|mikaloptr"
         rules: [m, pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+PC+LOP+T+R|mikaloptr"
         rules: [m, pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+PC+LOP+T+R|mikaloptr"
         rules: [m, pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+PC+LOP+T+R|mikaloptr"
         rules: [m, pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "M+PC+LOP+T+R|mikaloptr"
         rules: [m, pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopkolopkotr
     note: >-
@@ -194,10 +165,8 @@ words:
     parses:
       - signature: "LOP+PK+RD+T+R|lopkolopkotr"
         rules: [pk, rd, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: kalopkaloptr
     note: >-
@@ -205,15 +174,15 @@ words:
     parses:
       - signature: "PC+LOP+RD+T+R|kalopkaloptr"
         rules: [pc, rd, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopkonnt
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopnkotr
     note: >-
@@ -221,9 +190,8 @@ words:
     parses:
       - signature: "LOP+N+PK+T+R|lopnkotr"
         rules: [n, pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"
 
   - word: lopkolopkontr
     note: >-
@@ -231,7 +199,5 @@ words:
     parses:
       - signature: "LOP+PK+RD+N+T+R|lopkolopkontr"
         rules: [pk, rd, n, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: wrapped material"

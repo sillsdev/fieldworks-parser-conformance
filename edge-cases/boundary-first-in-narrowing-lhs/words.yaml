@@ -22,31 +22,40 @@ words:
     parses:
       - signature: "KAN+BO|kanmo"
         rules: [mrSfxBo, prPostNasal]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "Boundary markers (CharacterDefinitionTable)"
       - signature: "KAN+MO|kan+?mo"
         rules: [mrSfxMo, prPostNasal]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
   - word: kanbo
     note: The rule is obligatory after a nasal, so kan+bo never surfaces unchanged.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
   - word: katbo
     note: No nasal before the boundary, so the rule does not apply.
     parses:
       - signature: "KAT+BO|kat+?bo"
         rules: [mrSfxBo]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
   - word: katmo
     note: Underlying suffix m after a non-nasal.
     parses:
       - signature: "KAT+MO|kat+?mo"
         rules: [mrSfxMo]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
   - word: kan
     note: Bare root.
     parses:
       - signature: "KAN|kan"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
   - word: kat
     note: Bare root.
     parses:
       - signature: "KAT|kat"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"

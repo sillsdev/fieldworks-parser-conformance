@@ -15,14 +15,16 @@ words:
       has no analysis.
     expect_fail: true
     blocked_by: [mrGate1]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: dakfa
     note: Case 1 control. finalTemplateA alone (no mrGate1), proving the template path itself works.
     parses:
       - signature: "DAK+FINTAGA|dakfa"
         rules: [mrFinTagA]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: daknagafa
     note: >-
@@ -33,12 +35,16 @@ words:
     parses:
       - signature: "DAK+NONFINTAGA+GATE1+FINTAGA|daknagafa"
         rules: [mrNonFinTagA, mrGate1, mrFinTagA]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: dakna
     note: >-
       Negative control: nonFinalTemplateA's own output alone (no rule closes it with a final
       template) is never a complete word.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pilnbvbfb
     note: >-
@@ -48,6 +54,8 @@ words:
       analysis.
     expect_fail: true
     blocked_by: [mrGate2Partial]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pilnbtbfb
     note: >-
@@ -57,18 +65,24 @@ words:
     parses:
       - signature: "PIL+NONFINTAGB+GATE2COMPLETE+FINTAGB|pilnbtbfb"
         rules: [mrNonFinTagB, mrGate2Complete, mrFinTagB]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pilnb
     note: >-
       Negative control: nonFinalTemplateB's own output alone (no rule closes it with a final
       template) is never a complete word.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pilfb
     note: Case 3/4 control. finalTemplateB alone (no Branch-B ordinary rule), proving the template path itself works.
     parses:
       - signature: "PIL+FINTAGB|pilfb"
         rules: [mrFinTagB]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pilfbvb
     note: >-
@@ -81,6 +95,8 @@ words:
     parses:
       - signature: "PIL+FINTAGB+GATE2PARTIAL|pilfbvb"
         rules: [mrFinTagB, mrGate2Partial]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nibgi
     note: >-
@@ -95,6 +111,8 @@ words:
     parses:
       - signature: "NIB+GATE3PARTIAL|nibgi"
         rules: [mrGate3Partial]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
 # Named-run expectations observed from the C# engine,
 # 2026-10-22, DOP 1. Each run starts from engine defaults and sets only its own morpher block.

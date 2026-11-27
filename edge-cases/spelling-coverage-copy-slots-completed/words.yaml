@@ -7,30 +7,44 @@ words:
     parses:
       - signature: "ROOT|[aá(xy)e]"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "á"
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
       - signature: "ROOT|[aá(xy)e]"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: xy
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
       - signature: "ROOT|[aá(xy)e]"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: e
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
       - signature: "ROOT|[aá(xy)e]"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: i
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: p
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: s
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pa
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -62,6 +76,8 @@ words:
   - word: pi
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: as
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -93,6 +109,8 @@ words:
   - word: is
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pas
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -118,6 +136,8 @@ words:
   - word: pis
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: aa
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -187,6 +207,8 @@ words:
   - word: ai
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ea
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -201,6 +223,8 @@ words:
   - word: ia
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ee
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -215,6 +239,8 @@ words:
   - word: ii
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "paás"
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -240,30 +266,48 @@ words:
   - word: aeis
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ass
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pass
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: aaas
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ap
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sa
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ps
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pp
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sss
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "p^0a"
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -296,9 +340,13 @@ words:
   - word: "a^0"
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "^0a"
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "p^0xys"
     note: Spelling and morphology control; every observed C# signature occurrence is retained.
     parses:
@@ -315,3 +363,5 @@ words:
     parses:
       - signature: "ROOT|[aá(xy)e]"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

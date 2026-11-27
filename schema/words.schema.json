@@ -39,7 +39,7 @@
       "items": { "$ref": "#/$defs/word" }
     },
     "generated_no_parse": {
-      "description": "Rules that generate no-parse words (PROTOCOL.md section 13; ADR 0009): every string over an alphabet, from min_length to max_length, that is not listed under `words`. Each generated word is expect_fail with the rule's note and exercises. Analyses are never generated. Expanded by `python3 scripts/suite.py expand`.",
+      "description": "Rules that generate no-parse words (PROTOCOL.md section 13; ADR 0009): every string over an alphabet, from min_length to max_length, that is not listed under `words`. Each generated word is expect_fail with the rule's note and the rule's exercises (required). Analyses are never generated. Expanded by `python3 scripts/suite.py expand`.",
       "type": "array",
       "minItems": 1,
       "items": { "$ref": "#/$defs/generatedNoParse" }
@@ -56,13 +56,13 @@
     "generatedNoParse": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["alphabet", "max_length", "note"],
+      "required": ["alphabet", "max_length", "note", "exercises"],
       "properties": {
         "alphabet": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
         "min_length": { "type": "integer", "minimum": 1, "default": 1 },
         "max_length": { "type": "integer", "minimum": 1 },
         "note": { "type": "string", "minLength": 1, "description": "The note every generated word carries." },
-        "exercises": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true, "description": "The behaviour label of every generated word (ADR 0008)." }
+        "exercises": { "type": "array", "minItems": 1, "maxItems": 1, "items": { "type": "string", "minLength": 1 }, "uniqueItems": true, "description": "The behaviour label of every generated word (ADR 0008; PROTOCOL.md section 14). Required, exactly one: a generated word carries its rule's label." }
       }
     },
     "variant": {

@@ -10,81 +10,81 @@ words:
     note: "Negative control for nullable disagree bounded ltr right: 'ii' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: iy
     note: "Negative control for nullable disagree bounded ltr right: 'iy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ia
     note: "Positive witness for nullable disagree bounded ltr right: 'ia' must retain the declared analysis."
     parses:
       - signature: "AU|ia"
         rules: ["prDoubleAlpha"]
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: iu
     note: "Negative control for nullable disagree bounded ltr right: 'iu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: yi
     note: "Negative control for nullable disagree bounded ltr right: 'yi' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: yy
     note: "Negative control for nullable disagree bounded ltr right: 'yy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ya
     note: "Negative control for nullable disagree bounded ltr right: 'ya' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: yu
     note: "Negative control for nullable disagree bounded ltr right: 'yu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ai
     note: "Negative control for nullable disagree bounded ltr right: 'ai' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ay
     note: "Negative control for nullable disagree bounded ltr right: 'ay' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: aa
     note: "Negative control for nullable disagree bounded ltr right: 'aa' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: au
     note: "Negative control for nullable disagree bounded ltr right: 'au' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ui
     note: "Negative control for nullable disagree bounded ltr right: 'ui' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: uy
     note: "Negative control for nullable disagree bounded ltr right: 'uy' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ua
     note: "Negative control for nullable disagree bounded ltr right: 'ua' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: uu
     note: "Negative control for nullable disagree bounded ltr right: 'uu' must complete with no analysis."
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"

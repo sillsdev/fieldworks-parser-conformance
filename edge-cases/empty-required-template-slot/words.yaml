@@ -11,6 +11,8 @@ words:
     parses:
       - signature: "|monu"
         rules: []
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: monua
     note: >-
       The stem plus the optional -a suffix parses after the loader omits the empty required prefix
@@ -24,3 +26,5 @@ words:
       The leading a is not a prefix rule and cannot satisfy the omitted required prefix slot, so
       this word has no analysis.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"

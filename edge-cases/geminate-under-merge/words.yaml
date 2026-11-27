@@ -35,3 +35,5 @@ words:
   - word: ca
     note: "Negative control: the shortening and the fusion are both obligatory."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

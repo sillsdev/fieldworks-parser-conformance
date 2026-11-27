@@ -66,6 +66,8 @@ words:
         gloss: uta
         rules: []
         exercises: []
+    exercises:
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: mat
     note: MAT bare root -- the same null-prefix/bare-root ambiguity as "pat", on the root ruleObj's own-environment rows below also use.

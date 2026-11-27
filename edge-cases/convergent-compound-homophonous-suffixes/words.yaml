@@ -13,36 +13,51 @@ words:
     parses:
       - signature: "KAT|kat"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: mis
     note: "Bare verb root control."
     parses:
       - signature: "MIS|mis"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: katkat
     note: "Right-headed noun-noun compound of one root with itself."
     parses:
       - signature: "KAT|kat+?kat"
         rules: [cmpNN]
-        exercises: ["CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)", "AffixProcessRule: prefix/suffix/circumfix/infix"]
+    exercises:
+      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: katkatkat
     note: "Three stems exceed the stem limit."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: katkatkatkat
     note: "Four stems exceed the stem limit."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: miskat
     note: "Left-headed verb-noun compound."
     parses:
       - signature: "MIS+KAT|mis+?kat"
         rules: [cmpVN]
+    exercises:
+      - "CompoundingRule"
   - word: miskatkat
     note: "No rule takes a compound verb and a further noun within the stem limit."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: katmissi
     note: "The verb must be nominalized before it can head a noun-noun compound."
     parses:
       - signature: "KAT+MIS+SIVN|kat+?mis+?si"
         rules: [cmpNN, siVN]
+    exercises:
+      - "CompoundingRule"
   - word: katmissisi
     note: "Two stacked -si over the compound: suffix un-application converges before the compound rule is tried."
     parses:
@@ -54,6 +69,8 @@ words:
         rules: [cmpNN, siNV, siVN]
       - signature: "KAT+MIS+SIVV+SIVN|kat+?mis+?si+?si"
         rules: [cmpNN, siVN, siVV]
+    exercises:
+      - "CompoundingRule"
   - word: katkatsi
     note: "Noun-taking -si over the noun-noun compound; the suffix may also sit on the head inside it."
     parses:
@@ -63,6 +80,8 @@ words:
         rules: [cmpNN, siNN]
       - signature: "KAT+SINV|kat+?kat+?si"
         rules: [cmpNN, siNV]
+    exercises:
+      - "CompoundingRule"
   - word: katkatsisi
     note: "Two stacked -si over the noun-noun compound."
     parses:
@@ -76,6 +95,8 @@ words:
         rules: [cmpNN, siNV, siVN]
       - signature: "KAT+SINV+SIVV|kat+?kat+?si+?si"
         rules: [cmpNN, siNV, siVV]
+    exercises:
+      - "CompoundingRule"
   - word: miskatsi
     note: "Verb-taking -si over the verb-noun compound."
     parses:
@@ -83,6 +104,8 @@ words:
         rules: [cmpVN, siVN]
       - signature: "MIS+KAT+SIVV|mis+?kat+?si"
         rules: [cmpVN, siVV]
+    exercises:
+      - "CompoundingRule"
   - word: miskatsisi
     note: "Two stacked -si over the verb-noun compound."
     parses:
@@ -92,6 +115,8 @@ words:
         rules: [cmpVN, siNV, siVN]
       - signature: "MIS+KAT+SIVV+SIVN|mis+?kat+?si+?si"
         rules: [cmpVN, siVN, siVV]
+    exercises:
+      - "CompoundingRule"
   - word: missi
     note: "The verb-taking -si suffixes."
     parses:
@@ -99,6 +124,8 @@ words:
         rules: [siVN]
       - signature: "MIS+SIVV|mis+?si"
         rules: [siVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: katsi
     note: "The noun-taking -si suffixes."
     parses:
@@ -106,12 +133,20 @@ words:
         rules: [siNN]
       - signature: "KAT+SINV|kat+?si"
         rules: [siNV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: katmis
     note: "Noun then bare verb fits neither compound rule."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: katsimis
     note: "Noun then bare verb fits neither compound rule, suffixed or not."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: katkatmissi
     note: "Three stems exceed the stem limit."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"

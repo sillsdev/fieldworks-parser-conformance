@@ -12,9 +12,13 @@ words:
       - signature: "GABA|gaga"
         gloss: gaga-control
         rules: []
+    exercises:
+      - "RewriteRule Simultaneous"
   - word: gigigi
     note: Underlying control shape; the obligatory rewrite changes its two eligible positions, so the raw shape is rejected.
     expect_fail: true
+    exercises:
+      - "RewriteRule Simultaneous"
   - word: gigugu
     note: "Simultaneous discriminating positive: both overlapping matches see the pristine shape and rewrite."
     parses:
@@ -26,3 +30,5 @@ words:
   - word: gigugi
     note: "Iterative-shaped negative: the second match would be bled by the first rewrite in iterative mode."
     expect_fail: true
+    exercises:
+      - "RewriteRule Simultaneous"

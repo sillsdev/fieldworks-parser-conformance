@@ -11,10 +11,8 @@ words:
     parses:
       - signature: "LIP+PK+TR+T+R|lipkatr"
         rules: [pk, tr, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "AffixProcessRule: subtraction/truncation"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"
 
   - word: lipkat
     note: >-
@@ -22,20 +20,22 @@ words:
     parses:
       - signature: "LIP+PK+TR+T|lipkat"
         rules: [pk, tr, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "AffixProcessRule: subtraction/truncation"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"
 
   - word: lipatr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"
 
   - word: liptr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"
 
   - word: lipkotr
     note: >-
@@ -43,16 +43,19 @@ words:
     parses:
       - signature: "LIP+PK+T+R|lipkotr"
         rules: [pk, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"
 
   - word: lipkaktr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"
 
   - word: kalipatr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: truncated material"

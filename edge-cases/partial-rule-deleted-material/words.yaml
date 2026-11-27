@@ -13,10 +13,8 @@ words:
     parses:
       - signature: "LIP+PK+T+R|lipktr"
         rules: [pk, t, r, prDel]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: lipkt
     note: >-
@@ -24,20 +22,22 @@ words:
     parses:
       - signature: "LIP+PK+T|lipkt"
         rules: [pk, t, prDel]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: liptr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: lipkotr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: kaliptr
     note: >-
@@ -45,14 +45,10 @@ words:
     parses:
       - signature: "PC+LIP+T+R|kaliptr"
         rules: [pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "PC+LIP+T+R|kaliptr"
         rules: [pc, t, r]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: liptkor
     note: >-
@@ -60,6 +56,5 @@ words:
     parses:
       - signature: "LIP+T+PK+R|liptkor"
         rules: [t, pk, r]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"

@@ -100,9 +100,8 @@ words:
       - signature: "SEMIT+PAST|semitide"
         gloss: carry-PAST
         rules: [mrPast, prEpenthesis]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "RewriteRule Simultaneous"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: semitile
     note: SEMIT + PRES, the disjunctive slot-1 sibling of semitide -- same epenthesis reasoning, present tense suffix instead.
@@ -110,9 +109,8 @@ words:
       - signature: "SEMIT+PRES|semitile"
         gloss: carry-PRES
         rules: [mrPres, prEpenthesis]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "RewriteRule Simultaneous"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: semitideler
     note: SEMIT + PAST(slot 1, obligatory) + PL(slot 2, optional) -- proves the optional number slot composes once the obligatory tense slot is filled, same mechanism as suffixing-evidential-adjacency-chain's walaknichik.
@@ -134,12 +132,8 @@ words:
       - signature: "KUTAK+PAST|kutagida"
         gloss: arrive-PAST
         rules: [mrPast, prBacknessHarmony, prGradation, prEpenthesis]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "RewriteRule Simultaneous"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
-          - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: kutagila
     note: KUTAK + PRES, the disjunctive slot-1 sibling of kutagida -- same harmony/gradation/epenthesis reasoning, present tense suffix instead. Also the rewrite/disjunctive pin (consonant-gradation's two ordered, word-initial-anchored subrules).
@@ -148,11 +142,8 @@ words:
       - signature: "KUTAK+PRES|kutagila"
         gloss: arrive-PRES
         rules: [mrPres, prBacknessHarmony, prGradation, prEpenthesis]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "RewriteRule Simultaneous"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-          - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: kutak
     note: KUTAK bare, no tense suffix at all -- slot 1 (tense) is obligatory and unfilled, so the AffixTemplate can never produce this output at all (mirrors suffixing-evidential-adjacency-chain's walakchik / negative/obligatory-tense-slot's "tun") -- zero parses.
@@ -179,9 +170,8 @@ words:
       - signature: "UNT+PAST|unitide"
         gloss: fall-PAST
         rules: [mrPast, prEpenthesis]
-        exercises:
-          - "RewriteRule Simultaneous"
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: untda
     note: The hypothetical "harmony reached 3 consonants" surface form -- never producible, since prBacknessHarmony's correct (bounded) behavior is exactly what forbids it; see unitide's note for the in-bound/out-of-bound contrast.
@@ -197,6 +187,8 @@ words:
         gloss: roam
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: guan
     note: GAN infixed with the intensive marker "-u-" after the first segment -- the discontinuous-morph positive/success control (no RequiredEnvironments at all, always succeeds), paired with etemig/esalig's negative circumfix demonstration below.
@@ -214,6 +206,8 @@ words:
         gloss: rest
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: sal
     note: SAL ("wait") bare root, posN -- the other circumfix-demonstration root; its initial "s" does NOT match the circumfix's required right-context class.
@@ -222,6 +216,8 @@ words:
         gloss: wait
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: etemig
     note: >-
@@ -294,6 +290,8 @@ words:
         gloss: sit
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: set
     note: SET ("stand", posVAlpha) bare root, no suffix -- control for setin below.
@@ -303,6 +301,8 @@ words:
         gloss: stand
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: satun
     note: >-
@@ -344,9 +344,8 @@ words:
     parses:
       - signature: "KALT|kalut"
         rules: [prAlphaHighHarmony, prEpenthesis, prGradation]
-        exercises:
-          - "RewriteRule Simultaneous"
-          - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: kalit
     note: >-
@@ -359,7 +358,6 @@ words:
     blocked_by: [prAlphaHighHarmony]
     exercises:
       - "RewriteRule Simultaneous"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
 
   - word: kalutun
     note: >-
@@ -371,9 +369,8 @@ words:
       - signature: "KALT+ALPHA|kalutun"
         gloss: probe-ALPHA
         rules: [mrAlphaSuf, prAlphaHighHarmony, prEpenthesis, prGradation]
-        exercises:
-          - "RewriteRule Simultaneous"
-          - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: kalitin
     note: >-
@@ -386,4 +383,3 @@ words:
     blocked_by: [prAlphaHighHarmony]
     exercises:
       - "RewriteRule Simultaneous"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"

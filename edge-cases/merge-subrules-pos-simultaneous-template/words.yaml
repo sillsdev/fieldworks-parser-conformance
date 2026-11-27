@@ -20,32 +20,44 @@ words:
     parses:
       - signature: "TA_N|F"
         rules: [prMerge]
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: Gs
     note: The verb TA_V with the mandatory template suffix, fused by the verb subrule.
     parses:
       - signature: "TA_V+S|Gs"
         rules: [mrSfxS, prMerge]
-        exercises:
-          - "RewriteRule Simultaneous"
-          - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: FF
     note: TATA fused at both sites (simultaneously scan).
     parses:
       - signature: "TATA|FF"
         rules: [prMerge]
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: G
     note: A verb without its mandatory template suffix is not a word, and no noun fuses to G.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: Fs
     note: The suffix is verb-only and reachable only through the verb template; no verb fuses to F.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: ta
     note: The merge is obligatory for both parts of speech.
     expect_fail: true
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: tas
     note: Same, under the suffix.
     expect_fail: true
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: tata
     note: Same, two sites.
     expect_fail: true
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"

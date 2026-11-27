@@ -19,3 +19,5 @@ words:
   - word: aa
     note: Length control has no three-segment lexical root.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

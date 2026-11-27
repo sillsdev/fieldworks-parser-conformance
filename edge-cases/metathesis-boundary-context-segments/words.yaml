@@ -7,151 +7,177 @@ words:
     parses:
       - signature: "R0|st"
         rules: []
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "pst"
     note: >-
       R1 is underlying pst; nothing swaps: C# gives R1|pst.
     parses:
       - signature: "R1|pst"
         rules: []
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "sta"
     note: >-
       R0+SUF0 is underlying st+a; nothing swaps: C# gives R0+SUF0|st+?a.
     parses:
       - signature: "R0+SUF0|st+?a"
         rules: [SUF0]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "stp"
     note: >-
       R0+SUF1 is underlying st+p; nothing swaps: C# gives R0+SUF1|st+?p.
     parses:
       - signature: "R0+SUF1|st+?p"
         rules: [SUF1]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "st+a"
     note: >-
       R0+SUF0 is underlying st+a; nothing swaps: C# gives R0+SUF0|st+?a.
     parses:
       - signature: "R0+SUF0|st+?a"
         rules: [SUF0]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "st+p"
     note: >-
       R0+SUF1 is underlying st+p; nothing swaps: C# gives R0+SUF1|st+?p.
     parses:
       - signature: "R0+SUF1|st+?p"
         rules: [SUF1]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "stpa"
     note: >-
       R0+SUF1+SUF0 is underlying st+p+a; nothing swaps: C# gives R0+SUF1+SUF0|st+?p+?a.
     parses:
       - signature: "R0+SUF1+SUF0|st+?p+?a"
         rules: [SUF1, SUF0]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "tsap"
     note: >-
       R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p. R0+SUF2 is underlying st+ap; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2|t+?sap.
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R0+SUF2|t+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "t+sap"
     note: >-
       R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p. R0+SUF2 is underlying st+ap; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2|t+?sap.
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R0+SUF2|t+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "tsa+p"
     note: >-
       R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p.
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "t+sa+p"
     note: >-
       R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p.
     parses:
       - signature: "R0+SUF0+SUF1|t+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "ptsap"
     note: >-
       R1+SUF0+SUF1 is underlying pst+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF0+SUF1|pt+?sa+?p. R1+SUF2 is underlying pst+ap; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF2|pt+?sap.
     parses:
       - signature: "R1+SUF0+SUF1|pt+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R1+SUF2|pt+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "pt+sap"
     note: >-
       R1+SUF0+SUF1 is underlying pst+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF0+SUF1|pt+?sa+?p. R1+SUF2 is underlying pst+ap; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF2|pt+?sap.
     parses:
       - signature: "R1+SUF0+SUF1|pt+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
       - signature: "R1+SUF2|pt+?sap"
         rules: [SUF2, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "pt+sa+p"
     note: >-
       R1+SUF0+SUF1 is underlying pst+a+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF0+SUF1|pt+?sa+?p.
     parses:
       - signature: "R1+SUF0+SUF1|pt+?sa+?p"
         rules: [SUF0, SUF1, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "tsapa"
     note: >-
       R0+SUF2+SUF0 is underlying st+ap+a; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2+SUF0|t+?sap+?a.
     parses:
       - signature: "R0+SUF2+SUF0|t+?sap+?a"
         rules: [SUF2, SUF0, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "tsapp"
     note: >-
       R0+SUF2+SUF1 is underlying st+ap+p; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2+SUF1|t+?sap+?p.
     parses:
       - signature: "R0+SUF2+SUF1|t+?sap+?p"
         rules: [SUF2, SUF1, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "t+sap+a"
     note: >-
       R0+SUF2+SUF0 is underlying st+ap+a; the root s and t swap before the context a p; only segments move, and the root's boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2+SUF0|t+?sap+?a.
     parses:
       - signature: "R0+SUF2+SUF0|t+?sap+?a"
         rules: [SUF2, SUF0, pr1]
-        exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "stap"
     note: >-
       C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "st+ap"
     note: >-
       C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "sta+p"
     note: >-
       C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "st+a+p"
     note: >-
       C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "sap"
     note: >-
       C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"
   - word: "tasp"
     note: >-
       C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary in the switch context"

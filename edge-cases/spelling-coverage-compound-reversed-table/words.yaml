@@ -7,16 +7,22 @@ words:
     parses:
       - signature: "ROOT|[ieaá(xy)]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: "á"
     note: "C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[ieaá(xy)]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: xy
     note: "C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[ieaá(xy)]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: aa
     note: "C# returns 1 analysis (ROOT|[ieaá(xy)][ieaá(xy)]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -55,14 +61,22 @@ words:
   - word: ap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: p
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: e
     note: "C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[ieaá(xy)]"
         rules: []
+    exercises:
+      - "CompoundingRule"

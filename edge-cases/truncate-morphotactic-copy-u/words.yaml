@@ -36,6 +36,8 @@ words:
       - signature: "ROOT+C+A+U|gau"
         gloss: "32-3SGA-U-3SGC"
         rules: [mruleTruncTrail, mrU, mruleTruncOptIns]
+    exercises:
+      - "AffixProcessRule: subtraction/truncation"
 
   - word: au
     note: "Three parses; retain all distinct morph orders and histories."
@@ -50,6 +52,8 @@ words:
       - signature: "ROOT+A+U+B|au"
         gloss: "32-3SGA-U-3SGB"
         rules: [mruleTruncTrail, mrU, mruleTruncLead]
+    exercises:
+      - "AffixProcessRule: subtraction/truncation"
 
   - word: sagu
     note: "Positive copy-U control."
@@ -57,7 +61,11 @@ words:
       - signature: "ROOT+U|sagu"
         gloss: "32-U"
         rules: [mrU]
+    exercises:
+      - "AffixProcessRule: subtraction/truncation"
 
   - word: bau
     note: "Impossible negative control."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: subtraction/truncation"

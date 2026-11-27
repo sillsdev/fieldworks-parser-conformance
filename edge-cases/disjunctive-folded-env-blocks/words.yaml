@@ -9,6 +9,8 @@ words:
       disjunctive property stops allomorph 1 (input stem+, adds ku) from applying, so ban+ku has no parse.
       The same holds when guided synthesis rejects allomorph 0 for the recorded allomorph 1.
     expect_fail: true
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
   - word: basku
     note: >-
       Control: allomorph 0 does not match bas (no final n), so the lexeme-form allomorph 1 applies and
@@ -16,15 +18,20 @@ words:
     parses:
       - signature: "BAS+DAT|basku"
         rules: [mrDat]
-        exercises: ["Disjunctive allomorphs / free-fluctuation", "AffixProcessRule: prefix/suffix/circumfix/infix"]
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
   - word: banka
     note: >-
       The alternate itself still parses: allomorph 0 applies to ban and yields banka.
     parses:
       - signature: "BAN+DAT|banka"
         rules: [mrDat]
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"
   - word: ban
     note: "Control: the bare root parses with no suffix."
     parses:
       - signature: "BAN|ban"
         rules: []
+    exercises:
+      - "Disjunctive allomorphs / free-fluctuation"

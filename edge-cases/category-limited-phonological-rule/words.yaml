@@ -29,14 +29,22 @@ words:
     parses:
       - signature: "KAUT_V|kaut"
         rules: []
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: pun
     note: "Control: a verb whose u is not after a is outside the rule's context and surfaces unchanged."
     parses:
       - signature: "PUN_V|pun"
         rules: []
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: kiin
     note: "The rule's output i is not an underlying vowel of any entry, so a surface form with no root of that shape has no parse."
     expect_fail: true
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"
   - word: kainn
     note: "Control: extra material after the context has no parse."
     expect_fail: true
+    exercises:
+      - "RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"

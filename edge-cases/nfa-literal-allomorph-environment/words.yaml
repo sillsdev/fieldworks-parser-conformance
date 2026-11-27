@@ -16,14 +16,22 @@ words:
     parses:
       - signature: "ROOT|gabas"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: ginabas
     note: Infix in splits the elsewhere allomorph; no literal a follows its first piece.
     parses:
       - signature: "ROOT+INF|ginabas"
         rules: [mrInfix]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: gabs
     note: The conditioned allomorph lacks the required following a.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: gabasa
     note: A following a licenses gabs and blocks the elsewhere form gabas.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

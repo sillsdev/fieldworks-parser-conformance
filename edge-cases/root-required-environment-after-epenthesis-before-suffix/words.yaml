@@ -13,23 +13,32 @@ words:
     parses:
       - signature: "R2|ta"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "tp"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1|tp"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "tas"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R2+SU0|tas"
         rules: [SU0]
-        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "tpas"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1+SU0|tpas"
         rules: [SU0, pe0]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 4
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"

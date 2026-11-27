@@ -20,6 +20,8 @@ words:
     parses:
       - signature: "ROOTC2|tam"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: ketamtaman
     note: >-
@@ -36,6 +38,5 @@ words:
     parses:
       - signature: "CIRCREDUP+ROOTC2|ketamtaman"
         rules: [mrCircRedup]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "AffixProcessRule: reduplication (ReduplicationHint)"
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"

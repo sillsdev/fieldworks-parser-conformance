@@ -9,6 +9,8 @@ words:
     note: >-
       d needs part of speech A and gives B; kam in A gives KAM+D, which no template closes, so no analysis.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamt
     note: >-
@@ -16,8 +18,8 @@ words:
     parses:
       - signature: "KAMB+T|kamt"
         rules: [t]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamdt
     note: >-
@@ -25,9 +27,8 @@ words:
     parses:
       - signature: "KAM+D+T|kamdt"
         rules: [d, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamet
     note: >-
@@ -35,14 +36,10 @@ words:
     parses:
       - signature: "KAM+E+T|kamet"
         rules: [e, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "KAMB+E+T|kamet"
         rules: [e, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamu
     note: >-
@@ -50,8 +47,8 @@ words:
     parses:
       - signature: "KAMB+U|kamu"
         rules: [u]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamut
     note: >-
@@ -59,8 +56,8 @@ words:
     parses:
       - signature: "KAMB+U+T|kamut"
         rules: [u, t]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: lopt
     note: >-
@@ -68,8 +65,8 @@ words:
     parses:
       - signature: "LOP+T|lopt"
         rules: [t]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: lopu
     note: >-
@@ -77,8 +74,8 @@ words:
     parses:
       - signature: "LOP+U|lopu"
         rules: [u]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nukx
     note: >-
@@ -86,8 +83,8 @@ words:
     parses:
       - signature: "NUK+X|nukx"
         rules: [x]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamx
     note: >-
@@ -95,13 +92,15 @@ words:
     parses:
       - signature: "KAM+X|kamx"
         rules: [x]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: lopx
     note: >-
       x is only in the slots of T3 (C) and T4 (A); lop is B, so no analysis.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: akamt
     note: >-
@@ -109,9 +108,8 @@ words:
     parses:
       - signature: "P+KAMB+T|akamt"
         rules: [p, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: akamdt
     note: >-
@@ -119,14 +117,10 @@ words:
     parses:
       - signature: "P+KAM+D+T|akamdt"
         rules: [p, d, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
       - signature: "P+KAM+D+T|akamdt"
         rules: [p, d, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: alopt
     note: >-
@@ -134,14 +128,15 @@ words:
     parses:
       - signature: "P+LOP+T|alopt"
         rules: [p, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pat
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pau
     note: >-
@@ -149,8 +144,8 @@ words:
     parses:
       - signature: "PA+U|pau"
         rules: [u]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pad
     note: >-
@@ -167,9 +162,8 @@ words:
     parses:
       - signature: "NUK+Q+X|nukqx"
         rules: [q, x]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nukxq
     note: >-
@@ -177,14 +171,15 @@ words:
     parses:
       - signature: "NUK+X+Q|nukxq"
         rules: [x, q]
-        exercises:
-          - "Affix template slots (obligatory/disjunctive/ordering)"
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamtd
     note: >-
       d after the final template T1 is refused: d is not partial.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nuket
     note: >-
@@ -192,6 +187,5 @@ words:
     parses:
       - signature: "NUK+E+T|nuket"
         rules: [e, t]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"

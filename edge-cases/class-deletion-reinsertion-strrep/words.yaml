@@ -43,6 +43,8 @@ words:
     parses:
       - signature: "AM+KILI|amkili"
         rules: [mrPfxAm]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: uma
     note: The bare root uma, and umpa with its root-internal p deleted after m.
     parses:
@@ -59,6 +61,8 @@ words:
     parses:
       - signature: "UMKA|umka"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: amuma
     note: >-
       Two re-insertion sites, after the prefix m and after the root m: am+uma, am+umpa (second
@@ -86,6 +90,10 @@ words:
   - word: ampili
     note: The rule is obligatory, so am+pili never surfaces with its p.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: amkuma
     note: No root kuma, and k cannot be a deleted labial.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

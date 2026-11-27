@@ -13,23 +13,28 @@ words:
     parses:
       - signature: "KAT|kat"
         rules: []
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: sum
     note: "Bare verb root control."
     parses:
       - signature: "SUM|sum"
         rules: []
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: kata
     note: "One -a: two noun-taking suffixes and two enclitics that accept a noun."
     parses:
       - signature: "KAT+ANN|kat+?a"
         rules: [aNN]
-        exercises: ["Clitics stratum: clitic designation by stratum name alone", "AffixProcessRule: prefix/suffix/circumfix/infix"]
       - signature: "KAT+ANV|kat+?a"
         rules: [aNV]
       - signature: "KAT+CLANY|kat+?a"
         rules: [clC]
       - signature: "KAT+CLAN|kat+?a"
         rules: [clA]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: suma
     note: "One -a on the verb root."
     parses:
@@ -41,16 +46,22 @@ words:
         rules: [clC]
       - signature: "SUM+CLAV|sum+?a"
         rules: [clB]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: katsi
     note: "The -si verbalizer alone."
     parses:
       - signature: "KAT+SI|kat+?si"
         rules: [si]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: katasi
     note: "A noun-to-noun -a under -si; an enclitic cannot stand inside a suffix."
     parses:
       - signature: "KAT+ANN+SI|kat+?a+?si"
         rules: [aNN, si]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: katsia
     note: "-a outside -si: verb-taking suffixes and enclitics."
     parses:
@@ -62,6 +73,8 @@ words:
         rules: [clC, si]
       - signature: "KAT+SI+CLAV|kat+?si+?a"
         rules: [clB, si]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: katasia
     note: "-a on both sides of -si."
     parses:
@@ -73,9 +86,13 @@ words:
         rules: [aNN, clC, si]
       - signature: "KAT+ANN+SI+CLAV|kat+?a+?si+?a"
         rules: [aNN, clB, si]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: sumsia
     note: "-si needs a noun."
     expect_fail: true
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: sumasia
     note: "The verb root is nominalized by -a before -si."
     parses:
@@ -85,12 +102,18 @@ words:
         rules: [aVN, clC, si]
       - signature: "SUM+AVN+SI+CLAV|sum+?a+?si+?a"
         rules: [aVN, clB, si]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: akat
     note: "No prefix exists."
     expect_fail: true
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: katsisi
     note: "-si applies once and needs a noun."
     expect_fail: true
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: kataa
     note: "Same-form a affixes across the Morphology and Clitics strata: C# keeps CLAN+CLANY and CLANY+CLAN as separate analyses."
     parses:
@@ -112,6 +135,8 @@ words:
         rules: [clA, clC]
       - signature: "KAT+CLANY+CLAN|kat+?a+?a"
         rules: [clA, clC]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: sumaa
     note: "As kataa on a verb root."
     parses:
@@ -133,6 +158,8 @@ words:
         rules: [clB, clC]
       - signature: "SUM+CLAV+CLANY|sum+?a+?a"
         rules: [clB, clC]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: kataaa
     note: "Three same-form a affixes: every order C# accepts is its own analysis."
     parses:
@@ -164,3 +191,5 @@ words:
         rules: [aNV, clB, clC]
       - signature: "KAT+ANV+CLAV+CLANY|kat+?a+?a+?a"
         rules: [aNV, clB, clC]
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"

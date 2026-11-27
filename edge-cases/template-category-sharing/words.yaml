@@ -11,6 +11,8 @@ words:
     parses:
       - signature: "KOLO|kolo"
         rules: []
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: pakolosa
     note: KOLO + template A applied fully (mrPfxA prefix "pa-" + mrSfxA suffix "-sa").
@@ -25,6 +27,8 @@ words:
     parses:
       - signature: "PFXB+KOLO+SFXB|takolola"
         rules: [mrPfxB, mrSfxB]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: pakolola
     note: >-
@@ -37,12 +41,16 @@ words:
     expect_fail: true
     # Structural attribution: no complete template path exists; not a traced rule rejection.
     blocked_by: [mrPfxA, mrSfxB]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: takolosa
     note: The mirror-image cross-template mix (template B's prefix + template A's suffix) -- also structurally impossible, a second negative control.
     expect_fail: true
     # Structural attribution, not a traced rule rejection.
     blocked_by: [mrPfxB, mrSfxA]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: mbili
     note: >-
@@ -57,3 +65,5 @@ words:
       - signature: "MBILIB|mbili"
         gloss: count
         rules: []
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"

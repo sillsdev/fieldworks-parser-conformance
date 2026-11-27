@@ -23,6 +23,8 @@ words:
     note: >-
       The epenthesis is obligatory at word-final d, so the unepenthesised form has no analysis.
     expect_fail: true
+    exercises:
+      - "Clitic rules (Clitics stratum) after a final template"
 
   - word: sagdis
     note: >-

@@ -10,12 +10,12 @@ words:
     parses:
       - signature: "AKA|[ktszai][ktszai][ktszai]"
         rules: [prLen]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "ITA|[ktszai][ktszai][ktszai]"
         rules: [prLen]
-        exercises:
-          - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification"
   - word: aa
     note: Length control has no three-segment lexical root.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification"

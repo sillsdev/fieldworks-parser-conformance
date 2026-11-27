@@ -1907,6 +1907,8 @@ words:
         rules: [mrP9, mrP8, mrP7, mrP6, mrP5, mrP3]
       - signature: "P9+P8+P7+P6+P5+P4+K|xxxxxxk"
         rules: [mrP9, mrP8, mrP7, mrP6, mrP5, mrP4]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: "xxxxxxxxxxxxk"
     note: >-

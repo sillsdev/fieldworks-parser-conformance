@@ -31,3 +31,5 @@ words:
   - word: b
     note: "Negative control: the epenthesis is obligatory at the root's only site."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

@@ -8,58 +8,51 @@ words:
     parses:
       - signature: "X+Y+Z|apt"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y+Z|apt"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aapt
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ap
     note: "C# returns 2 analyses (X+Y|ap): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y|ap"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y|ap"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: apst
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaa
     note: "C# returns 2 analyses (X|aaa): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|aaa"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X|aaa"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: spa
     note: "C# returns 3 analyses (PRE+Y+X|spa): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "PRE+Y+X|spa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|spa"
         rules: ["PRE", "cr1"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
       - signature: "PRE+Y+X|spa"
         rules: ["PRE", "cr2"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"

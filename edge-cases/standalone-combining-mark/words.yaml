@@ -36,6 +36,8 @@ words:
     parses:
       - signature: "PA|pa"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: "pá"
     note: >-
@@ -51,6 +53,8 @@ words:
     parses:
       - signature: "PAH|pá"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: pan
     note: PA + mrSuf (SUF, "-n" suffix) -- the plain-root control case carried through a real derivation.

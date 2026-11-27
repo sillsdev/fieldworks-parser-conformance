@@ -14,7 +14,8 @@ words:
     parses:
       - signature: "DAK+FINX|dakfa"
         rules: [mrFinX]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: dakfaga
     note: >-
@@ -22,6 +23,8 @@ words:
       Synthesis refuses it, so no analysis exists.
     expect_fail: true
     blocked_by: [mrGateX]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pakga
     note: >-
@@ -30,12 +33,16 @@ words:
     parses:
       - signature: "PAK+GATEX|pakga"
         rules: [mrGateX]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pakfa
     note: >-
       Partial root. SynthesisAffixTemplatesRule skips every template for a partial root morpheme,
       so the final template never applies and this string has no analysis.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pakfaga
     note: >-
@@ -44,31 +51,42 @@ words:
       ever applies to a partial root, so there is no derivation to license it. This is the case
       that the lexical-entry half of Morpher.IsPartial was suspected to protect (issue 551).
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pibgb
     note: Control. Partial root in the same stratum as the rules, ordinary rule, no template.
     parses:
       - signature: "PIB+GATEY|pibgb"
         rules: [mrGateY]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pibfb
     note: Partial root in the template's own stratum. The final template does not apply to it.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pibfbgb
     note: >-
       Same-stratum counterpart of pakfaga. Also has no analysis, for the same reason.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nibfb
     note: Control. The final template alone on the non-partial root nib, same stratum as pib.
     parses:
       - signature: "NIB+FINY|nibfb"
         rules: [mrFinY]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nibfbgb
     note: >-
       Control (blocked). Non-partial root nib, same chain as pibfbgb.
     expect_fail: true
     blocked_by: [mrGateY]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"

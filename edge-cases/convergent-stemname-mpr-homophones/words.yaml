@@ -19,6 +19,8 @@ words:
       - signature: "BOLUB|bolu"
         gloss: boluB
         rules: []
+    exercises:
+      - "MPR features/groups"
   - word: boluit
     note: >-
       Derivation reaches the shape bolu from one parent; each root still parses under its own feature.
@@ -29,6 +31,8 @@ words:
       - signature: "BOLUB+DER|boluit"
         gloss: boluB-der
         rules: [rDer]
+    exercises:
+      - "MPR features/groups"
   - word: boluitma
     note: >-
       Four homophonous ma allomorphs share one shape: rules maReq and mbReq are derivational and require ExcA and ExcB; rules maExc and mbExc are slot rules and exclude NotA and NotB, which the roots carry (ExcA root: NotA; ExcB root: NotB). Each root passes exactly two of the four (ExcA root: maReq, mbExc; ExcB root: maExc, mbReq). A cache keyed by rule and shape that dropped an allomorph, or applied the root exception features at the wrong time, would show here.
@@ -36,17 +40,17 @@ words:
       - signature: "BOLUA+DER+MA|boluitma"
         gloss: boluA-der-ma
         rules: [rDer, rMaReq]
-        exercises: ["RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level"]
       - signature: "BOLUA+DER+MBEXC|boluitma"
         gloss: boluA-der-mbExc
         rules: [rDer, rMbExc]
       - signature: "BOLUB+DER+MAEXC|boluitma"
         gloss: boluB-der-maExc
         rules: [rDer, rMaExc]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
       - signature: "BOLUB+DER+MBREQ|boluitma"
         gloss: boluB-der-mbReq
         rules: [rDer, rMbReq]
+    exercises:
+      - "MPR features/groups"
   - word: boluitta
     note: >-
       Control: the later suffix ta is reached once per root; the per-path exception gate must not leak between the two roots.
@@ -57,6 +61,8 @@ words:
       - signature: "BOLUB+DER+TA|boluitta"
         gloss: boluB-der-ta
         rules: [rDer, rTa]
+    exercises:
+      - "MPR features/groups"
   - word: boluitmata
     note: >-
       The same four paths reach one shape before ta (a slot after the exclusion slot); ta is matched on the identical shape from four parent paths and each path keeps its own root outcome.
@@ -64,7 +70,6 @@ words:
       - signature: "BOLUA+DER+MA+TA|boluitmata"
         gloss: boluA-der-ma-ta
         rules: [rDer, rMaReq, rTa]
-        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
       - signature: "BOLUA+DER+MBEXC+TA|boluitmata"
         gloss: boluA-der-mbExc-ta
         rules: [rDer, rMbExc, rTa]
@@ -74,6 +79,8 @@ words:
       - signature: "BOLUB+DER+MBREQ+TA|boluitmata"
         gloss: boluB-der-mbReq-ta
         rules: [rDer, rMbReq, rTa]
+    exercises:
+      - "MPR features/groups"
   - word: boluitmama
     note: >-
       Two homophonous suffixes in sequence: the derivational (required-feature) rule applies first and the slot rule (excluded-feature) second, so each root yields one pair, the one its features allow. The other order is not reachable: a template applies after the stratum rules.
@@ -84,6 +91,8 @@ words:
       - signature: "BOLUB+DER+MBREQ+MAEXC|boluitmama"
         gloss: boluB-der-mbReq-maExc
         rules: [rDer, rMbReq, rMaExc]
+    exercises:
+      - "MPR features/groups"
   - word: boluitmamata
     note: >-
       As boluitmama plus ta: the deepest shared shape is reached by two paths, one per root.
@@ -94,10 +103,14 @@ words:
       - signature: "BOLUB+DER+MBREQ+MAEXC+TA|boluitmamata"
         gloss: boluB-der-mbReq-maExc-ta
         rules: [rDer, rMbReq, rMaExc, rTa]
+    exercises:
+      - "MPR features/groups"
   - word: kele
     note: >-
       Control: the stem-named allomorph kele is valid only when the word's num is sg, and a bare root has no num, so there is no parse.
     expect_fail: true
+    exercises:
+      - "Stem names"
   - word: keli
     note: >-
       Control: the unnamed allomorph is valid bare (outside every stem name region).
@@ -105,6 +118,8 @@ words:
       - signature: "KELE|keli"
         gloss: kele
         rules: []
+    exercises:
+      - "Stem names"
   - word: kelesu
     note: >-
       rule sg assigns num=sg, which puts the word inside the stem name region: the stem-named allomorph kele is the one that parses.
@@ -118,6 +133,8 @@ words:
       rule sg puts the word inside the region, so the unnamed allomorph keli is excluded: no parse, though the shape keli is the same one the bare control above parses.
     expect_fail: true
     blocked_by: [rSg]
+    exercises:
+      - "Stem names"
   - word: kelesusu
     note: >-
       Two homophonous suffixes su, one of which requires the root's stem name (requiredStemName): both orders parse with the stem-named allomorph. The same shape is reached by two paths.
@@ -129,11 +146,15 @@ words:
       - signature: "KELE+SGNAMED+SG|kelesusu"
         gloss: kele-sgNamed-sg
         rules: [rSgNamed, rSg]
+    exercises:
+      - "Stem names"
   - word: kelisusu
     note: >-
       Both su rules would apply to the shape keli, but the unnamed allomorph is excluded by num=sg whichever rule assigned it, and rule sgNamed also requires a stem name the root allomorph lacks: no parse. The shape keli+su is the same one reached by two parent paths; the gate must run on every arrival.
     expect_fail: true
     blocked_by: [rSg, rSgNamed]
+    exercises:
+      - "Stem names"
   - word: kelesuta
     note: >-
       The stem-name gate and ta compose: ta is reached after sg on the shape kele.
@@ -141,8 +162,12 @@ words:
       - signature: "KELE+SG+TA|kelesuta"
         gloss: kele-sg-ta
         rules: [rSg, rTa]
+    exercises:
+      - "Stem names"
   - word: kelisumata
     note: >-
       Shape-level control in the legal slot order (sg, then the exclusion slot, then the ta slot): sg assigns num=sg, so the unnamed allomorph keli is excluded and nothing parses. Without the stem name on kele, the same word parses with maExc and with mbExc, so the stem name gate is what blocks it.
     expect_fail: true
     blocked_by: [rSg]
+    exercises:
+      - "Stem names"

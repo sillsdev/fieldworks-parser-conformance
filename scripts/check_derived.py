@@ -5,7 +5,7 @@ Nothing derived is committed (ADR 0009), so there is no file to go stale; what c
 or what it shows. This fails when:
   - the manifests do not validate against schema/conformance-manifest.schema.json, or do not mention every test case;
   - generation is not deterministic;
-  - coverage.csv has no rows, or a word exercises a construct constructs.txt does not declare;
+  - coverage.csv has no rows, or a word exercises a label constructs.txt and labels.tsv do not declare (check_labels.py checks the same per word);
   - a `blocked_by` label names no rule id of its grammar;
   - a rule no word exercises is missing from dead-rules-allowed.tsv, or an allowed rule is no longer dead.
 Needs PyYAML and jsonschema (scripts/requirements.txt).
@@ -14,14 +14,9 @@ import json
 import sys
 
 import derive
-from suite import ROOT, fixture_dirs, fixture_id, load_expanded_words
+from suite import ROOT, fixture_dirs, fixture_id, load_expanded_words, vocabulary
 
 OUT_OF_SCOPE = "Tracing (TraceType)"
-
-
-def checklist():
-    lines = (ROOT / "constructs.txt").read_text(encoding="utf-8").splitlines()
-    return [line.strip() for line in lines if line.strip() and not line.lstrip().startswith("#")]
 
 
 def dead_rules_allowed():
@@ -59,9 +54,9 @@ def main() -> int:
     rules = derive.coverage(per_fixture=True)[1]
     if not cover:
         problems.append("coverage.csv would have no rows: an empty table proves nothing")
-    declared = set(checklist())
+    declared = set(vocabulary())
     for construct in sorted({row[3] for row in cover} - declared):
-        problems.append(f"a word exercises {construct!r}, which constructs.txt does not declare")
+        problems.append(f"a word exercises {construct!r}, which is not in constructs.txt or labels.tsv")
 
     for directory in fixture_dirs():
         fid = fixture_id(directory)

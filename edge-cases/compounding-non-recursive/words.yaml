@@ -23,30 +23,40 @@ words:
     parses:
       - signature: "HEADA|fasu"
         rules: []
+    exercises:
+      - "CompoundingRule"
 
   - word: bel
     note: nonHeadOk bare root -- a plain control.
     parses:
       - signature: "NONHEADOK|bel"
         rules: []
+    exercises:
+      - "CompoundingRule"
 
   - word: zon
     note: nonHeadBadPos bare root -- a plain control.
     parses:
       - signature: "NONHEADBADPOS|zon"
         rules: []
+    exercises:
+      - "CompoundingRule"
 
   - word: numo
     note: headC bare root, no MPR features at all -- a plain control.
     parses:
       - signature: "HEADC|numo"
         rules: []
+    exercises:
+      - "CompoundingRule"
 
   - word: tiku
     note: headB bare root -- a plain control.
     parses:
       - signature: "HEADB|tiku"
         rules: []
+    exercises:
+      - "CompoundingRule"
 
   - word: fasubel
     exercises: ["CompoundingRule"]

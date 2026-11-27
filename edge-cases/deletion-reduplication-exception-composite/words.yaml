@@ -25,6 +25,8 @@ words:
     parses:
       - signature: "TULIK|tulik"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: menulik
     note: >-
@@ -52,6 +54,8 @@ words:
     parses:
       - signature: "BALO|balo"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: membalo
     note: >-
@@ -63,12 +67,16 @@ words:
     parses:
       - signature: "NPFX+BALO|membalo"
         rules: [mrNPfx, prNasalAssimBilabial]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: sanit
     note: SANIT bare root, no MPR feature -- a plain control for the MPR-exclusion pair below.
     parses:
       - signature: "SANIT|sanit"
         rules: []
+    exercises:
+      - "MPR features/groups"
 
   - word: sanitan
     note: SANIT + mrSuf ("-an") -- no MPR feature on this root, so mrSuf's excludedMPRFeatures="mprException" gate is vacuously satisfied and the rule applies normally.
@@ -76,12 +84,16 @@ words:
     parses:
       - signature: "SANIT+SUF|sanitan"
         rules: [mrSuf]
+    exercises:
+      - "MPR features/groups"
 
   - word: vokad
     note: VOKAD bare root (carries ruleFeatures="mprException") -- a plain control.
     parses:
       - signature: "VOKAD|vokad"
         rules: []
+    exercises:
+      - "MPR features/groups"
 
   - word: vokadan
     note: >-
@@ -93,6 +105,8 @@ words:
     provenance: "docs/conformance-staging-plan.md pathology catalog (agglutinative-Austronesian row): MPR-gated rule exception"
     expect_fail: true
     blocked_by: [mrSuf]
+    exercises:
+      - "MPR features/groups"
 
   - word: vokadi
     note: >-
@@ -103,6 +117,8 @@ words:
     parses:
       - signature: "VOKAD+SUFALT|vokadi"
         rules: [mrSufAlt]
+    exercises:
+      - "MPR features/groups"
 
 
   - word: tuliktulik

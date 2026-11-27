@@ -13,12 +13,15 @@ words:
     parses:
       - signature: "KAHTA|kata"
         rules: [prHDel]
-        exercises: ["AffixProcessRule: reduplication (ReduplicationHint)", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kakata
     note: "Reduplication of the root's first CV; the deleted h is restored only inside the stem."
     parses:
       - signature: "RED+KAHTA|ka+?kata"
         rules: [prHDel, red]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kakatasi
     note: "Homophonous -si over the reduplicated stem with optional h nodes in the shape."
     parses:
@@ -30,6 +33,8 @@ words:
         rules: [prHDel, red, siNV]
       - signature: "RED+KAHTA+SINV|ka+?kata+?si"
         rules: [prHDel, red, siNV]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kakatasisi
     note: "Two stacked -si: the copy rule meets the same optional-bearing shape from several paths."
     parses:
@@ -51,22 +56,32 @@ words:
         rules: [prHDel, red, siNV, siVV]
       - signature: "RED+KAHTA+SINV+SIVV|ka+?kata+?si+?si"
         rules: [prHDel, red, siNV, siVV]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: takatasi
     note: "A copied CV that is not the stem's, with optional nodes present."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kahta
     note: "h cannot surface before a consonant."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: pusi
     note: "Verb root with no h, whose last two segments equal the suffix form."
     parses:
       - signature: "PUSI|pusi"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: pupusi
     note: "Reduplication on the verb root."
     parses:
       - signature: "RED+PUSI|pu+?pusi"
         rules: [red]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: pupusisi
     note: "Verb-taking -si over the reduplicated verb."
     parses:
@@ -78,6 +93,8 @@ words:
         rules: [red, siVV]
       - signature: "RED+PUSI+SIVV|pu+?pusi+?si"
         rules: [red, siVV]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: pupusisisi
     note: "Two stacked -si on the verb root."
     parses:
@@ -99,9 +116,13 @@ words:
         rules: [red, siVN, siVV]
       - signature: "RED+PUSI+SIVV+SIVN|pu+?pusi+?si+?si"
         rules: [red, siVN, siVV]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kakahta
     note: "h cannot surface before a consonant, reduplicated or not."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: katasi
     note: "The noun-taking -si suffixes without reduplication."
     parses:
@@ -109,12 +130,18 @@ words:
         rules: [prHDel, siNN]
       - signature: "KAHTA+SINV|kata+?si"
         rules: [prHDel, siNV]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kapusi
     note: "A copied CV that is not the stem's."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: pupupusisi
     note: "The reduplication rule applies once."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kakatasisisi
     note: "Reduplication, h-deletion and three homophonous si suffixes: the multiset repeats analyses that differ only by the order of same-form affixes."
     parses:
@@ -150,3 +177,5 @@ words:
         rules: [prHDel, red, siNV, siVN, siVV]
       - signature: "RED+KAHTA+SINV+SIVV+SIVN|ka+?kata+?si+?si+?si"
         rules: [prHDel, red, siNV, siVN, siVV]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

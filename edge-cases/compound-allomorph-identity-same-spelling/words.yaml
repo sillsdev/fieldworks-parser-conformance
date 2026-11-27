@@ -9,6 +9,8 @@ words:
         rules: []
       - signature: "ROOT|a"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: aa
     note: "C# returns 4 analyses (ROOT+ROOT|aa; ROOT|aa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -31,9 +33,15 @@ words:
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: p
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: ap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"

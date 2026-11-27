@@ -5,12 +5,18 @@ words:
   - word: a
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ai
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sai
     note: "C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -21,6 +27,8 @@ words:
   - word: aa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saa
     note: "C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -31,80 +39,108 @@ words:
   - word: aai
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saai
     note: "C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["TPRE", "cr1", "TSUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: asa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aia
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: asai
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: xy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sxy
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: xyi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sasa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aiai
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saaai
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saaii
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saxyi
     note: "C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["TPRE", "cr1", "TSUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sxyai
     note: "C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["TPRE", "cr1", "TSUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sxyxyi
     note: "C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
         rules: ["TPRE", "cr1", "TSUF"]
-        exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saaxyi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sxyaxyi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saxyxyi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saaaxyi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule > feeds affixation"

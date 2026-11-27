@@ -8,34 +8,28 @@ words:
     parses:
       - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: apt
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Y+Z|[aá][+-=é]?p[+-=é]?t"
         rules: ["cr1", "cr2"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "aét"
     note: "C# returns 2 analyses (X+Z|[aá][+-=é]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X+Z|[aá][+-=é]?t"
         rules: ["cr1"]
-        exercises:
-          - "CompoundingRule"
       - signature: "X+Z|[aá][+-=é]?t"
         rules: ["cr2"]
-        exercises:
-          - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|s[aá]): pins that this word has a route and its morpheme sequence."
     parses:

@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
 
-from suite import FIXTURE_GROUPS, ROOT, STRESS_GROUP, expand_words, fixture_dirs, fixture_id, load_words, sha256_text, words_summary
+from suite import FIXTURE_GROUPS, LABEL_SEP, vocabulary, word_labels, ROOT, STRESS_GROUP, expand_words, fixture_dirs, fixture_id, load_words, sha256_text, words_summary
 
 FORMAT = "hc-conformance-manifest/v2"
 WORDS_FORMAT = "hc-conformance-words/v1"
@@ -125,6 +125,53 @@ def coverage(root: Path = ROOT, per_fixture: bool = False):
     return cover, rules
 
 
+def label_table(root: Path = ROOT) -> list:
+    """The label-to-words table as (label, test case, word, words, source) rows, sorted by label then test case. A label's
+    ancestors are credited too, so a construct lists every word carrying one of its children. A listed word is one row
+    (source `listed`, words 1); a generated no-parse rule is one row named `generated_no_parse[i]` (source `generated`)
+    whose `words` is the number of words it spans, so generated words never pass for listed ones."""
+    from suite import generated_space_size
+
+    found = defaultdict(list)
+    for d in fixture_dirs(root):
+        data = load_words(d / "words.yaml")
+        fid = fixture_id(d, root)
+        entries = [(word["word"], 1, "listed", word_labels(word)) for word in data["words"]]
+        entries += [(f"generated_no_parse[{i}]", generated_space_size(rule), "generated", list(rule.get("exercises") or []))
+                    for i, rule in enumerate(data.get("generated_no_parse") or [])]
+        for name, count, source, labels in entries:
+            credited = set()
+            for label in labels:
+                parts = label.split(LABEL_SEP)
+                credited.update(LABEL_SEP.join(parts[:n]) for n in range(1, len(parts) + 1))
+            for label in credited:
+                found[label].append((fid, name, count, source))
+    order = {label: i for i, label in enumerate(vocabulary(root))}
+    return [(label, fid, name, count, source) for label in sorted(found, key=lambda l: (order.get(l, len(order)), l))
+            for fid, name, count, source in found[label]]
+
+
+def print_labels(label=None) -> int:
+    """With no argument: one line per label, with its test case, listed word and generated word counts. With one: the
+    words carrying it."""
+    table = label_table()
+    if label is None:
+        summary = defaultdict(lambda: [set(), 0, 0])
+        for lab, fid, _, count, source in table:
+            summary[lab][0].add(fid)
+            summary[lab][1 if source == "listed" else 2] += count
+        for lab, (cases, listed, generated) in summary.items():
+            print(f"{len(cases):4} test cases {listed:6} listed words {generated:7} generated words  {lab}")
+        return 0
+    rows = [r for r in table if r[0] == label]
+    if not rows:
+        print(f"no word carries {label!r}")
+        return 1
+    for _, fid, name, count, source in rows:
+        print(f"{fid}\t{name}" + (f"\t({count} generated words)" if source == "generated" else ""))
+    return 0
+
+
 def csv_text(header, rows) -> str:
     out = io.StringIO()
     writer = csv.writer(out, lineterminator="\n")
@@ -142,14 +189,15 @@ def rules_csv(root: Path = ROOT) -> str:
 
 
 def write_all(out: Path, root: Path = ROOT) -> list:
-    """Write the five derived files under `out`; return their names."""
+    """Write the six derived files under `out`; return their names."""
     out.mkdir(parents=True, exist_ok=True)
     (out / MANIFEST).write_bytes(serialize(manifest(root)))
     (out / STRESS_MANIFEST).write_bytes(serialize(stress_manifest(root)))
     cover, rules = coverage(root)
     (out / "coverage.csv").write_bytes(csv_text(("language", "word", "signature", "construct"), cover).encode("utf-8"))
     (out / "rules.csv").write_bytes(csv_text(("language", "rule_id", "words"), rules).encode("utf-8"))
+    (out / "labels.csv").write_bytes(csv_text(("label", "test_case", "word", "words", "source"), label_table(root)).encode("utf-8"))
     import tiers
 
     (out / CORE_TIER).write_text("\n".join(tiers.core(tiers.compute(root))) + "\n", encoding="utf-8", newline="\n")
-    return [MANIFEST, STRESS_MANIFEST, "coverage.csv", "rules.csv", CORE_TIER]
+    return [MANIFEST, STRESS_MANIFEST, "coverage.csv", "rules.csv", "labels.csv", CORE_TIER]
