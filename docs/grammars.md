@@ -16,7 +16,7 @@ The list has 263 fixtures: 6 languages and 257 edge cases.
 
 The tier says how often a consumer should run a test case: **core** on every pull request, **regression** and **extended** on the full run. It is computed by `scripts/tiers.py` from data the suite holds, never authored, and never part of an id; `scripts/check_grammars_md.py` fails when this table is stale. A test case is core when it is a language profile, has a FieldWorks witness, or is one of the two smallest carriers of a behaviour label (today an `exercises` value; #75 replaces it; fewest words first, then id). Otherwise it is regression when it has an exception in `status.yaml`, is the only test case citing some bug (the last detector of a bug is never removed, ADR 0008), or has 300 or more words, and extended when it has none of these.
 
-65 core, 27 regression, 171 extended.
+65 core, 20 regression, 178 extended.
 
 | test case | tier | why |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/boundary-narrowing-probe` | core | carries Boundary markers (CharacterDefinitionTable), MorphologicalOutputAction: CopyFromInput/InsertSegments |
 | `edge-cases/category-limited-phonological-rule` | core | carries RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level |
 | `edge-cases/chained-output-feature-override-loss` | core | carries Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures) |
-| `edge-cases/change-epenthesis-prefix-deletion-chain` | regression | 1364 words |
+| `edge-cases/change-epenthesis-prefix-deletion-chain` | extended |  |
 | `edge-cases/circumfix-conditioned-halves` | extended |  |
 | `edge-cases/circumfix-cross-product-and-infix-drop` | extended |  |
 | `edge-cases/circumfix-in-template-slot` | extended |  |
@@ -60,7 +60,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/clitic-proclitic-after-final-template` | core | carries Clitics stratum: clitic designation by stratum name alone |
 | `edge-cases/clitic-rule-designation` | extended |  |
 | `edge-cases/clitic-stem-entry` | extended |  |
-| `edge-cases/compound-after-an-insertion-keeps-the-bare-node` | regression | 2116 words |
+| `edge-cases/compound-after-an-insertion-keeps-the-bare-node` | regression | 757 words |
 | `edge-cases/compound-allomorph-identity` | extended |  |
 | `edge-cases/compound-allomorph-identity-distinct-entries` | extended |  |
 | `edge-cases/compound-allomorph-identity-same-spelling` | extended |  |
@@ -87,10 +87,10 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/disjunctive-folded-env-blocks` | core | carries Disjunctive allomorphs / free-fluctuation |
 | `edge-cases/disjunctive-recheck` | extended |  |
 | `edge-cases/empty-required-template-slot` | core | FieldWorks witness |
-| `edge-cases/epenthesis-beside-prefix-then-prefix-deletion` | regression | 1364 words |
+| `edge-cases/epenthesis-beside-prefix-then-prefix-deletion` | extended |  |
 | `edge-cases/epenthesis-fed-merge` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) |
-| `edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix` | regression | 1364 words |
-| `edge-cases/epenthesis-then-swap-with-root-keeps-its-edge` | regression | 1364 words |
+| `edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix` | extended |  |
+| `edge-cases/epenthesis-then-swap-with-root-keeps-its-edge` | extended |  |
 | `edge-cases/expansion-interposed-optional` | extended |  |
 | `edge-cases/expansion-overlapping-targets` | extended |  |
 | `edge-cases/feature-gating-breadth` | extended |  |
@@ -118,7 +118,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/iterative-epenthesis-cascade` | extended |  |
 | `edge-cases/lexical-lookup-sibling-allomorphs` | regression | only test case citing ?#627, machine#627 |
 | `edge-cases/literal-hash-affix-context` | extended |  |
-| `edge-cases/loader-pattern-shapes` | core | carries Boundary markers (CharacterDefinitionTable), CharacterDefinitionTable pattern shapes: optional group / Kleene star |
+| `edge-cases/loader-pattern-shapes` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star |
 | `edge-cases/merge-subrules-pos-ltr-template` | core | carries RewriteRule direction (Dir): left-to-right |
 | `edge-cases/merge-subrules-pos-rtl-template` | core | carries RewriteRule direction (Dir): right-to-left |
 | `edge-cases/merge-subrules-pos-simultaneous-template` | extended |  |
@@ -131,7 +131,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/metathesis-boundary-context-right` | extended |  |
 | `edge-cases/metathesis-boundary-context-segments` | extended |  |
 | `edge-cases/metathesis-boundary-morph-order-compound` | extended |  |
-| `edge-cases/metathesis-boundary-morph-order-prefix-root` | core | carries MetathesisRule |
+| `edge-cases/metathesis-boundary-morph-order-prefix-root` | extended |  |
 | `edge-cases/metathesis-boundary-null-prefix` | extended |  |
 | `edge-cases/metathesis-boundary-right-to-left-prefix` | extended |  |
 | `edge-cases/metathesis-boundary-right-to-left-suffix` | extended |  |
@@ -147,7 +147,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/narrowing-boundary-order-alpha-lhs` | extended |  |
 | `edge-cases/nfa-literal-allomorph-environment` | regression | only test case citing pangloss#300 |
 | `edge-cases/non-clitic-after-final-template-layout` | core | carries Clitic rules (Clitics stratum) after a final template |
-| `edge-cases/null-prefix-root-initial-deletion-later-suffix` | regression | only test case citing pangloss#405; 1803 words |
+| `edge-cases/null-prefix-root-initial-deletion-later-suffix` | regression | only test case citing pangloss#405 |
 | `edge-cases/nullable-disagree-bounded-ltr-left` | extended |  |
 | `edge-cases/nullable-disagree-bounded-ltr-right` | extended |  |
 | `edge-cases/nullable-disagree-bounded-rtl-left` | extended |  |
@@ -180,9 +180,9 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/partial-rule-truncated-material` | extended |  |
 | `edge-cases/partial-rule-wrapped-material` | extended |  |
 | `edge-cases/pattern-root-required-environment` | extended |  |
-| `edge-cases/prefix-required-environment-after-epenthesis` | regression | exception in status.yaml; 341 words |
-| `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | regression | exception in status.yaml; 1364 words |
-| `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | regression | exception in status.yaml; 1364 words |
+| `edge-cases/prefix-required-environment-after-epenthesis` | regression | exception in status.yaml |
+| `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | regression | exception in status.yaml |
+| `edge-cases/prefix-required-environment-after-epenthesis-later-suffix` | regression | exception in status.yaml |
 | `edge-cases/process-morphology-in-place-mutation` | core | carries MorphologicalOutputAction: ModifyFromInput/InsertSimpleContext |
 | `edge-cases/quantified-alpha-bounded-ltr-left` | extended |  |
 | `edge-cases/quantified-alpha-bounded-ltr-right` | extended |  |
@@ -201,7 +201,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/right-to-left-bounded-quantifier-rewrite` | regression | only test case citing ?#465, pangloss#45 |
 | `edge-cases/right-to-left-metathesis-reversal` | extended |  |
 | `edge-cases/right-to-left-segments-environment` | core | carries RewriteRule direction (Dir): right-to-left |
-| `edge-cases/root-required-environment-after-epenthesis-before-suffix` | regression | 340 words |
+| `edge-cases/root-required-environment-after-epenthesis-before-suffix` | extended |  |
 | `edge-cases/shared-template-unconstrained-suffix` | extended |  |
 | `edge-cases/simultaneous-epenthesis-cascade` | extended |  |
 | `edge-cases/simultaneous-expansion-terminates` | core | carries RewriteRule Simultaneous |
@@ -263,8 +263,8 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/strrep-identity` | core | carries NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision |
 | `edge-cases/strrep-rewrite-unapplication` | regression | only test case citing machine#538, pangloss-divergence-071 |
 | `edge-cases/subrule-morphosyntactic-gating` | core | carries RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level |
-| `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix` | regression | 1803 words |
-| `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix` | regression | 1364 words |
+| `edge-cases/swap-across-a-deleted-node-keeps-the-gap-before-suffix` | extended |  |
+| `edge-cases/swap-leaves-a-deleted-node-in-place-before-suffix` | core | carries Boundary markers (CharacterDefinitionTable), MetathesisRule |
 | `edge-cases/syncope-redup-optional-vowel-lattice` | regression | only test case citing machine#635, pangloss#236, pangloss#237 |
 | `edge-cases/template-category-sharing` | extended |  |
 | `edge-cases/truncate-morphotactic` | regression | only test case citing LT-21939 |
