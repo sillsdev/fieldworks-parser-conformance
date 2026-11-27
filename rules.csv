@@ -446,6 +446,8 @@ FeaturelessSegmentClassRewrite,prLen,aka
 FeaturelessSegmentClassRewrite,prLen,aka
 FeaturelessSegmentClassRewrite,prLen,asa;aza
 FeaturelessSegmentClassRewrite,prLen,asa;aza
+FeaturelessSegmentClassRewrite,prSibVoiced,izi
+FeaturelessSegmentClassRewrite,prSibVoiceless,isi
 FeaturelessSegmentClassRewrite,prLen,asa;aza
 PartialRuleDeletedMaterial,pc,kaliptr
 PartialRuleDeletedMaterial,pk,lipktr;lipkt;liptkor
@@ -495,7 +497,8 @@ RecursiveEndocentricCompounding,cr1,tevimafl;maflisra;!tevimaflisra
 RightToLeftAnchorEnvironment,prRtlAnchor,aae;ae;eeae
 RightToLeftAnchorEnvironment,prSpread,eeae
 RightToLeftBoundedQuantifierRewrite,prRtlBq,acet;ecct
-RightToLeftMetathesisReversal,mrRtlReversal,sq;tr
+RightToLeftBoundedQuantifierRewrite,prRtlBq2,ucdt;ucdcdt
+RightToLeftMetathesisReversal,mrRtlReversal,sq;tr;qsr
 RightToLeftSegmentsEnvironment,prRtlSegEnv,ey
 EpenthesisBesideMorphEnvironment,SU0,tas;tpas
 EpenthesisBesideMorphEnvironment,pe0,tpas

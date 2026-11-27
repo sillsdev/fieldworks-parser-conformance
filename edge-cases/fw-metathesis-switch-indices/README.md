@@ -19,3 +19,10 @@ hc.dll shipped with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab): the l
 ## Not pinned
 
 A rule with a middle context (one segment between the two switches) behaves differently in hc.dll and in PanGloss; it is recorded in the PanGloss pull request, not here.
+
+## Metathesis cases that no grammar can separate
+
+Two cases of the PhMetathesisRule backlog (issue 37) cannot be told apart by any `grammar.xml`, so no fixture pins them.
+
+- Direction 2 (`simultaneous`): `HCLoader.LoadMetathesisRule` (`switch (prule.Direction)`, `case 0: case 2:`) loads it as `LeftToRight`, exactly like direction 0, and the DTD's metathesis `multipleApplicationOrder` has no `simultaneous` value. A fixture of direction 2 is a fixture of direction 0. Direction 1 is pinned by `right-to-left-metathesis-reversal`, whose root `qrs` has overlapping windows.
+- The middle context flag (`IsMiddleWithLeftSwitch`, the `:L` or `:R` of the structural change): `GetStrucChangeIndices` uses it only to number the contexts, and the loader turns the numbers into group names for the switches and the middle. The group the middle belongs to has no effect on the pattern, so the XML for `:L` and `:R` is identical. A middle segment between the switches is pinned by `metathesis-middle-context-emptied-edges`.

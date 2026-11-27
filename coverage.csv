@@ -1143,6 +1143,10 @@ FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/
 FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,isi,IPI|isi,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,izi,IBI|izi,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,ipi,,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+FeaturelessSegmentClassRewrite,ibi,,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,asa,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 FeaturelessSegmentClassRewrite,aza,AKA|a[sz]a,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
 PartialRuleDeletedMaterial,lipktr,LIP+PK+T+R|lipktr,AffixProcessRule: prefix/suffix/circumfix/infix
@@ -1542,12 +1546,31 @@ RightToLeftBoundedQuantifierRewrite,accct,ROOT3|accct,RewriteRule direction (Dir
 RightToLeftBoundedQuantifierRewrite,accct,ROOT3|accct,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 RightToLeftBoundedQuantifierRewrite,acat,,RewriteRule direction (Dir): right-to-left
 RightToLeftBoundedQuantifierRewrite,acct,,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ucdt,ROOT4|ucdt,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ucdt,ROOT4|ucdt,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,ucdcdt,ROOT5|ucdcdt,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ucdcdt,ROOT5|ucdcdt,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,ocdcdcdt,ROOT6|ocdcdcdt,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ocdcdcdt,ROOT6|ocdcdcdt,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,odct,ROOT7|odct,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,odct,ROOT7|odct,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,ocdt,,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ocdt,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,ocdcdt,,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ocdcdt,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,ucdcdcdt,,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,ucdcdcdt,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
+RightToLeftBoundedQuantifierRewrite,udct,,RewriteRule direction (Dir): right-to-left
+RightToLeftBoundedQuantifierRewrite,udct,,CharacterDefinitionTable pattern shapes: optional group / Kleene star
 RightToLeftMetathesisReversal,sq,ROOT1|sq,MetathesisRule
 RightToLeftMetathesisReversal,tr,ROOT2|tr,MetathesisRule
 RightToLeftMetathesisReversal,qs,,MetathesisRule
 RightToLeftMetathesisReversal,rt,,MetathesisRule
 RightToLeftMetathesisReversal,sr,,MetathesisRule
 RightToLeftMetathesisReversal,tq,,MetathesisRule
+RightToLeftMetathesisReversal,qsr,ROOT3|qsr,MetathesisRule
+RightToLeftMetathesisReversal,rqs,,MetathesisRule
+RightToLeftMetathesisReversal,qrs,,MetathesisRule
 RightToLeftSegmentsEnvironment,ey,ROOT1|ey,RewriteRule direction (Dir): right-to-left
 RightToLeftSegmentsEnvironment,a,ROOT2|a,RewriteRule direction (Dir): right-to-left
 RightToLeftSegmentsEnvironment,ay,,RewriteRule direction (Dir): right-to-left
