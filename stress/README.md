@@ -27,8 +27,10 @@ Expected output is a parity check, not a conformance claim. The original parses 
 (`athabaskan-prefix-complex`, `excluded-cooccurrence` and the three `env-` fixtures) were regenerated against
 the engine of sillsdev/machine#480 and reviewed against the grammars. An optimization must return the same parses. The measure of a
 change is the number of work steps, not wall-clock time; each `budget_ms` is only a guard against a hang.
-No engine build is recorded for these rows (the conformance fixtures record theirs in
-[PROVENANCE.md](../PROVENANCE.md)).
+The `master` commit and the #480 build were not recorded and could not be recovered, so the baseline is the one
+named in the Stress fixtures section of [PROVENANCE.md](../PROVENANCE.md): all 16 fixtures pass at sillsdev/machine
+`ba6dfa10`, in three identical runs, with no row changed. There were 18 fixtures at the import; `mpr-bantu-concord`
+and `mpr-inflection-classes` were removed (below), which leaves 16.
 
 ## Running them
 
