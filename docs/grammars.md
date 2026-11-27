@@ -352,7 +352,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/word-boundary-affix-rewrite`: a word-edge anchor in a rule that rewrites the edges of prefixes and roots.
 - `edge-cases/right-to-left-anchor-environment`: a spreading rule whose reach depends on the scan direction.
 - `edge-cases/right-to-left-bounded-quantifier-rewrite`: a right-to-left rewrite with a bounded repetition in its environment.
-- `edge-cases/right-to-left-metathesis-reversal`: a right-to-left metathesis where the left switch names the later group, as FieldWorks writes it.
+- `edge-cases/right-to-left-metathesis-reversal`: a right-to-left metathesis where the left switch names the later group, as FieldWorks writes it, with a root whose two switch windows overlap so the direction changes the surface.
 - `edge-cases/right-to-left-segments-environment`: a right-to-left iterative rewrite gated on one literal segment to its right (5 words).
 - `edge-cases/unbounded-iterative-quantifier-expansion`: a rewrite with an unbounded repetition in its environment, applied iteratively.
 - `edge-cases/standalone-combining-mark`: [XAmple] a tone mark defined as its own segment, written as a combining character.

@@ -107,3 +107,7 @@ Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` sel
 signatures match exactly, and the `rules: []` fields for `sq`/`tr` have been filled in from the
 oracle's own trace (`[mrRtlReversal]` for both). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.
+
+## Update: overlapping windows (issue 7)
+
+The classes are now A = {q,r} and B = {r,s,t}, and ROOT3 `qrs` has two overlapping windows, q+r and r+s. At ba6dfa10 `rightToLeftIterative` swaps r+s and gives `qsr`; `leftToRightIterative` swaps q+r and gives `rqs`, so the direction is observable (checked by changing the attribute: `qsr` and `rqs` trade places). The earlier belief that the engine picks the leftmost window whatever the direction does not hold for HermitCrab. The rust paths cited above belong to PanGloss and were dropped from `grammar.xml` and `words.yaml`.

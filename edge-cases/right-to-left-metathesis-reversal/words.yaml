@@ -2,30 +2,20 @@
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
 # original oracle-provenance: founding-oracle
-# Synthetic construct-shaped mimic -- see STAGING.md and grammar.xml's own header comment. Verified
-# against the C# founding oracle (hc.dll, via hc-conformance.exe self-check): signatures match
-# exactly; `rules:` fields below are transcribed from the oracle's own trace output.
+# Synthetic construct-shaped probe. Rows were replayed at sillsdev/machine ba6dfa106 (#615 tip).
 
 language: RightToLeftMetathesisReversal
 inspired_by: ["synthetic right-to-left metathesis-reversal probe (not modeling any real language)"]
-sources:
-  - "docs/conformance/representative-typology-basis.md S1.2.4 (Metathesis -- right-to-left direction)"
-  - "docs/conformance/needs-decision-resolutions.md (row 8)"
+sources: []
 requires: [phonology]
 fieldworks_producible: true
 words:
   - word: sq
     note: >-
       ROOT1's correctly-metathesized surface form: underlying "qs" (SwitchA={q,r} then
-      SwitchB={s,t}), leftSwitch tags SwitchB (physically last), so the swap's obligatory reorder
-      produces SwitchB's own value first, SwitchA's second -- "s"+"q" = "sq". This grammar's own
-      MetathesisRule declares Dir::RightToLeft (multipleApplicationOrder="rightToLeftIterative");
-      ROOT1 has exactly one valid switch window (no overlap), so this word alone cannot
-      distinguish RightToLeft from LeftToRight -- see grammar.xml's own header comment for the
-      dedicated, oracle-free FST-level test that does (rust/crates/pg-foma/tests/
-      phase_c_metathesis.rs). This word's job is the Stage-2 containment obligation: the oracle's
-      own analysis must appear in pg_foma::replace::compile_metathesis_rule's proposer output.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.4"
+      SwitchB={r,s,t}), leftSwitch tags SwitchB (physically last), so the swap puts SwitchB's own
+      value first and SwitchA's second: "s"+"q" = "sq". ROOT1 has exactly one switch window, so this
+      word alone cannot tell rightToLeftIterative from leftToRightIterative; ROOT3 below does.
     parses:
       - signature: "ROOT1|sq"
         rules: [mrRtlReversal]
@@ -38,7 +28,6 @@ words:
       algorithm -- "t"+"r" = "tr". A second, independent root so the "sr"/"tq" negative controls
       below are a genuine cross-contamination check (neither root's own raw nor swapped form),
       not merely "no root exists with this shape at all".
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.4"
     parses:
       - signature: "ROOT2|tr"
         rules: [mrRtlReversal]
@@ -52,14 +41,12 @@ words:
       ROOT1 at all (it should have metathesized to "sq"). Proves the rule genuinely fires
       (obligatorily) under its own Dir::RightToLeft declaration, rather than being vacuously
       never-applicable.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.4"
     expect_fail: true
     exercises:
       - "MetathesisRule"
 
   - word: rt
     note: ROOT2's own RAW underlying shape, queried directly -- same reasoning as "qs" (should have metathesized to "tr").
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.4"
     expect_fail: true
     exercises:
       - "MetathesisRule"
@@ -68,18 +55,39 @@ words:
     note: >-
       Every OTHER combination of SwitchA={q,r} x SwitchB={s,t} this rule's own pattern could also
       match against SOME root -- but neither ROOT1 ("qs"/"sq") nor ROOT2 ("rt"/"tr") has this
-      shape. Precision negative control: proves the per-branch literal cross-product swap
-      (mirroring the LeftToRight `metathesis_multi_member_classes_transpose_precisely_not_naively`
-      witness in rust/crates/pg-foma/tests/phase_c_metathesis.rs) does not cross-contaminate under
-      Dir::RightToLeft either.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.4"
+      shape. Precision negative control: no root has this shape, so the swap does not cross-contaminate
+      the members of the two classes.
     expect_fail: true
     exercises:
       - "MetathesisRule"
 
   - word: tq
     note: The remaining spurious combination -- same reasoning as "sr".
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.4"
+    expect_fail: true
+    exercises:
+      - "MetathesisRule"
+
+  - word: qsr
+    note: >-
+      ROOT3 (underlying "qrs") has two overlapping switch windows, q+r and r+s, because r is in both
+      SwitchA and SwitchB. The rule is rightToLeftIterative, so it swaps the right window r+s and
+      the surface is "qsr". leftToRightIterative would swap q+r and give "rqs" instead, so this is the
+      word that tells the two directions apart.
+    parses:
+      - signature: "ROOT3|qsr"
+        rules: [mrRtlReversal]
+        exercises:
+          - "MetathesisRule"
+  - word: rqs
+    note: >-
+      The leftToRightIterative surface of ROOT3 (swap of q+r). It has no analysis here because the rule
+      is rightToLeftIterative; if an engine reads the attribute the other way, this word parses and
+      "qsr" does not.
+    expect_fail: true
+    exercises:
+      - "MetathesisRule"
+  - word: qrs
+    note: ROOT3's raw underlying shape. The rule is obligatory where a window matches, so it is not a surface form.
     expect_fail: true
     exercises:
       - "MetathesisRule"
