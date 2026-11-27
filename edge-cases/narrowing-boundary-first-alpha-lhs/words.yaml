@@ -1,0 +1,32 @@
+# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged rows first taken at c2454760, which contains sillsdev/machine#539)
+#
+# Pins a narrowing rule whose input is a boundary then a stop carrying an alpha voicing variable (+ [stop alpha-voice] -> [fricative alpha-voice]); the analysis has to undo the rule by narrowing that stop, after a boundary, with the variable resolved from the surface fricative.
+
+language: NarrowingBoundaryFirstAlphaLhs
+inspired_by: ["synthetic probe for PanGloss#33 (not modeling any real language)"]
+sources:
+  - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
+requires: [phonology]
+fieldworks_producible: true
+words:
+  - word: aafa
+    note: AA+FA (underlying f, boundary survives as an optional marker) and AA+PA (p spirantized after the boundary, alpha-voice kept).
+    parses:
+      - signature: "AA+FA|aa+?fa"
+        rules: [mrFA, prSpirant]
+        exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Alpha-variable phonological environments (VariableFeature/AlphaVariables)", "Boundary markers (CharacterDefinitionTable)"]
+      - signature: "AA+PA|aafa"
+        rules: [mrPA, prSpirant]
+  - word: aava
+    note: AA+VA and AA+BA (voiced stop spirantizes to the voiced fricative, so the alpha variable carries voicing).
+    parses:
+      - signature: "AA+VA|aa+?va"
+        rules: [mrVA, prSpirant]
+      - signature: "AA+BA|aava"
+        rules: [mrBA, prSpirant]
+  - word: aapa
+    note: The rule is obligatory after the boundary, so p never surfaces there.
+    expect_fail: true
+  - word: aaba
+    note: Same for b.
+    expect_fail: true

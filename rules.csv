@@ -397,6 +397,11 @@ MprWide,rAll,balamu;balabalamu
 MprWide,rFamily,paatu;palatu
 MprWide,rOverwrite,kibala
 MprWide,rVariant,balanu
+NarrowingBoundaryFirstAlphaLhs,mrBA,aava
+NarrowingBoundaryFirstAlphaLhs,mrFA,aafa
+NarrowingBoundaryFirstAlphaLhs,mrPA,aafa
+NarrowingBoundaryFirstAlphaLhs,mrVA,aava
+NarrowingBoundaryFirstAlphaLhs,prSpirant,aafa;aava
 NfaLiteralAllomorphEnvironment,mrInfix,ginabas
 NfaLiteralAllomorphEnvironment,mrSuffix,gabsa
 NonCliticAfterFinalTemplateLayout,mrDeriv,!sagdk;kolk

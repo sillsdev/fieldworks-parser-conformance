@@ -689,6 +689,9 @@ MprWide,kibala,rOverwrite+eBoth|kibala,AffixProcessRule: prefix/suffix/circumfix
 MprWide,balabalamu,eBoth+rAll|bala+?balamu,CompoundingRule
 MprWide,balabalamu,eBoth+rAll|bala+?balamu,CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)
 MprWide,balabalamu,eBoth+rAll|bala+?balamu,AffixProcessRule: prefix/suffix/circumfix/infix
+NarrowingBoundaryFirstAlphaLhs,aafa,AA+FA|aa+?fa,RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+NarrowingBoundaryFirstAlphaLhs,aafa,AA+FA|aa+?fa,Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+NarrowingBoundaryFirstAlphaLhs,aafa,AA+FA|aa+?fa,Boundary markers (CharacterDefinitionTable)
 NfaLiteralAllomorphEnvironment,gabsa,ROOT+SFX|gabsa,AffixProcessRule: prefix/suffix/circumfix/infix
 NonCliticAfterFinalTemplateLayout,sagd,SAG+PAST|sagd,Affix template slots (obligatory/disjunctive/ordering)
 NonCliticAfterFinalTemplateLayout,sagds,SAG+PAST+ENC|sagds,Clitic rules (Clitics stratum) after a final template
