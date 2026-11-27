@@ -33,4 +33,4 @@ affix `maxApps` writable); the oracle builds at the tip of unmerged machine PR #
   release, and the table rows with them.
 - **If upstream rejects it.** The fixture is retired under the retirement doc: converted to a
   producible grammar if that keeps its purpose, otherwise deleted.
-- **Machine-readable.** The dependency is recorded in the `upstream` field of `words.yaml` ([PROTOCOL.md](../../PROTOCOL.md) section 12); `scripts/upstream_status.py` reports when it merges or closes.
+- **Machine-readable.** The dependency is recorded in a `status.yaml` row ([PROTOCOL.md](../../PROTOCOL.md) section 12); `python3 scripts/suite.py status` reports when it merges or closes.

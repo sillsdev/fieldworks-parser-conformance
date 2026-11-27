@@ -80,5 +80,5 @@ PanGloss lead with the tag and the new entries.
 ## Periodic review
 
 When asked for one, list the test cases whose every bug and behaviour label is detected elsewhere, and
-exceptions that `scripts/upstream_status.py` reports resolved. Report each candidate with a proposed decision
+exceptions that `python3 scripts/suite.py status` reports resolved. Report each candidate with a proposed decision
 (merge, retire, keep with reason) to the requester; apply accepted decisions with this page.

@@ -51,6 +51,16 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 [docs/consuming.md](docs/consuming.md) ("Consuming the suite from another repository") describe the files; `schema/words.schema.json` and
 `HermitCrabInput.dtd` validate them.
 
+**To add a test case, three steps:**
+
+1. Create `edge-cases/<name>/` with `grammar.xml` and `words.yaml`, the rows taken from the reference run (step 3 below).
+2. Add one bullet for it to `docs/grammars.md`.
+3. Run `python3 scripts/suite.py check`.
+
+Nothing else is committed: there is no manifest, coverage file or provenance header to update. A test case the reference
+gets wrong, or that waits on an upstream change, also gets one row in `status.yaml`
+([PROTOCOL.md](PROTOCOL.md) section 12). The detail behind each step:
+
 1. Check producibility (section 1). Name the `HCLoader.cs` function that writes each construct you rely on.
 2. Write `grammar.xml` and `words.yaml`.
    Give each word a `note` that says what it pins.
@@ -66,7 +76,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
    verdict changed, update `fieldworks-writable-shapes.tsv`. Cite the `HCLoader.cs` function and line, and
    the FieldWorks commit you read. If you delete a fixture for this reason, add its row to the table in
    [docs/engine-only-fixture-retirement.md](docs/engine-only-fixture-retirement.md).
-6. Run `python3 scripts/suite.py check`. Nothing derived is committed, so there is no diff to read.
+6. Run `python3 scripts/suite.py check` (step 3 of the short path above).
 7. Delete a fixture by removing its directory and its line in `docs/grammars.md`. Remove a
    `dead-rules-allowed.tsv` line that names it, and append its entry to `docs/renames.tsv` (columns and rules in
    [building-grammars](.claude/skills/building-grammars/maintaining.md#rename-and-telling-the-consumers)).

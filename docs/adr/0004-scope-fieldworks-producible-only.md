@@ -23,10 +23,8 @@ Separately, issue #23 asked for XAmple as a second reference.
 
 - Every test case answers "could a FieldWorks user hit this?" with yes, or with a cited upstream change that would make it so.
 - A consumer's engine-only cases have a home that is not this suite, so the suite stays small enough to review.
-- Today: `fieldworks_producible: true` is carried by every `words.yaml` (263 conformance plus 16 stress = 279; 295 with calibration) and the DTD census is
-  `fieldworks-writable-shapes.tsv`. The field is a flag that is never `false`, so it carries no information; epic S1 drops it, and the
-  evidence moves to the census and witnesses. Until S1 lands, the field is still required by the schema check and consumer gates.
-  Issue #23 is closed when this ADR lands.
+- Today: no `words.yaml` carries `fieldworks_producible`, and the schema and the checks reject it. The evidence is the census
+  `fieldworks-writable-shapes.tsv` and the witnesses. Issue #23 is closed when this ADR lands.
 
 ## Alternatives considered
 

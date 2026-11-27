@@ -28,7 +28,7 @@ A merged grammar keeps every label of its members.
 - Merging is safe because labels, not directory names, are the unit that must survive; combined grammars lose no checks.
 - Cost: every word needs a label.
 - Today: words carry an `exercises` tag, per word and per parse, and `constructs.txt` lists the 31 constructs. The sub-behaviour
-  and interaction vocabulary and the per-word label requirement are not built. Until S1 and its behaviour-label sub-issue land,
+  and interaction vocabulary and the per-word label requirement are not built. Until its behaviour-label sub-issue lands,
   `exercises` and `constructs.txt` apply and merge waves wait for the vocabulary.
 
 ## Alternatives considered
