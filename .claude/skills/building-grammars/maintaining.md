@@ -96,7 +96,7 @@ is never reused for a different test case once retired, and never encodes tier, 
 | `old_id` | the removed test case's path (`edge-cases/<name>`, `languages/<name>`) |
 | `new_id` | the replacing id, or the literal `retired` |
 | `covered_by` | for `retired`, the id that covers what it detected; otherwise empty |
-| `wave` | the wave that removed it, named `wave-YYYY-MM-DD`; never empty |
+| `wave` | the wave that removed it, named `wave-YYYY-MM-DD` (a second wave on the same date is `wave-YYYY-MM-DD-2`, then `-3`); never empty |
 
 Lines are appended, never edited or removed. Restoring a retired test case appends `X`, `X`, empty, `wave`, and each id's last entry rules; a retired id never becomes another id's `new_id`. Each settled wave gets a git tag with the same name.
 
