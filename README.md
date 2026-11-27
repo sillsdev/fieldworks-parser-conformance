@@ -55,6 +55,11 @@ python scripts/check_grammars_md.py
 An engine consumes the suite by pinning a commit in `conformance.commit` and cloning it into an ignored `conformance/`.
 Set `HC_CONFORMANCE_SUITE=<path>` to use a local copy. Details: [docs/consuming.md](docs/consuming.md).
 
+`reference.commit` names the sillsdev/machine commit whose `hc-conformance` runner CI builds and runs against every
+pull request (the `reference-engine` job in `.github/workflows/checks.yml`). It is `ba6dfa10`, the tip of the
+unmerged sillsdev/machine#615: **re-point it at the merge commit when #615 merges**, and bump it with any change that
+needs an engine fix, so CI never runs a commit that cannot be fetched.
+
 ## Where next
 
 | If you want to | Go to |
