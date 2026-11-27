@@ -8,6 +8,15 @@ repository; `python3` is the only tool the checks need.
 If this file disagrees with `.github/workflows/`, the scripts in `scripts/`, or the files you are changing,
 prefer the executable behaviour and say so.
 
+Vocabulary is in [GLOSSARY.md](GLOSSARY.md), and the reasons behind the suite's design are in [docs/adr/](docs/adr/); read both before
+proposing a change to either.
+
+## Landing
+
+- Adding or extending test cases goes straight to `main` after the checks in section 4 pass.
+- Merges, retirements, renames and changes to the file format or to PROTOCOL.md go through a pull request that has a
+  sonnet-reviewer LAND verdict before it merges.
+
 ## 1. The rule
 
 The suite covers only grammars a real FieldWorks project can produce. FieldWorks builds every grammar
