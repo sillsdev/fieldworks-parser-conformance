@@ -1,0 +1,52 @@
+# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-27 (every row from the C# self-check at that pin, hc-conformance --propose, one thread; none from PanGloss)
+# Synthetic; no real language. Root sag (N), two toggle rules (mrA2B: N -> V, +u; mrB2A: V -> N, +i) and a zero-width rule
+# (mrThird: N -> V, copies the stem and inserts nothing). Staged by PanGloss as zero-width-morpheme-identity-stability for
+# sillsdev/machine#506, where fresh-process runs of an earlier build gave three different answers for sagui.
+# sillsdev/machine#506 and #500 are open. The answer multiset is stable at ba6dfa10 with one thread (machine#506 comment
+# 7219130646), so all four words, sagui included, are pinned from the C# run. THIRD is the outermost rule in sagui because it needs
+# an N input and the only N stage that spells sagui is B2A's output; the C# build lists it last, as here.
+language: ZeroWidthMorphemeIdentity
+inspired_by: ["synthetic zero-width category-toggle probe (not modeling any real language)"]
+sources:
+  - "https://github.com/sillsdev/machine/issues/506"
+  - "https://github.com/sillsdev/machine/issues/500"
+requires: []
+fieldworks_producible: true
+words:
+  - word: sag
+    note: >-
+      Bare root, category N. mrThird (N -> V, zero-width) also applies to the bare root without changing the
+      string, so there is a second analysis with the same surface.
+    parses:
+      - signature: "ROOT|sag"
+        rules: []
+      - signature: "ROOT+THIRD|sag"
+        rules: [mrThird]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
+
+  - word: sagu
+    note: root + A2B (category V, by the suffix u). Control that A2B works alone.
+    parses:
+      - signature: "ROOT+A2B|sagu"
+        rules: [mrA2B]
+
+  - word: sagi
+    note: >-
+      root + THIRD + B2A (THIRD flips N to V with no segments, then B2A's i flips V to N). Control that a zero-width
+      rule composes with a rule applied after it. Without mrThird this word has no analysis.
+    parses:
+      - signature: "ROOT+THIRD+B2A|sagi"
+        rules: [mrThird, mrB2A]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
+
+  - word: sagui
+    note: >-
+      The word of machine#506. root sag/N, A2B (+u) gives sagu/V, B2A (+i) gives sagui/N, and mrThird (N -> V, zero-width) may
+      wrap that: two analyses, both keeping A2B and B2A, one also keeping THIRD as the outermost rule. Without mrThird only the
+      first remains.
+    parses:
+      - signature: "ROOT+A2B+B2A|sagui"
+        rules: [mrA2B, mrB2A]
+      - signature: "ROOT+A2B+B2A+THIRD|sagui"
+        rules: [mrA2B, mrB2A, mrThird]
+        exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
