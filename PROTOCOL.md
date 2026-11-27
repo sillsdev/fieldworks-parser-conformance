@@ -764,8 +764,12 @@ generated_no_parse:
   words. The word list a test case means is its listed `words` in file order, then each rule in file order: lengths
   ascending, and within a length the alphabet's order with the first entry varying slowest (`a p t s` gives `aa ap at as pa ...`).
   A word already listed or produced by an earlier rule is skipped. A symbol is one alphabet entry, so an entry may be longer than one
-  character.
-- **Limits.** A rule may span at most 100,000 words. A rule is checked by the schema, and `suite.py check` fails a rule
+  character. Entries are Unicode strings, concatenated and compared by exact code points in the file's UTF-8 text, with no
+  normalisation, case folding or trimming (so `e` and `e` plus a combining accent are different symbols, and a word is
+  the concatenation of its symbols whatever they are). An entry is a YAML string: quote anything YAML would read as
+  another type (`"1"`, `"yes"`, `"on"`, `"+"`), because the schema refuses a bare number or boolean. Entries are distinct, in
+  the order written, and that order, not code point order, is the generation order.
+- **Limits.** A rule may span at most 100,000 words, counted over its whole space (every length from `min_length` to `max_length`) before listed words are removed. A rule is checked by the schema, and `suite.py check` fails a rule
   with `min_length` above `max_length`. A rule says nothing about words outside its space; list those under `words`.
 - **Consumers.** Machine's runner and PanGloss's harness expand the rule before they run the test case. A consumer that
   does not know the key must refuse the test case rather than run only its listed words.
