@@ -53,7 +53,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 
 **To add a test case, three steps:**
 
-1. Create `edge-cases/<name>/` with `grammar.xml` and `words.yaml`, the rows taken from the reference run (step 3 below).
+1. Create `edge-cases/<name>/` with `grammar.xml` and `words.yaml`, the expected results taken from the reference run (step 3 below).
 2. Add one bullet for it to `docs/grammars.md`.
 3. Run `python3 scripts/suite.py check`.
 
@@ -93,7 +93,7 @@ their invariants.
 
 | File | Holds |
 |---|---|
-| `hc-conformance-manifest.v2.json` | one entry per fixture, with hashes of `grammar.xml` and `words.yaml`, the DTD, `constructs.txt`, `parity-check.py` and the schemas; what consumers pin |
+| `hc-conformance-manifest.v2.json` | one entry per test case, with hashes of `grammar.xml` and `words.yaml`, the DTD, `constructs.txt`, `parity-check.py` and the schemas; what consumers pin |
 | `stress-manifest.v2.json` | the same for `stress/edge-cases/*`, kept apart so a stress change moves only it |
 | `coverage.csv`, `rules.csv` | language x word x construct, and language x grammar rule x exercising words, re-derived from `words.yaml`, `grammar.xml` and `constructs.txt` |
 
@@ -141,7 +141,7 @@ Run each command from the repository root and read the output. Do not push on a 
 ```
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/suite.py check
-python3 parity-check.py
+python3 parity-check.py   # the engine-free migration proof; kept apart from suite.py check
 ```
 
 `suite.py check` runs the `status.yaml` check, the words schema, the derived files, the DTD, the docs lists (both
@@ -160,14 +160,13 @@ the links and the privacy lint.
 - Before you land, run sillsdev/machine #615's conformance gate tests against your branch. They check shape
   producibility, `exercises:` tags, `blocked_by` rule ids and rule attribution, none of which the scripts above
   see, and the pin in `conformance.commit` hides a failure until someone bumps it. In a checkout of machine #615
-  (`git fetch origin pull/615/head`), with `HC_CONFORMANCE_SUITE=<path to this clone>`, run
-  `dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests -c Release --filter "FullyQualifiedName~Conformance|FullyQualifiedName~FieldWorksProducibleShape"`
-  (69 tests) and do not land on a failure. A failure that is the test's expectation going stale, not your data, is
+  (`git fetch origin pull/658/head`, the #615 runner plus the status.yaml reader, until #658 lands), with `HC_CONFORMANCE_SUITE=<path to this clone>`, run
+  `dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests -c Release --filter "FullyQualifiedName~Conformance|FullyQualifiedName~FieldWorksProducibleShape|FullyQualifiedName~StatusYaml"`
+  (72 tests) and do not land on a failure. A failure that is the test's expectation going stale, not your data, is
   fixed in that pull request instead, and you say so.
 - CI builds the engine at `reference.commit` (the `reference-engine` job) and runs its self-check, the stress
   self-check and `--check-manifest` against your branch. A change that needs an engine fix bumps `reference.commit`
-  to the machine commit that has it. Rows that wait on an unmerged engine fix are not expressible yet (no `pending`
-  marker; issue #32).
+  to the machine commit that has it. A test case that waits on an unmerged engine fix gets a `pending-upstream` row in `status.yaml`.
 
 ## 5. Stress fixtures
 
