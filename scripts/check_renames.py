@@ -3,7 +3,7 @@
 
 Fails when: the header's first columns are not old_id, new_id, covered_by, wave; a live test case id appears
 in old_id unless its last entry maps it to itself; new_id is neither `retired` nor a live test case; covered_by
-names a test case that is not live; wave is empty or not `wave-YYYY-MM-DD`; a row is malformed or repeats an
+names a test case that is not live; wave is empty or not `wave-YYYY-MM-DD` or `wave-YYYY-MM-DD-N`; a row is malformed or repeats an
 old_id; or an existing row changed or was removed against the merge base with origin/main (rows are only
 appended). A restore appends `X<TAB>X<TAB><TAB>wave`: each id's last entry rules, a live id needs no entry or a
 self-mapping last entry, and a retired id (last entry not a self-mapping) never becomes another id's new_id. The merge-base comparison is skipped, with a note, when git or the base is unavailable.
@@ -16,7 +16,7 @@ from suite import ROOT, STRESS_GROUP, fixture_dirs, fixture_id
 
 PATH = "docs/renames.tsv"
 HEADER = ["old_id", "new_id", "covered_by", "wave"]
-WAVE = re.compile(r"^wave-\d{4}-\d{2}-\d{2}$")
+WAVE = re.compile(r"^wave-\d{4}-\d{2}-\d{2}(-[2-9]|-[1-9]\d+)?$")
 
 
 def parse(text):
@@ -47,7 +47,7 @@ def problems_for(lines, live, base_lines=None):
             if target not in live:
                 problems.append(f"{where}: covered_by {target!r} is not a live test case")
         if not WAVE.match(wave):
-            problems.append(f"{where}: wave {wave!r} must be wave-YYYY-MM-DD")
+            problems.append(f"{where}: wave {wave!r} must be wave-YYYY-MM-DD, or wave-YYYY-MM-DD-N (N from 2) for a later wave on the same date")
     for where, old_id, new_id in rows:
         if old_id in live and last[old_id] != old_id:
             problems.append(f"{where}: old_id is a live test case whose last entry does not restore it (X, X); a retired id is never reused")

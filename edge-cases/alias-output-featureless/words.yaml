@@ -1,0 +1,47 @@
+language: AliasOutputFeatureless
+requires:
+  - phonology
+fieldworks_producible_notes: One phoneme has two spellings, as HCLoader LoadCharacterDefinitionTable emits from phoneme CodesOS. No fwdata round-trip witness is claimed.
+words:
+  - word: asa
+    note: '[cell literal] First output spelling is a positive control.'
+    parses:
+      - signature: AKA_literal|a[sz]a
+        rules:
+          - prLen_literal
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: aza
+    note: '[cell literal] Second output spelling retains the same root identity in pinned C#.'
+    parses:
+      - signature: AKA_literal|a[sz]a
+        rules:
+          - prLen_literal
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: aka
+    note: '[cell literal] Obligatory rewrite prevents the unchanged root from surfacing.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: ege
+    note: '[cell singleton] First output spelling is a positive control.'
+    parses:
+      - signature: AKA_singleton|e[gf]e
+        rules:
+          - prLen_singleton
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: efe
+    note: '[cell singleton] Second output spelling retains the same root identity in pinned C#.'
+    parses:
+      - signature: AKA_singleton|e[gf]e
+        rules:
+          - prLen_singleton
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: eue
+    note: '[cell singleton] Obligatory rewrite prevents the unchanged root from surfacing.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

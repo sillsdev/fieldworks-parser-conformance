@@ -13,7 +13,7 @@ html5lib-tests) keep names stable and track renames explicitly rather than promi
 - Consumers pin a commit. There are no compatibility promises beyond what follows.
 - Every wave that renames or removes test cases appends rows to `docs/renames.tsv`. Its columns never break:
   `old_id`, `new_id` (or `retired`), `covered_by`, then any extra columns (`wave`) at the end.
-- Each settled wave gets a git tag `wave-YYYY-MM-DD`.
+- Each settled wave gets a git tag `wave-YYYY-MM-DD`. A second wave on the same date takes a numeric suffix: `wave-YYYY-MM-DD-2`, then `-3`.
 - A test case's id is its directory path: a stable public name. It never encodes tier, status or exception state.
 - An id is never reused once retired. Restoring the same retired test case under its old id is not reuse.
 - A merge keeps one member's id and maps the other members in `renames.tsv`.

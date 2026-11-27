@@ -12,6 +12,11 @@ def run(*rows, base=None, header=H):
 
 
 class Renames(unittest.TestCase):
+    def test_second_wave_same_date_suffix(self):
+        self.assertEqual(run("edge-cases/x\tretired\t\twave-2026-11-27-2"), [])
+        self.assertTrue(run("edge-cases/x\tretired\t\twave-2026-11-27-1"))
+        self.assertTrue(run("edge-cases/x\tretired\t\twave-2026-11-27-"))
+
     def test_clean(self):
         self.assertEqual(run("edge-cases/x\tretired\t\twave-2026-11-27", "edge-cases/y\tedge-cases/a\t\twave-2026-11-27"), [])
 

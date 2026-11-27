@@ -24,20 +24,46 @@ them. Read the grammars, not a line count.
 |---|---|---|
 | **union** | grammars identical apart from `<Name>` and comments, or one is a superset that replays the other's results | the survivor is an existing member and keeps its id; absorbed words replay |
 | **variants** | grammars identical, only `morpher:` settings differ | one `variants:` run per absorbed test case |
-| **rebuild** | members share a word list and differ in one parameter | each member becomes a **cell**: its own rule, segments and words, so cells cannot interact |
+| **rebuild** | members share a word list and differ in one parameter | each member becomes a **cell**: its own rule, segments and words, so cells cannot interact (see "Building cells") |
 
 1. List members, survivor id and kind. The survivor id is not a retired id of a different test case
    (`docs/renames.tsv`) and is not an existing directory other than a member.
 2. Write the survivor's grammar; for a rebuild, a cell map from each member's rules and words to the survivor's.
 3. Take every result from the reference with `--propose`.
-4. **Replay.** Every absorbed word's result is unchanged (rebuild: matches under the cell map). A mismatch
-   means the cells interact: leave that member out and say `interaction` in the family README.
+4. **Replay.** Every member word's result is unchanged (rebuild: matches under the cell map). A mismatch
+   means the cells interact, or, for a union, that the survivor's grammar changes a result (for example a
+   grammar that adds `MorphemeId` elements changes every signature): leave that member out and say `interaction`
+   in the family README. Put the cell-mapped results in `words.yaml`, run `--propose` over the suite (about a
+   minute), and require that it prints no patch for the merged test case. A union drops a word only when it is a
+   true duplicate of a survivor word (same input, same expected multiset, same label).
 5. **Detection.** For each bug a member detects, the survivor still fails on the bug build; each member's
    behaviour labels are carried over. A member that cannot be shown stays out.
 6. Carry over notes, citations and exceptions (re-keyed to the survivor).
 7. Remove the absorbed directories, append one `docs/renames.tsv` line per absorbed id, run the checks.
-8. The commit body carries the cell map, the replay and detection results, the test case count before and
-   after, and the changed-result table.
+8. The commit body carries the cell map, the replay and detection results, the test case and word counts before
+   and after, and the changed-result table. A merge with a `docs/grammars.md` bullet, the counts in README.md and
+   `docs/grammars.md`, and the tier table (`python3 scripts/tiers.py --write`) updated passes `suite.py check`.
+
+## Building cells (rebuild)
+
+A cell is a member's grammar with every name moved so that no segment, class, rule or word of one cell is
+visible to another:
+
+- **Letters.** Cell 1 keeps its letters; each later cell takes letters used by no member (a letter map per cell).
+  Map the words' input and the surface part of each expected signature with it. Words that share letters would be
+  parsed by every cell's roots and the results would multiply.
+- **Ids.** Suffix every XML id, rule id and `MorphemeId` with `_<cell>`, and say so in the README, so that a
+  signature or rule trace names its cell. Merge each list (parts of speech, segments, classes, rules, templates,
+  entries, features) and join the stratum's `phonologicalRules`; a language still has one stratum and one
+  character table.
+- **A grammar with a feature system needs one more feature.** An unspecified feature matches anything, so a class
+  or segment context of one cell accepts the other cells' segments (a first build without it mismatched nearly every
+  word). Add one symbolic feature `cell` with one symbol per cell and give every segment its cell's value. A
+  grammar with no feature system needs nothing, which is why `alias-output-0-*` and `alias-output-1-*` are not one
+  test case.
+- **Words and notes.** Prefix each word's `note` with `[cell <name>]`; each word keeps its own behaviour label.
+  The README carries the cell table (cell, former test case, what differs, letter map).
+- **Proof.** Replay is the check in step 4; no word of one cell may parse in another.
 
 ## Retire
 
@@ -70,7 +96,7 @@ is never reused for a different test case once retired, and never encodes tier, 
 | `old_id` | the removed test case's path (`edge-cases/<name>`, `languages/<name>`) |
 | `new_id` | the replacing id, or the literal `retired` |
 | `covered_by` | for `retired`, the id that covers what it detected; otherwise empty |
-| `wave` | the wave that removed it, named `wave-YYYY-MM-DD`; never empty |
+| `wave` | the wave that removed it, named `wave-YYYY-MM-DD` (a second wave on the same date is `wave-YYYY-MM-DD-2`, then `-3`); never empty |
 
 Lines are appended, never edited or removed. Restoring a retired test case appends `X`, `X`, empty, `wave`, and each id's last entry rules; a retired id never becomes another id's `new_id`. Each settled wave gets a git tag with the same name.
 
