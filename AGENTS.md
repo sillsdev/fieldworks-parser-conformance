@@ -68,15 +68,17 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 |---|---|---|
 | `generated/hc-conformance-manifest.v2.json` | `python3 scripts/generate_manifest.py` | `python3 scripts/generate_manifest.py --check`, and CI |
 | `generated/stress-manifest.v2.json` | the same command | the same `--check`, and CI |
-| `coverage.csv`, `rules.csv` | the consuming engine's coverage report (sillsdev/machine's runner: `--coverage-report`) | that engine's CI; **not yet checked here** |
+| `coverage.csv`, `rules.csv` | the consuming engine's coverage report (sillsdev/machine's runner: `--coverage-report`) | `python3 scripts/check_coverage.py` (every coverage row and every rule row that has words, re-derived from `words.yaml`), CI, and that engine's CI |
 
 - The stress manifest lists `stress/edge-cases/*` in the same layout and is kept apart from the conformance
   manifest, which consumers pin: changing a stress fixture changes only the stress manifest.
 - The manifest hashes `grammar.xml` and `words.yaml` of every fixture, the DTD, `constructs.txt`,
   `parity-check.py` and the two schemas. Editing a fixture `README.md`, a file under `docs/`, or this file
   changes nothing generated.
-- `coverage.csv` and `rules.csv` are derived from `words.yaml` and `constructs.txt`. Until a Python generator
-  exists here, regenerate them with the consuming engine's runner and commit the result in this repository.
+- `coverage.csv` and `rules.csv` are derived from `words.yaml` and `constructs.txt`. There is no Python generator
+  here: regenerate them with the consuming engine's runner and commit the result in this repository.
+  `scripts/check_coverage.py` fails when a row is stale or missing; it cannot list the rules a grammar declares
+  but no word exercises, so it checks only that those rows name a real id.
 
 ### 2b. Hand-edited files with no generator
 
@@ -116,6 +118,7 @@ python3 scripts/check_words_schema.py
 python3 scripts/check_dtd.py
 python3 scripts/check_grammars_md.py
 python3 scripts/check_fwdata.py
+python3 scripts/check_coverage.py
 python3 parity-check.py
 python3 scripts/check_links.py
 python3 scripts/privacy_lint.py

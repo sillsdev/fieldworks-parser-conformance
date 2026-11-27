@@ -34,6 +34,7 @@ python3 scripts/check_words_schema.py
 python3 scripts/check_dtd.py
 python3 scripts/check_grammars_md.py
 python3 scripts/check_fwdata.py
+python3 scripts/check_coverage.py
 python3 parity-check.py
 python3 scripts/check_links.py
 python3 scripts/privacy_lint.py
