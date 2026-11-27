@@ -94,13 +94,13 @@
 # sipulupasi (REP, which carries no co-occurrence rule). The AND-not-OR pin (walaknkicha, item 4's
 # rules on mrEvidConjectural) is unchanged.
 #
-# WHAT THE WORDS NO LONGER PIN: "somewhere" versus "adjacent". No word separates the two scopes.
-# Measured on the engine: switching every somewhereTo* to adjacentTo*, left only, right only or both,
-# and every adjacentTo* to somewhereTo*, leaves every row of this file unchanged. For mrEvidMir and
-# mrPerson2Pl no word can separate them, because the only morpheme that can stand between is mrPlural
-# and both rules refuse it. For mrEvidAssum a word 3SG+PL+ASSUM would (refused under somewhereToLeft,
-# parsed under adjacentToLeft), and for mrPerson1PlIncl a word 1PL.INCL+PL+REP would (refused under
-# somewhereToRight, parsed under adjacentToRight). Neither word has been added.
+# WHAT THE WORDS PIN ABOUT SCOPE: "somewhere" versus "adjacent". Two words now separate the scopes.
+# walaknkichiktan (2SG+PL+ASSUM) is refused only under mrEvidAssum's somewhereToLeft; adjacentToLeft would
+# let it parse. siputukuchikshi (1PL.INCL+PL+REP) is refused only under mrPerson1PlIncl's somewhereToRight;
+# adjacentToRight would let it parse. What no word can separate: mrEvidMir (adjacent to the left) and
+# mrPerson2Pl (adjacent to the right) against their somewhere-scope twins, because the only morpheme that can
+# stand between is mrPlural and both rules refuse it. (The earlier measurement that switching every scope left
+# every row unchanged predates the two words and has not been repeated.)
 
 language: SuffixingEvidentialAdjacencyChain
 inspired_by: ["suffixing evidential-marking verbal morphology with morpheme-adjacency co-occurrence constraints (typological pattern, not any specific language)"]

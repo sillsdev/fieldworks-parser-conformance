@@ -67,23 +67,14 @@ words:
     note: >-
       THE recursive/self-feeding witness: ROOT1+ROOT2 (cr1's own first application, forming a
       posRoot-headed compound) then re-entering cr1's own head/non-head search a SECOND time with
-      ROOT3 -- (ROOT1+ROOT2)+ROOT3, exactly the "compound's own output PoS re-enters its own input
-      PoS" shape design.md D2 item 3 calls out, licensed structurally by cr1's own
-      multipleApplication="9" (left uncapped from the DTD default of 1). Empirically verified via
-      pg_parse::Morpher to produce ZERO analyses -- NOT because the FST alone refuses it (the
-      capability gate's Refuse is a SEPARATE, structural, always-on fact about this rule
-      regardless of any word -- see the paired rust/crates/pg-foma/tests/
-      cover_recursive_endocentric_compounding.rs test), but because the oracle's own
-      `pg_rules::stratum::AnalyzerConfig::max_stem_count` (hardcoded to 2 inside
-      `pg_parse::Morpher::parse_word_opts`, mirroring C#'s `Morpher.MaxStemCount` default) is a
-      SEPARATE, independently-discovered resource ceiling: "at most one non-head may ever be split
-      off, so a word can be de-compounded once, never recursively re-compounded" (that field's own
-      doc, rust/crates/pg-rules/src/stratum.rs). This word is the fixture's load-bearing REFUSAL
-      pin: both the capability gate (structural, unconditional) and the confirm-engine's own
-      resource ceiling (empirical, word-triggered) currently agree that genuine self-feeding
-      compounding is unreached -- this is the honest, CURRENT behavior this fixture exists to pin,
-      not a design goal being asserted.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.1; rust/crates/pg-rules/src/stratum.rs AnalyzerConfig::max_stem_count doc"
+      ROOT3 -- (ROOT1+ROOT2)+ROOT3, the "compound's own output PoS re-enters its own input PoS" shape.
+      cr1's multipleApplication="9" would allow it, but the word has zero analyses because the default
+      stem-count limit (MaxStemCount, 2) is a separate resource ceiling: at most one non-head may be split
+      off, so a word is de-compounded once and never recursively re-compounded. The refusal is therefore
+      attributed to that limit, not to cr1's application cap (compound-max-applications pins the cap).
+      It is the fixture's load-bearing REFUSAL pin of the current behaviour, not a design goal.
+      The blocked_by entry below is kept as recorded; see fieldworks-parser-conformance#8.
+    provenance: "stem-count limit (MaxStemCount default 2), PROTOCOL.md section 8"
     expect_fail: true
     blocked_by: [cr1]
     exercises:
