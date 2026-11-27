@@ -56,6 +56,20 @@ branches at the time of writing, and are history, not instructions. The same app
 `rust/tools/...`, `conformance/adapters/...`, `semantic-coverage-*.tsv` and `tools/xample-projector`, which belong to
 those repositories and not to this one.
 
+## Stress fixtures
+
+The 16 fixtures under `stress/edge-cases/` pin parity, not conformance (see `stress/README.md`). Their rows were
+first captured from sillsdev/machine `master` (three identical runs) and the null-affix rows of five of them were
+later regenerated against the engine of sillsdev/machine#480. Neither the `master` commit nor the #480 build was
+recorded when the rows were taken, and they could not be recovered from machine's history (the fixtures were added
+across several commits from 2026-10-27, none naming the build the rows came from).
+
+**Baseline now named:** `ba6dfa10` (full hash in the table above), checked on 2026-11-27 with
+`hc-conformance --fixtures stress --include-pathological` built from a clean checkout of that commit: 16 of 16
+fixtures pass, in three identical runs, with no expected row changed. So the rows stand as parity rows at
+`ba6dfa10`; a parity failure is traced to a change since that build. The 18 to 16 history (two fixtures removed
+because they used constructs FieldWorks cannot write) is in `stress/README.md`.
+
 ## FieldWorks witnesses
 
 The eleven `fieldworks/` directories (`project.fwdata`, `phonology-mutations.yaml`, `WritingSystemStore/`) were
