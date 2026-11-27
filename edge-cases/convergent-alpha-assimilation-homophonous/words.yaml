@@ -14,7 +14,6 @@ words:
       - signature: "PAT|pat"
         rules: []
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: tak
     note: "Bare verb root control."
@@ -22,7 +21,6 @@ words:
       - signature: "TAK|tak"
         rules: []
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: kam
     note: "Bare noun root control."
@@ -30,7 +28,6 @@ words:
       - signature: "KAM|kam"
         rules: []
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ampat
     note: "The prefix nasal takes the labial place of p."
@@ -44,7 +41,6 @@ words:
       - signature: "NEG+TAK|an+?tak"
         rules: [neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aŋkam
     note: "The prefix nasal takes the dorsal place of k."
@@ -52,7 +48,6 @@ words:
       - signature: "NEG+KAM|aŋ+?kam"
         rules: [neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ampati
     note: "Homophonous -i above the prefix: the prefix is tried on the same underspecified shape per -i."
@@ -66,7 +61,6 @@ words:
       - signature: "NEG+PAT+INV|am+?pat+?i"
         rules: [iNV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: antaki
     note: "The same on the verb root."
@@ -80,7 +74,6 @@ words:
       - signature: "NEG+TAK+IVV|an+?tak+?i"
         rules: [iVV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aŋkami
     note: "The same with dorsal assimilation."
@@ -94,7 +87,6 @@ words:
       - signature: "NEG+KAM+INV|aŋ+?kam+?i"
         rules: [iNV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ampatii
     note: "Two stacked -i."
@@ -118,7 +110,6 @@ words:
       - signature: "NEG+PAT+INV+IVV|am+?pat+?i+?i"
         rules: [iNV, iVV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: antakii
     note: "Two stacked -i on the verb root."
@@ -142,7 +133,6 @@ words:
       - signature: "NEG+TAK+IVV+IVN|an+?tak+?i+?i"
         rules: [iVN, iVV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aŋkamii
     note: "Two stacked -i with dorsal assimilation."
@@ -166,37 +156,31 @@ words:
       - signature: "NEG+KAM+INV+IVV|aŋ+?kam+?i+?i"
         rules: [iNV, iVV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: anpat
     note: "An unassimilated nasal before p cannot surface."
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: amtak
     note: "A labial nasal before t cannot surface."
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ankam
     note: "A coronal nasal before k cannot surface."
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: amampat
     note: "The prefix applies once."
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: anampat
     note: "The prefix applies once."
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ampatiii
     note: "Three homophonous -i suffixes after the assimilating prefix: the same morphemes in different orders are separate analyses, so the multiset keeps duplicates."
@@ -234,7 +218,6 @@ words:
       - signature: "NEG+PAT+INV+IVV+IVN|am+?pat+?i+?i+?i"
         rules: [iNV, iVN, iVV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: antakiii
     note: "As ampatiii with the tak root: the same morphemes in different orders are separate analyses."
@@ -272,5 +255,4 @@ words:
       - signature: "NEG+TAK+IVV+IVN+INV|an+?tak+?i+?i+?i"
         rules: [iNV, iVN, iVV, neg, prAssim]
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"

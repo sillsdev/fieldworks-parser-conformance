@@ -30,8 +30,6 @@ words:
         rules: [prFront, prMerge, prMergeBdry]
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: tek
     note: TAK alone, fronting only (tak -> tek).
     parses:
@@ -39,8 +37,6 @@ words:
         rules: [prFront]
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: KT
     note: KATA (kata -> merge twice -> KT); no fronting since no vowel precedes a velar.
     parses:
@@ -48,8 +44,6 @@ words:
         rules: [prMerge]
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: KTa
     note: KATA+SFX (kata+a -> KT+a); the suffix vowel is not merged because T is already fused.
     parses:
@@ -57,19 +51,13 @@ words:
         rules: [mrSfxA, prMerge]
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: taK
     note: Fronting before a velar is obligatory, so "ta" before K never surfaces.
     expect_fail: true
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: taka
     note: Underlying shape of TAKA; both rules are obligatory.
     expect_fail: true
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
-      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"

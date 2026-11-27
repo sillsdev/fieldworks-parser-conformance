@@ -20,7 +20,6 @@ words:
       - signature: "RED+KAHTA|ka+?kata"
         rules: [prHDel, red]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kakatasi
     note: "Homophonous -si over the reduplicated stem with optional h nodes in the shape."
@@ -34,7 +33,6 @@ words:
       - signature: "RED+KAHTA+SINV|ka+?kata+?si"
         rules: [prHDel, red, siNV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kakatasisi
     note: "Two stacked -si: the copy rule meets the same optional-bearing shape from several paths."
@@ -58,19 +56,16 @@ words:
       - signature: "RED+KAHTA+SINV+SIVV|ka+?kata+?si+?si"
         rules: [prHDel, red, siNV, siVV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: takatasi
     note: "A copied CV that is not the stem's, with optional nodes present."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kahta
     note: "h cannot surface before a consonant."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: pusi
     note: "Verb root with no h, whose last two segments equal the suffix form."
@@ -79,7 +74,6 @@ words:
         rules: []
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: pupusi
     note: "Reduplication on the verb root."
     parses:
@@ -87,7 +81,6 @@ words:
         rules: [red]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: pupusisi
     note: "Verb-taking -si over the reduplicated verb."
     parses:
@@ -101,7 +94,6 @@ words:
         rules: [red, siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: pupusisisi
     note: "Two stacked -si on the verb root."
     parses:
@@ -125,12 +117,10 @@ words:
         rules: [red, siVN, siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kakahta
     note: "h cannot surface before a consonant, reduplicated or not."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: katasi
     note: "The noun-taking -si suffixes without reduplication."
@@ -140,20 +130,17 @@ words:
       - signature: "KAHTA+SINV|kata+?si"
         rules: [prHDel, siNV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kapusi
     note: "A copied CV that is not the stem's."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: pupupusisi
     note: "The reduplication rule applies once."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: kakatasisisi
     note: "Reduplication, h-deletion and three homophonous si suffixes: the multiset repeats analyses that differ only by the order of same-form affixes."
     parses:
@@ -190,5 +177,4 @@ words:
       - signature: "RED+KAHTA+SINV+SIVV+SIVN|ka+?kata+?si+?si+?si"
         rules: [prHDel, red, siNV, siVN, siVV]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

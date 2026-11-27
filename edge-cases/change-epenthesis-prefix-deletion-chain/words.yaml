@@ -15,8 +15,7 @@ words:
       - signature: "R0|sa"
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "st"
     note: "C# e63b8863 returns 1 analysis (R1|st): pins the morpheme sequence."
     parses:
@@ -29,52 +28,45 @@ words:
       - signature: "PR0+R0|asa"
         rules: [PR0, pc0, pd0, pe0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "ast"
     note: "C# e63b8863 returns 1 analysis (PR0+R1|ast): pins the morpheme sequence."
     parses:
       - signature: "PR0+R1|ast"
         rules: [PR0, pc0, pd0, pe0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "sas"
     note: "C# e63b8863 returns 1 analysis (R0+SU1|sas): pins the morpheme sequence."
     parses:
       - signature: "R0+SU1|sas"
         rules: [SU1]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "sts"
     note: "C# e63b8863 returns 1 analysis (R1+SU1|sts): pins the morpheme sequence."
     parses:
       - signature: "R1+SU1|sts"
         rules: [SU1, pc0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "asas"
     note: "C# e63b8863 returns 1 analysis (R0+PR0+SU1|asas): pins the morpheme sequence."
     parses:
       - signature: "R0+PR0+SU1|asas"
         rules: [PR0, SU1, pc0, pd0, pe0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "asts"
     note: "C# e63b8863 returns 1 analysis (R1+PR0+SU1|asts): pins the morpheme sequence."
     parses:
       - signature: "R1+PR0+SU1|asts"
         rules: [PR0, SU1, pc0, pd0, pe0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"

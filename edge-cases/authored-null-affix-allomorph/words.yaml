@@ -20,8 +20,6 @@ words:
         rules: [mrPst, mrRel]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Boundary markers (CharacterDefinitionTable)"
   - word: kaunta
     note: The overt -ta allomorph is conditioned to follow t, so it cannot follow n.
     provenance: "https://github.com/sillsdev/motif/issues/362"
@@ -29,8 +27,6 @@ words:
     blocked_by: [mrPst]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Boundary markers (CharacterDefinitionTable)"
   - word: kaun0
     note: The null allomorph is the boundary ∅, not the literal segment 0, so a word ending in the real segment 0 does not parse.
     provenance: "https://github.com/sillsdev/motif/issues/362"
@@ -38,8 +34,6 @@ words:
     blocked_by: [mrPst, mrRel]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Boundary markers (CharacterDefinitionTable)"
   - word: kat0
     note: Neither tense allomorph adds a literal 0 after t, so this word does not parse either.
     provenance: "https://github.com/sillsdev/motif/issues/362"
@@ -47,5 +41,3 @@ words:
     blocked_by: [mrPst, mrRel]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Boundary markers (CharacterDefinitionTable)"

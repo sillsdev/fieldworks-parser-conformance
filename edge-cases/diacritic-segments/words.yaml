@@ -49,9 +49,7 @@ words:
         rules: []
         exercises: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: café
     note: >-
@@ -64,9 +62,7 @@ words:
         rules: []
         exercises: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: göl
     note: >-
@@ -78,9 +74,7 @@ words:
         rules: []
         exercises: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: kelî
     note: >-
@@ -92,9 +86,7 @@ words:
         rules: []
         exercises: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "NaturalClass: Segments vs FeatureNaturalClass/SegmentNaturalClass precision"
 
   - word: años
     note: >-

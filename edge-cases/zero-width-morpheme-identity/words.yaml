@@ -23,7 +23,6 @@ words:
         exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: sagu
     note: root + A2B (category V, by the suffix u). Control that A2B works alone.
@@ -32,7 +31,6 @@ words:
         rules: [mrA2B]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: sagi
     note: >-
@@ -56,4 +54,3 @@ words:
         exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"

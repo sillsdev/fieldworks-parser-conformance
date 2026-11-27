@@ -16,7 +16,6 @@ words:
         rules: []
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukuma
     note: "Reduplication alone."
     parses:
@@ -32,7 +31,6 @@ words:
         rules: [siNV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukumasi
     note: "Two -si readings times two rule orders: the copy rule is tried on kukuma once per -si that reaches it."
     parses:
@@ -46,7 +44,6 @@ words:
         rules: [red, siNV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukumasisi
     note: "Two stacked -si: all four suffixes reach the shape kukumasi, and each reaches kukuma again below it."
     parses:
@@ -70,19 +67,16 @@ words:
         rules: [red, siNV, siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: tikumasi
     note: "The copy must agree with the stem's own first CV on every arrival at the shape."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kumakumasi
     note: "Only one CV is copied, never the whole stem."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: tisu
     note: "Bare verb root control."
     parses:
@@ -90,7 +84,6 @@ words:
         rules: []
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: titisu
     note: "Reduplication on the verb root."
     parses:
@@ -98,7 +91,6 @@ words:
         rules: [red]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: titisusi
     note: "The verb-taking -si readings with reduplication."
     parses:
@@ -112,7 +104,6 @@ words:
         rules: [red, siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: tisusi
     note: "The two verb-taking -si suffixes."
     parses:
@@ -122,7 +113,6 @@ words:
         rules: [siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: tisusisi
     note: "Stacked -si on the verb root; category chains decide which pairs survive."
     parses:
@@ -134,18 +124,15 @@ words:
         rules: [siVN, siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kutisusi
     note: "A copied CV that is not the stem's."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukumana
     note: "Agreement needs a verb; the bare noun root has no verb reading."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukumasina
     note: "Template agreement outside a verbalizing -si: two homophonous slot fillers."
@@ -159,7 +146,6 @@ words:
       - signature: "RED+KUMA+SINV+AGRB|ku+?kuma+?si+?na"
         rules: [red, siNV, tB]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukumasisina
     note: "Both homophonous slot fillers above two stacked -si and reduplication."
@@ -189,7 +175,6 @@ words:
       - signature: "RED+KUMA+SINV+SIVV+AGRB|ku+?kuma+?si+?si+?na"
         rules: [red, siNV, siVV, tB]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: titisuna
     note: "Agreement directly on the reduplicated verb."
@@ -199,7 +184,6 @@ words:
       - signature: "RED+TISU+AGRB|ti+?tisu+?na"
         rules: [red, tB]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: titisusina
     note: "Only the verb-to-verb -si can stand under agreement."
@@ -213,20 +197,17 @@ words:
       - signature: "RED+TISU+SIVV+AGRB|ti+?tisu+?si+?na"
         rules: [red, siVV, tB]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
       - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukukumasi
     note: "The reduplication rule applies once."
     expect_fail: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kumax
     note: "x is outside the inventory."
     expect_skip: true
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kukumasisisi
     note: "Reduplication and three homophonous si suffixes: the multiset repeats analyses that differ only by the order of same-form affixes."
     parses:
@@ -264,4 +245,3 @@ words:
         rules: [red, siNV, siVN, siVV]
     exercises:
       - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "Affix template slots (obligatory/disjunctive/ordering)"

@@ -26,8 +26,7 @@ words:
       - signature: "TULIK|tulik"
         rules: []
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: menulik
     note: >-
@@ -56,8 +55,7 @@ words:
       - signature: "BALO|balo"
         rules: []
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: membalo
     note: >-
@@ -70,8 +68,7 @@ words:
       - signature: "NPFX+BALO|membalo"
         rules: [mrNPfx, prNasalAssimBilabial]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: sanit
     note: SANIT bare root, no MPR feature -- a plain control for the MPR-exclusion pair below.
@@ -79,8 +76,7 @@ words:
       - signature: "SANIT|sanit"
         rules: []
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "MPR features/groups"
 
   - word: sanitan
     note: SANIT + mrSuf ("-an") -- no MPR feature on this root, so mrSuf's excludedMPRFeatures="mprException" gate is vacuously satisfied and the rule applies normally.
@@ -89,8 +85,7 @@ words:
       - signature: "SANIT+SUF|sanitan"
         rules: [mrSuf]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "MPR features/groups"
 
   - word: vokad
     note: VOKAD bare root (carries ruleFeatures="mprException") -- a plain control.
@@ -98,8 +93,7 @@ words:
       - signature: "VOKAD|vokad"
         rules: []
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "MPR features/groups"
 
   - word: vokadan
     note: >-
@@ -112,8 +106,7 @@ words:
     expect_fail: true
     blocked_by: [mrSuf]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "MPR features/groups"
 
   - word: vokadi
     note: >-
@@ -125,8 +118,7 @@ words:
       - signature: "VOKAD+SUFALT|vokadi"
         rules: [mrSufAlt]
     exercises:
-      - "AffixProcessRule: reduplication (ReduplicationHint)"
-      - "RewriteRule direction (Dir): left-to-right"
+      - "MPR features/groups"
 
 
   - word: tuliktulik

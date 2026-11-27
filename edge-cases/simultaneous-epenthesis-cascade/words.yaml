@@ -38,4 +38,4 @@ words:
     provenance: "P13 synthetic oracle: Iterative self-feeding epenthesis crashes; Simultaneous cannot"
     expect_fail: true
     exercises:
-      - "RewriteRule Simultaneous"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

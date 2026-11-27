@@ -13,7 +13,6 @@ words:
     expect_fail: true
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Clitics stratum: clitic designation by stratum name alone"
 
   - word: psag
     note: >-
@@ -54,4 +53,3 @@ words:
     expect_fail: true
     exercises:
       - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Clitics stratum: clitic designation by stratum name alone"

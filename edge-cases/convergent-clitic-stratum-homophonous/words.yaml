@@ -14,7 +14,6 @@ words:
       - signature: "KAT|kat"
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: sum
     note: "Bare verb root control."
@@ -22,7 +21,6 @@ words:
       - signature: "SUM|sum"
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: kata
     note: "One -a: two noun-taking suffixes and two enclitics that accept a noun."
@@ -37,7 +35,6 @@ words:
       - signature: "KAT+CLAN|kat+?a"
         rules: [clA]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: suma
     note: "One -a on the verb root."
@@ -51,7 +48,6 @@ words:
       - signature: "SUM+CLAV|sum+?a"
         rules: [clB]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: katsi
     note: "The -si verbalizer alone."
@@ -59,7 +55,6 @@ words:
       - signature: "KAT+SI|kat+?si"
         rules: [si]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: katasi
     note: "A noun-to-noun -a under -si; an enclitic cannot stand inside a suffix."
@@ -67,7 +62,6 @@ words:
       - signature: "KAT+ANN+SI|kat+?a+?si"
         rules: [aNN, si]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: katsia
     note: "-a outside -si: verb-taking suffixes and enclitics."
@@ -81,7 +75,6 @@ words:
       - signature: "KAT+SI+CLAV|kat+?si+?a"
         rules: [clB, si]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: katasia
     note: "-a on both sides of -si."
@@ -95,13 +88,11 @@ words:
       - signature: "KAT+ANN+SI+CLAV|kat+?a+?si+?a"
         rules: [aNN, clB, si]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: sumsia
     note: "-si needs a noun."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: sumasia
     note: "The verb root is nominalized by -a before -si."
@@ -113,19 +104,16 @@ words:
       - signature: "SUM+AVN+SI+CLAV|sum+?a+?si+?a"
         rules: [aVN, clB, si]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: akat
     note: "No prefix exists."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: katsisi
     note: "-si applies once and needs a noun."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: kataa
     note: "Same-form a affixes across the Morphology and Clitics strata: C# keeps CLAN+CLANY and CLANY+CLAN as separate analyses."
@@ -149,7 +137,6 @@ words:
       - signature: "KAT+CLANY+CLAN|kat+?a+?a"
         rules: [clA, clC]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: sumaa
     note: "As kataa on a verb root."
@@ -173,7 +160,6 @@ words:
       - signature: "SUM+CLAV+CLANY|sum+?a+?a"
         rules: [clB, clC]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"
   - word: kataaa
     note: "Three same-form a affixes: every order C# accepts is its own analysis."
@@ -207,5 +193,4 @@ words:
       - signature: "KAT+ANV+CLAV+CLANY|kat+?a+?a+?a"
         rules: [aNV, clB, clC]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Clitics stratum: clitic designation by stratum name alone"

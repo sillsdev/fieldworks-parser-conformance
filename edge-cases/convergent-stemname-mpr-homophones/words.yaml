@@ -20,8 +20,7 @@ words:
         gloss: boluB
         rules: []
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: boluit
     note: >-
       Derivation reaches the shape bolu from one parent; each root still parses under its own feature.
@@ -33,8 +32,7 @@ words:
         gloss: boluB-der
         rules: [rDer]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: boluitma
     note: >-
       Four homophonous ma allomorphs share one shape: rules maReq and mbReq are derivational and require ExcA and ExcB; rules maExc and mbExc are slot rules and exclude NotA and NotB, which the roots carry (ExcA root: NotA; ExcB root: NotB). Each root passes exactly two of the four (ExcA root: maReq, mbExc; ExcB root: maExc, mbReq). A cache keyed by rule and shape that dropped an allomorph, or applied the root exception features at the wrong time, would show here.
@@ -54,8 +52,7 @@ words:
         gloss: boluB-der-mbReq
         rules: [rDer, rMbReq]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: boluitta
     note: >-
       Control: the later suffix ta is reached once per root; the per-path exception gate must not leak between the two roots.
@@ -67,8 +64,7 @@ words:
         gloss: boluB-der-ta
         rules: [rDer, rTa]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: boluitmata
     note: >-
       The same four paths reach one shape before ta (a slot after the exclusion slot); ta is matched on the identical shape from four parent paths and each path keeps its own root outcome.
@@ -87,8 +83,7 @@ words:
         gloss: boluB-der-mbReq-ta
         rules: [rDer, rMbReq, rTa]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: boluitmama
     note: >-
       Two homophonous suffixes in sequence: the derivational (required-feature) rule applies first and the slot rule (excluded-feature) second, so each root yields one pair, the one its features allow. The other order is not reachable: a template applies after the stratum rules.
@@ -100,8 +95,7 @@ words:
         gloss: boluB-der-mbReq-maExc
         rules: [rDer, rMbReq, rMaExc]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: boluitmamata
     note: >-
       As boluitmama plus ta: the deepest shared shape is reached by two paths, one per root.
@@ -113,14 +107,12 @@ words:
         gloss: boluB-der-mbReq-maExc-ta
         rules: [rDer, rMbReq, rMaExc, rTa]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
-      - "Stem names"
+      - "MPR features/groups"
   - word: kele
     note: >-
       Control: the stem-named allomorph kele is valid only when the word's num is sg, and a bare root has no num, so there is no parse.
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"
   - word: keli
     note: >-
@@ -130,7 +122,6 @@ words:
         gloss: kele
         rules: []
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"
   - word: kelesu
     note: >-
@@ -146,7 +137,6 @@ words:
     expect_fail: true
     blocked_by: [rSg]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"
   - word: kelesusu
     note: >-
@@ -160,7 +150,6 @@ words:
         gloss: kele-sgNamed-sg
         rules: [rSgNamed, rSg]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"
   - word: kelisusu
     note: >-
@@ -168,7 +157,6 @@ words:
     expect_fail: true
     blocked_by: [rSg, rSgNamed]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"
   - word: kelesuta
     note: >-
@@ -178,7 +166,6 @@ words:
         gloss: kele-sg-ta
         rules: [rSg, rTa]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"
   - word: kelisumata
     note: >-
@@ -186,5 +173,4 @@ words:
     expect_fail: true
     blocked_by: [rSg]
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering)"
       - "Stem names"

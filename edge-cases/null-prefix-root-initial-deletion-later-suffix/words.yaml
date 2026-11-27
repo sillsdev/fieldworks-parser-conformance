@@ -23,9 +23,7 @@ words:
       - signature: "R1|ps"
         rules: [pd0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "psa"
     note: "C# e63b8863 returns 4 analyses (NU0+R1+SU1|+?psa ; R0+NU0+SU1|psa ; R0+SU1|psa ; R1+SU1|psa): pins the morpheme sequence."
     parses:
@@ -38,9 +36,7 @@ words:
       - signature: "R1+SU1|psa"
         rules: [SU1, pd0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "+ps"
     note: "C# e63b8863 returns 2 analyses (NU0+R0|+?ps ; NU0+R1|+?ps): pins the morpheme sequence."
     parses:
@@ -49,31 +45,23 @@ words:
       - signature: "NU0+R1|+?ps"
         rules: [NU0, pd0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - word: "+psa"
     note: "C# e63b8863 returns 1 analysis (NU0+R1+SU1|+?psa): pins the morpheme sequence."
     parses:
       - signature: "NU0+R1+SU1|+?psa"
         rules: [NU0, SU1, pd0]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"
   - alphabet: [a, p, t, s, "+"]
     min_length: 2
     max_length: 4
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule"

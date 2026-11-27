@@ -27,5 +27,4 @@ words:
         rules: []
         exercises: []
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
-      - "Boundary markers (CharacterDefinitionTable)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"

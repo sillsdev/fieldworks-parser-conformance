@@ -15,7 +15,6 @@ words:
         rules: []
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katish
     note: "CAUS once"
     parses:
@@ -28,13 +27,11 @@ words:
       - signature: "KAT+CAUS|katishish"
         rules: [mrCaus, mrCaus]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katishishish
     note: "CAUS a third time exceeds multipleApplication=2"
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katel
     note: "APPL once"
@@ -43,20 +40,17 @@ words:
         rules: [mrAppl]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katelel
     note: "APPL twice: the pinned count of 2"
     parses:
       - signature: "KAT+APPL|katelel"
         rules: [mrAppl, mrAppl]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katelelel
     note: "APPL a third time exceeds multipleApplication=2"
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katishel
     note: "CAUS then APPL, one each"
@@ -65,26 +59,22 @@ words:
         rules: [mrCaus, mrAppl]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katishishelel
     note: "CAUS twice then APPL twice"
     parses:
       - signature: "KAT+CAUS+APPL|katishishelel"
         rules: [mrCaus, mrCaus, mrAppl, mrAppl]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katishishishel
     note: "three CAUS then APPL exceeds the CAUS count"
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katishelelel
     note: "CAUS then three APPL exceeds the APPL count"
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katox
     note: "CTL once: the default count of 1 still applies once"
@@ -93,12 +83,10 @@ words:
         rules: [mrCtl]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katoxox
     note: "CTL twice: default multipleApplication of 1 refuses repetition"
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katishishelelox
     note: "both doubled extensions then the default-count CTL"
@@ -106,7 +94,6 @@ words:
       - signature: "KAT+CAUS+APPL+CTL|katishishelelox"
         rules: [mrCaus, mrCaus, mrAppl, mrAppl, mrCtl]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
       - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katelish
     note: "APPL then CAUS parses: FieldWorks strata are unordered, so the two suffixes may apply in either order"
@@ -115,4 +102,3 @@ words:
         rules: [mrAppl, mrCaus]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"

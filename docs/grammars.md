@@ -16,7 +16,7 @@ The list has 263 fixtures: 6 languages and 257 edge cases.
 
 The tier says how often a consumer should run a test case: **core** on every pull request, **regression** and **extended** on the full run. It is computed by `scripts/tiers.py` from data the suite holds, never authored, and never part of an id; `scripts/check_grammars_md.py` fails when this table is stale. A test case is core when it is a language profile, has a FieldWorks witness, or is one of the two smallest carriers of a behaviour label (a vocabulary label, constructs.txt or labels.tsv; fewest words first, then id). Otherwise it is regression when it has an exception in `status.yaml`, is the only test case citing some bug (the last detector of a bug is never removed, ADR 0008), or has 300 or more words, and extended when it has none of these.
 
-106 core, 18 regression, 139 extended.
+108 core, 17 regression, 138 extended.
 
 | test case | tier | why |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/boundary-first-in-narrowing-lhs-strrep` | extended |  |
 | `edge-cases/boundary-leftover-in-narrowing-lhs-strrep` | extended |  |
 | `edge-cases/boundary-mid-in-narrowing-lhs-strrep` | extended |  |
-| `edge-cases/boundary-narrowing-probe` | core | carries Boundary markers (CharacterDefinitionTable), MorphologicalOutputAction: CopyFromInput/InsertSegments |
+| `edge-cases/boundary-narrowing-probe` | core | carries Boundary markers (CharacterDefinitionTable), MorphologicalOutputAction: CopyFromInput/InsertSegments, RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side |
 | `edge-cases/category-limited-phonological-rule` | core | carries RewriteSubruleDef gating: required/excluded POS or MPR at the subrule level |
 | `edge-cases/chained-output-feature-override-loss` | core | carries Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures) |
 | `edge-cases/change-epenthesis-prefix-deletion-chain` | extended |  |
@@ -80,7 +80,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/cross-stem-material-determination` | core | carries MPR features/groups |
 | `edge-cases/deep-optional-affix-nesting` | core | FieldWorks witness; carries Affix template slots (obligatory/disjunctive/ordering) |
 | `edge-cases/deletion-reapplications` | extended |  |
-| `edge-cases/deletion-reduplication-exception-composite` | core | carries AffixProcessRule: reduplication (ReduplicationHint), RewriteRule direction (Dir): left-to-right |
+| `edge-cases/deletion-reduplication-exception-composite` | core | carries AffixProcessRule: reduplication (ReduplicationHint), MPR features/groups, RewriteRule direction (Dir): left-to-right |
 | `edge-cases/deletion-reinserted-feature-unapply` | extended |  |
 | `edge-cases/diacritic-segments` | core | carries MorphologicalOutputAction: CopyFromInput/InsertSegments |
 | `edge-cases/discontinuous-morph-environment` | extended |  |
@@ -94,7 +94,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/expansion-interposed-optional` | extended |  |
 | `edge-cases/expansion-overlapping-targets` | extended |  |
 | `edge-cases/feature-gating-breadth` | extended |  |
-| `edge-cases/feature-rule-before-merge` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) |
+| `edge-cases/feature-rule-before-merge` | extended |  |
 | `edge-cases/featureless-literal-target` | extended |  |
 | `edge-cases/featureless-singleton-target` | extended |  |
 | `edge-cases/featureless-unused-feature` | extended |  |
@@ -143,11 +143,11 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/morphotactic-attribute-breadth` | extended |  |
 | `edge-cases/mpr-gated-exception` | extended |  |
 | `edge-cases/mpr-wide-inflection-classes` | extended |  |
-| `edge-cases/narrowing-boundary-first-alpha-lhs` | core | carries Alpha-variable phonological environments (VariableFeature/AlphaVariables) |
+| `edge-cases/narrowing-boundary-first-alpha-lhs` | core | carries Alpha-variable phonological environments (VariableFeature/AlphaVariables), RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side |
 | `edge-cases/narrowing-boundary-order-alpha-lhs` | extended |  |
 | `edge-cases/nfa-literal-allomorph-environment` | regression | only test case citing pangloss#300 |
 | `edge-cases/non-clitic-after-final-template-layout` | core | carries Clitic rules (Clitics stratum) after a final template |
-| `edge-cases/null-prefix-root-initial-deletion-later-suffix` | regression | only test case citing pangloss#405 |
+| `edge-cases/null-prefix-root-initial-deletion-later-suffix` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule |
 | `edge-cases/nullable-disagree-bounded-ltr-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment |
 | `edge-cases/nullable-disagree-bounded-ltr-right` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment |
 | `edge-cases/nullable-disagree-bounded-rtl-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > left environment |
@@ -201,11 +201,11 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/right-to-left-bounded-quantifier-rewrite` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat |
 | `edge-cases/right-to-left-metathesis-reversal` | core | carries MetathesisRule > right-to-left application |
 | `edge-cases/right-to-left-segments-environment` | core | carries RewriteRule direction (Dir): right-to-left |
-| `edge-cases/root-required-environment-after-epenthesis-before-suffix` | extended |  |
+| `edge-cases/root-required-environment-after-epenthesis-before-suffix` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > interaction with an affix rule |
 | `edge-cases/shared-template-unconstrained-suffix` | extended |  |
-| `edge-cases/simultaneous-epenthesis-cascade` | core | carries RewriteRule Simultaneous |
+| `edge-cases/simultaneous-epenthesis-cascade` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) |
 | `edge-cases/simultaneous-expansion-terminates` | core | carries RewriteRule Simultaneous |
-| `edge-cases/simultaneous-feeding` | extended |  |
+| `edge-cases/simultaneous-feeding` | core | carries RewriteRule Simultaneous |
 | `edge-cases/simultaneous-feeding-control-iterative` | extended |  |
 | `edge-cases/simultaneous-subrule-genuine-overlap` | extended |  |
 | `edge-cases/spelling-coverage-compound-affix-feeds` | extended |  |
@@ -230,7 +230,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/spelling-coverage-compound-multirule` | core | carries CompoundingRule > several rewrite rules |
 | `edge-cases/spelling-coverage-compound-multirule-affixes` | core | carries CompoundingRule > several rewrite rules |
 | `edge-cases/spelling-coverage-compound-orders` | core | carries CompoundingRule > constituent order |
-| `edge-cases/spelling-coverage-compound-orders-asymmetric` | core | carries CompoundingRule > constituent order, MPR features/groups |
+| `edge-cases/spelling-coverage-compound-orders-asymmetric` | core | carries CompoundingRule > constituent order |
 | `edge-cases/spelling-coverage-compound-orders-pos` | extended |  |
 | `edge-cases/spelling-coverage-compound-prefix-feeds` | extended |  |
 | `edge-cases/spelling-coverage-compound-repeated-root` | extended |  |

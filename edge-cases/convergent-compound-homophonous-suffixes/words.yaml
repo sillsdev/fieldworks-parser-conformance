@@ -15,7 +15,6 @@ words:
         rules: []
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: mis
     note: "Bare verb root control."
     parses:
@@ -23,7 +22,6 @@ words:
         rules: []
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: katkat
     note: "Right-headed noun-noun compound of one root with itself."
     parses:
@@ -34,36 +32,31 @@ words:
     note: "Three stems exceed the stem limit."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katkatkatkat
     note: "Four stems exceed the stem limit."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: miskat
     note: "Left-headed verb-noun compound."
     parses:
       - signature: "MIS+KAT|mis+?kat"
         rules: [cmpVN]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: miskatkat
     note: "No rule takes a compound verb and a further noun within the stem limit."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katmissi
     note: "The verb must be nominalized before it can head a noun-noun compound."
     parses:
       - signature: "KAT+MIS+SIVN|kat+?mis+?si"
         rules: [cmpNN, siVN]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katmissisi
     note: "Two stacked -si over the compound: suffix un-application converges before the compound rule is tried."
     parses:
@@ -76,8 +69,7 @@ words:
       - signature: "KAT+MIS+SIVV+SIVN|kat+?mis+?si+?si"
         rules: [cmpNN, siVN, siVV]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katkatsi
     note: "Noun-taking -si over the noun-noun compound; the suffix may also sit on the head inside it."
     parses:
@@ -88,8 +80,7 @@ words:
       - signature: "KAT+SINV|kat+?kat+?si"
         rules: [cmpNN, siNV]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katkatsisi
     note: "Two stacked -si over the noun-noun compound."
     parses:
@@ -104,8 +95,7 @@ words:
       - signature: "KAT+SINV+SIVV|kat+?kat+?si+?si"
         rules: [cmpNN, siNV, siVV]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: miskatsi
     note: "Verb-taking -si over the verb-noun compound."
     parses:
@@ -114,8 +104,7 @@ words:
       - signature: "MIS+KAT+SIVV|mis+?kat+?si"
         rules: [cmpVN, siVV]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: miskatsisi
     note: "Two stacked -si over the verb-noun compound."
     parses:
@@ -126,8 +115,7 @@ words:
       - signature: "MIS+KAT+SIVV+SIVN|mis+?kat+?si+?si"
         rules: [cmpVN, siVN, siVV]
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: missi
     note: "The verb-taking -si suffixes."
     parses:
@@ -137,7 +125,6 @@ words:
         rules: [siVV]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: katsi
     note: "The noun-taking -si suffixes."
     parses:
@@ -147,22 +134,18 @@ words:
         rules: [siNV]
     exercises:
       - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
   - word: katmis
     note: "Noun then bare verb fits neither compound rule."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katsimis
     note: "Noun then bare verb fits neither compound rule, suffixed or not."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
   - word: katkatmissi
     note: "Three stems exceed the stem limit."
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+      - "CompoundingRule"
