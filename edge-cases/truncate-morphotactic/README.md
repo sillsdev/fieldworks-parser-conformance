@@ -111,3 +111,7 @@ Changing the stratum from unordered to linear rule execution did change the `a` 
 consistently. The counterfactual ledger therefore retains this fixture as an additional witness for
 that distinction. Construct claims still use the existing coarse truncation tag; its seven added
 parse claims are recorded as unmapped, without claiming new semantic coverage.
+
+## Merge with `truncate-morphotactic-identity`: interaction
+
+Wave 1 (issue 69) proposed folding `truncate-morphotactic-identity` into this test case by giving this grammar the identity case's explicit `MorphemeId` values. That is not a clean merge. With the identity grammar and this word list, `hc-conformance --propose` at the reference commit changes 10 of the 11 existing results here (for example `sag` goes from `|sag` to `ROOT|sag`, `sa` from `+|sa` to `ROOT+A|sa`), because a signature is made of the morpheme ids. The two stay separate; the cannot-merge reason is interaction.
