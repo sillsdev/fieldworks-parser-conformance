@@ -147,6 +147,10 @@ stress README table), and `check_fwdata.py` covers stress witnesses as well as f
   `dotnet test tests/SIL.Machine.Morphology.HermitCrab.Tests -c Release --filter "FullyQualifiedName~Conformance|FullyQualifiedName~FieldWorksProducibleShape"`
   (69 tests) and do not land on a failure. A failure that is the test's expectation going stale, not your data, is
   fixed in that pull request instead, and you say so.
+- CI builds the engine at `reference.commit` (the `reference-engine` job) and runs its self-check, the stress
+  self-check and `--check-manifest` against your branch. A change that needs an engine fix bumps `reference.commit`
+  to the machine commit that has it. Rows that wait on an unmerged engine fix are not expressible yet (no `pending`
+  marker; issue #32).
 
 ## 5. Stress fixtures
 

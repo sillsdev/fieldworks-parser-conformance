@@ -49,3 +49,40 @@ jobs:
           # Optional repository variable: comma-separated literal terms that must never appear.
           PRIVACY_LINT_EXTRA: ${{ vars.PRIVACY_LINT_EXTRA }}
         run: python scripts/privacy_lint.py
+
+  reference-engine:
+    # Builds sillsdev/machine's hc-conformance at the commit named in reference.commit and runs it against this
+    # tree, so a fixture the reference engine rejects cannot land (issue #32, decision D6).
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+    env:
+      HC_CONFORMANCE_SUITE: ${{ github.workspace }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read reference.commit
+        id: ref
+        run: |
+          sha="$(tr -d '[:space:]' < reference.commit)"
+          echo "$sha" | grep -Eq '^[0-9a-f]{40}$' || { echo "reference.commit must hold one full 40-character lowercase SHA"; exit 1; }
+          echo "sha=$sha" >> "$GITHUB_OUTPUT"
+      - name: Fetch the reference engine
+        # By SHA: the commit may be the tip of an unmerged pull request (no branch names it).
+        run: |
+          git init "$RUNNER_TEMP/machine"
+          git -C "$RUNNER_TEMP/machine" fetch --depth 1 https://github.com/sillsdev/machine.git "${{ steps.ref.outputs.sha }}"
+          git -C "$RUNNER_TEMP/machine" checkout --detach FETCH_HEAD
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: |
+            10.0.x
+      - name: Build hc-conformance
+        # HC_CONFORMANCE_SUITE makes the build skip its own clone of the suite.
+        run: dotnet build -c Release "$RUNNER_TEMP/machine/src/SIL.Machine.Morphology.HermitCrab.Conformance/SIL.Machine.Morphology.HermitCrab.Conformance.csproj"
+      - name: Conformance fixtures match the reference engine
+        run: dotnet run --no-build -c Release --project "$RUNNER_TEMP/machine/src/SIL.Machine.Morphology.HermitCrab.Conformance" -- --fixtures "$GITHUB_WORKSPACE" --include-pathological
+      - name: Stress fixtures match the reference engine
+        if: always()
+        run: dotnet run --no-build -c Release --project "$RUNNER_TEMP/machine/src/SIL.Machine.Morphology.HermitCrab.Conformance" -- --fixtures "$GITHUB_WORKSPACE/stress" --include-pathological
+      - name: The reference engine accepts the manifest
+        if: always()
+        run: dotnet run --no-build -c Release --project "$RUNNER_TEMP/machine/src/SIL.Machine.Morphology.HermitCrab.Conformance" -- --fixtures "$GITHUB_WORKSPACE" --check-manifest
