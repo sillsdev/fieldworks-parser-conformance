@@ -61,7 +61,7 @@ carrying a behaviour label or the only word that fails on a bug build.
 
 Consumers pin the suite by commit ([ADR 0005](../../../docs/adr/0005-consumer-contract-and-test-case-identity.md)),
 so a rename, merge or retirement lands on `main` first and consumers follow at their next bump. An id is its directory path,
-is never reused once retired, and never encodes tier, status or exception state.
+is never reused for a different test case once retired, and never encodes tier, status or exception state.
 
 **`docs/renames.tsv` is a contract.** Tab-separated, one header line, columns in this order:
 
