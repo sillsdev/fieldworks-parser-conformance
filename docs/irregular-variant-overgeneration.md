@@ -1,5 +1,11 @@
 # Substitute-mechanism over-generation probe (synthetic)
 
+**Retired record, not a fixture.** The two probes below are not in the tree: neither `edge-cases/substitute-mpr-probe`
+nor `edge-cases/substitute-mpr-probe-adhoc` exists here, and the names are scratch names for the local `base` and `adhoc`
+directories. The grammars are inlined at the end of this page so the experiment can be repeated; the question they
+raise (whether the loader's irregular-form substitute over-generates) is still open under issue #3. This page is kept
+as a record of that experiment and is not checked against the suite.
+
 Tests the claim: FieldWorks' HCLoader.cs substitute for "irregularly inflected forms" (MPR-feature
 tagging + `ExcludedMprFeatures` + a synthesized null-affix rule per slot, HCLoader.cs:626-807 and
 1702-1804) blocks the IRREGULAR entry from double-marking with the regular affix, but does NOT stop

@@ -20,7 +20,7 @@ The construct numbers used below are that section's row numbers.
 27 fixtures were deleted. Four were later restored as producible grammars, so 23 stay deleted
 (see "Restored" below). Five more fixtures were deleted afterwards (see "Deleted"); three of those five were restored as aspirational (see "Restored as aspirational"), so 25 stay deleted. The counts below date from the first retirement, when 133 fixtures remained (6 `languages/`, 127 `edge-cases/`), every one
 `fieldworks_producible: true`; two of them, `edge-cases/compound-max-applications` and
-`edge-cases/final-template-partial-trace`, are new. The suite holds 251 now; the current count comes from `generated/hc-conformance-manifest.v2.json`
+`edge-cases/final-template-partial-trace`, are new. The suite holds more now, and its count changes with every fixture; the current count comes from `generated/hc-conformance-manifest.v2.json`
 (`python3 scripts/generate_manifest.py --check`), not from this page.
 
 ## Marked producible without a grammar change
