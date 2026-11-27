@@ -57,7 +57,7 @@ Then classify the change with land-a-conformance-change section 1.
 Take the first rung that fits. Paste the evidence into the commit body.
 
 1. **Already detected.** `git grep` the issue id, behaviour label and word shape across `*/words.yaml`,
-   `*/README.md`, and the exception notes (`upstream` fields and "Known oracle limitation (machine#N, open)" notes until `status.yaml` exists). If a test case already fails on the bug build, add or update its exception
+   `*/README.md`, and the exception notes (`upstream` fields and word notes that name an upstream issue, until `status.yaml` exists). If a test case already fails on the bug build, add or update its exception
    if one is due, and stop.
 2. **Add words** to a test case whose grammar already produces the case, unchanged.
 3. **Extend a grammar** only when every existing word replays unchanged under `--propose`. A moved result means
@@ -104,7 +104,7 @@ needed. Each has a kind, an upstream ref and a reason:
   intended answer, so the gate fails when the fix lands; then delete the exception (ADR 0002).
 - **pending upstream**: results come from a build of the upstream PR (ADR 0001).
 
-Until `status.yaml` exists, follow the existing `expect_fail` precedent: keep the C# result and give the word a note "Known oracle limitation (machine#N, open)" with the intended answer. An exception with no upstream issue or PR is not admissible: file the issue first. A duplicate analysis caused
+Until `status.yaml` exists (epic S1), record an exception as a `reason` note on the word that names the upstream issue and the intended answer, for example `Reference defect (machine#N, open): intended ...`. S1 moves these notes into `status.yaml` (the interim form under ADR 0007). An exception with no upstream issue or PR is not admissible: file the issue first. A duplicate analysis caused
 by a C# bug is an exception, never deduplicated (ADR 0006). Never write a tier; it is computed.
 
 ## 5. Changed results
