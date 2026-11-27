@@ -4,7 +4,7 @@ A compounding grammar over partial-feature segments and aliases, so the characte
 
 Two endocompounding rules, `cr1` with the head first and `cr2` with the non-head first, both stems licensed by the same MPR feature, plus a third entry outside the licence. C# accepts both stem orders for the licensed pair and rejects every word containing the unlicensed entry.
 
-Source: sillsdev/PanGloss pull request 354. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70`, see [PROVENANCE.md](../../PROVENANCE.md)) returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
+Source: sillsdev/PanGloss pull request 354. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70` returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
 
 FieldWorks producibility is read from `HCLoader.cs`; no `fieldworks/` witness is claimed.
 

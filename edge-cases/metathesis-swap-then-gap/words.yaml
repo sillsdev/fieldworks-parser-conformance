@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged by PanGloss#411; the staged grammar's inverted switch order was converted to the producible one and every row replayed unchanged). The six expect_fail rows record that ba6dfa10 gives no parse for words its own synthesis generates.
 # Reference defect sillsdev/machine#649 (open; divergence 132; tracked in status.yaml): analysis un-applies the deletion pd0 first and
 # restores an optional t between the switches of pm0, so the optional t joins the first switch's capture and
 # AnalysisMetathesisRuleSpec pairs the captures node by node: the swap is never undone and no root matches. Same

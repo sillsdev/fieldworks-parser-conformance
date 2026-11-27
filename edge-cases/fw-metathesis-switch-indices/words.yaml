@@ -1,4 +1,3 @@
-# oracle-provenance: hc.dll bundled with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab 3.x), verified-date=2026-11-03
 # Counts below are from that hc.dll twice: the live FieldWorks HCLoader language built from fieldworks/project.fwdata,
 # and XmlLanguageLoader on this grammar.xml (xample-projector parse-hc; projectionAgrees true for all 11 words).
 # Signatures and rule traces were read from PanGloss's engine on this grammar.xml, whose analysis counts equal the hc.dll counts;

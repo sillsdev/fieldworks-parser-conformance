@@ -121,8 +121,7 @@ command takes no morpher block, so a three-root word would measure only the refu
 
 ## Expected analyses and oracle status
 
-Every analysis in a `words.yaml` is the C# oracle's: `hc.dll batch` from the build named `aab4c598` in
-`PROVENANCE.md` (`# oracle-provenance:` in each header). Each fixture also passes the harness self-check of
+Every analysis in a `words.yaml` is the C# oracle's: `hc.dll batch` from the build named by `reference.commit`. Each fixture also passes the harness self-check of
 `hc-conformance` (`--fixtures <tree holding the six directories under edge-cases/> --include-pathological`: 6 of 6
 pass, which checks every declared rule list against the oracle's trace). PanGloss 0.19.4 returns the same
 signatures for every word in every `words.txt` (0 mismatches over 746 words). `cal-work-cap` records only the
@@ -205,7 +204,7 @@ Six families (`cal-deep-template-16`, `-redup-long-roots`, `-rule-cascade-32`, `
 holds what is particular to them.
 
 - **Analyses.** Every `words.yaml` analysis is the C# oracle's: sillsdev/machine `4d9b454d` (tag
-  `pangloss-oracle-pin-4d9b454d`, `PROVENANCE.md`), `hc-conformance --propose` for signatures and the self-check
+  `pangloss-oracle-pin-4d9b454d`), `hc-conformance --propose` for signatures and the self-check
   trace for `rules:`, 6 of 6 pass. PanGloss 0.19.4 returns the oracle's signatures for every ladder word (0 differences).
   Notes in `words.yaml` are generated (rung, length, cost, analysis count, the structure the family stresses); they
   do not explain individual analyses.

@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=e63b8863 (hc-conformance self-check at sillsdev/machine #615 tip e63b8863d37d3189c2b11fcaf9d43be74962ad70; rows pinned from C# HermitCrab on 2026-11-25, staged by PanGloss 22a6a0b4c, sillsdev/machine#653)
 language: ConvergentAffixMultipleApplication
 inspired_by: ["synthetic iterable suffixes that are homophonous with one-shot suffixes of other categories (not modeling any real language)"]
 sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "PanGloss issue 470", "PanGloss PR 476", "FieldWorks LT-22699", "FieldWorks PR #1263 @ 0ead571c (HCLoader.cs 131-138 and 970-971)"]

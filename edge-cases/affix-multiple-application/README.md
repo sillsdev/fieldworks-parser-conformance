@@ -9,8 +9,8 @@ clamped to 1..10. A rule with no entry keeps 1, which is what `mrCtl` stands for
 every FieldWorks stratum is, so `katelish` (APPL then CAUS) parses.
 
 **What is cited.** The FieldWorks reader is sillsdev/FieldWorks#1263 at `0ead571c65df55e88525fe19a1a20e1d1ffe0054`
-(Jira LT-22699), **not yet merged**: re-point the FieldWorks citation here, in `PROVENANCE.md`, in
-`words.yaml`'s oracle header, in `fieldworks-writable-shapes.tsv` and in `docs/fieldworks-cannot-say.md` row 22 to
+(Jira LT-22699), **not yet merged**: re-point the FieldWorks citation here, in
+`status.yaml`, in `fieldworks-writable-shapes.tsv` and in `docs/fieldworks-cannot-say.md` row 22 to
 the merge commit when #1263 lands, alongside the existing machine #615 note. The rows come from C# HermitCrab at
 machine `e63b8863` (self-check), reading `multipleApplication` from the XML.
 

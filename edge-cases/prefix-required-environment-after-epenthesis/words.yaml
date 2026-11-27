@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=e63b8863 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-21, none taken from PanGloss)
 # Pins the allomorph environment of a morph beside an epenthetic segment (prefix p requires s on its right; root sa st ta; one rule inserts a between p and s). C# reads a morph's environment from its
 # annotation range, which never holds a node inserted at its edge, so `pasa` has no analysis; HC-Rust accepted it because the inserted segment sat inside the
 # neighbouring morph's span. Every word of the 340-word probe space (length 1 to 4 over a p s t) that is not listed with a parse is pinned as expect_fail.

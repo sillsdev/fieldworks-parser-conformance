@@ -58,8 +58,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
    adapter with a `--propose`-style option if it has one (sillsdev/machine's runner does), or run an engine
    through the `batch` contract in [PROTOCOL.md](PROTOCOL.md) and read its TSV. Read every row against the
    rules before you accept it. A row the engine produces and you cannot explain is a finding, not a pin.
-   Record the build you took the rows from in the fixture's `words.yaml` header
-   (`# oracle-provenance: ...`) and, if it is a new build, add it to [PROVENANCE.md](PROVENANCE.md).
+   The build the rows came from is `reference.commit`; do not record it per test case (ADR 0003).
 4. Update [docs/grammars.md](docs/grammars.md): one bullet per fixture, in the group it belongs to, in the
    form `` - `edge-cases/name`: one short line. `` `scripts/check_grammars_md.py` fails if a fixture is
    missing, listed twice or gone.
@@ -98,7 +97,7 @@ own copy; none of these files is read from a checkout of this repository.
 | `dead-rules-allowed.tsv` | a fixture declares a rule on purpose that no word exercises (add a row with the reason), or a word now exercises an allowed rule (delete the row). |
 | `constructs.txt` | the checklist of constructs gains or loses an entry. |
 | `fieldworks-writable-shapes.tsv` | the loader census changes (section 1). |
-| `PROVENANCE.md` | a new engine build supplied ground truth. |
+| `reference.commit` | the reference engine build changes (ADR 0003). |
 
 ## 3. Optional FieldWorks witnesses
 
@@ -191,8 +190,7 @@ a witness yet (0 of 16), and `stress/README.md` states the count.
    `budget_ms`. In the header comment say what the grammar models and what it
    really exercises; do not name a script or a switch that is not in a repository.
 3. Take the expected rows from an engine run, never from memory: three identical runs of the reference engine
-   (sillsdev/machine `master` for the existing fixtures). Record the build in the header
-   (`# oracle-provenance: ...`) and, if it is new, in [PROVENANCE.md](PROVENANCE.md). Read each row against the
+   (sillsdev/machine `master` for the existing fixtures). The build is `reference.commit`. Read each row against the
    grammar. A row you cannot explain is a finding to file, not a pin. A word an engine in the field renders
    differently from `master` is left out and named in `stress/README.md` (see `polundanasak`).
 4. Change an existing row only when the correct behaviour of the reference engine changed, and say which change

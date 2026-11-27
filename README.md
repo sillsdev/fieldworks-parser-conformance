@@ -5,9 +5,9 @@ A linguist's project should parse a word the same way whichever engine runs it. 
 
 **263 conformance grammars** (6 languages, 257 edge cases) · **16 stress grammars** · **11 FieldWorks witnesses**
 
-> **Provenance note.** Many fixtures cite sillsdev/machine commit `e63b8863` as the HermitCrab build behind their expected
-> results. That commit is the tip of unmerged machine PR #615 (`hermitcrab-conformance-runner`), stacked on #500 and #556.
-> Once those PRs land, re-point every `e63b8863` citation (see [PROVENANCE.md](PROVENANCE.md)) to the merge commit on master.
+> **Provenance note.** The HermitCrab build behind every expected result is the one commit in `reference.commit`, the tip of
+> unmerged machine PR #615 (`hermitcrab-conformance-runner`), stacked on #500 and #556. Once those PRs land, re-point that one file
+> to the merge commit on master.
 
 ## The one rule
 
@@ -71,7 +71,7 @@ needs an engine fix, so CI never runs a commit that cannot be fetched.
 | Time an engine | [stress/README.md](stress/README.md) |
 | Look up a term | [GLOSSARY.md](GLOSSARY.md) |
 | See what FieldWorks cannot say | [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md) |
-| Trace where results came from | [PROVENANCE.md](PROVENANCE.md) |
+| Trace where results came from | `reference.commit` |
 | Find every document | [docs/README.md](docs/README.md) |
 
 ## License

@@ -605,7 +605,6 @@ def cmd_yaml(hcdll, scratch, only=None):
             "# Each parse's signature is the oracle's. The rules: and gloss: fields are NOT oracle output: the generator",
             "# derives them from the signature (morpheme id -> rule id, compounding rule from the root classes);",
             "# the hc-conformance self-check compares the rules against the oracle trace.",
-            "# oracle-provenance: Oracle: hc.dll, Machine aab4c598 (batch command, MaxRoots 2); parses below are the oracle's signatures.",
             "language: %s" % grammar_name(fd / "grammar.xml"),
             'inspired_by: ["synthetic cost-calibration grammar"]',
             "sources:",
@@ -704,7 +703,6 @@ def cmd_lexsize(pangloss, hcdll, scratch):
                "# Each parse's signature is the oracle's. The rules: and gloss: fields are NOT oracle output: the generator",
                "# derives them from the signature (morpheme id -> rule id); the hc-conformance self-check compares the rules",
                "# against the oracle trace.",
-               "# oracle-provenance: Oracle: hc.dll, Machine aab4c598 (batch command, MaxRoots 2).",
                "language: CalLexSize%dk" % (n // 1000), 'inspired_by: ["synthetic cost-calibration grammar"]', "sources:",
                '  - "PanGloss #240 parser-work cost-weight calibration"', "requires: []",
                "budget_ms: 600000", "words:"]

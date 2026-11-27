@@ -9,9 +9,13 @@ forward rule application order in `words.yaml`'s `rules` list. Repeated signatur
 intentional and remain repeated rows.
 
 The checked-in expectations were captured from the combined #500+#506 C# source state: sillsdev/machine #556
-plus the #500 `ApplyRhs` relocation. The two commit hashes, the assembly SHA-256 values and the reproduction
-recipe are recorded in [PROVENANCE.md](../PROVENANCE.md) as plain text; the expected rows do not depend on a
-temporary staging file.
+plus the #500 `ApplyRhs` relocation. The two commits are sillsdev/machine #556 head `d98d12a5d514ce589d7495c71d055830e061a418` and the #500 `ApplyRhs`
+relocation `157c031ef272d07c900db41b2d4a8852b13f64b0`, as plain text. Assembly SHA-256 values: #556 `SIL.Machine.dll`
+`b265a40a44292614f51f7a65afc445ae34dde685cb40ce8c2d2de5521a0c299d`; combined
+`SIL.Machine.Morphology.HermitCrab.dll` `4cd980453f51fd3cf29cf38a99f342f542e631eb23be6ba87b9433aab6c3d57f`.
+Reproduction: start from the truncation grammar; add the identity labels or the stated companion rule or root; use the
+#556 Machine library and the #500 relocation in HermitCrab's copy/annotation transfer; parse every `words.yaml` word;
+retain every returned signature and forward trace. The expected rows do not depend on a temporary staging file.
 
 An engine without both fixes does not satisfy these complete identity rows reliably, because its
 copied annotations differ. Keep the full combined-oracle multisets; do not weaken them to match the

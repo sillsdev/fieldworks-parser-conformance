@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 # This FLEx boundary representation pins the scope of machine#597, which concerns truly empty output.
 language: FlexNullAffixEnvironments
 inspired_by: ["synthetic FieldWorks null prefix and suffix environment probe"]

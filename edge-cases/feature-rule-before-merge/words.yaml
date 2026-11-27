@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 # Signatures verified against the C# founding oracle (hc-conformance self-check) built from
 # sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480). Ported from the
 # PanGloss conformance-staging fixture of the same name (branch exp/narrow-union-v1, 54497a01),

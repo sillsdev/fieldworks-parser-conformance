@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check); the ginabas row is expect_fail
 # because that build gives it no parse.
 # History: the rows were first taken with the fix in sillsdev/machine#631, where ginabas parses as gabas + infix.
 # #631 was closed unmerged and sillsdev/machine#630 is still open, so the reference has no such fix and ginabas has no

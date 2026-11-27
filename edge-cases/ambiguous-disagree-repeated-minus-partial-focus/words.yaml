@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # hc.dll, Machine 18cf242f.
 language: ambiguous-disagree-repeated-minus-partial-focus
 inspired_by: ["synthetic repeated minus alpha with partial focus"]

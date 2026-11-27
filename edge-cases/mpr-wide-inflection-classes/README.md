@@ -4,7 +4,7 @@ Ten families of 30 inflection classes (300 features) plus exception features, so
 
 The compounding rule `compound` restricts its head and non-head MPR features but does not set an output MPR restriction: the staged copy also set `outputProdRestrictionsMprFeatures`, which `HCLoader.cs` never writes (cannot-say row 10), so it is removed here and the one word that depended on it (`balabalamu`) is re-pinned to what C# returns.
 
-Synthetic forms. Source: sillsdev/PanGloss pull request 340. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70`, see [PROVENANCE.md](../../PROVENANCE.md)) returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
+Synthetic forms. Source: sillsdev/PanGloss pull request 340. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70` returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
 
 FieldWorks producibility is read from `HCLoader.cs`; no `fieldworks/` witness is claimed.
 

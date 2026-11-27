@@ -3,7 +3,6 @@ language: "CalTemplaticNonconcat"
 sources: []
 requires: []
 budget_ms: 600000
-# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
 words:
   - word: munkiblkita
     note: "1x rung, 11 chars, 1.45M measured parser cost, 1 analysis. Stresses required root-and-pattern slot, ablaut, re-templating and affix slots over consonant skeletons; first analysis applies 3 rules."

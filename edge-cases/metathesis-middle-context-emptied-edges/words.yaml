@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=ba6dfa10 verified-date=2026-11-26 (every row from the C# self-check at that pin, hc-conformance --propose; none from PanGloss; staged by PanGloss#388; the grammar is the issue's probe, kept whole, and every staged row replayed unchanged). The three expect_fail rows record that ba6dfa10 gives no parse for words its own synthesis generates.
 # Reference defect sillsdev/machine#619 (open; divergence 127; tracked in status.yaml): AnalysisMetathesisRuleSpec drops everything between the
 # switch groups, so analysis of pr0 (s p t -> t p s) looks for adjacent switches and cannot undo the swap. Checked
 # against the #619 fix (293f6f8d applied to ba6dfa10): tps, tp+s and t+ps then parse as R0+PR0+PR1 and R2+PR0+PR1, and

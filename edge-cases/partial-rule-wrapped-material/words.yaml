@@ -1,4 +1,3 @@
-# oracle-provenance: sillsdev/machine master 0cbf85f1 with the conformance runner of machine PR 615; rows identical with the partial-rule prune of machine#644 (the fix for issue 643).
 # Partial rules pk (suffix ko) and pc (prefix ka) apply to the stem, then ordinary prefixes and suffixes (n, m) and a reduplication (rd) wrap or copy the partial material before the final template T1 (suffix t) closes the word. A prune of final templates that looked only at the last rule applied would lose these words.
 language: PartialRuleWrappedMaterial
 inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]

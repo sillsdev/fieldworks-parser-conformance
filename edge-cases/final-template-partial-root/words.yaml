@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=a7056751 verified-date=2026-10-23
 # Expected parses are derived from the synthesis gates and checked against C#; see ../../docs/final-template-partial-root.md.
 language: FinalTemplatePartialRoot
 inspired_by: ["synthetic partial-root probe for final-template pruning (not modeling any real language)"]

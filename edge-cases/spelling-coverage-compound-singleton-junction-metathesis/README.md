@@ -6,7 +6,7 @@ Synthetic roots, two compounding rules `cr1` and `cr2`, and a prefix `PRE` (the 
 
 C# at Machine e63b8863 returns four analyses for `tp` (`Z+Y|tp`) and six for `stp` (`PRE+Z+Y|stp`) through the metathesis; `pt` and `spt` are rejected controls, for which C# finds no analysis.
 
-Source: sillsdev/PanGloss pull request 376. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70`, see [PROVENANCE.md](../../PROVENANCE.md)) returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
+Source: sillsdev/PanGloss pull request 376. The expected rows are what C# HermitCrab (sillsdev/machine `e63b8863d37d3189c2b11fcaf9d43be74962ad70` returned on a fresh `hc-conformance --propose` run over this grammar and word list; none is copied from PanGloss's staged copy.
 
 FieldWorks producibility is read from `HCLoader.cs`; no `fieldworks/` witness is claimed.
 

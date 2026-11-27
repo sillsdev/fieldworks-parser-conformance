@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=4d9b454d (hc-conformance self-check, --propose)
 language: NfaLiteralAllomorphEnvironment
 inspired_by: ["synthetic literal root-allomorph environment and infixation probe"]
 sources:

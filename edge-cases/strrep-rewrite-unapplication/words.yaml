@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: forward-synthesis
 # Deliberately red against the original C# oracle: xpuma is hand-derived.
 # muma, xuma, xmuma, puma, and xpuua record the original oracle where it agrees.
 # Forward derivation: root XMUMA = xmuma; m -> p / x_ changes the first m;

@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle
 # Synthetic construct-shaped mimic -- see STAGING.md and grammar.xml's own header comment. Verified
 # against the C# founding oracle (hc.dll, via hc-conformance.exe self-check): signatures match
 # exactly; `rules:` fields below are transcribed from the oracle's own trace output.

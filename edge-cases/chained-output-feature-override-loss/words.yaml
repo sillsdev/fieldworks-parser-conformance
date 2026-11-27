@@ -1,4 +1,3 @@
-# oracle-provenance: forward-synthesis
 #
 # REGRESSION PIN FOR AN ANALYSIS PARSE LOSS FIXED BY sillsdev/machine#494. Every word here records
 # the founding oracle's own output except `zudiua`, whose expected parse was derived from the grammar

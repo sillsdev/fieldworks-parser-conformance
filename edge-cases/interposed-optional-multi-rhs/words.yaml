@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: forward-synthesis
 # The positive is intentionally red against C#: its existing narrowing unapply loses this parse.
 # The C# result was not rerun in this lane; the expected parse is independently forward-derived.
 # Trace: root ABC/abc -> merge abc to de -> x deletion is vacuous -> surface de (ABC|de).

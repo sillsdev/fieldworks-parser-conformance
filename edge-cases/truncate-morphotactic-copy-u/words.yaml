@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle combined Machine #500+#506 corrected C# oracle
 language: TruncateRulesProbeCopyU
 inspired_by: ["Machine #480 truncate-morphotactic with the retained-host copy-U discriminator"]
 sources:

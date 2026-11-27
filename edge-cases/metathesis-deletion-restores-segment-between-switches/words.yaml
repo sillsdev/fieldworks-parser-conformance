@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-source=e63b8863 (hc-conformance self-check, verified 2026-11-20); the ats, at+s, atsa and at+sa rows are expect_fail
 # because that build gives them no parse.
 # The intended parses (PRE+R0|at+?s and PRE+R2|at+?sa) are recorded in status.yaml. They are the forward
 # synthesis of the grammar, which machine e63b8863's own GenerateWords reproduces ("ats" from R0+PRE, "atsa" from R2+PRE).

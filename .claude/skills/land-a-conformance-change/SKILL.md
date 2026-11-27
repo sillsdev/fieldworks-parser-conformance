@@ -15,7 +15,7 @@ Mechanics live elsewhere; follow the links and do not restate them:
 - Fixture files, producibility, generated files, checks: [AGENTS.md](../../../AGENTS.md).
 - Growth policy (every bug fix lands with a fixture): [CONTRIBUTING.md](../../../CONTRIBUTING.md).
 - Row format, signatures, the `batch` contract: [PROTOCOL.md](../../../PROTOCOL.md).
-- Engine builds behind the rows: [PROVENANCE.md](../../../PROVENANCE.md).
+- The engine build behind the rows: the one commit in `reference.commit` (ADR 0003).
 - How consumers pin and read the suite: [docs/consuming.md](../../../docs/consuming.md).
 
 Three repositories take part. Each pins another by commit:
@@ -70,7 +70,7 @@ Today's order. The machine fix PR is based on machine `master`, or stacked on ot
 | Step | PR | Suite `main` | Machine pin | PanGloss pin |
 |---|---|---|---|---|
 | 1 | Machine fix PR (F) opened. It does not touch the pin. | S0 | S0 | S0 |
-| 2 | Suite PR: expected rows captured by running machine's runner built from F's head against the suite branch (`HC_CONFORMANCE_SUITE` or `--fixtures`). Record F's head SHA in the fixture's `# oracle-provenance:` header and in [PROVENANCE.md](../../../PROVENANCE.md). | S0 | S0 | S0 |
+| 2 | Suite PR: expected rows captured by running machine's runner built from F's head against the suite branch (`HC_CONFORMANCE_SUITE` or `--fixtures`). Record F's head SHA in `reference.commit` when it is the new reference. | S0 | S0 | S0 |
 | 3 | Suite PR lands. | S1 | S0 | S0 |
 | 4 | F bumps `conformance.commit` to S1. Its CI passes. | S1 | S1 on F | S0 |
 | 5 | F lands on machine `master`. Stacked machine PRs land base-first. | S1 | S1 | S0 |
@@ -140,7 +140,7 @@ fixed checker. A change that moves a manifest hash (anything in `generated/`) is
 | Reference and suite agree, and both are wrong | (b) | Prove it by forward synthesis. Pin the right answer in a fixture and open a machine issue. |
 
 3. A reference that is wrong needs proof: a hand-traced forward synthesis that builds the surface form. Write the
-   trace in the fixture comment, set `oracle-provenance` to say which rows are recorded and which are derived, and
+   trace in the fixture comment, say in the word `note` which rows are recorded and which are derived, and
    link the machine issue. Without a fix PR the fixture is an unexplained failure.
 4. Pin the bug with a fixture whenever one is missing ([CONTRIBUTING.md](../../../CONTRIBUTING.md)): add a word first,
    then extend a grammar, then add an edge case. A fixture that has never failed has proved nothing; show it failing

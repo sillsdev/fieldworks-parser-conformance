@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 language: TruncateRulesProbeIdentity
 inspired_by: ["synthetic AffixProcessRule truncation probe (Machine #480 truncate-morphotactic)"]
 sources:

@@ -113,7 +113,6 @@ def main():
     notes = json.load(open(work / "notes.json")) if (work / "notes.json").exists() else {}
     lines = [header, f"language: {yq(CAMEL.get(fam, fam))}", "sources: []", f"requires: [{REQ.get(fam, '')}]",
              "budget_ms: 600000",
-             "# oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace",
              "words:"]
     for (rung, w, ln, cost, npar) in ladder:
         npp = len(parses[w])

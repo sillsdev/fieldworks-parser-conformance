@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle
 language: TruncateSubsumptionProbe
 inspired_by: ["synthetic affix truncation and inserted-host attribution probe"]
 sources:

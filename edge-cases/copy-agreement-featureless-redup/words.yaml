@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle machine-commit=aab4c59819adb7b366915e09df2fb28c62b8c03a verified-date=2026-11-02
 # All 19 rows are what the C# oracle (SIL.Machine.Morphology.HermitCrab at the commit above) does. They
 # were first taken from hc.dll through the batch contract, and on 2026-11-02 the harness self-check
 # (hc-conformance --fixtures, in-process oracle at that commit) passed every word, signature and traced rule.

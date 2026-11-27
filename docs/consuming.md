@@ -12,7 +12,7 @@ instead. Both run it through their own runners. Their gates, ledgers and
 coverage measurements live in their own repositories. To change the
 suite, read [AGENTS.md](../AGENTS.md). Where a fixture or document names a ledger, a test or a source path
 of one of those repositories, it is a historical or cross-repository reference, not a file here.
-The commit hashes cited in fixtures are plain text, explained in [PROVENANCE.md](../PROVENANCE.md).
+The one engine build behind every expected row is the commit in `reference.commit`; hashes cited in prose are history.
 
 ## What passing means today
 

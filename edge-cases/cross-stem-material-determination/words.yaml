@@ -1,7 +1,5 @@
-# oracle-provenance: founding-oracle machine-source=aab4c598
 # Graduation rechecks complete word/status/signature multiplicities and rule traces.
 # Earlier provenance comments below describe the original authoring history.
-# original oracle-provenance: founding-oracle machine-commit=f150e2a0 verified-date=2026-09-16
 # Synthetic construct-shaped mimic -- see STAGING.md and grammar.xml's own header comment.
 
 language: CrossStemMaterialDetermination

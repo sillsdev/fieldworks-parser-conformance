@@ -4,7 +4,6 @@
 # Each parse's signature is the oracle's. The rules: and gloss: fields are NOT oracle output: the generator
 # derives them from the signature (morpheme id -> rule id); the hc-conformance self-check compares the rules
 # against the oracle trace.
-# oracle-provenance: Oracle: hc.dll, Machine aab4c598 (batch command, MaxRoots 2).
 language: CalLexSize10k
 inspired_by: ["synthetic cost-calibration grammar"]
 sources:

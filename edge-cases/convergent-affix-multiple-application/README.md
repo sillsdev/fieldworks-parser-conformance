@@ -11,7 +11,7 @@ trail in the caller after a table hit.
 ParserParameters entry `HC/AffixRules/AffixRule[@guid][@maxApps]`, read in `HCLoader.cs` 131-138 and applied at
 970-971, clamped to 1..10 (`docs/fieldworks-cannot-say.md` row 22). The reader is sillsdev/FieldWorks#1263 at
 `0ead571c65df55e88525fe19a1a20e1d1ffe0054` (LT-22699), **not yet merged**: re-point the citation here, in
-`PROVENANCE.md`, in `words.yaml`, in `fieldworks-writable-shapes.tsv` and in row 22 when it lands. The strata
+`status.yaml`, in `fieldworks-writable-shapes.tsv` and in row 22 when it lands. The strata
 are `unordered`, as every FieldWorks stratum is.
 
 **Guards.** sillsdev/machine#653: analysis re-matches the same rule on the same shape once per parent path, and the

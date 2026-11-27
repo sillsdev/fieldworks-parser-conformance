@@ -64,7 +64,6 @@ Rationale documents for individual fixture groups: [final-template-partial-discr
 |---|---|
 | [fieldworks-cannot-say.md](fieldworks-cannot-say.md) | the rule, the round-trip standard, and the 27-row table of what FieldWorks cannot say |
 | [engine-only-fixture-retirement.md](engine-only-fixture-retirement.md) | the 23 fixtures still removed for needing a construct FieldWorks cannot produce (four more were restored), and which construct |
-| [PROVENANCE.md](../PROVENANCE.md) | which engine builds produced the checked-in ground truth, as plain-text commit hashes |
 
 `.fwdata` witnesses and XAMPLE comparison are produced and run by
 [PanGloss](https://github.com/sillsdev/PanGloss)'s `xample-projector` tool, which stays in PanGloss; this
@@ -87,7 +86,7 @@ generated/           untracked: the manifests, coverage.csv and rules.csv that `
 parity-check.py      the engine-free migration parity proof
 scripts/             the checks CI runs
 PROTOCOL.md          the adapter contract
-PROVENANCE.md        which engine builds supplied the ground truth
+reference.commit     the one engine build the ground truth comes from
 AGENTS.md            how to change the suite
 CONTRIBUTING.md      the growth policy and how to run the checks
 ```

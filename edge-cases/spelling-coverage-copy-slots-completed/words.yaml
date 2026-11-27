@@ -1,4 +1,3 @@
-# oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: SpellingCoverage
 requires: []
 fieldworks_producible_notes: Literal stems, affix processes, copy morphology, optional final slot and null-affix boundary; partial features follow ADR 0009. No fwdata round-trip witness is claimed.
