@@ -12,7 +12,7 @@ import xml.etree.ElementTree as ET
 from collections import defaultdict
 from pathlib import Path
 
-from suite import FIXTURE_GROUPS, ROOT, STRESS_GROUP, fixture_dirs, fixture_id, load_words, sha256_text, words_summary
+from suite import FIXTURE_GROUPS, ROOT, STRESS_GROUP, expand_words, fixture_dirs, fixture_id, load_words, sha256_text, words_summary
 
 FORMAT = "hc-conformance-manifest/v2"
 WORDS_FORMAT = "hc-conformance-words/v1"
@@ -105,7 +105,7 @@ def coverage(root: Path = ROOT, per_fixture: bool = False):
         data = load_words(d / "words.yaml")
         language = data["language"]
         exercising = defaultdict(list)
-        for case in data["words"]:
+        for case in expand_words(data):
             tags = case.get("exercises") or []
             if case.get("expect_fail") or case.get("expect_skip"):
                 for construct in tags:
