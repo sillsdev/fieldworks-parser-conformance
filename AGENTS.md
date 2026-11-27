@@ -54,7 +54,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 **To add a test case, three steps:**
 
 1. Create `edge-cases/<name>/` with `grammar.xml` and `words.yaml`, the expected results taken from the reference run (step 3 below).
-2. Add one bullet for it to `docs/grammars.md`.
+2. Add one bullet for it to `docs/grammars.md`, then run `python3 scripts/tiers.py --write` to refresh its tier table.
 3. Run `python3 scripts/suite.py check`.
 
 Nothing else is committed: there is no manifest, coverage file or provenance header to update. A test case the reference
@@ -96,6 +96,7 @@ their invariants.
 | `hc-conformance-manifest.v2.json` | one entry per test case, with hashes of `grammar.xml` and `words.yaml`, the DTD, `constructs.txt`, `parity-check.py` and the schemas; what consumers pin |
 | `stress-manifest.v2.json` | the same for `stress/edge-cases/*`, kept apart so a stress change moves only it |
 | `coverage.csv`, `rules.csv` | language x word x construct, and language x grammar rule x exercising words, re-derived from `words.yaml`, `grammar.xml` and `constructs.txt` |
+| `core-tier.txt` | the core tier, one test case id per line: what a consumer runs on every pull request, with the test cases it names itself. The tier of every test case is also committed in `docs/grammars.md` (`scripts/tiers.py`, rules in its docstring); a tier is computed, never authored or part of an id. A consumer adds the test cases its tests name to `consumers.tsv` by pull request |
 
 Editing a fixture `README.md`, a file under `docs/`, or this file changes nothing derived. A consumer generates its
 own copy; none of these files is read from a checkout of this repository.

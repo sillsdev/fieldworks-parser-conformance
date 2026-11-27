@@ -21,6 +21,7 @@ DTD = "HermitCrabInput.dtd"
 MANIFEST = "hc-conformance-manifest.v2.json"
 STRESS_FORMAT = "hc-conformance-stress-manifest/v2"
 STRESS_MANIFEST = "stress-manifest.v2.json"
+CORE_TIER = "core-tier.txt"  # the test cases a consumer runs on every pull request (scripts/tiers.py)
 ADDITIONAL_SOURCE_FILES = (
     "constructs.txt",
     "parity-check.py",
@@ -141,11 +142,14 @@ def rules_csv(root: Path = ROOT) -> str:
 
 
 def write_all(out: Path, root: Path = ROOT) -> list:
-    """Write the four derived files under `out`; return their names."""
+    """Write the five derived files under `out`; return their names."""
     out.mkdir(parents=True, exist_ok=True)
     (out / MANIFEST).write_bytes(serialize(manifest(root)))
     (out / STRESS_MANIFEST).write_bytes(serialize(stress_manifest(root)))
     cover, rules = coverage(root)
     (out / "coverage.csv").write_bytes(csv_text(("language", "word", "signature", "construct"), cover).encode("utf-8"))
     (out / "rules.csv").write_bytes(csv_text(("language", "rule_id", "words"), rules).encode("utf-8"))
-    return [MANIFEST, STRESS_MANIFEST, "coverage.csv", "rules.csv"]
+    import tiers
+
+    (out / CORE_TIER).write_text("\n".join(tiers.core(tiers.compute(root))) + "\n", encoding="utf-8", newline="\n")
+    return [MANIFEST, STRESS_MANIFEST, "coverage.csv", "rules.csv", CORE_TIER]

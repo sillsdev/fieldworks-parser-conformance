@@ -82,7 +82,7 @@ constructs.txt       the checklist vocabulary of construct tags that `exercises:
 fieldworks-writable-shapes.tsv  the census of which DTD members HCLoader.cs writes (see below)
 HermitCrabInput.dtd  the published grammar DTD (the authoritative copy)
 schema/              Draft 2020-12 contracts for the authoring and product formats
-generated/           untracked: the manifests, coverage.csv and rules.csv that `scripts/suite.py generate` writes
+generated/           untracked: the manifests, coverage.csv, rules.csv and core-tier.txt that `scripts/suite.py generate` writes
 parity-check.py      the engine-free migration parity proof
 scripts/             the checks CI runs
 PROTOCOL.md          the adapter contract

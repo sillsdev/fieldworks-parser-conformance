@@ -198,6 +198,17 @@ def check_readme_numbers(problems: list) -> None:
                 problems.append(f"README.md numbers line says {s} {label}; the disk has {a}")
 
 
+def check_tiers(text: str, problems: list) -> None:
+    """The generated tier block must be exactly what scripts/tiers.py computes now."""
+    import tiers
+
+    current = tiers.current_block(text)
+    if current is None:
+        problems.append("docs/grammars.md has no generated tier block; run: python3 scripts/tiers.py --write")
+    elif current != tiers.block(tiers.compute()):
+        problems.append("docs/grammars.md tier block is stale; run: python3 scripts/tiers.py --write")
+
+
 def main() -> int:
     text = (ROOT / "docs" / "grammars.md").read_text(encoding="utf-8")
     listed = LISTED.findall(split_section(text, XAMPLE_HEADING)[0])
@@ -205,6 +216,7 @@ def main() -> int:
     problems = []
     compare("docs/grammars.md", listed, on_disk, problems)
     stress = check_stress(text, problems)
+    check_tiers(text, problems)
     check_xample(text, problems)
     check_readme_numbers(problems)
     for problem in problems:

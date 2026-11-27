@@ -1,7 +1,7 @@
 """The suite's one script: every check, the generator of derived files, and the exception report.
 
     python3 scripts/suite.py check                 run every check (this is what CI runs)
-    python3 scripts/suite.py generate [--out DIR]  write the derived files: both manifests, coverage.csv, rules.csv
+    python3 scripts/suite.py generate [--out DIR]  write the derived files: both manifests, coverage.csv, rules.csv, core-tier.txt
     python3 scripts/suite.py status [--strict]     list the rows of status.yaml by upstream state
     python3 scripts/suite.py expand CASE           print a test case's words with generated no-parse words expanded
 
