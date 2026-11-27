@@ -9,7 +9,6 @@ inspired_by: ["synthetic allomorph environment and infixation probe (not modelin
 sources:
   - "sillsdev/machine issue 630: Allomorph.IsWordValid tested environments once per root piece"
 requires: []
-fieldworks_producible: true
 words:
   - word: gabsa
     note: >-

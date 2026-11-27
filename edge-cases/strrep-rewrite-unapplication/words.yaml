@@ -12,7 +12,6 @@
 language: StrRepRewriteUnapplication
 inspired_by: ["synthetic featureless literal rewrite"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: xpuma
     note: Hand-derived forward synthesis of XMUMA; original oracle loses this analysis.

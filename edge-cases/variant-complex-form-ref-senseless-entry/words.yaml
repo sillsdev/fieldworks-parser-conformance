@@ -5,7 +5,6 @@ language: VariantComplexFormRef
 inspired_by: ["a sense-less entry whose only entry ref is a complex-form ref is a variant of its component for HCLoader"]
 sources: ["HCLoader.cs:639-668 (LoadLexEntries)", "HCLoader.cs:706-710 (GetInflTypes)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: ta
     note: >-

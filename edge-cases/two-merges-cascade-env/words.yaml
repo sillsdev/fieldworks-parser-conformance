@@ -15,7 +15,6 @@ inspired_by: ["synthetic syllabary merge cascade (not modeling any real language
 sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: teK
     note: >-

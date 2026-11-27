@@ -3,7 +3,6 @@ language: ConvergentZeroDerivationIdentity
 inspired_by: ["synthetic zero derivation (conversion) between noun and verb beside homophonous overt suffixes (not modeling any real language)"]
 sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs null-affix form table"]
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Three null affixes (noun to verb, verb to noun, noun to noun) each insert only the boundary pair +∅, the
   shape FieldWorks writes for an affix whose form is ∅. Un-applying one maps a shape to itself, so every

@@ -7,7 +7,6 @@ inspired_by: ["synthetic infix at an ambiguous site (not modeling any real langu
 sources:
   - "FieldWorks HCLoader.LoadFormAffixProcessAllomorph (infix and infixing-interfix branch): left = any* + left context, right = right context + any*"
 requires: []
-fieldworks_producible: true
 words:
   - word: mime
     note: Bare root, no infix; the control.

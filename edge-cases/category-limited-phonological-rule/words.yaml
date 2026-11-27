@@ -3,7 +3,6 @@ language: CategoryLimitedPhonologicalRule
 inspired_by: ["a FieldWorks phonological rule whose right-hand side lists the category Verb (Black, Conceptual Introduction 6.1.2.2.1)"]
 sources: ["sillsdev/motif#468"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: kain
     note: >-

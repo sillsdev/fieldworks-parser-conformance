@@ -7,7 +7,6 @@ inspired_by: ["synthetic circumfix cross-product with live per-side V/C conditio
 sources:
   - "docs/research/circumfix-cross-product-loading.md"
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   This is the IsCircumfix() cross-product shape (HCLoader.cs:1051-1082): one prefix-half allomorph x
   suffix-half allomorph pairing per MorphologicalSubrule, with each half's phonological context

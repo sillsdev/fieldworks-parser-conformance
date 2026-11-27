@@ -4,7 +4,6 @@ inspired_by: [a FieldWorks required prefix slot with no affix rules]
 sources:
   - "FieldWorks 9.3.10.1452 HCLoader witness in fieldworks/"
 requires: []
-fieldworks_producible: true
 words:
   - word: monu
     note: >-

@@ -7,7 +7,6 @@ language: nullable-disagree-bounded-rtl-right
 inspired_by: ["synthetic feature disagreement at a word edge"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Negative control for nullable disagree bounded rtl right: 'ii' must complete with no analysis."

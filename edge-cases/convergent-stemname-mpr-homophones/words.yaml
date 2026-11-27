@@ -3,7 +3,6 @@ language: HomophonousGates
 inspired_by: ["synthetic homophonous-suffix grammar whose gates read exception features and stem names (not modeling any real language)"]
 sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs LoadAffixTemplate, LoadDerivAffixProcessRule, LoadLanguage"]
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Required MPR features are production restrictions on derivational affixes (HCLoader.cs LoadDerivAffixProcessRule 1015-1018, group exceptionFeatures);
   excluded MPR features sit only on slot rules of an affix template and are inflection-type features (LoadAffixTemplate 1766, group lexEntryInflTypes),

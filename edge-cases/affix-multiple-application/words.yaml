@@ -8,7 +8,6 @@ inspired_by: ["synthetic Bantu-style verb extensions (causative and applicative 
 sources:
   - "machine XmlLanguageLoader.cs:868-870 and AffixProcessRule.cs:28 (multipleApplication); FieldWorks HCLoader.cs 131-138 and 970-971 at PR #1263 (0ead571c); PanGloss#470, motif#436"
 requires: []
-fieldworks_producible: true
 words:
   - word: kat
     note: "bare root"

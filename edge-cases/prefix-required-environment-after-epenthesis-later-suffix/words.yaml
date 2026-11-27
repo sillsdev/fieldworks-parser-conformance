@@ -8,7 +8,6 @@ sources:
   - "sillsdev/PanGloss issue 405 follow-up: C# AllomorphEnvironment.IsMatch reads morph.Range.End.Next / Start.Prev"
   - "FieldWorks HCLoader.LoadAffixProcessRule (prefix, suffix and environments), HCLoader.LoadRewriteRule (epenthesis)"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "a"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."

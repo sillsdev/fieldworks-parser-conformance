@@ -7,7 +7,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs: IsBlockingStratum"
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: >-

@@ -33,7 +33,6 @@ inspired_by: ["synthetic compounding-constraint probe (not modeling any real lan
 sources:
   - "conformance/semantic-coverage-baseline.txt compounding todo entries"
 requires: [morpher-settings]
-fieldworks_producible: true
 morpher:
   MaxRoots: 2
 words:

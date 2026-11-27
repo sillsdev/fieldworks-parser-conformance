@@ -7,7 +7,6 @@ language: ambiguous-disagree-repeated-minus-partial-focus
 inspired_by: ["synthetic repeated minus alpha with partial focus"]
 sources: ["HCLoader.cs:2338-2344,2745-2770,2799-2808"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Positive witness for ambiguous disagree repeated minus partial focus: 'ii' must retain the declared analysis."

@@ -11,7 +11,6 @@ sources:
   - "https://github.com/sillsdev/machine/issues/506"
   - "https://github.com/sillsdev/machine/issues/500"
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: >-

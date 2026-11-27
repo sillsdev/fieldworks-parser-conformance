@@ -18,7 +18,6 @@ inspired_by: ["synthetic right-to-left bounded-quantifier rewrite probe (not mod
 sources:
   - "docs/conformance/representative-typology-basis.md S1.2.2 (Right-to-left rewrite: additional in-scope pattern shapes)"
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   The second rule (prRtlBq2, ucdt and the words after it) has a PhIterationContext (minimum 1, maximum 2) whose member is a PhSequenceContext of two simple contexts, which HCLoader LoadPatternNode loads as a Quantifier over a Group. Not round-tripped through FieldWorks, so no witness is claimed.
 words:

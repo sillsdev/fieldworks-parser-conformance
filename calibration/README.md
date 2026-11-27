@@ -12,8 +12,8 @@ per-grammar maximum cost of 0.25M, tiny lexicons, nothing at work-cap scale and 
 
 They are **not conformance fixtures**. They live outside `languages/`, `edge-cases/` and `stress/`, outside both
 manifests, and `docs/grammars.md` does not list them. Each `words.yaml` starts with `# kind: calibration`, keeps
-the repository's rule (only what FieldWorks can produce, section 1 of `AGENTS.md`) and carries
-`fieldworks_producible: true`, a claim read from `HCLoader.cs`; no family has a FieldWorks witness.
+the repository's rule (only what FieldWorks can produce, section 1 of `AGENTS.md`) and its
+producibility is a claim read from `HCLoader.cs`; no family has a FieldWorks witness.
 
 Each family directory holds:
 

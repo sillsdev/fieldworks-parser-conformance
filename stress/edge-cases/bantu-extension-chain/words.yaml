@@ -4,7 +4,6 @@
 language: StressBantuExtensionChain
 inspired_by: ["Bantu-style verb extension chain (synthetic; not modeling a real language)"]
 requires: []
-fieldworks_producible: true
 budget_ms: 120000
 words:
   - word: "tikaknainkaik"

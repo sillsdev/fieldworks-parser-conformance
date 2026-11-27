@@ -3,7 +3,6 @@ language: EarlierAllomorphBreaksSynthesis
 inspired_by: ["a FieldWorks suffix with an alternate form in an environment / n _ ahead of the lexeme form"]
 sources: ["sillsdev/PanGloss#444", "Motif #316"]
 requires: []
-fieldworks_producible: true
 words:
   - word: banku
     note: >-

@@ -3,7 +3,6 @@ language: SpellingCompoundSingletonBoundary
 requires: [morpher-settings]
 morpher:
   MaxRoots: 2
-fieldworks_producible: true
 words:
   - word: "a+a"
     note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."

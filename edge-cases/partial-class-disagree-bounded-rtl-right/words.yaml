@@ -7,7 +7,6 @@ language: partial-class-disagree-bounded-rtl-right
 inspired_by: ["synthetic feature disagreement with a partial class"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Negative control for partial class disagree bounded rtl right: 'ii' must complete with no analysis."

@@ -5,7 +5,6 @@ sources:
 requires: [phonology]
 # FieldWorks verdict relies on the task-provided HCLoader.cs facts; that external source is not in
 # this worktree. Ordinary PhSegmentRule loading covers this rule shape.
-fieldworks_producible: true
 words:
   - word: gaga
     note: Bare control root; it contains no high vowel and is unchanged by the rewrite.

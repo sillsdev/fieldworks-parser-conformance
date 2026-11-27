@@ -3,7 +3,6 @@ language: SpellingCompoundSingletonDepth3
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: apt
     note: "C# returns 2 analyses (X+Y+Z|apt): pins that this spelling is a route and its morpheme sequence."

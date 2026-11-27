@@ -9,7 +9,6 @@ inspired_by: ["synthetic compounding-construct probe (not modeling any real lang
 sources:
   - "openspec/changes/cover-compounding/design.md (D2/D3/D4)"
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   The shape HCLoader emits for a compound rule: headProdRestrictionsMprFeatures from the head MSA's
   productivity restrictions (HCLoader.cs:1854-1857,1888), nonHeadPartsOfSpeech from the non-head

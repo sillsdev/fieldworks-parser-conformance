@@ -54,7 +54,6 @@ sources:
   - "typological literature on suffix ordering (CARP hierarchy: Causative-Applicative-Reciprocal-Passive)"
   - "typological literature on post-nasal mutation / post-nasal hardening-voicing"
 requires: [phonology]
-fieldworks_producible: true
 words:
   # Bucket-2 coverage (LexicalEntry.ruleFeatures/MorphologicalOutput.MPRFeatures ->
   # PhonologicalSubrule.{required,excluded}MPRFeatures): placed FIRST in file order deliberately, AND

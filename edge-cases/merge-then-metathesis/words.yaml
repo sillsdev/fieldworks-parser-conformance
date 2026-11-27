@@ -16,7 +16,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisMetathesisRuleSpec.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: aca
     note: >-

@@ -8,7 +8,6 @@ language: MetathesisMiddleContextEmptiedEdges
 inspired_by: ["synthetic metathesis rule with a middle segment and a deletion (not modeling any real language)"]
 sources: ["sillsdev/PanGloss#388", "sillsdev/machine#619", "FieldWorks HCLoader.LoadMetathesisRule (switches and middle context), HCLoader.LoadRewriteRule (a -> 0), HCLoader.LoadAffixProcessRule (prefixes s+, p+)"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: tps
     note: >-

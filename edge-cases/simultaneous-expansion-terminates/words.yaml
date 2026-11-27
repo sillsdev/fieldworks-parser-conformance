@@ -18,7 +18,6 @@ sources:
   - "sillsdev/machine#539 (narrowing-rule unapplication); PanGloss exp/narrow-union-v1 54497a01 T1"
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: biiiibiiii
     note: >-

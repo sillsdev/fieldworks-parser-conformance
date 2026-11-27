@@ -3,7 +3,6 @@ language: SpellingCompoundSingletonMergingMark
 requires: [morpher-settings]
 morpher:
   MaxRoots: 2
-fieldworks_producible: true
 words:
   - word: "́p"
     note: "C# returns 1 analysis (W|́p): pins that this spelling is a route and its morpheme sequence."

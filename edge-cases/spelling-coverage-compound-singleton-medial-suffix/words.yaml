@@ -3,7 +3,6 @@ language: SpellingCompoundSingletonMedialSuffix
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: apst
     note: "C# returns 3 analyses (X+Y+SUF+Z|apst): pins that this spelling is a route and its morpheme sequence."

@@ -7,7 +7,6 @@ inspired_by: ["word-edge rewrite on affix and root material"]
 sources:
   - "PanGloss boundary-prefix-rule implementation brief"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ta
     note: Word-edge anchor applies to a one-segment prefix and a root-initial target.

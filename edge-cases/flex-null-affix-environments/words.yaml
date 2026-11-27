@@ -4,7 +4,6 @@ language: FlexNullAffixEnvironments
 inspired_by: ["synthetic FieldWorks null prefix and suffix environment probe"]
 sources: ["https://github.com/sillsdev/machine/issues/597"]
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: Bare root; neither null environment has a z neighbour.

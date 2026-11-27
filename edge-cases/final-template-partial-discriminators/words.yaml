@@ -6,7 +6,6 @@ sources:
   - "https://github.com/sillsdev/machine/issues/507"
   - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisStratumRule.cs"
 requires: [morpher-settings]
-fieldworks_producible: true
 morpher:
   MakePartialsFinal: false
 words:

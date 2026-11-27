@@ -6,7 +6,6 @@ sources:
   - "https://github.com/sillsdev/machine/pull/522"
   - "tests/SIL.Machine.Morphology.HermitCrab.Tests/AffixTemplateTests.cs: FinalTemplateInLowerStratum_ParsesWhenUpperAnalysesDifferOnlyInFinalTemplateState"
 requires: [morpher-settings]
-fieldworks_producible: true
 morpher:
   MergeAnalyses: true
 words:

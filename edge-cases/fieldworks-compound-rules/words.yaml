@@ -4,7 +4,6 @@ inspired_by: ["synthetic FieldWorks compound-rule probe (not modeling any real l
 sources:
   - "FieldWorks HCLoader.cs LoadEndoCompoundingRule / LoadExoCompoundingRule"
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Read from HCLoader.cs, not witnessed by a project. Each compound rule is what LoadEndoCompoundingRule (HeadLast true and false; the OverridingMsa part of speech becomes outputPartOfSpeech, a null one leaves it out) or LoadExoCompoundingRule (one rule per head choice, ToMsa part of speech as outputPartOfSpeech) writes; NoDefaultCompounding=true means no default rules; a disabled rule is not loaded (the Disabled filter in the compound-rule loop of HCLoader.cs), so it is an absent rule here. Suffixes are derivational affix rules with a required and an output part of speech. No template, no feature, no MPR restriction.
 words:

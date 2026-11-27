@@ -3,7 +3,6 @@ language: MprWide
 inspired_by: [synthetic inflection-class families]
 sources: [PanGloss issue 150]
 requires: []
-fieldworks_producible: true
 words:
   - word: paa
     note: bare boundary class

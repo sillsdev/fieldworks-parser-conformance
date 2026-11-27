@@ -101,7 +101,6 @@ inspired_by: ["synthetic morphotactic-attribute probe (not modeling any real lan
 sources:
   - "conformance/semantic-coverage-baseline.txt morphotactic todo entries"
 requires: []
-fieldworks_producible: true
 words:
   - word: kul
     note: Bare free root. The control that the grammar loads and admits a complete word at all.

@@ -15,7 +15,6 @@ inspired_by: ["synthetic Bantu noun-class and agreement prefixes written as sepa
 sources:
   - "E1 stress fixture 2, hermitcrab-2026-10-27-synthesis-to-analysis-round"
 requires: []
-fieldworks_producible: true
 budget_ms: 60000
 words:
   - word: bemupata

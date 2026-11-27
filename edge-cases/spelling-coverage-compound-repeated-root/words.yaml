@@ -1,7 +1,6 @@
 # oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: SpellingCoverageCompound
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: Literal stem, partial feature definition and ordinary non-recursive compounding rule; no fwdata round-trip witness is claimed.
 words:
   - word: a

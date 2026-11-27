@@ -12,7 +12,6 @@ language: AdhocProhibitionCircumfixPairings
 inspired_by: ["a circumfix entry with two prefix halves and two suffix halves compiles to four pairing subrules; an ad hoc allomorph prohibition naming the circumfix lexeme form is attached to every pairing; one naming a single half resolves to nothing"]
 sources: ["HCLoader.cs:1097-1122 (LoadAffixProcessAllomorphs, circumfix branch)", "HCLoader.cs:2212-2236 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

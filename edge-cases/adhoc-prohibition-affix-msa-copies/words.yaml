@@ -10,7 +10,6 @@ language: AdhocProhibitionAffixMsaCopies
 inspired_by: ["a prefix entry with two equal affix MSAs (MergeMSAs off) compiles to two morphological rules; an ad hoc allomorph prohibition names the one prefix allomorph, and HCLoader attaches it to every copy"]
 sources: ["HCLoader.cs:2163-2189 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

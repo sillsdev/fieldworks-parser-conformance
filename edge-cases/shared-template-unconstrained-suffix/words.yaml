@@ -7,7 +7,6 @@ sources:
   - "https://github.com/sillsdev/machine/pull/493"
   - "tests/SIL.Machine.Morphology.HermitCrab.Tests/AffixTemplateTests.cs: SameRuleUsedInMultipleTemplates_AffixHasNoRequiredFeatures"
 requires: []
-fieldworks_producible: true
 words:
   - word: mi
     note: The noun root has no applicable inflection template.

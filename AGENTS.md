@@ -29,12 +29,12 @@ not belong here, however expressible it is in the XML and however well an engine
   `fieldworks-writable-shapes.tsv` (every DTD member, with the `HCLoader.cs` line that writes it, only labels
   it, or never writes it), and against [PROTOCOL.md](PROTOCOL.md) section 9.
 - The standard is the round trip: a real FieldWorks project, put through the loader, yields the grammar. Reading
-  the loader source is weaker evidence. `fieldworks_producible: true` is a claim read from the loader until the
-  fixture has a FieldWorks witness (section 3), and only the 11 fixtures that carry one are certified today (of
-  138; none of the 16 stress fixtures has one). Say which of the two you are relying on in the pull request.
+  the loader source is weaker evidence. A test case's producibility is a claim read from the loader until it has a
+  FieldWorks witness (section 3), and only the 11 test cases that carry one are certified today (none of the 16
+  stress fixtures has one). Say which of the two you are relying on in the pull request.
 - If the grammar needs a construct in that table, stop. Rewrite the grammar without it or do not add it.
-  Do not relax `fieldworks_producible`: every fixture must carry `true`, and `scripts/check_words_schema.py`
-  and the consuming engines' gates fail on anything else.
+  There is no flag to set: `fieldworks_producible` is not a `words.yaml` key, and the consuming engines' gates fail
+  a grammar that uses a shape the loader never writes.
 - A new construct goes into `fieldworks-writable-shapes.tsv`, with its loader line, before a fixture may use it.
 - Exception: a construct FieldWorks cannot write today may be used once an issue or PR exists upstream to make it
   writable, and the fixture cites it. See [ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md).
@@ -52,7 +52,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 `HermitCrabInput.dtd` validate them.
 
 1. Check producibility (section 1). Name the `HCLoader.cs` function that writes each construct you rely on.
-2. Write `grammar.xml` and `words.yaml`. Put `fieldworks_producible: true` directly after `requires`.
+2. Write `grammar.xml` and `words.yaml`.
    Give each word a `note` that says what it pins.
 3. Take the expected rows from an engine run, never from memory. Run the consuming engine's self-check or
    adapter with a `--propose`-style option if it has one (sillsdev/machine's runner does), or run an engine
@@ -106,7 +106,7 @@ optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/
 
 ## 3. Optional FieldWorks witnesses
 
-A `fieldworks_producible: true` fixture may carry a `fieldworks/` directory with a real FieldWorks project.
+A fixture may carry a `fieldworks/` directory with a real FieldWorks project.
 [PROTOCOL.md](PROTOCOL.md) section 10 defines it. This repository stores witnesses and checks their shape;
 it never opens one. The PanGloss `xample-projector` tool produces and reads them; it stays in PanGloss.
 
@@ -175,9 +175,8 @@ The grammars under `stress/edge-cases/` measure the cost of an engine's analysis
 conformance fixtures, and this section says how they differ from sections 1 to 4.
 
 **What stays the same.** The one rule applies: only what FieldWorks can produce, with the same evidence
-(section 1) and the same meaning of `fieldworks_producible: true` (a claim read from the loader until a
-`fieldworks/` witness exists, section 3). Every stress fixture carries the flag; none has a witness yet (0 of
-16), and `stress/README.md` states the count.
+(section 1), and the same claim (read from the loader until a `fieldworks/` witness exists, section 3). None has
+a witness yet (0 of 16), and `stress/README.md` states the count.
 
 **What differs.**
 
@@ -186,7 +185,7 @@ conformance fixtures, and this section says how they differ from sections 1 to 4
 | Directory | `languages/<name>/` or `edge-cases/<name>/` | `stress/edge-cases/<name>/` |
 | Expected output means | what the oracle engine does, read against the rules; each word pins one behaviour | parity: an optimization must return the same parses; the words are a workload, and a changed row is the failure |
 | Measure | pass or fail | work steps, never wall time; `budget_ms` only guards against a hang |
-| `words.yaml` starts with | front matter | `# kind: stress (...)`, then `fieldworks_producible: true` and `budget_ms` |
+| `words.yaml` starts with | front matter | `# kind: stress (...)`, then `budget_ms` |
 | `exercises`, coverage, `rules.csv`, `dead-rules-allowed.tsv` | yes | none; no ledger counts them |
 | Fixture `README.md` | optional | none; `stress/README.md` describes every fixture in one table |
 | Listed in | `docs/grammars.md` bullets, `generated/hc-conformance-manifest.v2.json` | the `docs/grammars.md` "Stress grammars" bullets, the `stress/README.md` table and `generated/stress-manifest.v2.json` |
@@ -198,7 +197,7 @@ conformance fixtures, and this section says how they differ from sections 1 to 4
    the pull request whether a witness exists (it will not).
 2. Write `stress/edge-cases/<name>/grammar.xml` and `words.yaml`. Start `words.yaml` with
    `# kind: stress (timing and optimization parity fixture, not conformance; see stress/README.md)`, then
-   `fieldworks_producible: true` and `budget_ms`. In the header comment say what the grammar models and what it
+   `budget_ms`. In the header comment say what the grammar models and what it
    really exercises; do not name a script or a switch that is not in a repository.
 3. Take the expected rows from an engine run, never from memory: three identical runs of the reference engine
    (sillsdev/machine `master` for the existing fixtures). Record the build in the header

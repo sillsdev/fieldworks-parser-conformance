@@ -611,7 +611,6 @@ def cmd_yaml(hcdll, scratch, only=None):
             "sources:",
             '  - "PanGloss #240 parser-work cost-weight calibration"',
             "requires: []",
-            "fieldworks_producible: true",
             "budget_ms: 600000",
             "words:",
         ]
@@ -707,7 +706,7 @@ def cmd_lexsize(pangloss, hcdll, scratch):
                "# against the oracle trace.",
                "# oracle-provenance: Oracle: hc.dll, Machine aab4c598 (batch command, MaxRoots 2).",
                "language: CalLexSize%dk" % (n // 1000), 'inspired_by: ["synthetic cost-calibration grammar"]', "sources:",
-               '  - "PanGloss #240 parser-work cost-weight calibration"', "requires: []", "fieldworks_producible: true",
+               '  - "PanGloss #240 parser-work cost-weight calibration"', "requires: []",
                "budget_ms: 600000", "words:"]
         for c in chosen:
             sig = rows[name][c["word"]]

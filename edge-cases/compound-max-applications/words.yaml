@@ -18,7 +18,6 @@ inspired_by: ["synthetic recursive-compound cap probe (not modeling any real lan
 sources:
   - "FieldWorks ParserCore HCLoader.cs and the Parser Parameters dialog, which hold the compound-rule cap"
 requires: [morpher-settings]
-fieldworks_producible: true
 morpher:
   MaxRoots: 4
 words:

@@ -20,7 +20,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/Morpher.cs"
 requires: [phonology, morpher-settings]
-fieldworks_producible: true
 morpher:
   DelReapps: 1
 words:

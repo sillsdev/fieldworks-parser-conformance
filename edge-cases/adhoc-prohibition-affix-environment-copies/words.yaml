@@ -10,7 +10,6 @@ language: AdhocProhibitionAffixEnvironmentCopies
 inspired_by: ["a prefix allomorph with two environments and two affix MSAs compiles to one allomorph copy per MSA per environment; an ad hoc allomorph prohibition names the one prefix allomorph, and HCLoader attaches it to every copy"]
 sources: ["HCLoader.cs:1160-1178 (LoadAffixProcessAllomorphs)", "HCLoader.cs:2212-2236 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

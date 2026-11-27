@@ -3,7 +3,6 @@ language: ConvergentCompoundHomophonousSuffixes
 inspired_by: ["synthetic noun-noun and verb-noun compounds under homophonous category-changing suffixes (not modeling any real language)"]
 sources: ["sillsdev/machine#653", "PanGloss issue 477", "PanGloss issue 481", "PanGloss PR 480", "FieldWorks HCLoader.cs LoadEndoCompoundingRule"]
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Four derivational suffixes share one form and differ only in category (noun to noun, noun to verb, verb to noun, verb to verb), as FieldWorks writes homophonous derivational affixes (HCLoader.cs LoadDerivAffixProcessRule).
   The two compounding rules are the endocentric shape the loader writes: head and non-head are any one or

@@ -9,7 +9,6 @@ inspired_by: ["synthetic cost-calibration grammar"]
 sources:
   - "PanGloss #240 parser-work cost-weight calibration"
 requires: []
-fieldworks_producible: true
 budget_ms: 600000
 words:
   - word: "pitagu"

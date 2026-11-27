@@ -21,7 +21,6 @@ inspired_by: ["synthetic CV reduplication in a grammar with no phonological feat
 sources:
   - "AnalysisMorphologicalTransform.cs HasDisagreeingCopies/CanAlign (machine aab4c598), lines 65-165"
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Read from HCLoader.cs at FieldWorks 620cd9903; NOT proven by a FieldWorks witness. There is no
   fieldworks/ directory because the PanGloss xample-projector `author` accepts one input sequence and two

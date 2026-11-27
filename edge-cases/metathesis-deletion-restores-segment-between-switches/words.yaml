@@ -20,7 +20,6 @@ sources:
   - "sillsdev/machine issue 520: POS-scoped deletion blocks metathesis analysis of other words"
   - "FieldWorks HCLoader.LoadMetathesisRule (the switches), HCLoader.LoadRewriteRule (p -> 0), HCLoader.LoadAffixProcessRule (prefix aps+)"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "t"
     note: >-

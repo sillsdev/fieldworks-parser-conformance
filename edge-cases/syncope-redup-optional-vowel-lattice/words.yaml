@@ -24,7 +24,6 @@ sources:
   - "sillsdev/machine#635 and sillsdev/PanGloss#236: optional-vowel lattice growth under un-applied deletion, and the cost of reduplication matching over it"
   - "AnalysisMorphologicalTransform.cs HasDisagreeingCopies/CanAlign (machine aab4c598)"
 requires: [phonology]
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   Read from HCLoader.cs at FieldWorks 620cd9903; NOT proven by a FieldWorks witness. Reduplication is an
   MoAffixProcess: LoadAffixProcessAllomorph (1383-1488) writes one input pattern per input part and a

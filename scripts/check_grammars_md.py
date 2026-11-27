@@ -5,7 +5,7 @@ docs/grammars.md lists each conformance fixture as "- `group/name`: ...". Its "S
 lists each stress fixture as "- `stress/edge-cases/name`: ...", and the table in stress/README.md has one
 "| `name` |" row per stress fixture. Each list must match the directories on disk, and the counts the prose
 states (the number of stress grammars, here and in docs/README.md, and "N of M stress fixtures carry a FieldWorks witness") must match
-the disk. Every stress fixture must start `# kind: stress` and declare `fieldworks_producible: true`.
+the disk. Every stress fixture must start `# kind: stress`.
 
 The XAmple subset is every grammar with no phonological features and no phonological rules, computed from
 grammar.xml: no SymbolicFeature or ComplexFeature under PhonologicalFeatureSystem, no SegmentDefinition with a
@@ -68,8 +68,8 @@ def check_stress(grammars_md: str, problems: list) -> int:
         words = (d / "words.yaml").read_text(encoding="utf-8-sig")
         if not words.startswith("# kind: stress"):
             problems.append(f"{fixture_id(d)}/words.yaml must start with '# kind: stress'")
-        if not re.search(r"^fieldworks_producible:\s*true\s*$", words, re.M):
-            problems.append(f"{fixture_id(d)}/words.yaml must declare fieldworks_producible: true")
+        if re.search(r"^fieldworks_producible:", words, re.M):
+            problems.append(f"{fixture_id(d)}/words.yaml must not carry fieldworks_producible (ADR 0004)")
     return len(on_disk)
 
 

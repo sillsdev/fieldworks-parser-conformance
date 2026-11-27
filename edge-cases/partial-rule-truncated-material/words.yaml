@@ -5,7 +5,6 @@ inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
 sources:
   - "https://github.com/sillsdev/machine/issues/643"
 requires: []
-fieldworks_producible: true
 words:
   - word: lipkatr
     note: >-

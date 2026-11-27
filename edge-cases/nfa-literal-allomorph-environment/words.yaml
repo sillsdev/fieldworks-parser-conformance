@@ -5,7 +5,6 @@ sources:
   - "FieldWorks HCLoader.LoadRootAllomorph and LoadEnvironmentPattern"
   - "sillsdev/PanGloss issue 300"
 requires: []
-fieldworks_producible: true
 words:
   - word: gabsa
     note: The suffix a supplies the literal right context for the conditioned gabs allomorph.

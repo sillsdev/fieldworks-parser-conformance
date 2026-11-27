@@ -3,7 +3,6 @@ language: SpellingCompoundDepthReorderedPrefix
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: spat
     note: "C# returns 1 analysis (PRE+Y+X+Z|sp[aá][+-=]?[+-=]?t): pins that this spelling is a route and its morpheme sequence."

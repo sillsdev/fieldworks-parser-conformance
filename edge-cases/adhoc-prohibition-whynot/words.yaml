@@ -7,7 +7,6 @@ language: AdhocProhibitionWhyNot
 inspired_by: ["an ad hoc allomorph prohibition ta- ~ da: the one case where a word is rejected by a single co-occurrence rule"]
 sources: ["HCLoader.cs:2163-2189 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

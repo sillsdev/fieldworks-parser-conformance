@@ -22,7 +22,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/SegmentNaturalClass.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/RootAllomorphTrie.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: amili
     note: >-

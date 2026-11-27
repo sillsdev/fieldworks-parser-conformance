@@ -5,7 +5,6 @@
 language: StressExcludedCoOccurrence
 inspired_by: ["synthetic prefix-complex stress probe (not modeling any real language)"]
 requires: []
-fieldworks_producible: true
 budget_ms: 60000
 words:
   - word: "tikunup"

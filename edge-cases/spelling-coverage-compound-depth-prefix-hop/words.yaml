@@ -3,7 +3,6 @@ language: SpellingCompoundDepthPrefixHop
 requires: [morpher-settings]
 morpher:
   MaxRoots: 4
-fieldworks_producible: true
 words:
   - word: aasp
     note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?[aá][+-=]?sp): pins that this spelling is a route and its morpheme sequence."

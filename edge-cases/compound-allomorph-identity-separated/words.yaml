@@ -1,7 +1,6 @@
 # oracle-provenance: founding-oracle Machine e63b8863d37d3189c2b11fcaf9d43be74962ad70 (hc-conformance self-check, --propose; every signature is what C# returned on 2026-11-19, none taken from PanGloss staging)
 language: CompoundIdentity
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: Fully specified literal segments and ordinary compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a

@@ -6,7 +6,6 @@ sources:
   - "https://github.com/sillsdev/machine/pull/529"
   - "tests/SIL.Machine.Morphology.HermitCrab.Tests/AffixTemplateTests.cs: CliticAppliedAfterFinalTemplate"
 requires: []
-fieldworks_producible: true
 words:
   - word: sag
     note: The verb template's only slot is obligatory, so the bare root is not a word.

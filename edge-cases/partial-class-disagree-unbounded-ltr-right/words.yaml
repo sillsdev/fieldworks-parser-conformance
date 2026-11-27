@@ -7,7 +7,6 @@ language: partial-class-disagree-unbounded-ltr-right
 inspired_by: ["synthetic feature disagreement with a two-member partial segment class"]
 sources: ["HCLoader.cs:2338-2344,2745-2770,2799-2808"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Negative control for partial class disagree unbounded ltr right: 'ii' must complete with no analysis."

@@ -9,7 +9,6 @@
 language: interposed-optional-multi-rhs
 sources: ["HCLoader.cs:2362-2374 (literal contexts), 2745-2786 (natural classes), 2005-2011 and 2765-2773 (alpha variables); machine/conformance/fieldworks-producibility.tsv"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: de
     note: "Positive witness for interposed optional multi rhs: 'de' must retain the declared analysis."

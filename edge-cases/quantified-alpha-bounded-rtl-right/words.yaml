@@ -7,7 +7,6 @@ language: quantified-alpha-bounded-rtl-right
 inspired_by: ["synthetic repeated feature agreement"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: acet
     note: "Negative control for quantified alpha bounded rtl right: 'acet' must complete with no analysis."

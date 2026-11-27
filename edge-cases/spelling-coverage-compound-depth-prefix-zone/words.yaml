@@ -3,7 +3,6 @@ language: SpellingCompoundDepthPrefixZone
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: as
     note: "C# returns 1 analysis (X+PRE|[aá]s): pins that this spelling is a route and its morpheme sequence."

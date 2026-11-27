@@ -7,7 +7,6 @@ language: overridden-alpha-bounded-ltr-left
 inspired_by: ["synthetic vowel neutralization with alpha environment"]
 sources: ["HCLoader.cs:2033-2067,2338-2344,2745-2770,2799-2808"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Positive witness for overridden alpha bounded ltr left: 'ii' must retain the declared analysis."

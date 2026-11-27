@@ -13,7 +13,7 @@ The stress fixtures follow the one rule of the suite: only what a real FieldWork
 "Producible" means a real FieldWorks project round-trips to the grammar: a project built in FieldWorks, put
 through `HCLoader.cs`, yields the fixture's `grammar.xml`.
 
-All 16 fixtures carry `fieldworks_producible: true`. That is a claim read from the loader, not a certificate.
+All 16 fixtures are claims read from the loader, not certificates.
 **0 of 16 stress fixtures carry a FieldWorks witness** (a `fieldworks/` directory,
 [PROTOCOL.md](../PROTOCOL.md) section 10), so none is certified; the 9 certified fixtures in this repository are
 all conformance fixtures. Issue [#1](https://github.com/sillsdev/fieldworks-parser-conformance/issues/1) tracks

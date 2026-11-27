@@ -13,8 +13,7 @@
     "requires": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true },
     "budget_ms": { "type": "integer", "minimum": 1 },
     "expect_crash": { "type": "boolean" },
-    "fieldworks_producible": { "type": "boolean" },
-    "fieldworks_producible_notes": { "type": "string", "minLength": 1 },
+    "fieldworks_producible_notes": { "type": "string", "minLength": 1, "description": "Optional free-text evidence for the loader claim: the HCLoader.cs function and line, and which parts are inferred. Every test case is FieldWorks-producible by scope (ADR 0004); there is no flag." },
     "morpher": {
       "description": "Morpher host settings this fixture's ground truth was generated under, keyed by FieldWorks <ParserParameters><HC> element name; absent means the PROTOCOL.md section 8 defaults. A fixture with this block must also require morpher-settings.",
       "type": "object",
@@ -41,15 +40,6 @@
     }
   },
   "allOf": [
-    {
-      "description": "fieldworks_producible: false requires notes naming the offending construct(s) and citing HCLoader evidence -- see PROTOCOL.md's FieldWorks producibility section.",
-      "if": {
-        "type": "object",
-        "properties": { "fieldworks_producible": { "const": false } },
-        "required": ["fieldworks_producible"]
-      },
-      "then": { "required": ["fieldworks_producible_notes"] }
-    },
     {
       "description": "A morpher block is a capability requirement: an engine that cannot apply it must skip the fixture, not run it at the defaults.",
       "if": { "type": "object", "anyOf": [{ "required": ["morpher"] }, { "required": ["variants"] }] },

@@ -14,7 +14,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/AnalysisRewriteRule.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: F
     note: The noun TA_N fused by the noun subrule.

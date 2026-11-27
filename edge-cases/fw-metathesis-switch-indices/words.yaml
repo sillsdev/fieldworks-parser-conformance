@@ -8,7 +8,6 @@ language: FwMetathesisSwitchIndices
 inspired_by: ["a FieldWorks PhMetathesisRule whose StrucChange \"0 2 -1 1 -1\" names a left environment and two switches"]
 sources: ["HCLoader.cs:335-347 (PhMetathesisRule case)", "HCLoader.cs:2152-2220 (LoadMetathesisRule)", "LibLCM PhMetathesisRule.GetStrucChangeIndices"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: akta
     note: >-

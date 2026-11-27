@@ -19,7 +19,6 @@ sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/FeatureAnalysisRewriteRuleSpec.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: butbut
     note: >-

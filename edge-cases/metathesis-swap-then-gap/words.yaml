@@ -8,7 +8,6 @@ language: MetathesisSwapThenGap
 inspired_by: ["synthetic metathesis rule followed by a deletion that restores an optional node between the switches (not modeling any real language)"]
 sources: ["sillsdev/PanGloss#411", "sillsdev/machine#649", "FieldWorks HCLoader.LoadMetathesisRule (the switches), HCLoader.LoadRewriteRule (t -> 0), HCLoader.LoadAffixProcessRule (prefix +, suffix a)"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "+sp"
     note: >-

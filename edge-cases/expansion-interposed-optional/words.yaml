@@ -8,7 +8,6 @@ language: ExpansionInterposedOptional
 sources:
   - "Machine tests/SIL.Machine.Morphology.HermitCrab.Tests/PhonologicalRules/RewriteRuleTests.cs::ExpandRuleUnappliesAcrossInterposedOptionalSegment (aab4c598)"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ii
     note: "Forward derivation: ROOT/u -> prExpand/ii; prDelete is inert because no z occurs."

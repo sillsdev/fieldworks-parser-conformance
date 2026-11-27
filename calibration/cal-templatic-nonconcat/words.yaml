@@ -2,7 +2,6 @@
 language: "CalTemplaticNonconcat"
 sources: []
 requires: []
-fieldworks_producible: true
 budget_ms: 600000
 # oracle-provenance: C# hc-conformance, sillsdev/machine 4d9b454d (tag pangloss-oracle-pin-4d9b454d), self-check mode; signatures from --propose, rules from the oracle trace
 words:

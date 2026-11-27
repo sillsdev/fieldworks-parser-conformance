@@ -424,26 +424,23 @@ feeds. A fixture can therefore be a fully conformant, oracle-verified regression
 and still describe a grammar shape no FieldWorks user will ever see.
 
 The standard for "producible" is the round trip: a real FieldWorks project, built in FieldWorks, goes through
-`HCLoader.cs` and yields the fixture's `grammar.xml`. That the loader source could write a construct is weaker
-evidence. `fieldworks_producible: true` is therefore a claim read from the loader until the fixture has a
-FieldWorks witness (section 10), and only the fixtures with a witness are certified today: 11 of the 138
-(all under `edge-cases/`).
+`HCLoader.cs` and yields the test case's `grammar.xml`. That the loader source could write a construct is weaker
+evidence. There is no flag: the suite's scope is grammars FieldWorks can produce
+([ADR 0004](docs/adr/0004-scope-fieldworks-producible-only.md)), so every test case carries the claim, read from
+the loader until it has a FieldWorks witness (section 10); only the test cases with a witness are certified. The
+evidence is the census `fieldworks-writable-shapes.tsv` (below), an optional free-text
+`fieldworks_producible_notes` in `words.yaml` that names the `HCLoader.cs` function and line, and the witness.
+A grammar that needs a construct with no loader path is rewritten to drop it in favour of an equivalent FieldWorks
+can produce, or it is deleted, unless an open upstream change is recorded in `status.yaml` (section 12);
+sillsdev/machine's gate fails any other. `fieldworks_producible` is no longer a `words.yaml` key.
 
-Every fixture's `words.yaml` front matter carries `fieldworks_producible: true`, directly after
-`requires`. The suite keeps only grammars a real FieldWorks project can produce: `true` means every
-construct the fixture's `grammar.xml` exercises has a known HCLoader code path that can emit it from
-a real project. A grammar that needs a construct with no such path is rewritten to drop it in favour
-of an equivalent FieldWorks can produce, or it is deleted; `scripts/check_words_schema.py` and the
-consuming engines' gates fail on any fixture that is not `true`. The loader still parses `false` (with `fieldworks_producible_notes`) so a
-research fixture kept outside this tree can carry the verdict, but nothing in this repository may.
-
-A fixture moves to `true` by rewriting its grammar and re-running the C# founding oracle, never by
+A test case becomes producible by rewriting its grammar and re-running the C# founding oracle, never by
 relaxing the verdict in place; the rewrite keeps a fixture only if the oracle's rows still hold or
 change for a reason the rules explain. See `docs/engine-only-fixture-retirement.md` for the decision
 and what it removed, and the section "What the XML can say but FieldWorks cannot, so we do not
 test it" of `docs/fieldworks-cannot-say.md` for the constructs and the `HCLoader.cs` lines that rule them out.
 
-The verdict is human-authored, not mechanically re-derived the way `requires` is. It rests on
+The claim is human-authored, not mechanically re-derived the way `requires` is. It rests on
 `fieldworks-producibility.tsv` (a hand-researched, point-in-time snapshot of `HCLoader.cs`,
 from sillsdev/machine#480, not in this repository) plus five usage-level checks no per-row TSV
 entry can express on its own — three because each depends on *where* or *how* an otherwise-producible
@@ -502,30 +499,28 @@ Three more shapes are checked mechanically because they are plain attribute fact
 through a `Slot` must not have an `outputPartOfSpeech` (`LoadInflAffixProcessRule` never sets one); a
 partial stem entry must have no part of speech (`HCLoader.cs:757`, `:817`); and a partial rule must be
 in no slot (`:1031`) and have no `outputPartOfSpeech`. sillsdev/machine's `FieldWorksProducibleShapeTests` fails on a
-`true` fixture that brings any of them back.
+test case that brings any of them back.
 
 These are rows of a wider census, `fieldworks-writable-shapes.tsv`. For each kind of rule, template,
 slot, stratum, stem name, entry and allomorph it lists every DTD attribute and element and says whether
 `HCLoader.cs` writes it (`writes`), only carries it as a label (`metadata`), never writes it (`never`),
 filters it out (`omitted`), or writes it where the engine reads nothing (`inert`); each row names the loader
-line. a sillsdev/machine test (`FieldWorksProducibleShapeTests`) fails a `true` fixture that uses a `never` member or one the table does
+line. a sillsdev/machine test (`FieldWorksProducibleShapeTests`) fails a test case that uses a `never` member or one the table does
 not list, and checks what a row cannot say: an empty stem-name region, a required environment on any output
 shape but a lone prefix, a lone suffix or a circumfix, a subrule `RequiredHeadFeatures` on a circumfix or an
 affix process, a cap on an exocompound, and MPR features outside the
-three loader groups. A new construct goes into the table, with its loader line, before a `true` fixture may
+three loader groups. A new construct goes into the table, with its loader line, before a test case may
 use it.
 
-Because the verdict is authored, not derived, any mechanical checker built against it may only
-prove a `true` verdict **wrong** — by finding a construct in a `true` fixture's `grammar.xml` that
-matches a `fieldworks-producibility.tsv` "No" row or one of the mechanical checks above — never prove a
-`false` verdict wrong. A checker cannot see the absence of an HCLoader code path; it can only see
-that a construct is used, and that is sufficient to falsify `true` but never sufficient to certify
-it, since the research behind a `false` verdict is exactly the part no checker can redo by reading
-`grammar.xml` alone.
+Because the claim is authored, not derived, a mechanical checker built against it may only prove it **wrong** — by
+finding a construct in a test case's `grammar.xml` that matches a `never` row of the census or one of the mechanical
+checks above. A checker cannot see the absence of an HCLoader code path; it can only see that a construct is used,
+and that is sufficient to falsify the claim but never sufficient to certify it, since the research behind it is
+exactly the part no checker can redo by reading `grammar.xml` alone.
 
 ## 10. FieldWorks source witnesses
 
-Section 9's `fieldworks_producible: true` is a claim about `grammar.xml` shape; it does not itself
+Section 9's claim that a test case is producible is about `grammar.xml` shape; it does not itself
 prove a real FieldWorks project can be authored and round-tripped to that shape. A fixture MAY carry
 a `fieldworks/` directory alongside `grammar.xml`/`words.yaml`, holding the actual LibLCM project the
 claim is about:
@@ -542,9 +537,7 @@ claim is about:
   wider phoneme inventory does to the project's own FieldWorks-side projections without hand-editing
   a project itself.
 
-Only a `fieldworks_producible: true` fixture is eligible to carry a `fieldworks/` directory — a
-`false` fixture has no real project behind it by construction, so there is nothing for one to
-contain.
+Every test case is eligible to carry a `fieldworks/` directory; one without a real project behind it carries none.
 
 This repository never opens, parses, or executes anything under `fieldworks/`: `.fwdata` is a
 FieldWorks/LibLCM format, and nothing in this suite's adapter protocol reads it. It exists for a consumer that already speaks that format (today, PanGloss's `xample-projector` tool, which stays in PanGloss) to read directly. What this repository DOES enforce is the

@@ -3,7 +3,6 @@ language: SpellingCompoundSingletonQuoteSegment
 requires: [morpher-settings]
 morpher:
   MaxRoots: 2
-fieldworks_producible: true
 words:
   - word: a
     note: "C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence."

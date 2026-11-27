@@ -458,7 +458,7 @@ the `zero` cells the stretch may also be empty.
 
 The 16 grammars under `stress/` (at the repository root, beside `edge-cases/`) are timing
 probes for the analysis pass, not fixtures, and no coverage ledger counts them. They follow the same rule: only
-grammars a FieldWorks project can produce. All 16 carry `fieldworks_producible: true` read from the loader, and
+grammars a FieldWorks project can produce. All 16 are claims read from the loader, and
 none has a FieldWorks witness yet (issue #1). Their expected output is a parity check against an engine, not a
 conformance claim. [stress/README.md](../stress/README.md) says what each really exercises and which
 sillsdev/machine optimization it was built for; `scripts/check_grammars_md.py` fails if this list and that table

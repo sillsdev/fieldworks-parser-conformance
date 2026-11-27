@@ -2,8 +2,8 @@
 """Validate every words.yaml (fixtures and stress) and the manifest against their JSON Schemas.
 
 Needs PyYAML and jsonschema (pip install -r scripts/requirements.txt). Also validates each optional whynot.yaml sidecar against schema/whynot.schema.json (PROTOCOL.md section 11)
-and resolves its ids in grammar.xml. Also fails any conformance
-fixture whose fieldworks_producible is not true (PROTOCOL.md section 9).
+and resolves its ids in grammar.xml. Also fails any words.yaml that
+carries the dropped fieldworks_producible key (ADR 0004).
 """
 import json
 import re
@@ -72,8 +72,8 @@ def main() -> int:
             where = "/".join(str(p) for p in error.absolute_path) or "(root)"
             problems.append(f"{name}/words.yaml: {where}: {error.message[:200]}")
         problems += whynot_problems(directory, whynot_validator, data)
-        if directory in fixture_dirs() and data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
     manifest_schema = json.loads((ROOT / "schema" / "conformance-manifest.schema.json").read_text(encoding="utf-8"))
     Draft202012Validator.check_schema(manifest_schema)
     manifest = json.loads((ROOT / "generated" / "hc-conformance-manifest.v2.json").read_text(encoding="utf-8"))

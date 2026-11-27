@@ -9,7 +9,6 @@ inspired_by: ["synthetic cross-stem material-determination probe (not modeling a
 sources:
   - "cross-stem material-determination containment regression"
 requires: []
-fieldworks_producible: true
 fieldworks_producible_notes: >-
   The FieldWorks "class-changing affix" pattern. Each derivational prefix writes one inflection class
   (MoDerivAffMsa.ToInflectionClassRA -> OutMprFeatures, HCLoader.cs:954-955); the suffix is an

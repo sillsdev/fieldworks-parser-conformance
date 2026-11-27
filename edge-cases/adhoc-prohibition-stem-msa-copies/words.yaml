@@ -9,7 +9,6 @@ language: AdhocProhibitionStemMsaCopies
 inspired_by: ["a stem entry with a Verb MSA and a Noun MSA compiles to two lexical entries; an ad hoc allomorph prohibition names the one allomorph, and HCLoader attaches it to every copy (and to every copy on the rest side)"]
 sources: ["HCLoader.cs:2163-2189 (LoadAllomorphCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: da
     note: >-

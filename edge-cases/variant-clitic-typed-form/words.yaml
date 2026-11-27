@@ -6,7 +6,6 @@ language: VariantCliticTypedForm
 inspired_by: ["a variant entry whose forms are clitic-typed is loaded in the Clitics stratum, as a stem copy and as a clitic rule"]
 sources: ["HCLoader.cs:299-305 (per-stratum form buckets)", "HCLoader.cs:782-856 (LoadLexEntryOfVariant)", "HCLoader.cs:896-924 (LoadMorphologicalRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: ta
     note: >-

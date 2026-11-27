@@ -7,7 +7,6 @@ sources:
   - "C# AnnotationList.cs:131-138 (a node nests only inside a range that contains it), SynthesisMetathesisRuleSpec.ApplyRhs"
   - "FieldWorks HCLoader.LoadAffixProcessRule, LoadRewriteRule (epenthesis), LoadMetathesisRule"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "a"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."

@@ -3,7 +3,6 @@ language: SpellingCompoundJunctionMark
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: "aṕ"
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?[t́]): pins that this spelling is a route and its morpheme sequence."

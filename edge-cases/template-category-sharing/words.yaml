@@ -6,7 +6,6 @@ sources:
   - "https://github.com/sillsdev/machine/issues/505"
   - "src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisStratumRule.cs"
 requires: []
-fieldworks_producible: true
 words:
   - word: kolo
     note: KOLO bare root, no affixes -- a plain control.

@@ -82,8 +82,7 @@ Every listed allomorph is index 0; the named roots and rules in the signatures a
 `MorphemeId` values. The rules use the existing `AffixProcessRule: subtraction/truncation`
 construct label; the fixtures do not introduce new coverage categories. All three declare
 `morphologicalRuleOrder="unordered"`, which HCLoader emits. Their words are intentionally synthetic,
-but that does not make the grammar constructs FieldWorks-unproducible, so all three correctly carry
-`fieldworks_producible: true`.
+but that does not make the grammar constructs FieldWorks-unproducible, so all three are correctly in scope.
 
 The combined #500+#506 corrected-engine audit that flips those copied grammars from `unordered` to
 `linear` loses analyses in all three companions; the exact changed words and signatures are recorded

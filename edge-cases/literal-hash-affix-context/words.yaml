@@ -7,7 +7,6 @@ inspired_by: ["synthetic prefix, suffix, and root-initial rewrite control"]
 sources:
   - "PanGloss boundary-prefix-rule implementation brief"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: ta
     note: "A literal # boundary marker in the left context is not a word-edge anchor."

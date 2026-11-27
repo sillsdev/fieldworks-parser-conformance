@@ -7,7 +7,6 @@ language: quantified-alpha-bounded-zero-right
 inspired_by: ["synthetic zero-count repeated feature agreement"]
 sources: ["HCLoader.cs:2338-2344,2745-2770"]
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: a
     note: "Negative control for quantified alpha bounded zero right: 'a' must complete with no analysis."

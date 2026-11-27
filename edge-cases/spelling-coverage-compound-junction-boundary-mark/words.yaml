@@ -3,7 +3,6 @@ language: SpellingCompoundJunctionBoundaryMark
 requires: [morpher-settings]
 morpher:
   MaxRoots: 3
-fieldworks_producible: true
 words:
   - word: "apét"
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence."

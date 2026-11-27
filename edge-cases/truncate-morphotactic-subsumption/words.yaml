@@ -5,7 +5,6 @@ sources:
   - "Machine #480 truncate-morphotactic at fa8d9b25; companion adds root ag, prefix X, and explicit MorphemeId values"
   - "Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e"
 requires: []
-fieldworks_producible: true
 words:
   - word: ag
     note: "Root control and X then B, where B removes X without inserting material."

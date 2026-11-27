@@ -8,7 +8,6 @@ language: RightToLeftMetathesisReversal
 inspired_by: ["synthetic right-to-left metathesis-reversal probe (not modeling any real language)"]
 sources: []
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: sq
     note: >-

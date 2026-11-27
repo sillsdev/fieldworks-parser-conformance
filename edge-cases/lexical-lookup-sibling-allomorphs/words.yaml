@@ -14,7 +14,6 @@ sources:
   - "sillsdev/machine pull request 627: LexicalLookup only uses the allomorphs found by SearchRootAllomorphs"
   - "FieldWorks HCLoader.LoadRootAllomorph, HCLoader.cs (an allomorph's Require environment); the rule is prHiatusI, i -> 0 / [+high -cons] _, at the default Deletion Reapplications 0"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: bu
     note: >-

@@ -2,7 +2,7 @@
 """Check the calibration families under calibration/ (batch A scale families, batch B structural families).
 
 For each family: grammar.xml is the DTD-valid output of scripts/calib_a_gen.py (batch A) or scripts/calib_b_gen.py (batch B) (regenerated and compared byte
-for byte), words.yaml passes schema/words.schema.json with fieldworks_producible true, words.txt lists exactly
+for byte), words.yaml passes schema/words.schema.json with no `fieldworks_producible` key, words.txt lists exactly
 the words of words.yaml (plus the cap-words.work-cap-N.yaml file, whose name must carry the cap), every word is 5 to 40 characters, and calibration/README.md names
 the family. Needs PyYAML, jsonschema and lxml or xmllint (pip install -r scripts/requirements.txt).
 """
@@ -49,8 +49,8 @@ def check_lexsize(validator, readme, grammars):
         data = load_words(d / "words.yaml")
         for error in validator.iter_errors(data):
             problems.append(f"{name}/words.yaml: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:160]}")
-        if data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
         yaml_words = [w["word"] for w in data["words"]]
         lists[name] = yaml_words
         if (d / "words.txt").read_text(encoding="utf-8").split() != yaml_words:
@@ -112,8 +112,8 @@ def main() -> int:
         data = load_words(d / "words.yaml")
         for error in validator.iter_errors(data):
             problems.append(f"{name}/words.yaml: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:160]}")
-        if data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
         yaml_words = [w["word"] for w in data["words"]]
         cap_yaml = d / calib_a_gen.CAP_YAML
         cap_words = []
@@ -152,8 +152,8 @@ def main() -> int:
         data = load_words(d / "words.yaml")
         for error in validator.iter_errors(data):
             problems.append(f"{name}/words.yaml: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:160]}")
-        if data.get("fieldworks_producible") is not True:
-            problems.append(f"{name}/words.yaml: fieldworks_producible must be true")
+        if "fieldworks_producible" in data:
+            problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
         yaml_words = [w["word"] for w in data["words"]]
         if (d / "words.txt").read_text(encoding="utf-8").split() != yaml_words:
             problems.append(f"{name}: words.txt does not list the words of words.yaml in order")

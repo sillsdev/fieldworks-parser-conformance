@@ -10,7 +10,6 @@ sources:
 - src/SIL.Machine.Morphology.HermitCrab/Morpher.cs
 requires:
 - morpher-settings
-fieldworks_producible: true
 morpher:
   GuessRoots: true
 words:

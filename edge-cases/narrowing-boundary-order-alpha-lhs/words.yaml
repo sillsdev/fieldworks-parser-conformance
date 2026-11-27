@@ -7,7 +7,6 @@ inspired_by: ["synthetic probe for PanGloss#33 (not modeling any real language)"
 sources:
   - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: aafa
     note: AA+FA (underlying f, boundary survives as an optional marker) and AA+PA (p spirantized after the boundary, alpha-voice kept).

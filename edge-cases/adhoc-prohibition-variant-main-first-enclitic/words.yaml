@@ -11,7 +11,6 @@ language: AdhocProhibitionVariantMainFirstEnclitic
 inspired_by: ["a morpheme prohibition that names an enclitic as the rest of morphemes must hold for the variant entries that borrow the stem MSA it starts from"]
 sources: ["HCLoader.cs:782-852 (LoadLexEntryOfVariant)", "HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)"]
 requires: []
-fieldworks_producible: true
 words:
   - word: la
     note: >-

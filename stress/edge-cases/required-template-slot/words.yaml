@@ -16,7 +16,6 @@ inspired_by: ["Bantu verb templates with a required TAM slot (synthetic stress, 
 sources:
   - "synthetic stress fixture for E3 (template replay at lexical lookup)"
 requires: []
-fieldworks_producible: true
 budget_ms: 60000
 words:
   - word: matuma

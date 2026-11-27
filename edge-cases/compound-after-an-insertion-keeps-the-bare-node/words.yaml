@@ -7,7 +7,6 @@ sources:
   - "C# SynthesisMetathesisRuleSpec.ApplyRhs, AnnotationList.cs:131-138"
   - "FieldWorks HCLoader.LoadAffixProcessRule, LoadRewriteRule (epenthesis), LoadCompoundingRule"
 requires: [phonology]
-fieldworks_producible: true
 words:
   - word: "a"
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
