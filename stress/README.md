@@ -26,7 +26,7 @@ Expected output is a parity check, not a conformance claim. The original parses 
 `master` (three identical runs were required). The FLEx-style null-affix rows of five fixtures
 (`athabaskan-prefix-complex`, `excluded-cooccurrence` and the three `env-` fixtures) were regenerated against
 the engine of sillsdev/machine#480 and reviewed against the grammars. An optimization must return the same parses. The measure of a
-change is the number of analysis steps, not wall-clock time; each `budget_ms` is only a guard against a hang.
+change is the number of work steps, not wall-clock time; each `budget_ms` is only a guard against a hang.
 No engine build is recorded for these rows (the conformance fixtures record theirs in
 [PROVENANCE.md](../PROVENANCE.md)).
 
