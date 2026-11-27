@@ -107,6 +107,8 @@ words:
         gloss: root.ppe
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: nbael
     note: >-
@@ -221,6 +223,8 @@ words:
         gloss: root.kib
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: bel
     note: BEL ("root.bel", posV3), bare -- ruleFeatures preset mprConcA (half of the all-match pair) and mprConcC (one of the any-match pair).
@@ -229,6 +233,8 @@ words:
         gloss: root.bel
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: nal
     note: NAL ("root.nal", posV3), bare -- no ruleFeatures preset at all.
@@ -237,6 +243,8 @@ words:
         gloss: root.nal
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: xkib
     note: KIB prefixed by mrExtX ("x-", sets MPR feature mprExtA).
@@ -335,6 +343,8 @@ words:
         gloss: root.sek
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: sekzw
     note: >-
@@ -385,6 +395,8 @@ words:
         gloss: run
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: kimbiakimbia
     note: >-
@@ -408,6 +420,8 @@ words:
         gloss: beat
         rules: []
         exercises: []
+    exercises:
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: pambam
     note: >-

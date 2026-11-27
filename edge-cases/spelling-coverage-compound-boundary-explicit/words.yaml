@@ -7,6 +7,9 @@ words:
     parses:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"
   - word: aa
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -15,6 +18,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "aá"
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -23,6 +28,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: axy
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -31,6 +38,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a+a"
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -39,15 +48,26 @@ words:
         exercises:
           - "CompoundingRule"
           - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "aa+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"
   - word: "+aa"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a+"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"
   - word: xya
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -56,6 +76,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "xy+a"
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -64,9 +86,17 @@ words:
         exercises:
           - "CompoundingRule"
           - "Boundary markers (CharacterDefinitionTable)"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a++a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"

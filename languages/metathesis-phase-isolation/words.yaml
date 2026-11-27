@@ -118,6 +118,8 @@ words:
         gloss: come
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: pui
     note: >-
@@ -151,6 +153,8 @@ words:
         gloss: write
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: keadilan
     note: ADIL ("just", posCircum) + NMLZ -- ke-...-an nominalizer wraps the stem, "ke"+"adil"+"an" = "keadilan".
@@ -170,6 +174,8 @@ words:
         gloss: just
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: tutula
     note: >-
@@ -200,6 +206,8 @@ words:
         gloss: carry
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: hasaasa
     note: >-
@@ -265,6 +273,8 @@ words:
         gloss: help
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: pur
     note: >-
@@ -286,6 +296,8 @@ words:
         gloss: finish
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: bahain
     note: >-
@@ -307,6 +319,8 @@ words:
         gloss: flood
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"
 
   - word: katibɯd
     note: >-
@@ -337,3 +351,5 @@ words:
         gloss: arrange
         rules: []
         exercises: []
+    exercises:
+      - "MetathesisRule"

@@ -26,6 +26,8 @@ words:
         rules: [zNV]
       - signature: "KAT|kat"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sum
     note: "Verb root: the null chains must start with the nominalizer."
     parses:
@@ -39,6 +41,8 @@ words:
         rules: [zVN]
       - signature: "SUM|sum"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: katti
     note: "One overt -ti placed at every point of each null chain."
     parses:
@@ -80,6 +84,8 @@ words:
         rules: [tiN, zNV, zVN]
       - signature: "KAT+ZNV+ZVN+ZNN+TIN|kat+?∅?+?∅?+?∅?+?ti"
         rules: [tiN, zNN, zNV, zVN]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sumti
     note: "The same from the verb root."
     parses:
@@ -109,6 +115,8 @@ words:
         rules: [tiV, zNN, zNV, zVN]
       - signature: "SUM+ZVN+ZNV+TIV|sum+?∅?+?∅?+?ti"
         rules: [tiV, zNV, zVN]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kattiti
     note: "Both -ti suffixes; a null verbalizer must stand between them."
     parses:
@@ -134,6 +142,8 @@ words:
         rules: [tiN, tiV, zNV, zVN]
       - signature: "KAT+ZNV+TIV+ZVN+ZNN+TIN|kat+?∅?+?ti+?∅?+?∅?+?ti"
         rules: [tiN, tiV, zNN, zNV, zVN]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sumtiti
     note: "Both -ti suffixes from the verb root."
     parses:
@@ -155,12 +165,18 @@ words:
         rules: [tiN, tiV, zNV, zVN]
       - signature: "SUM+ZVN+ZNN+TIN+ZNV+TIV|sum+?∅?+?∅?+?ti+?∅?+?ti"
         rules: [tiN, tiV, zNN, zNV, zVN]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kattititi
     note: "Each -ti applies once, so three cannot be built."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: tikat
     note: "The -ti rules are suffixes."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: katsu
     note: "-su needs a verb, which only the null verbalizer supplies."
     parses:
@@ -170,6 +186,8 @@ words:
         rules: [su, zNN, zNV]
       - signature: "KAT+ZNV+SU|kat+?∅?+?su"
         rules: [su, zNV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kattisu
     note: "-ti and -su with null affixes between."
     parses:
@@ -187,6 +205,8 @@ words:
         rules: [su, tiV, zNN, zNV]
       - signature: "KAT+ZNV+TIV+SU|kat+?∅?+?ti+?su"
         rules: [su, tiV, zNV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sumsu
     note: "-su on the verb root, then the null chains over the resulting noun."
     parses:
@@ -210,6 +230,8 @@ words:
         rules: [su, zNN, zNV, zVN]
       - signature: "SUM+ZVN+ZNV+SU|sum+?∅?+?∅?+?su"
         rules: [su, zNV, zVN]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: sumtisu
     note: "-ti, -su and null affixes from the verb root."
     parses:
@@ -247,6 +269,10 @@ words:
         rules: [su, tiV, zNN, zNV, zVN]
       - signature: "SUM+ZVN+ZNV+TIV+SU|sum+?∅?+?∅?+?ti+?su"
         rules: [su, tiV, zNV, zVN]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: katx
     note: "x is outside the inventory."
     expect_skip: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

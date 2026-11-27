@@ -17,6 +17,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: lipkt
     note: >-
@@ -28,16 +30,24 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: liptr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: lipkotr
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: kaliptr
     note: >-
@@ -53,6 +63,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"
 
   - word: liptkor
     note: >-
@@ -63,3 +75,5 @@ words:
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: deleted material"

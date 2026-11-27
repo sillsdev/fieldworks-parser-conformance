@@ -21,6 +21,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: apt
     note: "C# returns 2 analyses (X+Y+Z|apt): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -32,14 +34,22 @@ words:
         rules: ["cr1", "cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aspt
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: a
     note: "C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|a"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: as
     note: "C# returns 1 analysis (X+SUF|as): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -65,3 +75,5 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"

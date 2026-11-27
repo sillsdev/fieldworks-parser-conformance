@@ -48,6 +48,8 @@ words:
       - signature: "SAG+NONFINAL+TAIL+FINAL|sagftf"
         rules: [mrNonFinal, mrTail, mrFinal]
         exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: sagfqf
     note: >-
@@ -56,6 +58,9 @@ words:
       no template left to be.
     expect_fail: true
     blocked_by: [mrPartial]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: sagfq
     note: A partial rule after the final template. Only a partial rule may follow it, so this parses.
@@ -63,11 +68,16 @@ words:
       - signature: "SAG+FINAL+PARTIAL|sagfq"
         rules: [mrFinal, mrPartial]
         exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: sagft
     note: A derivational rule after the final template is refused (the trace names NonPartialRuleProhibitedAfterFinalTemplate), but the word still fails with that gate removed, so it does not evidence it.
     expect_fail: true
     blocked_by: [mrTail]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: sagf
     note: The final template alone parses.
@@ -75,3 +85,5 @@ words:
       - signature: "SAG+FINAL|sagf"
         rules: [mrFinal]
         exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"

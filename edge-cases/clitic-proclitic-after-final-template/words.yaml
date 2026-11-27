@@ -11,6 +11,9 @@ words:
     note: >-
       The final template's only slot is obligatory, so the bare root is not a word.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Clitics stratum: clitic designation by stratum name alone"
 
   - word: psag
     note: >-
@@ -49,3 +52,6 @@ words:
     note: >-
       The proclitic cannot stand in for the template's obligatory slot.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Clitics stratum: clitic designation by stratum name alone"

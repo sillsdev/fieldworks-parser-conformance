@@ -11,6 +11,9 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: sap
     note: "C# returns 2 analyses (PRE+X+Y|s[aá]p[+-=]?): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -24,6 +27,9 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: apt
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -35,6 +41,9 @@ words:
         rules: ["cr1", "cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: stpa
     note: "C# returns 1 analysis (PRE+Z+Y+X|stp[+-=]?[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -43,6 +52,9 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: psat
     note: "C# returns 1 analysis (Y+PRE+X+Z|p[+-=]?s[aá]t[+-=]?): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -51,6 +63,9 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aspt
     note: "C# returns 1 analysis (X+PRE+Y+Z|[aá][+-=]?spt[+-=]?): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -59,3 +74,6 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"

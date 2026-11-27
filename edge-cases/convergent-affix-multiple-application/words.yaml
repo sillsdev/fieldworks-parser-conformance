@@ -14,6 +14,9 @@ words:
     parses:
       - signature: "KAT|kat"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: katta
     note: "The two noun-taking -ta suffixes."
     parses:
@@ -22,6 +25,9 @@ words:
         exercises: ["Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)", "AffixProcessRule: prefix/suffix/circumfix/infix"]
       - signature: "KAT+TANV|kat+?ta"
         rules: [taNV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: kattata
     note: "The iterable noun -ta twice, or one -ta of each category chain."
     parses:
@@ -33,6 +39,9 @@ words:
         rules: [taNV, taVN]
       - signature: "KAT+TANV+TAVV|kat+?ta+?ta"
         rules: [taNV, taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: kattatata
     note: "Three -ta: the noun -ta stops at two applications, on every path that reaches the shape."
     parses:
@@ -48,6 +57,9 @@ words:
         rules: [taNV, taVN, taVV]
       - signature: "KAT+TANV+TAVV|kat+?ta+?ta+?ta"
         rules: [taNV, taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: kattatatata
     note: "Four -ta: both counts are counted per path."
     parses:
@@ -69,11 +81,17 @@ words:
         rules: [taNV, taVN, taVV]
       - signature: "KAT+TANV+TAVV|kat+?ta+?ta+?ta+?ta"
         rules: [taNV, taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sum
     note: "Bare verb root control."
     parses:
       - signature: "SUM|sum"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sumta
     note: "The two verb-taking -ta suffixes."
     parses:
@@ -81,6 +99,9 @@ words:
         rules: [taVN]
       - signature: "SUM+TAVV|sum+?ta"
         rules: [taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sumtata
     note: "The iterable verb -ta twice, or a category chain."
     parses:
@@ -92,6 +113,9 @@ words:
         rules: [taVN, taVV]
       - signature: "SUM+TAVV|sum+?ta+?ta"
         rules: [taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sumtatata
     note: "Three -ta from the verb root; the verb -ta may reach three."
     parses:
@@ -109,14 +133,23 @@ words:
         rules: [taVN, taVV]
       - signature: "SUM+TAVV|sum+?ta+?ta+?ta"
         rules: [taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: takat
     note: "The -ta rules are suffixes."
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: kattasu
     note: "-su needs a verb, so the -ta below it is the verbalizer."
     parses:
       - signature: "KAT+TANV+SU|kat+?ta+?su"
         rules: [su, taNV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: kattatasu
     note: "Two -ta under -su."
     parses:
@@ -124,11 +157,17 @@ words:
         rules: [su, taNN, taNV]
       - signature: "KAT+TANV+TAVV+SU|kat+?ta+?ta+?su"
         rules: [su, taNV, taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sumtasu
     note: "Only the verb-to-verb -ta leaves a verb for -su."
     parses:
       - signature: "SUM+TAVV+SU|sum+?ta+?su"
         rules: [su, taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sumtatasu
     note: "Two -ta under -su from the verb root."
     parses:
@@ -136,8 +175,14 @@ words:
         rules: [su, taNV, taVN]
       - signature: "SUM+TAVV+SU|sum+?ta+?ta+?su"
         rules: [su, taVV]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"
   - word: sumsu
     note: "-su directly on the verb root."
     parses:
       - signature: "SUM+SU|sum+?su"
         rules: [su]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Ordinary/realizational rule constraints (MaxApplicationCount/RequiredStemName/Blockable)"

@@ -12,12 +12,16 @@ words:
       - signature: "CTRL|dom"
         gloss: control
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: zabu
     note: The constrained root plus the suffix supplies u immediately to the right of the root's single piece.
     parses:
       - signature: "GOOD+SUFG|zabu"
         gloss: good-root-u
         rules: [mrSuffixGood]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: zuaubu
     note: The good infix splits the root into three pieces; each piece is immediately followed by u, so the environment holds at every piece.
     parses:
@@ -33,9 +37,13 @@ words:
       accept this; per-piece validation rejects it.
     expect_fail: true
     blocked_by: [mrBadInfix]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: zuixdu
     note: >-
       Discriminating rejection: like zuexbu, the first and last merged edges see u, while the middle
       root piece is followed by x. This independent root confirms the failure is per-piece, not lexical.
     expect_fail: true
     blocked_by: [mrBadInfix]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

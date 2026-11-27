@@ -12,72 +12,96 @@ words:
     parses:
       - signature: "BAGO|bago"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: kesu
     note: >-
       Bare stem control (category B, right member of the right-headed rule).
     parses:
       - signature: "KESU|kesu"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: mita
     note: >-
       Bare stem control (category C).
     parses:
       - signature: "MITA|mita"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: lonu
     note: >-
       Bare stem control (category D).
     parses:
       - signature: "LONU|lonu"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: tabe
     note: >-
       Bare stem control (category E).
     parses:
       - signature: "TABE|tabe"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: disi
     note: >-
       Bare stem control (category F).
     parses:
       - signature: "DISI|disi"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: nuka
     note: >-
       Bare stem control (category G).
     parses:
       - signature: "NUKA|nuka"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: gelo
     note: >-
       Bare stem control (category H).
     parses:
       - signature: "GELO|gelo"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: solu
     note: >-
       Bare stem control (category I, left member of the exocentric rule).
     parses:
       - signature: "SOLU|solu"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: tamo
     note: >-
       Bare stem control (category J, right member of the exocentric rule).
     parses:
       - signature: "TAMO|tamo"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: demu
     note: >-
       Bare stem control (category K): its rule is disabled in the FieldWorks project, so the loader leaves it out.
     parses:
       - signature: "DEMU|demu"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: bonu
     note: >-
       Bare stem control (category L): its rule is disabled in the FieldWorks project, so the loader leaves it out.
     parses:
       - signature: "BONU|bonu"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: bagokesu
     note: >-
       Endocentric, HeadLast=true, OverridingMsa with no part of speech: A+B compounds through EndoHeadLast, and has no analysis without that rule.
@@ -90,6 +114,8 @@ words:
     note: >-
       EndoHeadLast needs the A member on the left; reversed order has no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: bagokesure
     note: >-
       EndoHeadLast, no override: the result keeps the head's (right member's) category B, so the B suffix reaches it. The suffix also attaches to the head stem before compounding, so both engines return two identical-signature analyses.
@@ -106,6 +132,8 @@ words:
     note: >-
       EndoHeadLast, no override: the left (non-head) category A is not the result category, so the A suffix does not reach the compound.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: mitalonu
     note: >-
       Endocentric, HeadLast=false, OverridingMsa with no part of speech: C+D compounds through EndoHeadFirst.
@@ -118,6 +146,8 @@ words:
     note: >-
       EndoHeadFirst needs the C member on the left; reversed order has no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: mitalonuvi
     note: >-
       EndoHeadFirst, no override: the result keeps the head's (left member's) category C, so the C suffix reaches the compound.
@@ -130,6 +160,8 @@ words:
     note: >-
       EndoHeadFirst, no override: the D suffix would have to attach to the non-head member before compounding; both engines return no analysis, so a derived non-head is not accepted while a derived head is (tabedisizu).
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: tabedisi
     note: >-
       Endocentric, HeadLast=true, OverridingMsa naming category R: E+F compounds through EndoHeadLastOverride.
@@ -142,6 +174,8 @@ words:
     note: >-
       EndoHeadLastOverride needs E on the left; reversed order has no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: tabedisifu
     note: >-
       EndoHeadLastOverride: the override category R is the result, so the R suffix reaches the compound (R is a category no stem has, so only the compound can take it).
@@ -170,6 +204,8 @@ words:
     note: >-
       EndoHeadFirstOverride needs G on the left; reversed order has no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: nukagelofu
     note: >-
       EndoHeadFirstOverride: the override category R is the result, so the R suffix reaches the compound.
@@ -182,6 +218,8 @@ words:
     note: >-
       EndoHeadFirstOverride: the head's own category G is replaced by R, so the G suffix does not reach the compound.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: solutamo
     note: >-
       Exocentric rule (ToMsa category S): I+J compounds. The loader emits one rule per head choice, so the rows are two analyses with the same signature, one through ExoRightHead (crX1) and one through ExoLeftHead (crX2).
@@ -198,6 +236,8 @@ words:
     note: >-
       The exocentric rule needs I on the left; reversed order has no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: solutamohu
     note: >-
       Exocentric: the result takes ToMsa's category S, so the S suffix reaches the compound (S is a category no stem has); again one analysis per head choice.
@@ -214,21 +254,31 @@ words:
     note: >-
       Negative, category mismatch: A+C matches no rule, and NoDefaultCompounding=true means no default rule fills in; no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: demubonu
     note: >-
       Negative, disabled rule: K+L would compound if its rule were enabled, but FieldWorks leaves disabled rules out of the grammar and NoDefaultCompounding=true adds no default; no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: bonudemu
     note: >-
       Negative, disabled rule, reversed order; no analysis.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: bagopa
     note: >-
       Control: the A suffix reaches the bare stem, so the suffix rules work.
     parses:
       - signature: "BAGO+SUFA|bagopa"
         rules: ["sufA"]
+    exercises:
+      - "CompoundingRule"
   - word: bagore
     note: >-
       Control: the B suffix does not reach an A stem.
     expect_fail: true
+    exercises:
+      - "CompoundingRule"

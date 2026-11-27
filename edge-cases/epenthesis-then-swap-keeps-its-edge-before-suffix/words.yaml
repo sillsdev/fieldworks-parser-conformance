@@ -12,43 +12,69 @@ words:
     parses:
       - signature: "R0|s"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "sp"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1|sp"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "ss"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R0+SU1|ss"
         rules: [SU1]
         exercises: ["MetathesisRule", "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"]
+    exercises:
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "ats"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "PR0+R0|ats"
         rules: [PR0, pe0, pm]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "sps"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1+SU1|sps"
         rules: [SU1]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "atsp"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "PR0+R1|atsp"
         rules: [PR0, pe0, pm]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "atss"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "PR0+R0+SU1|atss"
         rules: [PR0, SU1, pe0, pm]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "atsps"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "PR0+R1+SU1|atsps"
         rules: [PR0, SU1, pe0, pm]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"

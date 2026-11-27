@@ -12,11 +12,19 @@ words:
     parses:
       - signature: "R3|t"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "ta"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R2|ta"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "tt"
     note: "C# e63b8863 returns this analysis."
     parses:
@@ -28,27 +36,51 @@ words:
     parses:
       - signature: "R0|sa"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "st"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1|st"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "tat"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R2+R3|tat"
         rules: [CR1]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "sat"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R0+R3|sat"
         rules: [CR1]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: "stt"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1+R3|stt"
         rules: [CR1]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "CompoundingRule"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

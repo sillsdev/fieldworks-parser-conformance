@@ -20,6 +20,9 @@ words:
     parses:
       - signature: "ROOTC2|tam"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
 
   - word: ketamtaman
     note: >-

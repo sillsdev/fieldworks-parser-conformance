@@ -11,11 +11,13 @@ words:
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: iy
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'iy' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ia
     note: "Positive witness for ambiguous disagree feature class unbounded ltr: 'ia' must retain the declared analysis."
     parses:
@@ -23,68 +25,82 @@ words:
         rules: ["prDoubleAlpha"]
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: iu
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'iu' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: yi
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'yi' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: yy
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'yy' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ya
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'ya' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: yu
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'yu' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ai
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'ai' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ay
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'ay' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: aa
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'aa' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: au
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'au' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ui
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'ui' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: uy
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'uy' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: ua
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'ua' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
   - word: uu
     note: "Negative control for ambiguous disagree feature class unbounded ltr: 'uu' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"

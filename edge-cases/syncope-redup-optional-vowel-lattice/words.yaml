@@ -40,18 +40,24 @@ words:
     parses:
       - signature: "tuu|tuu"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: hii
     note: >-
       plain CVV root, a second control.
     parses:
       - signature: "hii|hii"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: hapa
     note: >-
       plain CVCV root; the vowel after h is not a syncope context (h is not a left context), so it stays.
     parses:
       - signature: "hapa|hapa"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tpa
     note: >-
       root tapa; the first a sits between t and p, so syncope deletes it (one site).
@@ -72,6 +78,8 @@ words:
     parses:
       - signature: "hapunika|hapnka"
         rules: [prSyncope]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tuutuu
     note: >-
       a CVV root copied whole (C V V then C V V) by each of the three reduplication rules: three parses, no syncope site.
@@ -141,43 +149,65 @@ words:
     note: >-
       the root tapa never surfaces with its first vowel: syncope is obligatory.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tapatapa
     note: >-
       the reduplicated root with every vowel kept; syncope would have deleted three of them.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: hapahapa
     note: >-
       the reduplicated root hapa with its vowels kept; the a between p and h must be deleted.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tpatpa
     note: >-
       tapa copied twice with only the first and third vowels deleted; syncope applies at every site at once, so the second a cannot survive.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tptpi
     note: >-
       the copies differ in the final vowel (a and i), and no root ends in tpi.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: haphapi
     note: >-
       the copies of hapa differ in the final vowel: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tuutii
     note: >-
       two CVV copies that disagree on the vowels (uu then ii): no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tuutaa
     note: >-
       two CVV copies that disagree on the first consonant and the vowels: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tuutuutuu
     note: >-
       a CVV root copied three times: each rule copies once and no rule makes a six-segment stem a root.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tapunika
     note: >-
       the root tapunika with its vowels kept; syncope must delete three of them.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: hapunika
     note: >-
       the root hapunika with its vowels kept; syncope must delete two of them.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"

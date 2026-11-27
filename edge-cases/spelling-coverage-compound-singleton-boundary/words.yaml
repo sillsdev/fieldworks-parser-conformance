@@ -14,6 +14,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a+p"
     note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -25,6 +27,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "p+a"
     note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -36,6 +40,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "p+p"
     note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -47,6 +53,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a+sa"
     note: "C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -55,6 +63,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a+sp"
     note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -63,9 +73,14 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"
   - word: "a+a+a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > boundary marker at the junction"
   - word: ap
     note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -77,3 +92,5 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > boundary marker at the junction"

@@ -25,6 +25,9 @@ words:
     parses:
       - signature: "TULIK|tulik"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: menulik
     note: >-
@@ -52,6 +55,9 @@ words:
     parses:
       - signature: "BALO|balo"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: membalo
     note: >-
@@ -63,12 +69,18 @@ words:
     parses:
       - signature: "NPFX+BALO|membalo"
         rules: [mrNPfx, prNasalAssimBilabial]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: sanit
     note: SANIT bare root, no MPR feature -- a plain control for the MPR-exclusion pair below.
     parses:
       - signature: "SANIT|sanit"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: sanitan
     note: SANIT + mrSuf ("-an") -- no MPR feature on this root, so mrSuf's excludedMPRFeatures="mprException" gate is vacuously satisfied and the rule applies normally.
@@ -76,12 +88,18 @@ words:
     parses:
       - signature: "SANIT+SUF|sanitan"
         rules: [mrSuf]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: vokad
     note: VOKAD bare root (carries ruleFeatures="mprException") -- a plain control.
     parses:
       - signature: "VOKAD|vokad"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: vokadan
     note: >-
@@ -93,6 +111,9 @@ words:
     provenance: "docs/conformance-staging-plan.md pathology catalog (agglutinative-Austronesian row): MPR-gated rule exception"
     expect_fail: true
     blocked_by: [mrSuf]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
   - word: vokadi
     note: >-
@@ -103,6 +124,9 @@ words:
     parses:
       - signature: "VOKAD+SUFALT|vokadi"
         rules: [mrSufAlt]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
+      - "RewriteRule direction (Dir): left-to-right"
 
 
   - word: tuliktulik

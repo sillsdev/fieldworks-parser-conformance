@@ -19,6 +19,9 @@ words:
         rules: [pd0, pm]
       - signature: "R1|sp"
         rules: [pd0, pm]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "spa"
     note: "C# e63b8863 returns this analysis."
     parses:
@@ -30,7 +33,13 @@ words:
         rules: [SU1, pd0, pm]
       - signature: "R1+SU1|spa"
         rules: [SU1, pd0, pm]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
 generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 5
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"

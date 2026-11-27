@@ -7,21 +7,33 @@ words:
     parses:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: "á"
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: xy
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: p
     note: "C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|p"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: aa
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -29,6 +41,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: ap
     note: "C# returns 1 analysis (ROOT+ROOT|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -36,6 +50,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: pa
     note: "C# returns 1 analysis (ROOT+ROOT|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -43,6 +59,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: pp
     note: "C# returns 1 analysis (ROOT|pp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -50,6 +68,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: "áp"
     note: "C# returns 1 analysis (ROOT+ROOT|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -57,6 +77,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: pxy
     note: "C# returns 1 analysis (ROOT+ROOT|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -64,6 +86,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: xyxy
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -71,26 +95,46 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"
   - word: "aáp"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: aaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: pap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: "a^0p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: e
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "ROOT|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > allomorph identity"
   - word: ae
     note: "C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -98,3 +142,5 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > allomorph identity"

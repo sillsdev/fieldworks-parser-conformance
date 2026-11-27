@@ -43,6 +43,8 @@ words:
     parses:
       - signature: "tasi|tasi"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tatasi
     note: >-
       agreeing copies (ta, ta) in front of root tasi.
@@ -56,6 +58,8 @@ words:
     parses:
       - signature: "pasa|pasa"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: papasa
     note: >-
       agreeing copies (pa, pa) in front of root pasa.
@@ -67,24 +71,34 @@ words:
     note: >-
       pa then sa disagree on the consonant: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: pasapa
     note: >-
       pa then sa disagree: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tatika
     note: >-
       ta then ti disagree on the vowel: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tatisa
     note: >-
       ta then ti disagree on the vowel, whatever the rewrite does: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tusa
     note: >-
       root tuka; the vowel has two spellings (u and ú), and the rewrite k to s between vowels applies.
     parses:
       - signature: "tuka|t[uú]sa"
         rules: [prLen]
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tutusa
     note: >-
       agreeing copies (tu, tu) in front of root tuka, whose k is rewritten to s.
@@ -103,28 +117,40 @@ words:
     note: >-
       no root and no agreeing copies: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: sasa
     note: >-
       the copies agree but there is no root sa: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: titasi
     note: >-
       ti then ta disagree: no parse, though tasi is a root.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: tasitasi
     note: >-
       the rule copies only the first consonant and vowel, not the whole root: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kakasi
     note: >-
       the copies agree but there is no root kasi: no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kata
     note: >-
       plain root control; its k is word-initial, so the rewrite does not apply.
     parses:
       - signature: "kata|kata"
         rules: []
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"
   - word: kasata
     note: >-
       RED + kata. The surface copies are ka and sa, but the rewrite k to s between vowels explains the second, so un-applying it makes the copies agree. A fix that compared surface characters would wrongly refuse this analysis.
@@ -136,3 +162,5 @@ words:
     note: >-
       the rewrite is obligatory, so the unrewritten surface kakata has no parse.
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: reduplication (ReduplicationHint)"

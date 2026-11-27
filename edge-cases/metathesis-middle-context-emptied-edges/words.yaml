@@ -12,17 +12,23 @@ words:
     note: >-
       Rule pr0 is `s p t -> t p s`, with the middle `p` between the switches; prefixes PR0 `s+` and PR1 `p+` on root t make `s+p+t`, which pr0 turns into `t+p+s` (shown as tps). Analysis drops the middle context and cannot undo the swap. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "tp+s"
     note: >-
       As tps with a boundary after the middle segment. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: "t+ps"
     note: >-
       As tps with a boundary after the first switch. The reference gives no parse; status.yaml records the intended answer.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > interaction with a rewrite rule"
   - word: st
     note: >-
       Control: the switches are adjacent in the surface form with no middle segment, so pr0 does not apply and the C# engine agrees with a correct one. R1 is the root `st`; PR0+R0 and PR0+R2 are prefix s+ before root t (R2 `at` loses its a to pd0). The #619 fix leaves this row unchanged.

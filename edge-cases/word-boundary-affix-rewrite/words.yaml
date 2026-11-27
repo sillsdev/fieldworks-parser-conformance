@@ -31,6 +31,8 @@ words:
     parses:
       - signature: "PFX_AR+ROOT_A|ara"
         rules: [mrPrefixAR]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: at
     note: Mirror case for a suffix-final r with a right word-edge anchor.
@@ -45,19 +47,29 @@ words:
     parses:
       - signature: "ROOT_A|a"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: ra
     note: The unchanged one-segment prefix and root-initial forms are rejected.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: raa
     note: The unchanged two-segment prefix form is rejected.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: ata
     note: The internal r of the ar prefix must not be treated as word-initial.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: ar
     note: The unchanged root-plus-suffix form is rejected.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

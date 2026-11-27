@@ -20,6 +20,8 @@ words:
     parses:
       - signature: "ROOT|batid"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: pabatidan
     note: ROOT + mrCross's subCrossAA (prefix pa-, suffix -an) -- cross-product cell 1 of 4.

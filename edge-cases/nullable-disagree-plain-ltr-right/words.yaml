@@ -9,9 +9,13 @@ words:
   - word: ii
     note: "Negative control for nullable disagree plain ltr right: 'ii' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: iy
     note: "Negative control for nullable disagree plain ltr right: 'iy' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ia
     note: "Positive witness for nullable disagree plain ltr right: 'ia' must retain the declared analysis."
     parses:
@@ -22,39 +26,65 @@ words:
   - word: iu
     note: "Negative control for nullable disagree plain ltr right: 'iu' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: yi
     note: "Negative control for nullable disagree plain ltr right: 'yi' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: yy
     note: "Negative control for nullable disagree plain ltr right: 'yy' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ya
     note: "Negative control for nullable disagree plain ltr right: 'ya' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: yu
     note: "Negative control for nullable disagree plain ltr right: 'yu' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ai
     note: "Negative control for nullable disagree plain ltr right: 'ai' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ay
     note: "Negative control for nullable disagree plain ltr right: 'ay' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aa
     note: "Negative control for nullable disagree plain ltr right: 'aa' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: au
     note: "Negative control for nullable disagree plain ltr right: 'au' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ui
     note: "Negative control for nullable disagree plain ltr right: 'ui' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: uy
     note: "Negative control for nullable disagree plain ltr right: 'uy' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: ua
     note: "Negative control for nullable disagree plain ltr right: 'ua' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: uu
     note: "Negative control for nullable disagree plain ltr right: 'uu' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"

@@ -20,6 +20,8 @@ words:
     parses:
       - signature: "ROOT|lodi"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: talodien
     note: >-
@@ -44,6 +46,8 @@ words:
     parses:
       - signature: "ORDPFX+ROOT|mulodi"
         rules: [mrOrdPfx]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
 
   - word: enlodi
     note: >-
@@ -54,3 +58,5 @@ words:
     provenance: "template-slot circumfix containment regression"
     expect_fail: true
     blocked_by: [mrCircum, mrOrdPfx]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

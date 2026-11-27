@@ -9,6 +9,9 @@ words:
     note: >-
       d needs part of speech A and gives B; kam in A gives KAM+D, which no template closes, so no analysis.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamt
     note: >-
@@ -18,6 +21,8 @@ words:
         rules: [t]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamdt
     note: >-
@@ -28,6 +33,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamet
     note: >-
@@ -43,6 +50,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamu
     note: >-
@@ -52,6 +61,8 @@ words:
         rules: [u]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamut
     note: >-
@@ -61,6 +72,8 @@ words:
         rules: [u, t]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: lopt
     note: >-
@@ -70,6 +83,8 @@ words:
         rules: [t]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: lopu
     note: >-
@@ -79,6 +94,8 @@ words:
         rules: [u]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nukx
     note: >-
@@ -88,6 +105,8 @@ words:
         rules: [x]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamx
     note: >-
@@ -97,11 +116,16 @@ words:
         rules: [x]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: lopx
     note: >-
       x is only in the slots of T3 (C) and T4 (A); lop is B, so no analysis.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: akamt
     note: >-
@@ -112,6 +136,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: akamdt
     note: >-
@@ -127,6 +153,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: alopt
     note: >-
@@ -137,11 +165,16 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pat
     note: >-
       No analysis: no sequence of the grammar's rules builds this string.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pau
     note: >-
@@ -151,6 +184,8 @@ words:
         rules: [u]
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: pad
     note: >-
@@ -170,6 +205,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nukxq
     note: >-
@@ -180,11 +217,16 @@ words:
         exercises:
           - "Affix template slots (obligatory/disjunctive/ordering)"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: kamtd
     note: >-
       d after the final template T1 is refused: d is not partial.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
 
   - word: nuket
     note: >-
@@ -195,3 +237,5 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "Affix template slots (obligatory/disjunctive/ordering)"
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"

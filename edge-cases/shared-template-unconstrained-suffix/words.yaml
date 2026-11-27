@@ -12,6 +12,8 @@ words:
     parses:
       - signature: "NROOT|mi"
         rules: []
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: mivd
     note: The ordinary N-to-IV verbalizer feeds the IV template's mandatory shared suffix.
     parses:
@@ -23,26 +25,42 @@ words:
     parses:
       - signature: "TVROOT+PAST|tid"
         rules: [mrPast]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: ki
     note: The unrelated-category root exists and has no applicable template.
     parses:
       - signature: "AROOT|ki"
         rules: []
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: miv
     note: The IV template is applicable but its mandatory suffix is missing.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: ti
     note: The TV template is applicable but its mandatory suffix is missing.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: mid
     note: The noun has not been verbalized; neither suffix-only template licenses it.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kid
     note: Neither template licenses the unrelated-category root.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kivd
     note: The verbalizer requires N, not the unrelated root category A.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: mivdd
     note: One mandatory slot supplies one suffix; a second application is unavailable.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"

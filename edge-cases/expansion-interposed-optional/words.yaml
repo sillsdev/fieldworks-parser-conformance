@@ -17,9 +17,15 @@ words:
   - word: u
     note: "The underlying form is not a surface form because prExpand is obligatory."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: i
     note: "A single i cannot match the expanded two-segment output."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: iz
     note: "No lexical derivation produces a trailing z."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

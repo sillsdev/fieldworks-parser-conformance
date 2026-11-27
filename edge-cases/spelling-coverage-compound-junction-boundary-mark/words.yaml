@@ -14,6 +14,9 @@ words:
         rules: ["cr1", "cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
+      - "CompoundingRule > boundary marker at the junction"
   - word: apt
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -25,6 +28,9 @@ words:
         rules: ["cr1", "cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
+      - "CompoundingRule > boundary marker at the junction"
   - word: "aét"
     note: "C# returns 2 analyses (X+Z|[aá][+-=é]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -36,6 +42,9 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
+      - "CompoundingRule > boundary marker at the junction"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|s[aá]): pins that this word has a route and its morpheme sequence."
     parses:

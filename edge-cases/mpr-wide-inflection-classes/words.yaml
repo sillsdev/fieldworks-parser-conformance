@@ -8,6 +8,8 @@ words:
     parses:
       - signature: "e063|paa"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paasi
     note: matching boundary class admits
     parses:
@@ -18,11 +20,15 @@ words:
   - word: paasai
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pala
     note: bare boundary class
     parses:
       - signature: "e064|pala"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palasai
     note: matching boundary class admits
     parses:
@@ -33,11 +39,15 @@ words:
   - word: palasaai
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palla
     note: bare boundary class
     parses:
       - signature: "e127|palla"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallasaai
     note: matching boundary class admits
     parses:
@@ -48,11 +58,15 @@ words:
   - word: pallasaaai
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallla
     note: bare boundary class
     parses:
       - signature: "e128|pallla"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllasaaai
     note: matching boundary class admits
     parses:
@@ -63,11 +77,15 @@ words:
   - word: palllasaaaai
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllla
     note: bare boundary class
     parses:
       - signature: "e255|palllla"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllasaaaai
     note: matching boundary class admits
     parses:
@@ -78,11 +96,15 @@ words:
   - word: pallllasaaaaai
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllla
     note: bare boundary class
     parses:
       - signature: "e256|pallllla"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllasaaaaai
     note: matching boundary class admits
     parses:
@@ -93,11 +115,15 @@ words:
   - word: palllllasaaaaaai
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllla
     note: bare boundary class
     parses:
       - signature: "e299|palllllla"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllllasaaaaaai
     note: matching boundary class admits
     parses:
@@ -108,6 +134,8 @@ words:
   - word: pallllllasi
     note: neighbor boundary class blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paatu
     note: descendant meets parent class
     parses:
@@ -125,6 +153,8 @@ words:
   - word: kalatu
     note: unrelated family blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balamu
     note: All group has both exceptions
     parses:
@@ -135,6 +165,8 @@ words:
   - word: balimu
     note: All group missing one exception
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balanu
     note: regular entry admits slot
     parses:
@@ -145,6 +177,8 @@ words:
   - word: balunu
     note: entry type excludes slot
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balabala
     note: compound high exception gates admit
     parses:
@@ -156,6 +190,8 @@ words:
   - word: balabali
     note: nonhead missing high exception gate blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balibala
     note: head exception gate admits
     parses:
@@ -167,6 +203,8 @@ words:
   - word: balubala
     note: head missing high exception gate blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kibala
     note: derivation writes high exception B
     parses:
@@ -177,6 +215,8 @@ words:
   - word: kibalamu
     note: overwrite removes A so All group blocks
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balabalamu
     note: compound without an output MPR restriction keeps the exception group
     parses:
@@ -191,121 +231,199 @@ words:
     parses:
       - signature: "eVariant|balu"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: kala
     note: unrelated class root exists independently of blocked family suffix
     parses:
       - signature: "eOutside|kala"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: bali
     note: one-exception root exists independently of blocked All suffix
     parses:
       - signature: "eOne|bali"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paasaai
     note: class 63 must not alias class 127
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paasaaai
     note: class 63 must not alias class 128
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paasaaaai
     note: class 63 must not alias class 255
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paasaaaaai
     note: class 63 must not alias class 256
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: paasaaaaaai
     note: class 63 must not alias class 299
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palasi
     note: class 64 must not alias class 63
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palasaaai
     note: class 64 must not alias class 128
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palasaaaai
     note: class 64 must not alias class 255
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palasaaaaai
     note: class 64 must not alias class 256
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palasaaaaaai
     note: class 64 must not alias class 299
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallasi
     note: class 127 must not alias class 63
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallasai
     note: class 127 must not alias class 64
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallasaaaai
     note: class 127 must not alias class 255
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallasaaaaai
     note: class 127 must not alias class 256
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallasaaaaaai
     note: class 127 must not alias class 299
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllasi
     note: class 128 must not alias class 63
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllasai
     note: class 128 must not alias class 64
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllasaai
     note: class 128 must not alias class 127
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllasaaaaai
     note: class 128 must not alias class 256
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllasaaaaaai
     note: class 128 must not alias class 299
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllasi
     note: class 255 must not alias class 63
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllasai
     note: class 255 must not alias class 64
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllasaai
     note: class 255 must not alias class 127
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllasaaai
     note: class 255 must not alias class 128
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllasaaaaaai
     note: class 255 must not alias class 299
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllasi
     note: class 256 must not alias class 63
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllasai
     note: class 256 must not alias class 64
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllasaai
     note: class 256 must not alias class 127
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllasaaai
     note: class 256 must not alias class 128
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: palllllasaaaai
     note: class 256 must not alias class 255
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllllasai
     note: class 299 must not alias class 64
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllllasaai
     note: class 299 must not alias class 127
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllllasaaai
     note: class 299 must not alias class 128
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllllasaaaai
     note: class 299 must not alias class 255
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: pallllllasaaaaai
     note: class 299 must not alias class 256
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: balasaaaaai
     note: class 0 must not alias class 256 after an 8-bit ID wrap
     expect_fail: true
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

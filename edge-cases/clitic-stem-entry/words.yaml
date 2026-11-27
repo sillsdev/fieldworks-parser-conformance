@@ -12,6 +12,8 @@ words:
       The Morphology stratum's final template has an obligatory slot, so the bare verb root is not a
       word.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: sagd
     note: >-
@@ -28,6 +30,8 @@ words:
     parses:
       - signature: "KA|ka"
         rules: []
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kaz
     note: >-
@@ -35,8 +39,12 @@ words:
     parses:
       - signature: "KA+ENC|kaz"
         rules: [mrEnc]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kad
     note: >-
       A Morphology-stratum rule cannot apply to a root of the later Clitics stratum.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"

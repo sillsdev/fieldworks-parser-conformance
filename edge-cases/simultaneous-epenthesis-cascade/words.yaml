@@ -37,3 +37,5 @@ words:
       uncaught InfiniteLoopException partway through, per the fixture's front-matter expect_crash.
     provenance: "P13 synthetic oracle: Iterative self-feeding epenthesis crashes; Simultaneous cannot"
     expect_fail: true
+    exercises:
+      - "RewriteRule Simultaneous"

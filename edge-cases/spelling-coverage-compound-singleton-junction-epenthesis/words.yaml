@@ -8,16 +8,25 @@ words:
     parses:
       - signature: "X|a"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > junction phonology"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y|p"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > junction phonology"
   - word: t
     note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Z|t"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > junction phonology"
   - word: aa
     note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -29,6 +38,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: ap
     note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -40,6 +51,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: at
     note: "C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -51,6 +64,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: pa
     note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -62,6 +77,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: pp
     note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -73,6 +90,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: pt
     note: "C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -84,6 +103,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: ta
     note: "C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -95,6 +116,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: tt
     note: "C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -106,6 +129,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -135,6 +160,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: asp
     note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -143,6 +170,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: ast
     note: "C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -151,6 +180,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "a+a"
     note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -162,6 +193,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "a+p"
     note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -173,6 +206,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "a+t"
     note: "C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -184,6 +219,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: psa
     note: "C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -192,6 +229,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: psp
     note: "C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -200,6 +239,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: pst
     note: "C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -208,6 +249,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "p+a"
     note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -219,6 +262,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "p+p"
     note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -230,6 +275,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "p+t"
     note: "C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -241,6 +288,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: tap
     note: "C# returns 2 analyses (Z+Y|ta+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -254,6 +303,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: tsa
     note: "C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -262,6 +313,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: tsp
     note: "C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -270,6 +323,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: tst
     note: "C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -278,6 +333,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "t+a"
     note: "C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -289,6 +346,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "t+t"
     note: "C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -300,6 +359,8 @@ words:
         rules: [cr2]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: saa
     note: "C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -318,6 +379,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: sap
     note: "C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -336,6 +399,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: sat
     note: "C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -354,6 +419,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: spa
     note: "C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -372,6 +439,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: spp
     note: "C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -390,6 +459,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: spt
     note: "C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -408,6 +479,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: sta
     note: "C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -426,6 +499,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: stt
     note: "C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -444,6 +519,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "a+sa"
     note: "C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -452,6 +529,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "a+sp"
     note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -460,6 +539,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "a+st"
     note: "C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -468,6 +549,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "p+sa"
     note: "C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -476,6 +559,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "p+sp"
     note: "C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -484,6 +569,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "p+st"
     note: "C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -492,6 +579,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "ta+p"
     note: "C# returns 2 analyses (Z+Y|ta+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -505,6 +594,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "t+sa"
     note: "C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -513,6 +604,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "t+sp"
     note: "C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -521,6 +614,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "t+st"
     note: "C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -529,6 +624,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "sa+a"
     note: "C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -547,6 +644,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "sa+p"
     note: "C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -565,6 +664,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "sa+t"
     note: "C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -583,6 +684,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "sp+a"
     note: "C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -601,6 +704,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "sp+p"
     note: "C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -619,6 +724,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "sp+t"
     note: "C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -637,6 +744,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: stap
     note: "C# returns 3 analyses (PRE+Z+Y|sta+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -658,6 +767,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "st+a"
     note: "C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -676,6 +787,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"
   - word: "st+t"
     note: "C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -694,3 +807,5 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > junction phonology"

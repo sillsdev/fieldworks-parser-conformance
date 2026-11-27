@@ -48,6 +48,10 @@ words:
         gloss: year
         rules: []
         exercises: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: café
     note: >-
@@ -59,6 +63,10 @@ words:
         gloss: coffee
         rules: []
         exercises: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: göl
     note: >-
@@ -69,6 +77,10 @@ words:
         gloss: lake
         rules: []
         exercises: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: kelî
     note: >-
@@ -79,6 +91,10 @@ words:
         gloss: word
         rules: []
         exercises: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "MorphologicalOutputAction: CopyFromInput/InsertSegments"
+      - "Affix template slots (obligatory/disjunctive/ordering)"
 
   - word: años
     note: >-

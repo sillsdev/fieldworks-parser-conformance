@@ -9,24 +9,36 @@ words:
         rules: [NUL]
       - signature: "R0|t"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "+t"
     note: >-
       Null prefix spelled by its + boundary only.
     parses:
       - signature: "NUL+R0|[(^0)(*0)(&0)∅]?+?t"
         rules: [NUL]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "^0t"
     note: >-
       Null prefix spelled by its null marker only.
     parses:
       - signature: "NUL+R0|[(^0)(*0)(&0)∅]?+?t"
         rules: [NUL]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "^0+t"
     note: >-
       Null prefix spelled in full.
     parses:
       - signature: "NUL+R0|[(^0)(*0)(&0)∅]?+?t"
         rules: [NUL]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "ta"
     note: >-
       Root ta, with or without the null prefix.
@@ -35,6 +47,9 @@ words:
         rules: [NUL]
       - signature: "R1|ta"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "tt"
     note: >-
       Root tt, with or without the null prefix.
@@ -43,6 +58,9 @@ words:
         rules: [NUL]
       - signature: "R2|tt"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "ats"
     note: >-
       Prefix as+ then root t, swapped to at+s; with the null prefix either outside as+ (NUL+PRE+R0) or between as+ and t. In the second case the boundaries + ^0 + are skipped after s and join s's group; only segments move, so t moves in front of them and C# lists the null prefix after the root (PRE+R0+NUL).
@@ -56,6 +74,8 @@ words:
       - signature: "PRE+R0|at+?s"
         rules: [PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "at+s"
     note: >-
       The same three analyses with one boundary written.
@@ -69,6 +89,8 @@ words:
       - signature: "PRE+R0|at+?s"
         rules: [PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "at++s"
     note: >-
       Both boundaries written between t and s: only the analysis with the null prefix carried past the root fits.
@@ -76,6 +98,8 @@ words:
       - signature: "PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s"
         rules: [PRE, NUL, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "at^0s"
     note: >-
       The null marker written between t and s: only PRE+R0+NUL fits.
@@ -83,6 +107,8 @@ words:
       - signature: "PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s"
         rules: [PRE, NUL, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "at^0+s"
     note: >-
       The null marker and its boundary written between t and s.
@@ -90,6 +116,8 @@ words:
       - signature: "PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s"
         rules: [PRE, NUL, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "at+^0+s"
     note: >-
       Every boundary of the moved run written between t and s.
@@ -97,6 +125,8 @@ words:
       - signature: "PRE+R0+NUL|at+?[(^0)(*0)(&0)∅]?+?s"
         rules: [PRE, NUL, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "+ats"
     note: >-
       The null prefix written first: only NUL+PRE+R0 fits.
@@ -104,6 +134,8 @@ words:
       - signature: "NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s"
         rules: [NUL, PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "^0ats"
     note: >-
       The null marker written first.
@@ -111,6 +143,8 @@ words:
       - signature: "NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s"
         rules: [NUL, PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "^0+ats"
     note: >-
       The null prefix written first in full.
@@ -118,6 +152,8 @@ words:
       - signature: "NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s"
         rules: [NUL, PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "+at+s"
     note: >-
       The null prefix written first and t moved in front of the as+ boundary.
@@ -125,6 +161,8 @@ words:
       - signature: "NUL+PRE+R0|[(^0)(*0)(&0)∅]?+?at+?s"
         rules: [NUL, PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "atsa"
     note: >-
       Prefix as+ then root ta: the same three analyses as ats.
@@ -138,6 +176,8 @@ words:
       - signature: "PRE+R1|at+?sa"
         rules: [PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "at+sa"
     note: >-
       The same with one boundary written.
@@ -151,13 +191,19 @@ words:
       - signature: "PRE+R1|at+?sa"
         rules: [PRE, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > null prefix"
   - word: "as+t"
     note: >-
       Never a surface: the obligatory rule rewrites s+t, and C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"
   - word: "ast"
     note: >-
       Never a surface: the obligatory rule rewrites it, and C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > null prefix"

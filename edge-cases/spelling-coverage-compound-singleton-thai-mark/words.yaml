@@ -8,6 +8,8 @@ words:
     parses:
       - signature: "X|[a่]"
         rules: []
+    exercises:
+      - "CompoundingRule"
   - word: "่p"
     note: "C# returns 3 analyses (W|[a่]p; X+Y|[a่]+?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -21,6 +23,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule"
   - word: "a่p"
     note: "C# returns 2 analyses (X+W|[a่]+?[a่]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -68,6 +72,8 @@ words:
   - word: "่p+a+p"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|s[a่]): pins that this word has a route and its morpheme sequence."
     parses:

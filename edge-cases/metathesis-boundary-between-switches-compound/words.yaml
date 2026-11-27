@@ -7,18 +7,27 @@ words:
     parses:
       - signature: "Y|p"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "t"
     note: >-
       Root t alone: no compound, so no switch pair exists.
     parses:
       - signature: "Z|t"
         rules: []
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "pp"
     note: >-
       Compound of p and p: no t-then-p pair, so nothing swaps.
     parses:
       - signature: "Y|p+?p"
         rules: [cr1]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "pt"
     note: >-
       Surface of the compound t then p with a junction boundary between the switches: the swap steps over the boundary and lists the morphs in surface order (Y+Z); C# returns the analysis twice.
@@ -29,18 +38,26 @@ words:
       - signature: "Y+Z|p+?t"
         rules: [cr1, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary between the switched segments"
   - word: "tt"
     note: >-
       Compound of t and t: no p after the t, so nothing swaps.
     parses:
       - signature: "Z|t+?t"
         rules: [cr1]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "p+p"
     note: >-
       Compound of p and p with the junction boundary written: no swap.
     parses:
       - signature: "Y|p+?p"
         rules: [cr1]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "p+t"
     note: >-
       The pt surface with the junction boundary written: the same two analyses as pt.
@@ -51,19 +68,28 @@ words:
       - signature: "Y+Z|p+?t"
         rules: [cr1, pr1]
         exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule > boundary between the switched segments"
   - word: "t+t"
     note: >-
       Compound of t and t with the junction boundary written: no swap.
     parses:
       - signature: "Z|t+?t"
         rules: [cr1]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "tp"
     note: >-
       Never a surface: the obligatory rule rewrites tp to pt, and C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"
   - word: "t+p"
     note: >-
       Never a surface: the obligatory rule rewrites t+p to p+t, and C# rejects it.
     expect_fail: true
-    exercises: ["MetathesisRule"]
+    exercises:
+      - "MetathesisRule"
+      - "MetathesisRule > boundary between the switched segments"

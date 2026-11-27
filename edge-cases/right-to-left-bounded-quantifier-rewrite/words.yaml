@@ -32,6 +32,8 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
 
   - word: ecct
     note: >-
@@ -46,6 +48,8 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
 
   - word: accct
     note: >-
@@ -62,6 +66,8 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
 
   - word: acat
     note: >-
@@ -88,6 +94,8 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ucdcdt
     note: ROOT5 underlying ocdcdt, two (c d) pairs, within the bound of two.
     parses:
@@ -96,6 +104,8 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ocdcdcdt
     note: ROOT6, three pairs exceed the bound of two, so o stays. The load-bearing negative that the group is bounded.
     parses:
@@ -104,6 +114,8 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: odct
     note: ROOT7 underlying odct, the control for the order of the group's children. The environment needs c before d, and odct has d before c, so o stays. A reversal that left the two children in document order would read the group as d then c, match here, and rewrite o to u.
     parses:
@@ -112,27 +124,33 @@ words:
         exercises:
           - "RewriteRule direction (Dir): right-to-left"
           - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+    exercises:
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ocdt
     note: Raw ROOT4, the rule is obligatory, so it is not a surface form.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ocdcdt
     note: Raw ROOT5, the rule is obligatory.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: ucdcdcdt
     note: Not derivable, three pairs never trigger the rule.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
   - word: udct
     note: Not derivable, the rule never fires on ROOT7.
     expect_fail: true
     exercises:
       - "RewriteRule direction (Dir): right-to-left"
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"

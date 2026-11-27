@@ -47,8 +47,12 @@ words:
     note: >-
       Neither clitic can stand in for the template's obligatory slot.
     expect_fail: true
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
 
   - word: sags
     note: >-
       The enclitic cannot stand in for the template's obligatory slot either.
     expect_fail: true
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"

@@ -12,6 +12,9 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aaasp
     note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?sp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -21,6 +24,9 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aaspa
     note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?[aá][+-=]?sp[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -30,9 +36,16 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aspa
     note: "C# returns 1 analysis (X+PRE+Y|[aá][+-=]?sp[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -42,9 +55,16 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aaaas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aaa
     note: "C# returns 1 analysis (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -53,6 +73,9 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aaaa
     note: "C# returns 1 analysis (X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -61,9 +84,16 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aaaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: apsta
     note: "C# returns 1 analysis (X+Y+PRE+Z|[aá][+-=]?p[+-=]?st[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -73,3 +103,6 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"

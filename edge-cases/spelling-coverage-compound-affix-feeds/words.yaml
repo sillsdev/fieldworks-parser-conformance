@@ -7,19 +7,31 @@ words:
     parses:
       - signature: "X|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y|p"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: s
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: i
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: aa
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -31,6 +43,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ap
     note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -38,9 +52,14 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: as
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ai
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -52,6 +71,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: pa
     note: "C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -63,6 +84,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: pp
     note: "C# returns 1 analysis (Y|pp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -70,9 +93,14 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: pi
     note: "C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -84,6 +112,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sa
     note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -101,6 +131,9 @@ words:
   - word: ss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: si
     note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -119,6 +152,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ip
     note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -126,9 +161,14 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: is
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ii
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -140,6 +180,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aaa
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -153,6 +195,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aap
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -161,9 +205,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: aai
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -177,6 +226,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: apa
     note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -185,12 +236,20 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: app
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: aps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: api
     note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -199,18 +258,32 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: asa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: asp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ass
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: asi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: aia
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -224,6 +297,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: aip
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -232,9 +307,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ais
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: aii
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -248,6 +328,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: paa
     note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -261,6 +343,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: pap
     note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -269,9 +353,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: pas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: pai
     note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -285,6 +374,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ppa
     note: "C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -293,12 +384,20 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: pps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ppi
     note: "C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -307,18 +406,32 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: psa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: psp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: pss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: psi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: pia
     note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -332,6 +445,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: pip
     note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -340,9 +455,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: pis
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: pii
     note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -356,6 +476,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saa
     note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -377,6 +499,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sap
     note: "C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -390,9 +514,14 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sas
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: sai
     note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -414,6 +543,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: spa
     note: "C# returns 4 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -435,6 +566,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: spp
     note: "C# returns 2 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -448,9 +581,14 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sps
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: spi
     note: "C# returns 4 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -472,18 +610,32 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ssa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ssp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: sss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ssi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: sia
     note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -505,6 +657,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sip
     note: "C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -518,9 +672,14 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sis
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: sii
     note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -542,6 +701,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: iaa
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -555,6 +716,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: iap
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -563,9 +726,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ias
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: iai
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -579,6 +747,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ipa
     note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -587,12 +757,20 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: ipp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ips
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: ipi
     note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -601,18 +779,32 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: isa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: isp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: iss
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: isi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: iia
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -626,6 +818,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: iip
     note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -634,9 +828,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: iis
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: iii
     note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -650,6 +849,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saip
     note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -668,6 +869,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sapi
     note: "C# returns 3 analyses (PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -686,29 +889,52 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saipi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: sapii
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: aipi
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: apii
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: sasp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: saisp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: xy
     note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá(xy)ei]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > feeds affixation"
   - word: xyp
     note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -716,6 +942,8 @@ words:
         rules: ["cr1"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sxyi
     note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -737,6 +965,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: saixy
     note: "C# returns 6 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -770,6 +1000,8 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"
   - word: sxyip
     note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -788,3 +1020,5 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > feeds affixation"

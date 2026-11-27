@@ -42,9 +42,13 @@ words:
   - signature: NUNA|nuna
     rules: []
   note: C# oracle observation with GuessRoots = true.
+  exercises:
+    - "Guesser/LexicalGuess"
 - word: '!'
   expect_skip: true
   note: C# oracle observation with GuessRoots = true.
+  exercises:
+    - "Guesser/LexicalGuess"
 variants:
 - name: guess-off
   morpher:

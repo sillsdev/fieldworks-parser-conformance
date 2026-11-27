@@ -19,11 +19,15 @@ words:
     parses:
       - signature: "R0|sa"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "st"
     note: "C# e63b8863 returns this analysis."
     parses:
       - signature: "R1|st"
         rules: []
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
   - word: "satatat"
     note: "A five-segment suffix (SU9) is added so that some parse names a morphological rule, which the machine gate requires. Its output is longer than the 4-segment probe space, so no probed row changes. PR0 itself never applies: it needs s on its right, and the epenthesis puts a there."
     parses:
@@ -34,3 +38,5 @@ generated_no_parse:
   - alphabet: [a, p, t, s]
     max_length: 4
     note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"

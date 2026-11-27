@@ -11,6 +11,8 @@ words:
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ecct
     note: "Positive witness for quantified alpha unbounded ltr right: 'ecct' must retain the declared analysis."
     parses:
@@ -18,31 +20,43 @@ words:
         rules: ["prRtlBq"]
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: accct
     note: "Negative control for quantified alpha unbounded ltr right: 'accct' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: acat
     note: "Negative control for quantified alpha unbounded ltr right: 'acat' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: acct
     note: "Negative control for quantified alpha unbounded ltr right: 'acct' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: et
     note: "Negative control for quantified alpha unbounded ltr right: 'et' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: at
     note: "Negative control for quantified alpha unbounded ltr right: 'at' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ecat
     note: "Positive witness for quantified alpha unbounded ltr right: 'ecat' must retain the declared analysis."
     parses:
@@ -50,31 +64,43 @@ words:
         rules: ["prRtlBq"]
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: etct
     note: "Negative control for quantified alpha unbounded ltr right: 'etct' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ctat
     note: "Negative control for quantified alpha unbounded ltr right: 'ctat' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ctet
     note: "Negative control for quantified alpha unbounded ltr right: 'ctet' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: accccct
     note: "Negative control for quantified alpha unbounded ltr right: 'accccct' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: eccccct
     note: "Negative control for quantified alpha unbounded ltr right: 'eccccct' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: eccct
     note: "Positive witness for quantified alpha unbounded ltr right: 'eccct' must retain the declared analysis."
     parses:
@@ -82,11 +108,15 @@ words:
         rules: ["prRtlBq"]
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ecet
     note: "Negative control for quantified alpha unbounded ltr right: 'ecet' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: actt
     note: "Positive witness for quantified alpha unbounded ltr right: 'actt' must retain the declared analysis."
     parses:
@@ -94,8 +124,12 @@ words:
         rules: []
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"
   - word: ectt
     note: "Negative control for quantified alpha unbounded ltr right: 'ectt' must complete with no analysis."
     expect_fail: true
     exercises:
       - "CharacterDefinitionTable pattern shapes: optional group / Kleene star"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat"
+      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > right environment"

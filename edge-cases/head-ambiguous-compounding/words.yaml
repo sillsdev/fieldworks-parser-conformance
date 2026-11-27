@@ -18,12 +18,18 @@ words:
     parses:
       - signature: "DAK|dak"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > head selection"
 
   - word: imo
     note: IMO bare root, no compounding -- a plain control.
     parses:
       - signature: "IMO|imo"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > head selection"
 
   - word: dakimo
     note: >-
@@ -47,6 +53,8 @@ words:
         rules: [crRightHead]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > head selection"
 
   - word: imodak
     note: >-
@@ -58,3 +66,6 @@ words:
     provenance: "rust/crates/pg-parse/src/identity.rs AnalysisIdentity::root_index"
     expect_fail: true
     blocked_by: [crLeftHead, crRightHead]
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > head selection"

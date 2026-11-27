@@ -197,6 +197,8 @@ words:
         gloss: roam
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: guan
     note: GAN infixed with the intensive marker "-u-" after the first segment -- the discontinuous-morph positive/success control (no RequiredEnvironments at all, always succeeds), paired with etemig/esalig's negative circumfix demonstration below.
@@ -214,6 +216,8 @@ words:
         gloss: rest
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: sal
     note: SAL ("wait") bare root, posN -- the other circumfix-demonstration root; its initial "s" does NOT match the circumfix's required right-context class.
@@ -222,6 +226,8 @@ words:
         gloss: wait
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: etemig
     note: >-
@@ -294,6 +300,8 @@ words:
         gloss: sit
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: set
     note: SET ("stand", posVAlpha) bare root, no suffix -- control for setin below.
@@ -303,6 +311,8 @@ words:
         gloss: stand
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Simultaneous"
 
   - word: satun
     note: >-

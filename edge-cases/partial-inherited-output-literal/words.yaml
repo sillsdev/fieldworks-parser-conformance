@@ -10,6 +10,8 @@ words:
         rules: [prLen]
         exercises:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: aza
     note: Second output spelling retains the same root identity in pinned C#.
     parses:
@@ -17,9 +19,14 @@ words:
         rules: [prLen]
         exercises:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: aka
     note: Obligatory rewrite prevents the unchanged root from surfacing.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: isi
     note: >-
       The new class output is the segment class {s,z}, whose two members differ only on voice, so the class drops voice and leaves the input's own voice in place. IPI (underlying ipi) parses because p has voice minus, the same as s. IBI does not parse: b has voice plus, so its result is z.
@@ -28,6 +35,8 @@ words:
         rules: [prSibVoiceless]
         exercises:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: izi
     note: >-
       The other half of the pair. IBI parses because b has voice plus, the same as z. IPI does not parse. The class does not choose a member: it takes the member the input already agrees with. Only a segment with no voice value, the k of aka above, accepts both.
@@ -36,13 +45,17 @@ words:
         rules: [prSibVoiced]
         exercises:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: ipi
     note: IPI's own underlying shape is not a surface form, because the rule is obligatory between vowels.
     expect_fail: true
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: ibi
     note: IBI's own underlying shape is not a surface form, because the rule is obligatory between vowels.
     expect_fail: true
     exercises:
       - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"

@@ -15,6 +15,10 @@ words:
         exercises: ["RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)", "Alpha-variable phonological environments (VariableFeature/AlphaVariables)", "Boundary markers (CharacterDefinitionTable)"]
       - signature: "AA+PA|aafa"
         rules: [mrPA, prSpirant]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "Boundary markers (CharacterDefinitionTable)"
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aava
     note: AA+VA and AA+BA (voiced stop spirantizes to the voiced fricative, so the alpha variable carries voicing).
     parses:
@@ -22,9 +26,21 @@ words:
         rules: [mrVA, prSpirant]
       - signature: "AA+BA|aava"
         rules: [mrBA, prSpirant]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "Boundary markers (CharacterDefinitionTable)"
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aapa
     note: The rule is obligatory after the boundary, so p never surfaces there.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "Boundary markers (CharacterDefinitionTable)"
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"
   - word: aaba
     note: Same for b.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "Boundary markers (CharacterDefinitionTable)"
+      - "Alpha-variable phonological environments (VariableFeature/AlphaVariables)"

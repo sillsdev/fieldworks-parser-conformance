@@ -35,6 +35,9 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: aspt
     note: "C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -53,6 +56,9 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: apt
     note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -64,6 +70,9 @@ words:
         rules: ["cr1", "cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"
   - word: sap
     note: "C# returns 3 analyses (PRE+X+Y|s[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -82,3 +91,6 @@ words:
         exercises:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
+      - "CompoundingRule > feeds affixation"

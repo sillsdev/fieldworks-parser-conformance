@@ -9,6 +9,8 @@ words:
   - word: sag
     note: The verb template's only slot is obligatory, so the bare root is not a word.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: sagd
     note: The final verb template applied on its own.
     parses:
@@ -30,6 +32,8 @@ words:
   - word: kol
     note: The non-final noun template's only slot is obligatory, so the bare root is not a word.
     expect_fail: true
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"
   - word: kolpu
     note: >-
       Clitics' all-optional final template nounClose adds nothing yet completes nounNonFinal from the
@@ -48,3 +52,5 @@ words:
     note: nounClose cannot stand in for nounNonFinal's obligatory slot.
     expect_fail: true
     blocked_by: [mrPl]
+    exercises:
+      - "Affix template slots (obligatory/disjunctive/ordering)"

@@ -36,14 +36,20 @@ words:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
       - signature: "TUIIIKI|tuki"
         rules: [prHiatusI]
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: tuiiki
     note: Underlying shape of TUIIKI; the i's after u always delete, so this never surfaces.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: taiki
     note: Control. After the low vowel "a" nothing deletes, so TAIKI is itself at every setting.
     parses:
       - signature: "TAIKI|taiki"
         rules: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
 # Named-run expectations observed from the C# engine,
 # 2026-10-22, DOP 1. Each run starts from engine defaults and sets only its own morpher block.

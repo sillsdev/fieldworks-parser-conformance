@@ -10,6 +10,8 @@ words:
         rules: [prLen]
         exercises:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: aza
     note: Second output spelling retains the same root identity in pinned C#.
     parses:
@@ -17,6 +19,11 @@ words:
         rules: [prLen]
         exercises:
           - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"
   - word: aka
     note: Obligatory rewrite prevents the unchanged root from surfacing.
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature"

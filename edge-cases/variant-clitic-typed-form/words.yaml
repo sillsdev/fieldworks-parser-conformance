@@ -13,6 +13,8 @@ words:
       - signature: "TA|ta"
         rules: []
         exercises: []
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: ke
     note: >-
       The variant's clitic-stratum stem copy parses on its own as ta's Noun MSA.
@@ -38,7 +40,8 @@ words:
     note: >-
       Control: a form no entry, variant or rule spells has no analysis.
     expect_fail: true
-    exercises: []
+    exercises:
+      - "Clitics stratum: clitic designation by stratum name alone"
   - word: keta
     note: >-
       Control: the clitic is an enclitic, so it follows its host and never precedes it; the variant's stem copy ke

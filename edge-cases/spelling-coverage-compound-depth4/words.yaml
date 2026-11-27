@@ -8,11 +8,17 @@ words:
     parses:
       - signature: "X|[aá]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: p
     note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Y|p"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aa
     note: "C# returns 2 analyses (X|[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -25,6 +31,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ap
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -37,6 +45,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: pa
     note: "C# returns 2 analyses (Y+X|p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -49,6 +59,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: pp
     note: "C# returns 2 analyses (Y|p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -61,6 +73,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaa
     note: "C# returns 3 analyses (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -79,6 +93,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aap
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -97,6 +113,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: apa
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -115,6 +133,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: app
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -133,6 +153,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: paa
     note: "C# returns 3 analyses (Y+X|p[+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -151,6 +173,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: pap
     note: "C# returns 3 analyses (Y+X|p[+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -169,6 +193,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ppa
     note: "C# returns 3 analyses (Y+X|p[+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -187,6 +213,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ppp
     note: "C# returns 3 analyses (Y|p[+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -205,6 +233,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaaa
     note: "C# returns 3 analyses (X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -223,6 +253,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaap
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?[aá][+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -241,6 +273,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aapa
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -259,6 +293,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aapp
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -277,6 +313,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: apaa
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -295,6 +333,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: apap
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -313,6 +353,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: appa
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -331,6 +373,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: appp
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -349,6 +393,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: paaa
     note: "C# returns 3 analyses (Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -367,6 +413,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: paap
     note: "C# returns 3 analyses (Y+X|p[+-=]?[aá][+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -385,6 +433,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: papa
     note: "C# returns 3 analyses (Y+X|p[+-=]?[aá][+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -403,6 +453,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: papp
     note: "C# returns 3 analyses (Y+X|p[+-=]?[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -421,6 +473,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ppaa
     note: "C# returns 3 analyses (Y+X|p[+-=]?p[+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -439,6 +493,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ppap
     note: "C# returns 3 analyses (Y+X|p[+-=]?p[+-=]?[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -457,6 +513,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: pppa
     note: "C# returns 3 analyses (Y+X|p[+-=]?p[+-=]?p[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -475,6 +533,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: pppp
     note: "C# returns 3 analyses (Y|p[+-=]?p[+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -493,112 +553,216 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aaaap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aaapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aaapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aapaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aapap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aappa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: aappp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: apaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: apaap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: apapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: apapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: appaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: appap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: apppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: apppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: paaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: paaap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: paapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: paapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: papaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: papap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: pappa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: pappp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: ppaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: ppaap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: ppapa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: ppapp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: pppaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: pppap
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: ppppa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: ppppp
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: "á"
     note: "C# returns 1 analysis (X|[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "X|[aá]"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: t
     note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
     parses:
       - signature: "Z|t"
         rules: []
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: at
     note: "C# returns 2 analyses (X+Z|[aá][+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -611,6 +775,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: ta
     note: "C# returns 2 analyses (Z+X|t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -623,6 +789,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-p"
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -635,6 +803,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a=p"
     note: "C# returns 2 analyses (X+Y|[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -647,6 +817,8 @@ words:
         rules: ["cr2"]
         exercises:
           - "CompoundingRule"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a=p-t"
     note: "C# returns 3 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -665,12 +837,20 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-ps-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: "a=ps-t"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: "a=sp-t"
     note: "C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -692,6 +872,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-p-p"
     note: "C# returns 3 analyses (X+Y|[aá][+-=]?p[+-=]?p): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -710,6 +892,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a+sp+t"
     note: "C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -731,6 +915,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-sp-t"
     note: "C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -752,6 +938,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a=p-t-a"
     note: "C# returns 3 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -770,9 +958,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: aaaaaa
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: "a-p-t-a"
     note: "C# returns 3 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -791,9 +984,14 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-ps-t-a"
     note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
     expect_fail: true
+    exercises:
+      - "CompoundingRule"
+      - "CompoundingRule > depth limit"
   - word: "a=sp-t-a"
     note: "C# returns 6 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -833,6 +1031,8 @@ words:
           - "AffixProcessRule: prefix/suffix/circumfix/infix"
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-a-a"
     note: "C# returns 3 analyses (X|[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -851,6 +1051,8 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"
   - word: "a-a-a-a"
     note: "C# returns 3 analyses (X|[aá][+-=]?[aá][+-=]?[aá][+-=]?[aá]): pins that this spelling is a route and its morpheme sequence."
     parses:
@@ -869,3 +1071,5 @@ words:
         exercises:
           - "CompoundingRule"
           - "CompoundingRule constraints (MaxApplicationCount/Blockable/head-nonhead syntactic features)"
+    exercises:
+      - "CompoundingRule > depth limit"

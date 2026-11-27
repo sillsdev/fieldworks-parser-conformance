@@ -66,6 +66,8 @@ words:
         gloss: land
         rules: []
         exercises: []
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
 
   - word: nunaliq
     note: NUNA + DERIV ("-liq", posN->posV verbalizer) in the deep Derivation stratum -- verbalized, not yet inflected.

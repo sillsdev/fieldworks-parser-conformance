@@ -18,12 +18,20 @@ words:
   - word: abc
     note: "Negative control for interposed optional multi rhs: 'abc' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: dex
     note: "Negative control for interposed optional multi rhs: 'dex' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: dxe
     note: "Negative control for interposed optional multi rhs: 'dxe' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"
   - word: dd
     note: "Negative control for interposed optional multi rhs: 'dd' must complete with no analysis."
     expect_fail: true
+    exercises:
+      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)"

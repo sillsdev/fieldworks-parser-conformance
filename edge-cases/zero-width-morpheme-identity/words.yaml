@@ -21,12 +21,18 @@ words:
       - signature: "ROOT+THIRD|sag"
         rules: [mrThird]
         exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: sagu
     note: root + A2B (category V, by the suffix u). Control that A2B works alone.
     parses:
       - signature: "ROOT+A2B|sagu"
         rules: [mrA2B]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
 
   - word: sagi
     note: >-
@@ -48,3 +54,6 @@ words:
       - signature: "ROOT+A2B+B2A+THIRD|sagui"
         rules: [mrA2B, mrB2A, mrThird]
         exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix", "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"]
+    exercises:
+      - "AffixProcessRule: prefix/suffix/circumfix/infix"
+      - "Syntactic feature agreement (RequiredHeadFeatures/OutputHeadFeatures/RequiredFootFeatures/OutputFootFeatures)"
