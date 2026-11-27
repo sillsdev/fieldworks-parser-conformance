@@ -1,1 +1,26 @@
 old_id	new_id	covered_by	wave
+edge-cases/bistratal-overlapping-segment-representation	retired		wave-2026-11-27
+edge-cases/cross-table-root-respelling	retired		wave-2026-11-27
+edge-cases/default-symbol-after-merge	retired		wave-2026-11-27
+edge-cases/family-blocked-generation	retired		wave-2026-11-27
+edge-cases/feature-system-breadth	retired		wave-2026-11-27
+edge-cases/loader-default-symbol	retired		wave-2026-11-27
+edge-cases/loader-isactive	retired		wave-2026-11-27
+edge-cases/loader-isactive-breadth	retired		wave-2026-11-27
+edge-cases/metathesis-comparison-crash	retired		wave-2026-11-27
+edge-cases/mpr-group-overwrite-without-realizational	retired		wave-2026-11-27
+edge-cases/mpr-overwrite-order-dependence	retired		wave-2026-11-27
+edge-cases/multi-table-metathesis-shared-representation	retired		wave-2026-11-27
+edge-cases/prefix-excluded-environment-after-epenthesis	retired		wave-2026-11-27
+edge-cases/realizational-reduplication-no-proposal-route	retired		wave-2026-11-27
+edge-cases/rewrite-analysis-feature-neutralization	retired		wave-2026-11-27
+edge-cases/rewrite-default-environment	retired		wave-2026-11-27
+edge-cases/rewrite-default-epenthesis	retired		wave-2026-11-27
+edge-cases/rewrite-default-full-set	retired		wave-2026-11-27
+edge-cases/rewrite-default-narrow	retired		wave-2026-11-27
+edge-cases/right-to-left-cross-table-segments-environment	retired		wave-2026-11-27
+edge-cases/segment-natural-class-table-binding	retired		wave-2026-11-27
+edge-cases/synthesis-stratum-render-stale-table	retired		wave-2026-11-27
+edge-cases/two-table-shared-representation-recall	retired		wave-2026-11-27
+languages/fusional-realizational-morphology	retired		wave-2026-11-27
+languages/prefixal-discontinuous-slot-dependency	retired		wave-2026-11-27
