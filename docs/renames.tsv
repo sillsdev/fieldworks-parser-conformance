@@ -25,3 +25,5 @@ edge-cases/two-table-shared-representation-recall	retired		wave-2026-11-27
 languages/fusional-realizational-morphology	retired		wave-2026-11-27
 languages/prefixal-discontinuous-slot-dependency	retired		wave-2026-11-27
 edge-cases/spelling-coverage-compound-boundary-explicit	edge-cases/spelling-coverage-compound-boundary		wave-2026-11-27
+edge-cases/alias-output-0-literal	edge-cases/alias-output-featureless		wave-2026-11-27
+edge-cases/alias-output-0-singleton	edge-cases/alias-output-featureless		wave-2026-11-27
