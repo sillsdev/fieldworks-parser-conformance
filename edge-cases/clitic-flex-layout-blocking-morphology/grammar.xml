@@ -96,6 +96,22 @@
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
+      <!-- A stratum between Morphology and Clitics holding one ordinary, non-partial, non-clitic rule (it is not in a stratum named Clitics). A FieldWorks project reaches this layout with a user-defined strata string (HCLoader.CreateStrata, lines 372-440), which moves the named rule into its own stratum; the strata string also names Phonology so that the phonological rule stays in Morphology. Whether the final-template state reaches this rule depends on whether Morphology is blocking. -->
+      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="mrLate">
+        <Name>Late</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="mrLate">
+            <Name>Late suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subLate">
+                <MorphologicalInput><PhoneticSequence id="stemLate"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="stemLate" /><InsertSegments><PhoneticShape>p</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>LATE</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+      </Stratum>
       <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="mrEnc">
         <Name>Clitics</Name>
         <MorphologicalRuleDefinitions>

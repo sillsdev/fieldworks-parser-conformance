@@ -1,7 +1,8 @@
 # oracle-provenance: founding-oracle machine-commit=ed5cf05d verified-date=2026-10-26
 # Expected parses are derived from the HC clitic and final-template rules (Machine #529); the engine run only confirms them.
-# The Morphology stratum is non-blocking, but no word depends on that: adding a phonological rule to it, which makes it
-# blocking, leaves every row unchanged. The words check the final-template gate within one stratum and a clitic by stratum name.
+# The Morphology stratum is non-blocking, so the final-template state is not cleared when it ends and still bars the ordinary
+# rule mrLate in the next stratum (sagdp). The rows sagdp and kolp were added on 2026-11-27 (C# ba6dfa10, hc-conformance --propose);
+# clitic-flex-layout-blocking-morphology holds the same grammar with a blocking Morphology stratum, where sagdip parses.
 language: NonCliticAfterFinalTemplateLayout
 inspired_by: ["synthetic FieldWorks-layout probe: a final template, a non-clitic rule and an enclitic in strata without phonological rules, not a model of a real language"]
 sources:
@@ -42,3 +43,21 @@ words:
       - signature: "KOL+DERIV|kolk"
         rules: [mrDeriv]
         exercises: ["Clitic rules (Clitics stratum) after a final template"]
+
+  - word: sagdp
+    note: >-
+      Control: mrLate is an ordinary, non-partial, non-clitic rule in its own stratum after Morphology. The final template has
+      applied and Morphology is non-blocking, so the final-template state is not cleared and mrLate is refused
+      (NonPartialRuleProhibitedAfterFinalTemplate). Compare sagdip in clitic-flex-layout-blocking-morphology.
+    expect_fail: true
+    blocked_by: [mrLate]
+    exercises: ["Clitic rules (Clitics stratum) after a final template"]
+
+  - word: kolp
+    note: >-
+      Control: the same mrLate applies to a stem that did not go through the final template, so the refusal of sagdp is the
+      template state and not the stratum.
+    parses:
+      - signature: "KOL+LATE|kolp"
+        rules: [mrLate]
+        exercises: ["Affix template slots (obligatory/disjunctive/ordering)"]

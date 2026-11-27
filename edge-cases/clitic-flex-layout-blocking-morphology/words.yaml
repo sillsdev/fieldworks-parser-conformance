@@ -1,7 +1,9 @@
 # oracle-provenance: founding-oracle machine-commit=ed5cf05d verified-date=2026-10-26
 # Expected parses are derived from the HC clitic and final-template rules (Machine #529); the engine run only confirms them.
-# The Morphology stratum is blocking (it holds a phonological rule), but no word depends on that: the clearing of the
-# final-template state at the end of a blocking stratum is observable only through a non-clitic rule in a later stratum.
+# The Morphology stratum is blocking (it holds a phonological rule), so the final-template state is cleared when it ends:
+# the ordinary rule mrLate in the next stratum applies after the final template (sagdip, sagdips), and the enclitic
+# still follows it. These two rows were added on 2026-11-27 (C# ba6dfa10, hc-conformance --propose); the same grammar with
+# a non-blocking Morphology stratum (non-clitic-after-final-template-layout) refuses the equivalent word sagdp.
 language: CliticFlexLayoutBlockingMorphology
 inspired_by: ["synthetic FieldWorks-layout probe: a final template, an obligatory epenthesis and an enclitic across the Morphology and Clitics strata, not a model of a real language"]
 sources:
@@ -40,3 +42,20 @@ words:
     expect_fail: true
     blocked_by: [mrPlain]
     exercises: ["Clitic rules (Clitics stratum) after a final template"]
+
+  - word: sagdip
+    note: >-
+      The final template, the epenthesis, then mrLate in the Late stratum. Morphology is blocking, so the final-template
+      state is cleared at its end and the non-clitic rule mrLate is allowed.
+    parses:
+      - signature: "SAG+PAST+LATE|sagdip"
+        rules: [mrPast, prEpenthesis, mrLate]
+        exercises: ["Clitic rules (Clitics stratum) after a final template"]
+
+  - word: sagdips
+    note: >-
+      As sagdip, then the enclitic in the Clitics stratum.
+    parses:
+      - signature: "SAG+PAST+LATE+ENC|sagdips"
+        rules: [mrPast, prEpenthesis, mrLate, mrEnc]
+        exercises: ["Clitic rules (Clitics stratum) after a final template"]
