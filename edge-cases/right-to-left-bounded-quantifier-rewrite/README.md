@@ -101,3 +101,7 @@ is NOT a `constructs.txt` row id and therefore matched nothing in
 `conformance_coverage::construct_ids_for`'s byte-for-byte cross-check -- the tag silently contributed
 zero coverage despite this fixture genuinely exercising the construct. Fixed to the exact row-30
 string; no signature, `parses:`, or ground truth changed.
+
+## Second rule: a two-child quantifier group (sillsdev/PanGloss#45)
+
+`prRtlBq2` rewrites `o` to `u` before `(c d){1,2} t`: a bounded group with two children, on segments `o`, `u` and `d` that `prRtlBq` never touches, so the words above are unchanged. `ucdt` and `ucdcdt` pin one and two pairs, `ocdcdcdt` pins the bound, and `odct` (d before c) pins the order of the children, which a reversal that kept them in document order would get wrong. PanGloss staged this as its own fixture (`right-to-left-multi-child-quantifier-rewrite`, rows verified at c2454760); it is carried here instead, because this grammar already has a right-to-left rewrite with a quantifier group and the new rule changes none of its words. The staged rows replayed at ba6dfa10 with the letters renamed (a to o, e to u). Producibility is read from `HCLoader.LoadPatternNode`, not round-tripped.

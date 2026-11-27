@@ -47,7 +47,7 @@
     <PhonologicalFeatureSystem>
       <SymbolicFeature id="featCons"><Name>cons</Name><Symbols><Symbol id="fConsPlus">+</Symbol><Symbol id="fConsMinus">-</Symbol></Symbols></SymbolicFeature>
       <SymbolicFeature id="featVoice"><Name>voice</Name><Symbols><Symbol id="fVoicePlus">+</Symbol><Symbol id="fVoiceMinus">-</Symbol></Symbols></SymbolicFeature>
-      <SymbolicFeature id="featHigh"><Name>high</Name><Symbols><Symbol id="fHighLow">low</Symbol><Symbol id="fHighMid">mid</Symbol><Symbol id="fHighNA">na</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featHigh"><Name>high</Name><Symbols><Symbol id="fHighLow">low</Symbol><Symbol id="fHighMid">mid</Symbol><Symbol id="fHighNA">na</Symbol><Symbol id="fHighO">o</Symbol><Symbol id="fHighU">u</Symbol><Symbol id="fHighD">d</Symbol></Symbols></SymbolicFeature>
     </PhonologicalFeatureSystem>
     <CharacterDefinitionTable id="t1">
       <Name>Main</Name>
@@ -64,12 +64,23 @@
         <SegmentDefinition id="ct"><Representations><Representation>t</Representation></Representations>
           <FeatureValue feature="featCons" symbolValues="fConsPlus" /><FeatureValue feature="featVoice" symbolValues="fVoiceMinus" /><FeatureValue feature="featHigh" symbolValues="fHighNA" />
         </SegmentDefinition>
+        <SegmentDefinition id="co"><Representations><Representation>o</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="fConsMinus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighO" />
+        </SegmentDefinition>
+        <SegmentDefinition id="cu"><Representations><Representation>u</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="fConsMinus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighU" />
+        </SegmentDefinition>
+        <SegmentDefinition id="cd"><Representations><Representation>d</Representation></Representations>
+          <FeatureValue feature="featCons" symbolValues="fConsPlus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighD" />
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
       <SegmentNaturalClass id="ncVowel"><Name>Vowel</Name><Segment segment="ca" /></SegmentNaturalClass>
       <SegmentNaturalClass id="ncCons"><Name>Cons</Name><Segment segment="cc" /></SegmentNaturalClass>
       <SegmentNaturalClass id="ncTrig"><Name>Trigger</Name><Segment segment="ct" /></SegmentNaturalClass>
+      <SegmentNaturalClass id="ncO"><Name>O</Name><Segment segment="co" /></SegmentNaturalClass>
+      <SegmentNaturalClass id="ncD"><Name>D</Name><Segment segment="cd" /></SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
       <PhonologicalRule id="prRtlBq" multipleApplicationOrder="rightToLeftIterative">
@@ -85,9 +96,24 @@
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
+      <!-- Second rule, on segments the first rule never touches (o, u, d): the same shape with a quantifier group of TWO children,
+           (c d){1,2} t. A reversal that left the two children in document order would read the group as d then c. -->
+      <PhonologicalRule id="prRtlBq2" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlMultiChildQuantifierDemo</Name>
+        <PhoneticInput><PhoneticSequence><SimpleContext naturalClass="ncO" /></PhoneticSequence></PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput><PhoneticSequence><Segment segment="cu" /></PhoneticSequence></PhoneticOutput>
+            <Environment><RightEnvironment><PhoneticTemplate><PhoneticSequence>
+              <OptionalSegmentSequence min="1" max="2"><SimpleContext naturalClass="ncCons" /><SimpleContext naturalClass="ncD" /></OptionalSegmentSequence>
+              <SimpleContext naturalClass="ncTrig" />
+            </PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="t1" phonologicalRules="prRtlBq">
+      <Stratum characterDefinitionTable="t1" phonologicalRules="prRtlBq prRtlBq2">
         <Name>Main</Name>
         <LexicalEntries>
           <LexicalEntry id="eRoot1">
@@ -104,6 +130,26 @@
             <Allomorphs><Allomorph id="aRoot3"><PhoneticShape>accct</PhoneticShape></Allomorph></Allomorphs>
             <MorphemeId>ROOT3</MorphemeId>
             <Gloss>root3</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot4">
+            <Allomorphs><Allomorph id="aRoot4"><PhoneticShape>ocdt</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>ROOT4</MorphemeId>
+            <Gloss>root4</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot5">
+            <Allomorphs><Allomorph id="aRoot5"><PhoneticShape>ocdcdt</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>ROOT5</MorphemeId>
+            <Gloss>root5</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot6">
+            <Allomorphs><Allomorph id="aRoot6"><PhoneticShape>ocdcdcdt</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>ROOT6</MorphemeId>
+            <Gloss>root6</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot7">
+            <Allomorphs><Allomorph id="aRoot7"><PhoneticShape>odct</PhoneticShape></Allomorph></Allomorphs>
+            <MorphemeId>ROOT7</MorphemeId>
+            <Gloss>root7</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
