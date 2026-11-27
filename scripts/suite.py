@@ -85,6 +85,7 @@ def words_summary(path: Path):
 CHECKS = (
     ("status.yaml is well formed", "exceptions"),
     ("words.yaml matches the schema", "check_words_schema"),
+    ("derived files generate and their invariants hold", "check_derived"),
     ("grammar.xml matches the DTD", "check_dtd"),
     ("docs/grammars.md and stress/README.md list every test case", "check_grammars_md"),
     ("FieldWorks witnesses are well formed", "check_fwdata"),
@@ -113,12 +114,20 @@ def main(argv=None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("check", help="run every check")
+    generate = sub.add_parser("generate", help="write the derived files")
+    generate.add_argument("--out", default=str(ROOT / "generated"), help="directory to write into (default: generated/, untracked)")
     status = sub.add_parser("status", help="list status.yaml rows by upstream state")
     status.add_argument("--machine-checkout", help="a sillsdev/machine checkout, for engine ancestry")
     status.add_argument("--strict", action="store_true", help="exit 1 if any row needs action")
     args = parser.parse_args(argv)
     if args.command == "check":
         return run_checks()
+    if args.command == "generate":
+        import derive
+
+        for name in derive.write_all(Path(args.out)):
+            print(f"wrote {Path(args.out) / name}")
+        return 0
     import exceptions
 
     return exceptions.report(args.machine_checkout, args.strict)

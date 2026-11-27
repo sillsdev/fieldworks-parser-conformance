@@ -11,6 +11,7 @@ import sys
 
 import calib_a_gen
 import calib_b_gen
+import derive
 import check_dtd
 from suite import ROOT, load_words
 
@@ -68,10 +69,10 @@ def check_isolation(readme):
     """Calibration words must never reach a conformance or engine run: no calibration path in either manifest, no
     calibration directory in a category the consumers enumerate, and the warning header everywhere."""
     problems = []
-    for manifest in sorted((ROOT / "generated").glob("*manifest*.json")):
-        text = manifest.read_text(encoding="utf-8")
+    for built in (derive.manifest(), derive.stress_manifest()):
+        text = derive.serialize(built).decode("utf-8")
         if "calibration" in text or any(n in text for n in list(calib_a_gen.FAMILIES) + list(calib_a_gen.LEXSIZES) + list(calib_b_gen.FAMILIES)):
-            problems.append(f"{manifest.name} mentions a calibration path")
+            problems.append(f"{built['formatVersion']} mentions a calibration path")
     names = set(calib_a_gen.FAMILIES) | set(calib_a_gen.LEXSIZES) | set(calib_b_gen.FAMILIES)
     for cat in CONSUMER_CATEGORIES:
         base = ROOT / cat

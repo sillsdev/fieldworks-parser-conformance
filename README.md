@@ -48,8 +48,7 @@ PanGloss's `xample-projector` turns a FieldWorks witness into both Hermit Crab a
 git clone https://github.com/sillsdev/fieldworks-parser-conformance
 cd fieldworks-parser-conformance
 python -m pip install -r scripts/requirements.txt
-python scripts/generate_manifest.py --check
-python scripts/check_grammars_md.py
+python scripts/suite.py check
 ```
 
 An engine consumes the suite by pinning a commit in `conformance.commit` and cloning it into an ignored `conformance/`.

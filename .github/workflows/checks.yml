@@ -24,26 +24,12 @@ jobs:
           cache-dependency-path: scripts/requirements.txt
       - name: Install the checkers
         run: python -m pip install -r scripts/requirements.txt
-      - name: Manifests are fresh (conformance and stress)
-        run: python scripts/generate_manifest.py --check
-      - name: upstream resolver tests
+      - name: Script unit tests
         run: python -m unittest discover -s scripts -p 'test_*.py'
-      - name: words.yaml matches the schema
-        run: python scripts/check_words_schema.py
-      - name: grammar.xml matches the DTD
-        run: python scripts/check_dtd.py
-      - name: docs/grammars.md and stress/README.md list every fixture
-        run: python scripts/check_grammars_md.py
-      - name: FieldWorks witnesses are well formed
-        run: python scripts/check_fwdata.py
+      - name: Every check (status.yaml, schema, derived files, DTD, docs, witnesses, calibration, links, privacy)
+        run: python scripts/suite.py check
       - name: Constructs, coverage and words agree
         run: python parity-check.py
-      - name: coverage.csv and rules.csv match the fixtures
-        run: python scripts/check_coverage.py
-      - name: Calibration families are well formed
-        run: python scripts/check_calibration.py
-      - name: Relative links resolve
-        run: python scripts/check_links.py
       - name: No private paths, emails or user names
         env:
           # Optional repository variable: comma-separated literal terms that must never appear.

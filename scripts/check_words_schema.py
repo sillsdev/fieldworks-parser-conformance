@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate every words.yaml (fixtures and stress) and the manifest against their JSON Schemas.
+"""Validate every words.yaml (fixtures and stress) against its JSON Schema.
 
 Needs PyYAML and jsonschema (pip install -r scripts/requirements.txt). Also validates each optional whynot.yaml sidecar against schema/whynot.schema.json (PROTOCOL.md section 11)
 and resolves its ids in grammar.xml. Also fails any words.yaml that
@@ -74,14 +74,9 @@ def main() -> int:
         problems += whynot_problems(directory, whynot_validator, data)
         if "fieldworks_producible" in data:
             problems.append(f"{name}/words.yaml: fieldworks_producible is dropped (ADR 0004)")
-    manifest_schema = json.loads((ROOT / "schema" / "conformance-manifest.schema.json").read_text(encoding="utf-8"))
-    Draft202012Validator.check_schema(manifest_schema)
-    manifest = json.loads((ROOT / "generated" / "hc-conformance-manifest.v2.json").read_text(encoding="utf-8"))
-    for error in Draft202012Validator(manifest_schema).iter_errors(manifest):
-        problems.append(f"manifest: {'/'.join(str(p) for p in error.absolute_path)}: {error.message[:200]}")
     for problem in problems:
         print(problem)
-    print(f"words schema: {checked} words.yaml files + manifest, {len(problems)} problems")
+    print(f"words schema: {checked} words.yaml files, {len(problems)} problems")
     return 1 if problems else 0
 
 

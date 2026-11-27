@@ -29,15 +29,8 @@ Then follow [AGENTS.md](AGENTS.md).
 From the repository root, with `python -m pip install -r scripts/requirements.txt` done once:
 
 ```
-python3 scripts/generate_manifest.py --check
-python3 scripts/check_words_schema.py
-python3 scripts/check_dtd.py
-python3 scripts/check_grammars_md.py
-python3 scripts/check_fwdata.py
-python3 scripts/check_coverage.py
+python3 scripts/suite.py check
 python3 parity-check.py
-python3 scripts/check_links.py
-python3 scripts/privacy_lint.py
 ```
 
 CI runs the same scripts (`.github/workflows/checks.yml`). Do not push on a partial run.

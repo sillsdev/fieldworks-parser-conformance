@@ -9,7 +9,7 @@ Exits NONZERO on any violation, so it can gate CI and the delete commit.
 Checks (ledger "Floor summary (G4 parity check keys)"):
   A. Provenance    -- every v1 manifest.json 'provenance' string appears VERBATIM (exact value, not
                       substring) in some v2 words.yaml 'provenance:' field. One-way v1 -> v2.
-  B. Per-construct -- every construct named in any v1 manifest is exercised by >=1 v2 word (coverage.csv).
+  B. Per-construct -- every construct named in any v1 manifest is exercised by >=1 v2 word (derived coverage).
   C. XAmple floor  -- every construct covered by a requires:[] v1 fixture is exercised by >=1 word in a
                       requires:[] v2 grammar (quechua/latin/athabaskan or a requires:[] edge-case).
   D. Absolute      -- every constructs.txt construct except 'Tracing (TraceType)' is exercised by >=1
@@ -20,6 +20,7 @@ Once the v1 tree is deleted, A/B/C find zero v1 fixtures and report "migration c
 Usage:  python parity-check.py [conformance_root]   (default: this script's directory)
 """
 import csv
+from pathlib import Path
 import json
 import os
 import re
@@ -58,22 +59,20 @@ def discover_v1(root):
     return manifests
 
 
-def load_coverage(path):
-    """coverage.csv -> (set of all covered constructs, dict language -> set of constructs)."""
+def load_coverage(root):
+    """The coverage rows derived from the test cases -> (set of all covered constructs, dict language -> set of constructs)."""
+    sys.path.insert(0, os.path.join(root, "scripts"))
+    import derive
+
     covered = set()
     by_lang = {}
-    with open(path, encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f)
-        rows = 0
-        for row in reader:
-            rows += 1
-            construct = row["construct"]
-            lang = row["language"]
-            if construct:
-                covered.add(construct)
-                by_lang.setdefault(lang, set()).add(construct)
-    if rows == 0:
-        die(f"{path} has no data rows -- refusing to prove parity against an empty coverage table")
+    rows = derive.coverage(Path(root))[0]
+    for lang, _word, _signature, construct in rows:
+        if construct:
+            covered.add(construct)
+            by_lang.setdefault(lang, set()).add(construct)
+    if not rows:
+        die("no coverage rows -- refusing to prove parity against an empty coverage table")
     return covered, by_lang
 
 
@@ -142,24 +141,23 @@ def load_v2_words(langs_dir, edge_dir):
 def main():
     root = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(os.path.abspath(__file__))
     root = os.path.abspath(root)
-    coverage_csv = os.path.join(root, "coverage.csv")
     constructs_txt = os.path.join(root, "constructs.txt")
     langs_dir = os.path.join(root, "languages")
     edge_dir = os.path.join(root, "edge-cases")
 
-    for p in (coverage_csv, constructs_txt):
+    for p in (constructs_txt,):
         if not os.path.isfile(p):
             die(f"missing required input: {p}")
 
     checklist = load_constructs_txt(constructs_txt)
-    v2_covered, v2_by_lang = load_coverage(coverage_csv)
+    v2_covered, v2_by_lang = load_coverage(root)
     v2_provenance, v2_lang_requires = load_v2_words(langs_dir, edge_dir)
     v1 = discover_v1(root)
 
     failures = []  # list of (check, message)
     print(f"parity-check: root={root}")
     print(f"parity-check: discovered {len(v1)} v1 fixture(s), "
-          f"{len(v2_by_lang)} v2 grammar(s) in coverage.csv, "
+          f"{len(v2_by_lang)} v2 grammar(s) derived, "
           f"{len(v2_provenance)} v2 provenance string(s), {len(checklist)} constructs.txt entries")
 
     v1_present = len(v1) > 0
