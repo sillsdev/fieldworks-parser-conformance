@@ -52,3 +52,14 @@ edge-cases/nullable-disagree-unbounded-ltr-left	edge-cases/nullable-disagree-bou
 edge-cases/nullable-disagree-unbounded-ltr-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/nullable-disagree-unbounded-rtl-left	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/nullable-disagree-unbounded-rtl-right	edge-cases/nullable-disagree-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-bounded-ltr-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-bounded-rtl-left	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-bounded-rtl-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-bounded-zero-left	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-bounded-zero-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-unbounded-ltr-left	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-unbounded-ltr-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-unbounded-rtl-left	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-unbounded-rtl-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-unbounded-zero-left	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/quantified-alpha-unbounded-zero-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
