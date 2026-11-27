@@ -2,10 +2,11 @@
 """docs/renames.tsv is the contract consumers remap removed test case ids from (ADR 0005).
 
 Fails when: the header's first columns are not old_id, new_id, covered_by, wave; a live test case id appears
-in old_id (an id is never reused once retired); new_id is neither `retired` nor a live test case; covered_by
+in old_id unless its last entry maps it to itself; new_id is neither `retired` nor a live test case; covered_by
 names a test case that is not live; wave is empty or not `wave-YYYY-MM-DD`; a row is malformed or repeats an
 old_id; or an existing row changed or was removed against the merge base with origin/main (rows are only
-appended). The merge-base comparison is skipped, with a note, when git or the base is unavailable.
+appended). A restore appends `X<TAB>X<TAB><TAB>wave`: each id's last entry rules, a live id needs no entry or a
+self-mapping last entry, and a retired id (last entry not a self-mapping) never becomes another id's new_id. The merge-base comparison is skipped, with a note, when git or the base is unavailable.
 """
 import re
 import subprocess
@@ -29,7 +30,8 @@ def problems_for(lines, live, base_lines=None):
     problems = []
     if not lines or lines[0].split("\t")[: len(HEADER)] != HEADER:
         problems.append(f"{PATH}: the header must start with {'\t'.join(HEADER)}")
-    seen = set()
+    last = {}
+    rows = []
     for number, line in enumerate(lines[1:], start=2):
         cells = line.split("\t")
         if len(cells) < len(HEADER):
@@ -37,11 +39,8 @@ def problems_for(lines, live, base_lines=None):
             continue
         old_id, new_id, covered_by, wave = cells[:4]
         where = f"{PATH}:{number} ({old_id})"
-        if old_id in live:
-            problems.append(f"{where}: old_id is a live test case; a retired id is never reused")
-        if old_id in seen:
-            problems.append(f"{where}: old_id appears more than once")
-        seen.add(old_id)
+        rows.append((where, old_id, new_id))
+        last[old_id] = new_id
         if new_id != "retired" and new_id not in live:
             problems.append(f"{where}: new_id {new_id!r} is neither 'retired' nor a live test case")
         for target in filter(None, covered_by.split(",")):
@@ -49,6 +48,13 @@ def problems_for(lines, live, base_lines=None):
                 problems.append(f"{where}: covered_by {target!r} is not a live test case")
         if not WAVE.match(wave):
             problems.append(f"{where}: wave {wave!r} must be wave-YYYY-MM-DD")
+    for where, old_id, new_id in rows:
+        if old_id in live and last[old_id] != old_id:
+            problems.append(f"{where}: old_id is a live test case whose last entry does not restore it (X, X); a retired id is never reused")
+        if old_id not in live and last[old_id] == old_id:
+            problems.append(f"{where}: old_id is restored (X, X) but no live test case has that id")
+        if new_id not in ("retired", old_id) and last.get(new_id, new_id) != new_id:
+            problems.append(f"{where}: new_id {new_id!r} is a retired id; a retired id never becomes another id's new_id")
     if base_lines is not None:
         for number, old in enumerate(base_lines, start=1):
             if number > len(lines) or lines[number - 1] != old:

@@ -21,6 +21,20 @@ class Renames(unittest.TestCase):
     def test_live_old_id(self):
         self.assertTrue(run("edge-cases/a\tretired\t\twave-2026-11-27"))
 
+    def test_restore(self):
+        retire = "edge-cases/a\tretired\t\twave-2026-11-27"
+        restore = "edge-cases/a\tedge-cases/a\t\twave-2026-12-01"
+        self.assertEqual(run(retire, restore), [])
+        self.assertTrue(run(retire, restore, retire))  # retired again while still on disk
+        self.assertTrue(run("edge-cases/x\tedge-cases/x\t\twave-2026-12-01"))  # restored but absent
+
+    def test_reuse(self):
+        self.assertTrue(run("edge-cases/a\tretired\t\twave-2026-11-27", "edge-cases/b\tedge-cases/a\t\twave-2026-11-27"))
+        self.assertTrue(run("edge-cases/x\tretired\t\twave-2026-11-27", "edge-cases/y\tedge-cases/x\t\twave-2026-11-27"))
+
+    def test_short_row(self):
+        self.assertTrue(run("edge-cases/x\tretired"))
+
     def test_dangling_targets(self):
         self.assertTrue(run("edge-cases/x\tedge-cases/gone\t\twave-2026-11-27"))
         self.assertTrue(run("edge-cases/x\tretired\tedge-cases/gone\twave-2026-11-27"))
@@ -29,10 +43,6 @@ class Renames(unittest.TestCase):
     def test_wave(self):
         self.assertTrue(run("edge-cases/x\tretired\t\t"))
         self.assertTrue(run("edge-cases/x\tretired\t\t2026-11-27"))
-
-    def test_duplicate_old_id(self):
-        row = "edge-cases/x\tretired\t\twave-2026-11-27"
-        self.assertTrue(run(row, row))
 
     def test_append_only(self):
         row = "edge-cases/x\tretired\t\twave-2026-11-27"
