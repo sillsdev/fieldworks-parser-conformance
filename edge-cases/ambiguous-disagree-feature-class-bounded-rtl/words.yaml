@@ -14,12 +14,12 @@ words:
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ii'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: iy
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''iy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ia
     note: '[cell bounded-rtl] Positive witness for ambiguous disagree feature class bounded rtl: ''ia'' must retain the declared analysis.'
     parses:
@@ -27,72 +27,72 @@ words:
         rules:
           - prDoubleAlpha_bounded-rtl
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
   - word: iu
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''iu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: yi
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''yi'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: yy
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''yy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ya
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ya'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: yu
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''yu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ai
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ai'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ay
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ay'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: aa
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''aa'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: au
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''au'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
   - word: ui
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ui'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: uy
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''uy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ua
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ua'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: uu
     note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''uu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat'
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: dd
     note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ii'' must complete with no analysis.'
     expect_fail: true

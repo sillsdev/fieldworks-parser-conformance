@@ -16,7 +16,7 @@ The list has 207 fixtures: 6 languages and 201 edge cases.
 
 The tier says how often a consumer should run a test case: **core** on every pull request, **regression** and **extended** on the full run. It is computed by `scripts/tiers.py` from data the suite holds, never authored, and never part of an id; `scripts/check_grammars_md.py` fails when this table is stale. A test case is core when it is a language profile, has a FieldWorks witness, or is one of the two smallest carriers of a behaviour label (a vocabulary label, constructs.txt or labels.tsv; fewest words first, then id). Otherwise it is regression when it has an exception in `status.yaml`, is the only test case citing some bug (the last detector of a bug is never removed, ADR 0008), or has 300 or more words, and extended when it has none of these.
 
-104 core, 18 regression, 85 extended.
+105 core, 18 regression, 84 extended.
 
 | test case | tier | why |
 | --- | --- | --- |
@@ -33,7 +33,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/alias-output-featureless` | extended |  |
 | `edge-cases/alias-output-with-features` | extended |  |
 | `edge-cases/alpha-variable-name-collision` | core | carries Alpha-variable phonological environments (VariableFeature/AlphaVariables) |
-| `edge-cases/ambiguous-disagree-feature-class-bounded-rtl` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star, CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat, CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat |
+| `edge-cases/ambiguous-disagree-feature-class-bounded-rtl` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star, CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat, CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat |
 | `edge-cases/authored-null-affix-allomorph` | core | carries AffixProcessRule: prefix/suffix/circumfix/infix > null allomorph |
 | `edge-cases/boundary-first-in-narrowing-lhs` | extended |  |
 | `edge-cases/boundary-first-in-narrowing-lhs-strrep` | extended |  |
@@ -135,7 +135,7 @@ The tier says how often a consumer should run a test case: **core** on every pul
 | `edge-cases/nullable-disagree-bounded-ltr-left` | regression | only test case citing pangloss-divergence-065 |
 | `edge-cases/optional-template-composite` | extended |  |
 | `edge-cases/overridden-alpha-bounded-ltr-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat |
-| `edge-cases/partial-class-disagree-bounded-ltr-left` | extended |  |
+| `edge-cases/partial-class-disagree-bounded-ltr-left` | core | carries CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat |
 | `edge-cases/partial-feature-literal-output` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification |
 | `edge-cases/partial-feature-literal-rewrite` | core | carries RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification |
 | `edge-cases/partial-feature-no-rewrite` | extended |  |

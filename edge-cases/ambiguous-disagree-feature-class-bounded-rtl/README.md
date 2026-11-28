@@ -17,6 +17,8 @@ The grammar declares a shared symbolic feature `cell`, every segment carries its
 
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv` (wave-2026-11-27-4). The expected rows are what C# HermitCrab returned on a fresh `hc-conformance --propose` run over the merged grammar and the cell-mapped word list (sillsdev/machine `d492d1005e18358f35d8b7b9527d01e1dac9e644`).
 
+Label re-check of the `bounded-rtl` cell: on the reference, flipping the rule to left-to-right, raising the environment's upper bound to 2 or to no bound, and deleting the optional element each leave all 16 results unchanged, so neither the direction nor the bound is exercised and the old `bounded repeat` label is not evidenced. Making the element mandatory (minimum 1) changes `ia` and `au`. The 14 other words of the cell carry the alpha-variable label; `ia` and `au` carry `zero-minimum repeat`, the construct their results depend on.
+
 ## Former READMEs
 
 Each cell's own rationale, as it stood before the merge. Ids and letters in them are the former ones; the cell map above translates them.
