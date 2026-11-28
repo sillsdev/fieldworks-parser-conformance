@@ -22,94 +22,319 @@
       lapa and lipa must have no analysis; lara and lira parse as Noun and Verb; tapa parses once.
     -->
     <PartsOfSpeech>
-      <PartOfSpeech id="posV"><Name>v</Name></PartOfSpeech>
-      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+      <PartOfSpeech id="posV_enclitic-first">
+        <Name>v_enclitic-first</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_enclitic-first">
+        <Name>n_enclitic-first</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_main-first-enclitic">
+        <Name>v_main-first-enclitic</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_main-first-enclitic">
+        <Name>n_main-first-enclitic</Name>
+      </PartOfSpeech>
     </PartsOfSpeech>
-    <CharacterDefinitionTable id="t1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t1_enclitic-first">
+      <Name>Main_enclitic-first</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cL"><Representations><Representation>l</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cR"><Representations><Representation>r</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cL_enclitic-first">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_enclitic-first">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_enclitic-first">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_enclitic-first">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cR_enclitic-first">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_enclitic-first">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cL_main-first-enclitic">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_main-first-enclitic">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_main-first-enclitic">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_main-first-enclitic">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cR_main-first-enclitic">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_main-first-enclitic">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_enclitic-first">
+        <Name>Any_enclitic-first</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_main-first-enclitic">
+        <Name>Any_main-first-enclitic</Name>
+      </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t1_enclitic-first" morphologicalRuleOrder="unordered">
+        <Name>Main_enclitic-first</Name>
         <LexicalEntries>
-          <LexicalEntry id="eLaV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aLaV"><PhoneticShape>la</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>LAV</MorphemeId>
+          <LexicalEntry id="eLaV_enclitic-first" partOfSpeech="posV_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aLaV_enclitic-first">
+                <PhoneticShape>la</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAV_enclitic-first</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eLaN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aLaN"><PhoneticShape>la</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>LAN</MorphemeId>
+          <LexicalEntry id="eLaN_enclitic-first" partOfSpeech="posN_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aLaN_enclitic-first">
+                <PhoneticShape>la</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAN_enclitic-first</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eLiV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aLiV"><PhoneticShape>li</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>LAV</MorphemeId>
+          <LexicalEntry id="eLiV_enclitic-first" partOfSpeech="posV_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aLiV_enclitic-first">
+                <PhoneticShape>li</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAV_enclitic-first</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eLiN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aLiN"><PhoneticShape>li</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>LAN</MorphemeId>
+          <LexicalEntry id="eLiN_enclitic-first" partOfSpeech="posN_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aLiN_enclitic-first">
+                <PhoneticShape>li</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAN_enclitic-first</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eTa" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aTa"><PhoneticShape>ta</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>TA</MorphemeId>
+          <LexicalEntry id="eTa_enclitic-first" partOfSpeech="posV_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aTa_enclitic-first">
+                <PhoneticShape>ta</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_enclitic-first</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLaV_main-first-enclitic" partOfSpeech="posV_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aLaV_main-first-enclitic">
+                <PhoneticShape>fb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAV_main-first-enclitic</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLaN_main-first-enclitic" partOfSpeech="posN_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aLaN_main-first-enclitic">
+                <PhoneticShape>fb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAN_main-first-enclitic</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLiV_main-first-enclitic" partOfSpeech="posV_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aLiV_main-first-enclitic">
+                <PhoneticShape>fd</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAV_main-first-enclitic</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLiN_main-first-enclitic" partOfSpeech="posN_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aLiN_main-first-enclitic">
+                <PhoneticShape>fd</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAN_main-first-enclitic</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eTa_main-first-enclitic" partOfSpeech="posV_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aTa_main-first-enclitic">
+                <PhoneticShape>jb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>TA_main-first-enclitic</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
-      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered" morphologicalRules="mrPa mrRa">
-        <Name>Clitics</Name>
+      <Stratum characterDefinitionTable="t1_enclitic-first" morphologicalRuleOrder="unordered" morphologicalRules="mrPa_enclitic-first mrRa_enclitic-first mrPa_main-first-enclitic mrRa_main-first-enclitic">
+        <Name>Clitics_enclitic-first</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="mrPa">
-            <Name>mrPa</Name>
+          <MorphologicalRule id="mrPa_enclitic-first">
+            <Name>mrPa_enclitic-first</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="subPa">
-                <MorphologicalInput><PhoneticSequence id="stem_subPa"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><CopyFromInput index="stem_subPa" /><InsertSegments><PhoneticShape>pa</PhoneticShape></InsertSegments></MorphologicalOutput>
+              <MorphologicalSubrule id="subPa_enclitic-first">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subPa_enclitic-first">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_enclitic-first"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stem_subPa_enclitic-first"/>
+                  <InsertSegments>
+                    <PhoneticShape>pa</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PA</MorphemeId>
+            <MorphemeId>PA_enclitic-first</MorphemeId>
           </MorphologicalRule>
-          <MorphologicalRule id="mrRa">
-            <Name>mrRa</Name>
+          <MorphologicalRule id="mrRa_enclitic-first">
+            <Name>mrRa_enclitic-first</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="subRa">
-                <MorphologicalInput><PhoneticSequence id="stem_subRa"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><CopyFromInput index="stem_subRa" /><InsertSegments><PhoneticShape>ra</PhoneticShape></InsertSegments></MorphologicalOutput>
+              <MorphologicalSubrule id="subRa_enclitic-first">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subRa_enclitic-first">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_enclitic-first"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stem_subRa_enclitic-first"/>
+                  <InsertSegments>
+                    <PhoneticShape>ra</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>RA</MorphemeId>
+            <MorphemeId>RA_enclitic-first</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrPa_main-first-enclitic">
+            <Name>mrPa_main-first-enclitic</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subPa_main-first-enclitic">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subPa_main-first-enclitic">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_main-first-enclitic"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stem_subPa_main-first-enclitic"/>
+                  <InsertSegments>
+                    <PhoneticShape>gb</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PA_main-first-enclitic</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrRa_main-first-enclitic">
+            <Name>mrRa_main-first-enclitic</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subRa_main-first-enclitic">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subRa_main-first-enclitic">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_main-first-enclitic"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stem_subRa_main-first-enclitic"/>
+                  <InsertSegments>
+                    <PhoneticShape>hb</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>RA_main-first-enclitic</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="ePa" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aPa"><PhoneticShape>pa</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>PA</MorphemeId>
+          <LexicalEntry id="ePa_enclitic-first" partOfSpeech="posV_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aPa_enclitic-first">
+                <PhoneticShape>pa</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>PA_enclitic-first</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eRa" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aRa"><PhoneticShape>ra</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>RA</MorphemeId>
+          <LexicalEntry id="eRa_enclitic-first" partOfSpeech="posV_enclitic-first">
+            <Allomorphs>
+              <Allomorph id="aRa_enclitic-first">
+                <PhoneticShape>ra</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>RA_enclitic-first</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="ePa_main-first-enclitic" partOfSpeech="posV_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aPa_main-first-enclitic">
+                <PhoneticShape>gb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>PA_main-first-enclitic</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eRa_main-first-enclitic" partOfSpeech="posV_main-first-enclitic">
+            <Allomorphs>
+              <Allomorph id="aRa_main-first-enclitic">
+                <PhoneticShape>hb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>RA_main-first-enclitic</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
     </Strata>
     <MorphemeCoOccurrenceRules>
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa" otherMorphemes="eLaV" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa" otherMorphemes="eLiV" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa" otherMorphemes="eLaN" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa" otherMorphemes="eLiN" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa" otherMorphemes="eLaV" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa" otherMorphemes="eLiV" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa" otherMorphemes="eLaN" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa" otherMorphemes="eLiN" adjacency="anywhere" />
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa_enclitic-first" otherMorphemes="eLaV_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa_enclitic-first" otherMorphemes="eLiV_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa_enclitic-first" otherMorphemes="eLaN_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="ePa_enclitic-first" otherMorphemes="eLiN_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa_enclitic-first" otherMorphemes="eLaV_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa_enclitic-first" otherMorphemes="eLiV_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa_enclitic-first" otherMorphemes="eLaN_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrPa_enclitic-first" otherMorphemes="eLiN_enclitic-first" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLaV_main-first-enclitic" otherMorphemes="ePa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLaV_main-first-enclitic" otherMorphemes="mrPa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLiV_main-first-enclitic" otherMorphemes="ePa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLiV_main-first-enclitic" otherMorphemes="mrPa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLaN_main-first-enclitic" otherMorphemes="ePa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLaN_main-first-enclitic" otherMorphemes="mrPa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLiN_main-first-enclitic" otherMorphemes="ePa_main-first-enclitic" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eLiN_main-first-enclitic" otherMorphemes="mrPa_main-first-enclitic" adjacency="anywhere"/>
     </MorphemeCoOccurrenceRules>
   </Language>
 </HermitCrabInput>
