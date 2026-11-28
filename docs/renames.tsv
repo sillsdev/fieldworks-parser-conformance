@@ -106,3 +106,4 @@ edge-cases/alias-output-featureless	edge-cases/featureless-target		wave-2026-11-
 edge-cases/featureless-unused-feature	edge-cases/partial-feature-literal-output		wave-2026-11-27-8
 edge-cases/final-template-partial-root	edge-cases/final-template-partial-reachability		wave-2026-11-27-8
 edge-cases/final-template-partial-trace	edge-cases/final-template-partial-reachability		wave-2026-11-27-8
+edge-cases/metathesis-boundary-two-suffixes	edge-cases/metathesis-segment-class-union		wave-2026-11-27-8
