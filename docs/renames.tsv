@@ -85,3 +85,4 @@ edge-cases/spelling-coverage-compound-singleton-junction-root-stratum-final-chan
 edge-cases/ambiguous-disagree-feature-class-unbounded-ltr	edge-cases/ambiguous-disagree-feature-class-bounded-rtl		wave-2026-11-27-4
 edge-cases/ambiguous-disagree-mixed-plus-class	edge-cases/ambiguous-disagree-feature-class-bounded-rtl		wave-2026-11-27-4
 edge-cases/ambiguous-disagree-repeated-minus-partial-focus	edge-cases/ambiguous-disagree-feature-class-bounded-rtl		wave-2026-11-27-4
+edge-cases/partial-feature-literal-rewrite	retired	edge-cases/partial-feature-literal-output	wave-2026-11-27-5
