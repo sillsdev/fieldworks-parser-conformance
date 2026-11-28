@@ -155,6 +155,8 @@ python3 scripts/suite.py check
 python3 parity-check.py   # the engine-free migration proof; kept apart from suite.py check
 ```
 
+`parity-check.py` stays a separate script on purpose: sillsdev/machine's manifest generator and its gate tests read it as a manifest source file (`ConformanceManifestGenerator`), so folding it into `suite.py check` and deleting it needs a Machine change first. Its check D (every construct is carried by a word) is the only one still live; A to C proved the deleted v1 tree.
+
 `suite.py check` runs the `status.yaml` check, the words schema, the derived files, the DTD, the docs lists (both
 test case lists and the stress README table), the FieldWorks witnesses (stress ones too), the calibration families,
 the links and the privacy lint.
