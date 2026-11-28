@@ -37,6 +37,35 @@ class Renames(unittest.TestCase):
         self.assertTrue(run("edge-cases/a\tretired\t\twave-2026-11-27", "edge-cases/b\tedge-cases/a\t\twave-2026-11-27"))
         self.assertTrue(run("edge-cases/x\tretired\t\twave-2026-11-27", "edge-cases/y\tedge-cases/x\t\twave-2026-11-27"))
 
+    def test_chain_resolves(self):
+        rows = ("edge-cases/x\tedge-cases/y\t\twave-2026-11-27", "edge-cases/y\tedge-cases/a\t\twave-2026-11-28")
+        self.assertEqual(run(*rows), [])
+        last = {"edge-cases/x": "edge-cases/y", "edge-cases/y": "edge-cases/a"}
+        self.assertEqual(c.resolve("edge-cases/x", last, LIVE), "edge-cases/a")
+        self.assertEqual(c.resolve("edge-cases/y", last, LIVE), "edge-cases/a")
+        self.assertEqual(c.resolve("edge-cases/b", last, LIVE), "edge-cases/b")
+
+    def test_chain_ending_retired(self):
+        self.assertEqual(run("edge-cases/x\tedge-cases/y\t\twave-2026-11-27", "edge-cases/y\tretired\t\twave-2026-11-28"), [])
+        self.assertEqual(c.resolve("edge-cases/x", {"edge-cases/x": "edge-cases/y", "edge-cases/y": "retired"}, LIVE), "retired")
+
+    def test_long_chain(self):
+        rows = [f"edge-cases/n{i}\tedge-cases/n{i + 1}\t\twave-2026-11-27" for i in range(5)] + ["edge-cases/n5\tedge-cases/a\t\twave-2026-11-28"]
+        self.assertEqual(run(*rows), [])
+
+    def test_cycle(self):
+        last = {"edge-cases/x": "edge-cases/y", "edge-cases/y": "edge-cases/x"}
+        self.assertEqual(c.resolve("edge-cases/x", last, LIVE), c.CYCLE)
+        self.assertTrue(run("edge-cases/x\tedge-cases/y\t\twave-2026-11-27", "edge-cases/y\tedge-cases/x\t\twave-2026-11-28"))
+        self.assertEqual(c.resolve("edge-cases/x", {"edge-cases/x": "edge-cases/x2", "edge-cases/x2": "edge-cases/x3", "edge-cases/x3": "edge-cases/x2"}, LIVE), c.CYCLE)
+
+    def test_chain_dangling_end(self):
+        self.assertTrue(run("edge-cases/x\tedge-cases/y\t\twave-2026-11-27", "edge-cases/y\tedge-cases/gone\t\twave-2026-11-28"))
+
+    def test_target_already_remapped(self):
+        # y was remapped by an earlier row, so it was not live when the later row named it
+        self.assertTrue(run("edge-cases/y\tedge-cases/a\t\twave-2026-11-27", "edge-cases/x\tedge-cases/y\t\twave-2026-11-28"))
+
     def test_short_row(self):
         self.assertTrue(run("edge-cases/x\tretired"))
 
