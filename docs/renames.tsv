@@ -90,3 +90,4 @@ edge-cases/partial-feature-singleton-rewrite	retired	edge-cases/partial-feature-
 edge-cases/spelling-coverage-compound-depth-mpr-restricted	retired	edge-cases/spelling-coverage-compound-depth-mpr-output	wave-2026-11-27-5
 edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix	edge-cases/epenthesis-then-swap-with-root-keeps-its-edge		wave-2026-11-27-6
 edge-cases/partial-inherited-output-feature	edge-cases/partial-inherited-output-target		wave-2026-11-27-6
+edge-cases/right-to-left-anchor-environment	edge-cases/right-to-left-bounded-quantifier-rewrite		wave-2026-11-27-6

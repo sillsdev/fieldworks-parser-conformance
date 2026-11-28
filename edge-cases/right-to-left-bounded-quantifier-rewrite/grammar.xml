@@ -42,114 +42,378 @@
          phonological-subrule reversal collapses feature-identical segments into a bracketed
          alternates class (e.g. "[aect]") instead of the literal input string. -->
     <PartsOfSpeech>
-      <PartOfSpeech id="posN"><Name>N</Name></PartOfSpeech>
+      <PartOfSpeech id="posN_bounded-quantifier">
+        <Name>N_bounded-quantifier</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posAny_anchor-environment">
+        <Name>Any_anchor-environment</Name>
+      </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="featCons"><Name>cons</Name><Symbols><Symbol id="fConsPlus">+</Symbol><Symbol id="fConsMinus">-</Symbol></Symbols></SymbolicFeature>
-      <SymbolicFeature id="featVoice"><Name>voice</Name><Symbols><Symbol id="fVoicePlus">+</Symbol><Symbol id="fVoiceMinus">-</Symbol></Symbols></SymbolicFeature>
-      <SymbolicFeature id="featHigh"><Name>high</Name><Symbols><Symbol id="fHighLow">low</Symbol><Symbol id="fHighMid">mid</Symbol><Symbol id="fHighNA">na</Symbol><Symbol id="fHighO">o</Symbol><Symbol id="fHighU">u</Symbol><Symbol id="fHighD">d</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featCons_bounded-quantifier">
+        <Name>cons_bounded-quantifier</Name>
+        <Symbols>
+          <Symbol id="fConsPlus_bounded-quantifier">+</Symbol>
+          <Symbol id="fConsMinus_bounded-quantifier">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featVoice_bounded-quantifier">
+        <Name>voice_bounded-quantifier</Name>
+        <Symbols>
+          <Symbol id="fVoicePlus_bounded-quantifier">+</Symbol>
+          <Symbol id="fVoiceMinus_bounded-quantifier">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHigh_bounded-quantifier">
+        <Name>high_bounded-quantifier</Name>
+        <Symbols>
+          <Symbol id="fHighLow_bounded-quantifier">low</Symbol>
+          <Symbol id="fHighMid_bounded-quantifier">mid</Symbol>
+          <Symbol id="fHighNA_bounded-quantifier">na</Symbol>
+          <Symbol id="fHighO_bounded-quantifier">o</Symbol>
+          <Symbol id="fHighU_bounded-quantifier">u</Symbol>
+          <Symbol id="fHighD_bounded-quantifier">d</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featId_anchor-environment">
+        <Name>id_anchor-environment</Name>
+        <Symbols>
+          <Symbol id="symA_anchor-environment">a</Symbol>
+          <Symbol id="symE_anchor-environment">e</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_bounded-quantifier">cell bounded-quantifier</Symbol>
+          <Symbol id="cell_anchor-environment">cell anchor-environment</Symbol>
+        </Symbols>
+      </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t1_bounded-quantifier">
+      <Name>Main_bounded-quantifier</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="ca"><Representations><Representation>a</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsMinus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighLow" />
+        <SegmentDefinition id="ca_bounded-quantifier">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsMinus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoicePlus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighLow_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
         </SegmentDefinition>
-        <SegmentDefinition id="ce"><Representations><Representation>e</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsMinus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighMid" />
+        <SegmentDefinition id="ce_bounded-quantifier">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsMinus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoicePlus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighMid_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cc"><Representations><Representation>c</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsPlus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighNA" />
+        <SegmentDefinition id="cc_bounded-quantifier">
+          <Representations>
+            <Representation>c</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsPlus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoicePlus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighNA_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
         </SegmentDefinition>
-        <SegmentDefinition id="ct"><Representations><Representation>t</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsPlus" /><FeatureValue feature="featVoice" symbolValues="fVoiceMinus" /><FeatureValue feature="featHigh" symbolValues="fHighNA" />
+        <SegmentDefinition id="ct_bounded-quantifier">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsPlus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoiceMinus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighNA_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
         </SegmentDefinition>
-        <SegmentDefinition id="co"><Representations><Representation>o</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsMinus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighO" />
+        <SegmentDefinition id="co_bounded-quantifier">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsMinus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoicePlus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighO_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cu"><Representations><Representation>u</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsMinus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighU" />
+        <SegmentDefinition id="cu_bounded-quantifier">
+          <Representations>
+            <Representation>u</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsMinus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoicePlus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighU_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cd"><Representations><Representation>d</Representation></Representations>
-          <FeatureValue feature="featCons" symbolValues="fConsPlus" /><FeatureValue feature="featVoice" symbolValues="fVoicePlus" /><FeatureValue feature="featHigh" symbolValues="fHighD" />
+        <SegmentDefinition id="cd_bounded-quantifier">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_bounded-quantifier" symbolValues="fConsPlus_bounded-quantifier"/>
+          <FeatureValue feature="featVoice_bounded-quantifier" symbolValues="fVoicePlus_bounded-quantifier"/>
+          <FeatureValue feature="featHigh_bounded-quantifier" symbolValues="fHighD_bounded-quantifier"/>
+          <FeatureValue feature="cell" symbolValues="cell_bounded-quantifier"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ca_anchor-environment">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="featId_anchor-environment" symbolValues="symA_anchor-environment"/>
+          <FeatureValue feature="cell" symbolValues="cell_anchor-environment"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="ce_anchor-environment">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="featId_anchor-environment" symbolValues="symE_anchor-environment"/>
+          <FeatureValue feature="cell" symbolValues="cell_anchor-environment"/>
         </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <SegmentNaturalClass id="ncVowel"><Name>Vowel</Name><Segment segment="ca" /></SegmentNaturalClass>
-      <SegmentNaturalClass id="ncCons"><Name>Cons</Name><Segment segment="cc" /></SegmentNaturalClass>
-      <SegmentNaturalClass id="ncTrig"><Name>Trigger</Name><Segment segment="ct" /></SegmentNaturalClass>
-      <SegmentNaturalClass id="ncO"><Name>O</Name><Segment segment="co" /></SegmentNaturalClass>
-      <SegmentNaturalClass id="ncD"><Name>D</Name><Segment segment="cd" /></SegmentNaturalClass>
+      <SegmentNaturalClass id="ncVowel_bounded-quantifier">
+        <Name>Vowel_bounded-quantifier</Name>
+        <Segment segment="ca_bounded-quantifier"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncCons_bounded-quantifier">
+        <Name>Cons_bounded-quantifier</Name>
+        <Segment segment="cc_bounded-quantifier"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncTrig_bounded-quantifier">
+        <Name>Trigger_bounded-quantifier</Name>
+        <Segment segment="ct_bounded-quantifier"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncO_bounded-quantifier">
+        <Name>O_bounded-quantifier</Name>
+        <Segment segment="co_bounded-quantifier"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncD_bounded-quantifier">
+        <Name>D_bounded-quantifier</Name>
+        <Segment segment="cd_bounded-quantifier"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncA_anchor-environment">
+        <Name>A_anchor-environment</Name>
+        <Segment segment="ca_anchor-environment"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncE_anchor-environment">
+        <Name>E_anchor-environment</Name>
+        <Segment segment="ce_anchor-environment"/>
+      </SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
-      <PhonologicalRule id="prRtlBq" multipleApplicationOrder="rightToLeftIterative">
-        <Name>rtlBoundedQuantifierDemo</Name>
-        <PhoneticInput><PhoneticSequence><SimpleContext naturalClass="ncVowel" /></PhoneticSequence></PhoneticInput>
+      <PhonologicalRule id="prRtlBq_bounded-quantifier" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlBoundedQuantifierDemo_bounded-quantifier</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncVowel_bounded-quantifier"/>
+          </PhoneticSequence>
+        </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
-            <PhoneticOutput><PhoneticSequence><Segment segment="ce" /></PhoneticSequence></PhoneticOutput>
-            <Environment><RightEnvironment><PhoneticTemplate><PhoneticSequence>
-              <OptionalSegmentSequence min="0" max="2"><SimpleContext naturalClass="ncCons" /></OptionalSegmentSequence>
-              <SimpleContext naturalClass="ncTrig" />
-            </PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_bounded-quantifier"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="0" max="2">
+                      <SimpleContext naturalClass="ncCons_bounded-quantifier"/>
+                    </OptionalSegmentSequence>
+                    <SimpleContext naturalClass="ncTrig_bounded-quantifier"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
       <!-- Second rule, on segments the first rule never touches (o, u, d): the same shape with a quantifier group of TWO children,
            (c d){1,2} t. A reversal that left the two children in document order would read the group as d then c. -->
-      <PhonologicalRule id="prRtlBq2" multipleApplicationOrder="rightToLeftIterative">
-        <Name>rtlMultiChildQuantifierDemo</Name>
-        <PhoneticInput><PhoneticSequence><SimpleContext naturalClass="ncO" /></PhoneticSequence></PhoneticInput>
+      <PhonologicalRule id="prRtlBq2_bounded-quantifier" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlMultiChildQuantifierDemo_bounded-quantifier</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncO_bounded-quantifier"/>
+          </PhoneticSequence>
+        </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
-            <PhoneticOutput><PhoneticSequence><Segment segment="cu" /></PhoneticSequence></PhoneticOutput>
-            <Environment><RightEnvironment><PhoneticTemplate><PhoneticSequence>
-              <OptionalSegmentSequence min="1" max="2"><SimpleContext naturalClass="ncCons" /><SimpleContext naturalClass="ncD" /></OptionalSegmentSequence>
-              <SimpleContext naturalClass="ncTrig" />
-            </PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cu_bounded-quantifier"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <OptionalSegmentSequence min="1" max="2">
+                      <SimpleContext naturalClass="ncCons_bounded-quantifier"/>
+                      <SimpleContext naturalClass="ncD_bounded-quantifier"/>
+                    </OptionalSegmentSequence>
+                    <SimpleContext naturalClass="ncTrig_bounded-quantifier"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prRtlAnchor_anchor-environment" multipleApplicationOrder="rightToLeftIterative">
+        <Name>rtlAnchorDemo_anchor-environment</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncA_anchor-environment"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_anchor-environment"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence/>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <!-- Spreading rule: "a" becomes "e" immediately after an "e". Applied iteratively, each
+           rewrite can feed the NEXT candidate position's own left environment, so the scan direction
+           decides how far the spread reaches in a single pass, unlike prRtlAnchor above, whose
+           anchored environment can only ever match once regardless of direction: that is why
+           prRtlAnchor alone never evidenced this fixture's own headline multipleApplicationOrder
+           value, and why ROOT3 exists to give it a rule where direction actually changes the result. -->
+      <PhonologicalRule id="prSpread_anchor-environment" multipleApplicationOrder="rightToLeftIterative">
+        <Name>spreadEAfterE_anchor-environment</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncA_anchor-environment"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="ce_anchor-environment"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncE_anchor-environment"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+            </Environment>
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="t1" phonologicalRules="prRtlBq prRtlBq2">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t1_bounded-quantifier" phonologicalRules="prRtlBq_bounded-quantifier prRtlBq2_bounded-quantifier prRtlAnchor_anchor-environment prSpread_anchor-environment">
+        <Name>Main_bounded-quantifier</Name>
         <LexicalEntries>
-          <LexicalEntry id="eRoot1">
-            <Allomorphs><Allomorph id="aRoot1"><PhoneticShape>acat</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT1</MorphemeId>
+          <LexicalEntry id="eRoot1_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot1_bounded-quantifier">
+                <PhoneticShape>acat</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_bounded-quantifier</MorphemeId>
             <Gloss>root1</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot2">
-            <Allomorphs><Allomorph id="aRoot2"><PhoneticShape>acct</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT2</MorphemeId>
+          <LexicalEntry id="eRoot2_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot2_bounded-quantifier">
+                <PhoneticShape>acct</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_bounded-quantifier</MorphemeId>
             <Gloss>root2</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot3">
-            <Allomorphs><Allomorph id="aRoot3"><PhoneticShape>accct</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT3</MorphemeId>
+          <LexicalEntry id="eRoot3_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot3_bounded-quantifier">
+                <PhoneticShape>accct</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_bounded-quantifier</MorphemeId>
             <Gloss>root3</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot4">
-            <Allomorphs><Allomorph id="aRoot4"><PhoneticShape>ocdt</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT4</MorphemeId>
+          <LexicalEntry id="eRoot4_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot4_bounded-quantifier">
+                <PhoneticShape>ocdt</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT4_bounded-quantifier</MorphemeId>
             <Gloss>root4</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot5">
-            <Allomorphs><Allomorph id="aRoot5"><PhoneticShape>ocdcdt</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT5</MorphemeId>
+          <LexicalEntry id="eRoot5_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot5_bounded-quantifier">
+                <PhoneticShape>ocdcdt</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT5_bounded-quantifier</MorphemeId>
             <Gloss>root5</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot6">
-            <Allomorphs><Allomorph id="aRoot6"><PhoneticShape>ocdcdcdt</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT6</MorphemeId>
+          <LexicalEntry id="eRoot6_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot6_bounded-quantifier">
+                <PhoneticShape>ocdcdcdt</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT6_bounded-quantifier</MorphemeId>
             <Gloss>root6</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eRoot7">
-            <Allomorphs><Allomorph id="aRoot7"><PhoneticShape>odct</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT7</MorphemeId>
+          <LexicalEntry id="eRoot7_bounded-quantifier">
+            <Allomorphs>
+              <Allomorph id="aRoot7_bounded-quantifier">
+                <PhoneticShape>odct</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT7_bounded-quantifier</MorphemeId>
             <Gloss>root7</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot1_anchor-environment">
+            <Allomorphs>
+              <Allomorph id="aRoot1_anchor-environment">
+                <PhoneticShape>bbb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT1_anchor-environment</MorphemeId>
+            <Gloss>root1</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot2_anchor-environment">
+            <Allomorphs>
+              <Allomorph id="aRoot2_anchor-environment">
+                <PhoneticShape>bb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_anchor-environment</MorphemeId>
+            <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot3_anchor-environment">
+            <Allomorphs>
+              <Allomorph id="aRoot3_anchor-environment">
+                <PhoneticShape>fbbb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT3_anchor-environment</MorphemeId>
+            <Gloss>root3</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
