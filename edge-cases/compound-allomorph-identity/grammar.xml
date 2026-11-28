@@ -1,12 +1,208 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<HermitCrabInput><Language><Name>CompoundIdentity</Name>
-<PartsOfSpeech><PartOfSpeech id="v"><Name>V</Name></PartOfSpeech></PartsOfSpeech>
-<PhonologicalFeatureSystem><SymbolicFeature id="f"><Name>f</Name><Symbols><Symbol id="fP">+</Symbol><Symbol id="fM">-</Symbol></Symbols></SymbolicFeature><SymbolicFeature id="g"><Name>g</Name><Symbols><Symbol id="gP">+</Symbol><Symbol id="gM">-</Symbol></Symbols></SymbolicFeature></PhonologicalFeatureSystem>
-<CharacterDefinitionTable id="t"><Name>Main</Name><SegmentDefinitions><SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations><FeatureValue feature="f" symbolValues="fP"/><FeatureValue feature="g" symbolValues="gP"/></SegmentDefinition><SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations><FeatureValue feature="f" symbolValues="fM"/><FeatureValue feature="g" symbolValues="gM"/></SegmentDefinition></SegmentDefinitions><BoundaryDefinitions><BoundaryDefinition id="b"><Representations><Representation>^0</Representation></Representations></BoundaryDefinition></BoundaryDefinitions></CharacterDefinitionTable>
-<NaturalClasses><FeatureNaturalClass id="any"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
-<Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1"><Name>Main</Name><MorphologicalRuleDefinitions>
-<CompoundingRule id="cr1"><Name>Compound</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="h0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="n0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="h0" /><CopyFromInput index="n0" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule>
-</MorphologicalRuleDefinitions>
-<LexicalEntries><LexicalEntry id="root" partOfSpeech="v"><Allomorphs><Allomorph id="root0"><PhoneticShape>a</PhoneticShape></Allomorph><Allomorph id="root1"><PhoneticShape>p</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ROOT</MorphemeId></LexicalEntry></LexicalEntries>
-</Stratum></Strata></Language></HermitCrabInput>
+<HermitCrabInput>
+  <Language>
+    <Name>CompoundIdentity</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="v_plain">
+        <Name>V_plain</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_separated">
+        <Name>V_separated</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="f_plain">
+        <Name>f_plain</Name>
+        <Symbols>
+          <Symbol id="fP_plain">+</Symbol>
+          <Symbol id="fM_plain">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_plain">
+        <Name>g_plain</Name>
+        <Symbols>
+          <Symbol id="gP_plain">+</Symbol>
+          <Symbol id="gM_plain">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_separated">
+        <Name>f_separated</Name>
+        <Symbols>
+          <Symbol id="fP_separated">+</Symbol>
+          <Symbol id="fM_separated">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_separated">
+        <Name>g_separated</Name>
+        <Symbols>
+          <Symbol id="gP_separated">+</Symbol>
+          <Symbol id="gM_separated">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_plain">cell plain</Symbol>
+          <Symbol id="cell_separated">cell separated</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="t_plain">
+      <Name>Main_plain</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA_plain">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="f_plain" symbolValues="fP_plain"/>
+          <FeatureValue feature="g_plain" symbolValues="gP_plain"/>
+          <FeatureValue feature="cell" symbolValues="cell_plain"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_plain">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f_plain" symbolValues="fM_plain"/>
+          <FeatureValue feature="g_plain" symbolValues="gM_plain"/>
+          <FeatureValue feature="cell" symbolValues="cell_plain"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_separated">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_separated" symbolValues="fP_separated"/>
+          <FeatureValue feature="g_separated" symbolValues="gP_separated"/>
+          <FeatureValue feature="cell" symbolValues="cell_separated"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_separated">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_separated" symbolValues="fM_separated"/>
+          <FeatureValue feature="g_separated" symbolValues="gM_separated"/>
+          <FeatureValue feature="cell" symbolValues="cell_separated"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+      <BoundaryDefinitions>
+        <BoundaryDefinition id="b">
+          <Representations>
+            <Representation>^0</Representation>
+          </Representations>
+        </BoundaryDefinition>
+      </BoundaryDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="any_plain">
+        <Name>Any_plain</Name>
+        <FeatureValue feature="cell" symbolValues="cell_plain"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_separated">
+        <Name>Any_separated</Name>
+        <FeatureValue feature="cell" symbolValues="cell_separated"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t_plain" morphologicalRuleOrder="unordered" morphologicalRules="cr1_plain cr1_separated PRE_separated">
+        <Name>Main_plain</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="cr1_plain">
+            <Name>Compound_plain</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="h0_plain">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_plain"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="n0_plain">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_plain"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="h0_plain"/>
+                  <CopyFromInput index="n0_plain"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_separated">
+            <Name>Compound_separated</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="h0_separated">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_separated"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="n0_separated">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_separated"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="h0_separated"/>
+                  <CopyFromInput index="n0_separated"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_separated" requiredPartsOfSpeech="v_separated" multipleApplication="1">
+            <Name>PRE_separated</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_separated">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PREStem0_separated">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_separated"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>d^0</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PREStem0_separated"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_separated</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="root_plain" partOfSpeech="v_plain">
+            <Allomorphs>
+              <Allomorph id="root0_plain">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+              <Allomorph id="root1_plain">
+                <PhoneticShape>p</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_plain</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="root_separated" partOfSpeech="v_separated">
+            <Allomorphs>
+              <Allomorph id="root0_separated">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+              <Allomorph id="root1_separated">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_separated</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

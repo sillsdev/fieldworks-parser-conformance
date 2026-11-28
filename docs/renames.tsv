@@ -63,3 +63,4 @@ edge-cases/quantified-alpha-unbounded-rtl-left	edge-cases/quantified-alpha-bound
 edge-cases/quantified-alpha-unbounded-rtl-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/quantified-alpha-unbounded-zero-left	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
 edge-cases/quantified-alpha-unbounded-zero-right	edge-cases/quantified-alpha-bounded-ltr-left		wave-2026-11-27-3
+edge-cases/compound-allomorph-identity-separated	edge-cases/compound-allomorph-identity		wave-2026-11-27-4
