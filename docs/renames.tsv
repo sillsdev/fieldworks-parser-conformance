@@ -119,3 +119,5 @@ edge-cases/adhoc-prohibition-variant-main-first-enclitic	edge-cases/adhoc-prohib
 edge-cases/boundary-leftover-in-narrowing-lhs-strrep	edge-cases/boundary-first-in-narrowing-lhs-strrep		wave-2026-11-27-9
 edge-cases/circumfix-non-first-allomorph-selection	edge-cases/circumfix-infix-interior-action-precedence		wave-2026-11-27-9
 edge-cases/circumfix-reduplication-precedence	edge-cases/circumfix-infix-interior-action-precedence		wave-2026-11-27-9
+edge-cases/truncate-morphotactic-subsumption	edge-cases/truncate-morphotactic-copy-u		wave-2026-11-27-9
+edge-cases/truncate-morphotactic-identity	edge-cases/truncate-morphotactic-copy-u		wave-2026-11-27-9

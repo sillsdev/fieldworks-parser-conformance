@@ -1,71 +1,250 @@
-language: TruncateRulesProbeCopyU
-inspired_by: ["Machine #480 truncate-morphotactic with the retained-host copy-U discriminator"]
+language: TruncateRulesProbe
+inspired_by:
+  - 'Machine #480 truncate-morphotactic with the retained-host copy-U discriminator'
+  - synthetic affix truncation and inserted-host attribution probe
+  - 'synthetic AffixProcessRule truncation probe (Machine #480 truncate-morphotactic)'
 sources:
-  - "Machine #480 truncate-morphotactic rules; A/B/C subtrees unchanged from the explicit-ID companion"
-  - "Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e"
+  - 'Machine #480 truncate-morphotactic rules; A/B/C subtrees unchanged from the explicit-ID companion'
+  - 'Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e'
+  - 'Machine #480 truncate-morphotactic at fa8d9b25; companion adds root ag, prefix X, and explicit MorphemeId values'
+  - 'Machine #480 truncate-morphotactic at fa8d9b25; companion adds explicit MorphemeId values'
 requires: []
 words:
   - word: gau
-    note: "Nine parses, including the A/B/C histories followed by U; preserve the duplicate ROOT+C+A+U identity with both application histories."
-    provenance: "Combined Machine #500+#506 C# complete identities and forward application orders"
+    note: '[cell copy-u] Nine parses, including the A/B/C histories followed by U; preserve the duplicate ROOT+C+A+U identity with both application histories.'
+    provenance: 'Combined Machine #500+#506 C# complete identities and forward application orders'
     parses:
-      - signature: "ROOT+A+C+B+U|gau"
-        gloss: "32-3SGA-3SGB-3SGC-U"
-        rules: [mruleTruncTrail, mruleTruncLead, mruleTruncOptIns, mrU]
-      - signature: "ROOT+B+C+A+U|gau"
-        gloss: "32-3SGB-3SGA-3SGC-U"
-        rules: [mruleTruncLead, mruleTruncTrail, mruleTruncOptIns, mrU]
-      - signature: "B+A+C+ROOT+U|gau"
-        gloss: "32-3SGB-3SGC-3SGA-U"
-        rules: [mruleTruncLead, mruleTruncOptIns, mruleTruncTrail, mrU]
-      - signature: "C+B+ROOT+A+U|gau"
-        gloss: "32-3SGA-3SGB-U-3SGC"
-        rules: [mruleTruncTrail, mruleTruncLead, mrU, mruleTruncOptIns]
-      - signature: "C+A+ROOT+B+U|gau"
-        gloss: "32-3SGB-3SGA-U-3SGC"
-        rules: [mruleTruncLead, mruleTruncTrail, mrU, mruleTruncOptIns]
-      - signature: "ROOT+U+C+A+B|gau"
-        gloss: "32-3SGA-U-3SGB-3SGC"
-        rules: [mruleTruncTrail, mrU, mruleTruncLead, mruleTruncOptIns]
-      - signature: "ROOT+C+A+U|gau"
-        gloss: "32-3SGA-3SGC-U"
-        rules: [mruleTruncTrail, mruleTruncOptIns, mrU]
-      - signature: "C+A+ROOT+U|gau"
-        gloss: "32-3SGC-3SGA-U"
-        rules: [mruleTruncOptIns, mruleTruncTrail, mrU]
-      - signature: "ROOT+C+A+U|gau"
-        gloss: "32-3SGA-U-3SGC"
-        rules: [mruleTruncTrail, mrU, mruleTruncOptIns]
+      - signature: ROOT_copy-u+A_copy-u+C_copy-u+B_copy-u+U_copy-u|gau
+        gloss: 32-3SGA-3SGB-3SGC-U
+        rules:
+          - mruleTruncTrail_copy-u
+          - mruleTruncLead_copy-u
+          - mruleTruncOptIns_copy-u
+          - mrU_copy-u
+      - signature: ROOT_copy-u+B_copy-u+C_copy-u+A_copy-u+U_copy-u|gau
+        gloss: 32-3SGB-3SGA-3SGC-U
+        rules:
+          - mruleTruncLead_copy-u
+          - mruleTruncTrail_copy-u
+          - mruleTruncOptIns_copy-u
+          - mrU_copy-u
+      - signature: B_copy-u+A_copy-u+C_copy-u+ROOT_copy-u+U_copy-u|gau
+        gloss: 32-3SGB-3SGC-3SGA-U
+        rules:
+          - mruleTruncLead_copy-u
+          - mruleTruncOptIns_copy-u
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+      - signature: C_copy-u+B_copy-u+ROOT_copy-u+A_copy-u+U_copy-u|gau
+        gloss: 32-3SGA-3SGB-U-3SGC
+        rules:
+          - mruleTruncTrail_copy-u
+          - mruleTruncLead_copy-u
+          - mrU_copy-u
+          - mruleTruncOptIns_copy-u
+      - signature: C_copy-u+A_copy-u+ROOT_copy-u+B_copy-u+U_copy-u|gau
+        gloss: 32-3SGB-3SGA-U-3SGC
+        rules:
+          - mruleTruncLead_copy-u
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+          - mruleTruncOptIns_copy-u
+      - signature: ROOT_copy-u+U_copy-u+C_copy-u+A_copy-u+B_copy-u|gau
+        gloss: 32-3SGA-U-3SGB-3SGC
+        rules:
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+          - mruleTruncLead_copy-u
+          - mruleTruncOptIns_copy-u
+      - signature: ROOT_copy-u+C_copy-u+A_copy-u+U_copy-u|gau
+        gloss: 32-3SGA-3SGC-U
+        rules:
+          - mruleTruncTrail_copy-u
+          - mruleTruncOptIns_copy-u
+          - mrU_copy-u
+      - signature: C_copy-u+A_copy-u+ROOT_copy-u+U_copy-u|gau
+        gloss: 32-3SGC-3SGA-U
+        rules:
+          - mruleTruncOptIns_copy-u
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+      - signature: ROOT_copy-u+C_copy-u+A_copy-u+U_copy-u|gau
+        gloss: 32-3SGA-U-3SGC
+        rules:
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+          - mruleTruncOptIns_copy-u
     exercises:
-      - "AffixProcessRule: subtraction/truncation"
-
+      - 'AffixProcessRule: subtraction/truncation'
   - word: au
-    note: "Three parses; retain all distinct morph orders and histories."
-    provenance: "Combined Machine #500+#506 C# complete identities and forward application orders"
+    note: '[cell copy-u] Three parses; retain all distinct morph orders and histories.'
+    provenance: 'Combined Machine #500+#506 C# complete identities and forward application orders'
     parses:
-      - signature: "B+ROOT+A+U|au"
-        gloss: "32-3SGA-3SGB-U"
-        rules: [mruleTruncTrail, mruleTruncLead, mrU]
-      - signature: "A+ROOT+B+U|au"
-        gloss: "32-3SGB-3SGA-U"
-        rules: [mruleTruncLead, mruleTruncTrail, mrU]
-      - signature: "ROOT+A+U+B|au"
-        gloss: "32-3SGA-U-3SGB"
-        rules: [mruleTruncTrail, mrU, mruleTruncLead]
+      - signature: B_copy-u+ROOT_copy-u+A_copy-u+U_copy-u|au
+        gloss: 32-3SGA-3SGB-U
+        rules:
+          - mruleTruncTrail_copy-u
+          - mruleTruncLead_copy-u
+          - mrU_copy-u
+      - signature: A_copy-u+ROOT_copy-u+B_copy-u+U_copy-u|au
+        gloss: 32-3SGB-3SGA-U
+        rules:
+          - mruleTruncLead_copy-u
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+      - signature: ROOT_copy-u+A_copy-u+U_copy-u+B_copy-u|au
+        gloss: 32-3SGA-U-3SGB
+        rules:
+          - mruleTruncTrail_copy-u
+          - mrU_copy-u
+          - mruleTruncLead_copy-u
     exercises:
-      - "AffixProcessRule: subtraction/truncation"
-
+      - 'AffixProcessRule: subtraction/truncation'
   - word: sagu
-    note: "Positive copy-U control."
+    note: '[cell copy-u] Positive copy-U control.'
     parses:
-      - signature: "ROOT+U|sagu"
-        gloss: "32-U"
-        rules: [mrU]
+      - signature: ROOT_copy-u+U_copy-u|sagu
+        gloss: 32-U
+        rules:
+          - mrU_copy-u
     exercises:
-      - "AffixProcessRule: subtraction/truncation"
-
+      - 'AffixProcessRule: subtraction/truncation'
   - word: bau
-    note: "Impossible negative control."
+    note: '[cell copy-u] Impossible negative control.'
     expect_fail: true
     exercises:
-      - "AffixProcessRule: subtraction/truncation"
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: dh
+    note: '[cell subsumption] Root control and X then B, where B removes X without inserting material.'
+    parses:
+      - signature: ROOTAG_subsumption|dh
+        rules: []
+      - signature: ROOTAG_subsumption+X_subsumption+B_subsumption|dh
+        rules:
+          - mrulePrefixX_subsumption
+          - mruleTruncLead_subsumption
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: kdh
+    note: '[cell subsumption] X prefixes s and preserves the root.'
+    parses:
+      - signature: X_subsumption+ROOTAG_subsumption|kdh
+        rules:
+          - mrulePrefixX_subsumption
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: hdh
+    note: '[cell subsumption] Four forward chains; X+B+C and C+X+B retain duplicate signature X+C+ROOTAG+B with distinct application histories.'
+    parses:
+      - signature: X_subsumption+C_subsumption+ROOTAG_subsumption|hdh
+        rules:
+          - mrulePrefixX_subsumption
+          - mruleTruncOptIns_subsumption
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: X_subsumption+C_subsumption+ROOTAG_subsumption+B_subsumption|hdh
+        rules:
+          - mrulePrefixX_subsumption
+          - mruleTruncLead_subsumption
+          - mruleTruncOptIns_subsumption
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: X_subsumption+C_subsumption+ROOTAG_subsumption+B_subsumption|hdh
+        rules:
+          - mruleTruncOptIns_subsumption
+          - mrulePrefixX_subsumption
+          - mruleTruncLead_subsumption
+      - signature: C_subsumption+ROOTAG_subsumption|hdh
+        rules:
+          - mruleTruncOptIns_subsumption
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: fdh
+    note: '[cell subsumption] No lexical entry or rule chain can produce bag.'
+    expect_fail: true
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: qmo
+    note: '[cell identity] Bare root32 positive control.'
+    parses:
+      - signature: ROOT_identity|qmo
+        gloss: '32'
+        rules: []
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: qmq
+    note: '[cell identity] Bare root33 positive control; it cannot produce a or ga under these rules.'
+    parses:
+      - signature: ROOT33_identity|qmq
+        gloss: '33'
+        rules: []
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
+  - word: m
+    note: '[cell identity] Two independent derivations from sag: A,B and B,A.'
+    provenance: 'Combined Machine #500+#506 C# identities and forward derivations'
+    parses:
+      - signature: ROOT_identity+B_identity+A_identity|m
+        gloss: 32-3SGB-3SGA
+        rules:
+          - mruleTruncLead_identity
+          - mruleTruncTrail_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: ROOT_identity+A_identity+B_identity|m
+        gloss: 32-3SGA-3SGB
+        rules:
+          - mruleTruncTrail_identity
+          - mruleTruncLead_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+  - word: om
+    note: '[cell identity] Five independent derivations from sag: A,C; C,A; A,B,C; B,A,C; B,C,A.'
+    provenance: 'Combined Machine #500+#506 C# identities and forward derivations'
+    parses:
+      - signature: ROOT_identity+B_identity+C_identity+A_identity|om
+        gloss: 32-3SGB-3SGA-3SGC
+        rules:
+          - mruleTruncLead_identity
+          - mruleTruncTrail_identity
+          - mruleTruncOptIns_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: ROOT_identity+A_identity+C_identity+B_identity|om
+        gloss: 32-3SGA-3SGB-3SGC
+        rules:
+          - mruleTruncTrail_identity
+          - mruleTruncLead_identity
+          - mruleTruncOptIns_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: C_identity+B_identity+ROOT_identity+A_identity|om
+        gloss: 32-3SGB-3SGC-3SGA
+        rules:
+          - mruleTruncLead_identity
+          - mruleTruncOptIns_identity
+          - mruleTruncTrail_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: ROOT_identity+C_identity+A_identity|om
+        gloss: 32-3SGA-3SGC
+        rules:
+          - mruleTruncTrail_identity
+          - mruleTruncOptIns_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+      - signature: C_identity+ROOT_identity+A_identity|om
+        gloss: 32-3SGC-3SGA
+        rules:
+          - mruleTruncOptIns_identity
+          - mruleTruncTrail_identity
+        exercises:
+          - 'AffixProcessRule: subtraction/truncation'
+  - word: nmo
+    note: '[cell identity] No lexical entry or rule chain can produce bag.'
+    provenance: Impossible negative control for the explicit-ID grammar
+    expect_fail: true
+    exercises:
+      - 'AffixProcessRule: subtraction/truncation'
