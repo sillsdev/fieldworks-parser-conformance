@@ -18,59 +18,279 @@
          leading-AND-trailing test runs FIRST, so this shape now classifies CircumfixPrefix and is
          routed to `build_structural_composites` instead. -->
     <PartsOfSpeech>
-      <PartOfSpeech id="posRoot2"><Name>root2</Name></PartOfSpeech>
+      <PartOfSpeech id="posRoot2_interior-action">
+        <Name>root2_interior-action</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posRoot_non-first-allomorph">
+        <Name>root_non-first-allomorph</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posRootC2_reduplication">
+        <Name>rootC2_reduplication</Name>
+      </PartOfSpeech>
     </PartsOfSpeech>
     <!-- No PhonologicalRule/MetathesisRule element at all - pure morphotactics, so requires: []
          (mechanically derived, per the conformance-grammars skill's own note). -->
-    <CharacterDefinitionTable id="table1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="table1_interior-action">
+      <Name>Main_interior-action</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cB"><Representations><Representation>b</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cE"><Representations><Representation>e</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cZ"><Representations><Representation>z</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cN"><Representations><Representation>n</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cB_interior-action">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_interior-action">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_interior-action">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_interior-action">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_interior-action">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cZ_interior-action">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cN_interior-action">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cM_non-first-allomorph">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_non-first-allomorph">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_non-first-allomorph">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_non-first-allomorph">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_non-first-allomorph">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_non-first-allomorph">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_non-first-allomorph">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cN_non-first-allomorph">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_reduplication">
+          <Representations>
+            <Representation>à</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_reduplication">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cM_reduplication">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_reduplication">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_reduplication">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cN_reduplication">
+          <Representations>
+            <Representation>x</Representation>
+          </Representations>
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_interior-action">
+        <Name>Any_interior-action</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_non-first-allomorph">
+        <Name>Any_non-first-allomorph</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_reduplication">
+        <Name>Any_reduplication</Name>
+      </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered"
-        morphologicalRules="mrCircInfix">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="table1_interior-action" morphologicalRuleOrder="unordered" morphologicalRules="mrCircInfix_interior-action mrMixed_non-first-allomorph mrCircRedup_reduplication">
+        <Name>Main_interior-action</Name>
         <MorphologicalRuleDefinitions>
           <!-- Two LHS parts (p1 = the root's first segment, p2 = the remainder), so the RHS can
                place an InsertSegments action strictly BETWEEN their two CopyFromInput actions
                while ALSO leading with one InsertSegments and trailing with another - the
                simultaneously-circumfixing-and-infixing shape census C3 names. -->
-          <MorphologicalRule id="mrCircInfix" requiredPartsOfSpeech="posRoot2" outputPartOfSpeech="posRoot2">
-            <Name>circInfix</Name>
+          <MorphologicalRule id="mrCircInfix_interior-action" requiredPartsOfSpeech="posRoot2_interior-action" outputPartOfSpeech="posRoot2_interior-action">
+            <Name>circInfix_interior-action</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="subCircInfix">
+              <MorphologicalSubrule id="subCircInfix_interior-action">
                 <MorphologicalInput>
-                  <PhoneticSequence id="p1"><SimpleContext naturalClass="ncAny" /></PhoneticSequence>
-                  <PhoneticSequence id="p2"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence>
+                  <PhoneticSequence id="p1_interior-action">
+                    <SimpleContext naturalClass="ncAny_interior-action"/>
+                  </PhoneticSequence>
+                  <PhoneticSequence id="p2_interior-action">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_interior-action"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
                 </MorphologicalInput>
                 <MorphologicalOutput>
-                  <InsertSegments><PhoneticShape>ke</PhoneticShape></InsertSegments>
-                  <CopyFromInput index="p1" />
-                  <InsertSegments><PhoneticShape>z</PhoneticShape></InsertSegments>
-                  <CopyFromInput index="p2" />
-                  <InsertSegments><PhoneticShape>an</PhoneticShape></InsertSegments>
+                  <InsertSegments>
+                    <PhoneticShape>ke</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="p1_interior-action"/>
+                  <InsertSegments>
+                    <PhoneticShape>z</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="p2_interior-action"/>
+                  <InsertSegments>
+                    <PhoneticShape>an</PhoneticShape>
+                  </InsertSegments>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>CIRCINFIX</MorphemeId>
+            <MorphemeId>CIRCINFIX_interior-action</MorphemeId>
+          </MorphologicalRule>
+          <!-- Allomorph 0 (document order): ORDINARY suffix, "-s". Alone, this would classify
+               Role::Suffix from `rule_role` (allomorph 0). -->
+          <!-- Allomorph 1 (document order): CIRCUMFIX, "ke-...-an" - leading InsertSegments,
+               one CopyFromInput, trailing InsertSegments. This is the allomorph census C1 names:
+               declared SECOND, so a first-allomorph-only classifier never sees it. -->
+          <MorphologicalRule id="mrMixed_non-first-allomorph" requiredPartsOfSpeech="posRoot_non-first-allomorph" outputPartOfSpeech="posRoot_non-first-allomorph">
+            <Name>mixed_non-first-allomorph</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subSuffix_non-first-allomorph">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemA_non-first-allomorph">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_non-first-allomorph"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemA_non-first-allomorph"/>
+                  <InsertSegments>
+                    <PhoneticShape>o</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subCircum_non-first-allomorph">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemB_non-first-allomorph">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_non-first-allomorph"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>hf</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemB_non-first-allomorph"/>
+                  <InsertSegments>
+                    <PhoneticShape>dl</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>MIXED_non-first-allomorph</MorphemeId>
+          </MorphologicalRule>
+          <!-- ONE LHS part (p1 = the whole root), so the RHS can CopyFromInput it TWICE (the
+               census C2 reduplication trigger - the same PartRef echoed >= 2 times) while ALSO
+               leading with one InsertSegments and trailing with another - the
+               simultaneously-circumfixing-and-reduplicating shape census C2 names. -->
+          <MorphologicalRule id="mrCircRedup_reduplication" requiredPartsOfSpeech="posRootC2_reduplication" outputPartOfSpeech="posRootC2_reduplication">
+            <Name>circRedup_reduplication</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subCircRedup_reduplication">
+                <MorphologicalInput>
+                  <PhoneticSequence id="p1_reduplication">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reduplication"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>vr</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="p1_reduplication"/>
+                  <CopyFromInput index="p1_reduplication"/>
+                  <InsertSegments>
+                    <PhoneticShape>qx</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>CIRCREDUP_reduplication</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="eRoot2" partOfSpeech="posRoot2">
-            <Allomorphs><Allomorph id="aRoot2"><PhoneticShape>bat</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>ROOT2</MorphemeId>
+          <LexicalEntry id="eRoot2_interior-action" partOfSpeech="posRoot2_interior-action">
+            <Allomorphs>
+              <Allomorph id="aRoot2_interior-action">
+                <PhoneticShape>bat</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT2_interior-action</MorphemeId>
             <Gloss>root2</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRoot_non-first-allomorph" partOfSpeech="posRoot_non-first-allomorph">
+            <Allomorphs>
+              <Allomorph id="aRoot_non-first-allomorph">
+                <PhoneticShape>jgp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_non-first-allomorph</MorphemeId>
+            <Gloss>root</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eRootC2_reduplication" partOfSpeech="posRootC2_reduplication">
+            <Allomorphs>
+              <Allomorph id="aRootC2_reduplication">
+                <PhoneticShape>àqw</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOTC2_reduplication</MorphemeId>
+            <Gloss>rootC2</Gloss>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
