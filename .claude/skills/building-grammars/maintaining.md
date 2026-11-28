@@ -55,10 +55,11 @@ visible to another:
 - **Letters.** Cell 1 keeps its letters; each later cell takes letters used by no member (a letter map per cell; when the ASCII letters run out, take letters of the Latin-1 block).
   Map the words' input and the surface part of each expected signature with it. Words that share letters would be
   parsed by every cell's roots and the results would multiply.
-- **Ids.** Suffix every XML id, rule id and `MorphemeId` with `_<cell>`, and say so in the README, so that a
-  signature or rule trace names its cell. Merge each list (parts of speech, segments, classes, rules, templates,
-  entries, features) and join the stratum's `phonologicalRules`; a language still has one stratum and one
-  character table.
+- **Ids.** The survivor's cell keeps its XML ids, rule ids and `MorphemeId`s unchanged, so its signatures do not
+  change. Suffix every XML id, rule id and `MorphemeId` of each absorbed cell with `_<cell>` (underscores are added
+  when the result is already an id of an earlier cell), and say so in the README, so that a signature or rule
+  trace names its cell. Merge each list (parts of speech, segments, classes, rules, templates, entries, features)
+  and join the stratum's `phonologicalRules`; a language still has one stratum and one character table.
   The MPR feature groups are the exception to the suffix: HCLoader builds only `inflClasses`, `exceptionFeatures` and `lexEntryInflTypes`, so merged cells share ONE group of each of those names (the union of every cell's features) and only the feature ids are suffixed; a group named `exceptionFeatures_2` fails the producible-shape gate.
 - **A grammar with a feature system needs one more feature.** An unspecified feature matches anything, so a class
   or segment context of one cell accepts the other cells' segments (a first build without it mismatched nearly every
@@ -68,6 +69,14 @@ visible to another:
 - **Words and notes.** Prefix each word's `note` with `[cell <name>]`; each word keeps its own behaviour label.
   The README carries the cell table (cell, former test case, what differs, letter map).
 - **Proof.** Replay is the check in step 4; no word of one cell may parse in another.
+
+`python3 scripts/cellmerge.py SUITE OUTDIR LANGNAME survivor:cell member:cell ...` writes the merged `grammar.xml`,
+`words.yaml` and a `cellmap.json` into OUTDIR (it changes nothing else). It maps letters per cell, keeps the
+survivor's ids and suffixes the absorbed cells' ids as above, joins the MPR groups of one name into one group, merges
+boundaries (it stops when a shared boundary differs between cells) and strata, carries `blocked_by`, `neutralizes`
+and `generated_no_parse`, and adds the `cell` feature (named `outercell` when the survivor already has a `cell`
+feature from an earlier merge). It stops when members' `morpher` settings differ. It does not write the README,
+`renames.tsv` or the tier table, and the results still come from `--propose` (step 4).
 
 ## Retire
 
