@@ -102,3 +102,4 @@ edge-cases/spelling-coverage-compound-template-feeds	edge-cases/spelling-coverag
 edge-cases/compound-allomorph-identity-distinct-entries	edge-cases/compound-allomorph-identity		wave-2026-11-27-7
 edge-cases/spelling-coverage-compound-boundary	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-7
 edge-cases/spelling-coverage-compound-depth3	edge-cases/spelling-coverage-compound-depth-prefix-zone		wave-2026-11-27-7
+edge-cases/alias-output-featureless	edge-cases/featureless-target		wave-2026-11-27-8
