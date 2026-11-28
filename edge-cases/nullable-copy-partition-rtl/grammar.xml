@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
+<HermitCrabInput>
+  <Language>
+    <Name>NullableCopyPartition</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posN_accept"><Name>noun accept</Name></PartOfSpeech>
+      <PartOfSpeech id="posN_reject"><Name>noun reject</Name></PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="nasal"><Name>nasal</Name><Symbols><Symbol id="nasal_minus">minus</Symbol><Symbol id="nasal_plus">plus</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="f1"><Name>f1</Name><Symbols><Symbol id="f1_minus">minus</Symbol><Symbol id="f1_plus">plus</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="cell"><Name>cell</Name><Symbols><Symbol id="cell_accept">accept</Symbol><Symbol id="cell_reject">reject</Symbol></Symbols></SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="tbl">
+      <Name>main</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="n_accept"><Representations><Representation>n</Representation></Representations><FeatureValue feature="nasal" symbolValues="nasal_plus" /><FeatureValue feature="f1" symbolValues="f1_minus" /><FeatureValue feature="cell" symbolValues="cell_accept" /></SegmentDefinition>
+        <SegmentDefinition id="t_accept"><Representations><Representation>t</Representation></Representations><FeatureValue feature="nasal" symbolValues="nasal_minus" /><FeatureValue feature="f1" symbolValues="f1_minus" /><FeatureValue feature="cell" symbolValues="cell_accept" /></SegmentDefinition>
+        <SegmentDefinition id="p_accept"><Representations><Representation>p</Representation></Representations><FeatureValue feature="nasal" symbolValues="nasal_minus" /><FeatureValue feature="f1" symbolValues="f1_plus" /><FeatureValue feature="cell" symbolValues="cell_accept" /></SegmentDefinition>
+        <SegmentDefinition id="n_reject"><Representations><Representation>m</Representation></Representations><FeatureValue feature="nasal" symbolValues="nasal_plus" /><FeatureValue feature="f1" symbolValues="f1_minus" /><FeatureValue feature="cell" symbolValues="cell_reject" /></SegmentDefinition>
+        <SegmentDefinition id="t_reject"><Representations><Representation>k</Representation></Representations><FeatureValue feature="nasal" symbolValues="nasal_minus" /><FeatureValue feature="f1" symbolValues="f1_minus" /><FeatureValue feature="cell" symbolValues="cell_reject" /></SegmentDefinition>
+        <SegmentDefinition id="p_reject"><Representations><Representation>b</Representation></Representations><FeatureValue feature="nasal" symbolValues="nasal_minus" /><FeatureValue feature="f1" symbolValues="f1_plus" /><FeatureValue feature="cell" symbolValues="cell_reject" /></SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="any_accept"><Name>any accept</Name><FeatureValue feature="cell" symbolValues="cell_accept" /></FeatureNaturalClass>
+      <FeatureNaturalClass id="any_reject"><Name>any reject</Name><FeatureValue feature="cell" symbolValues="cell_reject" /></FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="delete_accept" multipleApplicationOrder="rightToLeftIterative">
+        <Name>Delete n</Name>
+        <PhoneticInput><PhoneticSequence><Segment segment="n_accept" /></PhoneticSequence></PhoneticInput>
+        <PhonologicalSubrules><PhonologicalSubrule><PhoneticOutput /></PhonologicalSubrule></PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="delete_reject" multipleApplicationOrder="rightToLeftIterative">
+        <Name>Delete m</Name>
+        <PhoneticInput><PhoneticSequence><Segment segment="n_reject" /></PhoneticSequence></PhoneticInput>
+        <PhonologicalSubrules><PhonologicalSubrule><PhoneticOutput /></PhonologicalSubrule></PhonologicalSubrules>
+      </PhonologicalRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="tbl" phonologicalRules="delete_accept delete_reject" morphologicalRules="suffix_accept suffix_reject" morphologicalRuleOrder="unordered">
+        <Name>main</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="suffix_accept" requiredPartsOfSpeech="posN_accept" outputPartOfSpeech="posN_accept">
+            <Name>suffix accept</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="s1_accept">
+                <MorphologicalInput><PhoneticSequence id="part0_accept"><OptionalSegmentSequence min="0" max="2"><SimpleContext naturalClass="any_accept" /></OptionalSegmentSequence></PhoneticSequence><PhoneticSequence id="part1_accept"><OptionalSegmentSequence min="0" max="2"><SimpleContext naturalClass="any_accept" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="part0_accept" /><CopyFromInput index="part1_accept" /><CopyFromInput index="part0_accept" /><CopyFromInput index="part1_accept" /><InsertSegments><PhoneticShape>p</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFFIX_accept</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="suffix_reject" requiredPartsOfSpeech="posN_reject" outputPartOfSpeech="posN_reject">
+            <Name>suffix reject</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="s1_reject">
+                <MorphologicalInput><PhoneticSequence id="part0_reject"><OptionalSegmentSequence min="0" max="1"><SimpleContext naturalClass="any_reject" /></OptionalSegmentSequence></PhoneticSequence><PhoneticSequence id="part1_reject"><OptionalSegmentSequence min="0" max="1"><SimpleContext naturalClass="any_reject" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
+                <MorphologicalOutput><CopyFromInput index="part0_reject" /><CopyFromInput index="part1_reject" /><CopyFromInput index="part0_reject" /><CopyFromInput index="part1_reject" /><InsertSegments><PhoneticShape>b</PhoneticShape></InsertSegments></MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUFFIX_reject</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="root_accept" partOfSpeech="posN_accept"><Allomorphs><Allomorph id="rootAllo_accept"><PhoneticShape>tn</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ROOT_accept</MorphemeId><Gloss>synthetic accept</Gloss></LexicalEntry>
+          <LexicalEntry id="root_reject" partOfSpeech="posN_reject"><Allomorphs><Allomorph id="rootAllo_reject"><PhoneticShape>mk</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ROOT_reject</MorphemeId><Gloss>synthetic reject</Gloss></LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

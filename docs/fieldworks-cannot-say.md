@@ -74,12 +74,13 @@ protocol's section 9 holds the rule that applies these to a fixture.
 | 28 | An affix-template slot with no loaded affix rules | `LoadLanguage` filters out a slot unless an affix MSA has a loaded morpheme (308-312). `LoadMorphologicalRule` adds an affix rule to that map only when it has an allomorph (923-971), and `LoadAffixTemplate` takes its rules from that map (1754-1780). An empty slot in a FieldWorks project is therefore absent from the HC grammar. Checked at FieldWorks commit `936ae91fe7bb2d5b9759e47eb5e95fc9bd8b388d`; see [sillsdev/machine#542](https://github.com/sillsdev/machine/issues/542). | none |
 | 29 | A `+` morpheme boundary spelled inside a root's own phonetic shape, between two of its segments | `HCLoader.cs` puts the `+` boundary only on the inside edge of an affix form and between the two parts of a compound (the lines in the next section); a root's form is the segments it was typed with. A linguist typing `+` into a lexical form is not witnessed, so a grammar whose entry spells `+` between two segments is treated as not producible until a FieldWorks project shows otherwise. See the `+` boundary paragraph below. | none |
 | 30 | A compound rule whose output writes `+` anywhere but once between the head and the non-head (before the first part, after the last, or twice in a row) | `LoadEndoCompoundingRule` builds each compound subrule's output as the head, one inserted `+`, then the non-head, or the non-head, one `+`, then the head (1869-1871 and 1882-1884). No other output shape is written. | none |
+| 31 | An `AlphaVariable` on a context of an affix process rule's `MorphologicalInput` | `LoadAffixProcessAllomorph` (1383) loads each input context with the two-argument `LoadPatternNode` (2362), which passes a null variable table (2364). `TryLoadSimpleContext` (2794) reads the context's `PlusConstrRS` and `MinusConstrRS` through `GetVariables` (2814), which indexes that table (2818), so a context with an alpha constraint would throw instead of loading. Only `LoadRewriteRule` (2051) builds a table (2054). | none (two staged PanGloss cells, `nullable-copy-partition-alpha-ltr` and `-alpha-rtl`, were not admitted) |
 
 Rows 1 to 6, 8, 9, 10, 17 and 18 cover the 26 `No` rows of `fieldworks-producibility.tsv` (row 17
-holds nine, row 9 five, row 10 three, row 1 two, and rows 2 to 6, 8 and 18 one each). Rows 7, 11 to 16 and 19 to 30
+holds nine, row 9 five, row 10 three, row 1 two, and rows 2 to 6, 8 and 18 one each). Rows 7, 11 to 16 and 19 to 31
 are shapes that no per-attribute row can express: the usage-level and mechanical checks of the protocol's
 section 9 and the retirement record's list of what the suite no longer covers. Fixtures were deleted for
-rows 1 to 5, 7 to 11 and 20; rows 6, 12 to 16, 19 and 21 to 30 cost no fixture, though rows 24 and 27 cost
+rows 1 to 5, 7 to 11 and 20; rows 6, 12 to 16, 19 and 21 to 31 cost no fixture, though rows 24 and 27 cost
 words.
 
 `fieldworks-writable-shapes.tsv` is the census behind rows 11 to 28: for each rule kind (slot rule, unslotted

@@ -1,0 +1,43 @@
+language: NullableCopyPartition
+requires: [phonology]
+fieldworks_producible_notes: "Segments, feature-defined natural classes, an obligatory deletion rule and an affix process rule with two quantified input parts copied twice; no fwdata round-trip witness is claimed."
+words:
+  - word: ttp
+    note: "[cell accept] detecting word: the root is partitioned across two nullable parts, both copied, and the nasal is deleted."
+    parses:
+      - signature: "ROOT_accept+SUFFIX_accept|ttp"
+        rules: [suffix_accept, delete_accept]
+    exercises: ["MorphologicalOutputAction: CopyFromInput/InsertSegments > repeated copy of a nullable part"]
+  - word: t
+    note: "[cell accept] control: the bare root undergoes the obligatory deletion alone."
+    parses:
+      - signature: "ROOT_accept|t"
+        rules: [delete_accept]
+    exercises: ["RewriteRule direction (Dir): right-to-left"]
+  - word: tp
+    note: "[cell accept] control: a short copied neighbour is no route of the grammar."
+    expect_fail: true
+    exercises: ["MorphologicalOutputAction: CopyFromInput/InsertSegments > repeated copy of a nullable part"]
+  - word: ptt
+    note: "[cell accept] control: the affix is a suffix, so the same material before the root has no analysis."
+    expect_fail: true
+    exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix"]
+  - word: kkb
+    note: "[cell reject] detecting word: the root has its nasal first and each nullable part holds at most one segment, so the reference has no partition that copies the stop twice."
+    expect_fail: true
+    blocked_by: [suffix_reject]
+    exercises: ["MorphologicalOutputAction: CopyFromInput/InsertSegments > repeated copy of a nullable part"]
+  - word: k
+    note: "[cell reject] control: the bare root undergoes the obligatory deletion alone."
+    parses:
+      - signature: "ROOT_reject|k"
+        rules: [delete_reject]
+    exercises: ["RewriteRule direction (Dir): right-to-left"]
+  - word: kb
+    note: "[cell reject] control: a short copied neighbour is no route of the grammar."
+    expect_fail: true
+    exercises: ["MorphologicalOutputAction: CopyFromInput/InsertSegments > repeated copy of a nullable part"]
+  - word: bkk
+    note: "[cell reject] control: the affix is a suffix, so the same material before the root has no analysis."
+    expect_fail: true
+    exercises: ["AffixProcessRule: prefix/suffix/circumfix/infix"]
