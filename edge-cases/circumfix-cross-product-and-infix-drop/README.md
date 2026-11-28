@@ -7,14 +7,14 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: circumfix-cross-product-and-infix-drop
 
-## Why this fixture exists
+## Why this test case exists
 
 Continues the circumfix-structural-composite census
 (`docs/research/circumfix-composite-precedence-census.md`) with two constructs that pin two
@@ -33,7 +33,7 @@ distinct, previously-uncensused shapes:
    reads this `Role::Infix` (an interior `InsertSegments` strictly between two `Copy` actions, no
    leading/trailing insert) rather than misclassifying it as `CircumfixPrefix` -- unlike census
    C1-C3, which were all about `classify_affix` misclassifying a genuinely-circumfix shape.
-   The fixture exposed that structural classification formerly excluded `Role::Infix` even when
+   The test case exposed that structural classification formerly excluded `Role::Infix` even when
    the allomorph drops LHS material. Such rules now move into structural-composite ownership and
    are removed from pre-expansion to avoid competing paths.
 
@@ -84,7 +84,7 @@ analysis for this shape (1) or apply to the wrong span of a discontinuous morph 
 subrules are authored UNCONSTRAINED (identical `ncAny`-only stem patterns), matching
 `circumfix-non-first-allomorph-selection`'s own proven 2-subrule pattern exactly, just scaled to
 4. The literal `pa`/`ma`/`-an`/`-in` insert text alone already uniquely discriminates which
-subrule produced which of the 4 surface words at analysis time, so the fixture still proves what
+subrule produced which of the 4 surface words at analysis time, so the test case still proves what
 task 2 actually needs: all 4 cross-product cells are individually admissible into
 `build_structural_composites` and reachable in the compiled net. The "genuinely combinatorial, not
 2+2 independent choices" framing is preserved as a narrative property of the 4-subrule shape
@@ -105,22 +105,22 @@ The companion tests establish four current properties: `bumat` remains reachable
 the capability predicate no longer refuses the grammar merely because this dropping allomorph is
 classified `Role::Infix`. Classification is evaluated per allomorph, so declaration order cannot
 hide a later structural shape. Whether the real motivating grammar's more complex "mrule 166"
-case behaves identically remains unverified here; this fixture establishes the mechanism, not that
+case behaves identically remains unverified here; this test case establishes the mechanism, not that
 every Infix-with-drop grammar is otherwise within the tuned backend's capacity.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh
-for this task; `machine/src` (the C# oracle's own source) was not widened into this worktree's
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh
+for this task; `machine/src` (the C# reference's own source) was not widened into this worktree's
 sparse `machine/conformance` checkout. Per `docs/conformance-staging-plan.md`'s oracle-discipline
 note, this must be treated as `pangloss`-only ground truth until independently re-verified against
-the C# founding oracle.
+the C# reference.
 
 ## Verification
 
 Signatures captured by running a throwaway `pg-parse` test (`zz_throwaway_transcribe_cross_
 product.rs`, deleted once transcription was done) driving `pg_parse::Morpher::parse_word` directly
-over every word in this fixture and printing each `word`/`invalid_shape`/`outcome.signature()`
+over every word in this test case and printing each `word`/`invalid_shape`/`outcome.signature()`
 (the conformance-grammars skill's own step-3 shortcut for a from-scratch `pg-cli`/`pg-foma` release
 build). Final transcription run (`pg.ps1 -Mode test -Package pg-parse -TestTarget zz_throwaway_
 transcribe_cross_product -- --nocapture`):
@@ -136,17 +136,17 @@ word="pidatan" invalid_shape=false signature="-"
 ```
 
 transcribed verbatim into `words.yaml` above. See the PR/task report for the `cargo test -p
-pg-parse --test conformance_fixtures_gate` pass/fail counts confirming this fixture replays.
+pg-parse --test conformance_fixtures_gate` pass/fail counts confirming this test case replays.
 
 ## Graduation
 
-## Oracle provenance (reconciled 2026-08-31)
+## Reference provenance (reconciled 2026-08-31)
 
 
-ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde) directly against this fixture's
+ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# reference,
+machine commit caa4ddde) directly against this test case's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
-fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"
-section below describes how this fixture was originally authored, not its current verification
+test case's words.yaml now carries # oracle-provenance: reference. Any "Reference discipline"
+section below describes how this test case was originally authored, not its current verification
 status.

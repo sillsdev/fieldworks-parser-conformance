@@ -10,5 +10,5 @@ Machine `4d9b454d` produced the recorded rows in `hc-conformance` self-check mod
 `<Segments>` node with `<Segment segment="cA" />` produced the same five rows at that pin. An
 earlier eight-word probe, which included infix-plus-suffix forms, also showed the same rows under
 both encodings. Thus these words do not demonstrate a parse-selection difference caused by the
-group's trailing epsilon; the fixture records the reachable construction and its oracle output.
+group's trailing epsilon; the test case records the reachable construction and its reference output.
 It is not a failing-before regression for [PanGloss #300](https://github.com/sillsdev/PanGloss/issues/300).

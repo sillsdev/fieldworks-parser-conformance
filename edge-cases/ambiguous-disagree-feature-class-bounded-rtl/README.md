@@ -34,16 +34,16 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 ### ambiguous-disagree-feature-class-bounded-rtl
 
-Synthetic feature-defined vowel class with an ambiguous minus-alpha rewrite context and a bounded right-to-left optional environment. This fixture is a negative witness for the still-refused lowerability shape; the authored class is a FeatureNaturalClass, not an explicit SegmentNaturalClass.
+Synthetic feature-defined vowel class with an ambiguous minus-alpha rewrite context and a bounded right-to-left optional environment. This test case is a negative witness for the still-refused lowerability shape; the authored class is a FeatureNaturalClass, not an explicit SegmentNaturalClass.
 
-Oracle: hc.dll, Machine `18cf242f`; 16 complete rows, 0 skipped. The oracle accepts only `ia` as `AU|[iy]a`. Evidence: `docs/divergences/evidence/079-partial-explicit-class/refusal-witnesses/`.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows, 0 skipped. The reference accepts only `ia` as `AU|[iy]a`. Evidence: `docs/divergences/evidence/079-partial-explicit-class/refusal-witnesses/`.
 FieldWorks/Machine: `HCLoader.cs:2338-2344, 2745-2770`; Machine `XmlLanguageLoader.cs:696-719`.
 Ledger: `docs/divergences/079-partial-explicit-class-disagreement.md`.
 Upstream PR: none (network closed).
@@ -59,16 +59,16 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 ### ambiguous-disagree-feature-class-unbounded-ltr
 
-Synthetic feature-defined vowel class with an ambiguous minus-alpha rewrite context and an unbounded left-to-right optional environment. This fixture is a negative witness for the still-refused lowerability shape; the authored class is a FeatureNaturalClass, not an explicit SegmentNaturalClass.
+Synthetic feature-defined vowel class with an ambiguous minus-alpha rewrite context and an unbounded left-to-right optional environment. This test case is a negative witness for the still-refused lowerability shape; the authored class is a FeatureNaturalClass, not an explicit SegmentNaturalClass.
 
-Oracle: hc.dll, Machine `18cf242f`; 16 complete rows, 0 skipped. The oracle accepts only `ia` as `AU|[iy]a`. Evidence: `docs/divergences/evidence/079-partial-explicit-class/refusal-witnesses/`.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows, 0 skipped. The reference accepts only `ia` as `AU|[iy]a`. Evidence: `docs/divergences/evidence/079-partial-explicit-class/refusal-witnesses/`.
 FieldWorks/Machine: `HCLoader.cs:2338-2344, 2745-2770`; Machine `XmlLanguageLoader.cs:696-719`.
 Ledger: `docs/divergences/079-partial-explicit-class-disagreement.md`.
 Upstream PR: none (network closed).
@@ -84,7 +84,7 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
@@ -93,7 +93,7 @@ revision, not current verification. PanGloss-specific assertions remain in PanGl
 
 Synthetic ambiguous minus alpha on a complete class, with an agreeing occurrence
 on a partial class. hc.dll still requires ia, despite the omitted u in that class.
-Oracle: hc.dll, Machine `18cf242f`; 16 complete rows.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows.
 Entry: docs/divergences/067-ambiguous-disagreement-proposals.md.
 FieldWorks: HCLoader.cs:2745-2770,2799-2808.
 Upstream PR: none (network closed).
@@ -109,7 +109,7 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
@@ -118,7 +118,7 @@ revision, not current verification. PanGloss-specific assertions remain in PanGl
 
 Synthetic repeated minus alpha on a complete class and an agreeing focus on
 a partial class. hc.dll requires ii from iu.
-Oracle: hc.dll, Machine `18cf242f`; 16 complete rows.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows.
 Analysis binding: docs/divergences/069-analysis-binds-overridden-alpha.md.
 Confirmed FST proposal: docs/divergences/067-ambiguous-disagreement-proposals.md.
 FieldWorks: HCLoader.cs:2338-2344,2745-2770,2799-2808.

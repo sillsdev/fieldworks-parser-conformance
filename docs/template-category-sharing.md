@@ -13,8 +13,8 @@ the engine's same-morpheme free-fluctuation mechanism.
 ## Verification
 
 Expected rows are derived above and verified against C# at
-`8bad1934` on 2026-09-15. The original staged fixture records
-earlier C# verification at `caa4ddde`. Both new fixtures pass self-check with memoization on and
+`8bad1934` on 2026-09-15. The original staged test case records
+earlier C# verification at `caa4ddde`. Both new test cases pass self-check with memoization on and
 off: 2 passed, 0 failed, 0 skipped, 16 rows total.
 
 A scratch mutation adds all four affix rules to the stratum's ordinary rule list. The same expected

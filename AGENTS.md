@@ -24,29 +24,29 @@ through `HCLoader.cs` (`Src/LexText/ParserCore/HCLoader.cs` in the FieldWorks re
 reaches less than the HermitCrab XML can say. A grammar that needs a construct the loader never writes does
 not belong here, however expressible it is in the XML and however well an engine handles it.
 
-- Before you author, change or keep a fixture, check each construct it uses against the table in
+- Before you author, change or keep a test case, check each construct it uses against the table in
   [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it), against the census
   `fieldworks-writable-shapes.tsv` (every DTD member, with the `HCLoader.cs` line that writes it, only labels
   it, or never writes it), and against [PROTOCOL.md](PROTOCOL.md) section 9.
 - The standard is the round trip: a real FieldWorks project, put through the loader, yields the grammar. Reading
   the loader source is weaker evidence. A test case's producibility is a claim read from the loader until it has a
   FieldWorks witness (section 3), and only the 11 test cases that carry one are certified today (none of the 16
-  stress fixtures has one). Say which of the two you are relying on in the pull request.
+  stress test cases has one). Say which of the two you are relying on in the pull request.
 - If the grammar needs a construct in that table, stop. Rewrite the grammar without it or do not add it.
   There is no flag to set: `fieldworks_producible` is not a `words.yaml` key, and the consuming engines' gates fail
   a grammar that uses a shape the loader never writes.
-- A new construct goes into `fieldworks-writable-shapes.tsv`, with its loader line, before a fixture may use it.
+- A new construct goes into `fieldworks-writable-shapes.tsv`, with its loader line, before a test case may use it.
 - Exception: a construct FieldWorks cannot write today may be used once an issue or PR exists upstream to make it
-  writable, and the fixture cites it. See [ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md).
+  writable, and the test case cites it. See [ADR 0001](docs/adr/0001-aspirational-upstream-fixtures.md).
 
-## 2. Adding, changing or deleting a fixture
+## 2. Adding, changing or deleting a test case
 
 **Any new grammar need goes through [building-grammars](.claude/skills/building-grammars/SKILL.md) first**: a reference
 bug or pending upstream change to record, a staged PanGloss case, a behaviour no test case detects, a generator
 finding, a changed expected result, and any merge, retirement or rename. It decides whether a test case is added and
 where, and which route in "Landing" applies; the steps below are the mechanics.
 
-A fixture is a directory under `languages/` or `edge-cases/` holding `grammar.xml` and `words.yaml`, and
+A test case is a directory under `languages/` or `edge-cases/` holding `grammar.xml` and `words.yaml`, and
 optionally a `README.md` and a `fieldworks/` witness. [docs/what-it-is.md](docs/what-it-is.md) and
 [docs/consuming.md](docs/consuming.md) ("Consuming the suite from another repository") describe the files; `schema/words.schema.json` and
 `HermitCrabInput.dtd` validate them.
@@ -69,15 +69,15 @@ gets wrong, or that waits on an upstream change, also gets one row in `status.ya
    through the `batch` contract in [PROTOCOL.md](PROTOCOL.md) and read its TSV. Read every row against the
    rules before you accept it. A row the engine produces and you cannot explain is a finding, not a pin.
    The build the rows came from is `reference.commit`; do not record it per test case (ADR 0003).
-4. Update [docs/grammars.md](docs/grammars.md): one bullet per fixture, in the group it belongs to, in the
-   form `` - `edge-cases/name`: one short line. `` `scripts/check_grammars_md.py` fails if a fixture is
+4. Update [docs/grammars.md](docs/grammars.md): one bullet per test case, in the group it belongs to, in the
+   form `` - `edge-cases/name`: one short line. `` `scripts/check_grammars_md.py` fails if a test case is
    missing, listed twice or gone.
 5. If you ruled a construct out, add a row to the table in [docs/fieldworks-cannot-say.md](docs/fieldworks-cannot-say.md) named in section 1 and, when the loader
    verdict changed, update `fieldworks-writable-shapes.tsv`. Cite the `HCLoader.cs` function and line, and
-   the FieldWorks commit you read. If you delete a fixture for this reason, add its row to the table in
+   the FieldWorks commit you read. If you delete a test case for this reason, add its row to the table in
    [docs/engine-only-fixture-retirement.md](docs/engine-only-fixture-retirement.md).
 6. Run `python3 scripts/suite.py check` (step 3 of the short path above).
-7. Delete a fixture by removing its directory and its line in `docs/grammars.md`. Remove a
+7. Delete a test case by removing its directory and its line in `docs/grammars.md`. Remove a
    `dead-rules-allowed.tsv` line that names it, and append its entry to `docs/renames.tsv` (columns and rules in
    [building-grammars](.claude/skills/building-grammars/maintaining.md#rename-and-telling-the-consumers)).
 8. Tell the consuming engines. sillsdev/machine and PanGloss each pin a commit of `main` in `conformance.commit`,
@@ -98,14 +98,14 @@ their invariants.
 | `coverage.csv`, `rules.csv` | language x word x construct, and language x grammar rule x exercising words, re-derived from `words.yaml`, `grammar.xml` and `constructs.txt` |
 | `core-tier.txt` | the core tier, one test case id per line: what a consumer runs on every pull request. The tier of every test case is also committed in `docs/grammars.md` (`scripts/tiers.py`, rules in its docstring); a tier is computed, never authored or part of an id. |
 
-Editing a fixture `README.md`, a file under `docs/`, or this file changes nothing derived. A consumer generates its
+Editing a test case `README.md`, a file under `docs/`, or this file changes nothing derived. A consumer generates its
 own copy; none of these files is read from a checkout of this repository.
 
 ### 2b. Hand-edited files with no generator
 
 | File | Change it when |
 |---|---|
-| `dead-rules-allowed.tsv` | a fixture declares a rule on purpose that no word exercises (add a row with the reason), or a word now exercises an allowed rule (delete the row). |
+| `dead-rules-allowed.tsv` | a test case declares a rule on purpose that no word exercises (add a row with the reason), or a word now exercises an allowed rule (delete the row). |
 | `constructs.txt`, `labels.tsv` | a word needs a behaviour no existing label names: add a child line to `labels.tsv` (with the labels you checked it against), or a construct to `constructs.txt` only when no parent fits. Every word must carry a label. |
 | `fieldworks-writable-shapes.tsv` | the loader census changes (section 1). |
 | `reference.commit` | the reference engine build changes (ADR 0003). |
@@ -122,7 +122,7 @@ commit them. They inform the decision and never make it: coverage only nominates
 
 ## 3. Optional FieldWorks witnesses
 
-A fixture may carry a `fieldworks/` directory with a real FieldWorks project.
+A test case may carry a `fieldworks/` directory with a real FieldWorks project.
 [PROTOCOL.md](PROTOCOL.md) section 10 defines it. This repository stores witnesses and checks their shape;
 it never opens one. The PanGloss `xample-projector` tool produces and reads them; it stays in PanGloss.
 
@@ -156,7 +156,7 @@ python3 parity-check.py   # the engine-free migration proof; kept apart from sui
 ```
 
 `suite.py check` runs the `status.yaml` check, the words schema, the derived files, the DTD, the docs lists (both
-fixture lists and the stress README table), the FieldWorks witnesses (stress ones too), the calibration families,
+test case lists and the stress README table), the FieldWorks witnesses (stress ones too), the calibration families,
 the links and the privacy lint.
 
 - `check_words_schema.py` needs PyYAML and jsonschema, and `check_dtd.py` needs lxml or `xmllint`; CI
@@ -164,7 +164,7 @@ the links and the privacy lint.
 - `python3 scripts/check_calibration.py` checks the calibration families (section 6); CI runs it.
 - Then run the self-check of each consuming engine you can reach (for sillsdev/machine,
   `--fixtures <path to this clone> --include-pathological`, and `--fixtures <path to this clone>/stress` for the
-  stress fixtures; its `conformance/` is a clone at its own pinned commit, so it does not see your change, and its
+  stress test cases; its `conformance/` is a clone at its own pinned commit, so it does not see your change, and its
   tests read this clone when `HC_CONFORMANCE_SUITE=<path to this clone>` is set).
   This repository cannot run an engine; CI here proves the files are well formed, not that an engine agrees
   with them.
@@ -179,10 +179,10 @@ the links and the privacy lint.
   self-check and `--check-manifest` against your branch. A change that needs an engine fix bumps `reference.commit`
   to the machine commit that has it. A test case that waits on an unmerged engine fix gets a `pending-upstream` row in `status.yaml`.
 
-## 5. Stress fixtures
+## 5. Stress test cases
 
 The grammars under `stress/edge-cases/` measure the cost of an engine's analysis pass. They are not
-conformance fixtures, and this section says how they differ from sections 1 to 4.
+conformance test cases, and this section says how they differ from sections 1 to 4.
 
 **What stays the same.** The one rule applies: only what FieldWorks can produce, with the same evidence
 (section 1), and the same claim (read from the loader until a `fieldworks/` witness exists, section 3). None has
@@ -190,18 +190,18 @@ a witness yet (0 of 16), and `stress/README.md` states the count.
 
 **What differs.**
 
-| | Conformance fixture | Stress fixture |
+| | Conformance test case | Stress test case |
 |---|---|---|
 | Directory | `languages/<name>/` or `edge-cases/<name>/` | `stress/edge-cases/<name>/` |
-| Expected output means | what the oracle engine does, read against the rules; each word pins one behaviour | parity: an optimization must return the same parses; the words are a workload, and a changed row is the failure |
+| Expected output means | what the reference engine does, read against the rules; each word pins one behaviour | parity: an optimization must return the same parses; the words are a workload, and a changed row is the failure |
 | Measure | pass or fail | work steps, never wall time; `budget_ms` only guards against a hang |
 | `words.yaml` starts with | front matter | `# kind: stress (...)`, then `budget_ms` |
 | `exercises`, derived coverage, `dead-rules-allowed.tsv` | yes | none; no ledger counts them |
-| Fixture `README.md` | optional | none; `stress/README.md` describes every fixture in one table |
+| Test case `README.md` | optional | none; `stress/README.md` describes every test case in one table |
 | Listed in | `docs/grammars.md` bullets, the derived conformance manifest | the `docs/grammars.md` "Stress grammars" bullets, the `stress/README.md` table and the derived stress manifest |
 | Run by | the consumer's default runner | only on request, through the consumer's opt-in stress category |
 
-**Adding or changing a stress fixture.**
+**Adding or changing a stress test case.**
 
 1. Check producibility as in section 1 and name the `HCLoader.cs` function that writes each construct. Say in
    the pull request whether a witness exists (it will not).
@@ -210,25 +210,25 @@ a witness yet (0 of 16), and `stress/README.md` states the count.
    `budget_ms`. In the header comment say what the grammar models and what it
    really exercises; do not name a script or a switch that is not in a repository.
 3. Take the expected rows from an engine run, never from memory: three identical runs of the reference engine
-   (sillsdev/machine `master` for the existing fixtures). The build is `reference.commit`. Read each row against the
+   (sillsdev/machine `master` for the existing test cases). The build is `reference.commit`. Read each row against the
    grammar. A row you cannot explain is a finding to file, not a pin. A word an engine in the field renders
    differently from `master` is left out and named in `stress/README.md` (see `polundanasak`).
 4. Change an existing row only when the correct behaviour of the reference engine changed, and say which change
    (for example FLEx-style null-affix boundaries) in the pull request. An optimization that moves a row has failed;
    it is not a reason to edit the row.
-5. Add a row to the table in [stress/README.md](stress/README.md): what the fixture really exercises (checked
+5. Add a row to the table in [stress/README.md](stress/README.md): what the test case really exercises (checked
    against the words and the grammar, not copied from the commit that added it), the word count, the no-parse
    count, and the sillsdev/machine issue or pull request by number. Never cite a local file for a machine
    record; cite the issue. Update the witness sentence if a witness was added.
 6. Add a bullet to the "Stress grammars" section of [docs/grammars.md](docs/grammars.md) and keep its count sentence
    true. Update the counts in [docs/README.md](docs/README.md) (`stress/ ... 16 timing` and "The 16 timing grammars") and the numbers line of the root README.
 7. Run `python3 scripts/suite.py check`.
-8. Delete a fixture by removing its directory, its README row and its bullet. Rename one only
-   with the consumers in step 9: the directory name `stress/` and the fixture names are read by sillsdev/machine.
+8. Delete a test case by removing its directory, its README row and its bullet. Rename one only
+   with the consumers in step 9: the directory name `stress/` and the test case names are read by sillsdev/machine.
 9. Tell the consumers (section 2, step 8). sillsdev/machine's stress test and runner discover the directory
    themselves; a rename or a changed row there is a bump of its pin.
 
-`stress/README.md` shows how a consumer runs the fixtures; this repository cannot, so CI proves only that the files are
+`stress/README.md` shows how a consumer runs the test cases; this repository cannot, so CI proves only that the files are
 well formed, listed, and hashed.
 
 ## 6. Calibration grammars
@@ -238,15 +238,15 @@ parse `calibration/`; the words are slow by design. `scripts/check_calibration.p
 either manifest or in a category the consumers enumerate (`languages/`, `edge-cases/`, `stress/edge-cases/`).
 
 `calibration/` holds synthetic grammars that calibrate PanGloss parser-work cost weights. They are not conformance
-fixtures: they are outside `languages/`, `edge-cases/` and `stress/`, outside both manifests, and not listed in
+test cases: they are outside `languages/`, `edge-cases/` and `stress/`, outside both manifests, and not listed in
 `docs/grammars.md`. The rule in section 1 still applies (only what FieldWorks can produce). `calibration/README.md`
 describes the families, their measured cost ladders and how to run them.
 
 - Every `cal-*` family is generated: batch A (scale) by `python3 scripts/calib_a_gen.py grammars ...`, batch B
   (structure) by `python3 scripts/calib_b_gen.py grammar <family> <dir>`. `scripts/check_calibration.py` regenerates each
   grammar from both generators and fails on a difference. Change the generator, not the XML.
-- `words.txt`, `words.yaml` and `ladder.tsv` are measurement records (engine and oracle builds are named in the README
+- `words.txt`, `words.yaml` and `ladder.tsv` are measurement records (engine and reference builds are named in the README
   and in each header); regenerate them with the `select` and `yaml` stages of batch A's generator, or with batch B's `pick_words.py` and
-  `finalize.py` (scripts/), never by hand. Batch B words.yaml analyses come from the C# oracle's trace.
+  `finalize.py` (scripts/), never by hand. Batch B words.yaml analyses come from the C# reference's trace.
 - A work-cap word list carries its cap in its file name. Never run it without that cap.
 - `scripts/check_calibration.py` needs the same requirements as the other checks and runs in CI.

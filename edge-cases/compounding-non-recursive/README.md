@@ -7,19 +7,19 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: compounding-non-recursive
 
-## Why this fixture exists
+## Why this test case exists
 
 `openspec/changes/cover-compounding`'s conformance kit item (design.md's own scope: promote
 `MorphRuleDef::Compounding`'s non-recursive case from `Disposition::FailClosed` to the
 `ConfigPredicate` landing spot — `compounding.non-recursive` → `ConfirmOnly`, once a license-gated
-propose shape and a recursion-reachability check both exist). This fixture pins:
+propose shape and a recursion-reachability check both exist). This test case pins:
 
 1. **A single, non-recursive `CompoundingRuleDef`** compiles and runs correctly end to end (bare
    roots AND compounds), matching `crate::capability::compounding_recursive`'s own characterization
@@ -40,14 +40,14 @@ Everything above is what HCLoader emits for a compound rule: `headProdRestrictio
 the head MSA's productivity restrictions (HCLoader.cs:1854-1857,1888), `nonHeadPartsOfSpeech` from
 the non-head MSA, the features in an `exceptionFeatures`-shaped group (matchType all, outputType
 overwrite; HCLoader.cs:168-192) and an Unordered stratum (HCLoader.cs:227). Three things the
-fixture used to carry cannot come from a FieldWorks project and were removed: the SUBRULE-level
+test case used to carry cannot come from a FieldWorks project and were removed: the SUBRULE-level
 `HeadMorphologicalInput requiredMPRFeatures` gate (never set by either compounding loader,
 HCLoader.cs:1898-1910/1959-1998), the two custom `outputType="append"` groups, and
 `morphologicalRuleOrder="linear"`. The group-AWARE subrule gate that made `tikubel` fail was pinned
 upstream by `languages/fusional-realizational-morphology` (`mitlav`/`ficlav`) and append-versus-
-overwrite by `edge-cases/mpr-overwrite-order-dependence`; both fixtures have since been removed as
+overwrite by `edge-cases/mpr-overwrite-order-dependence`; both test cases have since been removed as
 not FieldWorks-producible, so neither is pinned in this suite now. `tikubel` therefore
-flipped from `expect_fail` to a positive witness — the C# oracle's own ground truth for the new
+flipped from `expect_fail` to a positive witness — the C# reference's own ground truth for the new
 grammar, not a regression.
 
 ## What it pins
@@ -64,12 +64,12 @@ grammar, not a regression.
   the rule-level gate's negative control, proving `headProdRestrictionsMprFeatures` genuinely
   restricts something rather than vacuously admitting every root.
 
-## Oracle provenance (re-verified 2026-09-16)
+## Reference provenance (re-verified 2026-09-16)
 
-`rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# founding oracle,
+`rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# reference,
 machine commit f150e2a0) against the converted grammar: PASS,
-every word's signature and traced `rules:` list matched. The fixture was first authored against
-`pg_parse::Morpher` alone and reconciled against the oracle on 2026-08-31; the same five
+every word's signature and traced `rules:` list matched. The test case was first authored against
+`pg_parse::Morpher` alone and reconciled against the reference on 2026-08-31; the same five
 load-bearing scenarios are independently proven propose-vs-confirm in
 `rust/crates/pg-foma/tests/cover_compounding.rs`, which keeps its own copy of the PRE-conversion
 grammar (with the subrule gate) because it tests the engine's group-aware subrule path directly.

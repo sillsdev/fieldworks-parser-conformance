@@ -7,24 +7,24 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: guesser-pattern-root-fallback
 
-## Why this fixture exists
+## Why this test case exists
 
 Closes HC-rust port gap G3 (`docs/hermitcrab-rust-port-audit.md` sec 2 "Partially ported" /
 sec 3 item 1): the Guesser (`guessRoot`/`LexicalGuess`) engine logic was ported and verified
 against the C# unit test's literal expected values (`docs/p11-guesser-api-design.md`), but had no
-oracle-verified conformance fixture, no CLI flag, and no FFI wire-format bit. This fixture pins the
+oracle-verified conformance test case, no CLI flag, and no FFI wire-format bit. This test case pins the
 *engine* behavior (a total lexical miss, guessed via a lexical pattern) as a committed, discoverable
 conformance probe; the CLI/FFI opt-in surface it exists to justify is exercised separately by
 `rust/crates/pg-cli`'s own tests (`src/main.rs`'s `guess_tests` module,
 `tests/guesser_conformance_gate.rs`) and `rust/crates/pg-ffi`'s `tests/parse_opts_gate.rs`, both of
-which load this exact fixture directly.
+which load this exact test case directly.
 
 ## What it pins
 
@@ -40,12 +40,12 @@ which load this exact fixture directly.
 - **`gagd`**: same missing-lexicon situation, but the surface also matches the grammar's one
   suffix rule's output shape, so unapplying that rule leaves a residual stem for the guesser --
   TWO guesses coexist (a 2-morph guess through the suffix rule, and a 1-morph guess of the whole
-  surface as a bare root), matching the C# founding oracle's own canonical Guesser test
+  surface as a bare root), matching the C# reference's own canonical Guesser test
   (`MorpherTests.AnalyzeWord_CanGuess_ReturnsCorrectAnalysis`) structurally (root position, morph
   counts, both guesses coexisting) -- see `words.yaml`'s note for why this port's own join format
   isn't a byte-for-byte match of the C# test's `ToString()` output (that's a display-formatter
   difference already documented at `rust/crates/pg-parse/tests/csharp_port_morpher.rs`'s module
-  doc, not a fixture bug).
+  doc, not a test case bug).
 
 All three `gag`/`gagd` parses are self-check-only (`guess: true`, PROTOCOL.md section 3): the
 `BatchCommand`-equivalent plain adapter contract this repo's `conformance_fixtures_gate.rs` replays
@@ -54,16 +54,16 @@ all, so `WordEntry::adapter_visible()` correctly omits these words from that gen
 are asserted directly, with guessing explicitly turned on, by this repo's own CLI/FFI gate tests
 named above.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** The C# founding
-oracle (`SIL.Machine.Morphology.HermitCrab.Tool`) has no CLI surface for `guessRoot: true` at all
-(`docs/p11-guesser-api-design.md` sec 6's "oracle caveat" -- no `hc.dll` command exposes the
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** The C# founding
+reference (`SIL.Machine.Morphology.HermitCrab.Tool`) has no CLI surface for `guessRoot: true` at all
+(`docs/p11-guesser-api-design.md` sec 6's "reference caveat" -- no `hc.dll` command exposes the
 3-argument `Morpher.ParseWord`/`AnalyzeWord` overload), so there is no upstream tool to generate a
 golden TSV against; the guesser engine port was instead verified directly against the C# unit
 test's own literal expected outcomes (`MorpherTests.AnalyzeWord_CanGuess_ReturnsCorrectAnalysis`,
 ported at `rust/crates/pg-parse/tests/guesser_gate.rs`). Per `docs/conformance-staging-plan.md`'s
-oracle-discipline note, upstream acceptance of this fixture would need the C# founding oracle's
+oracle-discipline note, upstream acceptance of this test case would need the C# reference's
 self-check harness (`Runner.cs`, which *does* call the 3-argument overload directly for `guess:
 true` words) to re-verify these signatures before graduation.
 
@@ -81,7 +81,7 @@ Confirmed:
 - `gagd`: guess off -> `-`; guess on -> `gag+PAST|gag+?d;gagd|gagd` (two analyses), guessed.
 
 The throwaway probe was deleted after transcription (its assertions now live permanently in
-`rust/crates/pg-cli/tests/guesser_conformance_gate.rs`, which loads this exact fixture directory).
+`rust/crates/pg-cli/tests/guesser_conformance_gate.rs`, which loads this exact test case directory).
 Cross-checked in-repo by `rust/crates/pg-parse/tests/conformance_fixtures_gate.rs`'s
 `all_discovered_fixtures_match_oracle` test (dual-root discovery, default `cargo test --workspace`
 suite): that test replays `kad` normally and correctly SKIPS `gag`/`gagd` (every one of their
@@ -94,7 +94,7 @@ hc.dll originally could not even LOAD this grammar: `mrPast`'s `<MorphemeId>` sa
 MorphemeId?, Gloss?, Properties?)` -- `MorphemeId` must come AFTER `MorphologicalSubrules`. Both
 `LexicalEntry`s also had `<MorphemeId>` before `<Allomorphs>`, but `LexicalEntry`'s content model is
 `(Allomorphs, ..., MorphemeId?, Gloss?, Properties?)` -- `Allomorphs` must come first. Both were pure
-element-reordering fixes, no linguistic content change. This does not change the "Oracle discipline"
+element-reordering fixes, no linguistic content change. This does not change the "Reference discipline"
 section above (hc.dll still has no CLI surface for `guessRoot: true`, so it remains
 `oracle-provenance: rust-only`), but confirms the grammar itself is now valid HC XML, loadable and
 re-checkable by hc.dll's own loader/schema.

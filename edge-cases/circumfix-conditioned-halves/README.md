@@ -7,18 +7,18 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: circumfix-conditioned-halves
 
-## Why this fixture exists
+## Why this test case exists
 
 Upstream `machine/conformance/edge-cases/circumfix-cross-product-and-infix-drop` pins the bare
 2-prefix x 2-suffix circumfix cross-product with NO phonological conditioning on either half. This
-fixture is the conditioned counterpart: each half (prefix `pu-`/`ki-`, suffix `-mo`/`-zo`) is gated
+test case is the conditioned counterpart: each half (prefix `pu-`/`ki-`, suffix `-mo`/`-zo`) is gated
 by the adjacent stem edge, built the way HCLoader's `IsCircumfix()` path actually builds one
 (`HCLoader.cs:1051-1082`): one `MorphologicalSubrule` per prefix-half x suffix-half pairing, with
 each half's phonological context embedded as literal mandatory pattern nodes inside the ONE shared
@@ -27,10 +27,10 @@ suffix-side last stem segment) -- never as a `RequiredEnvironments` element, whi
 `LoadCircumfixAffixProcessAllomorph` never stacks more than once per allomorph
 (`HCLoader.cs:1273-1332`, `hcAllo.Environments.Add` at `:1322`).
 
-An earlier version of this fixture encoded the same intent as two separate
+An earlier version of this test case encoded the same intent as two separate
 `RequiredEnvironments`/`Environment` entries stacked on one `MorphologicalSubrule` (a `Right`-only
 prefix-side gate plus a `Left`-only suffix-side gate). That shape has no HCLoader code path at all
-and was ruled out by the repository owner; this fixture now pins only the shape FieldWorks can
+and was ruled out by the repository owner; this test case now pins only the shape FieldWorks can
 actually build.
 
 ## What it pins
@@ -67,21 +67,21 @@ one `MorphologicalSubrule`. FieldWorks' `HCLoader` never emits that shape
 (`LoadCircumfixAffixProcessAllomorph`, `HCLoader.cs:1273-1332`, calls `hcAllo.Environments.Add` at
 most once, `:1322`), so the repository owner ruled that encoding, and the rejection it produced for
 `puabzo`/`kibamo`/`kibbzo` (via `pg-rules/src/validity.rs`'s disjunctive-allomorph re-check), out of
-scope for this fixture.
+scope for this test case.
 
 Rewriting the grammar to embed each half's `[V]`/`[C]` gate directly in the stem pattern (the
-`IsCircumfix()`-faithful shape) and re-running against the C# founding oracle flips the outcome for
-those three words: the oracle now PARSES `puabzo`, `kibamo`, and `kibbzo` (each satisfies its own
+`IsCircumfix()`-faithful shape) and re-running against the C# reference flips the outcome for
+those three words: the reference now PARSES `puabzo`, `kibamo`, and `kibbzo` (each satisfies its own
 subrule's embedded first/last stem-pattern gates, with no cross-subrule disjunctive-allomorph check
 in play, since there is no `RequiredEnvironments` at all in this shape). `pubbmo` and `puabmo`
 remain rejected, since neither satisfies `subVV`'s embedded gates on both stem edges. This is the
-expected, intended result of the grammar change -- ground truth from the oracle for the new grammar
+expected, intended result of the grammar change -- ground truth from the reference for the new grammar
 shape -- not a regression: `words.yaml`'s `parses:` entries for the three flipped words were derived
 from `rust/tools/oracle-conformance.ps1 -Propose`'s output against the rewritten grammar.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: the C# founding oracle (`hc-conformance.exe`), self-check mode.** Command run:
+**Reference: the C# reference (`hc-conformance.exe`), self-check mode.** Command run:
 ```
 rust\tools\oracle-conformance.ps1 -Propose
 ```
@@ -92,23 +92,23 @@ Against the rewritten grammar, this reported:
     word 'kibamo': expected [] got [CIRC+ROOTBA|kibamo]
     word 'kibbzo': expected [] got [CIRC+ROOTBB|kibbzo]
 ```
-i.e. the C# oracle ITSELF now produces an analysis for those three words (they were previously
+i.e. the C# reference ITSELF now produces an analysis for those three words (they were previously
 `expect_fail: true`). `words.yaml` was updated with the proposed `parses:` entries (`rules: [mrCirc]`,
 confirmed by re-running without `-Propose` -- no `declared rules [...] != traced [...]` mismatch was
 reported). `pubbmo`/`puabmo` remained rejected and needed no change. The self-check now reports:
 ```
 [PASS] edge-cases/circumfix-conditioned-halves (16ms)
 ```
-with zero divergence for this fixture, and the overall run ends `PASSED` (the one `[FAIL]` line
+with zero divergence for this test case, and the overall run ends `PASSED` (the one `[FAIL]` line
 remaining, `edge-cases/head-ambiguous-compounding`, is a pre-existing baselined
-rules-attribution-only divergence unrelated to this fixture). `machine` checkout commit
-`f150e2a0`. This fixture's `words.yaml` carries
+rules-attribution-only divergence unrelated to this test case). `machine` checkout commit
+`f150e2a0`. This test case's `words.yaml` carries
 `# oracle-provenance: founding-oracle`.
 
 ## Verification
 
 Signatures for the now-parsing words (`puabzo`, `kibamo`, `kibbzo`) came directly from
-`rust/tools/oracle-conformance.ps1 -Propose`'s `# --propose:` block, which runs the C# oracle
+`rust/tools/oracle-conformance.ps1 -Propose`'s `# --propose:` block, which runs the C# reference
 against the rewritten grammar. The `rules: [mrCirc]` attribution was confirmed by re-running without
 `-Propose` and observing no rules-mismatch report (the harness prints `declared rules [...] !=
 traced [...]` when the declared list is wrong). The `expect_fail` words (`pubbmo`, `puabmo`, `aamo`)

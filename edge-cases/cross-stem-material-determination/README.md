@@ -7,25 +7,25 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: cross-stem-material-determination
 
-## Why this fixture exists
+## Why this test case exists
 
 Makes a formerly unmeasured containment boundary measurable. The backend-routing principle says
 the proposer FST may drop long-distance *agreement* that confirm can check, but it must preserve
 long-distance *material* determination: a suffix's form depends on which prefix was chosen, not
 merely whether the pairing is licensed. A proposer that picks one variant can silently
-undergenerate. No existing fixture pins this: `mpr-gated-exception` (upstream)
+undergenerate. No existing test case pins this: `mpr-gated-exception` (upstream)
 exercises MPR-feature gating, but with the feature LEXICALLY pre-assigned to a root
 (`ruleFeatures=` on the `LexicalEntry`), not RULE-assigned across a derivation, and it gates a
 single rule's applicability (agreement/licensing), never a rule's own *choice of allomorph form*.
 
-This fixture's `mrSfx` has two allomorphs, `subSfxKa` (realizes `-ka`) and `subSfxKo` (realizes
+This test case's `mrSfx` has two allomorphs, `subSfxKa` (realizes `-ka`) and `subSfxKo` (realizes
 `-ko`), gated respectively on `requiredMPRFeatures="mprPfxA"`/`"mprPfxB"` — MPR features assigned
 only by `mrPfxA`/`mrPfxB`'s own `MorphologicalOutput MPRFeatures=` (rule-assigned, propagated
 across the intervening root via the derivation's accumulated MPR-feature set, not by adjacency).
@@ -39,10 +39,10 @@ This is FieldWorks' "class-changing affix" pattern. Each derivational prefix wri
 class (`ToInflectionClassRA` → `OutMprFeatures`, HCLoader.cs:954-955); `mrSfx` is an inflectional
 affix in a template slot whose two allomorphs each name a different `InflectionClassesRC`, added to
 that allomorph's `RequiredMprFeatures` alone (HCLoader.cs:1113-1123). The features sit in an
-`inflClasses`-shaped group. The fixture was first staged with `mrSfx` on the stratum's own rule
+`inflClasses`-shaped group. The test case was first staged with `mrSfx` on the stratum's own rule
 list and `fieldworks_producible: false`; the note behind that verdict cited only the MSA-level
 list at HCLoader.cs:966-969 and missed the per-allomorph addend. Moving the rule into the slot
-changed no word's signature or traced rules (oracle re-run below).
+changed no word's signature or traced rules (reference re-run below).
 
 ## What it pins
 
@@ -66,9 +66,9 @@ prefixes (all four surface strings as candidates), and only confirm can reject t
 real derivation. A proposer that instead "picks one variant" per prefix would silently under-
 generate one of the two valid words — the exact failure shape D1 warns about.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: the C# founding oracle (`SIL.Machine.Morphology.HermitCrab.Tool`/`hc.dll`), run through
+**Reference: the C# reference (`SIL.Machine.Morphology.HermitCrab.Tool`/`hc.dll`), run through
 `machine/conformance/adapters/hc-dotnet-wrapper.sh`, cross-checked against `pangloss`
 (`pg_parse::Morpher`, driven directly).** `machine/src` was widened into this worktree's sparse
 `machine/conformance` checkout for this authoring session only, narrowed back to `conformance`
@@ -76,7 +76,7 @@ alone once transcription was done. Both runs agreed on every word's status and s
 
 ## Verification
 
-C# oracle run (`hc-dotnet-wrapper.sh batch grammar.xml words.txt out.tsv`):
+C# reference run (`hc-dotnet-wrapper.sh batch grammar.xml words.txt out.tsv`):
 
 ```
 0	tolu	99	ok	ROOT|tolu
@@ -88,12 +88,12 @@ C# oracle run (`hc-dotnet-wrapper.sh batch grammar.xml words.txt out.tsv`):
 
 Cross-checked against `pg_parse::Morpher` via the same throwaway `pg-parse` test as
 `circumfix-in-template-slot` (`zz_throwaway_transcribe_new_fixtures.rs`, deleted once
-transcription was confirmed). Both oracles agree exactly; the C# output above is transcribed
+transcription was confirmed). Both references agree exactly; the C# output above is transcribed
 verbatim into `words.yaml`.
 
-`pg.ps1 -Mode test -Package pg-parse -TestTarget conformance_fixtures_gate` confirms this fixture
+`pg.ps1 -Mode test -Package pg-parse -TestTarget conformance_fixtures_gate` confirms this test case
 replays inside the default suite. `pg.ps1 -Mode test -Package pg-foma -TestTarget
-faithfulness_coverage_gate -Filter report_faithfulness_coverage -NoNextest` reports this fixture's
+faithfulness_coverage_gate -Filter report_faithfulness_coverage -NoNextest` reports this test case's
 own containment outcomes. Isolated per-fixture measurement (a throwaway `pg-foma` test calling
 `crate::faithfulness_coverage::observe_fixture_containment` directly, deleted after reporting)
 found:
@@ -114,10 +114,10 @@ asserting that they should.
 
 ## Graduation
 
-## Oracle provenance (re-verified 2026-09-16)
+## Reference provenance (re-verified 2026-09-16)
 
-`rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# founding oracle,
+`rust/tools/oracle-conformance.ps1` ran the hc-conformance.exe self-check (C# reference,
 machine commit f150e2a0) against the template-slot grammar:
-PASS, every word's signature and traced `rules:` list matched. The "Oracle discipline" and
-"Verification" sections above describe how the fixture was originally authored (stratum-level
+PASS, every word's signature and traced `rules:` list matched. The "Reference discipline" and
+"Verification" sections above describe how the test case was originally authored (stratum-level
 `mrSfx`), not its current verification status.

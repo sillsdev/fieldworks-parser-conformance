@@ -7,14 +7,14 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: circumfix-infix-interior-action-precedence
 
-## Why this fixture exists
+## Why this test case exists
 
 Pins census **C3** (`docs/conformance/circumfix-structural-composite-census.md`,
 `openspec/changes/plan-construct-coverage-completion` task 4.3b): `crate::emit::classify_affix`'s
@@ -93,30 +93,30 @@ rather than just replaying it in order — e.g. some assumption baked into LHS/R
 "circumfix" allomorph has exactly one contiguous copied span. No such special-casing exists in
 either caller today; if one is ever added, this argument must be re-checked.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; no `dotnet`/C# toolchain available in this environment. Per `docs/
 conformance-staging-plan.md`'s oracle-discipline note, this must be treated as `pangloss`-only
-ground truth until independently re-verified against the C# founding oracle.
+ground truth until independently re-verified against the C# reference.
 
 ## Verification
 
 Signatures captured by running `cargo test -p pg-parse --test conformance_fixtures_gate --
---nocapture`, which discovers this staged fixture automatically and replays every word against
+--nocapture`, which discovers this staged test case automatically and replays every word against
 `pg_parse::Morpher` — the mismatch panic message on the first pass reported the engine's own actual
 signature, transcribed verbatim into `words.yaml` above (not hand-derived). Final run: `3 passed; 0
-failed`, `346 words checked across 29 fixtures` (the whole default corpus, this fixture included).
+failed`, `346 words checked across 29 test cases` (the whole default corpus, this test case included).
 
 ## Graduation
 
-## Oracle provenance (reconciled 2026-08-31)
+## Reference provenance (reconciled 2026-08-31)
 
 
-ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde) directly against this fixture's
+ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# reference,
+machine commit caa4ddde) directly against this test case's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
-fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"
-section below describes how this fixture was originally authored, not its current verification
+test case's words.yaml now carries # oracle-provenance: reference. Any "Reference discipline"
+section below describes how this test case was originally authored, not its current verification
 status.

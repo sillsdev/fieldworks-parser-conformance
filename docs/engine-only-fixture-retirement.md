@@ -1,26 +1,26 @@
-# Engine-only fixture retirement: decision record
+# Engine-only test case retirement: decision record
 
 **Decision (owner).** The conformance suite keeps only grammars a real FieldWorks project can
-produce, that is, fixtures a real project can produce. A fixture that needs a construct
+produce, that is, test cases a real project can produce. A test case that needs a construct
 `HCLoader.cs` (FieldWorks `ParserCore`) cannot emit tests the engine against input FieldWorks never
-sends, so it cannot catch a regression a FieldWorks user would see. Such a fixture is converted
+sends, so it cannot catch a regression a FieldWorks user would see. Such a test case is converted
 to a producible grammar when that preserves its purpose, and deleted when it does not.
 `ConformanceFixtureGateTests.EveryFixtureIsMarkedFieldWorksProducible` enforces the rule.
 
 Refined by [ADR 0001](adr/0001-aspirational-upstream-fixtures.md): a construct FieldWorks cannot write today is
 allowed once an upstream issue or PR exists to make it writable.
 
-No fixture is kept engine-only. The constructs the suite does not test, and why FieldWorks cannot write
+No test case is kept engine-only. The constructs the suite does not test, and why FieldWorks cannot write
 each one, are in the section
 [what the XML can say but FieldWorks cannot, so we do not test it](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it).
 The construct numbers used below are that section's row numbers.
 
 ## Result
 
-27 fixtures were deleted. Four were later restored as producible grammars, so 23 stay deleted
-(see "Restored" below). Five more fixtures were deleted afterwards (see "Deleted"); three of those five were restored as aspirational (see "Restored as aspirational"), so 25 stay deleted. The counts below date from the first retirement, when 133 fixtures remained (6 `languages/`, 127 `edge-cases/`), every one
+27 test cases were deleted. Four were later restored as producible grammars, so 23 stay deleted
+(see "Restored" below). Five more test cases were deleted afterwards (see "Deleted"); three of those five were restored as aspirational (see "Restored as aspirational"), so 25 stay deleted. The counts below date from the first retirement, when 133 test cases remained (6 `languages/`, 127 `edge-cases/`), every one
 is producible; two of them, `edge-cases/compound-max-applications` and
-`edge-cases/final-template-partial-trace`, are new. The suite holds more now, and its count changes with every fixture; the current count comes from the generated manifest
+`edge-cases/final-template-partial-trace`, are new. The suite holds more now, and its count changes with every test case; the current count comes from the generated manifest
 (`python3 scripts/suite.py generate`), not from this page.
 
 ## Marked producible without a grammar change
@@ -29,13 +29,13 @@ is producible; two of them, `edge-cases/compound-max-applications` and
 
 ## Converted to a producible grammar
 
-Each conversion was re-run against the C# oracle; every remaining expected row is unchanged
+Each conversion was re-run against the C# reference; every remaining expected row is unchanged
 except where listed.
 
 * `edge-cases/template-category-sharing`, `edge-cases/final-template-partial-root`,
   `edge-cases/final-template-partial-discriminators`: dropped `outputPartOfSpeech` from slot rules
   (`LoadInflAffixProcessRule` never sets an output part of speech) and, in the two partial
-  fixtures, from stratum-level partial rules; removed `partOfSpeech` from the two partial entries
+  test cases, from stratum-level partial rules; removed `partOfSpeech` from the two partial entries
   of `final-template-partial-root` (`LoadLexEntry` sets `IsPartial` only when the MSA has no part
   of speech). No row changed.
 * `edge-cases/clitic-rule-designation`, `edge-cases/clitic-flex-layout-blocking-morphology`,
@@ -55,24 +55,24 @@ except where listed.
   an exclude rule cannot refuse the absence of a morpheme. Two negative controls were added,
   `siputukusi` and `sipulupasi`, each shown to parse when the reportative exclude rules are
   removed. The AND-not-OR pin for #311 (`walaknkicha`, blocked by `mrEvidConjectural`) is unchanged.
-* The #612 pass over fixtures already marked `true` (no row changed except where listed):
-  * Seven fixtures whose `linear` stratum lists morphological rules or holds an affix template now
+* The #612 pass over test cases already marked `true` (no row changed except where listed):
+  * Seven test cases whose `linear` stratum lists morphological rules or holds an affix template now
     say `unordered`, because the engine reads the order for both (`compounding-breadth`,
     `head-ambiguous-compounding`, `recursive-endocentric-compounding`,
     `subrule-morphosyntactic-gating`, `guesser-pattern-root-fallback`,
-    `pattern-root-required-environment`, `standalone-combining-mark`); the oracle found no change
+    `pattern-root-required-environment`, `standalone-combining-mark`); the reference found no change
     in any word. `morphological-rule-order-measurement.md` (sillsdev/machine#480) has the count.
-  * 18 fixtures dropped `outputPartOfSpeech` from every slot rule. No row changed.
+  * 18 test cases dropped `outputPartOfSpeech` from every slot rule. No row changed.
   * `edge-cases/morphotactic-attribute-breadth`: the partial stem entry `eNap` lost its part of
     speech, the partial slot rule `mrPartial` became the ordinary suffix `mrMo` (so `kulmo`'s
     signature is `KUL+MO|kulmo`), and the partial stratum rule `mrPO` lost its
     `outputPartOfSpeech`. `napmo` and `pogliti` still pin the two partial flags.
-  * `FieldWorksProducibleShapeTests` fails when a `true` fixture brings any of these shapes back.
+  * `FieldWorksProducibleShapeTests` fails when a `true` test case brings any of these shapes back.
 
 ## Restored (4)
 
 Each was deleted, then rebuilt as a grammar the loader can produce, and each keeps its purpose with the
-changes listed. The oracle confirmed every expected row; each changed word was shown to change under a
+changes listed. The reference confirmed every expected row; each changed word was shown to change under a
 targeted mutation of the grammar.
 
 * `languages/suffixing-vowel-harmony` (27 words; two respelled, see below): `outputPartOfSpeech` dropped from the three slot rules.
@@ -96,7 +96,7 @@ three custom MPR groups.
 
 ## Words dropped, added or re-derived
 
-Each fixture below changed which words it holds. The first number is the word count before the
+Each test case below changed which words it holds. The first number is the word count before the
 change, the second the count now. A word is **kept** when its expected result and signatures are
 unchanged, **dropped** when it is gone, **re-derived** when it stays but its expected result changed,
 and **added** when it is new.
@@ -143,11 +143,11 @@ and **added** when it is new.
 ## Deleted (23, and 5 more below)
 
 None could be converted to a producible grammar without losing its premise, except where the doubts
-below say otherwise. The first column is the fixture name; the second is the construct (row
-numbers in fieldworks-cannot-say.md) that made it unproducible, with what the grammar used; the third is what it tested. A fixture
+below say otherwise. The first column is the test case name; the second is the construct (row
+numbers in fieldworks-cannot-say.md) that made it unproducible, with what the grammar used; the third is what it tested. A test case
 may need more than one construct.
 
-| Fixture | Construct (row in fieldworks-cannot-say.md) | What it tested |
+| Test case | Construct (row in fieldworks-cannot-say.md) | What it tested |
 |---|---|---|
 | `edge-cases/bistratal-overlapping-segment-representation` | 1: two character tables, one per stratum | whether a segment spelled differently on two strata is accepted or refused when each stratum has its own lexicon (the refusal side of shared representation) |
 | `edge-cases/cross-table-root-respelling` | 1: tables `tIn` and `tFin` | a root entered on an inner stratum surfaces spelled by the final table's segment with the same feature bundle, with no phonological rule |
@@ -175,25 +175,25 @@ may need more than one construct.
 
 Five more were deleted after the #615 gate (the three `prefix-required-environment-after-epenthesis*` rows are no longer in this list; they were restored, see below) (`FlaggedFixturesUseNoShapeHcLoaderCannotWrite`) found shapes the loader never writes; each conversion was tried or shown impossible.
 
-| Fixture | Construct (row in fieldworks-cannot-say.md) | What it tested, and why conversion loses it |
+| Test case | Construct (row in fieldworks-cannot-say.md) | What it tested, and why conversion loses it |
 |---|---|---|
 | `edge-cases/family-blocked-generation` | 8: `family="famF"` on two entries (`LoadLexEntry`, 740-817: the loader never reads a family) | a family relative blocking a derivation that shares its surface: `aat` parses as B twice (lookup and the blocked A+T). Without a family nothing blocks A+T, and the A+T derivation traces no rule |
 | `edge-cases/prefix-excluded-environment-after-epenthesis` | 20: `ExcludedEnvironments` on the prefix (870, 1372, 1627, 1654: every `AllomorphEnvironment` is `Require`); 14: a right environment on a prefix | an excluded environment beside an epenthetic segment. Excluded cannot be written, and the folded required form loses the environment-versus-epenthesis check |
 
-Counts by row (the first 23): 1 has 9 fixtures, 2 has 6, 3 has 2, 4 has 3, 5 has 1, 7 has 3, 8 has 1, 9 has 1,
-10 has 1, 11 has 1, 20 has 1. The five later ones added 1 to row 8, 4 to row 14 and 1 to row 20; three of the row 14 ones were restored, leaving 1 each in rows 8, 14 and 20. Rows 6 and 19 have none left: their fixtures were restored. A fixture that
+Counts by row (the first 23): 1 has 9 test cases, 2 has 6, 3 has 2, 4 has 3, 5 has 1, 7 has 3, 8 has 1, 9 has 1,
+10 has 1, 11 has 1, 20 has 1. The five later ones added 1 to row 8, 4 to row 14 and 1 to row 20; three of the row 14 ones were restored, leaving 1 each in rows 8, 14 and 20. Rows 6 and 19 have none left: their test cases were restored. A test case that
 needs several rows is counted under each.
 
 ## Restored as aspirational
 
-Three of the five fixtures deleted after the #615 gate were restored on 2026-11-25 (fpc issue #56,
+Three of the five test cases deleted after the #615 gate were restored on 2026-11-25 (fpc issue #56,
 [ADR 0001](adr/0001-aspirational-upstream-fixtures.md)), because FieldWorks Jira
 [LT-22922](https://jira.sil.org/browse/LT-22922) is open: it asks `HCLoader` to keep a prefix's right-hand
 environment as an environment instead of folding it into the input pattern (row 14 of
 fieldworks-cannot-say.md). Each has a `pending-upstream` row for `jira:LT-22922` (`affects: loader`) in
 `status.yaml`. Their rows are unchanged from the commit that deleted them.
 
-| Fixture | Construct | Upstream |
+| Test case | Construct | Upstream |
 |---|---|---|
 | `edge-cases/prefix-required-environment-after-epenthesis` | 14: a right-hand `RequiredEnvironments` on a lone prefix | LT-22922 |
 | `edge-cases/prefix-required-environment-after-epenthesis-later-compound` | 14: as above | LT-22922 |
@@ -210,7 +210,7 @@ this repository; the section is history, kept for the reasoning.
 
 `GrammarCoverageGateTests.TraceFloor` counts the surfaces a verified parse's rule trace proves. The
 corpus had 61 before the producible rewrite and has 58 now; the floor was lowered once for each step.
-Compared surface by surface (a surface whose witness fixture merely changed does not count):
+Compared surface by surface (a surface whose witness test case merely changed does not count):
 
 * Lost (5): `dtd:element/HeadRequiredFootFeatures` and `dtd:element/NonHeadRequiredFootFeatures` (foot
   features, row 19 of fieldworks-cannot-say.md), `dtd:element/HeadRequiredHeadFeatures` and
@@ -241,7 +241,7 @@ why:
   enforce-final]` (word `pilfbvb`), which is the only result-level test of the gate. The words `sagft` and
   `sagfq` still sit in `words.yaml`, but they pin nothing about this gate. The gate stays recorded as lost
   (`obligation-triage.tsv`, bucket 3, Open). FieldWorks can set `MakePartialsFinal` (`HCParser.cs:168`), so
-  the gate is producible; adding a fixture variant for it is possible, and nothing here claims otherwise.
+  the gate is producible; adding a test case variant for it is possible, and nothing here claims otherwise.
   Gates with both arms evidenced: 7 to 6.
 * Dataflow cell (`dataflow-obligations.tsv`, satisfied 9 to 8, not satisfied 96 to 106, unknown 193 to
   184): `MorphologicalOutput.MPRFeatures->MorphologicalInput.excludedMPRFeatures` (`PresentGatedForm`),
@@ -269,21 +269,21 @@ why:
 
 ## Retirement doubts
 
-The one fixture below might be convertible with a loss. The four others that were in doubt are restored (above).
-The conversion was tried on a scratch copy and checked with the founding oracle.
+The one test case below might be convertible with a loss. The four others that were in doubt are restored (above).
+The conversion was tried on a scratch copy and checked with the reference.
 
 * `languages/fusional-realizational-morphology`. The same removals, plus `mrCompoundConstrained`, change
   five of 62 words (`ferid`, `ygofz`, `yxpedz`, `sodh`, `gofwh`); the realizational point is lost.
   Partial doubt. Not restored: its premise is the realizational rule.
 
-Claims in the deleted fixtures' notes that do not hold at FieldWorks `620cd990`:
+Claims in the deleted test cases' notes that do not hold at FieldWorks `620cd990`:
 
 * `edge-cases/loader-isactive-breadth` says an allomorph has no inactive state. A form with `IsAbstract`
-  is skipped (`IsValidRuleForm`, `IsValidLexEntryForm`). The fixture still needs three tables and `family`.
+  is skipped (`IsValidRuleForm`, `IsValidLexEntryForm`). The test case still needs three tables and `family`.
 * `languages/prefixal-discontinuous-slot-dependency` says one required-MPR list applies to every subrule.
   That is true of a derivational rule; `mrSubj` sits in a slot, where subrules may differ. Its other
   reason, MPR output from a slot rule, holds.
-* No deleted fixture used differing `requiredMPRFeatures` across the subrules of a non-inflectional rule.
-  Row 12 is a shape the suite avoids; it is not a reason any fixture was deleted.
+* No deleted test case used differing `requiredMPRFeatures` across the subrules of a non-inflectional rule.
+  Row 12 is a shape the suite avoids; it is not a reason any test case was deleted.
 * `edge-cases/metathesis-comparison-crash` stays out, but the switch order is an editor guarantee
   (`MetaRuleFormulaControl.GetNextCell`), not a LibLCM data-model one.

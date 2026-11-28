@@ -37,13 +37,13 @@ This is a loader-reachability argument, not a claimed real-project FieldWorks ro
 The expected identities were derived above, then checked with the Machine conformance harness
 built from `a20bce12`, which includes merged #493. Ten rows pass
 with memoization enabled and disabled, for both TV/IV and IV/TV template declaration order.
-Each replay reports one passed fixture, no failures and no skips. The reverse-order probe changes
+Each replay reports one passed test case, no failures and no skips. The reverse-order probe changes
 only the two template elements; the same `words.yaml` is retained.
 
 Run an engine's self-check with `--fixtures <root-containing-only-this-edge-case>` (the sillsdev/machine runner's flag) and repeat with
 `--no-memoization`. The default committed order is TV then IV. Reverse only those two template
 elements in a scratch copy for the second pair of runs. A focused replay must discover exactly
-one fixture and check all ten rows, not merely return exit zero on an empty root.
+one test case and check all ten rows, not merely return exit zero on an empty root.
 
 PanGloss's full-parse probe also passes before its gate-only alignment: existing widening can
 mask the intermediate-state mismatch. This grammar is preservation coverage, not proof that

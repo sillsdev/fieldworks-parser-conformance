@@ -9,7 +9,7 @@ Synthetic. An ad hoc allomorph prohibition on a stem entry with two stem MSAs (V
 - `tada`: prefix-first prohibition, rest side has both copies of da: no analysis.
 - `taba`: stem-first prohibition on each copy of ba: no analysis.
 
-## Oracle
+## Reference
 
 hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-31`.
 

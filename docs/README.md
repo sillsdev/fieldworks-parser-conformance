@@ -1,6 +1,6 @@
 # The conformance suite: documentation
 
-These documents ship **with** the fixtures. That is deliberate: a consumer receives this repository and
+These documents ship **with** the test cases. That is deliberate: a consumer receives this repository and
 nothing else (sillsdev/machine and PanGloss clone it at a pinned commit), so anything explaining the suite that
 lives outside it may as well not exist.
 
@@ -14,21 +14,21 @@ The one rule: the suite holds only what a real FieldWorks project can produce. T
 | | |
 |---|---|
 | [../README.md](../README.md) | the front page: what the suite is, the three projects, a quick start |
-| [what-it-is.md](what-it-is.md) | the suite, the fixture contract, the two-file format |
+| [what-it-is.md](what-it-is.md) | the suite, the test case contract, the two-file format |
 | [../GLOSSARY.md](../GLOSSARY.md) | the canonical terms the suite uses |
 | [grammars.md](grammars.md) | every grammar in the suite, one line each, grouped by area, and which engines run which |
 
 ### Implementing an engine
 
 You need **`PROTOCOL.md` and nothing else here.** Your entire obligation is to produce the same
-parses for each fixture's `grammar.xml` and words. If you do, you inherit whatever this suite covers.
+parses for each test case's `grammar.xml` and words. If you do, you inherit whatever this suite covers.
 
 | | |
 |---|---|
 | [PROTOCOL.md](../PROTOCOL.md) | the adapter contract an engine must implement |
 | [rule-order.md](rule-order.md) | the rule-order contract, strata and the engine cascade |
 
-The measurements that justify calling the fixture set complete (counterfactual census, interface inventory,
+The measurements that justify calling the test case set complete (counterfactual census, interface inventory,
 severance sweep, interaction chains, data-flow obligations) were computed by running sillsdev/machine's
 HermitCrab engine (sillsdev/machine#480). They are not part of this repository, and you are never measured
 against them.
@@ -37,8 +37,8 @@ against them.
 
 | | |
 |---|---|
-| [consuming.md](consuming.md) | who uses the suite, how they pin it, what passing means, and the manifest and fixture files |
-| [grammars.md](grammars.md) | the six-language table and every fixture, and the XAmple subset |
+| [consuming.md](consuming.md) | who uses the suite, how they pin it, what passing means, and the manifest and test case files |
+| [grammars.md](grammars.md) | the six-language table and every test case, and the XAmple subset |
 | [../stress/README.md](../stress/README.md) | the 16 stress grammars and what their expected output means |
 
 ### Contributing
@@ -48,10 +48,10 @@ Read [AGENTS.md](../AGENTS.md). The one rule is the first thing in it: add only 
 | | |
 |---|---|
 | [CONTRIBUTING.md](../CONTRIBUTING.md) | the growth policy and how to run the checks |
-| [AGENTS.md](../AGENTS.md) | how to add, change or delete a fixture, and what to run before you push |
+| [AGENTS.md](../AGENTS.md) | how to add, change or delete a test case, and what to run before you push |
 | [truncation-companions.md](truncation-companions.md) | the three truncation edge cases derived from one grammar |
 
-Rationale documents for individual fixture groups: [final-template-partial-discriminators.md](final-template-partial-discriminators.md),
+Rationale documents for individual test case groups: [final-template-partial-discriminators.md](final-template-partial-discriminators.md),
 [final-template-partial-root.md](final-template-partial-root.md),
 [shared-template-unconstrained-suffix.md](shared-template-unconstrained-suffix.md),
 [template-category-sharing.md](template-category-sharing.md),
@@ -63,7 +63,7 @@ Rationale documents for individual fixture groups: [final-template-partial-discr
 | | |
 |---|---|
 | [fieldworks-cannot-say.md](fieldworks-cannot-say.md) | the rule, the round-trip standard, and the 27-row table of what FieldWorks cannot say |
-| [engine-only-fixture-retirement.md](engine-only-fixture-retirement.md) | the 23 fixtures still removed for needing a construct FieldWorks cannot produce (four more were restored), and which construct |
+| [engine-only-fixture-retirement.md](engine-only-fixture-retirement.md) | the 23 test cases still removed for needing a construct FieldWorks cannot produce (four more were restored), and which construct |
 
 `.fwdata` witnesses and XAMPLE comparison are produced and run by
 [PanGloss](https://github.com/sillsdev/PanGloss)'s `xample-projector` tool, which stays in PanGloss; this

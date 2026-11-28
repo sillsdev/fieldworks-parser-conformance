@@ -22,7 +22,7 @@ The grammar declares a shared symbolic feature `cell`, every segment carries its
 
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv`.
 
-Oracle: hc.dll, Machine `18cf242f`; 16 complete rows per cell.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows per cell.
 Divergence: PanGloss `docs/divergences/065-nullable-rewrite-environment.md` (also 067).
 FieldWorks: `HCLoader.cs:2338-2344,2745-2770`.
 Upstream PR: none (Rust-only defect).

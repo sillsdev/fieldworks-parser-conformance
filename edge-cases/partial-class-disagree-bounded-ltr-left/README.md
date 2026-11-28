@@ -19,7 +19,7 @@ The grammar declares a shared symbolic feature `cell`, every segment carries its
 
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv`.
 
-Oracle: hc.dll, Machine `18cf242f`; 16 complete rows per cell, in PanGloss `docs/divergences/evidence/067-ambiguous-disagreement/` and `evidence/079-partial-explicit-class/`.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows per cell, in PanGloss `docs/divergences/evidence/067-ambiguous-disagreement/` and `evidence/079-partial-explicit-class/`.
 Ledger: PanGloss `docs/divergences/079-partial-explicit-class-disagreement.md` (also 067).
 FieldWorks: `HCLoader.cs:2338-2344,2745-2770,2799-2808`.
 Upstream PR: none (Rust-only defect).

@@ -9,7 +9,7 @@ Synthetic. An ad hoc allomorph prohibition on a prefix entry with two equal MoIn
 - `tada`: prefix-first, one rule per prefix copy: no analysis.
 - `taba`: stem-first, one rule per prefix copy on the rest side: no analysis.
 
-## Oracle
+## Reference
 
 hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-31`.
 

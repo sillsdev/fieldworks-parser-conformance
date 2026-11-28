@@ -1,6 +1,6 @@
 # Contributing
 
-[AGENTS.md](AGENTS.md) holds the mechanics: how to add, change or delete a fixture, which files are generated,
+[AGENTS.md](AGENTS.md) holds the mechanics: how to add, change or delete a test case, which files are generated,
 and what to run before you push. This page holds the policy and the commands.
 
 ## Growth policy: every bug fix lands with a conformance addition

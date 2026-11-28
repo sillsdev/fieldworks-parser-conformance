@@ -14,9 +14,9 @@ With `prSpirant` removed from the stratum, `aafa` and `aava` lose their `AA+PA` 
 
 Nothing was converted from the staged grammar, which is the staged file byte for byte (its leading XML comment still says "Staged for PanGloss issue 33").
 
-`fieldworks_producible: true` rests on `HCLoader.cs`, not on a witness; see `narrowing-boundary-first-alpha-lhs` for the reading. `LoadPhonologicalRule` builds the left-hand side from every `IPhSimpleContext` in `StrucDescOS` through `LoadPatternNode`, which handles a boundary-marker context (FieldWorks `origin/main` `d36ff645`). PanGloss staged this fixture as `false` because FieldWorks' rule editor offers boundary markers only in environments; the census does not forbid a boundary in the input, and `edge-cases/boundary-first-in-narrowing-lhs` (flagged `true`) has the same shape. A FieldWorks project whose rule input holds a boundary is not witnessed.
+`fieldworks_producible: true` rests on `HCLoader.cs`, not on a witness; see `narrowing-boundary-first-alpha-lhs` for the reading. `LoadPhonologicalRule` builds the left-hand side from every `IPhSimpleContext` in `StrucDescOS` through `LoadPatternNode`, which handles a boundary-marker context (FieldWorks `origin/main` `d36ff645`). PanGloss staged this test case as `false` because FieldWorks' rule editor offers boundary markers only in environments; the census does not forbid a boundary in the input, and `edge-cases/boundary-first-in-narrowing-lhs` (flagged `true`) has the same shape. A FieldWorks project whose rule input holds a boundary is not witnessed.
 
-## Oracle
+## Reference
 
 Every row was taken with `hc-conformance --propose` at sillsdev/machine `ba6dfa10` (tip of #615, the suite pin). All four staged rows, verified at `c2454760` (which contains sillsdev/machine#539), replayed unchanged.
 

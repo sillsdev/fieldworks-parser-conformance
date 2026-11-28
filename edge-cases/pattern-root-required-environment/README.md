@@ -7,21 +7,21 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: pattern-root-required-environment
 
-## Why this fixture exists
+## Why this test case exists
 
 Commit 620863f6 made `EmissionStrategy::TunedSurfaceProbed`'s `collect_roots`
 (`rust/crates/pg-foma/src/emit.rs`) compile an unbounded pattern root shape (`[Any]*`) as a
 compiled regex entry instead of leaving it uncovered, closing a real gap for the common case. But
 `collect_roots`' regex route only applies when the allomorph carries no `<RequiredEnvironments>`
 (`pattern_regex_body`'s own scope limit: the precision flags a required environment needs have no
-literal surface to check on an unbounded shape). No staged or upstream fixture exercised that
+literal surface to check on an unbounded shape). No staged or upstream test case exercised that
 combination, so after 620863f6:
 
 - `surface-probe.root-spelling-cap` (`capability.rs`'s `EagerRouteDropsRootSpellingsCheck`, backed
@@ -33,7 +33,7 @@ combination, so after 620863f6:
   and `the_published_root_spelling_fact_never_over_claims_a_drop` both went vacuous for the same
   reason: `TunedSurfaceProbed` refused nothing in the entire suite.
 
-This fixture restores both witnesses without touching production code: a lexical PATTERN root
+This test case restores both witnesses without touching production code: a lexical PATTERN root
 allomorph (`ePattern`, `[Any]*` over the empty-FS `Any` natural class, same construct
 `edge-cases/guesser-pattern-root-fallback` and `edge-cases/backend-strata-generic` already pin as
 guess-only/never ordinarily trie-indexed) that additionally carries a `<RequiredEnvironments>`
@@ -51,16 +51,16 @@ grammar, naming the construct via `CapabilityDiagnostic`.
   at compile time, giving `surface-probe.root-spelling-cap` and the `envelope_agrees_with_compiler_
   gate` report a live witness again.
 - **`eTik`/`eBon`** (positive controls): two ordinary literal roots, trie-indexed normally, each
-  combining with the one unconstrained suffix rule (`mrPast`, `-us`) to give this fixture real
+  combining with the one unconstrained suffix rule (`mrPast`, `-us`) to give this test case real
   adapter-visible analyses (`tik`, `tikus`, `bon`, `bonus`) entirely independent of `ePattern` —
   proving the pattern root's presence changes nothing about ordinary parsing.
 - **`zim`/`tikbon`** (negative controls): well-formed surfaces with zero valid analyses — neither
   matches a literal root, the suffix's output shape, or (guessing being off) the pattern root.
 
-## Oracle discipline
+## Reference discipline
 
-Verified against the C# founding oracle (`rust/tools/oracle-conformance.ps1 -Scope local`), per
-CLAUDE.md's "oracle hierarchy" and this repo's own `conformance-grammars` skill. See the
+Verified against the C# reference (`rust/tools/oracle-conformance.ps1 -Scope local`), per
+CLAUDE.md's "reference hierarchy" and this repo's own `conformance-grammars` skill. See the
 Verification section below for the run result; `words.yaml`'s header carries
 `# oracle-provenance: founding-oracle` once that run passed.
 
@@ -70,7 +70,7 @@ Verification section below for the run result; `words.yaml`'s header carries
   (see the header line this staging note's companion `words.yaml` carries for the exact machine
   commit and date).
 - `rust/tools/pg.ps1 -Mode test -Package pg-parse -TestTarget conformance_fixtures_gate`: HC-Rust
-  matches the oracle on every adapter-visible word (`tik`, `tikus`, `bon`, `bonus`, `zim`,
+  matches the reference on every adapter-visible word (`tik`, `tikus`, `bon`, `bonus`, `zim`,
   `tikbon`).
 - `rust/tools/pg.ps1 -Mode test -Package pg-foma -TestTarget predicate_negative_witness_gate`:
   `surface-probe.root-spelling-cap` has a live negative witness again.
@@ -80,13 +80,13 @@ Verification section below for the run result; `words.yaml`'s header carries
   (`claimed > 0`, every claimed refusal really refuses).
 - `rust/tools/pg.ps1 -Mode test -Package pg-foma -TestTarget backend_scoreboard_gate`: denominator
   61 -> 62 (exact/misses/refused/unmeasurable per strategy). `TunedSurfaceProbed` moves
-  `59/2/0/0` -> `59/2/1/0` (this fixture is the one new refusal). `TemplatedUnderlyingTokens`
+  `59/2/0/0` -> `59/2/1/0` (this test case is the one new refusal). `TemplatedUnderlyingTokens`
   moves `36/5/20/0` -> `36/5/21/0` (it already refuses every pattern-shaped root allomorph
-  regardless of environments, so this fixture is a new refusal there too). `PlanComposed` moves
+  regardless of environments, so this test case is a new refusal there too). `PlanComposed` moves
   `20/2/36/3` -> `21/2/36/3` (its own route is unaffected by this construct; it measures the
-  fixture `oracle_exact`).
+  test case `oracle_exact`).
 - `rust/tools/pg.ps1 -Mode test -Package pg-foma -TestTarget faithfulness_coverage_gate`: unchanged
-  (`NoMoreThan { failures: 23 }` still holds; this fixture contributes no faithfulness failure).
+  (`NoMoreThan { failures: 23 }` still holds; this test case contributes no faithfulness failure).
 - `rust/tools/pg.ps1 -Mode test -Package pg-foma -TestTarget conformance_coverage_gate`: unchanged
   (`supported_construct_conformance_coverage_has_no_gaps` still passes).
 

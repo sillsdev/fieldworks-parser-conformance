@@ -7,13 +7,13 @@ Synthetic. A FieldWorks metathesis rule (`PhMetathesisRule`) with one left envir
 - `akta`, `aktas`: R0 (underlying `atka`) surfaces swapped. `atka`, `atkas` have no analysis.
 - `itka`, `itkas`, `tika`, `tikas`: controls, the left environment `a` does not hold, so the forms surface unchanged. `ikta`, `kita`, `kitas`: no analysis.
 
-## Oracle
+## Reference
 
-hc.dll shipped with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab): the live `HCLoader` language built from `fieldworks/project.fwdata` and `XmlLanguageLoader` on this `grammar.xml` give the same analysis count for all 11 words (`xample-projector parse-hc`, `projectionAgrees` true). Signatures and rule traces were read from PanGloss's engine, whose counts equal those; `hc-conformance --fixtures` (sillsdev/machine, run on this fixture alone) reports 1 passed, 0 failed, so the C# engine confirms the expectations.
+hc.dll shipped with FieldWorks 9.3.10 (SIL.Machine.Morphology.HermitCrab): the live `HCLoader` language built from `fieldworks/project.fwdata` and `XmlLanguageLoader` on this `grammar.xml` give the same analysis count for all 11 words (`xample-projector parse-hc`, `projectionAgrees` true). Signatures and rule traces were read from PanGloss's engine, whose counts equal those; `hc-conformance --fixtures` (sillsdev/machine, run on this test case alone) reports 1 passed, 0 failed, so the C# engine confirms the expectations.
 
 ## FieldWorks witness
 
-`fieldworks/project.fwdata` is not hand-edited. It was authored with the PanGloss `xample-projector` tool: `author` from a plain grammar (three roots and a suffix), then `configure-probe` with `feature-class` (`distinct`, so each phoneme has its own identity feature) and the new `metathesis` operation (`description` `[a, t, k]`, `leftEnv` 0, `leftSwitch` 1, `rightSwitch` 2). `project` (HCLoader + XmlLanguageWriter) then produced the rule and character definitions in `grammar.xml`; this fixture removes the per-object `Properties` (session-specific handles) and adds `MorphemeId` (HCLoader writes none) so signatures name morphemes. FieldWorks 9.3.10, LibLCM 11.
+`fieldworks/project.fwdata` is not hand-edited. It was authored with the PanGloss `xample-projector` tool: `author` from a plain grammar (three roots and a suffix), then `configure-probe` with `feature-class` (`distinct`, so each phoneme has its own identity feature) and the new `metathesis` operation (`description` `[a, t, k]`, `leftEnv` 0, `leftSwitch` 1, `rightSwitch` 2). `project` (HCLoader + XmlLanguageWriter) then produced the rule and character definitions in `grammar.xml`; this test case removes the per-object `Properties` (session-specific handles) and adds `MorphemeId` (HCLoader writes none) so signatures name morphemes. FieldWorks 9.3.10, LibLCM 11.
 `phonology-mutations.yaml` carries no cases: every phoneme is referenced by the rule or its natural class, so neither mutation vocabulary operation can run with `require_unreferenced`. `base_sha256` matches the project.
 
 ## Not pinned
@@ -22,7 +22,7 @@ A rule with a middle context (one segment between the two switches) behaves diff
 
 ## Metathesis cases that no grammar can separate
 
-Two cases of the PhMetathesisRule backlog (issue 37) cannot be told apart by any `grammar.xml`, so no fixture pins them.
+Two cases of the PhMetathesisRule backlog (issue 37) cannot be told apart by any `grammar.xml`, so no test case pins them.
 
-- Direction 2 (`simultaneous`): `HCLoader.LoadMetathesisRule` (`switch (prule.Direction)`, `case 0: case 2:`) loads it as `LeftToRight`, exactly like direction 0, and the DTD's metathesis `multipleApplicationOrder` has no `simultaneous` value. A fixture of direction 2 is a fixture of direction 0. Direction 1 is pinned by `right-to-left-metathesis-reversal`, whose root `qrs` has overlapping windows.
+- Direction 2 (`simultaneous`): `HCLoader.LoadMetathesisRule` (`switch (prule.Direction)`, `case 0: case 2:`) loads it as `LeftToRight`, exactly like direction 0, and the DTD's metathesis `multipleApplicationOrder` has no `simultaneous` value. A test case of direction 2 is a test case of direction 0. Direction 1 is pinned by `right-to-left-metathesis-reversal`, whose root `qrs` has overlapping windows.
 - The middle context flag (`IsMiddleWithLeftSwitch`, the `:L` or `:R` of the structural change): `GetStrucChangeIndices` uses it only to number the contexts, and the loader turns the numbers into group names for the switches and the middle. The group the middle belongs to has no effect on the pattern, so the XML for `:L` and `:R` is identical. A middle segment between the switches is pinned by `metathesis-middle-context-emptied-edges`.

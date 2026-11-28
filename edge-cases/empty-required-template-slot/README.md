@@ -8,7 +8,7 @@ A FieldWorks project has a required prefix slot with no affixes and a filled opt
 - `monua`: the optional `-a` suffix parses after the empty required slot is omitted.
 - `amonu`: no analysis.
 
-The C# loader and PanGloss both skip the empty slot. PanGloss also emits `grammar.template.slot-no-rules` for it when importing the FieldWorks project. The XML fixture alone cannot show that the source project had the slot; the witness and project-path test pin that distinction. The expected signatures and morphological-rule trace were proposed and checked by the C# founding oracle at Machine `4d9b454d`. See `words.yaml` for the exact rows.
+The C# loader and PanGloss both skip the empty slot. PanGloss also emits `grammar.template.slot-no-rules` for it when importing the FieldWorks project. The XML test case alone cannot show that the source project had the slot; the witness and project-path test pin that distinction. The expected signatures and morphological-rule trace were proposed and checked by the C# reference at Machine `4d9b454d`. See `words.yaml` for the exact rows.
 
 ## FieldWorks witness
 

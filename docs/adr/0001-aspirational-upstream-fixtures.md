@@ -1,4 +1,4 @@
-# Fixtures may be aspirational for upstream Machine and FieldWorks
+# Test cases may be aspirational for upstream Machine and FieldWorks
 
 Status: accepted (owner, 2026-11-25); amended by [ADR 0007](0007-exceptions-live-in-status-yaml.md)
 
@@ -19,7 +19,7 @@ FieldWorks for the capability it needs. It does not wait for the upstream merge.
 come only from a real C# run, never from PanGloss output alone.
 
 Precedents: `edge-cases/affix-multiple-application` (FieldWorks PR #1263 at `0ead571c`, unmerged, makes
-affix `maxApps` writable); the oracle builds at the tip of unmerged machine PR #615 (`e63b8863`).
+affix `maxApps` writable); the reference builds at the tip of unmerged machine PR #615 (`e63b8863`).
 
 ## Consequences
 
@@ -31,6 +31,6 @@ affix `maxApps` writable); the oracle builds at the tip of unmerged machine PR #
 - **Citation.** The `status.yaml` row names the issue or PR (and the SHA for a PR).
 - **Re-point on merge.** When the upstream change merges, update those citations to the merged commit or
   release, and the table rows with them.
-- **If upstream rejects it.** The fixture is retired under the retirement doc: converted to a
+- **If upstream rejects it.** The test case is retired under the retirement doc: converted to a
   producible grammar if that keeps its purpose, otherwise deleted.
 - **Machine-readable.** The dependency is recorded in a `status.yaml` row ([PROTOCOL.md](../../PROTOCOL.md) section 12); `python3 scripts/suite.py status` reports when it merges or closes.

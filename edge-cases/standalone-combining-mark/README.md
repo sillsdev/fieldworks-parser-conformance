@@ -7,18 +7,18 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: standalone-combining-mark
 
-## Why this fixture exists
+## Why this test case exists
 
 Pins a dormant bug in `vendor`/crates.io `foma`'s apply-time tokenizer: it merges a base
 character's trailing combining marks not only WITHIN one lexc char-def's own representation (the
-ordinary "é as one `SegmentDefinition`" case every existing diacritic-bearing fixture, e.g.
+ordinary "é as one `SegmentDefinition`" case every existing diacritic-bearing test case, e.g.
 `languages/*`'s `g_dia.xml`-style grammars, already exercises and `pg_foma::emit::combining_run_symbols`
 already fixes) but also ACROSS the boundary between two DIFFERENT adjacent char-defs. A grammar
 that models a standalone combining mark as its own char-def — e.g. an autosegmental tone mark, as
@@ -28,7 +28,7 @@ swallowed into whatever base char-def precedes it in the emitted lexc surface te
 (`rust/crates/pg-foma/src/emit.rs`), declares every such cross-boundary run in `Multichar_Symbols`
 so foma's tokenizer sees it as one atomic unit instead of merging across the boundary unasked.
 
-This fixture is not one of the four named reference-corpus-shaped pathology mimics in
+This test case is not one of the four named reference-corpus-shaped pathology mimics in
 `docs/conformance-staging-plan.md`'s catalog — it is a narrower,
 construct-specific probe for this one tokenizer bug, in the same spirit as
 `docs/fst-plan/foma-fst-plan.md`'s "non-Latin/non-ASCII robustness follow-up" note (combining marks,
@@ -56,14 +56,14 @@ NFC vs NFD inputs, as a named future-fixture target).
 - `pan` (`PA+SUF|pan`) is the plain-root positive control carried through the same derivation, so a
   reader can see the PA/PAH pair differ by exactly the tone mark and nothing else, bare and affixed.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** `words.yaml`
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** `words.yaml`
 signatures were captured by driving `pg_parse::Morpher::parse_word` directly (a throwaway in-repo
 test — see "Verification" below) rather than a release build of `pg-cli`/`pangloss`, or a
 `SIL.Machine.Morphology.HermitCrab.Tool` run (no `dotnet` toolchain set up in this environment). Per
 `docs/conformance-staging-plan.md`'s oracle-discipline note, this is an accepted staging-time
-substitute; **machine acceptance must re-verify against the C# founding oracle**, and any divergence
+substitute; **machine acceptance must re-verify against the C# reference**, and any divergence
 found there is itself a finding, not assumed to match by construction.
 
 Note also that `pg_parse::Morpher` (the engine driven here) is the STRUCTURAL/HC-native parser, not
@@ -72,7 +72,7 @@ below describe what a CORRECT engine must return for these words; the separate e
 coverage that the `boundary_combining_run_symbols` fix actually closed a real (foma-path) recall gap
 lives in `rust/crates/pg-foma/tests/f5_diacritics_gate.rs` (which drives `FomaAnalyzer` and diffs it
 against `pg_parse::Morpher` directly on `boundary-mark-affix-hc.xml`, a near-identical but separate
-fixture used only by that crate's own test suite — this `conformance-staging` fixture is the
+test case used only by that crate's own test suite — this `conformance-staging` test case is the
 committed, dual-root-discovered pin; that crate-local one is the closer-to-the-bug regression test).
 
 ## Verification
@@ -98,15 +98,15 @@ actually gates CI; the throwaway dump test was deleted once transcription was do
 
 ## Graduation
 
-## Oracle provenance (reconciled 2026-08-31)
+## Reference provenance (reconciled 2026-08-31)
 
 
-ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde) directly against this fixture's
+ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# reference,
+machine commit caa4ddde) directly against this test case's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
-fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"
-section below describes how this fixture was originally authored, not its current verification
+test case's words.yaml now carries # oracle-provenance: reference. Any "Reference discipline"
+section below describes how this test case was originally authored, not its current verification
 status.
 
 ## Shared construct coverage note

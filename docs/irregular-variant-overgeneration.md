@@ -1,6 +1,6 @@
 # Substitute-mechanism over-generation probe (synthetic)
 
-**Retired record, not a fixture.** The two probes below are not in the tree: neither `edge-cases/substitute-mpr-probe`
+**Retired record, not a test case.** The two probes below are not in the tree: neither `edge-cases/substitute-mpr-probe`
 nor `edge-cases/substitute-mpr-probe-adhoc` exists here, and the names are scratch names for the local `base` and `adhoc`
 directories. The grammars are inlined at the end of this page so the experiment can be repeated; the question they
 raise (whether the loader's irregular-form substitute over-generates) is still open under issue #3. This page is kept
@@ -11,7 +11,7 @@ tagging + `ExcludedMprFeatures` + a synthesized null-affix rule per slot, HCLoad
 1702-1804) blocks the IRREGULAR entry from double-marking with the regular affix, but does NOT stop
 the REGULAR root from independently combining with the regular affix.
 
-Both fixtures are hand-built raw HermitCrab XML (`HermitCrabInput.dtd` shape), constructed to mirror
+Both test cases are hand-built raw HermitCrab XML (`HermitCrabInput.dtd` shape), constructed to mirror
 byte-for-byte the object shape `HCLoader.cs` is documented (by direct code trace) to emit for this
 scenario -- NOT produced by projecting a real FieldWorks/LibLCM project, because the `xample-projector`
 `author` tool's supported grammar.xml subset (see its README's "author's supported subset" table) has
@@ -36,7 +36,7 @@ $oracle = ".\hc-conformance.exe"   # the self-check runner of any engine build
 Every word in both `words.yaml` files carries a deliberately bogus expected parse
 (`signature: "BOGUS|bogus"`), so every word always reports a mismatch and the harness's own
 `Runner.cs` mismatch-detail branch prints the REAL analyses it found (`"expected [...] got [...]"`).
-This is a one-shot probe meant to be read for its printed `got [...]` detail, not a fixture meant to
+This is a one-shot probe meant to be read for its printed `got [...]` detail, not a test case meant to
 stay green.
 
 ## `base` (edge-cases/substitute-mpr-probe): the substitute alone
@@ -50,7 +50,7 @@ stay green.
   (analogue of `LoadNullAffixProcessRule`, `HCLoader.cs:1771-1806`).
 - One obligatory affix-template slot holding both mrSFX and mrNull.
 
-**Measured result** (`hc-conformance.exe --fixtures .\base`, self-check mode = the C# founding oracle
+**Measured result** (`hc-conformance.exe --fixtures .\base`, self-check mode = the C# reference
 `Morpher`):
 
 | word | analogue | actual result |
@@ -95,7 +95,7 @@ its own.
 
 They are inlined rather than committed as files because a repo gate --
 `EveryGrammarTheCoverageGateReadsBelongsToADiscoveredFixture` -- correctly refuses any
-`conformance/**/grammar.xml` that is not a discovered fixture, and these are probes, not fixtures.
+`conformance/**/grammar.xml` that is not a discovered test case, and these are probes, not test cases.
 To run: write each pair into `<dir>/edge-cases/<name>/{grammar.xml,words.yaml}` and point
 `hc-conformance.exe --fixtures <dir>` at it.
 

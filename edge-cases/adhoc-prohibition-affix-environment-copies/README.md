@@ -1,6 +1,6 @@
 # adhoc-prohibition-affix-environment-copies
 
-Synthetic. An ad hoc allomorph prohibition on a prefix allomorph that has two environments and two equal MoInflAffMsas (MergeMSAs off). HCLoader registers one allomorph per MSA per environment (HCLoader.cs:1160-1178), so the one FieldWorks allomorph compiles to four copies (`subTa1a`, `subTa1b`, `subTa2a`, `subTa2b`), and the prohibition is attached to every copy, on the first side and on the rest side (HCLoader.cs:2212-2236). The model is PanGloss's `adhoc-affix-environment-copies` fixture (PR #102).
+Synthetic. An ad hoc allomorph prohibition on a prefix allomorph that has two environments and two equal MoInflAffMsas (MergeMSAs off). HCLoader registers one allomorph per MSA per environment (HCLoader.cs:1160-1178), so the one FieldWorks allomorph compiles to four copies (`subTa1a`, `subTa1b`, `subTa2a`, `subTa2b`), and the prohibition is attached to every copy, on the first side and on the rest side (HCLoader.cs:2212-2236). The model is PanGloss's `adhoc-affix-environment-copies` test case (PR #102).
 
 ## What it pins
 
@@ -9,7 +9,7 @@ Synthetic. An ad hoc allomorph prohibition on a prefix allomorph that has two en
 - `tada`: prefix first, one rule per copy: no analysis. Only the before-consonant copies match, so a rule on the first environment copy alone does not suppress it.
 - `taba`: stem first, one rule per copy on the rest side: no analysis.
 
-## Oracle
+## Reference
 
 hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-30`.
 

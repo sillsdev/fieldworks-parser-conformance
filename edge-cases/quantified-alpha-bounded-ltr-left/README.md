@@ -25,7 +25,7 @@ The grammar declares a shared symbolic feature `cell`, every segment carries its
 
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv`.
 
-Oracle: hc.dll, Machine `18cf242f`; 17 complete word rows per cell (19 in the `zero` cells) recorded with the conformance batch adapter, no skipped or capped rows.
+Reference: hc.dll, Machine `18cf242f`; 17 complete word rows per cell (19 in the `zero` cells) recorded with the conformance batch adapter, no skipped or capped rows.
 Divergence: PanGloss `docs/divergences/058-repeated-environment-alpha-agreement.md`.
 FieldWorks: `HCLoader.cs:2338-2344,2745-2770`.
 Upstream PR: none (Rust-only bug).

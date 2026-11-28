@@ -9,6 +9,6 @@ without the rule (which fixes the stratum), would mix the two strata's rows.
 the clitics are placed by `LoadCliticAffixProcessRule` (1079), the suffixes by `LoadDerivAffixProcessRule`.
 
 **Guards.** sillsdev/machine#653: analysis re-matches the same rule on the same shape once per parent path, and the
-planned fix skips the re-match. This fixture's rows must stay identical (same parses, same multiset) after that
+planned fix skips the re-match. This test case's rows must stay identical (same parses, same multiset) after that
 optimization; a changed row is a failure of the optimization, not a reason to edit the row. The rows are C#
 HermitCrab at machine `e63b8863` (hc-conformance self-check). All lexemes are invented.

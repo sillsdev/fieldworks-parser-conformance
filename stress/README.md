@@ -1,35 +1,35 @@
-# Stress fixtures
+# Stress test cases
 
 These 16 grammars are for timing and optimization work on the analysis pass. They are not conformance
-fixtures: they live under `stress/`, outside `edge-cases/` and `languages/`, so the conformance manifest,
+test cases: they live under `stress/`, outside `edge-cases/` and `languages/`, so the conformance manifest,
 the coverage files and a runner pointed at the suite root do not see them. Each `words.yaml` starts with
 `# kind: stress`. [docs/grammars.md](../docs/grammars.md#stress-grammars) lists them too, and
 `scripts/check_grammars_md.py` fails when either list loses one.
 
 ## The rule, and what "producible" means here
 
-The stress fixtures follow the one rule of the suite: only what a real FieldWorks project can produce (see the
+The stress test cases follow the one rule of the suite: only what a real FieldWorks project can produce (see the
 [section on what the XML can say but FieldWorks cannot](../docs/fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)).
 "Producible" means a real FieldWorks project round-trips to the grammar: a project built in FieldWorks, put
-through `HCLoader.cs`, yields the fixture's `grammar.xml`.
+through `HCLoader.cs`, yields the test case's `grammar.xml`.
 
-All 16 fixtures are claims read from the loader, not certificates.
-**0 of 16 stress fixtures carry a FieldWorks witness** (a `fieldworks/` directory,
-[PROTOCOL.md](../PROTOCOL.md) section 10), so none is certified; the 9 certified fixtures in this repository are
-all conformance fixtures. Issue [#1](https://github.com/sillsdev/fieldworks-parser-conformance/issues/1) tracks
+All 16 test cases are claims read from the loader, not certificates.
+**0 of 16 stress test cases carry a FieldWorks witness** (a `fieldworks/` directory,
+[PROTOCOL.md](../PROTOCOL.md) section 10), so none is certified; the 9 certified test cases in this repository are
+all conformance test cases. Issue [#1](https://github.com/sillsdev/fieldworks-parser-conformance/issues/1) tracks
 generating witnesses for the rest. `scripts/check_grammars_md.py` recounts the witnesses on disk and fails if
 this sentence disagrees; `scripts/check_fwdata.py` checks the shape of any stress witness that is added.
 
 ## What the expected output means
 
 Expected output is a parity check, not a conformance claim. The original parses came from sillsdev/machine
-`master` (three identical runs were required). The FLEx-style null-affix rows of five fixtures
-(`athabaskan-prefix-complex`, `excluded-cooccurrence` and the three `env-` fixtures) were regenerated against
+`master` (three identical runs were required). The FLEx-style null-affix rows of five test cases
+(`athabaskan-prefix-complex`, `excluded-cooccurrence` and the three `env-` test cases) were regenerated against
 the engine of sillsdev/machine#480 and reviewed against the grammars. An optimization must return the same parses. The measure of a
 change is the number of work steps, not wall-clock time; each `budget_ms` is only a guard against a hang.
 The `master` commit and the #480 build were not recorded and could not be recovered, so the baseline is the one
-named here: all 16 fixtures pass at sillsdev/machine
-`ba6dfa10`, in three identical runs, with no row changed. There were 18 fixtures at the import; `mpr-bantu-concord`
+named here: all 16 test cases pass at sillsdev/machine
+`ba6dfa10`, in three identical runs, with no row changed. There were 18 test cases at the import; `mpr-bantu-concord`
 and `mpr-inflection-classes` were removed (below), which leaves 16.
 
 ## Running them
@@ -46,18 +46,18 @@ dotnet run --project src/SIL.Machine.Morphology.HermitCrab.Conformance -- --fixt
 These are machine's commands, not this repository's; the paths are the consumer's. The stress grammars sit beside
 `edge-cases/`, not inside it, so that a consumer's coverage gate, ledgers and manifest code need not learn to skip
 them. A consumer that scans the mount recursively for `grammar.xml` would still find them; it should enumerate
-`languages/` and `edge-cases/`, or skip `stress/`. The test fixture is
+`languages/` and `edge-cases/`, or skip `stress/`. The test test case is
 `[Explicit]` and `[Category("Stress")]`, so a plain `dotnet test` skips it. `generated/stress-manifest.v2.json`
-records the path and SHA-256 of each fixture's `grammar.xml` and `words.yaml`, so a consumer can detect a changed
-stress fixture the way it detects a changed conformance fixture. It is separate from, and does not change, the
+records the path and SHA-256 of each test case's `grammar.xml` and `words.yaml`, so a consumer can detect a changed
+stress test case the way it detects a changed conformance test case. It is separate from, and does not change, the
 conformance manifest (`python3 scripts/suite.py generate`).
 
-## The fixtures
+## The test cases
 
 The numbers in the last column are sillsdev/machine issues and pull requests, which hold the optimization each
-fixture was built for. "No parse" counts the words whose expected result is `expect_fail`.
+test case was built for. "No parse" counts the words whose expected result is `expect_fail`.
 
-| Fixture | What it exercises | Words (no parse) | Built for (sillsdev/machine) |
+| Test case | What it exercises | Words (no parse) | Built for (sillsdev/machine) |
 |---|---|---|---|
 | `bantu-tam-templates` | 12 Bantu slot templates; the subject and TAM slots are required in each, the object, extension and final-vowel slots (and a plural slot in six templates) are optional | 60 (12) | #575, #576 (required-slot look-ahead) |
 | `bantu-tam-templates-shared` | the same 60 words and templates, with the three trailing slots shared across templates | 60 (12) | #575, #576 (required-slot look-ahead) |
@@ -79,21 +79,21 @@ fixture was built for. "No parse" counts the words whose expected result is `exp
 State of those issues on 2026-11-02: #576 and #579 merged; #575, #574, #580 and #560 open; #572 and #490
 closed; #601 and #602 are open records of a rejected and a parked optimization. The issues are the authority.
 
-Five fixtures (`allomorph-list-density`, `prefix-class-density`, `env-bantu-concord`, `env-austronesian-nasal-prefix`,
+Five test cases (`allomorph-list-density`, `prefix-class-density`, `env-bantu-concord`, `env-austronesian-nasal-prefix`,
 `env-zero-allomorphs`) once wrote their stem-side context as a RequiredEnvironments on a lone prefix or suffix. HCLoader
 never writes that, so the 68 subrules now carry the same context in the input pattern, as HCLoader does, and no expected
-row changed. The env- fixtures were built for the environment input prefilter, which these grammars no longer
+row changed. The env- test cases were built for the environment input prefilter, which these grammars no longer
 exercise; they stay as allomorph-gating workloads. Their names are kept on purpose: sillsdev/machine reads
-the stress fixture names, so a rename is a coordinated pin bump there, which the suite owners have declined for now. The names overstate what they
+the stress test case names, so a rename is a coordinated pin bump there, which the suite owners have declined for now. The names overstate what they
 now cover: only `env-zero-allomorphs` has any `RequiredEnvironments`, two left environments on a lone prefix.
 
-**Open item: a near-side density fixture.** The only environments HCLoader can write on an affix are a right
+**Open item: a near-side density test case.** The only environments HCLoader can write on an affix are a right
 environment on a lone suffix and a left environment on a lone prefix (`HCLoader.cs` 1626 and 1653), so the
 environment checks a FieldWorks project can reach are suffix right environments (for example, conditioned
 on the next suffix's initial segment) and prefix left environments (conditioned on the preceding prefix's
-last segment). No stress fixture carries either at density. Until one is built, there is no stress workload
+last segment). No stress test case carries either at density. Until one is built, there is no stress workload
 for environment checking, and any claim about its cost has no measurement behind it. Issue
-[#10](https://github.com/sillsdev/fieldworks-parser-conformance/issues/10) tracks it, with the renaming of the `env-` fixtures.
+[#10](https://github.com/sillsdev/fieldworks-parser-conformance/issues/10) tracks it, with the renaming of the `env-` test cases.
 
 `mpr-bantu-concord` and `mpr-inflection-classes` were removed: both used custom-named `MorphologicalPhonologicalRuleFeatureGroup`
 elements with `outputType="append"`, and HCLoader builds only three fixed groups (`inflClasses`, `exceptionFeatures`,

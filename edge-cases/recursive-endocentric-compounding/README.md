@@ -7,34 +7,34 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: recursive-endocentric-compounding
 
-## Why this fixture exists
+## Why this test case exists
 
 `docs/conformance/representative-typology-basis.md` S1.2.1 identifies recursive/self-feeding
-endocentric compounding as a genuine gap: no fixture anywhere exercises a `CompoundingRuleDef` whose
+endocentric compounding as a genuine gap: no test case anywhere exercises a `CompoundingRuleDef` whose
 own output part-of-speech re-enters its own input part-of-speech set (unlike
 `conformance-staging/edge-cases/compounding-non-recursive`, which deliberately keeps input/output PoS
-disjoint and stays capped at `multipleApplication`'s DTD default of 1). This fixture pins:
+disjoint and stays capped at `multipleApplication`'s DTD default of 1). This test case pins:
 
 1. **The structural characterization.** `pg-foma::capability::compounding_recursive`'s rule-graph
    reachability pass marks a `CompoundingRuleDef` "recursive" purely from `max_apps > 1` (this
-   fixture's `cr1` declares `multipleApplication="9"`) -- a fact about the RULE DEFINITION, true
-   regardless of whether any actual word in this fixture exercises 3+ levels of nesting.
+   test case's `cr1` declares `multipleApplication="9"`) -- a fact about the RULE DEFINITION, true
+   regardless of whether any actual word in this test case exercises 3+ levels of nesting.
 2. **The capability gate's honest, unconditional Refuse.** `CompoundingRecursionSafePredicate`
    (`compounding.non-recursive`) Refuses this grammar via `evaluate_capability`/`compose_envelope`,
    citing `compounding.recursive` -- `crate::emit::compound_license`'s license-gated propose shape
    is only proven for the non-recursive case (design.md D2 item 3's own scope cut).
-3. **An independently-discovered oracle resource ceiling.** `pg_parse::Morpher::parse_word_opts`
+3. **An independently-discovered reference resource ceiling.** `pg_parse::Morpher::parse_word_opts`
    hardcodes `AnalyzerConfig::max_stem_count = 2` (mirroring C#'s `Morpher.MaxStemCount` default,
    `rust/crates/pg-rules/src/stratum.rs`'s own doc: "at most one non-head may ever be split off, so a
-   word can be de-compounded once, never recursively re-compounded"). This means the STANDARD oracle
-   this fixture's own ground truth is drawn from ALSO cannot confirm a genuinely 3-stem self-feeding
+   word can be de-compounded once, never recursively re-compounded"). This means the STANDARD reference
+   this test case's own ground truth is drawn from ALSO cannot confirm a genuinely 3-stem self-feeding
    compound today, entirely independently of the FST capability gate's own Refuse verdict. Both
    layers currently refuse the same construct, for different, independently-verifiable reasons -- see
    `words.yaml`'s `tevimaflisra` entry for the empirical finding.
@@ -49,9 +49,9 @@ disjoint and stays capped at `multipleApplication`'s DTD default of 1). This fix
   analyses from `pg_parse::Morpher`, for the resource-ceiling reason above -- NOT hand-asserted, see
   "Verification" below.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; `words.yaml` signatures captured by driving `pg_parse::Morpher::parse_word_opts` directly
 over every word (a throwaway test, deleted after transcription -- see "Verification").
 
@@ -69,7 +69,7 @@ suite) -- that test is what actually gates CI. The capability-gate Refuse verdic
 independent) is additionally pinned directly by `rust/crates/pg-foma/tests/
 cover_recursive_endocentric_compounding.rs`, which asserts `evaluate_capability` returns
 `CompileDecision::Refuse` naming `Compounding`/`compounding.recursive`, and separately re-asserts the
-oracle's own `tevimaflisra` = zero-analyses finding as an explicit regression gate -- this is the test
+reference's own `tevimaflisra` = zero-analyses finding as an explicit regression gate -- this is the test
 that should FAIL (prompting deliberate review, not silent staleness) the day either layer is promoted
 to actually support this construct.
 
@@ -83,10 +83,10 @@ per-instance property (ctor default `2`, `Morpher.cs:56`) that C#'s own
 `CompoundingRuleTests.SimpleRules` (cs:87,105) raises to `3` to confirm a genuine 3-root compound.
 `pg_parse::Morpher` previously hardcoded `2` with no way for any caller to raise it -- that missing
 knob (not the value `2` itself) was the actual gap; see `pg-parse/src/morpher.rs`'s
-`Morpher::with_max_stem_count`. This fixture's own ground truth is UNCHANGED: it still drives the
+`Morpher::with_max_stem_count`. This test case's own ground truth is UNCHANGED: it still drives the
 *default* `Morpher::new` (no override), so `tevimaflisra`'s zero-analyses pin above remains accurate
 and was not touched. A genuine 3-stem compound of this exact shape DOES confirm today if a caller
-opts in via `.with_max_stem_count(3)` -- pinned not here (this fixture is about the default oracle),
+opts in via `.with_max_stem_count(3)` -- pinned not here (this test case is about the default reference),
 but in `rust/crates/pg-parse/tests/csharp_port_compounding.rs`'s
 `simple_rules_4_three_root_compound_single_rule`/`simple_rules_5_three_root_compound_two_rules`,
 which port C#'s own previously-omitted `MaxStemCount = 3` reconfiguration directly.
@@ -96,7 +96,7 @@ which port C#'s own previously-omitted `MaxStemCount = 3` reconfiguration direct
 Design.md row 2 asked for three things against `Compounding`'s recursive split: (1) bound the
 self-feeding depth, (2) a depth-budgeted faithful cross-product construction, (3) a no-false-negative
 containment proof. (1) is DONE: `pg_foma::capability::compounding_max_depth` (`CompoundingDetail::
-max_depth`) turns the boolean `recursive` flag this fixture already pins into an exact, always-finite
+max_depth`) turns the boolean `recursive` flag this test case already pins into an exact, always-finite
 stem-count bound -- for `cr1` (`multipleApplication="9"`) that bound is exactly **10 stems**
 (`1 + 9`), now asserted directly in the capability gate's own `Refuse` diagnostic text (`rust/crates/
 pg-foma/tests/cover_compounding_recursive_depth_bound.rs::
@@ -119,7 +119,7 @@ making the proposer's zero-candidate result a REAL, checked recall gap. Promotin
 permanent carve-out and not a resource-ceiling carve-out (design.md row 3's `unordered-application.
 unbounded` shape) -- exactly the vacuous-promotion trap this task's own brief warns against.
 
-This fixture's own ground truth (`tevimaflisra` = zero analyses at the default oracle) remains
+This test case's own ground truth (`tevimaflisra` = zero analyses at the default reference) remains
 byte-for-byte unchanged and was not touched by this task -- only the capability-gate diagnostic text
 gained the computed depth number, and this task's own `cover_compounding_recursive_depth_bound.rs`
 test file was added alongside `cover_recursive_endocentric_compounding.rs` (not merged into it, to
@@ -135,22 +135,22 @@ The follow-on task the addendum above named is now done. `crate::emit`'s "bounde
 (that module's own doc) no longer hardcodes exactly one extra root: `build_compound_chain` unrolls
 `max_depth - 1` extra (non-head) root LEVELS, consuming `crate::capability::compounding_max_depth`'s
 precomputed bound directly (one source of truth -- the construction never re-derives it). For THIS
-fixture's `cr1` (`multipleApplication="9"`, bound 10 stems), the real, unmodified, production
+test case's `cr1` (`multipleApplication="9"`, bound 10 stems), the real, unmodified, production
 `FomaProposer` now proposes at least one candidate for `tevimaflisra` -- the exact
 ROOT1+ROOT2+ROOT3 sequence, never a spurious one
 (`rust/crates/pg-foma/tests/cover_compounding_recursive_depth_bound.rs::
 depth_budgeted_compound_loop_now_proposes_the_bounded_recursive_shape`, renamed from
 `unmodified_compound_loop_cannot_propose_the_bounded_recursive_shape`, which this comment's earlier
-reference to by that name now supersedes). Containment against the raised-cap oracle
+reference to by that name now supersedes). Containment against the raised-cap reference
 (`Morpher::with_max_stem_count(3)`, the same non-vacuous reconfiguration the earlier addendum already
 established) is now proven directly, not merely argued:
 `depth_budgeted_compound_loop_contains_the_raised_cap_oracle_analysis` checks propose's candidate set
-contains the EXACT morpheme-id sequence the raised-cap oracle independently accepts.
+contains the EXACT morpheme-id sequence the raised-cap reference independently accepts.
 
 `crate::capability::CompoundingRecursionSafePredicate` now reaches `ConfirmOnly` UNCONDITIONALLY for
 every observed `Compounding` rule, recursive or not (no more `compounding.recursive`-vs-`compounding.
 non-recursive` split at the verdict level -- both land `ConfirmOnly`, mirroring
-`MprGroupAppendNonNarrowingPredicate`'s own "no further split" shape). This fixture's own capability
+`MprGroupAppendNonNarrowingPredicate`'s own "no further split" shape). This test case's own capability
 verdict therefore flips from `Refuse` to `ConfirmOnly`
 (`rust/crates/pg-foma/tests/cover_recursive_endocentric_compounding.rs::
 capability_gate_is_confirm_only_for_recursive_compounding_shape`, renamed from
@@ -172,18 +172,18 @@ DEFAULT_COMPOUND_CHAIN_DEPTH_BUDGET` (200, its own dedicated dimension -- delibe
 grammar with a typed `FomaTier::Unsupported` outcome, checked BEFORE any lexc text is written, never a
 hang or an OOM (`cover_compounding_recursive_depth_bound.rs::
 compound_chain_depth_budget_trips_before_any_lexc_emitted`, a synthetic 60,000-`multipleApplication`
-grammar, not this staged fixture -- this fixture's own bound (10) sits comfortably under the default
+grammar, not this staged test case -- this test case's own bound (10) sits comfortably under the default
 budget). A separate test (`depth_bound_is_respected_a_k_plus_one_stem_word_is_never_proposed`, its own
-small synthetic fixture with an exact k=3 bound) proves the over-approximation stops exactly at the
+small synthetic test case with an exact k=3 bound) proves the over-approximation stops exactly at the
 computed bound: a k-stem word proposes, a (k+1)-stem word never does.
 
-## Oracle provenance (reconciled 2026-08-31)
+## Reference provenance (reconciled 2026-08-31)
 
 
-ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde) directly against this fixture's
+ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# reference,
+machine commit caa4ddde) directly against this test case's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
-fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"
-section below describes how this fixture was originally authored, not its current verification
+test case's words.yaml now carries # oracle-provenance: reference. Any "Reference discipline"
+section below describes how this test case was originally authored, not its current verification
 status.

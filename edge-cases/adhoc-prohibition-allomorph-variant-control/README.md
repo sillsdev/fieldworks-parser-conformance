@@ -10,7 +10,7 @@ Synthetic. Control for the morpheme-kind variant cases: an ad hoc ALLOMORPH proh
 
 Not covered here: morpheme-kind prohibitions over variants (the two enclitic cases and `adhoc-prohibition-variant-msa-copies`).
 
-## Oracle
+## Reference
 
 hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-31`.
 

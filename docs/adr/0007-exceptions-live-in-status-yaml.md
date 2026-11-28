@@ -4,7 +4,7 @@ Status: accepted (owner, 2026-11-27); amends [ADR 0001](0001-aspirational-upstre
 
 ## Context
 
-Departures from the reference are tracked in several places today: the `upstream` block in 5 `words.yaml` files and "Known oracle
+Departures from the reference are tracked in several places today: the `upstream` block in 5 `words.yaml` files and "Known reference
 limitation" prose in 4 `words.yaml` files (16 mentions). Changing an upstream reference rehashes a test case. ADR 0001
 introduced the `upstream` field as the machine-readable form of one kind of departure. A consumer cannot list every exception
 without reading every `words.yaml`.

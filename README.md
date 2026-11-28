@@ -35,9 +35,9 @@ The suite has no grammar with incomplete phonology yet.
 
 | Project | What it is | What it gets from the suite |
 |---|---|---|
-| [FieldWorks](https://github.com/sillsdev/FieldWorks) ([software.sil.org/fieldworks](https://software.sil.org/fieldworks/)) | The linguists' desktop app. It stores the grammar and runs either parser. | It does not run the suite; it sets the boundary. Every fixture must be something it can write, and witnesses are real `.fwdata` projects built from fixtures. |
+| [FieldWorks](https://github.com/sillsdev/FieldWorks) ([software.sil.org/fieldworks](https://software.sil.org/fieldworks/)) | The linguists' desktop app. It stores the grammar and runs either parser. | It does not run the suite; it sets the boundary. Every test case must be something it can write, and witnesses are real `.fwdata` projects built from test cases. |
 | [machine](https://github.com/sillsdev/machine) | The C# Hermit Crab engine, and the reference that produced the expected parses. | `hc-conformance` runs the whole suite in machine's CI. |
-| [PanGloss](https://github.com/sillsdev/PanGloss) | A Rust parser ported from Hermit Crab. | It runs the same fixtures through its own runner and must match. |
+| [PanGloss](https://github.com/sillsdev/PanGloss) | A Rust parser ported from Hermit Crab. | It runs the same test cases through its own runner and must match. |
 
 **And XAmple?** The suite has no XAmple expected answers, so it does not test XAmple. XAmple runs on the [subset](docs/grammars.md#the-xample-subset).
 PanGloss's `xample-projector` turns a FieldWorks witness into both Hermit Crab and XAmple input and drives the real XAmple engine. That is how the two are compared today.
@@ -63,7 +63,7 @@ needs an engine fix, so CI never runs a commit that cannot be fetched.
 
 | If you want to | Go to |
 |---|---|
-| Learn the fixture format | [docs/what-it-is.md](docs/what-it-is.md) |
+| Learn the test case format | [docs/what-it-is.md](docs/what-it-is.md) |
 | Browse the grammars | [docs/grammars.md](docs/grammars.md) |
 | Write an engine adapter | [PROTOCOL.md](PROTOCOL.md) |
 | Consume the suite | [docs/consuming.md](docs/consuming.md) |

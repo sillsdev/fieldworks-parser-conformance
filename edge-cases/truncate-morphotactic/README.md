@@ -6,7 +6,7 @@ identities. The grammar is unchanged.
 ## Provenance and #506 behavior
 
 The entries for `a` and `ga` are hand-derived from forward synthesis, not transcribed from the
-unpatched C# oracle. At #480 head `fa8d9b25`, the C# parser
+unpatched C# reference. At #480 head `fa8d9b25`, the C# parser
 occasionally loses tied, zero-width morph annotations when it copies a word (`Shape.CopyTo` reaches
 `AnnotationList.GetNodes` and `BidirList.Find`). The resulting signatures are nondeterministic even
 though the parser still returns two parses for `a` and five for `ga`. These rows intentionally make
@@ -18,7 +18,7 @@ The expected multiset was observed on the directional-boundary fix
 `d98d12a5`, based at
 `25992041`: ten fresh loads returned the complete two-parse and
 five-parse sets. The fix is proposed in [Machine #556](https://github.com/sillsdev/machine/pull/556).
-It is not included in this fixture branch.
+It is not included in this test case branch.
 
 ## Features and allomorph identities
 
@@ -36,7 +36,7 @@ The phonological values used by the patterns are:
 The source identities below use the XML lexical allomorph ID `root32_1` and each rule's unique
 `MorphologicalSubrule` ID. Each has exactly one runtime allomorph, index 0. The grammar intentionally
 omits `<MorphemeId>` on the lexical entry and rules; their loaded morpheme IDs are null. HermitCrab
-also creates internal allomorph GUIDs at load time, so those runtime GUIDs are not stable fixture
+also creates internal allomorph GUIDs at load time, so those runtime GUIDs are not stable test case
 identities. The stable identity is the owning entry/rule and subrule listed below.
 
 | Label | Stable source identity | Gloss | Forward action |
@@ -94,21 +94,21 @@ The comparison used the same grammar and constructor-default `Morpher` settings,
 Every load compared the complete signature multiset, source allomorph owner/index, forward rule
 application order, morph order, and feature state against the rows above.
 
-## Counterfactual evidence and the unstable oracle
+## Counterfactual evidence and the unstable reference
 
 An unpatched semantic-coverage sweep reported apparent effects from deleting `Gloss`, deleting
 the empty `HeadFeatures`, swapping adjacent rules within the unordered stratum, and removing
 lexical or rule part-of-speech attributes. Its baseline already lost morph identities; a difference
 between two such runs does not demonstrate that the grammar mutation changed semantics.
 
-Each mutation was rerun against the corrected engine in ten fresh processes over all eleven fixture
+Each mutation was rerun against the corrected engine in ten fresh processes over all eleven test case
 words. Removing `Gloss`, empty `HeadFeatures`, lexical `partOfSpeech`, or rule
 `requiredPartsOfSpeech`, and either adjacent rule swap, preserved every status and signature
-multiset. Those apparent new evidence rows were rejected. Existing witnesses from other fixtures
+multiset. Those apparent new evidence rows were rejected. Existing witnesses from other test cases
 remain intact. The interface ledger's unchanged outcomes now cover eleven words.
 
 Changing the stratum from unordered to linear rule execution did change the `a` and `ga` results
-consistently. The counterfactual ledger therefore retains this fixture as an additional witness for
+consistently. The counterfactual ledger therefore retains this test case as an additional witness for
 that distinction. Construct claims still use the existing coarse truncation tag; its seven added
 parse claims are recorded as unmapped, without claiming new semantic coverage.
 
