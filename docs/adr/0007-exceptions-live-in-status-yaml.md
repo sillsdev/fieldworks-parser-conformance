@@ -13,6 +13,7 @@ without reading every `words.yaml`.
 
 - All exceptions live in one `status.yaml` at the suite root. A row is keyed by test case, plus word where the exception is
   per word, and carries the upstream ref, the kind and the reason. The kinds are reference defect and pending upstream.
+- Exceptions apply only to `languages/` and `edge-cases/` test cases: stress words are a parity workload whose expected result is the reference by definition, so a reference defect a stress word finds becomes a new edge-case test case that carries the exception.
 - Consumer divergences, differences only a consumer has, stay in that consumer's repo under its own issue. They never enter this file.
 - This amends ADR 0001: its allowance stands, but the dependency is recorded in `status.yaml`, not in the `upstream` field of `words.yaml`.
 

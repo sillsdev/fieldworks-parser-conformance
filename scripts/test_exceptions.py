@@ -7,7 +7,7 @@ from unittest import mock
 import exceptions
 
 HEAD = "a" * 40
-CASES = {"edge-cases/x": {"w1", "w2"}}
+CASES = {"edge-cases/x": {"w1": True, "w2": False}}
 
 
 def write(text):
@@ -35,6 +35,12 @@ class Problems(unittest.TestCase):
 
     def test_valid_rows_have_no_problems(self):
         self.assertEqual(self.check(doc(CASE_ROW, WORD_ROW)), [])
+
+    def test_a_stress_test_case_takes_no_exception(self):
+        self.assertTrue(self.check(doc(CASE_ROW.replace("edge-cases/x", "stress/edge-cases/x"))))
+
+    def test_a_word_row_needs_an_expect_fail_word(self):
+        self.assertTrue(any("expect_fail" in p for p in self.check(doc(WORD_ROW.replace("w1", "w2")))))
 
     def test_a_row_must_name_a_test_case_and_a_word_of_it(self):
         self.assertTrue(any("names no test case" in p for p in self.check(doc(CASE_ROW.replace("edge-cases/x", "edge-cases/y")))))

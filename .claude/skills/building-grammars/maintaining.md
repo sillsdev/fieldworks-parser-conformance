@@ -106,6 +106,8 @@ Lines are appended, never edited or removed. Restoring a retired test case appen
 The consumer contract is the `docs/renames.tsv` entries plus the wave tag. After the wave lands, notify the
 PanGloss lead with the tag and the new entries.
 
+**Exceptions and stress.** `status.yaml` rows name only `languages/` and `edge-cases/` test cases (never `stress/edge-cases/`), and a word row sits on a word with `expect_fail: true`; a reference defect found by a stress word becomes a new edge-case test case that carries the exception.
+
 ## Periodic review
 
 When asked for one, list the test cases whose every bug and behaviour label is detected elsewhere, and
