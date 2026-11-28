@@ -217,9 +217,9 @@ All 183 conformance and 16 stress grammars are Hermit Crab grammars, and PanGlos
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **66 conformance grammars and 6 stress grammars**. Each of their test case lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **64 conformance grammars and 6 stress grammars**. Each of their test case lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
-`requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Five grammars in the subset need `morpher-settings`; they are marked below.
+`requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Four grammars in the subset need `morpher-settings`; they are marked below.
 
 #### Conformance subset
 
@@ -266,8 +266,6 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/final-template-merge-key` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-discriminators` (needs `morpher-settings`)
 - `edge-cases/final-template-partial-reachability`
-- `edge-cases/final-template-partial-root` (needs `morpher-settings`)
-- `edge-cases/final-template-partial-trace`
 - `edge-cases/guesser-pattern-root-fallback`
 - `edge-cases/head-ambiguous-compounding`
 - `edge-cases/infix-ambiguous-site`
@@ -369,7 +367,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/feature-gating-breadth`: [XAmple] a rule gated on number=pl that a lexically singular root passes only after another rule has overwritten its number, in both suffix orders (10 words).
 - `edge-cases/final-template-merge-key`: [XAmple] a final template in a lower stratum, reached from two analysis orders that must merge into one parse.
 - `edge-cases/final-template-partial-discriminators`: [XAmple] rules that may or may not follow a final template, depending on whether they are partial.
-- `edge-cases/final-template-partial-reachability`: 3 cells in one grammar, each with its own rules and words. `reachability`: [XAmple] four final templates, only one of which a partial word can reach, with a partial rule and a partial entry; `root`: [XAmple] a partial root with a final template, and ordinary rules blocked after the template; `trace`: [XAmple] one word that both final-template refusals reject, and that parses once the partial rule is made ordinary.
+- `edge-cases/final-template-partial-reachability`: [XAmple] 3 cells in one grammar, each with its own rules and words. `reachability`: four final templates, only one of which a partial word can reach, with a partial rule and a partial entry; `root`: a partial root with a final template, and ordinary rules blocked after the template; `trace`: one word that both final-template refusals reject, and that parses once the partial rule is made ordinary.
 - `edge-cases/morphotactic-attribute-breadth`: [XAmple] repetition caps, partial rules and entries, bound allomorphs, non-final templates, co-occurrence rules and MPR groups.
 - `edge-cases/optional-template-composite`: [XAmple] optional and mandatory template slots that combine into several parses of one word.
 - `edge-cases/empty-required-template-slot`: [XAmple] a required FieldWorks prefix slot with no affix rules is omitted by HCLoader, so the bare stem and an optional suffix still parse (3 words).
