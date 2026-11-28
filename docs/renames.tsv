@@ -73,3 +73,6 @@ edge-cases/metathesis-boundary-morph-order-prefix-root	edge-cases/metathesis-bou
 edge-cases/metathesis-boundary-right-to-left-suffix	edge-cases/metathesis-boundary-right-to-left-prefix		wave-2026-11-27-4
 edge-cases/spelling-coverage-compound-singleton-depth3	edge-cases/spelling-coverage-compound-depth3		wave-2026-11-27-4
 edge-cases/spelling-coverage-compound-singleton-medial-suffix	edge-cases/spelling-coverage-compound-depth-medial-suffix		wave-2026-11-27-4
+edge-cases/spelling-coverage-compound-singleton-quote-boundary	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-4
+edge-cases/spelling-coverage-compound-singleton-thai-mark	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-4
+edge-cases/spelling-coverage-compound-singleton-merging-mark	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-4
