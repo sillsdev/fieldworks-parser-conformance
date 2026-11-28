@@ -118,7 +118,7 @@ Signatures captured by running `cargo test -p pg-parse --test conformance_fixtur
 --nocapture`, which discovers this staged test case automatically and replays every word against
 `pg_parse::Morpher` — the mismatch panic message on each pass reported the engine's own actual
 signature, transcribed verbatim into `words.yaml` above (not hand-derived). Final run: `376 words
-checked across 35 test cases (2 skipped)`, this test case's 2 words included, all passing.
+checked across 35 fixtures (2 skipped)`, this test case's 2 words included, all passing.
 
 ## Graduation
 

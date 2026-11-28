@@ -33,6 +33,13 @@ class Renames(unittest.TestCase):
         self.assertTrue(run(retire, restore, retire))  # retired again while still on disk
         self.assertTrue(run("edge-cases/x\tedge-cases/x\t\twave-2026-12-01"))  # restored but absent
 
+    def test_restore_after_chain(self):
+        chain = ("edge-cases/x\tedge-cases/y\t\twave-2026-11-27", "edge-cases/y\tedge-cases/a\t\twave-2026-11-28")
+        rows = [H, *chain, "edge-cases/x\tedge-cases/x\t\twave-2026-12-01"]
+        self.assertEqual(c.problems_for(rows, LIVE | {"edge-cases/x"}, None), [])
+        last = {"edge-cases/x": "edge-cases/x", "edge-cases/y": "edge-cases/a"}
+        self.assertEqual(c.resolve("edge-cases/x", last, LIVE | {"edge-cases/x"}), "edge-cases/x")
+
     def test_reuse(self):
         self.assertTrue(run("edge-cases/a\tretired\t\twave-2026-11-27", "edge-cases/b\tedge-cases/a\t\twave-2026-11-27"))
         self.assertTrue(run("edge-cases/x\tretired\t\twave-2026-11-27", "edge-cases/y\tedge-cases/x\t\twave-2026-11-27"))
