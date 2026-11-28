@@ -4,56 +4,116 @@
   <Language>
     <Name>MetathesisSegmentClassUnion</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_class-union">
+        <Name>V_class-union</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_two-suffixes">
+        <Name>V_two-suffixes</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_class-union">
+        <Name>f_class-union</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_class-union">+</Symbol>
+          <Symbol id="fM_class-union">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_class-union">
+        <Name>g_class-union</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_class-union">+</Symbol>
+          <Symbol id="gM_class-union">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_two-suffixes">
+        <Name>f_two-suffixes</Name>
+        <Symbols>
+          <Symbol id="fP_two-suffixes">+</Symbol>
+          <Symbol id="fM_two-suffixes">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_two-suffixes">
+        <Name>g_two-suffixes</Name>
+        <Symbols>
+          <Symbol id="gP_two-suffixes">+</Symbol>
+          <Symbol id="gM_two-suffixes">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_class-union">cell class-union</Symbol>
+          <Symbol id="cell_two-suffixes">cell two-suffixes</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_class-union">
+      <Name>Main_class-union</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_class-union">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_class-union" symbolValues="fP_class-union"/>
+          <FeatureValue feature="g_class-union" symbolValues="gP_class-union"/>
+          <FeatureValue feature="cell" symbolValues="cell_class-union"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_class-union">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_class-union" symbolValues="fM_class-union"/>
+          <FeatureValue feature="g_class-union" symbolValues="gM_class-union"/>
+          <FeatureValue feature="cell" symbolValues="cell_class-union"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_class-union">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_class-union" symbolValues="fM_class-union"/>
+          <FeatureValue feature="g_class-union" symbolValues="gP_class-union"/>
+          <FeatureValue feature="cell" symbolValues="cell_class-union"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_class-union">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_class-union" symbolValues="fP_class-union"/>
+          <FeatureValue feature="g_class-union" symbolValues="gM_class-union"/>
+          <FeatureValue feature="cell" symbolValues="cell_class-union"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_two-suffixes">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_two-suffixes" symbolValues="fP_two-suffixes"/>
+          <FeatureValue feature="g_two-suffixes" symbolValues="gP_two-suffixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_two-suffixes">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_two-suffixes" symbolValues="fM_two-suffixes"/>
+          <FeatureValue feature="g_two-suffixes" symbolValues="gM_two-suffixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_two-suffixes">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_two-suffixes" symbolValues="fM_two-suffixes"/>
+          <FeatureValue feature="g_two-suffixes" symbolValues="gP_two-suffixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_two-suffixes">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_two-suffixes" symbolValues="fP_two-suffixes"/>
+          <FeatureValue feature="g_two-suffixes" symbolValues="gM_two-suffixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -65,10 +125,260 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_class-union">
+        <Name>Any_class-union</Name>
+        <FeatureValue feature="cell" symbolValues="cell_class-union"/>
       </FeatureNaturalClass>
-    <FeatureNaturalClass id="T"><Name>T</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="P"><Name>P</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="Sx"><Name>Sx</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="A"><Name>A</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><SegmentNaturalClass id="scS"><Name>scS</Name><Segment segment="cS" /></SegmentNaturalClass><SegmentNaturalClass id="scT"><Name>scT</Name><Segment segment="cT" /></SegmentNaturalClass><SegmentNaturalClass id="scA"><Name>scA</Name><Segment segment="cA" /></SegmentNaturalClass><SegmentNaturalClass id="scSA"><Name>scSA</Name><Segment segment="cS" /><Segment segment="cA" /></SegmentNaturalClass><SegmentNaturalClass id="scTA"><Name>scTA</Name><Segment segment="cT" /><Segment segment="cA" /></SegmentNaturalClass><SegmentNaturalClass id="scST"><Name>scST</Name><Segment segment="cS" /><Segment segment="cT" /></SegmentNaturalClass></NaturalClasses>
-    <PhonologicalRuleDefinitions><MetathesisRule id="pr0" leftSwitch="pr0n1" rightSwitch="pr0n0"><Name>pr0</Name><StructuralDescription><PhoneticTemplate><PhoneticSequence><SimpleContext id="pr0n0" naturalClass="scST" /><Segment id="pr0n1" segment="cA" /></PhoneticSequence></PhoneticTemplate></StructuralDescription></MetathesisRule></PhonologicalRuleDefinitions><Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="SUF" phonologicalRules="pr0"><Name>S0</Name><MorphologicalRuleDefinitions><MorphologicalRule id="SUF" requiredPartsOfSpeech="v"><Name>SUF</Name><MorphologicalSubrules><MorphologicalSubrule id="SUF0"><MorphologicalInput><PhoneticSequence id="SUFS"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="SUFS" /><InsertSegments><PhoneticShape>+ap</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>SUF</MorphemeId></MorphologicalRule></MorphologicalRuleDefinitions><LexicalEntries><LexicalEntry id="r0" partOfSpeech="v"><Allomorphs><Allomorph id="r0a"><PhoneticShape>a</PhoneticShape></Allomorph></Allomorphs><MorphemeId>R0</MorphemeId></LexicalEntry><LexicalEntry id="r1" partOfSpeech="v"><Allomorphs><Allomorph id="r1a"><PhoneticShape>p</PhoneticShape></Allomorph></Allomorphs><MorphemeId>R1</MorphemeId></LexicalEntry><LexicalEntry id="r2" partOfSpeech="v"><Allomorphs><Allomorph id="r2a"><PhoneticShape>pa</PhoneticShape></Allomorph></Allomorphs><MorphemeId>R2</MorphemeId></LexicalEntry></LexicalEntries></Stratum></Strata>
+      <FeatureNaturalClass id="T_class-union">
+        <Name>T_class-union</Name>
+        <FeatureValue feature="f_class-union" symbolValues="fM_class-union"/>
+        <FeatureValue feature="g_class-union" symbolValues="gP_class-union"/>
+        <FeatureValue feature="cell" symbolValues="cell_class-union"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_class-union">
+        <Name>P_class-union</Name>
+        <FeatureValue feature="f_class-union" symbolValues="fM_class-union"/>
+        <FeatureValue feature="g_class-union" symbolValues="gM_class-union"/>
+        <FeatureValue feature="cell" symbolValues="cell_class-union"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_class-union">
+        <Name>Sx_class-union</Name>
+        <FeatureValue feature="f_class-union" symbolValues="fP_class-union"/>
+        <FeatureValue feature="g_class-union" symbolValues="gM_class-union"/>
+        <FeatureValue feature="cell" symbolValues="cell_class-union"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_class-union">
+        <Name>A_class-union</Name>
+        <FeatureValue feature="f_class-union" symbolValues="fP_class-union"/>
+        <FeatureValue feature="g_class-union" symbolValues="gP_class-union"/>
+        <FeatureValue feature="cell" symbolValues="cell_class-union"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="scS_class-union">
+        <Name>scS_class-union</Name>
+        <Segment segment="cS_class-union"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scT_class-union">
+        <Name>scT_class-union</Name>
+        <Segment segment="cT_class-union"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scA_class-union">
+        <Name>scA_class-union</Name>
+        <Segment segment="cA_class-union"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scSA_class-union">
+        <Name>scSA_class-union</Name>
+        <Segment segment="cS_class-union"/>
+        <Segment segment="cA_class-union"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scTA_class-union">
+        <Name>scTA_class-union</Name>
+        <Segment segment="cT_class-union"/>
+        <Segment segment="cA_class-union"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scST_class-union">
+        <Name>scST_class-union</Name>
+        <Segment segment="cS_class-union"/>
+        <Segment segment="cT_class-union"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="any_two-suffixes">
+        <Name>Any_two-suffixes</Name>
+        <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_two-suffixes">
+        <Name>T_two-suffixes</Name>
+        <FeatureValue feature="f_two-suffixes" symbolValues="fM_two-suffixes"/>
+        <FeatureValue feature="g_two-suffixes" symbolValues="gP_two-suffixes"/>
+        <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_two-suffixes">
+        <Name>P_two-suffixes</Name>
+        <FeatureValue feature="f_two-suffixes" symbolValues="fM_two-suffixes"/>
+        <FeatureValue feature="g_two-suffixes" symbolValues="gM_two-suffixes"/>
+        <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_two-suffixes">
+        <Name>Sx_two-suffixes</Name>
+        <FeatureValue feature="f_two-suffixes" symbolValues="fP_two-suffixes"/>
+        <FeatureValue feature="g_two-suffixes" symbolValues="gM_two-suffixes"/>
+        <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_two-suffixes">
+        <Name>A_two-suffixes</Name>
+        <FeatureValue feature="f_two-suffixes" symbolValues="fP_two-suffixes"/>
+        <FeatureValue feature="g_two-suffixes" symbolValues="gP_two-suffixes"/>
+        <FeatureValue feature="cell" symbolValues="cell_two-suffixes"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="scS_two-suffixes">
+        <Name>scS_two-suffixes</Name>
+        <Segment segment="cS_two-suffixes"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scT_two-suffixes">
+        <Name>scT_two-suffixes</Name>
+        <Segment segment="cT_two-suffixes"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scA_two-suffixes">
+        <Name>scA_two-suffixes</Name>
+        <Segment segment="cA_two-suffixes"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scSA_two-suffixes">
+        <Name>scSA_two-suffixes</Name>
+        <Segment segment="cS_two-suffixes"/>
+        <Segment segment="cA_two-suffixes"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scTA_two-suffixes">
+        <Name>scTA_two-suffixes</Name>
+        <Segment segment="cT_two-suffixes"/>
+        <Segment segment="cA_two-suffixes"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scST_two-suffixes">
+        <Name>scST_two-suffixes</Name>
+        <Segment segment="cS_two-suffixes"/>
+        <Segment segment="cT_two-suffixes"/>
+      </SegmentNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <MetathesisRule id="pr0_class-union" leftSwitch="pr0n1_class-union" rightSwitch="pr0n0_class-union">
+        <Name>pr0_class-union</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="pr0n0_class-union" naturalClass="scST_class-union"/>
+              <Segment id="pr0n1_class-union" segment="cA_class-union"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <MetathesisRule id="pr0_two-suffixes" leftSwitch="pr0n1_two-suffixes" rightSwitch="pr0n0_two-suffixes">
+        <Name>pr0_two-suffixes</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <Segment id="pr0n0_two-suffixes" segment="cS_two-suffixes"/>
+              <Segment id="pr0n1_two-suffixes" segment="cT_two-suffixes"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="t_class-union" morphologicalRuleOrder="unordered" morphologicalRules="SUF_class-union SA_two-suffixes ST_two-suffixes" phonologicalRules="pr0_class-union pr0_two-suffixes">
+        <Name>S0_class-union</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="SUF_class-union" requiredPartsOfSpeech="v_class-union">
+            <Name>SUF_class-union</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF0_class-union">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUFS_class-union">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_class-union"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUFS_class-union"/>
+                  <InsertSegments>
+                    <PhoneticShape>+ap</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF_class-union</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SA_two-suffixes" requiredPartsOfSpeech="v_two-suffixes">
+            <Name>SA_two-suffixes</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SA0_two-suffixes">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SAS_two-suffixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_two-suffixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SAS_two-suffixes"/>
+                  <InsertSegments>
+                    <PhoneticShape>+bf</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SA_two-suffixes</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="ST_two-suffixes" requiredPartsOfSpeech="v_two-suffixes">
+            <Name>ST_two-suffixes</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="ST0_two-suffixes">
+                <MorphologicalInput>
+                  <PhoneticSequence id="STS_two-suffixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_two-suffixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="STS_two-suffixes"/>
+                  <InsertSegments>
+                    <PhoneticShape>+gb</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>ST_two-suffixes</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="r0_class-union" partOfSpeech="v_class-union">
+            <Allomorphs>
+              <Allomorph id="r0a_class-union">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R0_class-union</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r1_class-union" partOfSpeech="v_class-union">
+            <Allomorphs>
+              <Allomorph id="r1a_class-union">
+                <PhoneticShape>p</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R1_class-union</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r2_class-union" partOfSpeech="v_class-union">
+            <Allomorphs>
+              <Allomorph id="r2a_class-union">
+                <PhoneticShape>pa</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R2_class-union</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r0_two-suffixes" partOfSpeech="v_two-suffixes">
+            <Allomorphs>
+              <Allomorph id="r0a_two-suffixes">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R0_two-suffixes</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r1_two-suffixes" partOfSpeech="v_two-suffixes">
+            <Allomorphs>
+              <Allomorph id="r1a_two-suffixes">
+                <PhoneticShape>db</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R1_two-suffixes</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r2_two-suffixes" partOfSpeech="v_two-suffixes">
+            <Allomorphs>
+              <Allomorph id="r2a_two-suffixes">
+                <PhoneticShape>gd</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R2_two-suffixes</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
   </Language>
 </HermitCrabInput>

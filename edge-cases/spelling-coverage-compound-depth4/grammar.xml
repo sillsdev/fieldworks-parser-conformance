@@ -4,57 +4,118 @@
   <Language>
     <Name>SpellingCompoundDepth4</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_depth4">
+        <Name>V_depth4</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_prefix-hop">
+        <Name>V_prefix-hop</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_depth4">
+        <Name>f_depth4</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_depth4">+</Symbol>
+          <Symbol id="fM_depth4">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_depth4">
+        <Name>g_depth4</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_depth4">+</Symbol>
+          <Symbol id="gM_depth4">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_prefix-hop">
+        <Name>f_prefix-hop</Name>
+        <Symbols>
+          <Symbol id="fP_prefix-hop">+</Symbol>
+          <Symbol id="fM_prefix-hop">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_prefix-hop">
+        <Name>g_prefix-hop</Name>
+        <Symbols>
+          <Symbol id="gP_prefix-hop">+</Symbol>
+          <Symbol id="gM_prefix-hop">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_depth4">cell depth4</Symbol>
+          <Symbol id="cell_prefix-hop">cell prefix-hop</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_depth4">
+      <Name>Main_depth4</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_depth4">
           <Representations>
             <Representation>a</Representation>
             <Representation>á</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_depth4" symbolValues="fP_depth4"/>
+          <FeatureValue feature="g_depth4" symbolValues="gP_depth4"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth4"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_depth4">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_depth4" symbolValues="fM_depth4"/>
+          <FeatureValue feature="g_depth4" symbolValues="gM_depth4"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth4"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_depth4">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_depth4" symbolValues="fM_depth4"/>
+          <FeatureValue feature="g_depth4" symbolValues="gP_depth4"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth4"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_depth4">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_depth4" symbolValues="fP_depth4"/>
+          <FeatureValue feature="g_depth4" symbolValues="gM_depth4"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth4"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_prefix-hop">
+          <Representations>
+            <Representation>b</Representation>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-hop" symbolValues="fP_prefix-hop"/>
+          <FeatureValue feature="g_prefix-hop" symbolValues="gP_prefix-hop"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-hop"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_prefix-hop">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-hop" symbolValues="fM_prefix-hop"/>
+          <FeatureValue feature="g_prefix-hop" symbolValues="gM_prefix-hop"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-hop"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_prefix-hop">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-hop" symbolValues="fM_prefix-hop"/>
+          <FeatureValue feature="g_prefix-hop" symbolValues="gP_prefix-hop"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-hop"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_prefix-hop">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-hop" symbolValues="fP_prefix-hop"/>
+          <FeatureValue feature="g_prefix-hop" symbolValues="gM_prefix-hop"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-hop"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -68,78 +129,83 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_depth4">
+        <Name>Any_depth4</Name>
+        <FeatureValue feature="cell" symbolValues="cell_depth4"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_prefix-hop">
+        <Name>Any_prefix-hop</Name>
+        <FeatureValue feature="cell" symbolValues="cell_prefix-hop"/>
       </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2 PRE">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t_depth4" morphologicalRuleOrder="unordered" morphologicalRules="cr1_depth4 cr2_depth4 PRE_depth4 cr2_prefix-hop PRE_prefix-hop">
+        <Name>Main_depth4</Name>
         <MorphologicalRuleDefinitions>
-          <CompoundingRule id="cr1" multipleApplication="2">
-            <Name>cr1</Name>
+          <CompoundingRule id="cr1_depth4" multipleApplication="2">
+            <Name>cr1_depth4</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0">
+                  <PhoneticSequence id="cr1h0_depth4">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth4"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0">
+                  <PhoneticSequence id="cr1n0_depth4">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth4"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0" />
+                  <CopyFromInput index="cr1h0_depth4"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr1n0" />
+                  <CopyFromInput index="cr1n0_depth4"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <CompoundingRule id="cr2">
-            <Name>cr2</Name>
+          <CompoundingRule id="cr2_depth4">
+            <Name>cr2_depth4</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr2h0">
+                  <PhoneticSequence id="cr2h0_depth4">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth4"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr2n0">
+                  <PhoneticSequence id="cr2n0_depth4">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth4"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr2n0" />
+                  <CopyFromInput index="cr2n0_depth4"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr2h0" />
+                  <CopyFromInput index="cr2h0_depth4"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <MorphologicalRule id="PRE" requiredPartsOfSpeech="v">
-            <Name>PRE</Name>
+          <MorphologicalRule id="PRE_depth4" requiredPartsOfSpeech="v_depth4">
+            <Name>PRE_depth4</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE0">
+              <MorphologicalSubrule id="PRE0_depth4">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES">
+                  <PhoneticSequence id="PRES_depth4">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth4"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -147,37 +213,110 @@
                   <InsertSegments>
                     <PhoneticShape>s</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="PRES" />
+                  <CopyFromInput index="PRES_depth4"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE</MorphemeId>
+            <MorphemeId>PRE_depth4</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr2_prefix-hop" multipleApplication="3">
+            <Name>cr2_prefix-hop</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_prefix-hop">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_prefix-hop"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_prefix-hop">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_prefix-hop"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_prefix-hop"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_prefix-hop"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_prefix-hop" requiredPartsOfSpeech="v_prefix-hop">
+            <Name>PRE_prefix-hop</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_prefix-hop">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_prefix-hop">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_prefix-hop"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_prefix-hop"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_prefix-hop</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x" partOfSpeech="v">
+          <LexicalEntry id="x_depth4" partOfSpeech="v_depth4">
             <Allomorphs>
-              <Allomorph id="x0">
+              <Allomorph id="x0_depth4">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X</MorphemeId>
+            <MorphemeId>X_depth4</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_depth4" partOfSpeech="v_depth4">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_depth4">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_depth4</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_depth4" partOfSpeech="v_depth4">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_depth4">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_depth4</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_prefix-hop" partOfSpeech="v_prefix-hop">
+            <Allomorphs>
+              <Allomorph id="x0_prefix-hop">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_prefix-hop</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_prefix-hop" partOfSpeech="v_prefix-hop">
+            <Allomorphs>
+              <Allomorph id="y0_prefix-hop">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_prefix-hop</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_prefix-hop" partOfSpeech="v_prefix-hop">
+            <Allomorphs>
+              <Allomorph id="z0_prefix-hop">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_prefix-hop</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

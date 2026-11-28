@@ -1,47 +1,89 @@
 language: FeaturelessTarget
 requires:
   - phonology
-fieldworks_producible_notes: Copied from the existing featureless-segment-class-rewrite fixture. The target is a literal segment or a singleton segment class; ordinary phonological-rule target and class-output shapes remain expressible by FieldWorks. No fwdata round-trip witness is claimed.
+fieldworks_producible_notes: Copied from the existing featureless-segment-class-rewrite fixture. The target is a literal segment or a singleton segment class; ordinary phonological-rule target and class-output shapes remain expressible by FieldWorks. No fwdata round-trip witness is claimed. | One phoneme has two spellings, as HCLoader LoadCharacterDefinitionTable emits from phoneme CodesOS. No fwdata round-trip witness is claimed.
 words:
   - word: asa
-    note: '[cell literal] First output class spelling, unchanged AKA derivation.'
+    note: '[cell target] [cell literal] First output class spelling, unchanged AKA derivation.'
     parses:
-      - signature: AKA_literal|a[sz]a
+      - signature: AKA_literal_target|a[sz]a
         rules:
-          - prLen_literal
+          - prLen_literal_target
         exercises:
           - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
   - word: aza
-    note: '[cell literal] Second output class spelling, unchanged AKA derivation.'
+    note: '[cell target] [cell literal] Second output class spelling, unchanged AKA derivation.'
     parses:
-      - signature: AKA_literal|a[sz]a
+      - signature: AKA_literal_target|a[sz]a
         rules:
-          - prLen_literal
+          - prLen_literal_target
         exercises:
           - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
   - word: aka
-    note: '[cell literal] Obligatory rewrite prevents the unchanged root from surfacing.'
+    note: '[cell target] [cell literal] Obligatory rewrite prevents the unchanged root from surfacing.'
     expect_fail: true
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
   - word: ege
-    note: '[cell singleton] First output class spelling, unchanged AKA derivation.'
+    note: '[cell target] [cell singleton] First output class spelling, unchanged AKA derivation.'
     parses:
-      - signature: AKA_singleton|e[gf]e
+      - signature: AKA_singleton_target|e[gf]e
         rules:
-          - prLen_singleton
+          - prLen_singleton_target
         exercises:
           - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
   - word: efe
-    note: '[cell singleton] Second output class spelling, unchanged AKA derivation.'
+    note: '[cell target] [cell singleton] Second output class spelling, unchanged AKA derivation.'
     parses:
-      - signature: AKA_singleton|e[gf]e
+      - signature: AKA_singleton_target|e[gf]e
         rules:
-          - prLen_singleton
+          - prLen_singleton_target
         exercises:
           - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
   - word: eue
-    note: '[cell singleton] Obligatory rewrite prevents the unchanged root from surfacing.'
+    note: '[cell target] [cell singleton] Obligatory rewrite prevents the unchanged root from surfacing.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: brb
+    note: '[cell alias] [cell literal] First output spelling is a positive control.'
+    parses:
+      - signature: AKA_literal_alias|b[rx]b
+        rules:
+          - prLen_literal_alias
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bxb
+    note: '[cell alias] [cell literal] Second output spelling retains the same root identity in pinned C#.'
+    parses:
+      - signature: AKA_literal_alias|b[rx]b
+        rules:
+          - prLen_literal_alias
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bpb
+    note: '[cell alias] [cell literal] Obligatory rewrite prevents the unchanged root from surfacing.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: jmj
+    note: '[cell alias] [cell singleton] First output spelling is a positive control.'
+    parses:
+      - signature: AKA_singleton_alias|j[ml]j
+        rules:
+          - prLen_singleton_alias
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: jlj
+    note: '[cell alias] [cell singleton] Second output spelling retains the same root identity in pinned C#.'
+    parses:
+      - signature: AKA_singleton_alias|j[ml]j
+        rules:
+          - prLen_singleton_alias
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: jwj
+    note: '[cell alias] [cell singleton] Obligatory rewrite prevents the unchanged root from surfacing.'
     expect_fail: true
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

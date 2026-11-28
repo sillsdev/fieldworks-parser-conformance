@@ -1,48 +1,256 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<!-- Synthetic partial-feature rewrite. One declared feature has no segment values.
-     The class bundle can unify with several spellings and both lexical roots. -->
 <HermitCrabInput>
   <Language>
     <Name>FeaturelessSegmentClassRewrite</Name>
-    <PartsOfSpeech><PartOfSpeech id="posV"><Name>V</Name></PartOfSpeech></PartsOfSpeech>
-    <PhonologicalFeatureSystem><SymbolicFeature id="unused"><Name>unused</Name><Symbols><Symbol id="unusedPlus">+</Symbol><Symbol id="unusedMinus">-</Symbol></Symbols></SymbolicFeature></PhonologicalFeatureSystem><CharacterDefinitionTable id="tbl">
-      <Name>Main</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posV_literal-output">
+        <Name>V_literal-output</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_unused-feature">
+        <Name>V_unused-feature</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="unused_literal-output">
+        <Name>unused_literal-output</Name>
+        <Symbols>
+          <Symbol id="unusedPlus_literal-output">+</Symbol>
+          <Symbol id="unusedMinus_literal-output">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="unused_unused-feature">
+        <Name>unused_unused-feature</Name>
+        <Symbols>
+          <Symbol id="unusedPlus_unused-feature">+</Symbol>
+          <Symbol id="unusedMinus_unused-feature">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_literal-output">cell literal-output</Symbol>
+          <Symbol id="cell_unused-feature">cell unused-feature</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="tbl_literal-output">
+      <Name>Main_literal-output</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cZ"><Representations><Representation>z</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cK_literal-output">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_literal-output"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_literal-output">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_literal-output"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_literal-output">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_literal-output"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cZ_literal-output">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_literal-output"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_literal-output">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_literal-output"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_literal-output">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_literal-output"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_unused-feature">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_unused-feature"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_unused-feature">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_unused-feature"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_unused-feature">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_unused-feature"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cZ_unused-feature">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_unused-feature"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_unused-feature">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_unused-feature"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_unused-feature">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="cell" symbolValues="cell_unused-feature"/>
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <SegmentNaturalClass id="ncV"><Name>V</Name><Segment segment="cA" /><Segment segment="cI" /></SegmentNaturalClass>
-      <SegmentNaturalClass id="ncK"><Name>K</Name><Segment segment="cK" /><Segment segment="cT" /></SegmentNaturalClass>
-      <SegmentNaturalClass id="ncS"><Name>S</Name><Segment segment="cS" /><Segment segment="cZ" /></SegmentNaturalClass>
+      <SegmentNaturalClass id="ncV_literal-output">
+        <Name>V_literal-output</Name>
+        <Segment segment="cA_literal-output"/>
+        <Segment segment="cI_literal-output"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncK_literal-output">
+        <Name>K_literal-output</Name>
+        <Segment segment="cK_literal-output"/>
+        <Segment segment="cT_literal-output"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncS_literal-output">
+        <Name>S_literal-output</Name>
+        <Segment segment="cS_literal-output"/>
+        <Segment segment="cZ_literal-output"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncV_unused-feature">
+        <Name>V_unused-feature</Name>
+        <Segment segment="cA_unused-feature"/>
+        <Segment segment="cI_unused-feature"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncK_unused-feature">
+        <Name>K_unused-feature</Name>
+        <Segment segment="cK_unused-feature"/>
+        <Segment segment="cT_unused-feature"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncS_unused-feature">
+        <Name>S_unused-feature</Name>
+        <Segment segment="cS_unused-feature"/>
+        <Segment segment="cZ_unused-feature"/>
+      </SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
-      <PhonologicalRule id="prLen">
-        <Name>intervocalicLenition</Name>
-        <PhoneticInput><PhoneticSequence><SimpleContext naturalClass="ncK" /></PhoneticSequence></PhoneticInput>
+      <PhonologicalRule id="prLen_literal-output">
+        <Name>intervocalicLenition_literal-output</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncK_literal-output"/>
+          </PhoneticSequence>
+        </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
-            <PhoneticOutput><PhoneticSequence><Segment segment="cS" /></PhoneticSequence></PhoneticOutput>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cS_literal-output"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
             <Environment>
-              <LeftEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncV" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment>
-              <RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncV" /></PhoneticSequence></PhoneticTemplate></RightEnvironment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal-output"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal-output"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prLen_unused-feature">
+        <Name>intervocalicLenition_unused-feature</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="ncK_unused-feature"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncS_unused-feature"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_unused-feature"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_unused-feature"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
             </Environment>
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" phonologicalRules="prLen">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="tbl_literal-output" morphologicalRuleOrder="unordered" phonologicalRules="prLen_literal-output prLen_unused-feature">
+        <Name>Main_literal-output</Name>
         <LexicalEntries>
-          <LexicalEntry id="eAka" partOfSpeech="posV"><Allomorphs><Allomorph id="aAka"><PhoneticShape>aka</PhoneticShape></Allomorph></Allomorphs><MorphemeId>AKA</MorphemeId><Gloss>aka</Gloss></LexicalEntry>
-          <LexicalEntry id="eIta" partOfSpeech="posV"><Allomorphs><Allomorph id="aIta"><PhoneticShape>ita</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ITA</MorphemeId><Gloss>ita</Gloss></LexicalEntry>
+          <LexicalEntry id="eAka_literal-output" partOfSpeech="posV_literal-output">
+            <Allomorphs>
+              <Allomorph id="aAka_literal-output">
+                <PhoneticShape>aka</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AKA_literal-output</MorphemeId>
+            <Gloss>aka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIta_literal-output" partOfSpeech="posV_literal-output">
+            <Allomorphs>
+              <Allomorph id="aIta_literal-output">
+                <PhoneticShape>ita</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ITA_literal-output</MorphemeId>
+            <Gloss>ita</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAka_unused-feature" partOfSpeech="posV_unused-feature">
+            <Allomorphs>
+              <Allomorph id="aAka_unused-feature">
+                <PhoneticShape>bfb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AKA_unused-feature</MorphemeId>
+            <Gloss>aka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIta_unused-feature" partOfSpeech="posV_unused-feature">
+            <Allomorphs>
+              <Allomorph id="aIta_unused-feature">
+                <PhoneticShape>dhb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ITA_unused-feature</MorphemeId>
+            <Gloss>ita</Gloss>
+          </LexicalEntry>
         </LexicalEntries>
       </Stratum>
     </Strata>

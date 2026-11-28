@@ -1,21 +1,39 @@
 language: FeaturelessSegmentClassRewrite
-requires: [phonology]
-fieldworks_producible_notes: >-
-  Adds one unused symbolic phonological feature to the existing featureless
-  segment-class rewrite fixture. Segments carry no values for it. This is the
-  partial-feature grammar shape supported by ADR 0009; no fwdata witness is claimed.
+requires:
+  - phonology
+fieldworks_producible_notes: Adds one unused symbolic phonological feature to the existing featureless segment-class rewrite fixture. Segments carry no values for it. This is the partial-feature grammar shape supported by ADR 0009; no fwdata witness is claimed.
 words:
   - word: aka
-    note: Both roots unify with the underspecified output shape; FST loses ITA.
+    note: '[cell literal-output] Both roots unify with the underspecified output shape; FST loses ITA.'
     parses:
-      - signature: "AKA|[ktszai][ktszai][ktszai]"
-        rules: [prLen]
-      - signature: "ITA|[ktszai][ktszai][ktszai]"
-        rules: [prLen]
+      - signature: AKA_literal-output|[ktszai][ktszai][ktszai]
+        rules:
+          - prLen_literal-output
+      - signature: ITA_literal-output|[ktszai][ktszai][ktszai]
+        rules:
+          - prLen_literal-output
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification
   - word: aa
-    note: Length control has no three-segment lexical root.
+    note: '[cell literal-output] Length control has no three-segment lexical root.'
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > partial feature specification
+  - word: bfb
+    note: '[cell unused-feature] Both roots unify with the underspecified output shape; FST loses ITA.'
+    parses:
+      - signature: AKA_unused-feature|[fhgjbd][fhgjbd][fhgjbd]
+        rules:
+          - prLen_unused-feature
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+      - signature: ITA_unused-feature|[fhgjbd][fhgjbd][fhgjbd]
+        rules:
+          - prLen_unused-feature
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bb
+    note: '[cell unused-feature] Length control has no three-segment lexical root.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

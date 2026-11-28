@@ -4,136 +4,222 @@
   <Language>
     <Name>FeaturelessTarget</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="posV_literal">
-        <Name>V_literal</Name>
+      <PartOfSpeech id="posV_literal_target">
+        <Name>V_literal_target</Name>
       </PartOfSpeech>
-      <PartOfSpeech id="posV_singleton">
-        <Name>V_singleton</Name>
+      <PartOfSpeech id="posV_singleton_target">
+        <Name>V_singleton_target</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_literal_alias">
+        <Name>V_literal_alias</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_singleton_alias">
+        <Name>V_singleton_alias</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
-    <CharacterDefinitionTable id="tbl_literal">
-      <Name>Main_literal</Name>
+    <CharacterDefinitionTable id="tbl_literal_target">
+      <Name>Main_literal_target</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cK_literal">
+        <SegmentDefinition id="cK_literal_target">
           <Representations>
             <Representation>k</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cT_literal">
+        <SegmentDefinition id="cT_literal_target">
           <Representations>
             <Representation>t</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cS_literal">
+        <SegmentDefinition id="cS_literal_target">
           <Representations>
             <Representation>s</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cZ_literal">
+        <SegmentDefinition id="cZ_literal_target">
           <Representations>
             <Representation>z</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cA_literal">
+        <SegmentDefinition id="cA_literal_target">
           <Representations>
             <Representation>a</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cI_literal">
+        <SegmentDefinition id="cI_literal_target">
           <Representations>
             <Representation>i</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cK_singleton">
+        <SegmentDefinition id="cK_singleton_target">
           <Representations>
             <Representation>u</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cT_singleton">
+        <SegmentDefinition id="cT_singleton_target">
           <Representations>
             <Representation>d</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cS_singleton">
+        <SegmentDefinition id="cS_singleton_target">
           <Representations>
             <Representation>g</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cZ_singleton">
+        <SegmentDefinition id="cZ_singleton_target">
           <Representations>
             <Representation>f</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cA_singleton">
+        <SegmentDefinition id="cA_singleton_target">
           <Representations>
             <Representation>e</Representation>
           </Representations>
         </SegmentDefinition>
-        <SegmentDefinition id="cI_singleton">
+        <SegmentDefinition id="cI_singleton_target">
           <Representations>
             <Representation>o</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_literal_alias">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_literal_alias">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_literal_alias">
+          <Representations>
+            <Representation>r</Representation>
+            <Representation>x</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_literal_alias">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_literal_alias">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_singleton_alias">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_singleton_alias">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_singleton_alias">
+          <Representations>
+            <Representation>m</Representation>
+            <Representation>l</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_singleton_alias">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_singleton_alias">
+          <Representations>
+            <Representation>q</Representation>
           </Representations>
         </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <SegmentNaturalClass id="ncV_literal">
-        <Name>V_literal</Name>
-        <Segment segment="cA_literal"/>
-        <Segment segment="cI_literal"/>
+      <SegmentNaturalClass id="ncV_literal_target">
+        <Name>V_literal_target</Name>
+        <Segment segment="cA_literal_target"/>
+        <Segment segment="cI_literal_target"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncK_literal">
-        <Name>K_literal</Name>
-        <Segment segment="cK_literal"/>
-        <Segment segment="cT_literal"/>
+      <SegmentNaturalClass id="ncK_literal_target">
+        <Name>K_literal_target</Name>
+        <Segment segment="cK_literal_target"/>
+        <Segment segment="cT_literal_target"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncS_literal">
-        <Name>S_literal</Name>
-        <Segment segment="cS_literal"/>
-        <Segment segment="cZ_literal"/>
+      <SegmentNaturalClass id="ncS_literal_target">
+        <Name>S_literal_target</Name>
+        <Segment segment="cS_literal_target"/>
+        <Segment segment="cZ_literal_target"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncV_singleton">
-        <Name>V_singleton</Name>
-        <Segment segment="cA_singleton"/>
-        <Segment segment="cI_singleton"/>
+      <SegmentNaturalClass id="ncV_singleton_target">
+        <Name>V_singleton_target</Name>
+        <Segment segment="cA_singleton_target"/>
+        <Segment segment="cI_singleton_target"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncK_singleton">
-        <Name>K_singleton</Name>
-        <Segment segment="cK_singleton"/>
+      <SegmentNaturalClass id="ncK_singleton_target">
+        <Name>K_singleton_target</Name>
+        <Segment segment="cK_singleton_target"/>
       </SegmentNaturalClass>
-      <SegmentNaturalClass id="ncS_singleton">
-        <Name>S_singleton</Name>
-        <Segment segment="cS_singleton"/>
-        <Segment segment="cZ_singleton"/>
+      <SegmentNaturalClass id="ncS_singleton_target">
+        <Name>S_singleton_target</Name>
+        <Segment segment="cS_singleton_target"/>
+        <Segment segment="cZ_singleton_target"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncV_literal_alias">
+        <Name>V_literal_alias</Name>
+        <Segment segment="cA_literal_alias"/>
+        <Segment segment="cI_literal_alias"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncK_literal_alias">
+        <Name>K_literal_alias</Name>
+        <Segment segment="cK_literal_alias"/>
+        <Segment segment="cT_literal_alias"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncS_literal_alias">
+        <Name>S_literal_alias</Name>
+        <Segment segment="cS_literal_alias"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncV_singleton_alias">
+        <Name>V_singleton_alias</Name>
+        <Segment segment="cA_singleton_alias"/>
+        <Segment segment="cI_singleton_alias"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncK_singleton_alias">
+        <Name>K_singleton_alias</Name>
+        <Segment segment="cK_singleton_alias"/>
+        <Segment segment="cT_singleton_alias"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="ncS_singleton_alias">
+        <Name>S_singleton_alias</Name>
+        <Segment segment="cS_singleton_alias"/>
       </SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
-      <PhonologicalRule id="prLen_literal">
-        <Name>intervocalicLenition_literal</Name>
+      <PhonologicalRule id="prLen_literal_target">
+        <Name>intervocalicLenition_literal_target</Name>
         <PhoneticInput>
           <PhoneticSequence>
-            <Segment segment="cK_literal"/>
+            <Segment segment="cK_literal_target"/>
           </PhoneticSequence>
         </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
             <PhoneticOutput>
               <PhoneticSequence>
-                <SimpleContext naturalClass="ncS_literal"/>
+                <SimpleContext naturalClass="ncS_literal_target"/>
               </PhoneticSequence>
             </PhoneticOutput>
             <Environment>
               <LeftEnvironment>
                 <PhoneticTemplate>
                   <PhoneticSequence>
-                    <SimpleContext naturalClass="ncV_literal"/>
+                    <SimpleContext naturalClass="ncV_literal_target"/>
                   </PhoneticSequence>
                 </PhoneticTemplate>
               </LeftEnvironment>
               <RightEnvironment>
                 <PhoneticTemplate>
                   <PhoneticSequence>
-                    <SimpleContext naturalClass="ncV_literal"/>
+                    <SimpleContext naturalClass="ncV_literal_target"/>
                   </PhoneticSequence>
                 </PhoneticTemplate>
               </RightEnvironment>
@@ -141,32 +227,98 @@
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
-      <PhonologicalRule id="prLen_singleton">
-        <Name>intervocalicLenition_singleton</Name>
+      <PhonologicalRule id="prLen_singleton_target">
+        <Name>intervocalicLenition_singleton_target</Name>
         <PhoneticInput>
           <PhoneticSequence>
-            <SimpleContext naturalClass="ncK_singleton"/>
+            <SimpleContext naturalClass="ncK_singleton_target"/>
           </PhoneticSequence>
         </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
             <PhoneticOutput>
               <PhoneticSequence>
-                <SimpleContext naturalClass="ncS_singleton"/>
+                <SimpleContext naturalClass="ncS_singleton_target"/>
               </PhoneticSequence>
             </PhoneticOutput>
             <Environment>
               <LeftEnvironment>
                 <PhoneticTemplate>
                   <PhoneticSequence>
-                    <SimpleContext naturalClass="ncV_singleton"/>
+                    <SimpleContext naturalClass="ncV_singleton_target"/>
                   </PhoneticSequence>
                 </PhoneticTemplate>
               </LeftEnvironment>
               <RightEnvironment>
                 <PhoneticTemplate>
                   <PhoneticSequence>
-                    <SimpleContext naturalClass="ncV_singleton"/>
+                    <SimpleContext naturalClass="ncV_singleton_target"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prLen_literal_alias">
+        <Name>intervocalicLenition_literal_alias</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cK_literal_alias"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cS_literal_alias"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal_alias"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal_alias"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prLen_singleton_alias">
+        <Name>intervocalicLenition_singleton_alias</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cK_singleton_alias"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="ncS_singleton_alias"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_singleton_alias"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_singleton_alias"/>
                   </PhoneticSequence>
                 </PhoneticTemplate>
               </RightEnvironment>
@@ -176,43 +328,79 @@
       </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="tbl_literal" morphologicalRuleOrder="unordered" phonologicalRules="prLen_literal prLen_singleton">
-        <Name>Main_literal</Name>
+      <Stratum characterDefinitionTable="tbl_literal_target" morphologicalRuleOrder="unordered" phonologicalRules="prLen_literal_target prLen_singleton_target prLen_literal_alias prLen_singleton_alias">
+        <Name>Main_literal_target</Name>
         <LexicalEntries>
-          <LexicalEntry id="eAka_literal" partOfSpeech="posV_literal">
+          <LexicalEntry id="eAka_literal_target" partOfSpeech="posV_literal_target">
             <Allomorphs>
-              <Allomorph id="aAka_literal">
+              <Allomorph id="aAka_literal_target">
                 <PhoneticShape>aka</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>AKA_literal</MorphemeId>
+            <MorphemeId>AKA_literal_target</MorphemeId>
             <Gloss>aka</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eIta_literal" partOfSpeech="posV_literal">
+          <LexicalEntry id="eIta_literal_target" partOfSpeech="posV_literal_target">
             <Allomorphs>
-              <Allomorph id="aIta_literal">
+              <Allomorph id="aIta_literal_target">
                 <PhoneticShape>ita</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ITA_literal</MorphemeId>
+            <MorphemeId>ITA_literal_target</MorphemeId>
             <Gloss>ita</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eAka_singleton" partOfSpeech="posV_singleton">
+          <LexicalEntry id="eAka_singleton_target" partOfSpeech="posV_singleton_target">
             <Allomorphs>
-              <Allomorph id="aAka_singleton">
+              <Allomorph id="aAka_singleton_target">
                 <PhoneticShape>eue</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>AKA_singleton</MorphemeId>
+            <MorphemeId>AKA_singleton_target</MorphemeId>
             <Gloss>aka</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="eIta_singleton" partOfSpeech="posV_singleton">
+          <LexicalEntry id="eIta_singleton_target" partOfSpeech="posV_singleton_target">
             <Allomorphs>
-              <Allomorph id="aIta_singleton">
+              <Allomorph id="aIta_singleton_target">
                 <PhoneticShape>ode</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ITA_singleton</MorphemeId>
+            <MorphemeId>ITA_singleton_target</MorphemeId>
+            <Gloss>ita</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAka_literal_alias" partOfSpeech="posV_literal_alias">
+            <Allomorphs>
+              <Allomorph id="aAka_literal_alias">
+                <PhoneticShape>bpb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AKA_literal_alias</MorphemeId>
+            <Gloss>aka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIta_literal_alias" partOfSpeech="posV_literal_alias">
+            <Allomorphs>
+              <Allomorph id="aIta_literal_alias">
+                <PhoneticShape>nvb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ITA_literal_alias</MorphemeId>
+            <Gloss>ita</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eAka_singleton_alias" partOfSpeech="posV_singleton_alias">
+            <Allomorphs>
+              <Allomorph id="aAka_singleton_alias">
+                <PhoneticShape>jwj</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>AKA_singleton_alias</MorphemeId>
+            <Gloss>aka</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eIta_singleton_alias" partOfSpeech="posV_singleton_alias">
+            <Allomorphs>
+              <Allomorph id="aIta_singleton_alias">
+                <PhoneticShape>qhj</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ITA_singleton_alias</MorphemeId>
             <Gloss>ita</Gloss>
           </LexicalEntry>
         </LexicalEntries>

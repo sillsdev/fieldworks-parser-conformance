@@ -1,5 +1,7 @@
 # Final-template partial root
 
+This grammar is now the cell `root` of `edge-cases/final-template-partial-reachability` (former id `edge-cases/final-template-partial-root`, wave-2026-11-27-8). Its letters and ids are mapped as that test case's README says. It carried `morpher: MakePartialsFinal: false`, which is the engine default, so the merged test case sets no `morpher:` block and every result is unchanged.
+
 This synthetic grammar checks whether a partial lexical entry can license a derivation that the
 analysis-side final-template prune (#491) rejects. Issue [#551](https://github.com/sillsdev/machine/issues/551)
 suspected it could, because a word inherits partiality from its root and synthesis lets a
