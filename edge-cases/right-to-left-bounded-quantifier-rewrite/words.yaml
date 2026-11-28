@@ -1,127 +1,162 @@
-# Graduation rechecks complete word/status/signature multiplicities and rule traces.
-# Earlier provenance comments below describe the original authoring history.
-# Synthetic construct-shaped mimic -- see STAGING.md and grammar.xml's own header comment. Verified
-# against the C# founding oracle (hc.dll, via hc-conformance.exe self-check): signatures match
-# exactly; `rules:` fields below are transcribed from the oracle's own trace output.
-#
-# Authoring note: an early all-featureless draft (SegmentNaturalClass only, no
-# PhonologicalFeatureSystem at all) made every segment share an identical (empty) feature bundle,
-# and pg_parse's own shape rendering collapsed every analysis into a bracketed alternates class
-# (e.g. "[aect][aect][aect]t") instead of the literal input string. Fixed by giving every segment a
-# fully unique feature bundle, mirroring `conformance-staging/edge-cases/mpr-gated-exception`'s own
-# fix for the identical symptom (see grammar.xml's own G2a-discipline comment).
-
 language: RightToLeftBoundedQuantifierRewrite
-inspired_by: ["synthetic right-to-left bounded-quantifier rewrite probe (not modeling any real language)"]
+inspired_by:
+  - synthetic right-to-left bounded-quantifier rewrite probe (not modeling any real language)
+  - synthetic right-to-left word-boundary-anchored rewrite probe (not modeling any real language)
 sources:
-  - "docs/conformance/representative-typology-basis.md S1.2.2 (Right-to-left rewrite: additional in-scope pattern shapes)"
-requires: [phonology]
-fieldworks_producible_notes: >-
-  The second rule (prRtlBq2, ucdt and the words after it) has a PhIterationContext (minimum 1, maximum 2) whose member is a PhSequenceContext of two simple contexts, which HCLoader LoadPatternNode loads as a Quantifier over a Group. Not round-tripped through FieldWorks, so no witness is claimed.
+  - 'docs/conformance/representative-typology-basis.md S1.2.2 (Right-to-left rewrite: additional in-scope pattern shapes)'
+  - 'openspec/changes/plan-construct-coverage-completion task 4.2 (RightToLeftRewrite: additional in-scope pattern shapes -- Anchor)'
+requires:
+  - phonology
+fieldworks_producible_notes: The second rule (prRtlBq2, ucdt and the words after it) has a PhIterationContext (minimum 1, maximum 2) whose member is a PhSequenceContext of two simple contexts, which HCLoader LoadPatternNode loads as a Quantifier over a Group. Not round-tripped through FieldWorks, so no witness is claimed.
 words:
   - word: acet
-    note: >-
-      ROOT1's correctly-rewritten surface form: underlying "acat", prRtlBq's rightmost "a" (index 2,
-      immediately before the trigger "t", 0 intervening consonants -- within the bounded
-      OptionalSegmentSequence min=0 max=2) rewrites to "e"; the leftmost "a" (index 0, followed by
-      "c" then another "a", never reaching the trigger within the environment shape) does not.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.2"
+    note: '[cell bounded-quantifier] ROOT1''s correctly-rewritten surface form: underlying "acat", prRtlBq''s rightmost "a" (index 2, immediately before the trigger "t", 0 intervening consonants -- within the bounded OptionalSegmentSequence min=0 max=2) rewrites to "e"; the leftmost "a" (index 0, followed by "c" then another "a", never reaching the trigger within the environment shape) does not.'
+    provenance: docs/conformance/representative-typology-basis.md S1.2.2
     parses:
-      - signature: "ROOT1|acet"
-        rules: [prRtlBq]
+      - signature: ROOT1_bounded-quantifier|acet
+        rules:
+          - prRtlBq_bounded-quantifier
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
-
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ecct
-    note: >-
-      ROOT2's correctly-rewritten surface form: underlying "acct", the sole "a" is followed by
-      EXACTLY 2 consonants ("cc") then the trigger "t" -- exactly saturating the bounded
-      quantifier's own max=2, the load-bearing positive witness that the bound is genuinely
-      reachable, not just vacuously satisfied at 0.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.2"
+    note: '[cell bounded-quantifier] ROOT2''s correctly-rewritten surface form: underlying "acct", the sole "a" is followed by EXACTLY 2 consonants ("cc") then the trigger "t" -- exactly saturating the bounded quantifier''s own max=2, the load-bearing positive witness that the bound is genuinely reachable, not just vacuously satisfied at 0.'
+    provenance: docs/conformance/representative-typology-basis.md S1.2.2
     parses:
-      - signature: "ROOT2|ecct"
-        rules: [prRtlBq]
+      - signature: ROOT2_bounded-quantifier|ecct
+        rules:
+          - prRtlBq_bounded-quantifier
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
-
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: accct
-    note: >-
-      ROOT3's surface form, UNCHANGED from its own underlying shape: the sole "a" is followed by 3
-      consonants ("ccc") before the trigger "t" -- one past the bounded quantifier's own max=2, so
-      the environment genuinely fails to match and the obligatory rule does not fire. The
-      load-bearing negative witness that the quantifier is truly BOUNDED (a finite max=2, not the
-      DTD's -1/unbounded sentinel): without this control, "acet"/"ecct" alone could not distinguish
-      a genuinely-bounded rule from a rule that (incorrectly) treated the quantifier as unbounded.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.2"
+    note: '[cell bounded-quantifier] ROOT3''s surface form, UNCHANGED from its own underlying shape: the sole "a" is followed by 3 consonants ("ccc") before the trigger "t" -- one past the bounded quantifier''s own max=2, so the environment genuinely fails to match and the obligatory rule does not fire. The load-bearing negative witness that the quantifier is truly BOUNDED (a finite max=2, not the DTD''s -1/unbounded sentinel): without this control, "acet"/"ecct" alone could not distinguish a genuinely-bounded rule from a rule that (incorrectly) treated the quantifier as unbounded.'
+    provenance: docs/conformance/representative-typology-basis.md S1.2.2
     parses:
-      - signature: "ROOT3|accct"
+      - signature: ROOT3_bounded-quantifier|accct
         rules: []
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
-
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: acat
-    note: >-
-      ROOT1's own RAW underlying shape, queried directly as a surface string -- prRtlBq is
-      obligatory wherever its environment matches, so this exact string is NOT a valid surface form
-      for ROOT1 at all (it should have rewritten to "acet"). Proves the rule genuinely fires
-      (obligatorily), rather than being vacuously never-applicable.
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.2"
+    note: '[cell bounded-quantifier] ROOT1''s own RAW underlying shape, queried directly as a surface string -- prRtlBq is obligatory wherever its environment matches, so this exact string is NOT a valid surface form for ROOT1 at all (it should have rewritten to "acet"). Proves the rule genuinely fires (obligatorily), rather than being vacuously never-applicable.'
+    provenance: docs/conformance/representative-typology-basis.md S1.2.2
     expect_fail: true
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
-
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: acct
-    note: ROOT2's own RAW underlying shape, queried directly -- same reasoning as acat (should have rewritten to "ecct").
-    provenance: "docs/conformance/representative-typology-basis.md S1.2.2"
+    note: '[cell bounded-quantifier] ROOT2''s own RAW underlying shape, queried directly -- same reasoning as acat (should have rewritten to "ecct").'
+    provenance: docs/conformance/representative-typology-basis.md S1.2.2
     expect_fail: true
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ucdt
-    note: ROOT4 underlying ocdt. The second rule prRtlBq2 has a quantifier group of two children, (c d){1,2} t, and o is rewritten to u before one (c d) pair and t.
+    note: '[cell bounded-quantifier] ROOT4 underlying ocdt. The second rule prRtlBq2 has a quantifier group of two children, (c d){1,2} t, and o is rewritten to u before one (c d) pair and t.'
     parses:
-      - signature: "ROOT4|ucdt"
-        rules: [prRtlBq2]
+      - signature: ROOT4_bounded-quantifier|ucdt
+        rules:
+          - prRtlBq2_bounded-quantifier
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ucdcdt
-    note: ROOT5 underlying ocdcdt, two (c d) pairs, within the bound of two.
+    note: '[cell bounded-quantifier] ROOT5 underlying ocdcdt, two (c d) pairs, within the bound of two.'
     parses:
-      - signature: "ROOT5|ucdcdt"
-        rules: [prRtlBq2]
+      - signature: ROOT5_bounded-quantifier|ucdcdt
+        rules:
+          - prRtlBq2_bounded-quantifier
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ocdcdcdt
-    note: ROOT6, three pairs exceed the bound of two, so o stays. The load-bearing negative that the group is bounded.
+    note: '[cell bounded-quantifier] ROOT6, three pairs exceed the bound of two, so o stays. The load-bearing negative that the group is bounded.'
     parses:
-      - signature: "ROOT6|ocdcdcdt"
+      - signature: ROOT6_bounded-quantifier|ocdcdcdt
         rules: []
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: odct
-    note: ROOT7 underlying odct, the control for the order of the group's children. The environment needs c before d, and odct has d before c, so o stays. A reversal that left the two children in document order would read the group as d then c, match here, and rewrite o to u.
+    note: '[cell bounded-quantifier] ROOT7 underlying odct, the control for the order of the group''s children. The environment needs c before d, and odct has d before c, so o stays. A reversal that left the two children in document order would read the group as d then c, match here, and rewrite o to u.'
     parses:
-      - signature: "ROOT7|odct"
+      - signature: ROOT7_bounded-quantifier|odct
         rules: []
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ocdt
-    note: Raw ROOT4, the rule is obligatory, so it is not a surface form.
+    note: '[cell bounded-quantifier] Raw ROOT4, the rule is obligatory, so it is not a surface form.'
     expect_fail: true
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ocdcdt
-    note: Raw ROOT5, the rule is obligatory.
+    note: '[cell bounded-quantifier] Raw ROOT5, the rule is obligatory.'
     expect_fail: true
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: ucdcdcdt
-    note: Not derivable, three pairs never trigger the rule.
+    note: '[cell bounded-quantifier] Not derivable, three pairs never trigger the rule.'
     expect_fail: true
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
   - word: udct
-    note: Not derivable, the rule never fires on ROOT7.
+    note: '[cell bounded-quantifier] Not derivable, the rule never fires on ROOT7.'
     expect_fail: true
     exercises:
-      - "RewriteRule direction (Dir): right-to-left"
+      - 'RewriteRule direction (Dir): right-to-left'
+  - word: bbf
+    note: '[cell anchor-environment] ROOT1''s correctly-rewritten surface form: underlying "aaa" (three "a"s). The rule (`prRtlAnchor`) rewrites "a" -> "e" only when the "a" is IMMEDIATELY followed by the end of the word (`finalBoundaryCondition="true"`, a bare `PatternNode::Anchor` right environment, no other context node). Only the THIRD (word-final) "a" satisfies that; the first two do not (each is followed by another "a", never the boundary), so only the last one rewrites.'
+    provenance: openspec/changes/plan-construct-coverage-completion task 4.2
+    parses:
+      - signature: ROOT1_anchor-environment|bbf
+        rules:
+          - prRtlAnchor_anchor-environment
+        exercises:
+          - 'RewriteRule direction (Dir): right-to-left'
+  - word: bf
+    note: '[cell anchor-environment] ROOT2''s correctly-rewritten surface form: underlying "aa" (two "a"s). The second (word-final) "a" rewrites to "e"; the first does not (followed by the second "a", not the boundary).'
+    provenance: openspec/changes/plan-construct-coverage-completion task 4.2
+    parses:
+      - signature: ROOT2_anchor-environment|bf
+        rules:
+          - prRtlAnchor_anchor-environment
+        exercises:
+          - 'RewriteRule direction (Dir): right-to-left'
+  - word: bbb
+    note: '[cell anchor-environment] ROOT1''s own RAW, un-rewritten underlying shape, queried directly as a surface string -- the rule is obligatory wherever its environment matches (the word-final "a" always satisfies `finalBoundaryCondition`), so this exact string is NOT a valid surface form for ROOT1 at all. Proves the rule genuinely fires (obligatorily), rather than being vacuously inapplicable.'
+    provenance: openspec/changes/plan-construct-coverage-completion task 4.2
+    expect_fail: true
+    exercises:
+      - 'RewriteRule direction (Dir): right-to-left'
+  - word: bb
+    note: '[cell anchor-environment] ROOT2''s own RAW underlying shape, queried directly -- same reasoning as "aaa" (should have rewritten to "ae").'
+    provenance: openspec/changes/plan-construct-coverage-completion task 4.2
+    expect_fail: true
+    exercises:
+      - 'RewriteRule direction (Dir): right-to-left'
+  - word: fbb
+    note: '[cell anchor-environment] A WRONGLY-rewritten variant of ROOT1''s underlying "aaa": if the anchor were mis-swapped to "word-INITIAL" instead of "word-final" (exactly the mistake `crate::lower::Slot::Anchor`''s own doc warns the mirror-and-reverse construction must not make), the FIRST "a" would rewrite instead of the last, giving this string. Must have no analysis at all under either hypothesis (it is not a valid surface form for ROOT1: the correct rewrite is "aae", and this is neither the correct rewrite nor the raw underlying shape).'
+    provenance: openspec/changes/plan-construct-coverage-completion task 4.2
+    expect_fail: true
+    exercises:
+      - 'RewriteRule direction (Dir): right-to-left'
+  - word: bfb
+    note: '[cell anchor-environment] Another structurally-invalid variant of ROOT1''s underlying "aaa" (the MIDDLE "a" rewritten instead of the last) -- no position of the LHS class other than the true word-final one ever satisfies the anchored environment, so this is never a valid surface form either.'
+    provenance: openspec/changes/plan-construct-coverage-completion task 4.2
+    expect_fail: true
+    exercises:
+      - 'RewriteRule direction (Dir): right-to-left'
+  - word: fbbb
+    note: '[cell anchor-environment] ROOT3''s own raw underlying shape. prRtlAnchor''s final "a" and prSpread''s cascade both fire obligatorily, so this exact string is not a valid surface form.'
+    expect_fail: true
+    exercises:
+      - 'RewriteRule direction (Dir): right-to-left'
+  - word: ffbf
+    note: '[cell anchor-environment] ROOT3''s correctly-rewritten surface form. prRtlAnchor rewrites the word-final "a" to "e" first ("eaaa" -> "eaae"); prSpread then runs right-to-left over "eaae": the rightmost "a" (position 3) checks its left neighbor (position 2, still "a") first and does not qualify, so only position 2 (adjacent to the original seed "e") rewrites.'
+    neutralizes:
+      - prSpread_anchor-environment
+    parses:
+      - signature: ROOT3_anchor-environment|ffbf
+        rules:
+          - prRtlAnchor_anchor-environment
+          - prSpread_anchor-environment
+        exercises:
+          - 'RewriteRule direction (Dir): right-to-left'
+  - word: ffff
+    note: '[cell anchor-environment] What prSpread would produce on "eaae" if it ran leftToRightIterative instead: scanning left to right, each rewrite updates the string before the next "a" to its right is checked, so the "e" cascades across the whole word in one pass. Not a valid surface form under this fixture''s declared rightToLeftIterative order; kept as the negative control that shows direction matters.'
+    expect_fail: true
+    exercises:
+      - 'RewriteRule direction (Dir): right-to-left'

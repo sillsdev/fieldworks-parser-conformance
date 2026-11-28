@@ -88,3 +88,14 @@ edge-cases/ambiguous-disagree-repeated-minus-partial-focus	edge-cases/ambiguous-
 edge-cases/partial-feature-literal-rewrite	retired	edge-cases/partial-feature-literal-output	wave-2026-11-27-5
 edge-cases/partial-feature-singleton-rewrite	retired	edge-cases/partial-feature-literal-output	wave-2026-11-27-5
 edge-cases/spelling-coverage-compound-depth-mpr-restricted	retired	edge-cases/spelling-coverage-compound-depth-mpr-output	wave-2026-11-27-5
+edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix	edge-cases/epenthesis-then-swap-with-root-keeps-its-edge		wave-2026-11-27-6
+edge-cases/partial-inherited-output-feature	edge-cases/partial-inherited-output-target		wave-2026-11-27-6
+edge-cases/right-to-left-anchor-environment	edge-cases/right-to-left-bounded-quantifier-rewrite		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-alias-deleted	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-completed	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-repeated-root	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-reversed-table	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-depth-reordered-prefix	edge-cases/spelling-coverage-compound-depth-prefix-zone		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-multirule	edge-cases/spelling-coverage-compound-multirule-affixes		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-template	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-template-feeds	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6

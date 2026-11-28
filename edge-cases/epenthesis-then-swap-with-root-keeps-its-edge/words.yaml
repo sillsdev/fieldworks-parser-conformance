@@ -1,71 +1,172 @@
-# Pins the shape marks after a metathesis rule moves an epenthetic node (prefix t, roots s and sp, suffix s; one rule inserts a between t and s, the next swaps a with s). C# keeps an inserted node at a morph's edge outside every morph's annotation range, so `atss` parses as the prefix, root and suffix;
-# HC-Rust forgot which node was bare once the swap moved it and read it as part of a morph. Every word of the 1364-word probe space (length 1 to 5 over a p s t) that is not listed with a parse is pinned as expect_fail.
-language: EpenthesisThenSwapEdge
-inspired_by: ["synthetic probe (not modeling any real language)"]
+language: EpenthesisBesidePrefixThenPrefixDeletion
+inspired_by:
+  - synthetic probe (not modeling any real language)
 sources:
-  - "C# AnnotationList.cs:131-138 (a node nests only inside a range that contains it), SynthesisMetathesisRuleSpec.ApplyRhs"
-  - "FieldWorks HCLoader.LoadAffixProcessRule, LoadRewriteRule (epenthesis), LoadMetathesisRule"
-requires: [phonology]
-words:
-  - word: "s"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "R0|s"
-        rules: []
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "sp"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "R1|sp"
-        rules: []
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "ss"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "R0+SU1|ss"
-        rules: [SU1]
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "tsa"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "PR0+R0|tsa"
-        rules: [PR0, pe0, pm]
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "sps"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "R1+SU1|sps"
-        rules: [SU1]
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "tsap"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "PR0+R1|tsap"
-        rules: [PR0, pe0, pm]
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "tsas"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "PR0+R0+SU1|tsas"
-        rules: [PR0, SU1, pe0, pm]
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
-  - word: "tsaps"
-    note: "C# e63b8863 returns this analysis."
-    parses:
-      - signature: "PR0+R1+SU1|tsaps"
-        rules: [PR0, SU1, pe0, pm]
-    exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
+  - C# AnnotationList.cs:131-138 (a node nests only inside a range that contains it), SynthesisMetathesisRuleSpec.ApplyRhs
+  - FieldWorks HCLoader.LoadAffixProcessRule, LoadRewriteRule (epenthesis), LoadMetathesisRule
+requires:
+  - phonology
 generated_no_parse:
-  - alphabet: [a, p, t, s]
+  - alphabet:
+      - a
+      - p
+      - t
+      - s
     max_length: 5
-    note: "C# e63b8863 returns no analysis: pins that this spelling is not a route."
+    note: 'C# e63b8863 returns no analysis: pins that this spelling is not a route.'
     exercises:
-      - "MetathesisRule > interaction with a rewrite rule"
+      - MetathesisRule > interaction with a rewrite rule
+  - alphabet:
+      - b
+      - d
+      - g
+      - f
+    max_length: 5
+    note: '[cell before-suffix] C# e63b8863 returns no analysis: pins that this spelling is not a route.'
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+words:
+  - word: s
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R0_with-root|s
+        rules: []
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: sp
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R1_with-root|sp
+        rules: []
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: ss
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R0_with-root+SU1_with-root|ss
+        rules:
+          - SU1_with-root
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: tsa
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_with-root+R0_with-root|tsa
+        rules:
+          - PR0_with-root
+          - pe0_with-root
+          - pm_with-root
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: sps
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R1_with-root+SU1_with-root|sps
+        rules:
+          - SU1_with-root
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: tsap
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_with-root+R1_with-root|tsap
+        rules:
+          - PR0_with-root
+          - pe0_with-root
+          - pm_with-root
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: tsas
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_with-root+R0_with-root+SU1_with-root|tsas
+        rules:
+          - PR0_with-root
+          - SU1_with-root
+          - pe0_with-root
+          - pm_with-root
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: tsaps
+    note: '[cell with-root] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_with-root+R1_with-root+SU1_with-root|tsaps
+        rules:
+          - PR0_with-root
+          - SU1_with-root
+          - pe0_with-root
+          - pm_with-root
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: f
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R0_before-suffix|f
+        rules: []
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: fd
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R1_before-suffix|fd
+        rules: []
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: ff
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R0_before-suffix+SU1_before-suffix|ff
+        rules:
+          - SU1_before-suffix
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: bgf
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_before-suffix+R0_before-suffix|bgf
+        rules:
+          - PR0_before-suffix
+          - pe0_before-suffix
+          - pm_before-suffix
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: fdf
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: R1_before-suffix+SU1_before-suffix|fdf
+        rules:
+          - SU1_before-suffix
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: bgfd
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_before-suffix+R1_before-suffix|bgfd
+        rules:
+          - PR0_before-suffix
+          - pe0_before-suffix
+          - pm_before-suffix
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: bgff
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_before-suffix+R0_before-suffix+SU1_before-suffix|bgff
+        rules:
+          - PR0_before-suffix
+          - SU1_before-suffix
+          - pe0_before-suffix
+          - pm_before-suffix
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule
+  - word: bgfdf
+    note: '[cell before-suffix] C# e63b8863 returns this analysis.'
+    parses:
+      - signature: PR0_before-suffix+R1_before-suffix+SU1_before-suffix|bgfdf
+        rules:
+          - PR0_before-suffix
+          - SU1_before-suffix
+          - pe0_before-suffix
+          - pm_before-suffix
+    exercises:
+      - MetathesisRule > interaction with a rewrite rule

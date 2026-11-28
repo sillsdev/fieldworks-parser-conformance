@@ -3,486 +3,1172 @@ requires: []
 fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: p
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: s
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: e
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ap
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: as
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ae
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pe
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: se
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ea
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: es
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ee
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aaa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aap
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aae
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: apa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: app
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ape
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: asa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: asp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ass
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ase
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aea
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aes
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aee
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: paa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pap
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pae
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ppa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ppp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ppe
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: psa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: psp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pse
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pea
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pes
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pee
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saa
-    note: "C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell free-feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["TPRE", "TSUF"]
+      - signature: TPRE_free-feeds+X_free-feeds+TSUF_free-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - TPRE_free-feeds
+          - TSUF_free-feeds
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: sap
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sae
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: spa
-    note: "C# returns 1 analysis (TPRE+Y+TSUF|sp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell free-feeds] C# returns 1 analysis (TPRE+Y+TSUF|sp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "TPRE+Y+TSUF|sp[aá(xy)i]"
-        rules: ["TPRE", "TSUF"]
+      - signature: TPRE_free-feeds+Y_free-feeds+TSUF_free-feeds|sp[aá(xy)i]
+        rules:
+          - TPRE_free-feeds
+          - TSUF_free-feeds
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: spp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: spe
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ssa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ssp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sse
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sea
-    note: "C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell free-feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["TPRE", "TSUF"]
+      - signature: TPRE_free-feeds+X_free-feeds+TSUF_free-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - TPRE_free-feeds
+          - TSUF_free-feeds
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: sep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ses
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: see
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eaa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eap
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eae
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: epa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: epp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: epe
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: esa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: esp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ess
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ese
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eea
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ees
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: eee
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sape
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saepi
-    note: "C# returns 1 analysis (TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell free-feeds] C# returns 1 analysis (TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "TPRE+X+DSUF+Y+TSUF|s[aá(xy)ei][aá(xy)e]p[aá(xy)i]"
-        rules: ["DSUF", "TPRE", "TSUF", "cr1"]
+      - signature: TPRE_free-feeds+X_free-feeds+DSUF_free-feeds+Y_free-feeds+TSUF_free-feeds|s[aá(xy)ei][aá(xy)e]p[aá(xy)i]
+        rules:
+          - DSUF_free-feeds
+          - TPRE_free-feeds
+          - TSUF_free-feeds
+          - cr1_free-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sapei
-    note: "C# returns 1 analysis (TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell free-feeds] C# returns 1 analysis (TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "TPRE+X+Y+DSUF+TSUF|s[aá(xy)ei]p[aá(xy)e][aá(xy)i]"
-        rules: ["DSUF", "TPRE", "TSUF", "cr1"]
+      - signature: TPRE_free-feeds+X_free-feeds+Y_free-feeds+DSUF_free-feeds+TSUF_free-feeds|s[aá(xy)ei]p[aá(xy)e][aá(xy)i]
+        rules:
+          - DSUF_free-feeds
+          - TPRE_free-feeds
+          - TSUF_free-feeds
+          - cr1_free-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saipe
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aepi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: xy
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sxye
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saexy
-    note: "C# returns 2 analyses (TPRE+X+DSUF+TSUF|s[aá(xy)ei][aá(xy)e][aá(xy)i]; TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell free-feeds] C# returns 2 analyses (TPRE+X+DSUF+TSUF|s[aá(xy)ei][aá(xy)e][aá(xy)i]; TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "TPRE+X+DSUF+TSUF|s[aá(xy)ei][aá(xy)e][aá(xy)i]"
-        rules: ["DSUF", "TPRE", "TSUF"]
-      - signature: "TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["TPRE", "TSUF", "cr1"]
+      - signature: TPRE_free-feeds+X_free-feeds+DSUF_free-feeds+TSUF_free-feeds|s[aá(xy)ei][aá(xy)e][aá(xy)i]
+        rules:
+          - DSUF_free-feeds
+          - TPRE_free-feeds
+          - TSUF_free-feeds
+      - signature: TPRE_free-feeds+X_free-feeds+TSUF_free-feeds|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - TPRE_free-feeds
+          - TSUF_free-feeds
+          - cr1_free-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sxyep
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell free-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
+  - word: b
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hb
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbf
+    note: '[cell template] C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_template+ROOT_template+TSUF_template|h[bl(jk)df][bl(jk)f]
+        rules:
+          - TPRE_template
+          - TSUF_template
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: bb
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbb
+    note: '[cell template] C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_template+ROOT_template+TSUF_template|h[bl(jk)df][bl(jk)f]
+        rules:
+          - TPRE_template
+          - TSUF_template
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: bbf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbbf
+    note: '[cell template] C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_template+ROOT_template+TSUF_template|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - TPRE_template
+          - cr1_template
+          - TSUF_template
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bhb
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bfb
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bhbf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: jk
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hjk
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: jkf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bbb
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbhb
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bfbf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbbbf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbbff
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbjkf
+    note: '[cell template] C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_template+ROOT_template+TSUF_template|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - TPRE_template
+          - cr1_template
+          - TSUF_template
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hjkbf
+    note: '[cell template] C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_template+ROOT_template+TSUF_template|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - TPRE_template
+          - cr1_template
+          - TSUF_template
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hjkjkf
+    note: '[cell template] C# returns 1 analysis (TPRE+ROOT+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_template+ROOT_template+TSUF_template|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - TPRE_template
+          - cr1_template
+          - TSUF_template
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbbjkf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hjkbjkf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbjkjkf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbbbjkf
+    note: '[cell template] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: m
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: q
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: r
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: o
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ro
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: om
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: or
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mro
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mom
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: moq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mor
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: moo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qro
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qom
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qoq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qor
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qoo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmm
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+TSUF_feeds|r[mz(vw)no][mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rmq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmo
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+TSUF_feeds|r[mz(vw)no][mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rqm
+    note: '[cell feeds] C# returns 1 analysis (TPRE+Y+TSUF|sp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+Y_feeds+TSUF_feeds|rq[mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rqq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqo
+    note: '[cell feeds] C# returns 1 analysis (TPRE+Y+TSUF|sp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+Y_feeds+TSUF_feeds|rq[mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rrm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rro
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rom
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+TSUF_feeds|r[mz(vw)no][mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: roq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ror
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: roo
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+TSUF_feeds|r[mz(vw)no][mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: omm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: omq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: omr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: omo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oqm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oqq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oqr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oqo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: orm
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: orq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: orr
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oro
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oom
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ooq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: oor
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ooo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmoq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmqo
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+Y+TSUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+Y_feeds+TSUF_feeds|r[mz(vw)no]q[mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - cr1_feeds
+          - TSUF_feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmoqo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmqoo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: moqo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqoo
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: vw
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rvwo
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+TSUF_feeds|r[mz(vw)no][mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - TSUF_feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rmovw
+    note: '[cell feeds] C# returns 1 analysis (TPRE+X+TSUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: TPRE_feeds+X_feeds+TSUF_feeds|r[mz(vw)no][mz(vw)no][mz(vw)o]
+        rules:
+          - TPRE_feeds
+          - cr1_feeds
+          - TSUF_feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rvwoq
+    note: '[cell feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation

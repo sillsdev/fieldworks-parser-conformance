@@ -4,56 +4,116 @@
   <Language>
     <Name>EpenthesisBesidePrefixThenPrefixDeletion</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_with-root">
+        <Name>V_with-root</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_before-suffix">
+        <Name>V_before-suffix</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_with-root">
+        <Name>f_with-root</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_with-root">+</Symbol>
+          <Symbol id="fM_with-root">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_with-root">
+        <Name>g_with-root</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_with-root">+</Symbol>
+          <Symbol id="gM_with-root">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_before-suffix">
+        <Name>f_before-suffix</Name>
+        <Symbols>
+          <Symbol id="fP_before-suffix">+</Symbol>
+          <Symbol id="fM_before-suffix">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_before-suffix">
+        <Name>g_before-suffix</Name>
+        <Symbols>
+          <Symbol id="gP_before-suffix">+</Symbol>
+          <Symbol id="gM_before-suffix">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_with-root">cell with-root</Symbol>
+          <Symbol id="cell_before-suffix">cell before-suffix</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_with-root">
+      <Name>Main_with-root</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_with-root">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_with-root" symbolValues="fP_with-root"/>
+          <FeatureValue feature="g_with-root" symbolValues="gP_with-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_with-root"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_with-root">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_with-root" symbolValues="fM_with-root"/>
+          <FeatureValue feature="g_with-root" symbolValues="gM_with-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_with-root"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_with-root">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_with-root" symbolValues="fM_with-root"/>
+          <FeatureValue feature="g_with-root" symbolValues="gP_with-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_with-root"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_with-root">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_with-root" symbolValues="fP_with-root"/>
+          <FeatureValue feature="g_with-root" symbolValues="gM_with-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_before-suffix">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_before-suffix" symbolValues="fP_before-suffix"/>
+          <FeatureValue feature="g_before-suffix" symbolValues="gP_before-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_before-suffix">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_before-suffix" symbolValues="fM_before-suffix"/>
+          <FeatureValue feature="g_before-suffix" symbolValues="gM_before-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_before-suffix">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_before-suffix" symbolValues="fM_before-suffix"/>
+          <FeatureValue feature="g_before-suffix" symbolValues="gP_before-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_before-suffix">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_before-suffix" symbolValues="fP_before-suffix"/>
+          <FeatureValue feature="g_before-suffix" symbolValues="gM_before-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -65,10 +125,362 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_with-root">
+        <Name>Any_with-root</Name>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
       </FeatureNaturalClass>
-    <FeatureNaturalClass id="T"><Name>T</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="P"><Name>P</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="Sx"><Name>Sx</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="A"><Name>A</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><SegmentNaturalClass id="scS"><Name>scS</Name><Segment segment="cS" /></SegmentNaturalClass><SegmentNaturalClass id="scT"><Name>scT</Name><Segment segment="cT" /></SegmentNaturalClass><SegmentNaturalClass id="scA"><Name>scA</Name><Segment segment="cA" /></SegmentNaturalClass><SegmentNaturalClass id="scSA"><Name>scSA</Name><Segment segment="cS" /><Segment segment="cA" /></SegmentNaturalClass><SegmentNaturalClass id="scTA"><Name>scTA</Name><Segment segment="cT" /><Segment segment="cA" /></SegmentNaturalClass><SegmentNaturalClass id="scST"><Name>scST</Name><Segment segment="cS" /><Segment segment="cT" /></SegmentNaturalClass><FeatureNaturalClass id="ncgP"><Name>gP</Name><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="ncfM"><Name>fM</Name><FeatureValue feature="f" symbolValues="fM" /></FeatureNaturalClass><FeatureNaturalClass id="ncgM"><Name>gM</Name><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass></NaturalClasses>
-    <PhonologicalRuleDefinitions><PhonologicalRule id="pe0"><Name>pe0</Name><PhoneticInput><PhoneticSequence></PhoneticSequence></PhoneticInput><PhonologicalSubrules><PhonologicalSubrule><PhoneticOutput><PhoneticSequence><Segment id="pe0on0" segment="cA" /></PhoneticSequence></PhoneticOutput><Environment><LeftEnvironment><PhoneticTemplate><PhoneticSequence><Segment id="pe0ln0" segment="cT" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment><RightEnvironment><PhoneticTemplate><PhoneticSequence><Segment id="pe0rn0" segment="cS" /></PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment></PhonologicalSubrule></PhonologicalSubrules></PhonologicalRule><MetathesisRule id="pm" leftSwitch="pmn1" rightSwitch="pmn0" multipleApplicationOrder="leftToRightIterative"><Name>pm</Name><StructuralDescription><PhoneticTemplate><PhoneticSequence><SimpleContext id="pmn0" naturalClass="scA" /><SimpleContext id="pmn1" naturalClass="scS" /></PhoneticSequence></PhoneticTemplate></StructuralDescription></MetathesisRule></PhonologicalRuleDefinitions><Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="PR0" phonologicalRules="pe0 pm"><Name>S0</Name><MorphologicalRuleDefinitions><MorphologicalRule id="PR0" requiredPartsOfSpeech="v"><Name>PR0</Name><MorphologicalSubrules><MorphologicalSubrule id="PR00"><MorphologicalInput><PhoneticSequence id="PR0S"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><InsertSegments><PhoneticShape>t</PhoneticShape></InsertSegments><CopyFromInput index="PR0S" /></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>PR0</MorphemeId></MorphologicalRule></MorphologicalRuleDefinitions><LexicalEntries><LexicalEntry id="r0" partOfSpeech="v"><Allomorphs><Allomorph id="r0a"><PhoneticShape>s</PhoneticShape></Allomorph></Allomorphs><MorphemeId>R0</MorphemeId></LexicalEntry><LexicalEntry id="r1" partOfSpeech="v"><Allomorphs><Allomorph id="r1a"><PhoneticShape>sp</PhoneticShape></Allomorph></Allomorphs><MorphemeId>R1</MorphemeId></LexicalEntry></LexicalEntries></Stratum><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="SU1"><Name>S1</Name><MorphologicalRuleDefinitions><MorphologicalRule id="SU1" requiredPartsOfSpeech="v"><Name>SU1</Name><MorphologicalSubrules><MorphologicalSubrule id="SU10"><MorphologicalInput><PhoneticSequence id="SU1S"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="SU1S" /><InsertSegments><PhoneticShape>s</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>SU1</MorphemeId></MorphologicalRule></MorphologicalRuleDefinitions></Stratum></Strata>
+      <FeatureNaturalClass id="T_with-root">
+        <Name>T_with-root</Name>
+        <FeatureValue feature="f_with-root" symbolValues="fM_with-root"/>
+        <FeatureValue feature="g_with-root" symbolValues="gP_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_with-root">
+        <Name>P_with-root</Name>
+        <FeatureValue feature="f_with-root" symbolValues="fM_with-root"/>
+        <FeatureValue feature="g_with-root" symbolValues="gM_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_with-root">
+        <Name>Sx_with-root</Name>
+        <FeatureValue feature="f_with-root" symbolValues="fP_with-root"/>
+        <FeatureValue feature="g_with-root" symbolValues="gM_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_with-root">
+        <Name>A_with-root</Name>
+        <FeatureValue feature="f_with-root" symbolValues="fP_with-root"/>
+        <FeatureValue feature="g_with-root" symbolValues="gP_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="scS_with-root">
+        <Name>scS_with-root</Name>
+        <Segment segment="cS_with-root"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scT_with-root">
+        <Name>scT_with-root</Name>
+        <Segment segment="cT_with-root"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scA_with-root">
+        <Name>scA_with-root</Name>
+        <Segment segment="cA_with-root"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scSA_with-root">
+        <Name>scSA_with-root</Name>
+        <Segment segment="cS_with-root"/>
+        <Segment segment="cA_with-root"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scTA_with-root">
+        <Name>scTA_with-root</Name>
+        <Segment segment="cT_with-root"/>
+        <Segment segment="cA_with-root"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scST_with-root">
+        <Name>scST_with-root</Name>
+        <Segment segment="cS_with-root"/>
+        <Segment segment="cT_with-root"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncgP_with-root">
+        <Name>gP_with-root</Name>
+        <FeatureValue feature="g_with-root" symbolValues="gP_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncfM_with-root">
+        <Name>fM_with-root</Name>
+        <FeatureValue feature="f_with-root" symbolValues="fM_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncgM_with-root">
+        <Name>gM_with-root</Name>
+        <FeatureValue feature="g_with-root" symbolValues="gM_with-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_with-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_before-suffix">
+        <Name>Any_before-suffix</Name>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_before-suffix">
+        <Name>T_before-suffix</Name>
+        <FeatureValue feature="f_before-suffix" symbolValues="fM_before-suffix"/>
+        <FeatureValue feature="g_before-suffix" symbolValues="gP_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_before-suffix">
+        <Name>P_before-suffix</Name>
+        <FeatureValue feature="f_before-suffix" symbolValues="fM_before-suffix"/>
+        <FeatureValue feature="g_before-suffix" symbolValues="gM_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_before-suffix">
+        <Name>Sx_before-suffix</Name>
+        <FeatureValue feature="f_before-suffix" symbolValues="fP_before-suffix"/>
+        <FeatureValue feature="g_before-suffix" symbolValues="gM_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_before-suffix">
+        <Name>A_before-suffix</Name>
+        <FeatureValue feature="f_before-suffix" symbolValues="fP_before-suffix"/>
+        <FeatureValue feature="g_before-suffix" symbolValues="gP_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="scS_before-suffix">
+        <Name>scS_before-suffix</Name>
+        <Segment segment="cS_before-suffix"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scT_before-suffix">
+        <Name>scT_before-suffix</Name>
+        <Segment segment="cT_before-suffix"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scA_before-suffix">
+        <Name>scA_before-suffix</Name>
+        <Segment segment="cA_before-suffix"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scSA_before-suffix">
+        <Name>scSA_before-suffix</Name>
+        <Segment segment="cS_before-suffix"/>
+        <Segment segment="cA_before-suffix"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scTA_before-suffix">
+        <Name>scTA_before-suffix</Name>
+        <Segment segment="cT_before-suffix"/>
+        <Segment segment="cA_before-suffix"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scST_before-suffix">
+        <Name>scST_before-suffix</Name>
+        <Segment segment="cS_before-suffix"/>
+        <Segment segment="cT_before-suffix"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncgP_before-suffix">
+        <Name>gP_before-suffix</Name>
+        <FeatureValue feature="g_before-suffix" symbolValues="gP_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncfM_before-suffix">
+        <Name>fM_before-suffix</Name>
+        <FeatureValue feature="f_before-suffix" symbolValues="fM_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncgM_before-suffix">
+        <Name>gM_before-suffix</Name>
+        <FeatureValue feature="g_before-suffix" symbolValues="gM_before-suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_before-suffix"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="pe0_with-root">
+        <Name>pe0_with-root</Name>
+        <PhoneticInput>
+          <PhoneticSequence/>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment id="pe0on0_with-root" segment="cA_with-root"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <Segment id="pe0ln0_with-root" segment="cT_with-root"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <Segment id="pe0rn0_with-root" segment="cS_with-root"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <MetathesisRule id="pm_with-root" leftSwitch="pmn1_with-root" rightSwitch="pmn0_with-root" multipleApplicationOrder="leftToRightIterative">
+        <Name>pm_with-root</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="pmn0_with-root" naturalClass="scA_with-root"/>
+              <SimpleContext id="pmn1_with-root" naturalClass="scS_with-root"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <PhonologicalRule id="pe0_before-suffix">
+        <Name>pe0_before-suffix</Name>
+        <PhoneticInput>
+          <PhoneticSequence/>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment id="pe0on0_before-suffix" segment="cA_before-suffix"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <Segment id="pe0ln0_before-suffix" segment="cT_before-suffix"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <Segment id="pe0rn0_before-suffix" segment="cS_before-suffix"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <MetathesisRule id="pm_before-suffix" leftSwitch="pmn1_before-suffix" rightSwitch="pmn0_before-suffix" multipleApplicationOrder="leftToRightIterative">
+        <Name>pm_before-suffix</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="pmn0_before-suffix" naturalClass="scT_before-suffix"/>
+              <SimpleContext id="pmn1_before-suffix" naturalClass="scA_before-suffix"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="t_with-root" morphologicalRuleOrder="unordered" morphologicalRules="PR0_with-root PR0_before-suffix" phonologicalRules="pe0_with-root pm_with-root pe0_before-suffix pm_before-suffix">
+        <Name>S0_with-root</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="PR0_with-root" requiredPartsOfSpeech="v_with-root">
+            <Name>PR0_with-root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PR00_with-root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PR0S_with-root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_with-root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>t</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PR0S_with-root"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PR0_with-root</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="PR0_before-suffix" requiredPartsOfSpeech="v_before-suffix">
+            <Name>PR0_before-suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PR00_before-suffix">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PR0S_before-suffix">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_before-suffix"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>g</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PR0S_before-suffix"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PR0_before-suffix</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="r0_with-root" partOfSpeech="v_with-root">
+            <Allomorphs>
+              <Allomorph id="r0a_with-root">
+                <PhoneticShape>s</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R0_with-root</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r1_with-root" partOfSpeech="v_with-root">
+            <Allomorphs>
+              <Allomorph id="r1a_with-root">
+                <PhoneticShape>sp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R1_with-root</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r0_before-suffix" partOfSpeech="v_before-suffix">
+            <Allomorphs>
+              <Allomorph id="r0a_before-suffix">
+                <PhoneticShape>f</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R0_before-suffix</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r1_before-suffix" partOfSpeech="v_before-suffix">
+            <Allomorphs>
+              <Allomorph id="r1a_before-suffix">
+                <PhoneticShape>fd</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R1_before-suffix</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+      <Stratum characterDefinitionTable="t_with-root" morphologicalRuleOrder="unordered" morphologicalRules="SU1_with-root SU1_before-suffix">
+        <Name>S1_with-root</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="SU1_with-root" requiredPartsOfSpeech="v_with-root">
+            <Name>SU1_with-root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SU10_with-root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SU1S_with-root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_with-root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SU1S_with-root"/>
+                  <InsertSegments>
+                    <PhoneticShape>s</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SU1_with-root</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SU1_before-suffix" requiredPartsOfSpeech="v_before-suffix">
+            <Name>SU1_before-suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SU10_before-suffix">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SU1S_before-suffix">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_before-suffix"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SU1S_before-suffix"/>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SU1_before-suffix</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+      </Stratum>
+    </Strata>
   </Language>
 </HermitCrabInput>

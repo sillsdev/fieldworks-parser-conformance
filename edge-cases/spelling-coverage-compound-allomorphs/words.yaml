@@ -1,120 +1,436 @@
 language: SpellingCompoundAllomorphs
 requires: []
-fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
+fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed. | Literal stem, partial feature definition and ordinary non-recursive compounding rule; no fwdata round-trip witness is claimed. | Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei]"
+      - signature: ROOT_allomorphs|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > allomorph identity"
-  - word: "á"
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > allomorph identity
+  - word: á
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei]"
+      - signature: ROOT_allomorphs|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: xy
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei]"
+      - signature: ROOT_allomorphs|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: p
-    note: "C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|p"
+      - signature: ROOT_allomorphs|p
         rules: []
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: aa
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: ap
-    note: "C# returns 1 analysis (ROOT+ROOT|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT+ROOT|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT+ROOT|[aá(xy)ei]p"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs+ROOT_allomorphs|[aá(xy)ei]p
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: pa
-    note: "C# returns 1 analysis (ROOT+ROOT|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT+ROOT|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT+ROOT|p[aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs+ROOT_allomorphs|p[aá(xy)ei]
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: pp
-    note: "C# returns 1 analysis (ROOT|pp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|pp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|pp"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs|pp
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
-  - word: "áp"
-    note: "C# returns 1 analysis (ROOT+ROOT|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > allomorph identity
+  - word: áp
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT+ROOT|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT+ROOT|[aá(xy)ei]p"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs+ROOT_allomorphs|[aá(xy)ei]p
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: pxy
-    note: "C# returns 1 analysis (ROOT+ROOT|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT+ROOT|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT+ROOT|p[aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs+ROOT_allomorphs|p[aá(xy)ei]
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: xyxy
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
-  - word: "aáp"
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+      - CompoundingRule > allomorph identity
+  - word: aáp
+    note: '[cell allomorphs] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: aaa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell allomorphs] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: app
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell allomorphs] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: pap
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell allomorphs] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > allomorph identity"
-  - word: "a^0p"
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+      - CompoundingRule > allomorph identity
+  - word: a^0p
+    note: '[cell allomorphs] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: e
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei]"
+      - signature: ROOT_allomorphs|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
   - word: ae
-    note: "C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell allomorphs] C# returns 1 analysis (ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: ROOT_allomorphs|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_allomorphs
     exercises:
-      - "CompoundingRule > allomorph identity"
+      - CompoundingRule > allomorph identity
+  - word: b
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: jk
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: bb
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei][a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df][b(jk)df]
+        rules:
+          - cr1_alias-deleted
+        exercises:
+          - CompoundingRule
+  - word: bjk
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei][a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df][b(jk)df]
+        rules:
+          - cr1_alias-deleted
+        exercises:
+          - CompoundingRule
+  - word: jkb
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei][a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df][b(jk)df]
+        rules:
+          - cr1_alias-deleted
+        exercises:
+          - CompoundingRule
+  - word: bd
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei][a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df][b(jk)df]
+        rules:
+          - cr1_alias-deleted
+        exercises:
+          - CompoundingRule
+  - word: bg
+    note: '[cell alias-deleted] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: g
+    note: '[cell alias-deleted] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: d
+    note: '[cell alias-deleted] C# returns 1 analysis (ROOT|[a(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_alias-deleted|[b(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: l
+    note: '[cell alias-deleted] C# rejects this input as an invalid shape.'
+    expect_skip: true
+    exercises:
+      - CompoundingRule
+  - word: bl
+    note: '[cell alias-deleted] C# rejects this input as an invalid shape.'
+    expect_skip: true
+    exercises:
+      - CompoundingRule
+  - word: m
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: z
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: vw
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: mm
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o][mz(vw)o]
+        rules:
+          - cr1_completed
+        exercises:
+          - CompoundingRule
+  - word: mz
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o][mz(vw)o]
+        rules:
+          - cr1_completed
+        exercises:
+          - CompoundingRule
+  - word: mvw
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o][mz(vw)o]
+        rules:
+          - cr1_completed
+        exercises:
+          - CompoundingRule
+  - word: vwm
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o][mz(vw)o]
+        rules:
+          - cr1_completed
+        exercises:
+          - CompoundingRule
+  - word: mo
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o][mz(vw)o]
+        rules:
+          - cr1_completed
+        exercises:
+          - CompoundingRule
+  - word: mn
+    note: '[cell completed] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: mq
+    note: '[cell completed] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: q
+    note: '[cell completed] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: n
+    note: '[cell completed] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: o
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: om
+    note: '[cell completed] C# returns 1 analysis (ROOT|[aá(xy)i][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_completed|[mz(vw)o][mz(vw)o]
+        rules:
+          - cr1_completed
+        exercises:
+          - CompoundingRule
+  - word: à
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    parses:
+      - signature: ROOT_repeated-root|[àè(æç)âã]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: àà
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    parses:
+      - signature: ROOT_repeated-root|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_repeated-root
+        exercises:
+          - CompoundingRule
+  - word: àè
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    parses:
+      - signature: ROOT_repeated-root|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_repeated-root
+        exercises:
+          - CompoundingRule
+  - word: àâ
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    parses:
+      - signature: ROOT_repeated-root|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_repeated-root
+        exercises:
+          - CompoundingRule
+  - word: àä
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: ààà
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: ä
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: äà
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: à^0à
+    note: '[cell repeated-root] Spelling and morphology control; every observed C# signature occurrence is retained.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: é
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: ð
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: îï
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)]
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: éé
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)][ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)][ëêéð(îï)]
+        rules:
+          - cr1_reversed-table
+        exercises:
+          - CompoundingRule
+  - word: éð
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)][ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)][ëêéð(îï)]
+        rules:
+          - cr1_reversed-table
+        exercises:
+          - CompoundingRule
+  - word: éîï
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)][ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)][ëêéð(îï)]
+        rules:
+          - cr1_reversed-table
+        exercises:
+          - CompoundingRule
+  - word: îïé
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)][ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)][ëêéð(îï)]
+        rules:
+          - cr1_reversed-table
+        exercises:
+          - CompoundingRule
+  - word: éê
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)][ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)][ëêéð(îï)]
+        rules:
+          - cr1_reversed-table
+        exercises:
+          - CompoundingRule
+  - word: éì
+    note: '[cell reversed-table] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: ééé
+    note: '[cell reversed-table] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: ì
+    note: '[cell reversed-table] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: ê
+    note: '[cell reversed-table] C# returns 1 analysis (ROOT|[ieaá(xy)]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_reversed-table|[ëêéð(îï)]
+        rules: []
+    exercises:
+      - CompoundingRule

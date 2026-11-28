@@ -3,831 +3,1725 @@ requires: []
 fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a
-    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|[aá(xy)ei]"
+      - signature: X_affixes|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: p
-    note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|p"
+      - signature: Y_affixes|p
         rules: []
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: s
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: i
-    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|[aá(xy)ei]"
+      - signature: X_affixes|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aa
-    note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr2"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ap
-    note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr1"]
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr2"]
+      - signature: X_affixes+Y_affixes|[aá(xy)ei]p
+        rules:
+          - cr1_affixes
+      - signature: X_affixes+Y_affixes|[aá(xy)ei]p
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: as
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ai
-    note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr2"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pa
-    note: "C# returns 3 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "Y+X|p[aá(xy)ei]"
-        rules: ["cr1"]
-      - signature: "Y+X|p[aá(xy)ei]"
-        rules: ["cr2"]
+      - signature: Y_affixes+SUF_affixes|p[aá(xy)i]
+        rules:
+          - SUF_affixes
+      - signature: Y_affixes+X_affixes|p[aá(xy)ei]
+        rules:
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes|p[aá(xy)ei]
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pp
-    note: "C# returns 2 analyses (Y|pp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 2 analyses (Y|pp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|pp"
-        rules: ["cr1"]
-      - signature: "Y|pp"
-        rules: ["cr2"]
+      - signature: Y_affixes|pp
+        rules:
+          - cr1_affixes
+      - signature: Y_affixes|pp
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pi
-    note: "C# returns 3 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "Y+X|p[aá(xy)ei]"
-        rules: ["cr1"]
-      - signature: "Y+X|p[aá(xy)ei]"
-        rules: ["cr2"]
+      - signature: Y_affixes+SUF_affixes|p[aá(xy)i]
+        rules:
+          - SUF_affixes
+      - signature: Y_affixes+X_affixes|p[aá(xy)ei]
+        rules:
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes|p[aá(xy)ei]
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sa
-    note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|s[aá(xy)ei]"
-        rules: ["PRE"]
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei]
+        rules:
+          - PRE_affixes
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: sp
-    note: "C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y|sp"
-        rules: ["PRE"]
+      - signature: PRE_affixes+Y_affixes|sp
+        rules:
+          - PRE_affixes
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: si
-    note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|s[aá(xy)ei]"
-        rules: ["PRE"]
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei]
+        rules:
+          - PRE_affixes
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ia
-    note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr2"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ip
-    note: "C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 2 analyses (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr1"]
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr2"]
+      - signature: X_affixes+Y_affixes|[aá(xy)ei]p
+        rules:
+          - cr1_affixes
+      - signature: X_affixes+Y_affixes|[aá(xy)ei]p
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: is
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ii
-    note: "C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr2"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affixes
+      - signature: X_affixes|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aaa
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aap
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes+Y_affixes|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aai
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: apa
-    note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: app
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: api
-    note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: asa
-    note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: X_affixes+PRE_affixes|[aá(xy)ei]s[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: asp
-    note: "C# returns 1 analysis (X+PRE+Y|[aá(xy)ei]sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+PRE+Y|[aá(xy)ei]sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE+Y|[aá(xy)ei]sp"
-        rules: ["PRE", "cr2"]
+      - signature: X_affixes+PRE_affixes+Y_affixes|[aá(xy)ei]sp
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ass
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: asi
-    note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: X_affixes+PRE_affixes|[aá(xy)ei]s[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aia
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aip
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes+Y_affixes|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ais
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aii
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: paa
-    note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: Y_affixes+SUF_affixes+X_affixes|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pap
-    note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]p"
-        rules: ["SUF", "cr1"]
+      - signature: Y_affixes+SUF_affixes|p[aá(xy)i]p
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pai
-    note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: Y_affixes+SUF_affixes+X_affixes|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ppa
-    note: "C# returns 3 analyses (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: Y_affixes+SUF_affixes|pp[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+SUF_affixes|pp[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: Y_affixes+SUF_affixes|pp[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ppp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ppi
-    note: "C# returns 3 analyses (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: Y_affixes+SUF_affixes|pp[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+SUF_affixes|pp[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: Y_affixes+SUF_affixes|pp[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: psa
-    note: "C# returns 1 analysis (Y+PRE+X|ps[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (Y+PRE+X|ps[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+PRE+X|ps[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: Y_affixes+PRE_affixes+X_affixes|ps[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: psp
-    note: "C# returns 1 analysis (Y+PRE|psp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (Y+PRE|psp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+PRE|psp"
-        rules: ["PRE", "cr2"]
+      - signature: Y_affixes+PRE_affixes|psp
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: psi
-    note: "C# returns 1 analysis (Y+PRE+X|ps[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (Y+PRE+X|ps[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+PRE+X|ps[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: Y_affixes+PRE_affixes+X_affixes|ps[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pia
-    note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: Y_affixes+SUF_affixes+X_affixes|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pip
-    note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]p"
-        rules: ["SUF", "cr1"]
+      - signature: Y_affixes+SUF_affixes|p[aá(xy)i]p
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pis
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: pii
-    note: "C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: Y_affixes+SUF_affixes+X_affixes|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: Y_affixes+X_affixes+SUF_affixes|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: saa
-    note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sap
-    note: "C# returns 3 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+Y_affixes|s[aá(xy)ei]p
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes|s[aá(xy)ei]p
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes|s[aá(xy)ei]p
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sai
-    note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: spa
-    note: "C# returns 5 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+Y_affixes+SUF_affixes|sp[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+Y_affixes+SUF_affixes|sp[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+Y_affixes+X_affixes|sp[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+Y_affixes+X_affixes|sp[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+Y_affixes+X_affixes|sp[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: spp
-    note: "C# returns 3 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y|spp"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y|spp"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y|spp"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+Y_affixes|spp
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+Y_affixes|spp
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+Y_affixes|spp
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: spi
-    note: "C# returns 5 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+Y_affixes+SUF_affixes|sp[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+Y_affixes+SUF_affixes|sp[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+Y_affixes+X_affixes|sp[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+Y_affixes+X_affixes|sp[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+Y_affixes+X_affixes|sp[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ssa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ssp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ssi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sia
-    note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sip
-    note: "C# returns 3 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+Y_affixes|s[aá(xy)ei]p
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes|s[aá(xy)ei]p
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes|s[aá(xy)ei]p
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sis
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sii
-    note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iaa
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iap
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes+Y_affixes|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ias
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iai
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ipa
-    note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ipp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ips
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: ipi
-    note: "C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["SUF", "cr2"]
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+Y_affixes+SUF_affixes|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: isa
-    note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: X_affixes+PRE_affixes|[aá(xy)ei]s[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: isp
-    note: "C# returns 1 analysis (X+PRE+Y|[aá(xy)ei]sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+PRE+Y|[aá(xy)ei]sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE+Y|[aá(xy)ei]sp"
-        rules: ["PRE", "cr2"]
+      - signature: X_affixes+PRE_affixes+Y_affixes|[aá(xy)ei]sp
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: isi
-    note: "C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+PRE|[aá(xy)ei]s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE|[aá(xy)ei]s[aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: X_affixes+PRE_affixes|[aá(xy)ei]s[aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iia
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iip
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes+Y_affixes|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iis
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: iii
-    note: "C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 4 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr1"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["SUF", "cr2"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["SUF", "cr1"]
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affixes
+          - cr2_affixes
+      - signature: X_affixes+SUF_affixes|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: saip
-    note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "SUF", "cr1"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes+Y_affixes|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes+Y_affixes|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes+Y_affixes|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sapi
-    note: "C# returns 6 analyses (PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 6 analyses (PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "SUF", "cr2"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "SUF", "cr2"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "SUF", "cr2"]
+      - signature: PRE_affixes+X_affixes+Y_affixes+SUF_affixes|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes+SUF_affixes|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes+SUF_affixes|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes+SUF_affixes|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr2_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes+SUF_affixes|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr2_affixes
+      - signature: PRE_affixes+X_affixes+Y_affixes+SUF_affixes|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: saipi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sapii
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: aipi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: apii
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: paip
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: xy
-    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|[aá(xy)ei]"
+      - signature: X_affixes|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sxyi
-    note: "C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 5 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - cr2_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: saixy
-    note: "C# returns 9 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 9 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF", "cr2"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF", "cr2"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF", "cr2"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["PRE", "SUF", "cr1"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr2_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr2_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr2_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes|s[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
   - word: sxyip
-    note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affixes] C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "SUF", "cr1"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "SUF", "cr1"]
+      - signature: PRE_affixes+X_affixes+SUF_affixes+Y_affixes|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes+Y_affixes|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+X_affixes+SUF_affixes+Y_affixes|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+          - cr1_affixes
     exercises:
-      - "CompoundingRule > several rewrite rules"
+      - CompoundingRule > several rewrite rules
+  - word: b
+    note: '[cell multirule] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jk
+    note: '[cell multirule] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: g
+    note: '[cell multirule] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule|g
+        rules: []
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: '~'
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bb
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bjk
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bg
+    note: '[cell multirule] C# returns 2 analyses (X+Y|[aá(xy)ei]+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr1_multirule
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: b~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkb
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkjk
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkg
+    note: '[cell multirule] C# returns 2 analyses (X+Y|[aá(xy)ei]+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr1_multirule
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jk~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gb
+    note: '[cell multirule] C# returns 2 analyses (Y+X|p+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gjk
+    note: '[cell multirule] C# returns 2 analyses (Y+X|p+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gg
+    note: '[cell multirule] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule|g~?g
+        rules:
+          - cr1_multirule
+      - signature: Y_multirule|g~?g
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: g~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~b
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~jk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~g
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bbb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bbjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bbg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bb~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bjkb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bjkjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bjkg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bjk~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bgb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bgjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bgg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bg~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: b~b
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: b~jk
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: b~g
+    note: '[cell multirule] C# returns 2 analyses (X+Y|[aá(xy)ei]+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr1_multirule
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: b~~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkbb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkbjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkbg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkb~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkjkb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkjkjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkjkg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkjk~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkgb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkgjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkgg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jkg~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jk~b
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jk~jk
+    note: '[cell multirule] C# returns 2 analyses (X|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: X_multirule|[bl(jk)df]~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jk~g
+    note: '[cell multirule] C# returns 2 analyses (X+Y|[aá(xy)ei]+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr1_multirule
+      - signature: X_multirule+Y_multirule|[bl(jk)df]~?g
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: jk~~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gbb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gbjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gbg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gb~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gjkb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gjkjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gjkg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gjk~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ggb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ggjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ggg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gg~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: g~b
+    note: '[cell multirule] C# returns 2 analyses (Y+X|p+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: g~jk
+    note: '[cell multirule] C# returns 2 analyses (Y+X|p+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr1_multirule
+      - signature: Y_multirule+X_multirule|g~?[bl(jk)df]
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: g~g
+    note: '[cell multirule] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_multirule|g~?g
+        rules:
+          - cr1_multirule
+      - signature: Y_multirule|g~?g
+        rules:
+          - cr2_multirule
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: g~~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~bb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~bjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~bg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~b~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~jkb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~jkjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~jkg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~jk~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~gb
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~gjk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~gg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~g~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~~b
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~~jk
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~~g
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: ~~~
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bb~b
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: b~gg
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: gg~b
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules
+  - word: bg~g
+    note: '[cell multirule] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > several rewrite rules

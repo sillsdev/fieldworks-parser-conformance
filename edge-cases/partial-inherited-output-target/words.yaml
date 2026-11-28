@@ -1,73 +1,94 @@
 language: PartialInheritedOutputTarget
 requires:
   - phonology
-fieldworks_producible_notes: Single-valued feature structures and an omitted segment feature, as emitted by HCLoader LoadFeatureStruct and LoadNaturalClass. No multi-valued feature specification is used. The rules for isi and izi write a PhRegularRule structural change that is a natural-class context over the segments s and z, which HCLoader reads through LoadPatternNode and TryLoadSimpleContext; p and b carry a voice value and k does not. No fwdata round-trip witness is claimed.
+fieldworks_producible_notes: Single-valued feature structures and an omitted segment feature, as emitted by HCLoader LoadFeatureStruct and LoadNaturalClass. No multi-valued feature specification is used. The rules for isi and izi write a PhRegularRule structural change that is a natural-class context over the segments s and z, which HCLoader reads through LoadPatternNode and TryLoadSimpleContext; p and b carry a voice value and k does not. No fwdata round-trip witness is claimed. | Single-valued feature structures and an omitted segment feature, as emitted by HCLoader LoadFeatureStruct and LoadNaturalClass. No multi-valued feature specification is used. No fwdata round-trip witness is claimed.
 words:
   - word: asa
-    note: '[cell literal] First output spelling is a positive control.'
+    note: '[cell target] [cell literal] First output spelling is a positive control.'
     parses:
-      - signature: AKA_literal|a[sz]a
+      - signature: AKA_literal_target|a[sz]a
         rules:
-          - prLen_literal
+          - prLen_literal_target
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: aza
-    note: '[cell literal] Second output spelling retains the same root identity in pinned C#.'
+    note: '[cell target] [cell literal] Second output spelling retains the same root identity in pinned C#.'
     parses:
-      - signature: AKA_literal|a[sz]a
+      - signature: AKA_literal_target|a[sz]a
         rules:
-          - prLen_literal
+          - prLen_literal_target
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: aka
-    note: '[cell literal] Obligatory rewrite prevents the unchanged root from surfacing.'
+    note: '[cell target] [cell literal] Obligatory rewrite prevents the unchanged root from surfacing.'
     expect_fail: true
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: isi
-    note: '[cell literal] The new class output is the segment class {s,z}, whose two members differ only on voice, so the class drops voice and leaves the input''s own voice in place. IPI (underlying ipi) parses because p has voice minus, the same as s. IBI does not parse: b has voice plus, so its result is z.'
+    note: '[cell target] [cell literal] The new class output is the segment class {s,z}, whose two members differ only on voice, so the class drops voice and leaves the input''s own voice in place. IPI (underlying ipi) parses because p has voice minus, the same as s. IBI does not parse: b has voice plus, so its result is z.'
     parses:
-      - signature: IPI_literal|isi
+      - signature: IPI_literal_target|isi
         rules:
-          - prSibVoiceless_literal
+          - prSibVoiceless_literal_target
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: izi
-    note: '[cell literal] The other half of the pair. IBI parses because b has voice plus, the same as z. IPI does not parse. The class does not choose a member: it takes the member the input already agrees with. Only a segment with no voice value, the k of aka above, accepts both.'
+    note: '[cell target] [cell literal] The other half of the pair. IBI parses because b has voice plus, the same as z. IPI does not parse. The class does not choose a member: it takes the member the input already agrees with. Only a segment with no voice value, the k of aka above, accepts both.'
     parses:
-      - signature: IBI_literal|izi
+      - signature: IBI_literal_target|izi
         rules:
-          - prSibVoiced_literal
+          - prSibVoiced_literal_target
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: ipi
-    note: '[cell literal] IPI''s own underlying shape is not a surface form, because the rule is obligatory between vowels.'
+    note: '[cell target] [cell literal] IPI''s own underlying shape is not a surface form, because the rule is obligatory between vowels.'
     expect_fail: true
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: ibi
-    note: '[cell literal] IBI''s own underlying shape is not a surface form, because the rule is obligatory between vowels.'
+    note: '[cell target] [cell literal] IBI''s own underlying shape is not a surface form, because the rule is obligatory between vowels.'
     expect_fail: true
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: ege
-    note: '[cell singleton] First output spelling is a positive control.'
+    note: '[cell target] [cell singleton] First output spelling is a positive control.'
     parses:
-      - signature: AKA_singleton|e[gf]e
+      - signature: AKA_singleton_target|e[gf]e
         rules:
-          - prLen_singleton
+          - prLen_singleton_target
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: efe
-    note: '[cell singleton] Second output spelling retains the same root identity in pinned C#.'
+    note: '[cell target] [cell singleton] Second output spelling retains the same root identity in pinned C#.'
     parses:
-      - signature: AKA_singleton|e[gf]e
+      - signature: AKA_singleton_target|e[gf]e
         rules:
-          - prLen_singleton
+          - prLen_singleton_target
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
   - word: eue
-    note: '[cell singleton] Obligatory rewrite prevents the unchanged root from surfacing.'
+    note: '[cell target] [cell singleton] Obligatory rewrite prevents the unchanged root from surfacing.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
+  - word: hmh
+    note: '[cell feature] First output spelling is a positive control.'
+    parses:
+      - signature: AKA_feature|h[mq]h
+        rules:
+          - prLen_feature
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
+  - word: hqh
+    note: '[cell feature] Second output spelling retains the same root identity in pinned C#.'
+    parses:
+      - signature: AKA_feature|h[mq]h
+        rules:
+          - prLen_feature
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
+  - word: hlh
+    note: '[cell feature] Obligatory rewrite prevents the unchanged root from surfacing.'
     expect_fail: true
     exercises:
       - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > inherited output feature
