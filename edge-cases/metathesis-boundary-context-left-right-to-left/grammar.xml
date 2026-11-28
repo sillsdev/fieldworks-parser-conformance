@@ -4,56 +4,166 @@
   <Language>
     <Name>MetathesisBoundaryContextLeftRightToLeft</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_left-right-to-left">
+        <Name>V_left-right-to-left</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_right">
+        <Name>V_right</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_segments">
+        <Name>V_segments</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_left-right-to-left">
+        <Name>f_left-right-to-left</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_left-right-to-left">+</Symbol>
+          <Symbol id="fM_left-right-to-left">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_left-right-to-left">
+        <Name>g_left-right-to-left</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_left-right-to-left">+</Symbol>
+          <Symbol id="gM_left-right-to-left">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_right">
+        <Name>f_right</Name>
+        <Symbols>
+          <Symbol id="fP_right">+</Symbol>
+          <Symbol id="fM_right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_right">
+        <Name>g_right</Name>
+        <Symbols>
+          <Symbol id="gP_right">+</Symbol>
+          <Symbol id="gM_right">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_segments">
+        <Name>f_segments</Name>
+        <Symbols>
+          <Symbol id="fP_segments">+</Symbol>
+          <Symbol id="fM_segments">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_segments">
+        <Name>g_segments</Name>
+        <Symbols>
+          <Symbol id="gP_segments">+</Symbol>
+          <Symbol id="gM_segments">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_left-right-to-left">cell left-right-to-left</Symbol>
+          <Symbol id="cell_right">cell right</Symbol>
+          <Symbol id="cell_segments">cell segments</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_left-right-to-left">
+      <Name>Main_left-right-to-left</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_left-right-to-left">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_left-right-to-left" symbolValues="fP_left-right-to-left"/>
+          <FeatureValue feature="g_left-right-to-left" symbolValues="gP_left-right-to-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_left-right-to-left">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_left-right-to-left" symbolValues="fM_left-right-to-left"/>
+          <FeatureValue feature="g_left-right-to-left" symbolValues="gM_left-right-to-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_left-right-to-left">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_left-right-to-left" symbolValues="fM_left-right-to-left"/>
+          <FeatureValue feature="g_left-right-to-left" symbolValues="gP_left-right-to-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_left-right-to-left">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_left-right-to-left" symbolValues="fP_left-right-to-left"/>
+          <FeatureValue feature="g_left-right-to-left" symbolValues="gM_left-right-to-left"/>
+          <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_right">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_right" symbolValues="fP_right"/>
+          <FeatureValue feature="g_right" symbolValues="gP_right"/>
+          <FeatureValue feature="cell" symbolValues="cell_right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_right">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_right" symbolValues="fM_right"/>
+          <FeatureValue feature="g_right" symbolValues="gM_right"/>
+          <FeatureValue feature="cell" symbolValues="cell_right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_right">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_right" symbolValues="fM_right"/>
+          <FeatureValue feature="g_right" symbolValues="gP_right"/>
+          <FeatureValue feature="cell" symbolValues="cell_right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_right">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_right" symbolValues="fP_right"/>
+          <FeatureValue feature="g_right" symbolValues="gM_right"/>
+          <FeatureValue feature="cell" symbolValues="cell_right"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_segments">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_segments" symbolValues="fP_segments"/>
+          <FeatureValue feature="g_segments" symbolValues="gP_segments"/>
+          <FeatureValue feature="cell" symbolValues="cell_segments"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_segments">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="f_segments" symbolValues="fM_segments"/>
+          <FeatureValue feature="g_segments" symbolValues="gM_segments"/>
+          <FeatureValue feature="cell" symbolValues="cell_segments"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_segments">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="f_segments" symbolValues="fM_segments"/>
+          <FeatureValue feature="g_segments" symbolValues="gP_segments"/>
+          <FeatureValue feature="cell" symbolValues="cell_segments"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_segments">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="f_segments" symbolValues="fP_segments"/>
+          <FeatureValue feature="g_segments" symbolValues="gM_segments"/>
+          <FeatureValue feature="cell" symbolValues="cell_segments"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -65,22 +175,173 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_left-right-to-left">
+        <Name>Any_left-right-to-left</Name>
+        <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
       </FeatureNaturalClass>
-    <FeatureNaturalClass id="T"><Name>T</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="P"><Name>P</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="Sx"><Name>Sx</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="A"><Name>A</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass></NaturalClasses>
-    <PhonologicalRuleDefinitions><MetathesisRule id="pr1" multipleApplicationOrder="rightToLeftIterative" leftSwitch="swB" rightSwitch="swA"><Name>m</Name><StructuralDescription><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="A" /><SimpleContext id="swA" naturalClass="Sx" /><SimpleContext id="swB" naturalClass="T" /></PhoneticSequence></PhoneticTemplate></StructuralDescription></MetathesisRule></PhonologicalRuleDefinitions><Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="PRE" phonologicalRules="pr1">
-        <Name>Main</Name>
+      <FeatureNaturalClass id="T_left-right-to-left">
+        <Name>T_left-right-to-left</Name>
+        <FeatureValue feature="f_left-right-to-left" symbolValues="fM_left-right-to-left"/>
+        <FeatureValue feature="g_left-right-to-left" symbolValues="gP_left-right-to-left"/>
+        <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_left-right-to-left">
+        <Name>P_left-right-to-left</Name>
+        <FeatureValue feature="f_left-right-to-left" symbolValues="fM_left-right-to-left"/>
+        <FeatureValue feature="g_left-right-to-left" symbolValues="gM_left-right-to-left"/>
+        <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_left-right-to-left">
+        <Name>Sx_left-right-to-left</Name>
+        <FeatureValue feature="f_left-right-to-left" symbolValues="fP_left-right-to-left"/>
+        <FeatureValue feature="g_left-right-to-left" symbolValues="gM_left-right-to-left"/>
+        <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_left-right-to-left">
+        <Name>A_left-right-to-left</Name>
+        <FeatureValue feature="f_left-right-to-left" symbolValues="fP_left-right-to-left"/>
+        <FeatureValue feature="g_left-right-to-left" symbolValues="gP_left-right-to-left"/>
+        <FeatureValue feature="cell" symbolValues="cell_left-right-to-left"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_right">
+        <Name>Any_right</Name>
+        <FeatureValue feature="cell" symbolValues="cell_right"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_right">
+        <Name>T_right</Name>
+        <FeatureValue feature="f_right" symbolValues="fM_right"/>
+        <FeatureValue feature="g_right" symbolValues="gP_right"/>
+        <FeatureValue feature="cell" symbolValues="cell_right"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_right">
+        <Name>P_right</Name>
+        <FeatureValue feature="f_right" symbolValues="fM_right"/>
+        <FeatureValue feature="g_right" symbolValues="gM_right"/>
+        <FeatureValue feature="cell" symbolValues="cell_right"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_right">
+        <Name>Sx_right</Name>
+        <FeatureValue feature="f_right" symbolValues="fP_right"/>
+        <FeatureValue feature="g_right" symbolValues="gM_right"/>
+        <FeatureValue feature="cell" symbolValues="cell_right"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_right">
+        <Name>A_right</Name>
+        <FeatureValue feature="f_right" symbolValues="fP_right"/>
+        <FeatureValue feature="g_right" symbolValues="gP_right"/>
+        <FeatureValue feature="cell" symbolValues="cell_right"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_segments">
+        <Name>Any_segments</Name>
+        <FeatureValue feature="cell" symbolValues="cell_segments"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_segments">
+        <Name>T_segments</Name>
+        <FeatureValue feature="f_segments" symbolValues="fM_segments"/>
+        <FeatureValue feature="g_segments" symbolValues="gP_segments"/>
+        <FeatureValue feature="cell" symbolValues="cell_segments"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_segments">
+        <Name>P_segments</Name>
+        <FeatureValue feature="f_segments" symbolValues="fM_segments"/>
+        <FeatureValue feature="g_segments" symbolValues="gM_segments"/>
+        <FeatureValue feature="cell" symbolValues="cell_segments"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_segments">
+        <Name>Sx_segments</Name>
+        <FeatureValue feature="f_segments" symbolValues="fP_segments"/>
+        <FeatureValue feature="g_segments" symbolValues="gM_segments"/>
+        <FeatureValue feature="cell" symbolValues="cell_segments"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="A_segments">
+        <Name>A_segments</Name>
+        <FeatureValue feature="f_segments" symbolValues="fP_segments"/>
+        <FeatureValue feature="g_segments" symbolValues="gP_segments"/>
+        <FeatureValue feature="cell" symbolValues="cell_segments"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="scS_segments">
+        <Name>scS_segments</Name>
+        <Segment segment="cS_segments"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scT_segments">
+        <Name>scT_segments</Name>
+        <Segment segment="cT_segments"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scA_segments">
+        <Name>scA_segments</Name>
+        <Segment segment="cA_segments"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scSA_segments">
+        <Name>scSA_segments</Name>
+        <Segment segment="cS_segments"/>
+        <Segment segment="cA_segments"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scTA_segments">
+        <Name>scTA_segments</Name>
+        <Segment segment="cT_segments"/>
+        <Segment segment="cA_segments"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scST_segments">
+        <Name>scST_segments</Name>
+        <Segment segment="cS_segments"/>
+        <Segment segment="cT_segments"/>
+      </SegmentNaturalClass>
+      <SegmentNaturalClass id="scPx_segments">
+        <Name>scPx_segments</Name>
+        <Segment segment="cP_segments"/>
+      </SegmentNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <MetathesisRule id="pr1_left-right-to-left" multipleApplicationOrder="rightToLeftIterative" leftSwitch="swB_left-right-to-left" rightSwitch="swA_left-right-to-left">
+        <Name>m_left-right-to-left</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext naturalClass="A_left-right-to-left"/>
+              <SimpleContext id="swA_left-right-to-left" naturalClass="Sx_left-right-to-left"/>
+              <SimpleContext id="swB_left-right-to-left" naturalClass="T_left-right-to-left"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <MetathesisRule id="pr1_right" leftSwitch="swB_right" rightSwitch="swA_right">
+        <Name>m_right</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="swA_right" naturalClass="Sx_right"/>
+              <SimpleContext id="swB_right" naturalClass="T_right"/>
+              <SimpleContext naturalClass="A_right"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <MetathesisRule id="pr1_segments" leftSwitch="pr1n1_segments" rightSwitch="pr1n0_segments">
+        <Name>pr1_segments</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="pr1n0_segments" naturalClass="scS_segments"/>
+              <SimpleContext id="pr1n1_segments" naturalClass="scT_segments"/>
+              <SimpleContext id="pr1n2_segments" naturalClass="scA_segments"/>
+              <SimpleContext id="pr1n3_segments" naturalClass="scPx_segments"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="t_left-right-to-left" morphologicalRuleOrder="unordered" morphologicalRules="PRE_left-right-to-left SUF_right SUF0_segments SUF1_segments SUF2_segments" phonologicalRules="pr1_left-right-to-left pr1_right pr1_segments">
+        <Name>Main_left-right-to-left</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="PRE" requiredPartsOfSpeech="v">
-            <Name>PRE</Name>
+          <MorphologicalRule id="PRE_left-right-to-left" requiredPartsOfSpeech="v_left-right-to-left">
+            <Name>PRE_left-right-to-left</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE0">
+              <MorphologicalSubrule id="PRE0_left-right-to-left">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES">
+                  <PhoneticSequence id="PRES_left-right-to-left">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_left-right-to-left"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -88,37 +349,161 @@
                   <InsertSegments>
                     <PhoneticShape>a+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="PRES" />
+                  <CopyFromInput index="PRES_left-right-to-left"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE</MorphemeId>
+            <MorphemeId>PRE_left-right-to-left</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SUF_right" requiredPartsOfSpeech="v_right">
+            <Name>SUF_right</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF0_right">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUFS_right">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_right"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUFS_right"/>
+                  <InsertSegments>
+                    <PhoneticShape>+b</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF_right</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SUF0_segments" requiredPartsOfSpeech="v_segments">
+            <Name>SUF0_segments</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF00_segments">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUF0S_segments">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_segments"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUF0S_segments"/>
+                  <InsertSegments>
+                    <PhoneticShape>+h</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF0_segments</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SUF1_segments" requiredPartsOfSpeech="v_segments">
+            <Name>SUF1_segments</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF10_segments">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUF1S_segments">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_segments"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUF1S_segments"/>
+                  <InsertSegments>
+                    <PhoneticShape>+j</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF1_segments</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SUF2_segments" requiredPartsOfSpeech="v_segments">
+            <Name>SUF2_segments</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF20_segments">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUF2S_segments">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_segments"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUF2S_segments"/>
+                  <InsertSegments>
+                    <PhoneticShape>+hj</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF2_segments</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x" partOfSpeech="v">
+          <LexicalEntry id="x_left-right-to-left" partOfSpeech="v_left-right-to-left">
             <Allomorphs>
-              <Allomorph id="x0">
+              <Allomorph id="x0_left-right-to-left">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X</MorphemeId>
+            <MorphemeId>X_left-right-to-left</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_left-right-to-left" partOfSpeech="v_left-right-to-left">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_left-right-to-left">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_left-right-to-left</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_left-right-to-left" partOfSpeech="v_left-right-to-left">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_left-right-to-left">
                 <PhoneticShape>st</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_left-right-to-left</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_right" partOfSpeech="v_right">
+            <Allomorphs>
+              <Allomorph id="x0_right">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_right</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_right" partOfSpeech="v_right">
+            <Allomorphs>
+              <Allomorph id="y0_right">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_right</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_right" partOfSpeech="v_right">
+            <Allomorphs>
+              <Allomorph id="z0_right">
+                <PhoneticShape>fg</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_right</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r0_segments" partOfSpeech="v_segments">
+            <Allomorphs>
+              <Allomorph id="r0a_segments">
+                <PhoneticShape>kl</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R0_segments</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="r1_segments" partOfSpeech="v_segments">
+            <Allomorphs>
+              <Allomorph id="r1a_segments">
+                <PhoneticShape>jkl</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>R1_segments</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
