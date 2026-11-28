@@ -4,118 +4,247 @@
   <Language>
     <Name>SpellingCompoundDepthPrefixZone</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v_prefix-zone">
-        <Name>V_prefix-zone</Name>
+      <PartOfSpeech id="v_prefix-zone_prefix-zone">
+        <Name>V_prefix-zone_prefix-zone</Name>
       </PartOfSpeech>
-      <PartOfSpeech id="v_reordered-prefix">
-        <Name>V_reordered-prefix</Name>
+      <PartOfSpeech id="v_reordered-prefix_prefix-zone">
+        <Name>V_reordered-prefix_prefix-zone</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_depth3_depth3">
+        <Name>V_depth3_depth3</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_singleton_depth3">
+        <Name>V_singleton_depth3</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f_prefix-zone">
-        <Name>f_prefix-zone</Name>
+      <SymbolicFeature id="f_prefix-zone_prefix-zone">
+        <Name>f_prefix-zone_prefix-zone</Name>
         <Symbols>
-          <Symbol id="fP_prefix-zone">+</Symbol>
-          <Symbol id="fM_prefix-zone">-</Symbol>
+          <Symbol id="fP_prefix-zone_prefix-zone">+</Symbol>
+          <Symbol id="fM_prefix-zone_prefix-zone">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g_prefix-zone">
-        <Name>g_prefix-zone</Name>
+      <SymbolicFeature id="g_prefix-zone_prefix-zone">
+        <Name>g_prefix-zone_prefix-zone</Name>
         <Symbols>
-          <Symbol id="gP_prefix-zone">+</Symbol>
-          <Symbol id="gM_prefix-zone">-</Symbol>
+          <Symbol id="gP_prefix-zone_prefix-zone">+</Symbol>
+          <Symbol id="gM_prefix-zone_prefix-zone">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="f_reordered-prefix">
-        <Name>f_reordered-prefix</Name>
+      <SymbolicFeature id="f_reordered-prefix_prefix-zone">
+        <Name>f_reordered-prefix_prefix-zone</Name>
         <Symbols>
-          <Symbol id="fP_reordered-prefix">+</Symbol>
-          <Symbol id="fM_reordered-prefix">-</Symbol>
+          <Symbol id="fP_reordered-prefix_prefix-zone">+</Symbol>
+          <Symbol id="fM_reordered-prefix_prefix-zone">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g_reordered-prefix">
-        <Name>g_reordered-prefix</Name>
+      <SymbolicFeature id="g_reordered-prefix_prefix-zone">
+        <Name>g_reordered-prefix_prefix-zone</Name>
         <Symbols>
-          <Symbol id="gP_reordered-prefix">+</Symbol>
-          <Symbol id="gM_reordered-prefix">-</Symbol>
+          <Symbol id="gP_reordered-prefix_prefix-zone">+</Symbol>
+          <Symbol id="gM_reordered-prefix_prefix-zone">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="cell">
-        <Name>cell</Name>
+      <SymbolicFeature id="cell_prefix-zone">
+        <Name>cell_prefix-zone</Name>
         <Symbols>
-          <Symbol id="cell_prefix-zone">cell prefix-zone</Symbol>
-          <Symbol id="cell_reordered-prefix">cell reordered-prefix</Symbol>
+          <Symbol id="cell_prefix-zone_prefix-zone">cell prefix-zone</Symbol>
+          <Symbol id="cell_reordered-prefix_prefix-zone">cell reordered-prefix</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_depth3_depth3">
+        <Name>f_depth3_depth3</Name>
+        <Symbols>
+          <Symbol id="fP_depth3_depth3">+</Symbol>
+          <Symbol id="fM_depth3_depth3">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_depth3_depth3">
+        <Name>g_depth3_depth3</Name>
+        <Symbols>
+          <Symbol id="gP_depth3_depth3">+</Symbol>
+          <Symbol id="gM_depth3_depth3">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_singleton_depth3">
+        <Name>f_singleton_depth3</Name>
+        <Symbols>
+          <Symbol id="fP_singleton_depth3">+</Symbol>
+          <Symbol id="fM_singleton_depth3">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_singleton_depth3">
+        <Name>g_singleton_depth3</Name>
+        <Symbols>
+          <Symbol id="gP_singleton_depth3">+</Symbol>
+          <Symbol id="gM_singleton_depth3">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell_depth3">
+        <Name>cell_depth3</Name>
+        <Symbols>
+          <Symbol id="cell_depth3_depth3">cell depth3</Symbol>
+          <Symbol id="cell_singleton_depth3">cell singleton</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="outercell">
+        <Name>outercell</Name>
+        <Symbols>
+          <Symbol id="outercell_prefix-zone">outercell prefix-zone</Symbol>
+          <Symbol id="outercell_depth3">outercell depth3</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t_prefix-zone">
-      <Name>Main_prefix-zone</Name>
+    <CharacterDefinitionTable id="t_prefix-zone_prefix-zone">
+      <Name>Main_prefix-zone_prefix-zone</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA_prefix-zone">
+        <SegmentDefinition id="cA_prefix-zone_prefix-zone">
           <Representations>
             <Representation>a</Representation>
             <Representation>á</Representation>
           </Representations>
-          <FeatureValue feature="f_prefix-zone" symbolValues="fP_prefix-zone"/>
-          <FeatureValue feature="g_prefix-zone" symbolValues="gP_prefix-zone"/>
-          <FeatureValue feature="cell" symbolValues="cell_prefix-zone"/>
+          <FeatureValue feature="f_prefix-zone_prefix-zone" symbolValues="fP_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="g_prefix-zone_prefix-zone" symbolValues="gP_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP_prefix-zone">
+        <SegmentDefinition id="cP_prefix-zone_prefix-zone">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f_prefix-zone" symbolValues="fM_prefix-zone"/>
-          <FeatureValue feature="g_prefix-zone" symbolValues="gM_prefix-zone"/>
-          <FeatureValue feature="cell" symbolValues="cell_prefix-zone"/>
+          <FeatureValue feature="f_prefix-zone_prefix-zone" symbolValues="fM_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="g_prefix-zone_prefix-zone" symbolValues="gM_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT_prefix-zone">
+        <SegmentDefinition id="cT_prefix-zone_prefix-zone">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f_prefix-zone" symbolValues="fM_prefix-zone"/>
-          <FeatureValue feature="g_prefix-zone" symbolValues="gP_prefix-zone"/>
-          <FeatureValue feature="cell" symbolValues="cell_prefix-zone"/>
+          <FeatureValue feature="f_prefix-zone_prefix-zone" symbolValues="fM_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="g_prefix-zone_prefix-zone" symbolValues="gP_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS_prefix-zone">
+        <SegmentDefinition id="cS_prefix-zone_prefix-zone">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f_prefix-zone" symbolValues="fP_prefix-zone"/>
-          <FeatureValue feature="g_prefix-zone" symbolValues="gM_prefix-zone"/>
-          <FeatureValue feature="cell" symbolValues="cell_prefix-zone"/>
+          <FeatureValue feature="f_prefix-zone_prefix-zone" symbolValues="fP_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="g_prefix-zone_prefix-zone" symbolValues="gM_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_prefix-zone_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cA_reordered-prefix">
+        <SegmentDefinition id="cA_reordered-prefix_prefix-zone">
           <Representations>
             <Representation>b</Representation>
             <Representation>h</Representation>
           </Representations>
-          <FeatureValue feature="f_reordered-prefix" symbolValues="fP_reordered-prefix"/>
-          <FeatureValue feature="g_reordered-prefix" symbolValues="gP_reordered-prefix"/>
-          <FeatureValue feature="cell" symbolValues="cell_reordered-prefix"/>
+          <FeatureValue feature="f_reordered-prefix_prefix-zone" symbolValues="fP_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="g_reordered-prefix_prefix-zone" symbolValues="gP_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP_reordered-prefix">
+        <SegmentDefinition id="cP_reordered-prefix_prefix-zone">
           <Representations>
             <Representation>d</Representation>
           </Representations>
-          <FeatureValue feature="f_reordered-prefix" symbolValues="fM_reordered-prefix"/>
-          <FeatureValue feature="g_reordered-prefix" symbolValues="gM_reordered-prefix"/>
-          <FeatureValue feature="cell" symbolValues="cell_reordered-prefix"/>
+          <FeatureValue feature="f_reordered-prefix_prefix-zone" symbolValues="fM_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="g_reordered-prefix_prefix-zone" symbolValues="gM_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT_reordered-prefix">
+        <SegmentDefinition id="cT_reordered-prefix_prefix-zone">
           <Representations>
             <Representation>g</Representation>
           </Representations>
-          <FeatureValue feature="f_reordered-prefix" symbolValues="fM_reordered-prefix"/>
-          <FeatureValue feature="g_reordered-prefix" symbolValues="gP_reordered-prefix"/>
-          <FeatureValue feature="cell" symbolValues="cell_reordered-prefix"/>
+          <FeatureValue feature="f_reordered-prefix_prefix-zone" symbolValues="fM_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="g_reordered-prefix_prefix-zone" symbolValues="gP_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS_reordered-prefix">
+        <SegmentDefinition id="cS_reordered-prefix_prefix-zone">
           <Representations>
             <Representation>f</Representation>
           </Representations>
-          <FeatureValue feature="f_reordered-prefix" symbolValues="fP_reordered-prefix"/>
-          <FeatureValue feature="g_reordered-prefix" symbolValues="gM_reordered-prefix"/>
-          <FeatureValue feature="cell" symbolValues="cell_reordered-prefix"/>
+          <FeatureValue feature="f_reordered-prefix_prefix-zone" symbolValues="fP_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="g_reordered-prefix_prefix-zone" symbolValues="gM_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="cell_prefix-zone" symbolValues="cell_reordered-prefix_prefix-zone"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_depth3_depth3">
+          <Representations>
+            <Representation>j</Representation>
+            <Representation>v</Representation>
+          </Representations>
+          <FeatureValue feature="f_depth3_depth3" symbolValues="fP_depth3_depth3"/>
+          <FeatureValue feature="g_depth3_depth3" symbolValues="gP_depth3_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_depth3_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_depth3_depth3">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="f_depth3_depth3" symbolValues="fM_depth3_depth3"/>
+          <FeatureValue feature="g_depth3_depth3" symbolValues="gM_depth3_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_depth3_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_depth3_depth3">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="f_depth3_depth3" symbolValues="fM_depth3_depth3"/>
+          <FeatureValue feature="g_depth3_depth3" symbolValues="gP_depth3_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_depth3_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_depth3_depth3">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="f_depth3_depth3" symbolValues="fP_depth3_depth3"/>
+          <FeatureValue feature="g_depth3_depth3" symbolValues="gM_depth3_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_depth3_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_singleton_depth3">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton_depth3" symbolValues="fP_singleton_depth3"/>
+          <FeatureValue feature="g_singleton_depth3" symbolValues="gP_singleton_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_singleton_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_singleton_depth3">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton_depth3" symbolValues="fM_singleton_depth3"/>
+          <FeatureValue feature="g_singleton_depth3" symbolValues="gM_singleton_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_singleton_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_singleton_depth3">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton_depth3" symbolValues="fM_singleton_depth3"/>
+          <FeatureValue feature="g_singleton_depth3" symbolValues="gP_singleton_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_singleton_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_singleton_depth3">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton_depth3" symbolValues="fP_singleton_depth3"/>
+          <FeatureValue feature="g_singleton_depth3" symbolValues="gM_singleton_depth3"/>
+          <FeatureValue feature="cell_depth3" symbolValues="cell_singleton_depth3"/>
+          <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -129,98 +258,110 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any_prefix-zone">
-        <Name>Any_prefix-zone</Name>
-        <FeatureValue feature="cell" symbolValues="cell_prefix-zone"/>
+      <FeatureNaturalClass id="any_prefix-zone_prefix-zone">
+        <Name>Any_prefix-zone_prefix-zone</Name>
+        <FeatureValue feature="cell_prefix-zone" symbolValues="cell_prefix-zone_prefix-zone"/>
+        <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
       </FeatureNaturalClass>
-      <FeatureNaturalClass id="any_reordered-prefix">
-        <Name>Any_reordered-prefix</Name>
-        <FeatureValue feature="cell" symbolValues="cell_reordered-prefix"/>
+      <FeatureNaturalClass id="any_reordered-prefix_prefix-zone">
+        <Name>Any_reordered-prefix_prefix-zone</Name>
+        <FeatureValue feature="cell_prefix-zone" symbolValues="cell_reordered-prefix_prefix-zone"/>
+        <FeatureValue feature="outercell" symbolValues="outercell_prefix-zone"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_depth3_depth3">
+        <Name>Any_depth3_depth3</Name>
+        <FeatureValue feature="cell_depth3" symbolValues="cell_depth3_depth3"/>
+        <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_singleton_depth3">
+        <Name>Any_singleton_depth3</Name>
+        <FeatureValue feature="cell_depth3" symbolValues="cell_singleton_depth3"/>
+        <FeatureValue feature="outercell" symbolValues="outercell_depth3"/>
       </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t_prefix-zone" morphologicalRuleOrder="unordered" morphologicalRules="cr1_prefix-zone cr2_prefix-zone PRE_prefix-zone cr1_reordered-prefix cr2_reordered-prefix PRE_reordered-prefix">
-        <Name>Main_prefix-zone</Name>
+      <Stratum characterDefinitionTable="t_prefix-zone_prefix-zone" morphologicalRuleOrder="unordered" morphologicalRules="cr1_prefix-zone_prefix-zone cr2_prefix-zone_prefix-zone PRE_prefix-zone_prefix-zone cr1_reordered-prefix_prefix-zone cr2_reordered-prefix_prefix-zone PRE_reordered-prefix_prefix-zone cr1_depth3_depth3 cr2_depth3_depth3 PRE_depth3_depth3 cr1_singleton_depth3 cr2_singleton_depth3 PRE_singleton_depth3">
+        <Name>Main_prefix-zone_prefix-zone</Name>
         <MorphologicalRuleDefinitions>
-          <CompoundingRule id="cr1_prefix-zone">
-            <Name>cr1_prefix-zone</Name>
+          <CompoundingRule id="cr1_prefix-zone_prefix-zone">
+            <Name>cr1_prefix-zone_prefix-zone</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0_prefix-zone">
+                  <PhoneticSequence id="cr1h0_prefix-zone_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_prefix-zone"/>
+                      <SimpleContext naturalClass="any_prefix-zone_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0_prefix-zone">
+                  <PhoneticSequence id="cr1n0_prefix-zone_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_prefix-zone"/>
+                      <SimpleContext naturalClass="any_prefix-zone_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0_prefix-zone"/>
+                  <CopyFromInput index="cr1h0_prefix-zone_prefix-zone"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr1n0_prefix-zone"/>
+                  <CopyFromInput index="cr1n0_prefix-zone_prefix-zone"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <CompoundingRule id="cr2_prefix-zone">
-            <Name>cr2_prefix-zone</Name>
+          <CompoundingRule id="cr2_prefix-zone_prefix-zone">
+            <Name>cr2_prefix-zone_prefix-zone</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr2h0_prefix-zone">
+                  <PhoneticSequence id="cr2h0_prefix-zone_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_prefix-zone"/>
+                      <SimpleContext naturalClass="any_prefix-zone_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr2n0_prefix-zone">
+                  <PhoneticSequence id="cr2n0_prefix-zone_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_prefix-zone"/>
+                      <SimpleContext naturalClass="any_prefix-zone_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr2n0_prefix-zone"/>
+                  <CopyFromInput index="cr2n0_prefix-zone_prefix-zone"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr2h0_prefix-zone"/>
+                  <CopyFromInput index="cr2h0_prefix-zone_prefix-zone"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <MorphologicalRule id="PRE_prefix-zone" requiredPartsOfSpeech="v_prefix-zone">
-            <Name>PRE_prefix-zone</Name>
+          <MorphologicalRule id="PRE_prefix-zone_prefix-zone" requiredPartsOfSpeech="v_prefix-zone_prefix-zone">
+            <Name>PRE_prefix-zone_prefix-zone</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE1_prefix-zone">
+              <MorphologicalSubrule id="PRE1_prefix-zone_prefix-zone">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES1_prefix-zone">
+                  <PhoneticSequence id="PRES1_prefix-zone_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_prefix-zone"/>
+                      <SimpleContext naturalClass="any_prefix-zone_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="PRES1_prefix-zone"/>
+                  <CopyFromInput index="PRES1_prefix-zone_prefix-zone"/>
                   <InsertSegments>
                     <PhoneticShape>s</PhoneticShape>
                   </InsertSegments>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
-              <MorphologicalSubrule id="PRE0_prefix-zone">
+              <MorphologicalSubrule id="PRE0_prefix-zone_prefix-zone">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES_prefix-zone">
+                  <PhoneticSequence id="PRES_prefix-zone_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_prefix-zone"/>
+                      <SimpleContext naturalClass="any_prefix-zone_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -228,140 +369,336 @@
                   <InsertSegments>
                     <PhoneticShape>s</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="PRES_prefix-zone"/>
+                  <CopyFromInput index="PRES_prefix-zone_prefix-zone"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE_prefix-zone</MorphemeId>
+            <MorphemeId>PRE_prefix-zone_prefix-zone</MorphemeId>
           </MorphologicalRule>
-          <CompoundingRule id="cr1_reordered-prefix">
-            <Name>cr1_reordered-prefix</Name>
+          <CompoundingRule id="cr1_reordered-prefix_prefix-zone">
+            <Name>cr1_reordered-prefix_prefix-zone</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0_reordered-prefix">
+                  <PhoneticSequence id="cr1h0_reordered-prefix_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_reordered-prefix"/>
+                      <SimpleContext naturalClass="any_reordered-prefix_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0_reordered-prefix">
+                  <PhoneticSequence id="cr1n0_reordered-prefix_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_reordered-prefix"/>
+                      <SimpleContext naturalClass="any_reordered-prefix_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0_reordered-prefix"/>
+                  <CopyFromInput index="cr1h0_reordered-prefix_prefix-zone"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr1n0_reordered-prefix"/>
+                  <CopyFromInput index="cr1n0_reordered-prefix_prefix-zone"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <CompoundingRule id="cr2_reordered-prefix">
-            <Name>cr2_reordered-prefix</Name>
+          <CompoundingRule id="cr2_reordered-prefix_prefix-zone">
+            <Name>cr2_reordered-prefix_prefix-zone</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr2h0_reordered-prefix">
+                  <PhoneticSequence id="cr2h0_reordered-prefix_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_reordered-prefix"/>
+                      <SimpleContext naturalClass="any_reordered-prefix_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr2n0_reordered-prefix">
+                  <PhoneticSequence id="cr2n0_reordered-prefix_prefix-zone">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any_reordered-prefix"/>
+                      <SimpleContext naturalClass="any_reordered-prefix_prefix-zone"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr2n0_reordered-prefix"/>
+                  <CopyFromInput index="cr2n0_reordered-prefix_prefix-zone"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr2h0_reordered-prefix"/>
+                  <CopyFromInput index="cr2h0_reordered-prefix_prefix-zone"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <MorphologicalRule id="PRE_reordered-prefix" requiredPartsOfSpeech="v_reordered-prefix">
-            <Name>PRE_reordered-prefix</Name>
+          <MorphologicalRule id="PRE_reordered-prefix_prefix-zone" requiredPartsOfSpeech="v_reordered-prefix_prefix-zone">
+            <Name>PRE_reordered-prefix_prefix-zone</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE0_reordered-prefix">
+              <MorphologicalSubrule id="PRE0_reordered-prefix_prefix-zone">
                 <MorphologicalInput>
-                  <PhoneticSequence id="S1_reordered-prefix">
-                    <SimpleContext naturalClass="any_reordered-prefix"/>
+                  <PhoneticSequence id="S1_reordered-prefix_prefix-zone">
+                    <SimpleContext naturalClass="any_reordered-prefix_prefix-zone"/>
                   </PhoneticSequence>
-                  <PhoneticSequence id="S2_reordered-prefix">
-                    <SimpleContext naturalClass="any_reordered-prefix"/>
+                  <PhoneticSequence id="S2_reordered-prefix_prefix-zone">
+                    <SimpleContext naturalClass="any_reordered-prefix_prefix-zone"/>
                   </PhoneticSequence>
                 </MorphologicalInput>
                 <MorphologicalOutput>
                   <InsertSegments>
                     <PhoneticShape>f</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="S2_reordered-prefix"/>
-                  <CopyFromInput index="S1_reordered-prefix"/>
+                  <CopyFromInput index="S2_reordered-prefix_prefix-zone"/>
+                  <CopyFromInput index="S1_reordered-prefix_prefix-zone"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE_reordered-prefix</MorphemeId>
+            <MorphemeId>PRE_reordered-prefix_prefix-zone</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_depth3_depth3">
+            <Name>cr1_depth3_depth3</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_depth3_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_depth3_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_depth3_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_depth3_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_depth3_depth3"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_depth3_depth3"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_depth3_depth3">
+            <Name>cr2_depth3_depth3</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_depth3_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_depth3_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_depth3_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_depth3_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_depth3_depth3"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_depth3_depth3"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_depth3_depth3" requiredPartsOfSpeech="v_depth3_depth3">
+            <Name>PRE_depth3_depth3</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_depth3_depth3">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_depth3_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_depth3_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>q</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_depth3_depth3"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_depth3_depth3</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_singleton_depth3">
+            <Name>cr1_singleton_depth3</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_singleton_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_singleton_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_singleton_depth3"/>
+                  <CopyFromInput index="cr1n0_singleton_depth3"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_singleton_depth3">
+            <Name>cr2_singleton_depth3</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_singleton_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_singleton_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_singleton_depth3"/>
+                  <CopyFromInput index="cr2h0_singleton_depth3"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_singleton_depth3" requiredPartsOfSpeech="v_singleton_depth3">
+            <Name>PRE_singleton_depth3</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_singleton_depth3">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_singleton_depth3">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton_depth3"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>m</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_singleton_depth3"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_singleton_depth3</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x_prefix-zone" partOfSpeech="v_prefix-zone">
+          <LexicalEntry id="x_prefix-zone_prefix-zone" partOfSpeech="v_prefix-zone_prefix-zone">
             <Allomorphs>
-              <Allomorph id="x0_prefix-zone">
+              <Allomorph id="x0_prefix-zone_prefix-zone">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X_prefix-zone</MorphemeId>
+            <MorphemeId>X_prefix-zone_prefix-zone</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y_prefix-zone" partOfSpeech="v_prefix-zone">
+          <LexicalEntry id="y_prefix-zone_prefix-zone" partOfSpeech="v_prefix-zone_prefix-zone">
             <Allomorphs>
-              <Allomorph id="y0_prefix-zone">
+              <Allomorph id="y0_prefix-zone_prefix-zone">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y_prefix-zone</MorphemeId>
+            <MorphemeId>Y_prefix-zone_prefix-zone</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z_prefix-zone" partOfSpeech="v_prefix-zone">
+          <LexicalEntry id="z_prefix-zone_prefix-zone" partOfSpeech="v_prefix-zone_prefix-zone">
             <Allomorphs>
-              <Allomorph id="z0_prefix-zone">
+              <Allomorph id="z0_prefix-zone_prefix-zone">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z_prefix-zone</MorphemeId>
+            <MorphemeId>Z_prefix-zone_prefix-zone</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="x_reordered-prefix" partOfSpeech="v_reordered-prefix">
+          <LexicalEntry id="x_reordered-prefix_prefix-zone" partOfSpeech="v_reordered-prefix_prefix-zone">
             <Allomorphs>
-              <Allomorph id="x0_reordered-prefix">
+              <Allomorph id="x0_reordered-prefix_prefix-zone">
                 <PhoneticShape>b</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X_reordered-prefix</MorphemeId>
+            <MorphemeId>X_reordered-prefix_prefix-zone</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y_reordered-prefix" partOfSpeech="v_reordered-prefix">
+          <LexicalEntry id="y_reordered-prefix_prefix-zone" partOfSpeech="v_reordered-prefix_prefix-zone">
             <Allomorphs>
-              <Allomorph id="y0_reordered-prefix">
+              <Allomorph id="y0_reordered-prefix_prefix-zone">
                 <PhoneticShape>d</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y_reordered-prefix</MorphemeId>
+            <MorphemeId>Y_reordered-prefix_prefix-zone</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z_reordered-prefix" partOfSpeech="v_reordered-prefix">
+          <LexicalEntry id="z_reordered-prefix_prefix-zone" partOfSpeech="v_reordered-prefix_prefix-zone">
             <Allomorphs>
-              <Allomorph id="z0_reordered-prefix">
+              <Allomorph id="z0_reordered-prefix_prefix-zone">
                 <PhoneticShape>g</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z_reordered-prefix</MorphemeId>
+            <MorphemeId>Z_reordered-prefix_prefix-zone</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_depth3_depth3" partOfSpeech="v_depth3_depth3">
+            <Allomorphs>
+              <Allomorph id="x0_depth3_depth3">
+                <PhoneticShape>j</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_depth3_depth3</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_depth3_depth3" partOfSpeech="v_depth3_depth3">
+            <Allomorphs>
+              <Allomorph id="y0_depth3_depth3">
+                <PhoneticShape>o</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_depth3_depth3</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_depth3_depth3" partOfSpeech="v_depth3_depth3">
+            <Allomorphs>
+              <Allomorph id="z0_depth3_depth3">
+                <PhoneticShape>r</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_depth3_depth3</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_singleton_depth3" partOfSpeech="v_singleton_depth3">
+            <Allomorphs>
+              <Allomorph id="x0_singleton_depth3">
+                <PhoneticShape>k</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_singleton_depth3</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_singleton_depth3" partOfSpeech="v_singleton_depth3">
+            <Allomorphs>
+              <Allomorph id="y0_singleton_depth3">
+                <PhoneticShape>l</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_singleton_depth3</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_singleton_depth3" partOfSpeech="v_singleton_depth3">
+            <Allomorphs>
+              <Allomorph id="z0_singleton_depth3">
+                <PhoneticShape>n</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_singleton_depth3</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
