@@ -4,56 +4,116 @@
   <Language>
     <Name>MetathesisBoundaryRightToLeftPrefix</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_prefix">
+        <Name>V_prefix</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_suffix">
+        <Name>V_suffix</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_prefix">
+        <Name>f_prefix</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_prefix">+</Symbol>
+          <Symbol id="fM_prefix">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_prefix">
+        <Name>g_prefix</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_prefix">+</Symbol>
+          <Symbol id="gM_prefix">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_suffix">
+        <Name>f_suffix</Name>
+        <Symbols>
+          <Symbol id="fP_suffix">+</Symbol>
+          <Symbol id="fM_suffix">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_suffix">
+        <Name>g_suffix</Name>
+        <Symbols>
+          <Symbol id="gP_suffix">+</Symbol>
+          <Symbol id="gM_suffix">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_prefix">cell prefix</Symbol>
+          <Symbol id="cell_suffix">cell suffix</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_prefix">
+      <Name>Main_prefix</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_prefix">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_prefix" symbolValues="fP_prefix"/>
+          <FeatureValue feature="g_prefix" symbolValues="gP_prefix"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_prefix">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_prefix" symbolValues="fM_prefix"/>
+          <FeatureValue feature="g_prefix" symbolValues="gM_prefix"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_prefix">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_prefix" symbolValues="fM_prefix"/>
+          <FeatureValue feature="g_prefix" symbolValues="gP_prefix"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_prefix">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_prefix" symbolValues="fP_prefix"/>
+          <FeatureValue feature="g_prefix" symbolValues="gM_prefix"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_suffix">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_suffix" symbolValues="fP_suffix"/>
+          <FeatureValue feature="g_suffix" symbolValues="gP_suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_suffix">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_suffix" symbolValues="fM_suffix"/>
+          <FeatureValue feature="g_suffix" symbolValues="gM_suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_suffix">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_suffix" symbolValues="fM_suffix"/>
+          <FeatureValue feature="g_suffix" symbolValues="gP_suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_suffix">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_suffix" symbolValues="fP_suffix"/>
+          <FeatureValue feature="g_suffix" symbolValues="gM_suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_suffix"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -65,22 +125,87 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_prefix">
+        <Name>Any_prefix</Name>
+        <FeatureValue feature="cell" symbolValues="cell_prefix"/>
       </FeatureNaturalClass>
-    <FeatureNaturalClass id="T"><Name>T</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="P"><Name>P</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass><FeatureNaturalClass id="Sx"><Name>Sx</Name><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass></NaturalClasses>
-    <PhonologicalRuleDefinitions><MetathesisRule id="pr1" leftSwitch="n1" rightSwitch="n0" multipleApplicationOrder="rightToLeftIterative"><Name>m</Name><StructuralDescription><PhoneticTemplate><PhoneticSequence><SimpleContext id="n0" naturalClass="Sx" /><SimpleContext id="n1" naturalClass="T" /></PhoneticSequence></PhoneticTemplate></StructuralDescription></MetathesisRule></PhonologicalRuleDefinitions><Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="PRE" phonologicalRules="pr1">
-        <Name>Main</Name>
+      <FeatureNaturalClass id="T_prefix">
+        <Name>T_prefix</Name>
+        <FeatureValue feature="f_prefix" symbolValues="fM_prefix"/>
+        <FeatureValue feature="g_prefix" symbolValues="gP_prefix"/>
+        <FeatureValue feature="cell" symbolValues="cell_prefix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_prefix">
+        <Name>P_prefix</Name>
+        <FeatureValue feature="f_prefix" symbolValues="fM_prefix"/>
+        <FeatureValue feature="g_prefix" symbolValues="gM_prefix"/>
+        <FeatureValue feature="cell" symbolValues="cell_prefix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_prefix">
+        <Name>Sx_prefix</Name>
+        <FeatureValue feature="f_prefix" symbolValues="fP_prefix"/>
+        <FeatureValue feature="g_prefix" symbolValues="gM_prefix"/>
+        <FeatureValue feature="cell" symbolValues="cell_prefix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_suffix">
+        <Name>Any_suffix</Name>
+        <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_suffix">
+        <Name>T_suffix</Name>
+        <FeatureValue feature="f_suffix" symbolValues="fM_suffix"/>
+        <FeatureValue feature="g_suffix" symbolValues="gP_suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_suffix">
+        <Name>P_suffix</Name>
+        <FeatureValue feature="f_suffix" symbolValues="fM_suffix"/>
+        <FeatureValue feature="g_suffix" symbolValues="gM_suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_suffix">
+        <Name>Sx_suffix</Name>
+        <FeatureValue feature="f_suffix" symbolValues="fP_suffix"/>
+        <FeatureValue feature="g_suffix" symbolValues="gM_suffix"/>
+        <FeatureValue feature="cell" symbolValues="cell_suffix"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <MetathesisRule id="pr1_prefix" leftSwitch="n1_prefix" rightSwitch="n0_prefix" multipleApplicationOrder="rightToLeftIterative">
+        <Name>m_prefix</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="n0_prefix" naturalClass="Sx_prefix"/>
+              <SimpleContext id="n1_prefix" naturalClass="T_prefix"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <MetathesisRule id="pr1_suffix" leftSwitch="n1_suffix" rightSwitch="n0_suffix" multipleApplicationOrder="rightToLeftIterative">
+        <Name>m_suffix</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="n0_suffix" naturalClass="Sx_suffix"/>
+              <SimpleContext id="n1_suffix" naturalClass="T_suffix"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="t_prefix" morphologicalRuleOrder="unordered" morphologicalRules="PRE_prefix PRE_suffix" phonologicalRules="pr1_prefix pr1_suffix">
+        <Name>Main_prefix</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="PRE" requiredPartsOfSpeech="v">
-            <Name>PRE</Name>
+          <MorphologicalRule id="PRE_prefix" requiredPartsOfSpeech="v_prefix">
+            <Name>PRE_prefix</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE0">
+              <MorphologicalSubrule id="PRE0_prefix">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES">
+                  <PhoneticSequence id="PRES_prefix">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_prefix"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -88,37 +213,82 @@
                   <InsertSegments>
                     <PhoneticShape>s+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="PRES" />
+                  <CopyFromInput index="PRES_prefix"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE</MorphemeId>
+            <MorphemeId>PRE_prefix</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="PRE_suffix" requiredPartsOfSpeech="v_suffix">
+            <Name>PRE_suffix</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_suffix">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_suffix">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_suffix"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="PRES_suffix"/>
+                  <InsertSegments>
+                    <PhoneticShape>+g</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_suffix</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x" partOfSpeech="v">
+          <LexicalEntry id="x_prefix" partOfSpeech="v_prefix">
             <Allomorphs>
-              <Allomorph id="x0">
+              <Allomorph id="x0_prefix">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X</MorphemeId>
+            <MorphemeId>X_prefix</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_prefix" partOfSpeech="v_prefix">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_prefix">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_prefix</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_prefix" partOfSpeech="v_prefix">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_prefix">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_prefix</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_suffix" partOfSpeech="v_suffix">
+            <Allomorphs>
+              <Allomorph id="x0_suffix">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_suffix</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_suffix" partOfSpeech="v_suffix">
+            <Allomorphs>
+              <Allomorph id="y0_suffix">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_suffix</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_suffix" partOfSpeech="v_suffix">
+            <Allomorphs>
+              <Allomorph id="z0_suffix">
+                <PhoneticShape>f</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_suffix</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
