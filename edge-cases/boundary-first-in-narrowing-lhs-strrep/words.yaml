@@ -1,68 +1,120 @@
-# Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
-#
-# Pins a narrowing rule whose target STARTS with a morpheme boundary, in a grammar with NO
-# phonological feature system (every segment is identified by its string representation alone, as
-# in a FieldWorks project that has defined no phonological features). prPostNasal: + b -> m / [+nas] _
-# (the suffix-initial b of "+bo" becomes m after a nasal, absorbing the boundary). "kanmo" is
-# ambiguous between KAN+BO (rule applied) and KAN+MO (underlying m), and the founding oracle finds
-# both: it keeps the surface "m" node optional and adds the reconstructed "+" and "b" as optional
-# nodes, so the suffix BO can match the reconstructed "b" while the root skips the rest.
-#
-# An engine that instead MERGES the reconstructed first target node into the surface node
-# (sillsdev/machine PR #539, union of "m" with the boundary) produces one mandatory node whose string
-# set is {m, +}: neither the suffix "b" nor the root "n" can consume it, so KAN+BO is lost. This
-# fixture is therefore RED on PR #539 head and on the no-dirty-marks variant of it alike.
-
 language: BoundaryFirstInNarrowingLhsStrrep
-inspired_by: ["synthetic boundary-in-target post-nasal probe (not modeling any real language)"]
+inspired_by:
+  - synthetic boundary-in-target post-nasal probe (not modeling any real language)
 sources:
-  - "src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs"
-  - "src/SIL.Machine.Morphology.HermitCrab/CharacterDefinitionTable.cs"
-requires: [phonology]
+  - src/SIL.Machine.Morphology.HermitCrab/PhonologicalRules/NarrowAnalysisRewriteRuleSpec.cs
+  - src/SIL.Machine.Morphology.HermitCrab/CharacterDefinitionTable.cs
+requires:
+  - phonology
 words:
   - word: kanmo
-    note: >-
-      KAN+BO (kan+bo -> kanmo, boundary absorbed, so no boundary survives in the shape) and KAN+MO
-      (kan+mo, no rule, the boundary survives as an optional marker in the rendered shape). KAN+BO
-      is the witness.
+    note: '[cell first-strrep] KAN+BO (kan+bo -> kanmo, boundary absorbed, so no boundary survives in the shape) and KAN+MO (kan+mo, no rule, the boundary survives as an optional marker in the rendered shape). KAN+BO is the witness.'
     parses:
-      - signature: "KAN+BO|kanmo"
-        rules: [mrSfxBo, prPostNasal]
-      - signature: "KAN+MO|kan+?mo"
-        rules: [mrSfxMo, prPostNasal]
+      - signature: KAN_first-strrep+BO_first-strrep|kanmo
+        rules:
+          - mrSfxBo_first-strrep
+          - prPostNasal_first-strrep
+      - signature: KAN_first-strrep+MO_first-strrep|kan+?mo
+        rules:
+          - mrSfxMo_first-strrep
+          - prPostNasal_first-strrep
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
   - word: kanbo
-    note: The rule is obligatory after a nasal, so kan+bo never surfaces unchanged.
+    note: '[cell first-strrep] The rule is obligatory after a nasal, so kan+bo never surfaces unchanged.'
     expect_fail: true
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
   - word: katbo
-    note: No nasal before the boundary, so the rule does not apply.
+    note: '[cell first-strrep] No nasal before the boundary, so the rule does not apply.'
     parses:
-      - signature: "KAT+BO|kat+?bo"
-        rules: [mrSfxBo]
+      - signature: KAT_first-strrep+BO_first-strrep|kat+?bo
+        rules:
+          - mrSfxBo_first-strrep
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
   - word: katmo
-    note: Underlying suffix m after a non-nasal.
+    note: '[cell first-strrep] Underlying suffix m after a non-nasal.'
     parses:
-      - signature: "KAT+MO|kat+?mo"
-        rules: [mrSfxMo]
+      - signature: KAT_first-strrep+MO_first-strrep|kat+?mo
+        rules:
+          - mrSfxMo_first-strrep
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
   - word: kan
-    note: Bare root.
+    note: '[cell first-strrep] Bare root.'
     parses:
-      - signature: "KAN|kan"
+      - signature: KAN_first-strrep|kan
         rules: []
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
   - word: kat
-    note: Bare root.
+    note: '[cell first-strrep] Bare root.'
     parses:
-      - signature: "KAT|kat"
+      - signature: KAT_first-strrep|kat
         rules: []
     exercises:
-      - "RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side"
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdhl
+    note: '[cell leftover-strrep] KAN+BO (kan+bo -> kamo, nasal and boundary absorbed) and KA+MO (ka+mo, no rule).'
+    parses:
+      - signature: KA_leftover-strrep+MO_leftover-strrep|gd+?hl
+        rules:
+          - mrSfxMo_leftover-strrep
+          - prPostNasal_leftover-strrep
+      - signature: KAN_leftover-strrep+BO_leftover-strrep|gdhl
+        rules:
+          - mrSfxBo_leftover-strrep
+          - prPostNasal_leftover-strrep
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdjfl
+    note: '[cell leftover-strrep] The rule is obligatory, so kan+bo never surfaces unchanged.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdjhl
+    note: '[cell leftover-strrep] Only KAN+MO; a KAN+BO reading would have lost the n.'
+    parses:
+      - signature: KAN_leftover-strrep+MO_leftover-strrep|gdj+?hl
+        rules:
+          - mrSfxMo_leftover-strrep
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdpfl
+    note: '[cell leftover-strrep] No nasal before the boundary, so the rule does not apply.'
+    parses:
+      - signature: KAT_leftover-strrep+BO_leftover-strrep|gdp+?fl
+        rules:
+          - mrSfxBo_leftover-strrep
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdphl
+    note: '[cell leftover-strrep] Underlying suffix m after a non-nasal.'
+    parses:
+      - signature: KAT_leftover-strrep+MO_leftover-strrep|gdp+?hl
+        rules:
+          - mrSfxMo_leftover-strrep
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdj
+    note: '[cell leftover-strrep] Bare root.'
+    parses:
+      - signature: KAN_leftover-strrep|gdj
+        rules: []
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gdp
+    note: '[cell leftover-strrep] Bare root.'
+    parses:
+      - signature: KAT_leftover-strrep|gdp
+        rules: []
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
+  - word: gd
+    note: '[cell leftover-strrep] Bare root.'
+    parses:
+      - signature: KA_leftover-strrep|gd
+        rules: []
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge) > boundary marker in the left-hand side
