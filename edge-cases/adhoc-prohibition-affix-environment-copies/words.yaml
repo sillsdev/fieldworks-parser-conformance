@@ -1,55 +1,219 @@
-# Replayed on hc.dll at Machine aab4c598 (see README.md): the rows below are the oracle's own output.
-# Synthetic; no real language.
-# The grammar is the per-copy form HCLoader emits for a prefix entry whose one allomorph has two environments
-# and two equal MoInflAffMsas (MergeMSAs off): two morphological rules, two allomorph copies (one per
-# environment) in each, and one AllomorphCoOccurrenceRule per copy on both sides (HCLoader.cs:1165-1178 and
-# 2212-2236). A loader that wired the prohibition to one allomorph copy per MSA (the first environment) would
-# still parse tada/taba through the second environment copy.
 language: AdhocProhibitionAffixEnvironmentCopies
-inspired_by: ["a prefix allomorph with two environments and two affix MSAs compiles to one allomorph copy per MSA per environment; an ad hoc allomorph prohibition names the one prefix allomorph, and HCLoader attaches it to every copy"]
-sources: ["HCLoader.cs:1160-1178 (LoadAffixProcessAllomorphs)", "HCLoader.cs:2212-2236 (LoadAllomorphCoOccurrenceRules)"]
+inspired_by:
+  - a prefix allomorph with two environments and two affix MSAs compiles to one allomorph copy per MSA per environment; an ad hoc allomorph prohibition names the one prefix allomorph, and HCLoader attaches it to every copy
+  - a prefix entry with two equal affix MSAs (MergeMSAs off) compiles to two morphological rules; an ad hoc allomorph prohibition names the one prefix allomorph, and HCLoader attaches it to every copy
+  - a circumfix entry with two prefix halves and two suffix halves compiles to four pairing subrules; an ad hoc allomorph prohibition naming the circumfix lexeme form is attached to every pairing; one naming a single half resolves to nothing
+sources:
+  - HCLoader.cs:1160-1178 (LoadAffixProcessAllomorphs)
+  - HCLoader.cs:2212-2236 (LoadAllomorphCoOccurrenceRules)
+  - HCLoader.cs:2163-2189 (LoadAllomorphCoOccurrenceRules)
+  - HCLoader.cs:1097-1122 (LoadAffixProcessAllomorphs, circumfix branch)
 requires: []
 words:
   - word: da
-    note: >-
-      Control: bare stem da parses.
+    note: '[cell affix-environment] Control: bare stem da parses.'
     parses:
-      - signature: "DA|da"
+      - signature: DA_affix-environment|da
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: ba
-    note: >-
-      Control: bare stem ba parses.
+    note: '[cell affix-environment] Control: bare stem ba parses.'
     parses:
-      - signature: "BA|ba"
+      - signature: BA_affix-environment|ba
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: ga
-    note: >-
-      Control: bare stem ga parses.
+    note: '[cell affix-environment] Control: bare stem ga parses.'
     parses:
-      - signature: "GA|ga"
+      - signature: GA_affix-environment|ga
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: taga
-    note: >-
-      Control: ga has no prohibition, so the prefix attaches once per prefix MSA, both times through the before-consonant environment copy (the after-a copy never matches word-initially).
+    note: '[cell affix-environment] Control: ga has no prohibition, so the prefix attaches once per prefix MSA, both times through the before-consonant environment copy (the after-a copy never matches word-initially).'
     parses:
-      - signature: "TA1+GA|taga"
-        rules: [mrTa1]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "TA2+GA|taga"
-        rules: [mrTa2]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+      - signature: TA1_affix-environment+GA_affix-environment|taga
+        rules:
+          - mrTa1_affix-environment
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: TA2_affix-environment+GA_affix-environment|taga
+        rules:
+          - mrTa2_affix-environment
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: tada
-    note: >-
-      Prefix first: the prohibition ta- ~ da is declared on all four copies of the prefix allomorph (two MSAs x two environments). The only copies that match here are the before-consonant ones; both are excluded, so the word has no analysis.
+    note: '[cell affix-environment] Prefix first: the prohibition ta- ~ da is declared on all four copies of the prefix allomorph (two MSAs x two environments). The only copies that match here are the before-consonant ones; both are excluded, so the word has no analysis.'
     expect_fail: true
-    blocked_by: [subTa1b, subTa2b]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - subTa1b_affix-environment
+      - subTa2b_affix-environment
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: taba
-    note: >-
-      Stem first: the prohibition ba ~ ta- is declared on ba once per prefix copy on the rest side. Both matching copies are excluded, so the word has no analysis.
+    note: '[cell affix-environment] Stem first: the prohibition ba ~ ta- is declared on ba once per prefix copy on the rest side. Both matching copies are excluded, so the word has no analysis.'
     expect_fail: true
-    blocked_by: [aBa]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - aBa_affix-environment
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: jf
+    note: '[cell affix-msa] Control: bare stem da parses.'
+    parses:
+      - signature: DA_affix-msa|jf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: hf
+    note: '[cell affix-msa] Control: bare stem ba parses.'
+    parses:
+      - signature: BA_affix-msa|hf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: lf
+    note: '[cell affix-msa] Control: bare stem ga parses.'
+    parses:
+      - signature: GA_affix-msa|lf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: mflf
+    note: '[cell affix-msa] Control: ga has no prohibition, so the prefix attaches once per prefix MSA copy.'
+    parses:
+      - signature: TA1_affix-msa+GA_affix-msa|mflf
+        rules:
+          - mrTa1_affix-msa
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: TA2_affix-msa+GA_affix-msa|mflf
+        rules:
+          - mrTa2_affix-msa
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: mfjf
+    note: '[cell affix-msa] Prefix first: the prohibition ta- ~ da is declared on each prefix copy. Both candidates (copy 1 + da, copy 2 + da) are excluded, so the word has no analysis.'
+    expect_fail: true
+    blocked_by:
+      - subTa1_affix-msa
+      - subTa2_affix-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: mfhf
+    note: '[cell affix-msa] Stem first: the prohibition ba ~ ta- is declared on ba once per prefix copy on the rest side. Both candidates are excluded, so the word has no analysis.'
+    expect_fail: true
+    blocked_by:
+      - aBa_affix-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: qn
+    note: '[cell circumfix-pairings] Control: bare stem da parses.'
+    parses:
+      - signature: DA_circumfix-pairings|qn
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: pn
+    note: '[cell circumfix-pairings] Control: bare stem ba parses.'
+    parses:
+      - signature: BA_circumfix-pairings|pn
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: rn
+    note: '[cell circumfix-pairings] Control: bare stem ga parses.'
+    parses:
+      - signature: GA_circumfix-pairings|rn
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xnrnvn
+    note: '[cell circumfix-pairings] Half-only control: ga carries FieldWorks prohibitions that name only the prefix half ta (in both directions); HCLoader resolves them to no rule, so every pairing parses on ga (this one is ta-...-ka).'
+    parses:
+      - signature: CIRC_circumfix-pairings+GA_circumfix-pairings|xnrnvn
+        rules:
+          - mrCirc_circumfix-pairings
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xnrnvs
+    note: '[cell circumfix-pairings] Half-only control: ga carries FieldWorks prohibitions that name only the prefix half ta (in both directions); HCLoader resolves them to no rule, so every pairing parses on ga (this one is ta-...-ki).'
+    parses:
+      - signature: CIRC_circumfix-pairings+GA_circumfix-pairings|xnrnvs
+        rules:
+          - mrCirc_circumfix-pairings
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xwrnvn
+    note: '[cell circumfix-pairings] Half-only control: ga carries FieldWorks prohibitions that name only the prefix half ta (in both directions); HCLoader resolves them to no rule, so every pairing parses on ga (this one is to-...-ka).'
+    parses:
+      - signature: CIRC_circumfix-pairings+GA_circumfix-pairings|xwrnvn
+        rules:
+          - mrCirc_circumfix-pairings
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xwrnvs
+    note: '[cell circumfix-pairings] Half-only control: ga carries FieldWorks prohibitions that name only the prefix half ta (in both directions); HCLoader resolves them to no rule, so every pairing parses on ga (this one is to-...-ki).'
+    parses:
+      - signature: CIRC_circumfix-pairings+GA_circumfix-pairings|xwrnvs
+        rules:
+          - mrCirc_circumfix-pairings
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xnqnvn
+    note: '[cell circumfix-pairings] Circumfix first: the prohibition names the circumfix lexeme form, attached to the ta-...-ka pairing and to the other three; no pairing may combine with da.'
+    expect_fail: true
+    blocked_by:
+      - subTaKa_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xnqnvs
+    note: '[cell circumfix-pairings] Circumfix first: the prohibition names the circumfix lexeme form, attached to the ta-...-ki pairing and to the other three; no pairing may combine with da.'
+    expect_fail: true
+    blocked_by:
+      - subTaKi_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xwqnvn
+    note: '[cell circumfix-pairings] Circumfix first: the prohibition names the circumfix lexeme form, attached to the to-...-ka pairing and to the other three; no pairing may combine with da.'
+    expect_fail: true
+    blocked_by:
+      - subToKa_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xwqnvs
+    note: '[cell circumfix-pairings] Circumfix first: the prohibition names the circumfix lexeme form, attached to the to-...-ki pairing and to the other three; no pairing may combine with da.'
+    expect_fail: true
+    blocked_by:
+      - subToKi_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xnpnvn
+    note: '[cell circumfix-pairings] Stem first: ba excludes the circumfix lexeme form, one rule per pairing, so the ta-...-ka pairing (like the other three) never combines with ba.'
+    expect_fail: true
+    blocked_by:
+      - aBa_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xnpnvs
+    note: '[cell circumfix-pairings] Stem first: ba excludes the circumfix lexeme form, one rule per pairing, so the ta-...-ki pairing (like the other three) never combines with ba.'
+    expect_fail: true
+    blocked_by:
+      - aBa_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xwpnvn
+    note: '[cell circumfix-pairings] Stem first: ba excludes the circumfix lexeme form, one rule per pairing, so the to-...-ka pairing (like the other three) never combines with ba.'
+    expect_fail: true
+    blocked_by:
+      - aBa_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: xwpnvs
+    note: '[cell circumfix-pairings] Stem first: ba excludes the circumfix lexeme form, one rule per pairing, so the to-...-ki pairing (like the other three) never combines with ba.'
+    expect_fail: true
+    blocked_by:
+      - aBa_circumfix-pairings
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule

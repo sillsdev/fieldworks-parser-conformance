@@ -23,90 +23,466 @@
       taga parses twice, once per prefix MSA, both through environment b.
     -->
     <PartsOfSpeech>
-      <PartOfSpeech id="posV"><Name>v</Name></PartOfSpeech>
+      <PartOfSpeech id="posV_affix-environment">
+        <Name>v_affix-environment</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_affix-msa">
+        <Name>v_affix-msa</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_circumfix-pairings">
+        <Name>v_circumfix-pairings</Name>
+      </PartOfSpeech>
     </PartsOfSpeech>
-    <CharacterDefinitionTable id="t1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t1_affix-environment">
+      <Name>Main_affix-environment</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cD"><Representations><Representation>d</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cB"><Representations><Representation>b</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cG"><Representations><Representation>g</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT_affix-environment">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_affix-environment">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cD_affix-environment">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cB_affix-environment">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_affix-environment">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_affix-msa">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_affix-msa">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cD_affix-msa">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cB_affix-msa">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_affix-msa">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_circumfix-pairings">
+          <Representations>
+            <Representation>x</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_circumfix-pairings">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cO_circumfix-pairings">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_circumfix-pairings">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_circumfix-pairings">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cB_circumfix-pairings">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cD_circumfix-pairings">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_circumfix-pairings">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
-      <SegmentNaturalClass id="ncCons"><Name>C</Name><Segment segment="cD" /><Segment segment="cB" /><Segment segment="cG" /></SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_affix-environment">
+        <Name>Any_affix-environment</Name>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncCons_affix-environment">
+        <Name>C_affix-environment</Name>
+        <Segment segment="cD_affix-environment"/>
+        <Segment segment="cB_affix-environment"/>
+        <Segment segment="cG_affix-environment"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_affix-msa">
+        <Name>Any_affix-msa</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_circumfix-pairings">
+        <Name>Any_circumfix-pairings</Name>
+      </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t1_affix-environment" morphologicalRuleOrder="unordered">
+        <Name>Main_affix-environment</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="mrTa1" requiredPartsOfSpeech="posV">
-            <Name>mrTa1</Name>
+          <MorphologicalRule id="mrTa1_affix-environment" requiredPartsOfSpeech="posV_affix-environment">
+            <Name>mrTa1_affix-environment</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="subTa1a">
-                <MorphologicalInput><PhoneticSequence id="stem_subTa1a"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments><CopyFromInput index="stem_subTa1a" /></MorphologicalOutput>
-                <RequiredEnvironments><Environment><LeftEnvironment><PhoneticTemplate><PhoneticSequence><Segment segment="cA" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment></Environment></RequiredEnvironments>
+              <MorphologicalSubrule id="subTa1a_affix-environment">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa1a_affix-environment">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_affix-environment"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ta</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa1a_affix-environment"/>
+                </MorphologicalOutput>
+                <RequiredEnvironments>
+                  <Environment>
+                    <LeftEnvironment>
+                      <PhoneticTemplate>
+                        <PhoneticSequence>
+                          <Segment segment="cA_affix-environment"/>
+                        </PhoneticSequence>
+                      </PhoneticTemplate>
+                    </LeftEnvironment>
+                  </Environment>
+                </RequiredEnvironments>
               </MorphologicalSubrule>
-              <MorphologicalSubrule id="subTa1b">
-                <MorphologicalInput><PhoneticSequence id="stem_subTa1b"><SimpleContext naturalClass="ncCons" /><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments><CopyFromInput index="stem_subTa1b" /></MorphologicalOutput>
+              <MorphologicalSubrule id="subTa1b_affix-environment">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa1b_affix-environment">
+                    <SimpleContext naturalClass="ncCons_affix-environment"/>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncAny_affix-environment"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ta</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa1b_affix-environment"/>
+                </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>TA1</MorphemeId>
+            <MorphemeId>TA1_affix-environment</MorphemeId>
           </MorphologicalRule>
-          <MorphologicalRule id="mrTa2" requiredPartsOfSpeech="posV">
-            <Name>mrTa2</Name>
+          <MorphologicalRule id="mrTa2_affix-environment" requiredPartsOfSpeech="posV_affix-environment">
+            <Name>mrTa2_affix-environment</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="subTa2a">
-                <MorphologicalInput><PhoneticSequence id="stem_subTa2a"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments><CopyFromInput index="stem_subTa2a" /></MorphologicalOutput>
-                <RequiredEnvironments><Environment><LeftEnvironment><PhoneticTemplate><PhoneticSequence><Segment segment="cA" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment></Environment></RequiredEnvironments>
+              <MorphologicalSubrule id="subTa2a_affix-environment">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa2a_affix-environment">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_affix-environment"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ta</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa2a_affix-environment"/>
+                </MorphologicalOutput>
+                <RequiredEnvironments>
+                  <Environment>
+                    <LeftEnvironment>
+                      <PhoneticTemplate>
+                        <PhoneticSequence>
+                          <Segment segment="cA_affix-environment"/>
+                        </PhoneticSequence>
+                      </PhoneticTemplate>
+                    </LeftEnvironment>
+                  </Environment>
+                </RequiredEnvironments>
               </MorphologicalSubrule>
-              <MorphologicalSubrule id="subTa2b">
-                <MorphologicalInput><PhoneticSequence id="stem_subTa2b"><SimpleContext naturalClass="ncCons" /><OptionalSegmentSequence min="0" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments><CopyFromInput index="stem_subTa2b" /></MorphologicalOutput>
+              <MorphologicalSubrule id="subTa2b_affix-environment">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa2b_affix-environment">
+                    <SimpleContext naturalClass="ncCons_affix-environment"/>
+                    <OptionalSegmentSequence min="0" max="-1">
+                      <SimpleContext naturalClass="ncAny_affix-environment"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ta</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa2b_affix-environment"/>
+                </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>TA2</MorphemeId>
+            <MorphemeId>TA2_affix-environment</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrTa1_affix-msa" requiredPartsOfSpeech="posV_affix-msa">
+            <Name>mrTa1_affix-msa</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTa1_affix-msa">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa1_affix-msa">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_affix-msa"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>mf</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa1_affix-msa"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TA1_affix-msa</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrTa2_affix-msa" requiredPartsOfSpeech="posV_affix-msa">
+            <Name>mrTa2_affix-msa</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTa2_affix-msa">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa2_affix-msa">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_affix-msa"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>mf</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa2_affix-msa"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TA2_affix-msa</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrCirc_circumfix-pairings" requiredPartsOfSpeech="posV_circumfix-pairings">
+            <Name>mrCirc_circumfix-pairings</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTaKa_circumfix-pairings">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTaKa_circumfix-pairings">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_circumfix-pairings"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>xn</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTaKa_circumfix-pairings"/>
+                  <InsertSegments>
+                    <PhoneticShape>vn</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subTaKi_circumfix-pairings">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTaKi_circumfix-pairings">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_circumfix-pairings"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>xn</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTaKi_circumfix-pairings"/>
+                  <InsertSegments>
+                    <PhoneticShape>vs</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subToKa_circumfix-pairings">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subToKa_circumfix-pairings">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_circumfix-pairings"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>xw</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subToKa_circumfix-pairings"/>
+                  <InsertSegments>
+                    <PhoneticShape>vn</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+              <MorphologicalSubrule id="subToKi_circumfix-pairings">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subToKi_circumfix-pairings">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_circumfix-pairings"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>xw</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subToKi_circumfix-pairings"/>
+                  <InsertSegments>
+                    <PhoneticShape>vs</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>CIRC_circumfix-pairings</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <AffixTemplates>
-          <AffixTemplate requiredPartsOfSpeech="posV">
-            <Name>verbTemplate</Name>
-            <Slot optional="true" morphologicalRules="mrTa1 mrTa2">
-              <Name>prefixSlot</Name>
+          <AffixTemplate requiredPartsOfSpeech="posV_affix-environment">
+            <Name>verbTemplate_affix-environment</Name>
+            <Slot optional="true" morphologicalRules="mrTa1_affix-environment mrTa2_affix-environment">
+              <Name>prefixSlot_affix-environment</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_affix-msa">
+            <Name>verbTemplate_affix-msa</Name>
+            <Slot optional="true" morphologicalRules="mrTa1_affix-msa mrTa2_affix-msa">
+              <Name>prefixSlot_affix-msa</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_circumfix-pairings">
+            <Name>verbTemplate_circumfix-pairings</Name>
+            <Slot optional="true" morphologicalRules="mrCirc_circumfix-pairings">
+              <Name>circSlot_circumfix-pairings</Name>
             </Slot>
           </AffixTemplate>
         </AffixTemplates>
         <LexicalEntries>
-          <LexicalEntry id="eDa" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aDa"><PhoneticShape>da</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>DA</MorphemeId>
+          <LexicalEntry id="eDa_affix-environment" partOfSpeech="posV_affix-environment">
+            <Allomorphs>
+              <Allomorph id="aDa_affix-environment">
+                <PhoneticShape>da</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DA_affix-environment</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eBa" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aBa"><PhoneticShape>ba</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>BA</MorphemeId>
+          <LexicalEntry id="eBa_affix-environment" partOfSpeech="posV_affix-environment">
+            <Allomorphs>
+              <Allomorph id="aBa_affix-environment">
+                <PhoneticShape>ba</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BA_affix-environment</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eGa" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aGa"><PhoneticShape>ga</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>GA</MorphemeId>
+          <LexicalEntry id="eGa_affix-environment" partOfSpeech="posV_affix-environment">
+            <Allomorphs>
+              <Allomorph id="aGa_affix-environment">
+                <PhoneticShape>ga</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GA_affix-environment</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eDa_affix-msa" partOfSpeech="posV_affix-msa">
+            <Allomorphs>
+              <Allomorph id="aDa_affix-msa">
+                <PhoneticShape>jf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DA_affix-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eBa_affix-msa" partOfSpeech="posV_affix-msa">
+            <Allomorphs>
+              <Allomorph id="aBa_affix-msa">
+                <PhoneticShape>hf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BA_affix-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eGa_affix-msa" partOfSpeech="posV_affix-msa">
+            <Allomorphs>
+              <Allomorph id="aGa_affix-msa">
+                <PhoneticShape>lf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GA_affix-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eDa_circumfix-pairings" partOfSpeech="posV_circumfix-pairings">
+            <Allomorphs>
+              <Allomorph id="aDa_circumfix-pairings">
+                <PhoneticShape>qn</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DA_circumfix-pairings</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eBa_circumfix-pairings" partOfSpeech="posV_circumfix-pairings">
+            <Allomorphs>
+              <Allomorph id="aBa_circumfix-pairings">
+                <PhoneticShape>pn</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BA_circumfix-pairings</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eGa_circumfix-pairings" partOfSpeech="posV_circumfix-pairings">
+            <Allomorphs>
+              <Allomorph id="aGa_circumfix-pairings">
+                <PhoneticShape>rn</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GA_circumfix-pairings</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
     </Strata>
     <AllomorphCoOccurrenceRules>
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa1a" otherAllomorphs="aDa" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa1b" otherAllomorphs="aDa" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa2a" otherAllomorphs="aDa" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa2b" otherAllomorphs="aDa" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa" otherAllomorphs="subTa1a" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa" otherAllomorphs="subTa1b" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa" otherAllomorphs="subTa2a" adjacency="anywhere" />
-      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa" otherAllomorphs="subTa2b" adjacency="anywhere" />
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa1a_affix-environment" otherAllomorphs="aDa_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa1b_affix-environment" otherAllomorphs="aDa_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa2a_affix-environment" otherAllomorphs="aDa_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa2b_affix-environment" otherAllomorphs="aDa_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_affix-environment" otherAllomorphs="subTa1a_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_affix-environment" otherAllomorphs="subTa1b_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_affix-environment" otherAllomorphs="subTa2a_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_affix-environment" otherAllomorphs="subTa2b_affix-environment" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa1_affix-msa" otherAllomorphs="aDa_affix-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa2_affix-msa" otherAllomorphs="aDa_affix-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_affix-msa" otherAllomorphs="subTa1_affix-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_affix-msa" otherAllomorphs="subTa2_affix-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTaKa_circumfix-pairings" otherAllomorphs="aDa_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTaKi_circumfix-pairings" otherAllomorphs="aDa_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subToKa_circumfix-pairings" otherAllomorphs="aDa_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subToKi_circumfix-pairings" otherAllomorphs="aDa_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_circumfix-pairings" otherAllomorphs="subTaKa_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_circumfix-pairings" otherAllomorphs="subTaKi_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_circumfix-pairings" otherAllomorphs="subToKa_circumfix-pairings" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBa_circumfix-pairings" otherAllomorphs="subToKi_circumfix-pairings" adjacency="anywhere"/>
     </AllomorphCoOccurrenceRules>
   </Language>
 </HermitCrabInput>
