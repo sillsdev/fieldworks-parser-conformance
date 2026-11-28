@@ -206,7 +206,7 @@ All 172 conformance and 16 stress grammars are Hermit Crab grammars, and PanGlos
 
 ### The XAmple subset
 
-A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **64 conformance grammars and 6 stress grammars**. Each of their test case lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
+A grammar is in the XAmple subset when it has no phonological features and no phonological rules (`PhonologicalRule` or `MetathesisRule`). A grammar with rules but no features is not in it, because XAmple would ignore its rules. The subset is **57 conformance grammars and 6 stress grammars**. Each of their test case lines on this page carries the tag `[XAmple]`. `scripts/check_grammars_md.py` recomputes the subset from every `grammar.xml` and fails if this page or the README table disagrees.
 
 `requires: []` is not the XAmple subset. It means no phonological rules, as [PROTOCOL.md](../PROTOCOL.md) section 5 defines it, so some `requires: []` grammars still have phonological features, and some subset grammars carry `requires: [morpher-settings]` because their `words.yaml` sets a `morpher:` block. Four grammars in the subset need `morpher-settings`; they are marked below.
 
@@ -215,12 +215,7 @@ A grammar is in the XAmple subset when it has no phonological features and no ph
 All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 
 - `edge-cases/adhoc-prohibition-affix-environment-copies`
-- `edge-cases/adhoc-prohibition-affix-msa-copies`
-- `edge-cases/adhoc-prohibition-allomorph-variant-control`
-- `edge-cases/adhoc-prohibition-circumfix-pairings`
-- `edge-cases/adhoc-prohibition-stem-msa-copies`
 - `edge-cases/adhoc-prohibition-variant-enclitic-first`
-- `edge-cases/adhoc-prohibition-variant-main-first-enclitic`
 - `edge-cases/adhoc-prohibition-variant-msa-copies`
 - `edge-cases/adhoc-prohibition-whynot`
 - `edge-cases/affix-multiple-application`
@@ -230,8 +225,6 @@ All under [`languages/`](../languages/) and [`edge-cases/`](../edge-cases/).
 - `edge-cases/circumfix-cross-product-and-infix-drop`
 - `edge-cases/circumfix-in-template-slot`
 - `edge-cases/circumfix-infix-interior-action-precedence`
-- `edge-cases/circumfix-non-first-allomorph-selection`
-- `edge-cases/circumfix-reduplication-precedence`
 - `edge-cases/clitic-enclitic-and-proclitic`
 - `edge-cases/clitic-proclitic-after-final-template`
 - `edge-cases/clitic-rule-designation`
@@ -323,7 +316,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/circumfix-conditioned-halves`: [XAmple] a circumfix built as a cross product of two prefix halves and two suffix halves, each pairing conditioned on the stem edges.
 - `edge-cases/circumfix-cross-product-and-infix-drop`: [XAmple] a two-prefix by two-suffix circumfix cross product, and an infix rule that drops material.
 - `edge-cases/circumfix-in-template-slot`: [XAmple] a circumfix rule that sits in an affix template slot.
-- `edge-cases/circumfix-infix-interior-action-precedence`: 3 cells in one grammar, each with its own rules and words. `interior-action`: [XAmple] one allomorph that is both circumfixing and infixing in the same output; `non-first-allomorph`: [XAmple] a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails; `reduplication`: [XAmple] one allomorph that is both circumfixing and reduplicating in the same output.
+- `edge-cases/circumfix-infix-interior-action-precedence`: [XAmple] 3 cells in one grammar, each with its own rules and words. `interior-action`: one allomorph that is both circumfixing and infixing in the same output; `non-first-allomorph`: a circumfix allomorph that is chosen after an ordinary suffix allomorph of the same rule fails; `reduplication`: one allomorph that is both circumfixing and reduplicating in the same output.
 - `edge-cases/copy-agreement-featureless-redup`: a first-consonant-and-vowel reduplication in a grammar with no phonological features, where the two copies must agree in spelling (19 words).
 - `edge-cases/discontinuous-morph-environment`: a root environment checked on each contiguous piece of a root split by a two-infix rule.
 - `edge-cases/infix-ambiguous-site`: [XAmple] two infixes written as FieldWorks writes a form-allomorph infix, applied to a root with two places each could go; the reference uses one place.
@@ -389,9 +382,9 @@ Whole-language grammars with a realistic lexicon and several interacting process
 
 ## Ad hoc prohibitions
 
-- `edge-cases/adhoc-prohibition-affix-environment-copies`: 3 cells in one grammar, each with its own rules and words. `affix-environment`: [XAmple] a prohibition on a prefix allomorph that has two environments and two morphosyntactic analyses; `affix-msa`: [XAmple] a prohibition on a prefix entry that has two morphosyntactic analyses; `circumfix-pairings`: [XAmple] a prohibition that names a circumfix, which pairs with each of its prefix and suffix halves.
-- `edge-cases/adhoc-prohibition-variant-enclitic-first`: 2 cells in one grammar, each with its own rules and words. `enclitic-first`: [XAmple] a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry; `main-first-enclitic`: [XAmple] a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry.
-- `edge-cases/adhoc-prohibition-variant-msa-copies`: 3 cells in one grammar, each with its own rules and words. `variant-msa`: [XAmple] a morpheme prohibition on one analysis of a stem that has a variant entry; `stem-msa`: [XAmple] a prohibition on a stem entry that has two morphosyntactic analyses; `allomorph-control`: [XAmple] a control for the variant cases, with an allomorph prohibition between a variant stem and a prefix.
+- `edge-cases/adhoc-prohibition-affix-environment-copies`: [XAmple] 3 cells in one grammar, each with its own rules and words. `affix-environment`: a prohibition on a prefix allomorph that has two environments and two morphosyntactic analyses; `affix-msa`: a prohibition on a prefix entry that has two morphosyntactic analyses; `circumfix-pairings`: a prohibition that names a circumfix, which pairs with each of its prefix and suffix halves.
+- `edge-cases/adhoc-prohibition-variant-enclitic-first`: [XAmple] 2 cells in one grammar, each with its own rules and words. `enclitic-first`: a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry; `main-first-enclitic`: a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry.
+- `edge-cases/adhoc-prohibition-variant-msa-copies`: [XAmple] 3 cells in one grammar, each with its own rules and words. `variant-msa`: a morpheme prohibition on one analysis of a stem that has a variant entry; `stem-msa`: a prohibition on a stem entry that has two morphosyntactic analyses; `allomorph-control`: a control for the variant cases, with an allomorph prohibition between a variant stem and a prefix.
 - `edge-cases/adhoc-prohibition-whynot`: [XAmple] a prefix ~ stem allomorph prohibition; carries a pending why-not row in `whynot.yaml`.
 - `edge-cases/mpr-wide-inflection-classes`: [XAmple] Ten families of 30 inflection classes (300 features) plus exception features, so one grammar carries 303 MPR features.
 

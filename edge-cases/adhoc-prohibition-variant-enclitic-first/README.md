@@ -31,7 +31,7 @@ Synthetic. An ad hoc MORPHEME prohibition whose first morpheme is an ENCLITIC an
 - `lapa`: enclitic-first prohibition on the main stem, Noun and Verb: no analysis.
 - `lipa`: the same prohibition must hold for the variant li: no analysis. Attaching the rules to the main entry only would parse `LAN+PA` and `LAV+PA`.
 
-Not covered here: the enclitic-first direction only; the main-first direction is `adhoc-prohibition-variant-main-first-enclitic`, and the allomorph-kind control is `adhoc-prohibition-allomorph-variant-control`.
+Not covered here: the enclitic-first direction only; the main-first direction is cell `main-first-enclitic` of this test case, and the allomorph-kind control is cell `allomorph-control` of `adhoc-prohibition-variant-msa-copies`.
 
 #### Grammar shape
 

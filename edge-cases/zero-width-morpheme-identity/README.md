@@ -11,7 +11,7 @@ Synthetic. A root `sag` (noun), two overt category toggles (`mrA2B`: noun to ver
 ## Existing test cases considered
 
 - `convergent-zero-derivation-identity`: the closest. Its null affixes insert the boundary pair `+∅` and sit beside homophonous overt suffixes, and its words test the convergence of those homophones. The cases here need a zero-width rule that inserts nothing (not even a boundary pair) and toggles of the category in a cycle; adding that rule would change which words in the other test case are ambiguous, so it was not extended.
-- `truncate-morphotactic-identity` and `strrep-identity`: identity rules by truncation or string replacement, with different input conditions and no category cycle.
+- cell `identity` of `truncate-morphotactic-copy-u` and `strrep-identity`: identity rules by truncation or string replacement, with different input conditions and no category cycle.
 - `edge-cases/truncate-morphotactic`: a truncation rule, not a zero-width one.
 
 ## Reference

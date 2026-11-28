@@ -1,7 +1,7 @@
 # Truncation identity companions
 
 Three edge cases derive from one truncation grammar, whose original stays unchanged:
-`truncate-morphotactic-identity` adds explicit `MorphemeId` labels; `truncate-morphotactic-subsumption`
+cell `identity` of `truncate-morphotactic-copy-u` adds explicit `MorphemeId` labels; cell `subsumption`
 uses root `ag` plus prefix rule `X` with the original leading truncation rule `B` and insertion rule
 `C`; `truncate-morphotactic-copy-u` adds a copying suffix rule `U` to the explicit-ID A/B/C grammar.
 These cases preserve the distinction between a parse's allomorph order in its signature and its
@@ -35,7 +35,7 @@ Stable source attribution is `ROOT` = `root32`/`root32_1` in the identity and co
 corresponding `MorphemeId` is explicit in each companion grammar; runtime GUIDs are not used as
 test case identities.
 
-`truncate-morphotactic-identity` expected parses:
+Cell `identity` of `truncate-morphotactic-copy-u`, expected parses:
 
 | Word | Signature | Forward rule order |
 |---|---|---|
@@ -50,7 +50,7 @@ test case identities.
 | `ga` | `C+ROOT+A|ga` | C, A |
 | `bag` | no parses | — |
 
-`truncate-morphotactic-subsumption` expected parses:
+Cell `subsumption` of `truncate-morphotactic-copy-u`, expected parses:
 
 | Word | Signature | Forward rule order |
 |---|---|---|
