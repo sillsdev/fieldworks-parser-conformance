@@ -3,7 +3,7 @@
 **One suite of grammars, words and expected parses, so every FieldWorks parser engine can prove it gives the same answers.**
 A linguist's project should parse a word the same way whichever engine runs it. This suite checks that it does.
 
-**215 conformance grammars** (6 languages, 209 edge cases) · **16 stress grammars** · **11 FieldWorks witnesses**
+**210 conformance grammars** (6 languages, 204 edge cases) · **16 stress grammars** · **11 FieldWorks witnesses**
 
 > **Provenance note.** The HermitCrab build behind every expected result is the one commit in `reference.commit`, the tip of
 > unmerged machine PR #615 (`hermitcrab-conformance-runner`), stacked on #500 and #556. Once those PRs land, re-point that one file
@@ -26,8 +26,8 @@ A FieldWorks project switches between the two with one setting (`ActiveParser`).
 | Engine | Phonology it needs | Grammars |
 |---|---|---|
 | XAmple | None: letters only; it ignores features and rules | 66 conformance + 6 stress, the [XAmple subset](docs/grammars.md#the-xample-subset) |
-| Hermit Crab (machine) | Complete: every letter defined as a segment | all 215 + 16 |
-| PanGloss | None, incomplete or complete | all 215 + 16 |
+| Hermit Crab (machine) | Complete: every letter defined as a segment | all 210 + 16 |
+| PanGloss | None, incomplete or complete | all 210 + 16 |
 
 The suite has no grammar with incomplete phonology yet.
 
