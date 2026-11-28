@@ -121,3 +121,4 @@ edge-cases/circumfix-non-first-allomorph-selection	edge-cases/circumfix-infix-in
 edge-cases/circumfix-reduplication-precedence	edge-cases/circumfix-infix-interior-action-precedence		wave-2026-11-27-9
 edge-cases/truncate-morphotactic-subsumption	edge-cases/truncate-morphotactic-copy-u		wave-2026-11-27-9
 edge-cases/truncate-morphotactic-identity	edge-cases/truncate-morphotactic-copy-u		wave-2026-11-27-9
+edge-cases/word-boundary-affix-rewrite	edge-cases/literal-hash-affix-context		wave-2026-11-27-9
