@@ -91,3 +91,7 @@ edge-cases/spelling-coverage-compound-depth-mpr-restricted	retired	edge-cases/sp
 edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix	edge-cases/epenthesis-then-swap-with-root-keeps-its-edge		wave-2026-11-27-6
 edge-cases/partial-inherited-output-feature	edge-cases/partial-inherited-output-target		wave-2026-11-27-6
 edge-cases/right-to-left-anchor-environment	edge-cases/right-to-left-bounded-quantifier-rewrite		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-alias-deleted	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-completed	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-repeated-root	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-reversed-table	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6

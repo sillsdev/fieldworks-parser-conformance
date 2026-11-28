@@ -1,14 +1,522 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<HermitCrabInput><Language><Name>SpellingCompoundAllomorphs</Name>
-<PartsOfSpeech><PartOfSpeech id="v"><Name>V</Name></PartOfSpeech></PartsOfSpeech>
-<PhonologicalFeatureSystem><SymbolicFeature id="f"><Name>f</Name><Symbols><Symbol id="fP">+</Symbol><Symbol id="fM">-</Symbol></Symbols></SymbolicFeature><SymbolicFeature id="g"><Name>g</Name><Symbols><Symbol id="gP">+</Symbol><Symbol id="gM">-</Symbol></Symbols></SymbolicFeature></PhonologicalFeatureSystem>
-
-<CharacterDefinitionTable id="t"><Name>Main</Name><SegmentDefinitions><SegmentDefinition id="cA"><Representations><Representation>a</Representation><Representation>á</Representation><Representation>xy</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /></SegmentDefinition><SegmentDefinition id="cE"><Representations><Representation>e</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></SegmentDefinition><SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gP" /></SegmentDefinition><SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></SegmentDefinition><SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></SegmentDefinition></SegmentDefinitions><BoundaryDefinitions><BoundaryDefinition id="b"><Representations><Representation>^0</Representation></Representations></BoundaryDefinition></BoundaryDefinitions></CharacterDefinitionTable>
-<NaturalClasses><FeatureNaturalClass id="any"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
-<Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1"><Name>Main</Name><MorphologicalRuleDefinitions>
-<CompoundingRule id="cr1"><Name>cr1</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="cr1h0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="cr1n0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="cr1h0" /><CopyFromInput index="cr1n0" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule>
-</MorphologicalRuleDefinitions>
-
-<LexicalEntries><LexicalEntry id="root" partOfSpeech="v"><Allomorphs><Allomorph id="root0"><PhoneticShape>a</PhoneticShape></Allomorph><Allomorph id="root1"><PhoneticShape>p</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ROOT</MorphemeId></LexicalEntry></LexicalEntries>
-</Stratum></Strata></Language></HermitCrabInput>
+<HermitCrabInput>
+  <Language>
+    <Name>SpellingCompoundAllomorphs</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="v_allomorphs">
+        <Name>V_allomorphs</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_alias-deleted">
+        <Name>V_alias-deleted</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_completed">
+        <Name>V_completed</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_repeated-root">
+        <Name>V_repeated-root</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_reversed-table">
+        <Name>V_reversed-table</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="f_allomorphs">
+        <Name>f_allomorphs</Name>
+        <Symbols>
+          <Symbol id="fP_allomorphs">+</Symbol>
+          <Symbol id="fM_allomorphs">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_allomorphs">
+        <Name>g_allomorphs</Name>
+        <Symbols>
+          <Symbol id="gP_allomorphs">+</Symbol>
+          <Symbol id="gM_allomorphs">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_alias-deleted">
+        <Name>f_alias-deleted</Name>
+        <Symbols>
+          <Symbol id="fP_alias-deleted">+</Symbol>
+          <Symbol id="fM_alias-deleted">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_alias-deleted">
+        <Name>g_alias-deleted</Name>
+        <Symbols>
+          <Symbol id="gP_alias-deleted">+</Symbol>
+          <Symbol id="gM_alias-deleted">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_completed">
+        <Name>f_completed</Name>
+        <Symbols>
+          <Symbol id="fP_completed">+</Symbol>
+          <Symbol id="fM_completed">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_completed">
+        <Name>g_completed</Name>
+        <Symbols>
+          <Symbol id="gP_completed">+</Symbol>
+          <Symbol id="gM_completed">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_repeated-root">
+        <Name>f_repeated-root</Name>
+        <Symbols>
+          <Symbol id="fP_repeated-root">+</Symbol>
+          <Symbol id="fM_repeated-root">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_repeated-root">
+        <Name>g_repeated-root</Name>
+        <Symbols>
+          <Symbol id="gP_repeated-root">+</Symbol>
+          <Symbol id="gM_repeated-root">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_reversed-table">
+        <Name>f_reversed-table</Name>
+        <Symbols>
+          <Symbol id="fP_reversed-table">+</Symbol>
+          <Symbol id="fM_reversed-table">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_reversed-table">
+        <Name>g_reversed-table</Name>
+        <Symbols>
+          <Symbol id="gP_reversed-table">+</Symbol>
+          <Symbol id="gM_reversed-table">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_allomorphs">cell allomorphs</Symbol>
+          <Symbol id="cell_alias-deleted">cell alias-deleted</Symbol>
+          <Symbol id="cell_completed">cell completed</Symbol>
+          <Symbol id="cell_repeated-root">cell repeated-root</Symbol>
+          <Symbol id="cell_reversed-table">cell reversed-table</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="t_allomorphs">
+      <Name>Main_allomorphs</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA_allomorphs">
+          <Representations>
+            <Representation>a</Representation>
+            <Representation>á</Representation>
+            <Representation>xy</Representation>
+          </Representations>
+          <FeatureValue feature="f_allomorphs" symbolValues="fP_allomorphs"/>
+          <FeatureValue feature="cell" symbolValues="cell_allomorphs"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_allomorphs">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+          <FeatureValue feature="f_allomorphs" symbolValues="fP_allomorphs"/>
+          <FeatureValue feature="g_allomorphs" symbolValues="gM_allomorphs"/>
+          <FeatureValue feature="cell" symbolValues="cell_allomorphs"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_allomorphs">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+          <FeatureValue feature="f_allomorphs" symbolValues="fP_allomorphs"/>
+          <FeatureValue feature="g_allomorphs" symbolValues="gP_allomorphs"/>
+          <FeatureValue feature="cell" symbolValues="cell_allomorphs"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_allomorphs">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f_allomorphs" symbolValues="fM_allomorphs"/>
+          <FeatureValue feature="g_allomorphs" symbolValues="gM_allomorphs"/>
+          <FeatureValue feature="cell" symbolValues="cell_allomorphs"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_allomorphs">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="f_allomorphs" symbolValues="fM_allomorphs"/>
+          <FeatureValue feature="g_allomorphs" symbolValues="gP_allomorphs"/>
+          <FeatureValue feature="cell" symbolValues="cell_allomorphs"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_alias-deleted">
+          <Representations>
+            <Representation>b</Representation>
+            <Representation>jk</Representation>
+          </Representations>
+          <FeatureValue feature="f_alias-deleted" symbolValues="fP_alias-deleted"/>
+          <FeatureValue feature="cell" symbolValues="cell_alias-deleted"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_alias-deleted">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_alias-deleted" symbolValues="fP_alias-deleted"/>
+          <FeatureValue feature="g_alias-deleted" symbolValues="gM_alias-deleted"/>
+          <FeatureValue feature="cell" symbolValues="cell_alias-deleted"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_alias-deleted">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_alias-deleted" symbolValues="fP_alias-deleted"/>
+          <FeatureValue feature="g_alias-deleted" symbolValues="gP_alias-deleted"/>
+          <FeatureValue feature="cell" symbolValues="cell_alias-deleted"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_alias-deleted">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_alias-deleted" symbolValues="fM_alias-deleted"/>
+          <FeatureValue feature="g_alias-deleted" symbolValues="gM_alias-deleted"/>
+          <FeatureValue feature="cell" symbolValues="cell_alias-deleted"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_alias-deleted">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_alias-deleted" symbolValues="fM_alias-deleted"/>
+          <FeatureValue feature="g_alias-deleted" symbolValues="gP_alias-deleted"/>
+          <FeatureValue feature="cell" symbolValues="cell_alias-deleted"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_completed">
+          <Representations>
+            <Representation>m</Representation>
+            <Representation>z</Representation>
+            <Representation>vw</Representation>
+          </Representations>
+          <FeatureValue feature="f_completed" symbolValues="fP_completed"/>
+          <FeatureValue feature="g_completed" symbolValues="gP_completed"/>
+          <FeatureValue feature="cell" symbolValues="cell_completed"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_completed">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="f_completed" symbolValues="fP_completed"/>
+          <FeatureValue feature="g_completed" symbolValues="gM_completed"/>
+          <FeatureValue feature="cell" symbolValues="cell_completed"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_completed">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="f_completed" symbolValues="fP_completed"/>
+          <FeatureValue feature="g_completed" symbolValues="gP_completed"/>
+          <FeatureValue feature="cell" symbolValues="cell_completed"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_completed">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="f_completed" symbolValues="fM_completed"/>
+          <FeatureValue feature="g_completed" symbolValues="gM_completed"/>
+          <FeatureValue feature="cell" symbolValues="cell_completed"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_completed">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="f_completed" symbolValues="fM_completed"/>
+          <FeatureValue feature="g_completed" symbolValues="gP_completed"/>
+          <FeatureValue feature="cell" symbolValues="cell_completed"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_repeated-root">
+          <Representations>
+            <Representation>à</Representation>
+            <Representation>è</Representation>
+            <Representation>æç</Representation>
+          </Representations>
+          <FeatureValue feature="f_repeated-root" symbolValues="fP_repeated-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_repeated-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_repeated-root">
+          <Representations>
+            <Representation>â</Representation>
+          </Representations>
+          <FeatureValue feature="f_repeated-root" symbolValues="fP_repeated-root"/>
+          <FeatureValue feature="g_repeated-root" symbolValues="gM_repeated-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_repeated-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_repeated-root">
+          <Representations>
+            <Representation>ã</Representation>
+          </Representations>
+          <FeatureValue feature="f_repeated-root" symbolValues="fP_repeated-root"/>
+          <FeatureValue feature="g_repeated-root" symbolValues="gP_repeated-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_repeated-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_repeated-root">
+          <Representations>
+            <Representation>ä</Representation>
+          </Representations>
+          <FeatureValue feature="f_repeated-root" symbolValues="fM_repeated-root"/>
+          <FeatureValue feature="g_repeated-root" symbolValues="gM_repeated-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_repeated-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_repeated-root">
+          <Representations>
+            <Representation>å</Representation>
+          </Representations>
+          <FeatureValue feature="f_repeated-root" symbolValues="fM_repeated-root"/>
+          <FeatureValue feature="g_repeated-root" symbolValues="gP_repeated-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_repeated-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_reversed-table">
+          <Representations>
+            <Representation>í</Representation>
+          </Representations>
+          <FeatureValue feature="f_reversed-table" symbolValues="fM_reversed-table"/>
+          <FeatureValue feature="g_reversed-table" symbolValues="gP_reversed-table"/>
+          <FeatureValue feature="cell" symbolValues="cell_reversed-table"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_reversed-table">
+          <Representations>
+            <Representation>ì</Representation>
+          </Representations>
+          <FeatureValue feature="f_reversed-table" symbolValues="fM_reversed-table"/>
+          <FeatureValue feature="g_reversed-table" symbolValues="gM_reversed-table"/>
+          <FeatureValue feature="cell" symbolValues="cell_reversed-table"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_reversed-table">
+          <Representations>
+            <Representation>ë</Representation>
+          </Representations>
+          <FeatureValue feature="f_reversed-table" symbolValues="fP_reversed-table"/>
+          <FeatureValue feature="g_reversed-table" symbolValues="gP_reversed-table"/>
+          <FeatureValue feature="cell" symbolValues="cell_reversed-table"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_reversed-table">
+          <Representations>
+            <Representation>ê</Representation>
+          </Representations>
+          <FeatureValue feature="f_reversed-table" symbolValues="fP_reversed-table"/>
+          <FeatureValue feature="g_reversed-table" symbolValues="gM_reversed-table"/>
+          <FeatureValue feature="cell" symbolValues="cell_reversed-table"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_reversed-table">
+          <Representations>
+            <Representation>é</Representation>
+            <Representation>ð</Representation>
+            <Representation>îï</Representation>
+          </Representations>
+          <FeatureValue feature="f_reversed-table" symbolValues="fP_reversed-table"/>
+          <FeatureValue feature="cell" symbolValues="cell_reversed-table"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+      <BoundaryDefinitions>
+        <BoundaryDefinition id="b">
+          <Representations>
+            <Representation>^0</Representation>
+          </Representations>
+        </BoundaryDefinition>
+      </BoundaryDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="any_allomorphs">
+        <Name>Any_allomorphs</Name>
+        <FeatureValue feature="cell" symbolValues="cell_allomorphs"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_alias-deleted">
+        <Name>Any_alias-deleted</Name>
+        <FeatureValue feature="cell" symbolValues="cell_alias-deleted"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_completed">
+        <Name>Any_completed</Name>
+        <FeatureValue feature="cell" symbolValues="cell_completed"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_repeated-root">
+        <Name>Any_repeated-root</Name>
+        <FeatureValue feature="cell" symbolValues="cell_repeated-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_reversed-table">
+        <Name>Any_reversed-table</Name>
+        <FeatureValue feature="cell" symbolValues="cell_reversed-table"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t_allomorphs" morphologicalRuleOrder="unordered" morphologicalRules="cr1_allomorphs cr1_alias-deleted cr1_completed cr1_repeated-root cr1_reversed-table">
+        <Name>Main_allomorphs</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="cr1_allomorphs">
+            <Name>cr1_allomorphs</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_allomorphs">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_allomorphs"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_allomorphs">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_allomorphs"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_allomorphs"/>
+                  <CopyFromInput index="cr1n0_allomorphs"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_alias-deleted">
+            <Name>cr1_alias-deleted</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_alias-deleted">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_alias-deleted"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_alias-deleted">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_alias-deleted"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_alias-deleted"/>
+                  <CopyFromInput index="cr1n0_alias-deleted"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_completed">
+            <Name>cr1_completed</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_completed">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_completed"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_completed">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_completed"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_completed"/>
+                  <CopyFromInput index="cr1n0_completed"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_repeated-root">
+            <Name>Compound_repeated-root</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="h0_repeated-root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_repeated-root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="n0_repeated-root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_repeated-root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="h0_repeated-root"/>
+                  <CopyFromInput index="n0_repeated-root"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_reversed-table">
+            <Name>cr1_reversed-table</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_reversed-table">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_reversed-table"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_reversed-table">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_reversed-table"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_reversed-table"/>
+                  <CopyFromInput index="cr1n0_reversed-table"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="root_allomorphs" partOfSpeech="v_allomorphs">
+            <Allomorphs>
+              <Allomorph id="root0_allomorphs">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+              <Allomorph id="root1_allomorphs">
+                <PhoneticShape>p</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_allomorphs</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="root_alias-deleted" partOfSpeech="v_alias-deleted">
+            <Allomorphs>
+              <Allomorph id="root0_alias-deleted">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_alias-deleted</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="root_completed" partOfSpeech="v_completed">
+            <Allomorphs>
+              <Allomorph id="root0_completed">
+                <PhoneticShape>m</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_completed</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="root_repeated-root" partOfSpeech="v_repeated-root">
+            <Allomorphs>
+              <Allomorph id="rootA_repeated-root">
+                <PhoneticShape>à</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_repeated-root</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="root_reversed-table" partOfSpeech="v_reversed-table">
+            <Allomorphs>
+              <Allomorph id="root0_reversed-table">
+                <PhoneticShape>é</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_reversed-table</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
