@@ -23,7 +23,7 @@ Each cell's own rationale, as it stood before the merge. Ids and letters in them
 
 ### literal-hash-affix-context: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -74,7 +74,7 @@ and missing rewrites remain described above as this test case's focal behavior.
 
 ### word-boundary-affix-rewrite: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references

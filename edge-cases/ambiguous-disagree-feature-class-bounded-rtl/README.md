@@ -27,7 +27,7 @@ Each cell's own rationale, as it stood before the merge. Ids and letters in them
 
 ### ambiguous-disagree-feature-class-bounded-rtl: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -52,7 +52,7 @@ Upstream PR: none (network closed).
 
 ### ambiguous-disagree-feature-class-unbounded-ltr: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -77,7 +77,7 @@ Upstream PR: none (network closed).
 
 ### ambiguous-disagree-mixed-plus-class: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -102,7 +102,7 @@ Upstream PR: none (network closed).
 
 ### ambiguous-disagree-repeated-minus-partial-focus: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references

@@ -51,7 +51,7 @@ hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on s
 
 FieldWorks project through projector and hc.dll (FieldWorks 3.8.2.0 and the pinned build give the same counts), and `grammar.xml` through `hc-dotnet-wrapper.sh`: la/li 2 each, lara/lira 2 each, ta 1, tapa 1, lapa 0, lipa 0. Controls (not kept here): no prohibition: `lapa` and `lipa` parse twice each (Noun and Verb); variant copies omitted from the prohibition: `lapa` is 0 but `lipa` parses twice; the clitic rule copy `mrPa` omitted: `lapa` and `lipa` both parse twice, so the rule copy is the load-bearing one.
 
-Source: sillsdev/machine #480 (ad hoc prohibition conformance); the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
+Source: the ad hoc prohibition conformance of sillsdev/machine's integrate-conformance-framework head; the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
 
 ### Cell `main-first-enclitic`: former README of `adhoc-prohibition-variant-main-first-enclitic`
 
@@ -87,4 +87,4 @@ hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on s
 
 FieldWorks project through projector and hc.dll (FieldWorks 3.8.2.0 and the pinned build give the same counts), and `grammar.xml` through `hc-dotnet-wrapper.sh`: la/li 2 each, lara/lira 2 each, ta 1, tapa 1, lapa 0, lipa 0. Controls (not kept here): no prohibition: `lapa` and `lipa` parse twice each; variant copies omitted from the prohibition: `lapa` is 0 but `lipa` parses twice; the clitic rule copy `mrPa` omitted from the rest side: `lapa` and `lipa` both parse twice, so the rule copy is the load-bearing one.
 
-Source: sillsdev/machine #480 (ad hoc prohibition conformance); the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
+Source: the ad hoc prohibition conformance of sillsdev/machine's integrate-conformance-framework head; the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.

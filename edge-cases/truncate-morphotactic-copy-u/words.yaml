@@ -1,18 +1,18 @@
 language: TruncateRulesProbe
 inspired_by:
-  - 'Machine #480 truncate-morphotactic with the retained-host copy-U discriminator'
+  - 'Machine truncate-morphotactic with the retained-host copy-U discriminator'
   - synthetic affix truncation and inserted-host attribution probe
-  - 'synthetic AffixProcessRule truncation probe (Machine #480 truncate-morphotactic)'
+  - 'synthetic AffixProcessRule truncation probe (Machine truncate-morphotactic)'
 sources:
-  - 'Machine #480 truncate-morphotactic rules; A/B/C subtrees unchanged from the explicit-ID companion'
+  - 'Machine truncate-morphotactic rules; A/B/C subtrees unchanged from the explicit-ID companion'
   - 'Combined C# oracle: Machine #556 d98d12a5 plus Machine #500 ApplyRhs relocation at 157c031e'
-  - 'Machine #480 truncate-morphotactic at fa8d9b25; companion adds root ag, prefix X, and explicit MorphemeId values'
-  - 'Machine #480 truncate-morphotactic at fa8d9b25; companion adds explicit MorphemeId values'
+  - 'Machine truncate-morphotactic at fa8d9b25; companion adds root ag, prefix X, and explicit MorphemeId values'
+  - 'Machine truncate-morphotactic at fa8d9b25; companion adds explicit MorphemeId values'
 requires: []
 words:
   - word: gau
     note: '[cell copy-u] Nine parses, including the A/B/C histories followed by U; preserve the duplicate ROOT+C+A+U identity with both application histories.'
-    provenance: 'Combined Machine #500+#506 C# complete identities and forward application orders'
+    provenance: 'Combined Machine #500 and fresh-process tie-loss (machine issue 506) C# complete identities and forward application orders'
     parses:
       - signature: ROOT_copy-u+A_copy-u+C_copy-u+B_copy-u+U_copy-u|gau
         gloss: 32-3SGA-3SGB-3SGC-U
@@ -78,7 +78,7 @@ words:
       - 'AffixProcessRule: subtraction/truncation'
   - word: au
     note: '[cell copy-u] Three parses; retain all distinct morph orders and histories.'
-    provenance: 'Combined Machine #500+#506 C# complete identities and forward application orders'
+    provenance: 'Combined Machine #500 and fresh-process tie-loss (machine issue 506) C# complete identities and forward application orders'
     parses:
       - signature: B_copy-u+ROOT_copy-u+A_copy-u+U_copy-u|au
         gloss: 32-3SGA-3SGB-U
@@ -184,7 +184,7 @@ words:
       - 'AffixProcessRule: subtraction/truncation'
   - word: m
     note: '[cell identity] Two independent derivations from sag: A,B and B,A.'
-    provenance: 'Combined Machine #500+#506 C# identities and forward derivations'
+    provenance: 'Combined Machine #500 and fresh-process tie-loss (machine issue 506) C# identities and forward derivations'
     parses:
       - signature: ROOT_identity+B_identity+A_identity|m
         gloss: 32-3SGB-3SGA
@@ -202,7 +202,7 @@ words:
           - 'AffixProcessRule: subtraction/truncation'
   - word: om
     note: '[cell identity] Five independent derivations from sag: A,C; C,A; A,B,C; B,A,C; B,C,A.'
-    provenance: 'Combined Machine #500+#506 C# identities and forward derivations'
+    provenance: 'Combined Machine #500 and fresh-process tie-loss (machine issue 506) C# identities and forward derivations'
     parses:
       - signature: ROOT_identity+B_identity+C_identity+A_identity|om
         gloss: 32-3SGB-3SGA-3SGC

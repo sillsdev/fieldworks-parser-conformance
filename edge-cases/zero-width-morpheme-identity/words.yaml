@@ -1,7 +1,7 @@
 # Synthetic; no real language. Root sag (N), two toggle rules (mrA2B: N -> V, +u; mrB2A: V -> N, +i) and a zero-width rule
 # (mrThird: N -> V, copies the stem and inserts nothing). Staged by PanGloss as zero-width-morpheme-identity-stability for
-# sillsdev/machine#506, where fresh-process runs of an earlier build gave three different answers for sagui.
-# sillsdev/machine#506 and #500 are open. The answer multiset is stable at ba6dfa10 with one thread (machine#506 comment
+# sillsdev/machine issue 506, where fresh-process runs of an earlier build gave three different answers for sagui.
+# sillsdev/machine issue 506 and #500 are open. The answer multiset is stable at ba6dfa10 with one thread (machine issue 506 comment
 # 7219130646), so all four words, sagui included, are pinned from the C# run. THIRD is the outermost rule in sagui because it needs
 # an N input and the only N stage that spells sagui is B2A's output; the C# build lists it last, as here.
 language: ZeroWidthMorphemeIdentity
@@ -43,7 +43,7 @@ words:
 
   - word: sagui
     note: >-
-      The word of machine#506. root sag/N, A2B (+u) gives sagu/V, B2A (+i) gives sagui/N, and mrThird (N -> V, zero-width) may
+      The word of machine issue 506. root sag/N, A2B (+u) gives sagu/V, B2A (+i) gives sagui/N, and mrThird (N -> V, zero-width) may
       wrap that: two analyses, both keeping A2B and B2A, one also keeping THIRD as the outermost rule. Without mrThird only the
       first remains.
     parses:

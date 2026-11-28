@@ -40,10 +40,10 @@
 # which is C# throughout).
 #
 # ORACLE PROVENANCE FOR `a` AND `ga`: these complete parse multisets are independently derived by
-# forward application and are not copied from the unpatched C# oracle. Until #506 is
-# fixed, C# can lose zero-width morph annotations while
+# forward application and are not copied from the unpatched C# oracle. While the tie loss is
+# under investigation (sillsdev/machine issue 506), C# can lose zero-width morph annotations while
 # copying the word, so its output for these two words is nondeterministic. This fixture deliberately
-# exposes that #506 defect: it may fail before the directional tie fix and may pass by chance. Do
+# exposes that tie loss: it may fail on a build that has it and may pass by chance. Do
 # not replace these entries with whichever incomplete C# output a run happens to produce. The
 # derivation identities, including morph order and multiplicity, are in this directory's README.md.
 
@@ -159,7 +159,7 @@ words:
       final "g" then the initial Fricative "s", or doing those steps in the other order, yields
       "a". Each result contains the root and both zero-width rule morphs. Keep both identical
       signatures; their different forward rule orders are detailed in README.md.
-    provenance: "Hand-derived forward synthesis; intentionally exposes the pre-fix C# tie loss in #506."
+    provenance: "Hand-derived forward synthesis; intentionally exposes the C# tie loss under investigation in sillsdev/machine issue 506."
     parses:
       - signature: "++|a"
         gloss: "32-3SGA-3SGB"
@@ -179,7 +179,7 @@ words:
       apply the trailing truncation and optional-truncation-plus-insertion rules. The identical
       surface signatures are intentionally repeated; README.md gives every forward chain and
       surface transition.
-    provenance: "Hand-derived forward synthesis; intentionally exposes the pre-fix C# tie loss in #506."
+    provenance: "Hand-derived forward synthesis; intentionally exposes the C# tie loss under investigation in sillsdev/machine issue 506."
     parses:
       - signature: "+++|ga"
         gloss: "32-3SGA-3SGB-3SGC"

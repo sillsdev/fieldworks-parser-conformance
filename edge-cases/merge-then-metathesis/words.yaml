@@ -1,5 +1,5 @@
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
+# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head).
 #
 # Pins a METATHESIS rule ordered before a MERGE (narrowing, 2 -> 1) rule in synthesis:
 # mtTS (t s -> s t) then prMergeST (s t -> c). ATSA -> asta -> aca; ASTA -> aca; ACA -> aca.

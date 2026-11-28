@@ -1,5 +1,5 @@
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
+# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head).
 #
 # Pins a narrowing rule with a morpheme boundary in the MIDDLE of a three-segment target and a
 # TWO-segment output, in a grammar with NO phonological feature system (segments identified by their

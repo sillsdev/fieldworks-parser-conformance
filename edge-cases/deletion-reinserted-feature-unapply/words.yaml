@@ -1,5 +1,5 @@
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
+# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head).
 #
 # Pins the analysis-side interaction between a DELETION rule and a FEATURE rule ordered before it in
 # synthesis. Final devoicing (prFinalDevoice) feeds final t-deletion after a consonant

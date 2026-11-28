@@ -1,5 +1,5 @@
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
+# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head).
 #
 # Pins the analysis-side unapplication of an EXPANSION rule (1 -> 2) whose two-segment output can
 # overlap with itself. prBreak: A -> a a (long-vowel breaking, left-to-right iterative). In "kaaa"

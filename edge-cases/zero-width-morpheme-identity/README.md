@@ -1,12 +1,12 @@
 # zero-width-morpheme-identity
 
-Synthetic. A root `sag` (noun), two overt category toggles (`mrA2B`: noun to verb, suffix `u`; `mrB2A`: verb to noun, suffix `i`) and a zero-width rule `mrThird` (noun to verb, copies the stem, inserts nothing). Un-applying `mrThird` maps a shape to itself, so the same surface can be reached through different rule histories (sillsdev/machine#506, #500).
+Synthetic. A root `sag` (noun), two overt category toggles (`mrA2B`: noun to verb, suffix `u`; `mrB2A`: verb to noun, suffix `i`) and a zero-width rule `mrThird` (noun to verb, copies the stem, inserts nothing). Un-applying `mrThird` maps a shape to itself, so the same surface can be reached through different rule histories (sillsdev/machine issue 506, #500).
 
 ## What it pins
 
 - `sag`: two analyses, the bare root and root plus `mrThird`.
 - `sagu`: root plus `mrA2B` (control that the toggle works alone).
-- `sagi`, `sagui`: the toggles and the zero-width rule combined; `sagui` is the word that gave three different answers across fresh-process runs of an earlier build. Its answer is stable at ba6dfa10 with one thread (machine#506, comment 7219130646), so it is pinned from the C# run.
+- `sagi`, `sagui`: the toggles and the zero-width rule combined; `sagui` is the word that gave three different answers across fresh-process runs of an earlier build. Its answer is stable at ba6dfa10 with one thread (machine issue 506, comment 7219130646), so it is pinned from the C# run.
 
 ## Existing test cases considered
 

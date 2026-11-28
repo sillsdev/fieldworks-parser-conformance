@@ -22,7 +22,7 @@ Each cell's own rationale, as it stood before the merge. Ids and letters in them
 
 ### adhoc-prohibition-affix-environment-copies
 
-Synthetic. An ad hoc allomorph prohibition on a prefix allomorph that has two environments and two equal MoInflAffMsas (MergeMSAs off). HCLoader registers one allomorph per MSA per environment (HCLoader.cs:1160-1178), so the one FieldWorks allomorph compiles to four copies (`subTa1a`, `subTa1b`, `subTa2a`, `subTa2b`), and the prohibition is attached to every copy, on the first side and on the rest side (HCLoader.cs:2212-2236). The model is PanGloss's `adhoc-affix-environment-copies` test case (PR #102).
+Synthetic. An ad hoc allomorph prohibition on a prefix allomorph that has two environments and two equal MoInflAffMsas (MergeMSAs off). HCLoader registers one allomorph per MSA per environment (HCLoader.cs:1160-1178), so the one FieldWorks allomorph compiles to four copies (`subTa1a`, `subTa1b`, `subTa2a`, `subTa2b`), and the prohibition is attached to every copy, on the first side and on the rest side (HCLoader.cs:2212-2236). The model is PanGloss's `adhoc-affix-environment-copies` test case.
 
 #### What it pins
 
@@ -47,7 +47,7 @@ The authored project has one prefix allomorph with two PhoneEnvRC environments, 
 grammar.xml on hc.dll: da, ba, ga parse; taga TA1+GA, TA2+GA; tada, taba none. FieldWorks project through projector and hc.dll: same counts (the HC XML has no morph names, so only counts compare: da 1, ba 1, ga 1, taga 2, tada 0, taba 0).
 Controls (not kept here): rule only on the two after-`a` copies (the first environment pass of each MSA): tada and taba both parse twice; rule on the first MSA's before-consonant copy only: tada TA2+DA, taba TA2+BA; rule on the last copy only: tada TA1+DA, taba TA1+BA.
 
-Source: PanGloss issues #99 and #100 (fixes in PanGloss PRs #101 and #102).
+Source: PanGloss-only (Rust) compile-step issues, not reference bugs.
 
 ### Cell `affix-msa`: former README of `adhoc-prohibition-affix-msa-copies`
 
@@ -76,7 +76,7 @@ hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on s
 
 FieldWorks project through projector and hc.dll: da 1, ba 1, ga 1, taga 2, tada 0, taba 0. Control with the rules on one prefix copy only (not kept here): tada parses as TA1+DA (rule on copy 2) or TA2+DA (rule on copy 1), likewise taba.
 
-Source: PanGloss issues #99 and #100 (fixes in PanGloss PRs #101 and #102).
+Source: PanGloss-only (Rust) compile-step issues, not reference bugs.
 
 ### Cell `circumfix-pairings`: former README of `adhoc-prohibition-circumfix-pairings`
 
@@ -107,4 +107,4 @@ The authored project has one circumfix entry (lexeme form `ta- -ka`, halves ta, 
 grammar.xml on hc.dll: ga words 1 analysis each, da/ba words none. FieldWorks project through projector and hc.dll: same (da 1, ba 1, ga 1, ga words 1 each, all eight da/ba words 0).
 Controls : rule on the ta-...-ka pairing only: only tadaka and tabaka are lost; rule on the to-...-ki pairing only: only todaki and tobaki are lost; no rule: all sixteen parse.
 
-Source: PanGloss issues #99 and #100 (fixes in PanGloss PRs #101 and #102).
+Source: PanGloss-only (Rust) compile-step issues, not reference bugs.

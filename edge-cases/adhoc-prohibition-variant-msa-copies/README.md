@@ -47,7 +47,7 @@ hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on s
 
 FieldWorks project through projector and hc.dll: da/di/ba/bi/ga/gi 2 each, taga 1, tagi 1, tada/tadi/taba/tabi 0. Controls (not kept here): no rule: tadi and tabi parse; rule on the main entry only: tadi and tabi parse (TA+DAV, TA+BAV).
 
-Source: PanGloss issues #99 and #100 (fixes in PanGloss PRs #101 and #102).
+Source: PanGloss-only (Rust) compile-step issues, not reference bugs.
 
 ### Cell `stem-msa`: former README of `adhoc-prohibition-stem-msa-copies`
 
@@ -76,7 +76,7 @@ hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on s
 
 Replaying the fieldworks project through `XampleProjector project` (HCLoader.Load + XmlLanguageWriter) and hc.dll: da 2 analyses, ba 2, ga 2, taga 1, tada 0, taba 0, matching grammar.xml. Control with the rules on the last copy only (not kept here): tada parses as TA+DAV, taba as TA+BAV.
 
-Source: PanGloss issues #99 and #100 (fixes in PanGloss PRs #101 and #102).
+Source: PanGloss-only (Rust) compile-step issues, not reference bugs.
 
 ### Cell `allomorph-control`: former README of `adhoc-prohibition-allomorph-variant-control`
 
@@ -106,4 +106,4 @@ hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on s
 
 FieldWorks project through projector and hc.dll (FieldWorks 3.8.2.0 and the pinned build give the same counts), and `grammar.xml` through `hc-dotnet-wrapper.sh`: la/li 2 each, tala 1, tali 0. Controls (not kept here): no prohibition: `tali` parses once (TA+LAV).
 
-Source: sillsdev/machine #480 (ad hoc prohibition conformance); the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
+Source: the ad hoc prohibition conformance of sillsdev/machine's integrate-conformance-framework head; the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
