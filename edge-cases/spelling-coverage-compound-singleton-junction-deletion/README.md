@@ -17,6 +17,8 @@ The grammar declares a shared symbolic feature `cell`, every segment carries its
 | `metathesis` | `edge-cases/spelling-coverage-compound-singleton-junction-metathesis` | A metathesis rule swaps a stem-final `p` and a stem-initial `t` across a compound junction with no written boundary. | `a`→`r`, `p`→`v`, `s`→`w`, `t`→`x` |
 | `root-stratum-final-change` | `edge-cases/spelling-coverage-compound-singleton-junction-root-stratum-final-change` | a word-final one-node feature change in the root stratum, with the compounding rules and lexical entries in a later stratum. | `a`→`z`, `p`→`à`, `s`→`á`, `t`→`â` |
 
+Two words are shared: `+` and `++` were negative controls in both `final-change` and `root-stratum-final-change`, with no analysis and the same label, and spell the same input in the merged grammar, where inputs must be unique. Each is kept once, noted for both cells. Every other former word is kept.
+
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv` (wave-2026-11-27-4). The expected rows are what C# HermitCrab returned on a fresh `hc-conformance --propose` run over the merged grammar and the cell-mapped word list (sillsdev/machine `d492d1005e18358f35d8b7b9527d01e1dac9e644`).
 
 ## Former READMEs

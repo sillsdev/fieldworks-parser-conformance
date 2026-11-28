@@ -1947,7 +1947,7 @@ words:
         exercises:
           - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
   - word: +
-    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    note: '[cells final-change, root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
       - CompoundingRule > junction phonology
@@ -2142,7 +2142,7 @@ words:
     exercises:
       - CompoundingRule > junction phonology
   - word: ++
-    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    note: '[cells final-change, root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
       - CompoundingRule > junction phonology
@@ -3165,11 +3165,6 @@ words:
           - pr1_root-stratum-final-change
         exercises:
           - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
-  - word: +
-    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
-    expect_fail: true
-    exercises:
-      - CompoundingRule > junction phonology
   - word: zz
     note: '[cell root-stratum-final-change] C# returns 4 analyses (X+Xo|a+?a; Xo+X|a+?a; Xo|a+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
@@ -3438,11 +3433,6 @@ words:
     exercises:
       - CompoundingRule > junction phonology
   - word: +á
-    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
-    expect_fail: true
-    exercises:
-      - CompoundingRule > junction phonology
-  - word: ++
     note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
