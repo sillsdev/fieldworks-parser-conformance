@@ -59,6 +59,7 @@ visible to another:
   signature or rule trace names its cell. Merge each list (parts of speech, segments, classes, rules, templates,
   entries, features) and join the stratum's `phonologicalRules`; a language still has one stratum and one
   character table.
+  The MPR feature groups are the exception to the suffix: HCLoader builds only `inflClasses`, `exceptionFeatures` and `lexEntryInflTypes`, so merged cells share ONE group of each of those names (the union of every cell's features) and only the feature ids are suffixed; a group named `exceptionFeatures_2` fails the producible-shape gate.
 - **A grammar with a feature system needs one more feature.** An unspecified feature matches anything, so a class
   or segment context of one cell accepts the other cells' segments (a first build without it mismatched nearly every
   word). Add one symbolic feature `cell` with one symbol per cell, give every segment its cell's value, and give every feature-defined natural class its cell's value too. A
