@@ -4,176 +4,396 @@
   <Language>
     <Name>TruncateRulesProbe</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="posV">
-        <Name>v</Name>
+      <PartOfSpeech id="posV_copy-u">
+        <Name>v_copy-u</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_subsumption">
+        <Name>v_subsumption</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_identity">
+        <Name>v_identity</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="featCons">
-        <Name>cons</Name>
+      <SymbolicFeature id="featCons_copy-u">
+        <Name>cons_copy-u</Name>
         <Symbols>
-          <Symbol id="symConsPlus">+</Symbol>
-          <Symbol id="symConsMinus">-</Symbol>
+          <Symbol id="symConsPlus_copy-u">+</Symbol>
+          <Symbol id="symConsMinus_copy-u">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featCont">
-        <Name>cont</Name>
+      <SymbolicFeature id="featCont_copy-u">
+        <Name>cont_copy-u</Name>
         <Symbols>
-          <Symbol id="symContPlus">+</Symbol>
-          <Symbol id="symContMinus">-</Symbol>
+          <Symbol id="symContPlus_copy-u">+</Symbol>
+          <Symbol id="symContMinus_copy-u">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featPlace">
-        <Name>place</Name>
+      <SymbolicFeature id="featPlace_copy-u">
+        <Name>place_copy-u</Name>
         <Symbols>
-          <Symbol id="symAlveolar">alveolar</Symbol>
-          <Symbol id="symVelar">velar</Symbol>
-          <Symbol id="symBilabial">bilabial</Symbol>
+          <Symbol id="symAlveolar_copy-u">alveolar</Symbol>
+          <Symbol id="symVelar_copy-u">velar</Symbol>
+          <Symbol id="symBilabial_copy-u">bilabial</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featHeight">
-        <Name>height</Name>
+      <SymbolicFeature id="featHeight_copy-u">
+        <Name>height_copy-u</Name>
         <Symbols>
-          <Symbol id="symLow">low</Symbol>
-          <Symbol id="symHigh">high</Symbol>
+          <Symbol id="symLow_copy-u">low</Symbol>
+          <Symbol id="symHigh_copy-u">high</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="featBack">
-        <Name>back</Name>
+      <SymbolicFeature id="featBack_copy-u">
+        <Name>back_copy-u</Name>
         <Symbols>
-          <Symbol id="symBackPlus">+</Symbol>
-          <Symbol id="symBackMinus">-</Symbol>
+          <Symbol id="symBackPlus_copy-u">+</Symbol>
+          <Symbol id="symBackMinus_copy-u">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_subsumption">
+        <Name>cons_subsumption</Name>
+        <Symbols>
+          <Symbol id="symConsPlus_subsumption">+</Symbol>
+          <Symbol id="symConsMinus_subsumption">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCont_subsumption">
+        <Name>cont_subsumption</Name>
+        <Symbols>
+          <Symbol id="symContPlus_subsumption">+</Symbol>
+          <Symbol id="symContMinus_subsumption">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featPlace_subsumption">
+        <Name>place_subsumption</Name>
+        <Symbols>
+          <Symbol id="symAlveolar_subsumption">alveolar</Symbol>
+          <Symbol id="symVelar_subsumption">velar</Symbol>
+          <Symbol id="symBilabial_subsumption">bilabial</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHeight_subsumption">
+        <Name>height_subsumption</Name>
+        <Symbols>
+          <Symbol id="symLow_subsumption">low</Symbol>
+          <Symbol id="symHigh_subsumption">high</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_subsumption">
+        <Name>back_subsumption</Name>
+        <Symbols>
+          <Symbol id="symBackPlus_subsumption">+</Symbol>
+          <Symbol id="symBackMinus_subsumption">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCons_identity">
+        <Name>cons_identity</Name>
+        <Symbols>
+          <Symbol id="symConsPlus_identity">+</Symbol>
+          <Symbol id="symConsMinus_identity">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featCont_identity">
+        <Name>cont_identity</Name>
+        <Symbols>
+          <Symbol id="symContPlus_identity">+</Symbol>
+          <Symbol id="symContMinus_identity">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featPlace_identity">
+        <Name>place_identity</Name>
+        <Symbols>
+          <Symbol id="symAlveolar_identity">alveolar</Symbol>
+          <Symbol id="symVelar_identity">velar</Symbol>
+          <Symbol id="symBilabial_identity">bilabial</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featHeight_identity">
+        <Name>height_identity</Name>
+        <Symbols>
+          <Symbol id="symLow_identity">low</Symbol>
+          <Symbol id="symHigh_identity">high</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featBack_identity">
+        <Name>back_identity</Name>
+        <Symbols>
+          <Symbol id="symBackPlus_identity">+</Symbol>
+          <Symbol id="symBackMinus_identity">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_copy-u">cell copy-u</Symbol>
+          <Symbol id="cell_subsumption">cell subsumption</Symbol>
+          <Symbol id="cell_identity">cell identity</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <HeadFeatures />
-    <CharacterDefinitionTable id="table1">
-      <Name>Main</Name>
+    <HeadFeatures/>
+    <CharacterDefinitionTable id="table1_copy-u">
+      <Name>Main_copy-u</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="charS">
+        <SegmentDefinition id="charS_copy-u">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="symConsPlus" />
-          <FeatureValue feature="featCont" symbolValues="symContPlus" />
-          <FeatureValue feature="featPlace" symbolValues="symAlveolar" />
+          <FeatureValue feature="featCons_copy-u" symbolValues="symConsPlus_copy-u"/>
+          <FeatureValue feature="featCont_copy-u" symbolValues="symContPlus_copy-u"/>
+          <FeatureValue feature="featPlace_copy-u" symbolValues="symAlveolar_copy-u"/>
+          <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
         </SegmentDefinition>
-        <SegmentDefinition id="charG">
+        <SegmentDefinition id="charG_copy-u">
           <Representations>
             <Representation>g</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="symConsPlus" />
-          <FeatureValue feature="featCont" symbolValues="symContMinus" />
-          <FeatureValue feature="featPlace" symbolValues="symVelar" />
+          <FeatureValue feature="featCons_copy-u" symbolValues="symConsPlus_copy-u"/>
+          <FeatureValue feature="featCont_copy-u" symbolValues="symContMinus_copy-u"/>
+          <FeatureValue feature="featPlace_copy-u" symbolValues="symVelar_copy-u"/>
+          <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
         </SegmentDefinition>
-        <SegmentDefinition id="charB">
+        <SegmentDefinition id="charB_copy-u">
           <Representations>
             <Representation>b</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="symConsPlus" />
-          <FeatureValue feature="featCont" symbolValues="symContMinus" />
-          <FeatureValue feature="featPlace" symbolValues="symBilabial" />
+          <FeatureValue feature="featCons_copy-u" symbolValues="symConsPlus_copy-u"/>
+          <FeatureValue feature="featCont_copy-u" symbolValues="symContMinus_copy-u"/>
+          <FeatureValue feature="featPlace_copy-u" symbolValues="symBilabial_copy-u"/>
+          <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
         </SegmentDefinition>
-        <SegmentDefinition id="charA">
+        <SegmentDefinition id="charA_copy-u">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="symConsMinus" />
-          <FeatureValue feature="featHeight" symbolValues="symLow" />
+          <FeatureValue feature="featCons_copy-u" symbolValues="symConsMinus_copy-u"/>
+          <FeatureValue feature="featHeight_copy-u" symbolValues="symLow_copy-u"/>
+          <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
         </SegmentDefinition>
-        <SegmentDefinition id="charU">
+        <SegmentDefinition id="charU_copy-u">
           <Representations>
             <Representation>u</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="symConsMinus" />
-          <FeatureValue feature="featHeight" symbolValues="symHigh" />
-          <FeatureValue feature="featBack" symbolValues="symBackPlus" />
+          <FeatureValue feature="featCons_copy-u" symbolValues="symConsMinus_copy-u"/>
+          <FeatureValue feature="featHeight_copy-u" symbolValues="symHigh_copy-u"/>
+          <FeatureValue feature="featBack_copy-u" symbolValues="symBackPlus_copy-u"/>
+          <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
         </SegmentDefinition>
-        <SegmentDefinition id="charI">
+        <SegmentDefinition id="charI_copy-u">
           <Representations>
             <Representation>i</Representation>
           </Representations>
-          <FeatureValue feature="featCons" symbolValues="symConsMinus" />
-          <FeatureValue feature="featHeight" symbolValues="symHigh" />
-          <FeatureValue feature="featBack" symbolValues="symBackMinus" />
+          <FeatureValue feature="featCons_copy-u" symbolValues="symConsMinus_copy-u"/>
+          <FeatureValue feature="featHeight_copy-u" symbolValues="symHigh_copy-u"/>
+          <FeatureValue feature="featBack_copy-u" symbolValues="symBackMinus_copy-u"/>
+          <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charS_subsumption">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_subsumption" symbolValues="symConsPlus_subsumption"/>
+          <FeatureValue feature="featCont_subsumption" symbolValues="symContPlus_subsumption"/>
+          <FeatureValue feature="featPlace_subsumption" symbolValues="symAlveolar_subsumption"/>
+          <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charG_subsumption">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_subsumption" symbolValues="symConsPlus_subsumption"/>
+          <FeatureValue feature="featCont_subsumption" symbolValues="symContMinus_subsumption"/>
+          <FeatureValue feature="featPlace_subsumption" symbolValues="symVelar_subsumption"/>
+          <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charB_subsumption">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_subsumption" symbolValues="symConsPlus_subsumption"/>
+          <FeatureValue feature="featCont_subsumption" symbolValues="symContMinus_subsumption"/>
+          <FeatureValue feature="featPlace_subsumption" symbolValues="symBilabial_subsumption"/>
+          <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charA_subsumption">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_subsumption" symbolValues="symConsMinus_subsumption"/>
+          <FeatureValue feature="featHeight_subsumption" symbolValues="symLow_subsumption"/>
+          <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charU_subsumption">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_subsumption" symbolValues="symConsMinus_subsumption"/>
+          <FeatureValue feature="featHeight_subsumption" symbolValues="symHigh_subsumption"/>
+          <FeatureValue feature="featBack_subsumption" symbolValues="symBackPlus_subsumption"/>
+          <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charI_subsumption">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_subsumption" symbolValues="symConsMinus_subsumption"/>
+          <FeatureValue feature="featHeight_subsumption" symbolValues="symHigh_subsumption"/>
+          <FeatureValue feature="featBack_subsumption" symbolValues="symBackMinus_subsumption"/>
+          <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charS_identity">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_identity" symbolValues="symConsPlus_identity"/>
+          <FeatureValue feature="featCont_identity" symbolValues="symContPlus_identity"/>
+          <FeatureValue feature="featPlace_identity" symbolValues="symAlveolar_identity"/>
+          <FeatureValue feature="cell" symbolValues="cell_identity"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charG_identity">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_identity" symbolValues="symConsPlus_identity"/>
+          <FeatureValue feature="featCont_identity" symbolValues="symContMinus_identity"/>
+          <FeatureValue feature="featPlace_identity" symbolValues="symVelar_identity"/>
+          <FeatureValue feature="cell" symbolValues="cell_identity"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charB_identity">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_identity" symbolValues="symConsPlus_identity"/>
+          <FeatureValue feature="featCont_identity" symbolValues="symContMinus_identity"/>
+          <FeatureValue feature="featPlace_identity" symbolValues="symBilabial_identity"/>
+          <FeatureValue feature="cell" symbolValues="cell_identity"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charA_identity">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_identity" symbolValues="symConsMinus_identity"/>
+          <FeatureValue feature="featHeight_identity" symbolValues="symLow_identity"/>
+          <FeatureValue feature="cell" symbolValues="cell_identity"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charU_identity">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_identity" symbolValues="symConsMinus_identity"/>
+          <FeatureValue feature="featHeight_identity" symbolValues="symHigh_identity"/>
+          <FeatureValue feature="featBack_identity" symbolValues="symBackPlus_identity"/>
+          <FeatureValue feature="cell" symbolValues="cell_identity"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="charI_identity">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="featCons_identity" symbolValues="symConsMinus_identity"/>
+          <FeatureValue feature="featHeight_identity" symbolValues="symHigh_identity"/>
+          <FeatureValue feature="featBack_identity" symbolValues="symBackMinus_identity"/>
+          <FeatureValue feature="cell" symbolValues="cell_identity"/>
         </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="ncAny">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="ncAny_copy-u">
+        <Name>Any_copy-u</Name>
+        <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
       </FeatureNaturalClass>
-      <FeatureNaturalClass id="ncFricative">
-        <Name>Fricative</Name>
-        <FeatureValue feature="featCons" symbolValues="symConsPlus" />
-        <FeatureValue feature="featCont" symbolValues="symContPlus" />
+      <FeatureNaturalClass id="ncFricative_copy-u">
+        <Name>Fricative_copy-u</Name>
+        <FeatureValue feature="featCons_copy-u" symbolValues="symConsPlus_copy-u"/>
+        <FeatureValue feature="featCont_copy-u" symbolValues="symContPlus_copy-u"/>
+        <FeatureValue feature="cell" symbolValues="cell_copy-u"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_subsumption">
+        <Name>Any_subsumption</Name>
+        <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncFricative_subsumption">
+        <Name>Fricative_subsumption</Name>
+        <FeatureValue feature="featCons_subsumption" symbolValues="symConsPlus_subsumption"/>
+        <FeatureValue feature="featCont_subsumption" symbolValues="symContPlus_subsumption"/>
+        <FeatureValue feature="cell" symbolValues="cell_subsumption"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_identity">
+        <Name>Any_identity</Name>
+        <FeatureValue feature="cell" symbolValues="cell_identity"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncFricative_identity">
+        <Name>Fricative_identity</Name>
+        <FeatureValue feature="featCons_identity" symbolValues="symConsPlus_identity"/>
+        <FeatureValue feature="featCont_identity" symbolValues="symContPlus_identity"/>
+        <FeatureValue feature="cell" symbolValues="cell_identity"/>
       </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="mruleTruncTrail mruleTruncLead mruleTruncOptIns mrU">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="table1_copy-u" morphologicalRuleOrder="unordered" morphologicalRules="mruleTruncTrail_copy-u mruleTruncLead_copy-u mruleTruncOptIns_copy-u mrU_copy-u mruleTruncLead_subsumption mruleTruncOptIns_subsumption mrulePrefixX_subsumption mruleTruncTrail_identity mruleTruncLead_identity mruleTruncOptIns_identity">
+        <Name>Main_copy-u</Name>
         <MorphologicalRuleDefinitions>
           <!-- case A: truncate a trailing segment matched by LITERAL identity (Segment, not SimpleContext) -->
-          <MorphologicalRule id="mruleTruncTrail" requiredPartsOfSpeech="posV">
-            <Name>truncate_trail_literal</Name>
+          <MorphologicalRule id="mruleTruncTrail_copy-u" requiredPartsOfSpeech="posV_copy-u">
+            <Name>truncate_trail_literal_copy-u</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="msubTruncTrail">
+              <MorphologicalSubrule id="msubTruncTrail_copy-u">
                 <MorphologicalInput>
-                  <PhoneticSequence id="ptt1">
+                  <PhoneticSequence id="ptt1_copy-u">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="ncAny" />
+                      <SimpleContext naturalClass="ncAny_copy-u"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
-                  <PhoneticSequence id="ptt2">
-                    <Segment segment="charG" />
+                  <PhoneticSequence id="ptt2_copy-u">
+                    <Segment segment="charG_copy-u"/>
                   </PhoneticSequence>
                 </MorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="ptt1" />
+                  <CopyFromInput index="ptt1_copy-u"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>A</MorphemeId>
+            <MorphemeId>A_copy-u</MorphemeId>
             <Gloss>3SGA</Gloss>
           </MorphologicalRule>
           <!-- case B: truncate a leading segment matched by a NATURAL CLASS (fricative) -->
-          <MorphologicalRule id="mruleTruncLead" requiredPartsOfSpeech="posV">
-            <Name>truncate_lead_class</Name>
+          <MorphologicalRule id="mruleTruncLead_copy-u" requiredPartsOfSpeech="posV_copy-u">
+            <Name>truncate_lead_class_copy-u</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="msubTruncLead">
+              <MorphologicalSubrule id="msubTruncLead_copy-u">
                 <MorphologicalInput>
-                  <PhoneticSequence id="ptl1">
-                    <SimpleContext naturalClass="ncFricative" />
+                  <PhoneticSequence id="ptl1_copy-u">
+                    <SimpleContext naturalClass="ncFricative_copy-u"/>
                   </PhoneticSequence>
-                  <PhoneticSequence id="ptl2">
+                  <PhoneticSequence id="ptl2_copy-u">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="ncAny" />
+                      <SimpleContext naturalClass="ncAny_copy-u"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="ptl2" />
+                  <CopyFromInput index="ptl2_copy-u"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>B</MorphemeId>
+            <MorphemeId>B_copy-u</MorphemeId>
             <Gloss>3SGB</Gloss>
           </MorphologicalRule>
           <!-- case C: OPTIONAL leading truncation combined with an insertion (deletion-only Rhs is not
                the only shape possible; this exercises Optional on the truncated part). -->
-          <MorphologicalRule id="mruleTruncOptIns" requiredPartsOfSpeech="posV">
-            <Name>truncate_optional_insert</Name>
+          <MorphologicalRule id="mruleTruncOptIns_copy-u" requiredPartsOfSpeech="posV_copy-u">
+            <Name>truncate_optional_insert_copy-u</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="msubTruncOptIns">
+              <MorphologicalSubrule id="msubTruncOptIns_copy-u">
                 <MorphologicalInput>
-                  <PhoneticSequence id="pto1">
+                  <PhoneticSequence id="pto1_copy-u">
                     <OptionalSegmentSequence min="0" max="1">
-                      <Segment segment="charS" />
+                      <Segment segment="charS_copy-u"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
-                  <PhoneticSequence id="pto2">
+                  <PhoneticSequence id="pto2_copy-u">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="ncAny" />
+                      <SimpleContext naturalClass="ncAny_copy-u"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -181,48 +401,248 @@
                   <InsertSegments>
                     <PhoneticShape>g</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="pto2" />
+                  <CopyFromInput index="pto2_copy-u"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>C</MorphemeId>
+            <MorphemeId>C_copy-u</MorphemeId>
             <Gloss>3SGC</Gloss>
           </MorphologicalRule>
-          <MorphologicalRule id="mrU" requiredPartsOfSpeech="posV">
-            <Name>copied_host_u_suffix</Name>
-            <MorphologicalSubrules><MorphologicalSubrule id="msubU">
-              <MorphologicalInput><PhoneticSequence id="pu1"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-              <MorphologicalOutput><CopyFromInput index="pu1" /><InsertSegments><PhoneticShape>u</PhoneticShape></InsertSegments></MorphologicalOutput>
-            </MorphologicalSubrule></MorphologicalSubrules>
-            <MorphemeId>U</MorphemeId><Gloss>U</Gloss>
+          <MorphologicalRule id="mrU_copy-u" requiredPartsOfSpeech="posV_copy-u">
+            <Name>copied_host_u_suffix_copy-u</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubU_copy-u">
+                <MorphologicalInput>
+                  <PhoneticSequence id="pu1_copy-u">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_copy-u"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="pu1_copy-u"/>
+                  <InsertSegments>
+                    <PhoneticShape>u</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>U_copy-u</MorphemeId>
+            <Gloss>U</Gloss>
+          </MorphologicalRule>
+          <!-- case A: truncate a trailing segment matched by LITERAL identity (Segment, not SimpleContext) -->
+          <!-- case B: truncate a leading segment matched by a NATURAL CLASS (fricative) -->
+          <MorphologicalRule id="mruleTruncLead_subsumption" requiredPartsOfSpeech="posV_subsumption">
+            <Name>truncate_lead_class_subsumption</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubTruncLead_subsumption">
+                <MorphologicalInput>
+                  <PhoneticSequence id="ptl1_subsumption">
+                    <SimpleContext naturalClass="ncFricative_subsumption"/>
+                  </PhoneticSequence>
+                  <PhoneticSequence id="ptl2_subsumption">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_subsumption"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="ptl2_subsumption"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>B_subsumption</MorphemeId>
+            <Gloss>3SGB</Gloss>
+          </MorphologicalRule>
+          <!-- case C: OPTIONAL leading truncation combined with an insertion (deletion-only Rhs is not
+               the only shape possible; this exercises Optional on the truncated part). -->
+          <MorphologicalRule id="mruleTruncOptIns_subsumption" requiredPartsOfSpeech="posV_subsumption">
+            <Name>truncate_optional_insert_subsumption</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubTruncOptIns_subsumption">
+                <MorphologicalInput>
+                  <PhoneticSequence id="pto1_subsumption">
+                    <OptionalSegmentSequence min="0" max="1">
+                      <Segment segment="charS_subsumption"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                  <PhoneticSequence id="pto2_subsumption">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_subsumption"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>h</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="pto2_subsumption"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>C_subsumption</MorphemeId>
+            <Gloss>3SGC</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrulePrefixX_subsumption" requiredPartsOfSpeech="posV_subsumption">
+            <Name>prefix_s_subsumption</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubPrefixX_subsumption">
+                <MorphologicalInput>
+                  <PhoneticSequence id="ptx1_subsumption">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_subsumption"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>k</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="ptx1_subsumption"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>X_subsumption</MorphemeId>
+            <Gloss>PREFIXS</Gloss>
+          </MorphologicalRule>
+          <!-- case A: truncate a trailing segment matched by LITERAL identity (Segment, not SimpleContext) -->
+          <MorphologicalRule id="mruleTruncTrail_identity" requiredPartsOfSpeech="posV_identity">
+            <Name>truncate_trail_literal_identity</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubTruncTrail_identity">
+                <MorphologicalInput>
+                  <PhoneticSequence id="ptt1_identity">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_identity"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                  <PhoneticSequence id="ptt2_identity">
+                    <Segment segment="charG_identity"/>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="ptt1_identity"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>A_identity</MorphemeId>
+            <Gloss>3SGA</Gloss>
+          </MorphologicalRule>
+          <!-- case B: truncate a leading segment matched by a NATURAL CLASS (fricative) -->
+          <MorphologicalRule id="mruleTruncLead_identity" requiredPartsOfSpeech="posV_identity">
+            <Name>truncate_lead_class_identity</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubTruncLead_identity">
+                <MorphologicalInput>
+                  <PhoneticSequence id="ptl1_identity">
+                    <SimpleContext naturalClass="ncFricative_identity"/>
+                  </PhoneticSequence>
+                  <PhoneticSequence id="ptl2_identity">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_identity"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="ptl2_identity"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>B_identity</MorphemeId>
+            <Gloss>3SGB</Gloss>
+          </MorphologicalRule>
+          <!-- case C: OPTIONAL leading truncation combined with an insertion (deletion-only Rhs is not
+               the only shape possible; this exercises Optional on the truncated part). -->
+          <MorphologicalRule id="mruleTruncOptIns_identity" requiredPartsOfSpeech="posV_identity">
+            <Name>truncate_optional_insert_identity</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msubTruncOptIns_identity">
+                <MorphologicalInput>
+                  <PhoneticSequence id="pto1_identity">
+                    <OptionalSegmentSequence min="0" max="1">
+                      <Segment segment="charS_identity"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                  <PhoneticSequence id="pto2_identity">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_identity"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>o</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="pto2_identity"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>C_identity</MorphemeId>
+            <Gloss>3SGC</Gloss>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="root32" partOfSpeech="posV">
+          <LexicalEntry id="root32_copy-u" partOfSpeech="posV_copy-u">
             <Allomorphs>
-              <Allomorph id="root32_1">
+              <Allomorph id="root32_1_copy-u">
                 <PhoneticShape>sag</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ROOT</MorphemeId>
+            <MorphemeId>ROOT_copy-u</MorphemeId>
             <Gloss>32</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="root33" partOfSpeech="posV">
+          <LexicalEntry id="root33_copy-u" partOfSpeech="posV_copy-u">
             <Allomorphs>
-              <Allomorph id="root33_1">
+              <Allomorph id="root33_1_copy-u">
                 <PhoneticShape>sas</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ROOT33</MorphemeId>
+            <MorphemeId>ROOT33_copy-u</MorphemeId>
             <Gloss>33</Gloss>
           </LexicalEntry>
-          <LexicalEntry id="root42" partOfSpeech="posV">
+          <LexicalEntry id="root42_copy-u" partOfSpeech="posV_copy-u">
             <Allomorphs>
-              <Allomorph id="root42_1">
+              <Allomorph id="root42_1_copy-u">
                 <PhoneticShape>bubibi</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>ROOT42</MorphemeId>
+            <MorphemeId>ROOT42_copy-u</MorphemeId>
+            <Gloss>42</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="root32_subsumption" partOfSpeech="posV_subsumption">
+            <Allomorphs>
+              <Allomorph id="root32_1_subsumption">
+                <PhoneticShape>dh</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOTAG_subsumption</MorphemeId>
+            <Gloss>ROOTAG</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="root32_identity" partOfSpeech="posV_identity">
+            <Allomorphs>
+              <Allomorph id="root32_1_identity">
+                <PhoneticShape>qmo</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_identity</MorphemeId>
+            <Gloss>32</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="root33_identity" partOfSpeech="posV_identity">
+            <Allomorphs>
+              <Allomorph id="root33_1_identity">
+                <PhoneticShape>qmq</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT33_identity</MorphemeId>
+            <Gloss>33</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="root42_identity" partOfSpeech="posV_identity">
+            <Allomorphs>
+              <Allomorph id="root42_1_identity">
+                <PhoneticShape>nrnpnp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT42_identity</MorphemeId>
             <Gloss>42</Gloss>
           </LexicalEntry>
         </LexicalEntries>

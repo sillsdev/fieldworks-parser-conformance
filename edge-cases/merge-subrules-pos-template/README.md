@@ -16,6 +16,6 @@ The grammar declares a shared symbolic feature `cell` and every segment carries 
 
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv`.
 
-Signatures were taken from the C# reference (hc-conformance self-check, `--propose`), as the members' were from the integrate-conformance-framework head (sillsdev/machine PR #480). PanGloss separately keeps strategy-specific complete-identity assertions for all three orders; individual FST strategies may intentionally refuse an order that another strategy covers. Synthetic part-of-speech-gated syllabary merge, not modeling any real language.
+Signatures were taken from the C# reference (hc-conformance self-check, `--propose`), as the members' were from the integrate-conformance-framework head. PanGloss separately keeps strategy-specific complete-identity assertions for all three orders; individual FST strategies may intentionally refuse an order that another strategy covers. Synthetic part-of-speech-gated syllabary merge, not modeling any real language.
 
 FieldWorks producibility is read from `HCLoader.cs`; no `fieldworks/` witness is claimed.

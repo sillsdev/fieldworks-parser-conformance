@@ -1,6 +1,6 @@
 # circumfix-cross-product-and-infix-drop: provenance and regression rationale
 
-Graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480).
+Graduated from PanGloss staging into this suite.
 The ordered words, statuses and complete analysis-signature multiplicities are preserved.
 Grammar preparation adds missing external DTD declarations and, where needed, consistently
 renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable IDs and references
@@ -82,7 +82,7 @@ authoring, both empirically (against the real `pg_parse::Morpher`, not by inspec
 Given both real, proven mechanisms for asymmetric per-side conditioning either don't fire during
 analysis for this shape (1) or apply to the wrong span of a discontinuous morph (2), `mrCross`'s 4
 subrules are authored UNCONSTRAINED (identical `ncAny`-only stem patterns), matching
-`circumfix-non-first-allomorph-selection`'s own proven 2-subrule pattern exactly, just scaled to
+cell `non-first-allomorph` of `circumfix-infix-interior-action-precedence`'s own proven 2-subrule pattern exactly, just scaled to
 4. The literal `pa`/`ma`/`-an`/`-in` insert text alone already uniquely discriminates which
 subrule produced which of the 4 surface words at analysis time, so the test case still proves what
 task 2 actually needs: all 4 cross-product cells are individually admissible into

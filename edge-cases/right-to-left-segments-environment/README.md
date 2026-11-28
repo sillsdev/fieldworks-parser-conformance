@@ -10,6 +10,6 @@ lowers to).
   obligatory wherever its context matches.
 - `e`, `y`: `expect_fail`; no root produces either.
 
-Graduated from PanGloss staging in Machine PR #480. The grammar was once authored with an inline
+Graduated from PanGloss staging into this suite. The grammar was once authored with an inline
 `<Segments>` literal in the environment, a shape FieldWorks cannot write (README row 1); it is now
 the plain segment.

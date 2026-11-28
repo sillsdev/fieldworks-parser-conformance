@@ -1,8 +1,29 @@
 # adhoc-prohibition-variant-enclitic-first
 
+Test cases of one family (the grammars are the same shape and differ in one parameter each), folded into one grammar. This test case holds all 2 as cells, so it keeps the id of its first member; the other members' ids are in `docs/renames.tsv`.
+
+## Cells
+
+Each former test case is one **cell**: its own segments, natural classes, rules, entries and words, so cells cannot interact. Cell 1 keeps its letters; every later cell spells its segments with letters no other cell uses. Every grammar id, morpheme id and rule id in a cell ends in `_<cell>`, so a signature or a rule trace names its cell. Each word's `note` starts with `[cell <name>]`, and each word keeps its own behaviour label.
+
+| Cell | Former test case | What differs | Letters (former to cell) |
+|---|---|---|---|
+| `enclitic-first` | `edge-cases/adhoc-prohibition-variant-enclitic-first` | [XAmple] a morpheme prohibition that starts with an enclitic, over a stem that has a variant entry. | unchanged |
+| `main-first-enclitic` | `edge-cases/adhoc-prohibition-variant-main-first-enclitic` | [XAmple] a morpheme prohibition that ends with an enclitic, over a stem that has a variant entry. | `a`→`b`, `i`→`d`, `l`→`f`, `p`→`g`, `r`→`h`, `t`→`j` |
+
+Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv` (wave-2026-11-27-9). The expected rows are what C# HermitCrab returned on a fresh `hc-conformance --propose` run over the merged grammar and the cell-mapped word list (sillsdev/machine `d492d1005e18358f35d8b7b9527d01e1dac9e644`).
+
+## Former READMEs
+
+Each cell's own rationale, as it stood before the merge. Ids and letters in them are the former ones; the cell map above translates them.
+
+### Cell `enclitic-first`: former README of `adhoc-prohibition-variant-enclitic-first`
+
+### adhoc-prohibition-variant-enclitic-first
+
 Synthetic. An ad hoc MORPHEME prohibition whose first morpheme is an ENCLITIC and whose rest is the Verb MSA (and, by a second prohibition, the Noun MSA) of a stem entry that has a variant entry. HCLoader loads each FieldWorks enclitic entry twice, as a clitic MorphologicalRule (no part of speech, in the stratum named Clitics, applied from that stratum's rule list) and as a stem LexicalEntry copy in the same stratum, and loads the variant once per main MSA under the MAIN entry's MSA (LoadLexEntryOfVariant, HCLoader.cs:782-852). Each FieldWorks prohibition therefore becomes one MorphemeCoOccurrenceRule per cross-product choice of copies (LoadMorphemeCoOccurrenceRules, HCLoader.cs:2262-2290): the enclitic's rule copy and stem copy, each against the four stem copies (main and variant, Verb and Noun).
 
-## What it pins
+#### What it pins
 
 - `la`, `li`: parse as Noun and Verb (the variant li borrows both MSAs of la).
 - `lara`, `lira` (enclitic `=ra`, no prohibition): parse as Noun and Verb once the clitic rule `mrRa` applies.
@@ -10,24 +31,60 @@ Synthetic. An ad hoc MORPHEME prohibition whose first morpheme is an ENCLITIC an
 - `lapa`: enclitic-first prohibition on the main stem, Noun and Verb: no analysis.
 - `lipa`: the same prohibition must hold for the variant li: no analysis. Attaching the rules to the main entry only would parse `LAN+PA` and `LAV+PA`.
 
-Not covered here: the enclitic-first direction only; the main-first direction is `adhoc-prohibition-variant-main-first-enclitic`, and the allomorph-kind control is `adhoc-prohibition-allomorph-variant-control`.
+Not covered here: the enclitic-first direction only; the main-first direction is cell `main-first-enclitic` of this test case, and the allomorph-kind control is cell `allomorph-control` of `adhoc-prohibition-variant-msa-copies`.
 
-## Grammar shape
+#### Grammar shape
 
 `grammar.xml` is the per-copy form: the main stratum holds the stems (la, li and their Noun copies, and `ta`), and a second stratum named `Clitics` holds the enclitics, each as a clitic MorphologicalRule (`mrPa`, `mrRa`; no part of speech, listed in that stratum's `morphologicalRules`) beside a stem entry copy (`ePa`, `eRa`) carrying the same `MorphemeId` (HCLoader.cs:243-244, 300-305). No `isCliticRule` attribute is set: a rule is a clitic because its stratum is named Clitics, which is how HCLoader designates it. HCLoader makes three strata (Morphology, Clitics, Surface); this test case has two, Main and Clitics, and Surface would hold no rule here, so it is the Clitics designation that matches. There is no prefix and no affix template. The entry copies `ePa` and `eRa` can be stems too: the reference also parses `pa` and `ra` as bare words (the entry copy alone) and `papa`, `para` and `rapa` with the entry copy as the stem and the clitic rule on it, but no word in this test case pins those parses. For `lapa` and `lipa` the clitic rule copy is the load-bearing one: stripping the rules that name `ePa` changes nothing, and stripping the rules that name `mrPa` makes both words parse. The entry copies are kept because HCLoader emits them and the prohibitions are written in the per-copy form.
 
-## Reference
+#### Reference
 
 hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-31`.
 
-## FieldWorks source witness
+#### FieldWorks source witness
 
 `fieldworks/project.fwdata` is backed out of `grammar.xml` via LibLCM, not hand-edited: the `author` command of the PanGloss `xample-projector` tool (kept in the PanGloss repository, not here), extended with `--enclitic-of` (enclitic morph type entry per clitic rule; the PanGloss `xample-projector` carries the extension). FieldWorks 9.3.10.1452, LibLCM 11.0.0.55173.
 `author --grammar grammar.xml --name adhocprohibitionvariantencliticfirst --msa-copies eLaV,eLaN --variant-of eLiV=eLaV --variant-of eLiN=eLaN --enclitic-of ePa=mrPa --enclitic-of eRa=mrRa`
 `phonology-mutations.yaml` `base_sha256` matches the project; the `empty-phoneme-inventory` and `remove-r-only` cases ran through `mutate` (exit 0).
 
-## Verification
+#### Verification
 
 FieldWorks project through projector and hc.dll (FieldWorks 3.8.2.0 and the pinned build give the same counts), and `grammar.xml` through `hc-dotnet-wrapper.sh`: la/li 2 each, lara/lira 2 each, ta 1, tapa 1, lapa 0, lipa 0. Controls (not kept here): no prohibition: `lapa` and `lipa` parse twice each (Noun and Verb); variant copies omitted from the prohibition: `lapa` is 0 but `lipa` parses twice; the clitic rule copy `mrPa` omitted: `lapa` and `lipa` both parse twice, so the rule copy is the load-bearing one.
 
-Source: sillsdev/machine #480 (ad hoc prohibition conformance); the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
+Source: the ad hoc prohibition conformance of sillsdev/machine's integrate-conformance-framework head; the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.
+
+### Cell `main-first-enclitic`: former README of `adhoc-prohibition-variant-main-first-enclitic`
+
+### adhoc-prohibition-variant-main-first-enclitic
+
+Synthetic. An ad hoc MORPHEME prohibition whose first morpheme is the Verb MSA (and, by a second prohibition, the Noun MSA) of a stem entry that has a variant entry, and whose rest is an ENCLITIC. HCLoader loads each FieldWorks enclitic entry twice, as a clitic MorphologicalRule (no part of speech, in the stratum named Clitics, applied from that stratum's rule list) and as a stem LexicalEntry copy in the same stratum, and loads the variant once per main MSA under the MAIN entry's MSA (LoadLexEntryOfVariant, HCLoader.cs:782-852). Each FieldWorks prohibition therefore becomes one MorphemeCoOccurrenceRule per cross-product choice of copies (LoadMorphemeCoOccurrenceRules, HCLoader.cs:2262-2290): each of the four stem copies (main and variant, Verb and Noun) excludes both enclitic copies.
+
+#### What it pins
+
+- `la`, `li`: parse as Noun and Verb (the variant li borrows both MSAs of la).
+- `lara`, `lira` (enclitic `=ra`, no prohibition): parse as Noun and Verb once the clitic rule `mrRa` applies.
+- `ta`, `tapa`: the stem `ta`, named by no prohibition, parses bare and with `=pa` (`TA+PA`, once): `mrPa` is a live rule and `=pa` does attach, so the zeros below come from the prohibition.
+- `lapa`: main-first prohibition naming the enclitic as the rest of the morphemes: no analysis.
+- `lipa`: the same prohibition must hold for the variant li: no analysis.
+
+Not covered here: the main-first direction only; the enclitic-first direction is `adhoc-prohibition-variant-enclitic-first`.
+
+#### Grammar shape
+
+`grammar.xml` is the per-copy form: the main stratum holds the stems (la, li and their Noun copies, and `ta`), and a second stratum named `Clitics` holds the enclitics, each as a clitic MorphologicalRule (`mrPa`, `mrRa`; no part of speech, listed in that stratum's `morphologicalRules`) beside a stem entry copy (`ePa`, `eRa`) carrying the same `MorphemeId` (HCLoader.cs:243-244, 300-305). No `isCliticRule` attribute is set: a rule is a clitic because its stratum is named Clitics, which is how HCLoader designates it. HCLoader makes three strata (Morphology, Clitics, Surface); this test case has two, Main and Clitics, and Surface would hold no rule here, so it is the Clitics designation that matches. There is no prefix and no affix template. The entry copies `ePa` and `eRa` can be stems too: the reference also parses `pa` and `ra` as bare words (the entry copy alone) and `papa`, `para` and `rapa` with the entry copy as the stem and the clitic rule on it, but no word in this test case pins those parses. For `lapa` and `lipa` the clitic rule copy is the load-bearing one: stripping the rules that name `ePa` changes nothing, and stripping the rules that name `mrPa` makes both words parse. The entry copies are kept because HCLoader emits them and the prohibitions are written in the per-copy form.
+
+#### Reference
+
+hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-31`.
+
+#### FieldWorks source witness
+
+`fieldworks/project.fwdata` is backed out of `grammar.xml` via LibLCM, not hand-edited: the `author` command of the PanGloss `xample-projector` tool (kept in the PanGloss repository, not here), extended with `--enclitic-of` (enclitic morph type entry per clitic rule; the PanGloss `xample-projector` carries the extension). FieldWorks 9.3.10.1452, LibLCM 11.0.0.55173.
+`author --grammar grammar.xml --name adhocprohibitionvariantmainfirstenclitic --msa-copies eLaV,eLaN --variant-of eLiV=eLaV --variant-of eLiN=eLaN --enclitic-of ePa=mrPa --enclitic-of eRa=mrRa`
+`phonology-mutations.yaml` `base_sha256` matches the project; the `empty-phoneme-inventory` and `remove-r-only` cases ran through `mutate` (exit 0).
+
+#### Verification
+
+FieldWorks project through projector and hc.dll (FieldWorks 3.8.2.0 and the pinned build give the same counts), and `grammar.xml` through `hc-dotnet-wrapper.sh`: la/li 2 each, lara/lira 2 each, ta 1, tapa 1, lapa 0, lipa 0. Controls (not kept here): no prohibition: `lapa` and `lipa` parse twice each; variant copies omitted from the prohibition: `lapa` is 0 but `lipa` parses twice; the clitic rule copy `mrPa` omitted from the rest side: `lapa` and `lipa` both parse twice, so the rule copy is the load-bearing one.
+
+Source: the ad hoc prohibition conformance of sillsdev/machine's integrate-conformance-framework head; the PanGloss staging copy is conformance-staging/edge-cases in sillsdev/PanGloss.

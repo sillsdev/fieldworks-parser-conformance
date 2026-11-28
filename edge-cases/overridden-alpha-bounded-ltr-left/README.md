@@ -21,5 +21,5 @@ Reference: hc.dll, Machine `18cf242f`; 16 complete rows per cell, all recorded i
 Owner regression: PanGloss `docs/divergences/069-analysis-binds-overridden-alpha.md` (also 067).
 FieldWorks: `HCLoader.cs:2033-2067,2338-2344,2745-2770,2799-2808`.
 Upstream PR: none (Rust-only defect).
-Every cell was graduated from PanGloss staging into this suite (originally proposed as sillsdev/machine PR #480); the ordered words, statuses and analysis-signature multiplicities are preserved.
+Every cell was graduated from PanGloss staging into this suite; the ordered words, statuses and analysis-signature multiplicities are preserved.
 The expected rows are what C# HermitCrab returned on a fresh `hc-conformance --propose` run over the merged grammar and the cell-mapped word list (sillsdev/machine `d492d1005e18358f35d8b7b9527d01e1dac9e644`).

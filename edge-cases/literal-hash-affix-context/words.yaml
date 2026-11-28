@@ -1,75 +1,139 @@
-# Graduation rechecks complete word/status/signature multiplicities and rule traces.
-# Earlier provenance comments below describe the original authoring history.
 language: LiteralHashAffixContext
-inspired_by: ["synthetic prefix, suffix, and root-initial rewrite control"]
+inspired_by:
+  - synthetic prefix, suffix, and root-initial rewrite control
+  - word-edge rewrite on affix and root material
 sources:
-  - "PanGloss boundary-prefix-rule implementation brief"
-requires: [phonology]
+  - PanGloss boundary-prefix-rule implementation brief
+requires:
+  - phonology
 words:
   - word: ta
-    note: "A literal # boundary marker in the left context is not a word-edge anchor."
+    note: '[cell literal-hash] A literal # boundary marker in the left context is not a word-edge anchor.'
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+      - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: taa
-    note: The same literal-marker context must not rewrite a two-segment prefix either.
+    note: '[cell literal-hash] The same literal-marker context must not rewrite a two-segment prefix either.'
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+      - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ara
-    note: A prefix whose r is internal remains unchanged under the literal-marker rule.
+    note: '[cell literal-hash] A prefix whose r is internal remains unchanged under the literal-marker rule.'
     parses:
-      - signature: "PFX_AR+ROOT_A|ara"
-        rules: [mrPrefixAR]
+      - signature: PFX_AR_literal-hash+ROOT_A_literal-hash|ara
+        rules:
+          - mrPrefixAR_literal-hash
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ra
-    note: "The one-segment prefix and root-initial root remain unchanged because # is literal here."
+    note: '[cell literal-hash] The one-segment prefix and root-initial root remain unchanged because # is literal here.'
     parses:
-      - signature: "PFX_R+ROOT_A|ra"
-        rules: [mrPrefixR]
+      - signature: PFX_R_literal-hash+ROOT_A_literal-hash|ra
+        rules:
+          - mrPrefixR_literal-hash
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-      - signature: "ROOT_RA|ra"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+      - signature: ROOT_RA_literal-hash|ra
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+      - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: raa
-    note: "The two-segment r prefix remains unchanged when the literal # is absent from the shape."
+    note: '[cell literal-hash] The two-segment r prefix remains unchanged when the literal # is absent from the shape.'
     parses:
-      - signature: "PFX_RA+ROOT_A|raa"
-        rules: [mrPrefixRA]
+      - signature: PFX_RA_literal-hash+ROOT_A_literal-hash|raa
+        rules:
+          - mrPrefixRA_literal-hash
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: at
-    note: "A literal # boundary marker in the right context is not a word-edge anchor."
+    note: '[cell literal-hash] A literal # boundary marker in the right context is not a word-edge anchor.'
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+      - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: a
-    note: Bare root control.
+    note: '[cell literal-hash] Bare root control.'
     parses:
-      - signature: "ROOT_A|a"
+      - signature: ROOT_A_literal-hash|a
         rules: []
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+      - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ata
-    note: The internal r of the ar prefix remains literal under the left boundary context.
+    note: '[cell literal-hash] The internal r of the ar prefix remains literal under the left boundary context.'
     expect_fail: true
     exercises:
-      - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+      - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ar
-    note: The root-plus-suffix parses without the right literal # boundary marker.
+    note: '[cell literal-hash] The root-plus-suffix parses without the right literal'
     parses:
-      - signature: "ROOT_A+SFX_R|ar"
-        rules: [mrSuffixR]
+      - signature: ROOT_A_literal-hash+SFX_R_literal-hash|ar
+        rules:
+          - mrSuffixR_literal-hash
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: gb
+    note: '[cell word-boundary] Word-edge anchor applies to a one-segment prefix and a root-initial target.'
+    parses:
+      - signature: PFX_R_word-boundary+ROOT_A_word-boundary|gb
+        rules:
+          - mrPrefixR_word-boundary
+          - prInitial_word-boundary
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+      - signature: ROOT_RA_word-boundary|gb
+        rules:
+          - prInitial_word-boundary
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: gbb
+    note: '[cell word-boundary] Word-edge anchor applies to the first segment of a two-segment prefix.'
+    parses:
+      - signature: PFX_RA_word-boundary+ROOT_A_word-boundary|gbb
+        rules:
+          - mrPrefixRA_word-boundary
+          - prInitial_word-boundary
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bfb
+    note: '[cell word-boundary] The r internal to the two-segment ar prefix is not word-initial.'
+    parses:
+      - signature: PFX_AR_word-boundary+ROOT_A_word-boundary|bfb
+        rules:
+          - mrPrefixAR_word-boundary
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bg
+    note: '[cell word-boundary] Mirror case for a suffix-final r with a right word-edge anchor.'
+    parses:
+      - signature: ROOT_A_word-boundary+SFX_R_word-boundary|bg
+        rules:
+          - mrSuffixR_word-boundary
+          - prFinal_word-boundary
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: b
+    note: '[cell word-boundary] Bare root control.'
+    parses:
+      - signature: ROOT_A_word-boundary|b
+        rules: []
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: fb
+    note: '[cell word-boundary] The unchanged one-segment prefix and root-initial forms are rejected.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: fbb
+    note: '[cell word-boundary] The unchanged two-segment prefix form is rejected.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bgb
+    note: '[cell word-boundary] The internal r of the ar prefix must not be treated as word-initial.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: bf
+    note: '[cell word-boundary] The unchanged root-plus-suffix form is rejected.'
+    expect_fail: true
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)

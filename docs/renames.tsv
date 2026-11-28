@@ -111,3 +111,14 @@ edge-cases/spelling-coverage-compound-affixes	edge-cases/spelling-coverage-compo
 edge-cases/spelling-coverage-compound-prefix-feeds	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
 edge-cases/spelling-coverage-compound-suffix-feeds	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
 edge-cases/spelling-coverage-compound-depth-prefix-hop	edge-cases/spelling-coverage-compound-depth4		wave-2026-11-27-8
+edge-cases/adhoc-prohibition-affix-msa-copies	edge-cases/adhoc-prohibition-affix-environment-copies		wave-2026-11-27-9
+edge-cases/adhoc-prohibition-circumfix-pairings	edge-cases/adhoc-prohibition-affix-environment-copies		wave-2026-11-27-9
+edge-cases/adhoc-prohibition-stem-msa-copies	edge-cases/adhoc-prohibition-variant-msa-copies		wave-2026-11-27-9
+edge-cases/adhoc-prohibition-allomorph-variant-control	edge-cases/adhoc-prohibition-variant-msa-copies		wave-2026-11-27-9
+edge-cases/adhoc-prohibition-variant-main-first-enclitic	edge-cases/adhoc-prohibition-variant-enclitic-first		wave-2026-11-27-9
+edge-cases/boundary-leftover-in-narrowing-lhs-strrep	edge-cases/boundary-first-in-narrowing-lhs-strrep		wave-2026-11-27-9
+edge-cases/circumfix-non-first-allomorph-selection	edge-cases/circumfix-infix-interior-action-precedence		wave-2026-11-27-9
+edge-cases/circumfix-reduplication-precedence	edge-cases/circumfix-infix-interior-action-precedence		wave-2026-11-27-9
+edge-cases/truncate-morphotactic-subsumption	edge-cases/truncate-morphotactic-copy-u		wave-2026-11-27-9
+edge-cases/truncate-morphotactic-identity	edge-cases/truncate-morphotactic-copy-u		wave-2026-11-27-9
+edge-cases/word-boundary-affix-rewrite	edge-cases/literal-hash-affix-context		wave-2026-11-27-9

@@ -1,79 +1,165 @@
-# Replayed on hc.dll at Machine aab4c598 (see STAGING.md): the rows below are the oracle's own output.
-# Synthetic; no real language. The grammar is the per-copy form HCLoader emits for an enclitic entry (a clitic
-# rule of the Clitics stratum, without a part of speech, plus a stem entry copy) and a stem entry with two MoStemMsas (Verb, Noun) and a
-# variant entry that borrows both: the variant is loaded once per main MSA under the MAIN entry's MSA
-# (HCLoader.cs:782-852) and the two FieldWorks prohibitions become one rule per cross-product choice of copies: the enclitic's rule copy and stem copy, each against the four stem copies (main and variant, Verb and Noun)
-# (LoadMorphemeCoOccurrenceRules, HCLoader.cs:2262-2290). A loader that covered the main entry only still parses
-# the variant (lipa); one that skipped the enclitic's rule copy still parses both.
-# The variant copies carry the main entry's morpheme names, so only the shape tells la from li.
 language: AdhocProhibitionVariantEncliticFirst
-inspired_by: ["a morpheme prohibition whose first morpheme is an enclitic must hold for the variant entries that borrow the stem MSA it names"]
-sources: ["HCLoader.cs:782-852 (LoadLexEntryOfVariant)", "HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)"]
+inspired_by:
+  - a morpheme prohibition whose first morpheme is an enclitic must hold for the variant entries that borrow the stem MSA it names
+  - a morpheme prohibition that names an enclitic as the rest of morphemes must hold for the variant entries that borrow the stem MSA it starts from
+sources:
+  - HCLoader.cs:782-852 (LoadLexEntryOfVariant)
+  - HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)
 requires: []
 words:
   - word: la
-    note: >-
-      Control: bare main stem la parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell enclitic-first] Control: bare main stem la parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "LAN|la"
+      - signature: LAN_enclitic-first|la
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "LAV|la"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_enclitic-first|la
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: li
-    note: >-
-      Control: bare its variant li parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell enclitic-first] Control: bare its variant li parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "LAN|li"
+      - signature: LAN_enclitic-first|li
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "LAV|li"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_enclitic-first|li
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: lara
-    note: >-
-      Control: the enclitic =ra has no prohibition, so it attaches to the main stem as Noun and Verb.
+    note: '[cell enclitic-first] Control: the enclitic =ra has no prohibition, so it attaches to the main stem as Noun and Verb.'
     parses:
-      - signature: "LAN+RA|lara"
-        rules: [mrRa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "LAV+RA|lara"
-        rules: [mrRa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+      - signature: LAN_enclitic-first+RA_enclitic-first|lara
+        rules:
+          - mrRa_enclitic-first
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_enclitic-first+RA_enclitic-first|lara
+        rules:
+          - mrRa_enclitic-first
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: lira
-    note: >-
-      Control: =ra attaches to the variant li too.
+    note: '[cell enclitic-first] Control: =ra attaches to the variant li too.'
     parses:
-      - signature: "LAN+RA|lira"
-        rules: [mrRa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "LAV+RA|lira"
-        rules: [mrRa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+      - signature: LAN_enclitic-first+RA_enclitic-first|lira
+        rules:
+          - mrRa_enclitic-first
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_enclitic-first+RA_enclitic-first|lira
+        rules:
+          - mrRa_enclitic-first
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: ta
-    note: >-
-      Control: the stem ta, named by no prohibition, parses bare.
+    note: '[cell enclitic-first] Control: the stem ta, named by no prohibition, parses bare.'
     parses:
-      - signature: "TA|ta"
+      - signature: TA_enclitic-first|ta
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: tapa
-    note: >-
-      Control: the enclitic =pa attaches to a stem no prohibition names, so the clitic rule mrPa is live and the zeros for lapa and lipa come from the prohibition, not from =pa failing to attach.
+    note: '[cell enclitic-first] Control: the enclitic =pa attaches to a stem no prohibition names, so the clitic rule mrPa is live and the zeros for lapa and lipa come from the prohibition, not from =pa failing to attach.'
     parses:
-      - signature: "TA+PA|tapa"
-        rules: [mrPa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+      - signature: TA_enclitic-first+PA_enclitic-first|tapa
+        rules:
+          - mrPa_enclitic-first
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: lapa
-    note: >-
-      Enclitic first: the prohibition is declared on the enclitic =pa (first morpheme) and names the Verb MSA of la (rest of morphemes), plus a second one naming the Noun MSA. The main stem la with =pa, as Noun and as Verb: no analysis.
+    note: '[cell enclitic-first] Enclitic first: the prohibition is declared on the enclitic =pa (first morpheme) and names the Verb MSA of la (rest of morphemes), plus a second one naming the Noun MSA. The main stem la with =pa, as Noun and as Verb: no analysis.'
     expect_fail: true
-    blocked_by: [mrPa]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - mrPa_enclitic-first
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: lipa
-    note: >-
-      The same prohibitions must also hold for the variant li, which HCLoader registers under the main Noun and Verb MSAs: no analysis. Attaching the rules to the main entry only would parse LAN+PA and LAV+PA for lipa.
+    note: '[cell enclitic-first] The same prohibitions must also hold for the variant li, which HCLoader registers under the main Noun and Verb MSAs: no analysis. Attaching the rules to the main entry only would parse LAN+PA and LAV+PA for lipa.'
     expect_fail: true
-    blocked_by: [mrPa]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - mrPa_enclitic-first
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: fb
+    note: '[cell main-first-enclitic] Control: bare main stem la parses as both MSAs of the main entry, Noun and Verb.'
+    parses:
+      - signature: LAN_main-first-enclitic|fb
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_main-first-enclitic|fb
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: fd
+    note: '[cell main-first-enclitic] Control: bare its variant li parses as both MSAs of the main entry, Noun and Verb.'
+    parses:
+      - signature: LAN_main-first-enclitic|fd
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_main-first-enclitic|fd
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: fbhb
+    note: '[cell main-first-enclitic] Control: the enclitic =ra has no prohibition, so it attaches to the main stem as Noun and Verb.'
+    parses:
+      - signature: LAN_main-first-enclitic+RA_main-first-enclitic|fbhb
+        rules:
+          - mrRa_main-first-enclitic
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_main-first-enclitic+RA_main-first-enclitic|fbhb
+        rules:
+          - mrRa_main-first-enclitic
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: fdhb
+    note: '[cell main-first-enclitic] Control: =ra attaches to the variant li too.'
+    parses:
+      - signature: LAN_main-first-enclitic+RA_main-first-enclitic|fdhb
+        rules:
+          - mrRa_main-first-enclitic
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_main-first-enclitic+RA_main-first-enclitic|fdhb
+        rules:
+          - mrRa_main-first-enclitic
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: jb
+    note: '[cell main-first-enclitic] Control: the stem ta, named by no prohibition, parses bare.'
+    parses:
+      - signature: TA_main-first-enclitic|jb
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: jbgb
+    note: '[cell main-first-enclitic] Control: the enclitic =pa attaches to a stem no prohibition names, so the clitic rule mrPa is live and the zeros for lapa and lipa come from the prohibition, not from =pa failing to attach.'
+    parses:
+      - signature: TA_main-first-enclitic+PA_main-first-enclitic|jbgb
+        rules:
+          - mrPa_main-first-enclitic
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: fbgb
+    note: '[cell main-first-enclitic] Main first: the prohibition is declared on the Verb MSA of la (first morpheme) and names the enclitic =pa (rest of morphemes), plus a second one on its Noun MSA. The main stem la with =pa, as Noun and as Verb: no analysis.'
+    expect_fail: true
+    blocked_by:
+      - eLaV_main-first-enclitic
+      - eLaN_main-first-enclitic
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: fdgb
+    note: '[cell main-first-enclitic] The same prohibitions must also hold for the variant li, which HCLoader registers under the main Noun and Verb MSAs: no analysis. Attaching the rules to the main entry only would parse LAN+PA and LAV+PA for lipa.'
+    expect_fail: true
+    blocked_by:
+      - eLiV_main-first-enclitic
+      - eLiN_main-first-enclitic
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule

@@ -1,5 +1,5 @@
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
+# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head).
 #
 # Regression guard for the syllabary-style merge cascade (two narrowing rules with alpha variables,
 # one of them with a morpheme boundary in the middle of its target, the shape a real Fidel-type

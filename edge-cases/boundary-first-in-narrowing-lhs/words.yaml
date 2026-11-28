@@ -1,5 +1,5 @@
 # Signatures transcribed verbatim from the C# founding oracle (hc-conformance self-check, --propose)
-# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head, PR #480).
+# built from sillsdev/machine 18cf242f (the integrate-conformance-framework head).
 #
 # Regression guard: a narrowing rule whose target STARTS with a morpheme boundary, in a grammar
 # WITH a phonological feature system. prPostNasal: + b -> m / [+nas] _ (the suffix-initial b of

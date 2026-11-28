@@ -3,96 +3,498 @@
 <HermitCrabInput>
   <Language>
     <Name>LiteralHashAffixContext</Name>
-    <PartsOfSpeech><PartOfSpeech id="posDemo"><Name>demo</Name></PartOfSpeech></PartsOfSpeech>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posDemo_literal-hash">
+        <Name>demo_literal-hash</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posDemo_word-boundary">
+        <Name>demo_word-boundary</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="featFirst"><Name>first</Name><Symbols><Symbol id="symFirstPositive">positive</Symbol><Symbol id="symFirstNegative">negative</Symbol></Symbols></SymbolicFeature>
-      <SymbolicFeature id="featSecond"><Name>second</Name><Symbols><Symbol id="symSecondPositive">positive</Symbol><Symbol id="symSecondNegative">negative</Symbol></Symbols></SymbolicFeature>
+      <SymbolicFeature id="featFirst_literal-hash">
+        <Name>first_literal-hash</Name>
+        <Symbols>
+          <Symbol id="symFirstPositive_literal-hash">positive</Symbol>
+          <Symbol id="symFirstNegative_literal-hash">negative</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featSecond_literal-hash">
+        <Name>second_literal-hash</Name>
+        <Symbols>
+          <Symbol id="symSecondPositive_literal-hash">positive</Symbol>
+          <Symbol id="symSecondNegative_literal-hash">negative</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featFirst_word-boundary">
+        <Name>first_word-boundary</Name>
+        <Symbols>
+          <Symbol id="symFirstPositive_word-boundary">positive</Symbol>
+          <Symbol id="symFirstNegative_word-boundary">negative</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="featSecond_word-boundary">
+        <Name>second_word-boundary</Name>
+        <Symbols>
+          <Symbol id="symSecondPositive_word-boundary">positive</Symbol>
+          <Symbol id="symSecondNegative_word-boundary">negative</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_literal-hash">cell literal-hash</Symbol>
+          <Symbol id="cell_word-boundary">cell word-boundary</Symbol>
+        </Symbols>
+      </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="table1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="table1_literal-hash">
+      <Name>Main_literal-hash</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cR"><Representations><Representation>r</Representation></Representations><FeatureValue feature="featFirst" symbolValues="symFirstPositive" /><FeatureValue feature="featSecond" symbolValues="symSecondPositive" /></SegmentDefinition>
-        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations><FeatureValue feature="featFirst" symbolValues="symFirstNegative" /><FeatureValue feature="featSecond" symbolValues="symSecondPositive" /></SegmentDefinition>
-        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations><FeatureValue feature="featFirst" symbolValues="symFirstPositive" /><FeatureValue feature="featSecond" symbolValues="symSecondNegative" /></SegmentDefinition>
-        <SegmentDefinition id="cK"><Representations><Representation>k</Representation></Representations><FeatureValue feature="featFirst" symbolValues="symFirstNegative" /><FeatureValue feature="featSecond" symbolValues="symSecondNegative" /></SegmentDefinition>
+        <SegmentDefinition id="cR_literal-hash">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_literal-hash" symbolValues="symFirstPositive_literal-hash"/>
+          <FeatureValue feature="featSecond_literal-hash" symbolValues="symSecondPositive_literal-hash"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal-hash"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_literal-hash">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_literal-hash" symbolValues="symFirstNegative_literal-hash"/>
+          <FeatureValue feature="featSecond_literal-hash" symbolValues="symSecondPositive_literal-hash"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal-hash"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_literal-hash">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_literal-hash" symbolValues="symFirstPositive_literal-hash"/>
+          <FeatureValue feature="featSecond_literal-hash" symbolValues="symSecondNegative_literal-hash"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal-hash"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_literal-hash">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_literal-hash" symbolValues="symFirstNegative_literal-hash"/>
+          <FeatureValue feature="featSecond_literal-hash" symbolValues="symSecondNegative_literal-hash"/>
+          <FeatureValue feature="cell" symbolValues="cell_literal-hash"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cR_word-boundary">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_word-boundary" symbolValues="symFirstPositive_word-boundary"/>
+          <FeatureValue feature="featSecond_word-boundary" symbolValues="symSecondPositive_word-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_word-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_word-boundary">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_word-boundary" symbolValues="symFirstNegative_word-boundary"/>
+          <FeatureValue feature="featSecond_word-boundary" symbolValues="symSecondPositive_word-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_word-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_word-boundary">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_word-boundary" symbolValues="symFirstPositive_word-boundary"/>
+          <FeatureValue feature="featSecond_word-boundary" symbolValues="symSecondNegative_word-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_word-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cK_word-boundary">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="featFirst_word-boundary" symbolValues="symFirstNegative_word-boundary"/>
+          <FeatureValue feature="featSecond_word-boundary" symbolValues="symSecondNegative_word-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_word-boundary"/>
+        </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
-        <BoundaryDefinition id="cPlus"><Representations><Representation>+</Representation></Representations></BoundaryDefinition>
-        <BoundaryDefinition id="cHash"><Representations><Representation>#</Representation></Representations></BoundaryDefinition>
+        <BoundaryDefinition id="cPlus">
+          <Representations>
+            <Representation>+</Representation>
+          </Representations>
+        </BoundaryDefinition>
+        <BoundaryDefinition id="cHash">
+          <Representations>
+            <Representation>#</Representation>
+          </Representations>
+        </BoundaryDefinition>
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
-      <SegmentNaturalClass id="ncV"><Name>Vowel</Name><Segment segment="cA" /></SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_literal-hash">
+        <Name>Any_literal-hash</Name>
+        <FeatureValue feature="cell" symbolValues="cell_literal-hash"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncV_literal-hash">
+        <Name>Vowel_literal-hash</Name>
+        <Segment segment="cA_literal-hash"/>
+      </SegmentNaturalClass>
+      <FeatureNaturalClass id="ncAny_word-boundary">
+        <Name>Any_word-boundary</Name>
+        <FeatureValue feature="cell" symbolValues="cell_word-boundary"/>
+      </FeatureNaturalClass>
+      <SegmentNaturalClass id="ncV_word-boundary">
+        <Name>Vowel_word-boundary</Name>
+        <Segment segment="cA_word-boundary"/>
+      </SegmentNaturalClass>
     </NaturalClasses>
     <PhonologicalRuleDefinitions>
-      <PhonologicalRule id="prInitial">
-        <Name>r becomes t after a literal hash boundary before a vowel</Name>
-        <PhoneticInput><PhoneticSequence><Segment segment="cR" /></PhoneticSequence></PhoneticInput>
+      <PhonologicalRule id="prInitial_literal-hash">
+        <Name>r becomes t after a literal hash boundary before a vowel_literal-hash</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cR_literal-hash"/>
+          </PhoneticSequence>
+        </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
-            <PhoneticOutput><PhoneticSequence><Segment segment="cT" /></PhoneticSequence></PhoneticOutput>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cT_literal-hash"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
             <Environment>
-              <LeftEnvironment><PhoneticTemplate><PhoneticSequence><BoundaryMarker boundary="cHash" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment>
-              <RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncV" /></PhoneticSequence></PhoneticTemplate></RightEnvironment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <BoundaryMarker boundary="cHash"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal-hash"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
             </Environment>
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
-      <PhonologicalRule id="prFinal">
-        <Name>r becomes t before a literal hash boundary after a vowel</Name>
-        <PhoneticInput><PhoneticSequence><Segment segment="cR" /></PhoneticSequence></PhoneticInput>
+      <PhonologicalRule id="prFinal_literal-hash">
+        <Name>r becomes t before a literal hash boundary after a vowel_literal-hash</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cR_literal-hash"/>
+          </PhoneticSequence>
+        </PhoneticInput>
         <PhonologicalSubrules>
           <PhonologicalSubrule>
-            <PhoneticOutput><PhoneticSequence><Segment segment="cT" /></PhoneticSequence></PhoneticOutput>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cT_literal-hash"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
             <Environment>
-              <LeftEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="ncV" /></PhoneticSequence></PhoneticTemplate></LeftEnvironment>
-              <RightEnvironment><PhoneticTemplate><PhoneticSequence><BoundaryMarker boundary="cHash" /></PhoneticSequence></PhoneticTemplate></RightEnvironment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_literal-hash"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <BoundaryMarker boundary="cHash"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prInitial_word-boundary">
+        <Name>r becomes t word-initially before a vowel_word-boundary</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cR_word-boundary"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cT_word-boundary"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate initialBoundaryCondition="true">
+                  <PhoneticSequence/>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_word-boundary"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="prFinal_word-boundary">
+        <Name>r becomes t word-finally after a vowel_word-boundary</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <Segment segment="cR_word-boundary"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cT_word-boundary"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="ncV_word-boundary"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence/>
+                </PhoneticTemplate>
+              </RightEnvironment>
             </Environment>
           </PhonologicalSubrule>
         </PhonologicalSubrules>
       </PhonologicalRule>
     </PhonologicalRuleDefinitions>
     <Strata>
-      <Stratum characterDefinitionTable="table1" morphologicalRuleOrder="unordered" morphologicalRules="mrPrefixR mrPrefixRA mrPrefixAR mrSuffixR" phonologicalRules="prInitial prFinal">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="table1_literal-hash" morphologicalRuleOrder="unordered" morphologicalRules="mrPrefixR_literal-hash mrPrefixRA_literal-hash mrPrefixAR_literal-hash mrSuffixR_literal-hash mrPrefixR_word-boundary mrPrefixRA_word-boundary mrPrefixAR_word-boundary mrSuffixR_word-boundary" phonologicalRules="prInitial_literal-hash prFinal_literal-hash prInitial_word-boundary prFinal_word-boundary">
+        <Name>Main_literal-hash</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="mrPrefixR" requiredPartsOfSpeech="posDemo" outputPartOfSpeech="posDemo">
-            <Name>prefixR</Name>
-            <MorphologicalSubrules><MorphologicalSubrule id="msPrefixR">
-              <MorphologicalInput><PhoneticSequence id="stemPrefixR"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-              <MorphologicalOutput><InsertSegments><PhoneticShape>r</PhoneticShape></InsertSegments><CopyFromInput index="stemPrefixR" /></MorphologicalOutput>
-            </MorphologicalSubrule></MorphologicalSubrules>
-            <MorphemeId>PFX_R</MorphemeId><Gloss>prefix-r</Gloss>
+          <MorphologicalRule id="mrPrefixR_literal-hash" requiredPartsOfSpeech="posDemo_literal-hash" outputPartOfSpeech="posDemo_literal-hash">
+            <Name>prefixR_literal-hash</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msPrefixR_literal-hash">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPrefixR_literal-hash">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_literal-hash"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>r</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemPrefixR_literal-hash"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PFX_R_literal-hash</MorphemeId>
+            <Gloss>prefix-r</Gloss>
           </MorphologicalRule>
-          <MorphologicalRule id="mrPrefixRA" requiredPartsOfSpeech="posDemo" outputPartOfSpeech="posDemo">
-            <Name>prefixRA</Name>
-            <MorphologicalSubrules><MorphologicalSubrule id="msPrefixRA">
-              <MorphologicalInput><PhoneticSequence id="stemPrefixRA"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-              <MorphologicalOutput><InsertSegments><PhoneticShape>ra</PhoneticShape></InsertSegments><CopyFromInput index="stemPrefixRA" /></MorphologicalOutput>
-            </MorphologicalSubrule></MorphologicalSubrules>
-            <MorphemeId>PFX_RA</MorphemeId><Gloss>prefix-ra</Gloss>
+          <MorphologicalRule id="mrPrefixRA_literal-hash" requiredPartsOfSpeech="posDemo_literal-hash" outputPartOfSpeech="posDemo_literal-hash">
+            <Name>prefixRA_literal-hash</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msPrefixRA_literal-hash">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPrefixRA_literal-hash">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_literal-hash"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ra</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemPrefixRA_literal-hash"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PFX_RA_literal-hash</MorphemeId>
+            <Gloss>prefix-ra</Gloss>
           </MorphologicalRule>
-          <MorphologicalRule id="mrPrefixAR" requiredPartsOfSpeech="posDemo" outputPartOfSpeech="posDemo">
-            <Name>prefixAR</Name>
-            <MorphologicalSubrules><MorphologicalSubrule id="msPrefixAR">
-              <MorphologicalInput><PhoneticSequence id="stemPrefixAR"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-              <MorphologicalOutput><InsertSegments><PhoneticShape>ar</PhoneticShape></InsertSegments><CopyFromInput index="stemPrefixAR" /></MorphologicalOutput>
-            </MorphologicalSubrule></MorphologicalSubrules>
-            <MorphemeId>PFX_AR</MorphemeId><Gloss>prefix-ar</Gloss>
+          <MorphologicalRule id="mrPrefixAR_literal-hash" requiredPartsOfSpeech="posDemo_literal-hash" outputPartOfSpeech="posDemo_literal-hash">
+            <Name>prefixAR_literal-hash</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msPrefixAR_literal-hash">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPrefixAR_literal-hash">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_literal-hash"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ar</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemPrefixAR_literal-hash"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PFX_AR_literal-hash</MorphemeId>
+            <Gloss>prefix-ar</Gloss>
           </MorphologicalRule>
-          <MorphologicalRule id="mrSuffixR" requiredPartsOfSpeech="posDemo" outputPartOfSpeech="posDemo">
-            <Name>suffixR</Name>
-            <MorphologicalSubrules><MorphologicalSubrule id="msSuffixR">
-              <MorphologicalInput><PhoneticSequence id="stemSuffixR"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-              <MorphologicalOutput><CopyFromInput index="stemSuffixR" /><InsertSegments><PhoneticShape>r</PhoneticShape></InsertSegments></MorphologicalOutput>
-            </MorphologicalSubrule></MorphologicalSubrules>
-            <MorphemeId>SFX_R</MorphemeId><Gloss>suffix-r</Gloss>
+          <MorphologicalRule id="mrSuffixR_literal-hash" requiredPartsOfSpeech="posDemo_literal-hash" outputPartOfSpeech="posDemo_literal-hash">
+            <Name>suffixR_literal-hash</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msSuffixR_literal-hash">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemSuffixR_literal-hash">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_literal-hash"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemSuffixR_literal-hash"/>
+                  <InsertSegments>
+                    <PhoneticShape>r</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SFX_R_literal-hash</MorphemeId>
+            <Gloss>suffix-r</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrPrefixR_word-boundary" requiredPartsOfSpeech="posDemo_word-boundary" outputPartOfSpeech="posDemo_word-boundary">
+            <Name>prefixR_word-boundary</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msPrefixR_word-boundary">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPrefixR_word-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_word-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemPrefixR_word-boundary"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PFX_R_word-boundary</MorphemeId>
+            <Gloss>prefix-r</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrPrefixRA_word-boundary" requiredPartsOfSpeech="posDemo_word-boundary" outputPartOfSpeech="posDemo_word-boundary">
+            <Name>prefixRA_word-boundary</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msPrefixRA_word-boundary">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPrefixRA_word-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_word-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>fb</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemPrefixRA_word-boundary"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PFX_RA_word-boundary</MorphemeId>
+            <Gloss>prefix-ra</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrPrefixAR_word-boundary" requiredPartsOfSpeech="posDemo_word-boundary" outputPartOfSpeech="posDemo_word-boundary">
+            <Name>prefixAR_word-boundary</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msPrefixAR_word-boundary">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPrefixAR_word-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_word-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>bf</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stemPrefixAR_word-boundary"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PFX_AR_word-boundary</MorphemeId>
+            <Gloss>prefix-ar</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrSuffixR_word-boundary" requiredPartsOfSpeech="posDemo_word-boundary" outputPartOfSpeech="posDemo_word-boundary">
+            <Name>suffixR_word-boundary</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="msSuffixR_word-boundary">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemSuffixR_word-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_word-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemSuffixR_word-boundary"/>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SFX_R_word-boundary</MorphemeId>
+            <Gloss>suffix-r</Gloss>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="leA" partOfSpeech="posDemo"><Allomorphs><Allomorph id="alloA"><PhoneticShape>a</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ROOT_A</MorphemeId><Gloss>a</Gloss></LexicalEntry>
-          <LexicalEntry id="leRA" partOfSpeech="posDemo"><Allomorphs><Allomorph id="alloRA"><PhoneticShape>ra</PhoneticShape></Allomorph></Allomorphs><MorphemeId>ROOT_RA</MorphemeId><Gloss>ra</Gloss></LexicalEntry>
+          <LexicalEntry id="leA_literal-hash" partOfSpeech="posDemo_literal-hash">
+            <Allomorphs>
+              <Allomorph id="alloA_literal-hash">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_A_literal-hash</MorphemeId>
+            <Gloss>a</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="leRA_literal-hash" partOfSpeech="posDemo_literal-hash">
+            <Allomorphs>
+              <Allomorph id="alloRA_literal-hash">
+                <PhoneticShape>ra</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_RA_literal-hash</MorphemeId>
+            <Gloss>ra</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="leA_word-boundary" partOfSpeech="posDemo_word-boundary">
+            <Allomorphs>
+              <Allomorph id="alloA_word-boundary">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_A_word-boundary</MorphemeId>
+            <Gloss>a</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="leRA_word-boundary" partOfSpeech="posDemo_word-boundary">
+            <Allomorphs>
+              <Allomorph id="alloRA_word-boundary">
+                <PhoneticShape>fb</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_RA_word-boundary</MorphemeId>
+            <Gloss>ra</Gloss>
+          </LexicalEntry>
         </LexicalEntries>
       </Stratum>
     </Strata>

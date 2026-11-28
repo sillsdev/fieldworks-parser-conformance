@@ -3,16 +3,16 @@
 This note documents the two added words and why their expected signatures preserve repeated
 identities. The grammar is unchanged.
 
-## Provenance and #506 behavior
+## Provenance and fresh-process tie behavior
 
 The entries for `a` and `ga` are hand-derived from forward synthesis, not transcribed from the
-unpatched C# reference. At #480 head `fa8d9b25`, the C# parser
+unpatched C# reference. At head `fa8d9b25`, the C# parser
 occasionally loses tied, zero-width morph annotations when it copies a word (`Shape.CopyTo` reaches
 `AnnotationList.GetNodes` and `BidirList.Find`). The resulting signatures are nondeterministic even
 though the parser still returns two parses for `a` and five for `ga`. These rows intentionally make
-the pre-fix #506 conformance check fail on incomplete outputs; a run can pass by chance if it retains
-all annotations. Do not regenerate these expectations from an unpatched run. The underlying issue is
-[Machine #506](https://github.com/sillsdev/machine/issues/506).
+a conformance check on a build with the tie loss fail on incomplete outputs; a run can pass by chance if it retains
+all annotations. Do not regenerate these expectations from an unpatched run. The open investigation is
+[machine issue 506](https://github.com/sillsdev/machine/issues/506).
 
 The expected multiset was observed on the directional-boundary fix
 `d98d12a5`, based at
@@ -86,7 +86,7 @@ chains rather than inferring completeness from a parser's count.
 
 ## Runtime comparison recorded for this slice
 
-The unpatched #480 head returned `ok`, 2 parses for `a`, and 5 for `ga` in ten fresh parser loads,
+The unpatched head returned `ok`, 2 parses for `a`, and 5 for `ga` in ten fresh parser loads,
 but only 2/10 loads emitted both complete expected signature multisets. Other loads emitted `+|a`
 or `|a`, and/or `+|ga` among the five `ga` results. The isolated directional-boundary candidate
 returned the full multisets and the same seven application/morph-order identities on 10/10 loads.
@@ -112,6 +112,6 @@ consistently. The counterfactual ledger therefore retains this test case as an a
 that distinction. Construct claims still use the existing coarse truncation tag; its seven added
 parse claims are recorded as unmapped, without claiming new semantic coverage.
 
-## Merge with `truncate-morphotactic-identity`: interaction
+## Merge with the former `truncate-morphotactic-identity`: interaction
 
-Wave 1 (issue 69) proposed folding `truncate-morphotactic-identity` into this test case by giving this grammar the identity case's explicit `MorphemeId` values. That is not a clean merge. With the identity grammar and this word list, `hc-conformance --propose` at the reference commit changes 10 of the 11 existing results here (for example `sag` goes from `|sag` to `ROOT|sag`, `sa` from `+|sa` to `ROOT+A|sa`), because a signature is made of the morpheme ids. The two stay separate; the cannot-merge reason is interaction.
+Wave 1 (issue 69) proposed folding `truncate-morphotactic-identity` (now cell `identity` of `truncate-morphotactic-copy-u`) into this test case by giving this grammar the identity case's explicit `MorphemeId` values. That is not a clean merge. With the identity grammar and this word list, `hc-conformance --propose` at the reference commit changes 10 of the 11 existing results here (for example `sag` goes from `|sag` to `ROOT|sag`, `sa` from `+|sa` to `ROOT+A|sa`), because a signature is made of the morpheme ids. The two stay separate; the cannot-merge reason is interaction.
