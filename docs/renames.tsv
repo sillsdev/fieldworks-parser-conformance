@@ -97,3 +97,5 @@ edge-cases/spelling-coverage-compound-repeated-root	edge-cases/spelling-coverage
 edge-cases/spelling-coverage-compound-reversed-table	edge-cases/spelling-coverage-compound-allomorphs		wave-2026-11-27-6
 edge-cases/spelling-coverage-compound-depth-reordered-prefix	edge-cases/spelling-coverage-compound-depth-prefix-zone		wave-2026-11-27-6
 edge-cases/spelling-coverage-compound-multirule	edge-cases/spelling-coverage-compound-multirule-affixes		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-template	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
+edge-cases/spelling-coverage-compound-template-feeds	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
