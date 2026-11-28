@@ -18,103 +18,397 @@
       tada, tadi, taba and tabi must have no analysis; taga and tagi parse once each.
     -->
     <PartsOfSpeech>
-      <PartOfSpeech id="posV"><Name>v</Name></PartOfSpeech>
-      <PartOfSpeech id="posN"><Name>n</Name></PartOfSpeech>
+      <PartOfSpeech id="posV_variant-msa">
+        <Name>v_variant-msa</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_variant-msa">
+        <Name>n_variant-msa</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_stem-msa">
+        <Name>v_stem-msa</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_stem-msa">
+        <Name>n_stem-msa</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_allomorph-control">
+        <Name>v_allomorph-control</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posN_allomorph-control">
+        <Name>n_allomorph-control</Name>
+      </PartOfSpeech>
     </PartsOfSpeech>
-    <CharacterDefinitionTable id="t1">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t1_variant-msa">
+      <Name>Main_variant-msa</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cT"><Representations><Representation>t</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cD"><Representations><Representation>d</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cB"><Representations><Representation>b</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations></SegmentDefinition>
-        <SegmentDefinition id="cG"><Representations><Representation>g</Representation></Representations></SegmentDefinition>
+        <SegmentDefinition id="cT_variant-msa">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_variant-msa">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cD_variant-msa">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cB_variant-msa">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_variant-msa">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_variant-msa">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_stem-msa">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_stem-msa">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cD_stem-msa">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cB_stem-msa">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_stem-msa">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_allomorph-control">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_allomorph-control">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cL_allomorph-control">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_allomorph-control">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+        </SegmentDefinition>
       </SegmentDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_variant-msa">
+        <Name>Any_variant-msa</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_stem-msa">
+        <Name>Any_stem-msa</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_allomorph-control">
+        <Name>Any_allomorph-control</Name>
+      </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t1" morphologicalRuleOrder="unordered">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t1_variant-msa" morphologicalRuleOrder="unordered">
+        <Name>Main_variant-msa</Name>
         <MorphologicalRuleDefinitions>
-          <MorphologicalRule id="mrTa" requiredPartsOfSpeech="posV">
-            <Name>mrTa</Name>
+          <MorphologicalRule id="mrTa_variant-msa" requiredPartsOfSpeech="posV_variant-msa">
+            <Name>mrTa_variant-msa</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="subTa">
-                <MorphologicalInput><PhoneticSequence id="stem_subTa"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-                <MorphologicalOutput><InsertSegments><PhoneticShape>ta</PhoneticShape></InsertSegments><CopyFromInput index="stem_subTa" /></MorphologicalOutput>
+              <MorphologicalSubrule id="subTa_variant-msa">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa_variant-msa">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_variant-msa"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>ta</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa_variant-msa"/>
+                </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>TA</MorphemeId>
+            <MorphemeId>TA_variant-msa</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrTa_stem-msa" requiredPartsOfSpeech="posV_stem-msa">
+            <Name>mrTa_stem-msa</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTa_stem-msa">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa_stem-msa">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_stem-msa"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>mf</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa_stem-msa"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TA_stem-msa</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrTa_allomorph-control" requiredPartsOfSpeech="posV_allomorph-control">
+            <Name>mrTa_allomorph-control</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTa_allomorph-control">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stem_subTa_allomorph-control">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_allomorph-control"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>qn</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stem_subTa_allomorph-control"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TA_allomorph-control</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <AffixTemplates>
-          <AffixTemplate requiredPartsOfSpeech="posV">
-            <Name>verbTemplate</Name>
-            <Slot optional="true" morphologicalRules="mrTa">
-              <Name>prefixSlot</Name>
+          <AffixTemplate requiredPartsOfSpeech="posV_variant-msa">
+            <Name>verbTemplate_variant-msa</Name>
+            <Slot optional="true" morphologicalRules="mrTa_variant-msa">
+              <Name>prefixSlot_variant-msa</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_stem-msa">
+            <Name>verbTemplate_stem-msa</Name>
+            <Slot optional="true" morphologicalRules="mrTa_stem-msa">
+              <Name>prefixSlot_stem-msa</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_allomorph-control">
+            <Name>verbTemplate_allomorph-control</Name>
+            <Slot optional="true" morphologicalRules="mrTa_allomorph-control">
+              <Name>prefixSlot_allomorph-control</Name>
             </Slot>
           </AffixTemplate>
         </AffixTemplates>
         <LexicalEntries>
-          <LexicalEntry id="eDaV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aDaV"><PhoneticShape>da</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>DAV</MorphemeId>
+          <LexicalEntry id="eDaV_variant-msa" partOfSpeech="posV_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aDaV_variant-msa">
+                <PhoneticShape>da</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAV_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eDaN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aDaN"><PhoneticShape>da</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>DAN</MorphemeId>
+          <LexicalEntry id="eDaN_variant-msa" partOfSpeech="posN_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aDaN_variant-msa">
+                <PhoneticShape>da</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAN_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eBaV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aBaV"><PhoneticShape>ba</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>BAV</MorphemeId>
+          <LexicalEntry id="eBaV_variant-msa" partOfSpeech="posV_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aBaV_variant-msa">
+                <PhoneticShape>ba</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BAV_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eBaN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aBaN"><PhoneticShape>ba</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>BAN</MorphemeId>
+          <LexicalEntry id="eBaN_variant-msa" partOfSpeech="posN_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aBaN_variant-msa">
+                <PhoneticShape>ba</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BAN_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eGaV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aGaV"><PhoneticShape>ga</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>GAV</MorphemeId>
+          <LexicalEntry id="eGaV_variant-msa" partOfSpeech="posV_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aGaV_variant-msa">
+                <PhoneticShape>ga</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GAV_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eGaN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aGaN"><PhoneticShape>ga</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>GAN</MorphemeId>
+          <LexicalEntry id="eGaN_variant-msa" partOfSpeech="posN_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aGaN_variant-msa">
+                <PhoneticShape>ga</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GAN_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eDiV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aDiV"><PhoneticShape>di</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>DAV</MorphemeId>
+          <LexicalEntry id="eDiV_variant-msa" partOfSpeech="posV_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aDiV_variant-msa">
+                <PhoneticShape>di</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAV_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eDiN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aDiN"><PhoneticShape>di</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>DAN</MorphemeId>
+          <LexicalEntry id="eDiN_variant-msa" partOfSpeech="posN_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aDiN_variant-msa">
+                <PhoneticShape>di</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAN_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eBiV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aBiV"><PhoneticShape>bi</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>BAV</MorphemeId>
+          <LexicalEntry id="eBiV_variant-msa" partOfSpeech="posV_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aBiV_variant-msa">
+                <PhoneticShape>bi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BAV_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eBiN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aBiN"><PhoneticShape>bi</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>BAN</MorphemeId>
+          <LexicalEntry id="eBiN_variant-msa" partOfSpeech="posN_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aBiN_variant-msa">
+                <PhoneticShape>bi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BAN_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eGiV" partOfSpeech="posV">
-            <Allomorphs><Allomorph id="aGiV"><PhoneticShape>gi</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>GAV</MorphemeId>
+          <LexicalEntry id="eGiV_variant-msa" partOfSpeech="posV_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aGiV_variant-msa">
+                <PhoneticShape>gi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GAV_variant-msa</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="eGiN" partOfSpeech="posN">
-            <Allomorphs><Allomorph id="aGiN"><PhoneticShape>gi</PhoneticShape></Allomorph></Allomorphs>
-            <MorphemeId>GAN</MorphemeId>
+          <LexicalEntry id="eGiN_variant-msa" partOfSpeech="posN_variant-msa">
+            <Allomorphs>
+              <Allomorph id="aGiN_variant-msa">
+                <PhoneticShape>gi</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GAN_variant-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eDaV_stem-msa" partOfSpeech="posV_stem-msa">
+            <Allomorphs>
+              <Allomorph id="aDaV_stem-msa">
+                <PhoneticShape>jf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAV_stem-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eDaN_stem-msa" partOfSpeech="posN_stem-msa">
+            <Allomorphs>
+              <Allomorph id="aDaN_stem-msa">
+                <PhoneticShape>jf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAN_stem-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eBaV_stem-msa" partOfSpeech="posV_stem-msa">
+            <Allomorphs>
+              <Allomorph id="aBaV_stem-msa">
+                <PhoneticShape>hf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BAV_stem-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eBaN_stem-msa" partOfSpeech="posN_stem-msa">
+            <Allomorphs>
+              <Allomorph id="aBaN_stem-msa">
+                <PhoneticShape>hf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>BAN_stem-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eGaV_stem-msa" partOfSpeech="posV_stem-msa">
+            <Allomorphs>
+              <Allomorph id="aGaV_stem-msa">
+                <PhoneticShape>kf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GAV_stem-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eGaN_stem-msa" partOfSpeech="posN_stem-msa">
+            <Allomorphs>
+              <Allomorph id="aGaN_stem-msa">
+                <PhoneticShape>kf</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>GAN_stem-msa</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLaV_allomorph-control" partOfSpeech="posV_allomorph-control">
+            <Allomorphs>
+              <Allomorph id="aLaV_allomorph-control">
+                <PhoneticShape>pn</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAV_allomorph-control</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLaN_allomorph-control" partOfSpeech="posN_allomorph-control">
+            <Allomorphs>
+              <Allomorph id="aLaN_allomorph-control">
+                <PhoneticShape>pn</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAN_allomorph-control</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLiV_allomorph-control" partOfSpeech="posV_allomorph-control">
+            <Allomorphs>
+              <Allomorph id="aLiV_allomorph-control">
+                <PhoneticShape>po</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAV_allomorph-control</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="eLiN_allomorph-control" partOfSpeech="posN_allomorph-control">
+            <Allomorphs>
+              <Allomorph id="aLiN_allomorph-control">
+                <PhoneticShape>po</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LAN_allomorph-control</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>
     </Strata>
     <MorphemeCoOccurrenceRules>
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eDaV" otherMorphemes="mrTa" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eDiV" otherMorphemes="mrTa" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrTa" otherMorphemes="eBaV" adjacency="anywhere" />
-      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrTa" otherMorphemes="eBiV" adjacency="anywhere" />
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eDaV_variant-msa" otherMorphemes="mrTa_variant-msa" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="eDiV_variant-msa" otherMorphemes="mrTa_variant-msa" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrTa_variant-msa" otherMorphemes="eBaV_variant-msa" adjacency="anywhere"/>
+      <MorphemeCoOccurrenceRule type="exclude" primaryMorpheme="mrTa_variant-msa" otherMorphemes="eBiV_variant-msa" adjacency="anywhere"/>
     </MorphemeCoOccurrenceRules>
+    <AllomorphCoOccurrenceRules>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa_stem-msa" otherAllomorphs="aDaV_stem-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="subTa_stem-msa" otherAllomorphs="aDaN_stem-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBaV_stem-msa" otherAllomorphs="subTa_stem-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aBaN_stem-msa" otherAllomorphs="subTa_stem-msa" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aLiV_allomorph-control" otherAllomorphs="subTa_allomorph-control" adjacency="anywhere"/>
+      <AllomorphCoOccurrenceRule type="exclude" primaryAllomorph="aLiN_allomorph-control" otherAllomorphs="subTa_allomorph-control" adjacency="anywhere"/>
+    </AllomorphCoOccurrenceRules>
   </Language>
 </HermitCrabInput>

@@ -1,111 +1,215 @@
-# Replayed on hc.dll at Machine aab4c598 (see README.md): the rows below are the oracle's own output.
-# Synthetic; no real language. The grammar is the per-copy form HCLoader emits for a stem entry with
-# two MoStemMsas (Verb, Noun) and a variant entry that borrows both: the variant is loaded once per
-# main MSA, registered under the MAIN entry's MSA (HCLoader.cs:728-735, 782-852), and one
-# MorphemeCoOccurrenceRule is attached per copy (LoadMorphemeCoOccurrenceRules, HCLoader.cs:2262-2290).
-# A loader that attaches the rule to the main entry only still parses the variant (tadi, tabi).
-# The variant copies carry the main entry's morpheme names (HCLoader's gloss for a variant entry
-# without a variant type is the main MSA's gloss), so only the shape tells tada from tadi.
 language: AdhocProhibitionVariantMsaCopies
-inspired_by: ["a morpheme prohibition on a main entry's MSA must also hold for the variant entries that borrow that MSA"]
-sources: ["HCLoader.cs:728-735 (AddEntry)", "HCLoader.cs:782-852 (LoadLexEntryOfVariant)", "HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)"]
+inspired_by:
+  - a morpheme prohibition on a main entry's MSA must also hold for the variant entries that borrow that MSA
+  - a stem entry with a Verb MSA and a Noun MSA compiles to two lexical entries; an ad hoc allomorph prohibition names the one allomorph, and HCLoader attaches it to every copy (and to every copy on the rest side)
+  - an allomorph prohibition on a variant entry's allomorph must not reach the main entry that shares its MSAs
+sources:
+  - HCLoader.cs:728-735 (AddEntry)
+  - HCLoader.cs:782-852 (LoadLexEntryOfVariant)
+  - HCLoader.cs:2262-2290 (LoadMorphemeCoOccurrenceRules)
+  - HCLoader.cs:2163-2189 (LoadAllomorphCoOccurrenceRules)
+  - HCLoader.cs:2212-2236 (LoadAllomorphCoOccurrenceRules)
 requires: []
 words:
   - word: da
-    note: >-
-      Control: bare main stem da parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell variant-msa] Control: bare main stem da parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "DAN|da"
+      - signature: DAN_variant-msa|da
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "DAV|da"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: DAV_variant-msa|da
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: di
-    note: >-
-      Control: bare its variant di parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell variant-msa] Control: bare its variant di parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "DAN|di"
+      - signature: DAN_variant-msa|di
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "DAV|di"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: DAV_variant-msa|di
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: ba
-    note: >-
-      Control: bare main stem ba parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell variant-msa] Control: bare main stem ba parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "BAN|ba"
+      - signature: BAN_variant-msa|ba
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "BAV|ba"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: BAV_variant-msa|ba
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: bi
-    note: >-
-      Control: bare its variant bi parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell variant-msa] Control: bare its variant bi parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "BAN|bi"
+      - signature: BAN_variant-msa|bi
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "BAV|bi"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: BAV_variant-msa|bi
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: ga
-    note: >-
-      Control: bare main stem ga parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell variant-msa] Control: bare main stem ga parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "GAN|ga"
+      - signature: GAN_variant-msa|ga
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "GAV|ga"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: GAV_variant-msa|ga
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: gi
-    note: >-
-      Control: bare its variant gi parses as both MSAs of the main entry, Noun and Verb.
+    note: '[cell variant-msa] Control: bare its variant gi parses as both MSAs of the main entry, Noun and Verb.'
     parses:
-      - signature: "GAN|gi"
+      - signature: GAN_variant-msa|gi
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
-      - signature: "GAV|gi"
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: GAV_variant-msa|gi
         rules: []
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: taga
-    note: >-
-      Control: ga has no prohibition, so the Verb-only prefix attaches to its Verb copy.
+    note: '[cell variant-msa] Control: ga has no prohibition, so the Verb-only prefix attaches to its Verb copy.'
     parses:
-      - signature: "TA+GAV|taga"
-        rules: [mrTa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+      - signature: TA_variant-msa+GAV_variant-msa|taga
+        rules:
+          - mrTa_variant-msa
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: tagi
-    note: >-
-      Control: the variant gi has no prohibition either.
+    note: '[cell variant-msa] Control: the variant gi has no prohibition either.'
     parses:
-      - signature: "TA+GAV|tagi"
-        rules: [mrTa]
-        exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+      - signature: TA_variant-msa+GAV_variant-msa|tagi
+        rules:
+          - mrTa_variant-msa
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: tada
-    note: >-
-      Stem first: the prohibition is on the main Verb MSA of da, so it holds for the main Verb copy: no analysis.
+    note: '[cell variant-msa] Stem first: the prohibition is on the main Verb MSA of da, so it holds for the main Verb copy: no analysis.'
     expect_fail: true
-    blocked_by: [eDaV]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - eDaV_variant-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: tadi
-    note: >-
-      Stem first: the same prohibition must also hold for the variant di, which HCLoader registers under the main Verb MSA: no analysis. Attaching the rule to the main entry only would parse TA+DAV|tadi.
+    note: '[cell variant-msa] Stem first: the same prohibition must also hold for the variant di, which HCLoader registers under the main Verb MSA: no analysis. Attaching the rule to the main entry only would parse TA+DAV|tadi.'
     expect_fail: true
-    blocked_by: [eDiV]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - eDiV_variant-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: taba
-    note: >-
-      Prefix first: the prohibition ta- ~ main Verb MSA of ba is declared on the prefix, one rule per rest-side copy (main ba, variant bi): no analysis.
+    note: '[cell variant-msa] Prefix first: the prohibition ta- ~ main Verb MSA of ba is declared on the prefix, one rule per rest-side copy (main ba, variant bi): no analysis.'
     expect_fail: true
-    blocked_by: [mrTa]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - mrTa_variant-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
   - word: tabi
-    note: >-
-      Prefix first: the rest-side copy that is the variant bi is covered too: no analysis. Dropping the variant from the rest side would parse TA+BAV|tabi.
+    note: '[cell variant-msa] Prefix first: the rest-side copy that is the variant bi is covered too: no analysis. Dropping the variant from the rest side would parse TA+BAV|tabi.'
     expect_fail: true
-    blocked_by: [mrTa]
-    exercises: ["MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule"]
+    blocked_by:
+      - mrTa_variant-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: jf
+    note: '[cell stem-msa] Control: bare stem da parses as both of its MSAs, Noun and Verb.'
+    parses:
+      - signature: DAN_stem-msa|jf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: DAV_stem-msa|jf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: hf
+    note: '[cell stem-msa] Control: bare stem ba parses as both of its MSAs.'
+    parses:
+      - signature: BAN_stem-msa|hf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: BAV_stem-msa|hf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: kf
+    note: '[cell stem-msa] Control: stem ga, which has no prohibition, parses as both of its MSAs.'
+    parses:
+      - signature: GAN_stem-msa|kf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: GAV_stem-msa|kf
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: mfkf
+    note: '[cell stem-msa] Control: the Verb-only prefix ta- attaches to the Verb copy of ga (no prohibition on ga); the Noun copy is refused by the prefix''s Verb requirement.'
+    parses:
+      - signature: TA_stem-msa+GAV_stem-msa|mfkf
+        rules:
+          - mrTa_stem-msa
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: mfjf
+    note: '[cell stem-msa] Prefix first: the prohibition ta- ~ da is declared on the prefix allomorph with both stem copies on the rest side. The only candidate is prefix + Verb copy of da, which is excluded, so the word has no analysis.'
+    expect_fail: true
+    blocked_by:
+      - subTa_stem-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: mfhf
+    note: '[cell stem-msa] Stem first: the prohibition ba ~ ta- is declared on each stem copy (Verb and Noun) with the prefix allomorph on the rest side. The only candidate is prefix + Verb copy of ba, which is excluded, so the word has no analysis.'
+    expect_fail: true
+    blocked_by:
+      - aBaV_stem-msa
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: pn
+    note: '[cell allomorph-control] Control: bare main stem la parses as both MSAs of the main entry, Noun and Verb.'
+    parses:
+      - signature: LAN_allomorph-control|pn
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_allomorph-control|pn
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: po
+    note: '[cell allomorph-control] Control: bare its variant li parses as both MSAs of the main entry, Noun and Verb.'
+    parses:
+      - signature: LAN_allomorph-control|po
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+      - signature: LAV_allomorph-control|po
+        rules: []
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: qnpn
+    note: '[cell allomorph-control] Control: the prohibition names the variant allomorph only, so the Verb-only prefix still attaches to the main stem la.'
+    parses:
+      - signature: TA_allomorph-control+LAV_allomorph-control|qnpn
+        rules:
+          - mrTa_allomorph-control
+        exercises:
+          - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
+  - word: qnpo
+    note: '[cell allomorph-control] Variant allomorph first: the variant li under its Verb copy is excluded with ta-: no analysis. A loader that dropped the prohibition would parse TA+LAV|tali; one that spread it to the main entry would also lose tala.'
+    expect_fail: true
+    blocked_by:
+      - aLiV_allomorph-control
+    exercises:
+      - MorphemeCoOccurrenceRule/AllomorphCoOccurrenceRule
