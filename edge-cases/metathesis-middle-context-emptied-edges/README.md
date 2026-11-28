@@ -6,7 +6,7 @@ plus a deletion `pd0` (`a -> 0`), prefixes `PR0` (`s+`) and `PR1` (`p+`) and roo
 `AnalysisMetathesisRuleSpec` drops everything between the switch groups, so analysis looks for adjacent switches and
 cannot undo the swap. This is **divergence 127, sillsdev/machine#619** (open; PanGloss#388).
 
-The three rows are `expect_fail: true`: they pin what the C# oracle does today, which #619 calls a bug, and `status.yaml` gives the parses each should produce once #619 is fixed (`R0+PR0+PR1` and `R2+PR0+PR1`). `st` and `p+t` are controls. `st` has
+The three rows are `expect_fail: true`: they pin what the C# reference does today, which #619 calls a bug, and `status.yaml` gives the parses each should produce once #619 is fixed (`R0+PR0+PR1` and `R2+PR0+PR1`). `st` and `p+t` are controls. `st` has
 no middle segment, so `pr0` does not apply and the result is the same with or without the fix. The expectation was
 checked: building ba6dfa10 with the #619 fix (293f6f8d) makes the three words parse as above and leaves `st`
 unchanged. The grammar is the issue's own probe and is kept whole; the three words are rejected without `pd0` too, so

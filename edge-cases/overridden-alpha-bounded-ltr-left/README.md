@@ -17,7 +17,7 @@ The grammar declares a shared symbolic feature `cell`, every segment carries its
 
 Replay: every former word, mapped by its cell's letters and ids, returns the reference's result unchanged, and no word of one cell parses in another (`hc-conformance --propose` prints no patch). Former ids are in `docs/renames.tsv`.
 
-Founding oracle: hc.dll, Machine `18cf242f`; 16 complete rows per cell, all recorded in PanGloss `docs/divergences/evidence/069-overridden-alpha/`.
+Reference: hc.dll, Machine `18cf242f`; 16 complete rows per cell, all recorded in PanGloss `docs/divergences/evidence/069-overridden-alpha/`.
 Owner regression: PanGloss `docs/divergences/069-analysis-binds-overridden-alpha.md` (also 067).
 FieldWorks: `HCLoader.cs:2033-2067,2338-2344,2745-2770,2799-2808`.
 Upstream PR: none (Rust-only defect).

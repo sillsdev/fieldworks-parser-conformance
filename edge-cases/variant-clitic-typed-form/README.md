@@ -16,7 +16,7 @@ Without the rule, `take` and `keke` have no analysis; without the stem copy, `ke
 
 `grammar.xml` is the per-copy form: `Main` holds `ta`; a second stratum named `Clitics` holds the clitic rule `mrKe` (no part of speech, listed in that stratum's `morphologicalRules`) beside the stem copy `eKe` with the same `MorphemeId` as `ta`. No `isCliticRule` attribute is set: the rule is a clitic by its stratum's name. HCLoader also makes a Surface stratum, which would hold no rule here (the same two-stratum form as `adhoc-prohibition-variant-enclitic-first`). Nothing was converted from the staged grammar.
 
-## Oracle
+## Reference
 
 Every row was taken with `hc-conformance --propose` at sillsdev/machine `ba6dfa10` (tip of #615, the suite pin). The five staged rows, taken at `aab4c598`, replayed unchanged; `keta` is new.
 

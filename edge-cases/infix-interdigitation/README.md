@@ -7,28 +7,28 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: infix-interdigitation
 
-## Why this fixture exists
+## Why this test case exists
 
 Mimics two of the **templatic-Semitic** pathologies named in `docs/conformance-staging-plan.md`'s
 pathology catalog:
 
 1. **Infix interdigitation rules (`InsertSegments` around a root Copy).** `mrPfv`/`mrConv` each
    split the root after its first consonant and insert a literal marker in the gap — the same
-   mechanism `machine/conformance/languages/austronesian-phase`'s `mrInfixUm` (that fixture's own
+   mechanism `machine/conformance/languages/austronesian-phase`'s `mrInfixUm` (that test case's own
    infix, `-um-`) already exercises, here modeling templatic perfective/converb marking instead.
 2. **A merged letter-series (two unifiable `CharDef`s sharing a phoneme).** `cSTz`'s
    `SegmentDefinition` carries TWO `<Representation>` strings (U+1338 ጸ, U+1268 ፀ) for the SAME
    segment — the general "two graphemes, one phoneme" render-variant trap the project's own
-   pathology catalog names via a templatic-Semitic reference corpus's real ጸ/ፀ pair. No existing `machine/conformance` fixture
+   pathology catalog names via a templatic-Semitic reference corpus's real ጸ/ፀ pair. No existing `machine/conformance` test case
    declares more than one `<Representation>` per `SegmentDefinition` (checked: all 130 existing
-   `SegmentDefinition`/`BoundaryDefinition` blocks across every language/edge-case fixture carry
+   `SegmentDefinition`/`BoundaryDefinition` blocks across every language/edge-case test case carry
    exactly one), so this is new coverage — distinct from `edge-cases/strrep-identity`, which is
    about single-representation `StrRep` **identity** as a matching dimension on a feature-less
    grammar, not a many-representations-to-one-segment merge.
@@ -50,13 +50,13 @@ and no other segment in this small grammar shares that bundle. That bracket rend
 holding (both spellings collapse to "matches either representation of this one segment"), not an
 artifact to fix.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; `words.yaml` signatures captured by driving `pg_parse::Morpher::parse_word` directly (a
 throwaway in-repo test — see "Verification" below), no C# tool run available in this environment.
 Per `docs/conformance-staging-plan.md`'s oracle-discipline note, machine acceptance must re-verify
-against the C# founding oracle before graduation — the Unicode-representation-merge behavior in
+against the C# reference before graduation — the Unicode-representation-merge behavior in
 particular is worth an explicit C#-side re-check, since it touches character-table tokenization, an
 area where engine-specific implementation choices could plausibly diverge.
 
@@ -73,13 +73,13 @@ suite) — that test is what actually gates CI; the throwaway dump test was dele
 
 ## Graduation
 
-## Oracle provenance (reconciled 2026-08-31)
+## Reference provenance (reconciled 2026-08-31)
 
 
-ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde) directly against this fixture's
+ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# reference,
+machine commit caa4ddde) directly against this test case's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
-fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"
-section below describes how this fixture was originally authored, not its current verification
+test case's words.yaml now carries # oracle-provenance: reference. Any "Reference discipline"
+section below describes how this test case was originally authored, not its current verification
 status.

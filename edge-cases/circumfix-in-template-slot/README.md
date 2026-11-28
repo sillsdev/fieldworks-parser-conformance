@@ -7,27 +7,27 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: circumfix-in-template-slot
 
-## Why this fixture exists
+## Why this test case exists
 
 Pins a formerly unmeasured containment hole identified during backend-routing review. No existing
-fixture puts a genuinely circumfix-shaped `MorphologicalRule` (a subrule whose output is
+test case puts a genuinely circumfix-shaped `MorphologicalRule` (a subrule whose output is
 `[InsertSegments, CopyFromInput, InsertSegments]`, classifying `Role::CircumfixPrefix` per
 `crate::emit::rule_role`/`classify_affix`) inside an `<AffixTemplate>` `<Slot>`:
 `suffixing-vowel-harmony (since removed)` keeps its own circumfix off-template, on a different part of speech, and
 `fusional-realizational-morphology (since removed)`'s `mrCircumfixGeT` is loose/unordered at the Stratum level,
-never template-referenced. This fixture's `mrCircum` is reachable ONLY through
+never template-referenced. This test case's `mrCircum` is reachable ONLY through
 `templateMain`'s `slotMain` (deliberately NOT listed in the Stratum's own `morphologicalRules=`
 attribute — `template-category-sharing`'s own proven finding is that Slot membership alone does
 not create exclusivity; omitting the Stratum-level listing is what does).
 
-The fixture exposed two implementation assumptions that are now pinned by regression tests:
+The test case exposed two implementation assumptions that are now pinned by regression tests:
 template slots must expand a circumfix into both insertion halves, and structural classification
 must inspect every allomorph rather than only the first. The latter matters when an ordinary
 allomorph precedes a circumfix allomorph in the same rule.
@@ -48,11 +48,11 @@ allomorph precedes a circumfix allomorph in the same rule.
   are inseparable within one subrule application), so it has no valid derivation. Pins that the
   grammar doesn't over-generate a "half a circumfix" analysis.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: the C# founding oracle (`SIL.Machine.Morphology.HermitCrab.Tool`/`hc.dll`), run through
+**Reference: the C# reference (`SIL.Machine.Morphology.HermitCrab.Tool`/`hc.dll`), run through
 `machine/conformance/adapters/hc-dotnet-wrapper.sh`, cross-checked against `pangloss`
-(`pg_parse::Morpher`, driven directly).** `machine/src` (the oracle's own source) was widened into
+(`pg_parse::Morpher`, driven directly).** `machine/src` (the reference's own source) was widened into
 this worktree's sparse `machine/conformance` checkout for this authoring session only
 (`git -C machine sparse-checkout set conformance src`, narrowed back to `conformance` alone once
 transcription was done — see the conformance-grammars skill's own oracle-discipline section), and
@@ -61,7 +61,7 @@ runs agreed on every word's status and signature.
 
 ## Verification
 
-C# oracle run (`hc-dotnet-wrapper.sh batch grammar.xml words.txt out.tsv`):
+C# reference run (`hc-dotnet-wrapper.sh batch grammar.xml words.txt out.tsv`):
 
 ```
 0	lodi	99	ok	ROOT|lodi
@@ -73,11 +73,11 @@ C# oracle run (`hc-dotnet-wrapper.sh batch grammar.xml words.txt out.tsv`):
 Cross-checked against `pg_parse::Morpher` via a throwaway `pg-parse` test
 (`zz_throwaway_transcribe_new_fixtures.rs`, deleted once transcription was confirmed), run via
 `pg.ps1 -Mode test -Package pg-parse -TestTarget zz_throwaway_transcribe_new_fixtures`. Both
-oracles agree exactly; the C# output above is transcribed verbatim into `words.yaml`.
+references agree exactly; the C# output above is transcribed verbatim into `words.yaml`.
 
-`pg.ps1 -Mode test -Package pg-parse -TestTarget conformance_fixtures_gate` confirms this fixture
+`pg.ps1 -Mode test -Package pg-parse -TestTarget conformance_fixtures_gate` confirms this test case
 replays inside the default suite. `pg.ps1 -Mode test -Package pg-foma -TestTarget
-faithfulness_coverage_gate -Filter report_faithfulness_coverage -NoNextest` reports this fixture's
+faithfulness_coverage_gate -Filter report_faithfulness_coverage -NoNextest` reports this test case's
 containment outcomes; the gate's own `FaithfulnessRequirement::NonVacuity` reads failures without
 breaking the build on them. Isolated per-fixture measurement (a throwaway `pg-foma` test calling
 `crate::faithfulness_coverage::observe_fixture_containment` directly, deleted after reporting) found:
@@ -91,17 +91,17 @@ kinds: [Affixation, UnorderedMorphRuleApplication, NaturalClassDefinition]
 ```
 
 The block above records the pre-fix measurement. After the fix, no containment-failure triple is
-expected for this fixture; the committed regression test asserts the proposal directly.
+expected for this test case; the committed regression test asserts the proposal directly.
 
 ## Graduation
 
-## Oracle provenance (reconciled 2026-08-31)
+## Reference provenance (reconciled 2026-08-31)
 
 
-ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# founding oracle,
-machine commit caa4ddde) directly against this fixture's
+ust/tools/oracle-conformance.ps1 ran hc-conformance.exe self-check (C# reference,
+machine commit caa4ddde) directly against this test case's
 grammar.xml + words.yaml: PASS -- every word's signature and traced 
 ules: list matched. The
-fixture's words.yaml now carries # oracle-provenance: founding-oracle. Any "Oracle discipline"
-section below describes how this fixture was originally authored, not its current verification
+test case's words.yaml now carries # oracle-provenance: reference. Any "Reference discipline"
+section below describes how this test case was originally authored, not its current verification
 status.

@@ -7,7 +7,7 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
@@ -24,7 +24,7 @@ surface remains `de`, with signature `ABC|de`. In analysis, deletion unapplicati
 leave `x` Optional, and reconstruct `abc`.
 
 The C# implementation has the same pre-existing defect and loses this parse, as reported for this
-task. The fixture is intentionally red against that result. The C# oracle was not run locally in
+task. The test case is intentionally red against that result. The C# reference was not run locally in
 this lane; the expected signature comes from the forward derivation above. The staged words include
 four negative controls (`abc`, `dex`, `dxe`, `dd`) so the grammar does not turn the lost parse into
 unrestricted acceptance.

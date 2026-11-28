@@ -7,7 +7,7 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
@@ -16,18 +16,18 @@ revision, not current verification. PanGloss-specific assertions remain in PanGl
 
 **Status:** `upstream_candidate`
 
-## Why this fixture exists
+## Why this test case exists
 
 It closes the only **NEEDS-ORACLE** verdict in the project. ADR 0001
 (`docs/adr/0001-honest-capability-boundary.md`) names simultaneous-subrule overlap by hand as its
-worked example of a configuration that is "unsupported by definition" *because the oracle itself is
+worked example of a configuration that is "unsupported by definition" *because the reference itself is
 unverified* for it — "never pinned against `hc.dll`".
 `openspec/changes/plan-construct-coverage-completion` design.md row 6 records it as the one row whose
-blocker is not construction quality but oracle trust, and tasks.md 5.2 tracks it.
+blocker is not construction quality but reference trust, and tasks.md 5.2 tracks it.
 
-Every other staged fixture in this repo is authored against `pangloss` per the `conformance-grammars`
+Every other staged test case in this repo is authored against `pangloss` per the `conformance-grammars`
 skill's oracle-discipline note. That is exactly what ADR 0001 says is *insufficient here*. **This is
-the first fixture in the repo whose ground truth comes from the C# founding oracle.**
+the first test case in the repo whose ground truth comes from the C# reference.**
 
 ## The grammar
 
@@ -41,7 +41,7 @@ Three `posV` roots — `pu` (PU), `pi` (PI), `pe` (PE) — and one `Simultaneous
 
 The two right environments **genuinely intersect on the mid vowel `e`**. That is not asserted in
 prose: `rust/crates/pg-foma/tests/simultaneous_overlap_capability_refuses.rs` checks it against the
-real lowered-span intersection (`crate::lower`, via `is_fully_supported_shape`), so the fixture's
+real lowered-span intersection (`crate::lower`, via `is_fully_supported_shape`), so the test case's
 central claim is mechanically verified rather than believed.
 
 ## What the overlap actually verifies
@@ -63,7 +63,7 @@ overlap resolution happens to shadow.
 
 ## Verification
 
-Founding oracle — `hc.dll`, built from the pinned `machine` submodule revision, invoked through the
+Reference — `hc.dll`, built from the pinned `machine` submodule revision, invoked through the
 repo's own protocol adapter (`machine/conformance/adapters/hc-dotnet-wrapper.sh`, PROTOCOL.md §7):
 
 ```
@@ -89,21 +89,21 @@ mechanically, not eyeballed.
 ## What this does and does not license
 
 - **Does:** discharge ADR 0001's stated blocker for this configuration. The Rust confirm engine — the
-  oracle every other fixture is authored against — is now verified against the founding oracle for
+  reference every other test case is authored against — is now verified against the reference for
   genuinely overlapping simultaneous subrules, including on the case that discriminates resolution
   order. Row 6's verdict is no longer NEEDS-ORACLE.
 - **Does NOT:** change the compiled proposer's disposition. The capability gate still refuses this
   grammar on the `--engine=foma` path (`simultaneous.subrule-overlap`, with a real span-intersection
   witness), and that refusal is about whether the *proposer* can faithfully represent overlap — a
-  construction question, entirely separate from oracle trust. Row 6 becomes an ordinary open
+  construction question, entirely separate from reference trust. Row 6 becomes an ordinary open
   construct row rather than an oracle-blocked one.
 - **Does NOT:** generalize beyond two subrules sharing one focus position with one shared class
   member. Deeper overlap shapes (three-way, or overlap in the left environment, or overlap combined
-  with a feature-changing output) are unverified and would each need their own oracle run.
+  with a feature-changing output) are unverified and would each need their own reference run.
 
 ## Promotion note
 
 `upstream_candidate`: it isolates one HermitCrab behavior, records the pinned `machine` revision and
 the evidence method (a real `hc.dll` run through the documented adapter contract), and checks both the
 Rust HermitCrab and the FST-plus-Rust outcomes. Unusually for this repo, upstream acceptance would
-*not* need to re-derive ground truth against the founding oracle — it already is that.
+*not* need to re-derive ground truth against the reference — it already is that.

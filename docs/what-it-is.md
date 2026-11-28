@@ -3,13 +3,13 @@
 An engine-agnostic conformance suite for morphological/phonological parsers: a set of grammars and
 words with pre-computed correct answers. The engines that consume it (sillsdev/machine's C# HermitCrab
 and PanGloss) kept their own measurements of how complete that answer set is; those are not part of this
-repository. This document covers the fixture format, what a case is, and why the corpus is split into
+repository. This document covers the test case format, what a case is, and why the corpus is split into
 `languages/` and `edge-cases/`.
 
 The suite covers only grammars a real FieldWorks project can produce. A grammar FieldWorks cannot
 produce does not belong here, however expressible it is in the HermitCrab XML; the section
 [what the XML can say but FieldWorks cannot, so we do not test it](fieldworks-cannot-say.md#what-the-xml-can-say-but-fieldworks-cannot-so-we-do-not-test-it)
-lists those constructs. [grammars.md](grammars.md) lists every fixture with a line about what it
+lists those constructs. [grammars.md](grammars.md) lists every test case with a line about what it
 exercises.
 
 ## Shape
@@ -25,20 +25,20 @@ scripts/             the checks CI runs, and the manifest generator
 PROTOCOL.md          the adapter contract: CLI shape, TSV format, signature algorithm
 ```
 
-Per the derived conformance manifest, today that is **231 fixtures — 6 under
+Per the derived conformance manifest, today that is **231 test cases — 6 under
 `languages/`, 225 under `edge-cases/` — holding 3856 words in total**, computed by summing the
-manifest's own `caseCount` field per fixture rather than counted by hand. A `- word:` line count of the
+manifest's own `caseCount` field per test case rather than counted by hand. A `- word:` line count of the
 YAML is higher (3900) because variant blocks repeat words; variant rows are not counted. Generate the manifest
 with `python3 scripts/suite.py generate`; it is never committed.
 
-## The fixture contract: exactly two authored files
+## The test case contract: exactly two authored files
 
-Every fixture is exactly two files, and there is no third, generated restatement of either:
+Every test case is exactly two files, and there is no third, generated restatement of either:
 
 - **`grammar.xml`** — a `HermitCrabInput` XML document, validated against `HermitCrabInput.dtd`. It
   is the authoritative grammar: parts of speech, phonological feature system, character definitions,
   strata, morphological and phonological rules. This is also the reference *representation* — the
-  one every fixture ships, and the one the C# founding oracle read to produce every case's ground
+  one every test case ships, and the one the C# reference read to produce every case's ground
   truth. An engine that cannot consume XML directly names an alternate grammar representation instead
   (`PROTOCOL.md` section 6); `grammar.xml` remains the source of truth either way.
 - **`words.yaml`** — the single canonical authored format for ground truth. Front matter
@@ -48,12 +48,12 @@ Every fixture is exactly two files, and there is no third, generated restatement
 
 An earlier product, `hc-conformance-corpus/v1`, duplicated `words.yaml`'s ground truth into a
 generated 409KB JSON file — and that file carried *less* than the 383KB of authored source it was
-built from, because the authored comments hold reasoning (why a fixture exists, what it pins) that
+built from, because the authored comments hold reasoning (why a test case exists, what it pins) that
 JSON cannot express. It has been deleted, along with its schema. What a manifest genuinely
 contributes is provenance and integrity, not case data, so that is the only generated artifact that
 survives: `hc-conformance-manifest.v2.json` (`schema/conformance-manifest.schema.json`),
-one entry per fixture carrying `fixtureId`, `category`, `displayLanguage`, both files' paths and
-SHA-256 hashes, `caseCount`, and `expectedCrash`. A consumer reads the manifest to discover fixtures
+one entry per test case carrying `fixtureId`, `category`, `displayLanguage`, both files' paths and
+SHA-256 hashes, `caseCount`, and `expectedCrash`. A consumer reads the manifest to discover test cases
 and verify integrity, then reads `grammar.xml` and `words.yaml` directly for the grammar and the
 cases themselves.
 
@@ -91,7 +91,7 @@ signature algorithm (`PROTOCOL.md` section 3) treats a word's full analysis set 
 as a separate field.
 
 Per-parse fields: `signature` and `rules` are required (`rules` is the traced list of rule ids the
-oracle actually applied, checked against a live trace — not merely declared); `gloss` is optional
+reference actually applied, checked against a live trace — not merely declared); `gloss` is optional
 prose; `exercises` optionally names which constructs (`constructs.txt` vocabulary) this specific
 parse demonstrates, distinct from the word-level `exercises` naming what the word as a whole
 demonstrates; `guess` marks a parse only reachable via root-guessing (see below).
@@ -111,34 +111,34 @@ Two more per-word fields worth knowing:
 
 Three distinct ways a word's expected outcome can be "not a parse":
 
-| | means | oracle status | schema constraint |
+| | means | reference status | schema constraint |
 |---|---|---|---|
 | `expect_fail: true` | well-formed input, the grammar legitimately produces **zero** analyses | `ok`, signature `-` | `parses` must be empty; if paired with `blocked_by`, names the rule(s) responsible |
 | `expect_skip: true` | the word contains a character the grammar's character-definition table never declares | `SKIPPED` | `parses` must be empty; mutually exclusive with `expect_fail` |
-| `expect_crash: true` (fixture-level) | the founding oracle itself did not complete — it crashed while loading or parsing | no result row at all, only a `STARTED` sentinel | fixture must declare exactly one case |
+| `expect_crash: true` (fixture-level) | the reference itself did not complete — it crashed while loading or parsing | no result row at all, only a `STARTED` sentinel | test case must declare exactly one case |
 
 `expect_fail` and `expect_skip` are both legitimate, "ok" outcomes for the harness, and the schema
 refuses a word marked as both — an engine returning `SKIPPED` where `ok`/`-` was expected (or vice
 versa) is a genuine status mismatch, not a fuzzy match. A concrete `expect_skip` case:
 `edge-cases/loader-pattern-shapes/words.yaml`'s word `bit` — `"i"` is never declared in that
-grammar's character table, so the C# oracle throws `InvalidShapeException` rather than returning a
-zero-analysis `ok`, and the fixture pins `SKIPPED` rather than `expect_fail` to keep that distinction
+grammar's character table, so the C# reference throws `InvalidShapeException` rather than returning a
+zero-analysis `ok`, and the test case pins `SKIPPED` rather than `expect_fail` to keep that distinction
 honest.
 
-`expect_crash` is the strongest and strangest of the three: for a crash fixture, the engine under
+`expect_crash` is the strongest and strangest of the three: for a crash test case, the engine under
 test is expected to **also** crash (not necessarily with the same exception) to count as a **pass**
-— reproducing the founding oracle's crash is what conforming means here. If the engine crashes
+— reproducing the reference's crash is what conforming means here. If the engine crashes
 without `expect_crash` set, that is always a fail; if `expect_crash` is set and the engine returns a
 normal result instead of crashing, that is *also* a fail, even though the engine's behavior is
-arguably better than the oracle's — `PROTOCOL.md` section 2 is explicit that this pins an
-implementation limitation of the founding oracle, not a linguistic fact. One fixture does this today
+arguably better than the reference's — `PROTOCOL.md` section 2 is explicit that this pins an
+implementation limitation of the reference, not a linguistic fact. One test case does this today
 (`edge-cases/simultaneous-epenthesis-cascade`, per the manifest's `expectedCrash` field), and it keeps its `words.txt` to a single word, since nothing
 after a crash is ever reached.
 
 One more fixture-level field: `budget_ms`, present only on
 `edge-cases/deep-optional-affix-nesting/words.yaml` (`budget_ms: 15000`) — a wall-clock ceiling for a
 pathological word whose correct answer is a large but fully tractable analysis set (924 distinct
-analyses for one word). A fixture carrying `budget_ms` is excluded from a default self-check run and
+analyses for one word). A test case carrying `budget_ms` is excluded from a default self-check run and
 only exercised with `--include-pathological`, because it is deliberately expensive, not because its
 answer is in doubt.
 
@@ -171,7 +171,7 @@ ordinary words exercise several constructs at once rather than probing one mecha
 | `suffixing-evidential-adjacency-chain` | Evidential suffix chain, morpheme-adjacency co-occurrence, phonology-free |
 
 (Table in `grammars.md`, which lists all six.) Of the interfaces the whole corpus actually exercises, the
-large majority are reached by one of the languages, not by a fabricated fixture, as measured by sillsdev/machine —
+large majority are reached by one of the languages, not by a fabricated test case, as measured by sillsdev/machine —
 realistic grammars carry most of the suite's real evidentiary weight, and the fabricated half exists for what
 realistic grammars cannot host.
 
@@ -185,5 +185,5 @@ read as a plausible grammar.
 Neither directory subsumes the other. A construct that can occur naturally belongs in a
 `languages/` grammar, extended rather than duplicated, because a realistic grammar that grows a
 realistic feature buys coverage *and* keeps that feature interacting with everything else the
-grammar already does; an edge-case fixture is the fallback for what cannot be made to occur
+grammar already does; an edge-case test case is the fallback for what cannot be made to occur
 naturally at all.

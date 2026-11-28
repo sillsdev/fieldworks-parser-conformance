@@ -15,7 +15,7 @@
         "additionalProperties": false,
         "required": ["case", "kind", "ref", "ref_type", "affects", "reason"],
         "properties": {
-          "case": { "type": "string", "pattern": "^(languages|edge-cases|stress/edge-cases)/[^/]+$", "description": "The test case's id: its directory path." },
+          "case": { "type": "string", "pattern": "^(languages|edge-cases)/[^/]+$", "description": "The test case's id: its directory path." },
           "word": { "type": "string", "minLength": 1, "description": "A word of the test case; absent for a row about the whole test case." },
           "kind": { "enum": ["reference-defect", "pending-upstream"] },
           "ref": { "type": "string", "pattern": "^([A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+#[0-9]+|jira:[A-Z][A-Z0-9]*-[0-9]+)$", "description": "The upstream issue or pull request: owner/repo#number or jira:KEY-123." },

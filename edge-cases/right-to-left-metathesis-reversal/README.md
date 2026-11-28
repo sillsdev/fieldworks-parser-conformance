@@ -7,14 +7,14 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: right-to-left-metathesis-reversal
 
-## Why this fixture exists
+## Why this test case exists
 
 `docs/conformance/representative-typology-basis.md` S1.2.4 names `Dir::RightToLeft` metathesis as a
 genuine gap: `crate::replace::compile_metathesis_rule` used to return `Ok(None)` unconditionally for
@@ -41,12 +41,12 @@ replace.rs`'s module doc ("Metathesis" section) for the full construction and
    verdict `RightToLeftRewriteFaithfulReversalPredicate` gives RTL rewrite rules, for the identical
    reason: the compiled relation (`plain ∪ reverse(mirror)`) is a proven SUPERSET of the true RTL
    relation, sound under propose-and-confirm, never proven exact -- so never `Admit`.
-3. **The oracle's own recall**, contained in the FST proposer's candidate set -- see "What it pins"
+3. **The reference's own recall**, contained in the FST proposer's candidate set -- see "What it pins"
    below.
 
 ## Empirical finding: `pg_rules::metathesis` is direction-blind for an overlapping switch window
 
-While authoring this fixture, a throwaway probe (`rust/crates/pg-foma/tests/
+While authoring this test case, a throwaway probe (`rust/crates/pg-foma/tests/
 zzz_scratch_metathesis_dir_probe.rs`, deleted after the finding was recorded) declared the SAME
 two-adjacent-same-class-switch `MetathesisRule` twice, once `Dir::LeftToRight` and once
 `Dir::RightToLeft`, and called `pg_rules::metathesis::synthesize` directly on an OVERLAPPING-window
@@ -59,15 +59,15 @@ takes the first (i.e. leftmost) candidate from that sorted list. This is the SAM
 ordinary `Iterative` rewrite rules -- direction-blind pick-order, not direction-aware.
 
 This grammar's own two lexical entries ("qs"/"rt") each have exactly ONE valid switch window (no
-overlap), so the empirical direction-blindness above never affects what THIS fixture's oracle
-recalls -- `Dir::RightToLeft` and `Dir::LeftToRight` would give byte-identical oracle behavior for
-these two words. That is a deliberate, honest choice: this fixture's job is the Stage-2 containment
-obligation (oracle recall ⊆ FST propose), which holds regardless of whether the oracle happens to be
+overlap), so the empirical direction-blindness above never affects what THIS test case's reference
+recalls -- `Dir::RightToLeft` and `Dir::LeftToRight` would give byte-identical reference behavior for
+these two words. That is a deliberate, honest choice: this test case's job is the Stage-2 containment
+obligation (reference recall ⊆ FST propose), which holds regardless of whether the reference happens to be
 direction-aware or -blind for the words it is asked about. The complementary "the FST construction
 itself genuinely differs from compiling as if `LeftToRight`" witness -- which DOES need an
 overlapping-window scenario -- lives as a bare-automaton, oracle-free test in `rust/crates/pg-foma/
 tests/phase_c_metathesis.rs` (mirroring `tests/phase_c_right_to_left.rs`'s own "aa -> b" worked
-example), not in this conformance fixture.
+example), not in this conformance test case.
 
 ## What it pins
 
@@ -81,11 +81,11 @@ example), not in this conformance fixture.
   SwitchB={s,t} this rule's own pattern could match against some root, but neither ROOT1 nor ROOT2
   has this shape. Mirrors `phase_c_metathesis.rs`'s own LeftToRight
   `metathesis_multi_member_classes_transpose_precisely_not_naively` precision witness, now checked
-  against the conformance oracle under `Dir::RightToLeft` too.
+  against the conformance reference under `Dir::RightToLeft` too.
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; `words.yaml` signatures captured by driving `pg_parse::Morpher::parse_word_opts` directly
 over every word (a throwaway test, `rust/crates/pg-foma/tests/zz_throwaway_sig_dump.rs`, deleted
 after transcription).
@@ -96,16 +96,16 @@ Signatures transcribed verbatim from the throwaway dump above, using the SAME `g
 directory ships. Cross-checked in-repo by `rust/crates/pg-parse/tests/conformance_fixtures_gate.rs`'s
 `all_discovered_fixtures_match_oracle` test (dual-root discovery, default `cargo test --workspace`
 suite) -- that test is what actually gates CI. The capability-gate `ConfirmOnly` verdict and the
-FST-proposer containment (every oracle analysis above is a member of
+FST-proposer containment (every reference analysis above is a member of
 `crate::replace::compile_metathesis_rule`'s own compiled candidate set) are additionally pinned
 directly by `rust/crates/pg-foma/tests/phase_c_metathesis.rs`'s dedicated `Dir::RightToLeft`
-containment witness, which re-derives every word's oracle analysis as an explicit regression gate.
+containment witness, which re-derives every word's reference analysis as an explicit regression gate.
 
-## Founding-oracle verification (update)
+## Reference verification (update)
 
-Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` self-check): both
+Re-verified against the C# reference (hc.dll, via `hc-conformance.exe` self-check): both
 signatures match exactly, and the `rules: []` fields for `sq`/`tr` have been filled in from the
-oracle's own trace (`[mrRtlReversal]` for both). `words.yaml`'s header now reads
+reference's own trace (`[mrRtlReversal]` for both). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.
 
 ## Update: overlapping windows (issue 7)

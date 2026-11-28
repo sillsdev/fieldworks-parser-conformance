@@ -11,7 +11,7 @@ Synthetic. An ad hoc MORPHEME prohibition on the Verb MSA of a stem entry that h
 
 Enclitic directions and the allomorph-kind variant control are pinned by `adhoc-prohibition-variant-enclitic-first`, `adhoc-prohibition-variant-main-first-enclitic` and `adhoc-prohibition-allomorph-variant-control`.
 
-## Oracle
+## Reference
 
 hc.dll at Machine `aab4c598`, self-check (`hc-conformance --fixtures`) PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-31`.
 

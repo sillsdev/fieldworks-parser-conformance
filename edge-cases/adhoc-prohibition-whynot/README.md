@@ -1,6 +1,6 @@
 # adhoc-prohibition-whynot
 
-Synthetic. One ad hoc allomorph prohibition on a prefix: the prefix ta- (`subTa`) excludes the stem allomorph `aDa`, the plainest form `HCLoader.LoadAllomorphCoOccurrenceRules` writes (HCLoader.cs:2163-2189). The fixture carries the suite's first why-not row.
+Synthetic. One ad hoc allomorph prohibition on a prefix: the prefix ta- (`subTa`) excludes the stem allomorph `aDa`, the plainest form `HCLoader.LoadAllomorphCoOccurrenceRules` writes (HCLoader.cs:2163-2189). The test case carries the suite's first why-not row.
 
 ## What it pins
 

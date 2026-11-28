@@ -7,14 +7,14 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: optional-template-composite
 
-## Why this fixture exists
+## Why this test case exists
 
 Mimics the **composite-explosion** pathology named in `docs/conformance-staging-plan.md`'s pathology
 catalog, at deliberately miniature scale (8 roots / 3 templates / 6 rules vs. that reference corpus's
@@ -29,7 +29,7 @@ foma/emit scale:
 
 1. **Composite-explosion structure**: three `AffixTemplate`s share one `requiredPartsOfSpeech`
    (`posAweti`) on an `Unordered` stratum, mostly-optional slots — the same shared-category idea as
-   this repo's own `template-category-sharing` fixture, widened to 3 templates and a genuinely
+   this repo's own `template-category-sharing` test case, widened to 3 templates and a genuinely
    mandatory slot.
 2. **Vacuous (zero-morph) rules in MANDATORY slots** — the recall trap in the morphotactic-pruning
    automaton that `docs/fst-plan/morphotactic-composite-pruning.md` names directly. `mrVacuous`
@@ -62,38 +62,38 @@ copied from the real (gitignored, uncommitted) reference corpus.
 - `warmo` / `warmolu` exercise the truncation-shaped rule alone and combined with an ordinary suffix.
 - `toʼa` / `katoʼata` exercise the non-ASCII glyph bare and through a real derivation.
 
-## A finding this fixture required: templates must be made self-contained
+## A finding this test case required: templates must be made self-contained
 
 An earlier draft listed every rule (`mrOpt1`...`mrOpt5`, `mrVacuous`, `mrTrunc`) in the Stratum's own
 `morphologicalRules=` attribute, in addition to each rule's own template `Slot`. Measured
 consequence: templates could recursively cross-compose (the same engine behavior found independently
-while authoring `template-category-sharing` — see that fixture's own `STAGING.md` section on
+while authoring `template-category-sharing` — see that test case's own `STAGING.md` section on
 this for the full mechanism citation). Concretely, `mrOpt3` (nominally "template2's own slot 1")
 turned out to also be reachable as a free-standing rule WITHOUT template2's mandatory `mrVacuous` at
 all, and several affixed words (`kasiputa`, `katoʼata`) produced the SAME signature two, four, or
 eight times over (genuinely distinct internal derivation orders that happen to serialize identically)
-— noise that would have buried this fixture's actual pin under an unrelated, harder-to-explain
+— noise that would have buried this test case's actual pin under an unrelated, harder-to-explain
 phenomenon. Fixed by omitting the Stratum's `morphologicalRules=` attribute entirely (see
 `grammar.xml`'s own `Stratum` comment) so every rule is reachable ONLY through its own template.
 Re-verified: every affixed word now has exactly one signature; only the deliberately-bare-root words
 (where template2's silent slot genuinely is a second, distinct, intended analysis) carry two.
 
-## What this fixture deliberately does NOT attempt
+## What this test case deliberately does NOT attempt
 
-This fixture pins Morpher-level (`pg_parse`) parse correctness only. It does **not** reproduce or
+This test case pins Morpher-level (`pg_parse`) parse correctness only. It does **not** reproduce or
 assert on the actual composite-generation/pruning-automaton COST behavior (`pg_foma::emit`,
 `pg_foma::morphotactics`) that motivated the real reference-corpus investigation — doing so at any
-representative scale would defeat the point of a small, committed, non-ignored, always-green fixture.
+representative scale would defeat the point of a small, committed, non-ignored, always-green test case.
 A future `pg-foma`-level test loading this same `grammar.xml` to exercise `emit()`/pruning directly
 (checking it doesn't crash and reports the expected `Tier`) would be a natural, separately-scoped
 follow-up; not built as part of this task (see the task's final report for what was and wasn't done).
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; `words.yaml` signatures captured by driving `pg_parse::Morpher::parse_word` directly (a
 throwaway in-repo test — see "Verification" below). Per `docs/conformance-staging-plan.md`'s
-oracle-discipline note, machine acceptance must re-verify against the C# founding oracle before
+oracle-discipline note, machine acceptance must re-verify against the C# reference before
 graduation.
 
 ## Verification
@@ -107,7 +107,7 @@ above. Cross-checked in-repo by `rust/crates/pg-parse/tests/conformance_fixtures
 `all_discovered_fixtures_match_oracle` test (dual-root discovery, default `cargo test --workspace`
 suite) — that test is what actually gates CI; the throwaway dump test was deleted after transcription.
 
-## Founding-oracle verification (update)
+## Reference verification (update)
 
 hc.dll originally could not even LOAD this grammar: `mrTrunc`'s `MorphologicalInput` had a second
 `PhoneticSequence` (the truncated `<Segment segment="cU" />`) with no `id` attribute. hc.dll's own
@@ -118,7 +118,7 @@ single `null`-named entry does not itself collide, the surrounding compile path
 explicit `id="stemTruncDrop"` (matching `machine/conformance/edge-cases/truncate-morphotactic`'s own
 convention of naming every part of a multi-part `MorphologicalInput`, even ones never referenced by
 `MorphologicalOutput`) fixed it, with no linguistic content change. Re-verified against the C#
-founding oracle (hc.dll, via `hc-conformance.exe` self-check): every signature in this fixture
+reference (hc.dll, via `hc-conformance.exe` self-check): every signature in this test case
 matches exactly, including the `monu`/vacuous-slot double analysis and the truncation words --
 `words.yaml`'s header now reads `oracle-provenance: founding-oracle`.
 

@@ -28,7 +28,7 @@ source of expected results.
 - Cost: a consumer that is right and the reference that is wrong still needs an exception row and an upstream issue
   before the suite will say so.
 - Today: `status.yaml` holds a row per exception, and a word row carries the intended answer (`intended:`) that `suite.py check`
-  validates. The 14 words that carried a "Known oracle limitation" prose note are all `status.yaml` rows now.
+  validates. The 14 words that carried a "Known reference limitation" prose note are all `status.yaml` rows now.
 
 ## Alternatives considered
 

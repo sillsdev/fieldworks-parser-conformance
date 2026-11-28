@@ -4,7 +4,7 @@ Two word lists, two caps. Read this before running either.
 
 | file | run with | expected |
 |---|---|---|
-| `words.txt` (6 words) | any cap, default is fine | every word finishes below 125,000 work steps; `words.yaml` has the oracle's analyses |
+| `words.txt` (6 words) | any cap, default is fine | every word finishes below 125,000 work steps; `words.yaml` has the reference's analyses |
 | `cap-words.work-cap-200000.txt` (2 words) | **`--work-cap 200000`, always** | status `CAP` at about 212,500 work steps and about 150M cost each; no analyses expected (`cap-words.work-cap-200000.yaml`) |
 
 ```

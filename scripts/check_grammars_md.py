@@ -4,7 +4,7 @@
 docs/grammars.md lists each conformance fixture as "- `group/name`: ...". Its "Stress grammars" section
 lists each stress fixture as "- `stress/edge-cases/name`: ...", and the table in stress/README.md has one
 "| `name` |" row per stress fixture. Each list must match the directories on disk, and the counts the prose
-states (the number of stress grammars, here and in docs/README.md, and "N of M stress fixtures carry a FieldWorks witness") must match
+states (the number of stress grammars, here and in docs/README.md, and "N of M stress test cases carry a FieldWorks witness") must match
 the disk. Every stress fixture must start `# kind: stress`.
 
 The XAmple subset is every grammar with no phonological features and no phonological rules, computed from
@@ -25,7 +25,7 @@ LISTED = re.compile(r"^- `((?:languages|edge-cases)/[^`]+)`", re.M)
 STRESS_LISTED = re.compile(r"^- `(stress/edge-cases/[^`]+)`", re.M)
 STRESS_ROW = re.compile(r"^\| `([^`]+)` \|", re.M)
 STRESS_HEADING = "## Stress grammars"
-WITNESS_SENTENCE = re.compile(r"\*\*(\d+) of (\d+) stress fixtures carry a FieldWorks witness\*\*")
+WITNESS_SENTENCE = re.compile(r"\*\*(\d+) of (\d+) stress test cases carry a FieldWorks witness\*\*")
 
 
 def compare(label: str, listed: list, on_disk: set, problems: list) -> None:
@@ -58,10 +58,10 @@ def check_stress(grammars_md: str, problems: list) -> int:
     witnesses = sum(1 for d in directories if (d / "fieldworks").is_dir())
     claim = WITNESS_SENTENCE.search(readme)
     if not claim:
-        problems.append("stress/README.md must say '**N of M stress fixtures carry a FieldWorks witness**'")
+        problems.append("stress/README.md must say '**N of M stress test cases carry a FieldWorks witness**'")
     elif (int(claim.group(1)), int(claim.group(2))) != (witnesses, len(on_disk)):
         problems.append(
-            f"stress/README.md says {claim.group(1)} of {claim.group(2)} stress fixtures carry a witness; "
+            f"stress/README.md says {claim.group(1)} of {claim.group(2)} stress test cases carry a witness; "
             f"the disk has {witnesses} of {len(on_disk)}"
         )
     for d in directories:

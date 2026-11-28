@@ -9,7 +9,7 @@ Synthetic. An ad hoc allomorph prohibition naming a circumfix lexeme form. A Fie
 - `tadaka`, `tadaki`, `todaka`, `todaki`: circumfix first, one rule per pairing: no analysis.
 - `tabaka`, `tabaki`, `tobaka`, `tobaki`: stem first, one rule per pairing: no analysis.
 
-## Oracle
+## Reference
 
 hc.dll at Machine `aab4c598`, self-check PASS on signatures and traced rules. Provenance: `founding-oracle machine-commit=aab4c598 verified-date=2026-10-30`.
 

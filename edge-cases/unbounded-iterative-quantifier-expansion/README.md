@@ -7,24 +7,24 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # STAGING: unbounded-iterative-quantifier-expansion
 
-## Why this fixture exists
+## Why this test case exists
 
 `docs/conformance/representative-typology-basis.md` S1.2.6 identifies the genuinely UNBOUNDED
 `PatternNode::Quantifier` (`<OptionalSegmentSequence min max="-1">`, the DTD's own Kleene sentinel)
-as an open gap: every other quantifier fixture in this suite (`right-to-left-bounded-quantifier-
-rewrite`, and `rust/crates/pg-foma/tests/phase_c_quantifier.rs`'s own containment fixture) exercises
+as an open gap: every other quantifier test case in this suite (`right-to-left-bounded-quantifier-
+rewrite`, and `rust/crates/pg-foma/tests/phase_c_quantifier.rs`'s own containment test case) exercises
 a FINITELY bounded quantifier only. `openspec/changes/build-unbounded-quantifier-support` (tasks.md
 4.5) closes that gap in the compiler itself (`rust/crates/pg-foma/src/lower.rs`'s `Slot::Repeat.max`
 widened to `Option<u32>`, rendered via foma's own native `E*`/`E^>N` xre operator instead of
-`E^{min,max}`); this fixture is the representative conformance witness for the now-supported
-construct, per the research doc's own §1.2.6 "Proposed fixture name."
+`E^{min,max}`); this test case is the representative conformance witness for the now-supported
+construct, per the research doc's own §1.2.6 "Proposed test case name."
 
 1. **The structural characterization.** `pg-foma::capability::rtl_reversal_construction_attempted`
    (reused verbatim as `QuantifierPatternDetail::compile_attempted`'s own computation) re-runs
@@ -35,7 +35,7 @@ construct, per the research doc's own §1.2.6 "Proposed fixture name."
    (`quantifier.bounded-expansion`) returns `ConfirmOnly` for this grammar under BOTH
    `--engine=default` and `--engine=foma` -- verified directly via `pangloss batch` (see
    "Verification" below), never `Refuse`, and no `--allow-unproven` override is needed.
-3. **The oracle's own correct, bound-aware behavior.** `pg_parse::Morpher` correctly applies the
+3. **The reference's own correct, bound-aware behavior.** `pg_parse::Morpher` correctly applies the
    alternation for ANY occurrence count at or above the quantifier's own `min="1"` -- including a
    count (5) well past what any small finite bound would plausibly cover -- and correctly withholds
    it below `min` (0 occurrences). See "What it pins" below.
@@ -61,9 +61,9 @@ construct, per the research doc's own §1.2.6 "Proposed fixture name."
   environment matches, these strings are NOT valid surface forms for their respective roots at all
   (proving the rule genuinely fires, rather than being vacuously inapplicable).
 
-## Oracle discipline
+## Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; `words.yaml` signatures captured by running `pangloss batch` directly over every word in
 this file, against this directory's own `grammar.xml` -- see "Verification" below.
 
@@ -93,9 +93,9 @@ Cross-checked in-repo by `rust/crates/pg-parse/tests/conformance_fixtures_gate.r
 `all_discovered_fixtures_match_oracle` test (dual-root discovery, default `cargo test --workspace`
 suite) -- that test is what actually gates CI going forward.
 
-## Founding-oracle verification (update)
+## Reference verification (update)
 
-Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` self-check): all three
+Re-verified against the C# reference (hc.dll, via `hc-conformance.exe` self-check): all three
 signatures (`ect`/`ecct`/`eccccct`) match exactly, and their `rules: []` fields have been filled in
-from the oracle's own trace (`[prIterUnbounded]` for all three). `words.yaml`'s header now reads
+from the reference's own trace (`[prIterUnbounded]` for all three). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.

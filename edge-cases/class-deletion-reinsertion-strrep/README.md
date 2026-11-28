@@ -7,7 +7,7 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
@@ -30,27 +30,27 @@ labial would sit. `ampili` and `amkuma` are negative controls.
 
 ## Results (hc-conformance self-check, 2026-10-21)
 
-C# founding oracle, the integrate-conformance-framework branch of sillsdev/machine: 1 passed, 0 failed, every signature
+C# reference, the integrate-conformance-framework branch of sillsdev/machine: 1 passed, 0 failed, every signature
 in words.yaml as recorded.
 
 HC-Rust before divergence entry 103 already produced the same signatures: its re-inserted node had
-no identity, so lookup also found `kili` and `umka`, which synthesis then rejected. The fixture is
+no identity, so lookup also found `kili` and `umka`, which synthesis then rejected. The test case is
 therefore green on both sides of that change. What it guards is the change itself: an identity
 narrower than the class (one member, or a mandatory node) loses `AM+BILI`, `AM+PILI`, `UMPA`,
 `AM+PUMA`, `AM+UMPA` or `UMBUMPA`. The extra lookups the old behaviour made are pinned by
 `pg-parse` `a_reinserted_class_node_looks_up_only_class_members_on_a_featureless_grammar`, which
-names this fixture.
+names this test case.
 
 ## Provenance
 
-Oracle of record: C# founding oracle, `hc-conformance.dll --fixtures <root>` self-check (in-process
+Reference of record: C# reference, `hc-conformance.dll --fixtures <root>` self-check (in-process
 Morpher, memoization on) built from the integrate-conformance-framework branch, one run,
 2026-10-21. Synthetic data only.
 
 ## PanGloss staging
 
 PanGloss conformance replays status and complete parse-signature multisets; it does not compare the
-optional rules annotations (recorded from the oracle's trace).
+optional rules annotations (recorded from the reference's trace).
 
 Promotion status: upstream_candidate.
-Upstream fixture PR: not opened; candidate destination is machine/conformance/edge-cases/class-deletion-reinsertion-strrep/.
+Upstream test case PR: not opened; candidate destination is machine/conformance/edge-cases/class-deletion-reinsertion-strrep/.

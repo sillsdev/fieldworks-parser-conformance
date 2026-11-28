@@ -15,6 +15,6 @@ ParserParameters entry `HC/AffixRules/AffixRule[@guid][@maxApps]`, read in `HCLo
 are `unordered`, as every FieldWorks stratum is.
 
 **Guards.** sillsdev/machine#653: analysis re-matches the same rule on the same shape once per parent path, and the
-planned fix skips the re-match. This fixture's rows must stay identical (same parses, same multiset) after that
+planned fix skips the re-match. This test case's rows must stay identical (same parses, same multiset) after that
 optimization; a changed row is a failure of the optimization, not a reason to edit the row. The rows are C#
 HermitCrab at machine `e63b8863` (hc-conformance self-check). All lexemes are invented.

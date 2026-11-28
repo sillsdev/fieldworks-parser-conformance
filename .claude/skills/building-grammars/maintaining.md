@@ -101,10 +101,12 @@ is never reused for a different test case once retired, and never encodes tier, 
 | `covered_by` | for `retired`, the id that covers what it detected; otherwise empty |
 | `wave` | the wave that removed it, named `wave-YYYY-MM-DD` (a second wave on the same date is `wave-YYYY-MM-DD-2`, then `-3`); never empty |
 
-Lines are appended, never edited or removed. Restoring a retired test case appends `X`, `X`, empty, `wave`, and each id's last entry rules; a retired id never becomes another id's `new_id`. Each settled wave gets a git tag with the same name.
+Lines are appended, never edited or removed. Restoring a retired test case appends `X`, `X`, empty, `wave`, and each id's last entry rules. Chains are allowed: a merge may target an id that earlier rows already map elsewhere or that a later wave merges away, and a consumer resolves an old id by following last entries to a live id or `retired` (`scripts/check_renames.py` resolves chains and rejects cycles). Each settled wave gets a git tag with the same name.
 
 The consumer contract is the `docs/renames.tsv` entries plus the wave tag. After the wave lands, notify the
 PanGloss lead with the tag and the new entries.
+
+**Exceptions and stress.** `status.yaml` rows name only `languages/` and `edge-cases/` test cases (never `stress/edge-cases/`), and a word row sits on a word with `expect_fail: true`; a reference defect found by a stress word becomes a new edge-case test case that carries the exception.
 
 ## Periodic review
 

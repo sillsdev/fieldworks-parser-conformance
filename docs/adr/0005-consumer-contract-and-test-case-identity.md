@@ -17,6 +17,7 @@ html5lib-tests) keep names stable and track renames explicitly rather than promi
 - A test case's id is its directory path: a stable public name. It never encodes tier, status or exception state.
 - An id is never reused once retired. Restoring the same retired test case under its old id is not reuse.
 - A merge keeps one member's id and maps the other members in `renames.tsv`.
+- Chains are allowed: `renames.tsv` is append-only, so a consumer resolves an old id by following last entries to a live id or `retired`.
 
 ## Consequences
 

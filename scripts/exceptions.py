@@ -7,7 +7,7 @@ Needs PyYAML and jsonschema (scripts/requirements.txt); the report also needs an
 import json
 import sys
 
-from suite import ROOT, fixture_dirs, fixture_id, load_expanded_words, load_words, STRESS_GROUP
+from suite import ROOT, fixture_dirs, fixture_id, load_expanded_words, load_words
 from upstream import resolve
 
 STATUS = ROOT / "status.yaml"
@@ -29,10 +29,11 @@ def load(path=STATUS) -> list:
 
 
 def test_cases() -> dict:
-    """Every test case id (conformance and stress) -> the set of its words."""
+    """Every conformance test case id (languages/ and edge-cases/; stress words are a parity workload and take no
+    exceptions) -> {word: whether it has expect_fail: true}."""
     found = {}
-    for d in fixture_dirs() + fixture_dirs(groups=(STRESS_GROUP,)):
-        found[fixture_id(d)] = {w["word"] for w in load_expanded_words(d / "words.yaml")}
+    for d in fixture_dirs():
+        found[fixture_id(d)] = {w["word"]: bool(w.get("expect_fail")) for w in load_expanded_words(d / "words.yaml")}
     return found
 
 
@@ -58,6 +59,8 @@ def problems(path=STATUS, cases=None) -> list:
             found.append(f"{where}: names no test case")
         elif "word" in row and row["word"] not in cases[row["case"]]:
             found.append(f"{where}: the test case has no such word")
+        elif "word" in row and isinstance(cases[row["case"]], dict) and not cases[row["case"]][row["word"]]:
+            found.append(f"{where}: a word row records the answer the reference should give, so the word must have expect_fail: true")
         key = (row["case"], row.get("word"), row["ref"])
         if key in seen:
             found.append(f"{where}: duplicate row for {row['ref']}")

@@ -7,14 +7,14 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 # Staged conformance case: word-boundary rewrite at affix edges
 
-## Why this fixture exists
+## Why this test case exists
 
 This pins the actual word-edge anchor behavior requested by the implementation brief. It uses
 HermitCrab's `initialBoundaryCondition` and `finalBoundaryCondition`, rather than a user-created
@@ -22,15 +22,15 @@ boundary marker whose representation happens to be `#`. The one-segment prefix a
 root produce `ta`; a two-segment prefix produces `taa`; the internal `r` control stays `ara`; and
 the suffix mirror produces `at`.
 
-`literal-hash-affix-context` is the companion fixture for Motif's current authored context. It
-uses a literal `PhBdryMarker` with code `#`, which the oracle treats as a shape boundary, not as a
+`literal-hash-affix-context` is the companion test case for Motif's current authored context. It
+uses a literal `PhBdryMarker` with code `#`, which the reference treats as a shape boundary, not as a
 word-edge anchor.
 
-## Founding-oracle evidence
+## Reference evidence
 
 `words.yaml` signatures and rule traces were checked by the C# HermitCrab conformance harness built
 from the pinned Machine commit `18cf242f` on 2026-10-09. The
-targeted self-check passed: 1 fixture, 0 failed. The oracle accepted `ta`, `taa`, `ara`, `at`, and
+targeted self-check passed: 1 test case, 0 failed. The reference accepted `ta`, `taa`, `ara`, `at`, and
 `a`, and rejected the unchanged or misplaced-context controls `ra`, `raa`, `ata`, and `ar`.
 
 ## Graduation

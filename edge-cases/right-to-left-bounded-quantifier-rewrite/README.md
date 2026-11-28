@@ -30,33 +30,33 @@ renames alpha-variable labels `a`/`b` to the DTD vocabulary `α`/`β`; variable 
 are unchanged. Required word notes and explicit rule-trace annotations are supplied separately.
 
 The original rationale below is historical. References to `STAGING.md` mean this preserved
-rationale; claims that a then-current oracle was unavailable or unfixed describe that earlier
+rationale; claims that a then-current reference was unavailable or unfixed describe that earlier
 revision, not current verification. PanGloss-specific assertions remain in PanGloss.
 
 ---
 
 ### STAGING: right-to-left-bounded-quantifier-rewrite
 
-#### Why this fixture exists
+#### Why this test case exists
 
 `docs/conformance/representative-typology-basis.md` S1.2.2 identifies additional in-scope
-`RightToLeftRewrite` pattern shapes as a genuine gap: the 3 already-covered RTL fixtures
+`RightToLeftRewrite` pattern shapes as a genuine gap: the 3 already-covered RTL test cases
 (`rtl_plain_rule`/`rtl_feature_environment_swap`/`rtl_deletion`, per design.md's own citation) never
 exercise a `PatternNode::Quantifier` node anywhere in the rule's own LHS/RHS/environment. This
-fixture pins the `Quantifier`-in-environment case specifically (directional stress/harmony rule
+test case pins the `Quantifier`-in-environment case specifically (directional stress/harmony rule
 scanning with a bounded lookahead window, per the metrical-stress-typology citations in the research
 doc):
 
 1. **The structural characterization.** `pg-foma::capability::rtl_reversal_construction_attempted`
    re-runs `crate::replace::pattern_slots` over this rule's own LHS/RHS/environment. Contrary to
-   this fixture's ORIGINAL premise (see "A correction" below), it finds the bounded
+   this test case's ORIGINAL premise (see "A correction" below), it finds the bounded
    `OptionalSegmentSequence` (in the subrule's own `RightEnvironment`) SUPPORTED --
    `RightToLeftRewriteDetail::reversal_construction_attempted == true`.
 2. **The capability gate's own (already-correct) `ConfirmOnly` verdict.**
    `RightToLeftRewriteFaithfulReversalPredicate`
    (`right-to-left-rewrite.faithful-reversal-construction`) returns `ConfirmOnly` via
    `best_case_across_backends_for_grammar` for this grammar -- NOT `Refuse`.
-3. **The oracle's own correct, bound-aware behavior.** `pg_parse::Morpher` correctly applies the
+3. **The reference's own correct, bound-aware behavior.** `pg_parse::Morpher` correctly applies the
    alternation exactly up to (and not beyond) the bounded quantifier's own `max="2"` -- see "What it
    pins" below.
 
@@ -64,10 +64,10 @@ doc):
 
 The earlier research premise grouped `Quantifier` with other RTL gaps, but the
 current lowering accepts both bounded and genuinely unbounded alpha-free quantifiers in RTL
-patterns. This fixture's bounded-in-environment shape therefore has the expected `ConfirmOnly`
+patterns. This test case's bounded-in-environment shape therefore has the expected `ConfirmOnly`
 verdict, not `Refuse`, and is a useful conformance witness that the already-correct RTL
 propose-and-confirm pipeline handles quantifier environments. The quantifier case is closed; any
-remaining RTL pattern-shape gaps are separate from this fixture.
+remaining RTL pattern-shape gaps are separate from this test case.
 
 #### What it pins
 
@@ -82,9 +82,9 @@ remaining RTL pattern-shape gaps are separate from this fixture.
   matches, these strings are NOT valid surface forms for their respective roots at all (proving the
   rule genuinely fires, rather than being vacuously inapplicable).
 
-#### Oracle discipline
+#### Reference discipline
 
-**Oracle: `pangloss` (this repo's own Rust engine), NOT the C# founding oracle.** Authored fresh for
+**Reference: `pangloss` (this repo's own Rust engine), NOT the C# reference.** Authored fresh for
 this task; `words.yaml` signatures captured by driving `pg_parse::Morpher::parse_word_opts` directly
 over every word (a throwaway test, deleted after transcription -- see "Verification").
 
@@ -102,17 +102,17 @@ additionally pinned directly by `rust/crates/pg-foma/tests/
 cover_right_to_left_bounded_quantifier_rewrite.rs`, whose
 `capability_gate_confirms_only_for_bounded_quantifier_in_rtl_environment` asserts
 `best_case_across_backends_for_grammar` returns `CompileDecision::ConfirmOnly`, and which separately
-re-derives every word's oracle analysis as an explicit regression gate -- this is the test that
+re-derives every word's reference analysis as an explicit regression gate -- this is the test that
 should FAIL (prompting deliberate review) the day this shape either regresses to `Refuse` or is
 promoted to `Admit`.
 
 #### Graduation
 
-#### Founding-oracle verification (update)
+#### Reference verification (update)
 
-Re-verified against the C# founding oracle (hc.dll, via `hc-conformance.exe` self-check): both
+Re-verified against the C# reference (hc.dll, via `hc-conformance.exe` self-check): both
 signatures match exactly, and the `rules: []` fields for `acet`/`ecct` have been filled in from the
-oracle's own trace (`[prRtlBq]` for both). `words.yaml`'s header now reads
+reference's own trace (`[prRtlBq]` for both). `words.yaml`'s header now reads
 `oracle-provenance: founding-oracle`.
 
 #### Coverage-tag correction (post-G9)
@@ -122,9 +122,9 @@ oracle's own trace (`[prRtlBq]` for both). `words.yaml`'s header now reads
 `exercises:` entries here previously read the bare characteristic name `"RightToLeftRewrite"`, which
 is NOT a `constructs.txt` row id and therefore matched nothing in
 `conformance_coverage::construct_ids_for`'s byte-for-byte cross-check -- the tag silently contributed
-zero coverage despite this fixture genuinely exercising the construct. Fixed to the exact row-30
+zero coverage despite this test case genuinely exercising the construct. Fixed to the exact row-30
 string; no signature, `parses:`, or ground truth changed.
 
 #### Second rule: a two-child quantifier group (sillsdev/PanGloss#45)
 
-`prRtlBq2` rewrites `o` to `u` before `(c d){1,2} t`: a bounded group with two children, on segments `o`, `u` and `d` that `prRtlBq` never touches, so the words above are unchanged. `ucdt` and `ucdcdt` pin one and two pairs, `ocdcdcdt` pins the bound, and `odct` (d before c) pins the order of the children, which a reversal that kept them in document order would get wrong. PanGloss staged this as its own fixture (`right-to-left-multi-child-quantifier-rewrite`, rows verified at c2454760); it is carried here instead, because this grammar already has a right-to-left rewrite with a quantifier group and the new rule changes none of its words. The staged rows replayed at ba6dfa10 with the letters renamed (a to o, e to u). Producibility is read from `HCLoader.LoadPatternNode`, not round-tripped.
+`prRtlBq2` rewrites `o` to `u` before `(c d){1,2} t`: a bounded group with two children, on segments `o`, `u` and `d` that `prRtlBq` never touches, so the words above are unchanged. `ucdt` and `ucdcdt` pin one and two pairs, `ocdcdcdt` pins the bound, and `odct` (d before c) pins the order of the children, which a reversal that kept them in document order would get wrong. PanGloss staged this as its own test case (`right-to-left-multi-child-quantifier-rewrite`, rows verified at c2454760); it is carried here instead, because this grammar already has a right-to-left rewrite with a quantifier group and the new rule changes none of its words. The staged rows replayed at ba6dfa10 with the letters renamed (a to o, e to u). Producibility is read from `HCLoader.LoadPatternNode`, not round-tripped.

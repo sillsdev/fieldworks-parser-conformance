@@ -10,17 +10,17 @@ name a commit of `main` in a file called `conformance.commit` and clone this rep
 ignored `conformance/` directory; neither uses a submodule, and `HC_CONFORMANCE_SUITE` names a local copy
 instead. Both run it through their own runners. Their gates, ledgers and
 coverage measurements live in their own repositories. To change the
-suite, read [AGENTS.md](../AGENTS.md). Where a fixture or document names a ledger, a test or a source path
+suite, read [AGENTS.md](../AGENTS.md). Where a test case or document names a ledger, a test or a source path
 of one of those repositories, it is a historical or cross-repository reference, not a file here.
 The one engine build behind every expected row is the commit in `reference.commit`; hashes cited in prose are history.
 
 ## What passing means today
 
 **What passing means today.** An engine reproduces the reference implementation's observable parse
-behaviour — signature, status, pinned crash — on every fixture its declared capability profile
+behaviour — signature, status, pinned crash — on every test case its declared capability profile
 admits.
 
-How complete the fixture set is, as measured per DTD surface, is tracked by the consuming engines, not here.
+How complete the test case set is, as measured per DTD surface, is tracked by the consuming engines, not here.
 
 ## Reading the suite
 
@@ -28,16 +28,16 @@ How complete the fixture set is, as measured per DTD surface, is tracked by the 
 rejections, skips, `neutralizes`) lives. There is no generated JSON restatement of it: an earlier
 `hc-conformance-corpus/v1` product duplicated that ground truth into a 409KB file, and it carried
 less than the 383KB of authored `words.yaml`/`grammar.xml` sources it was generated from, because
-those sources hold 1011 comment lines of reasoning — why a fixture exists, what it pins — that JSON
+those sources hold 1011 comment lines of reasoning — why a test case exists, what it pins — that JSON
 cannot express. Two representations of the same ground truth also meant a permanent drift gate. It
 has been deleted, along with `schema/conformance-corpus.schema.json`.
 
 What that product genuinely contributed was provenance, not case data, so that is what survives as
-the derived manifest `hc-conformance-manifest.v2.json` (`hc-conformance-manifest/v2`, `schema/conformance-manifest.schema.json`): one entry per fixture carrying `fixtureId`, `category`, `displayLanguage`, `grammarPath`,
+the derived manifest `hc-conformance-manifest.v2.json` (`hc-conformance-manifest/v2`, `schema/conformance-manifest.schema.json`): one entry per test case carrying `fixtureId`, `category`, `displayLanguage`, `grammarPath`,
 `grammarSha256`, `wordsPath`, `wordsSha256`, `caseCount`, and `expectedCrash`, plus top-level
 `dtdPath`, `dtdSha256`, `sourceHash`, and the three format-version identifiers
 (`hc-conformance-manifest/v2`, `hc-conformance-words/v1`, `sil-machine-hermit-crab-input-xml/v1`).
-A consumer reads the manifest to discover fixtures and verify integrity, then reads `grammar.xml`
+A consumer reads the manifest to discover test cases and verify integrity, then reads `grammar.xml`
 and `words.yaml` directly for the actual grammar and cases. Paths inside the manifest are
 relative to the root of this repository, with no leading directory name (`edge-cases/<name>/grammar.xml`),
 never relative to the manifest itself. A consumer that clones this repository into `conformance/` prepends
@@ -51,12 +51,12 @@ embedded copy that a test of its own holds byte-identical. When resolving a gram
 system identifier `HermitCrabInput.dtd` and map it to the published DTD path the manifest records. Any other
 external entity, network fetch, or filesystem fallback should be refused rather than attempted.
 
-Two files are required per fixture: `grammar.xml` and `words.yaml`. An optional `README.md`
-preserves the fixture's rationale and oracle history; optional FieldWorks witnesses are described
+Two files are required per test case: `grammar.xml` and `words.yaml`. An optional `README.md`
+preserves the test case's rationale and reference history; optional FieldWorks witnesses are described
 in the protocol. `words.yaml` is the single ground truth: front matter (`language`,
 `inspired_by`, `sources`, `requires`) plus one entry per word, each carrying a `note` and either
 `parses` (`signature`/`gloss`/`rules`/`exercises`, one per distinct analysis), `expect_fail` +
-`blocked_by` (well-formed input, zero valid analyses), or `expect_skip` (the oracle throws
+`blocked_by` (well-formed input, zero valid analyses), or `expect_skip` (the reference throws
 `InvalidShapeException`, e.g. an undeclared segment — status "SKIPPED", not "ok"). Optional fields:
 `provenance` (bug/PR reference), `guess` (a `LexicalGuess` parse),
 `budget_ms`/`expect_crash` (edge-cases only). A test case may also declare `generated_no_parse` rules (PROTOCOL.md section 13): its words are then the listed words plus the no-parse words the rules expand to, and `python3 scripts/suite.py expand <test case>` prints that list. Signature comparison treats the members of each bracketed
@@ -64,7 +64,7 @@ class `[...]` as a set (`|b[ae]t` equals `|b[ea]t`; PROTOCOL.md section 4, sills
 Signatures are authored-and-verified, never blindly
 regenerated: a consuming engine's self-check fails on a mismatch, and a proposed patch is for a human to accept. Full schema: `schema/words.schema.json`.
 
-Fixture and case totals are summed from the derived manifest, not hand-copied:
+Test case and case totals are summed from the derived manifest, not hand-copied:
 two prose totals have already drifted from the manifest twice. The numbers line of the root README is
 checked against the disk by `scripts/check_grammars_md.py`, and `python3 scripts/suite.py check`
 derives the manifest's per-fixture `caseCount` fresh.

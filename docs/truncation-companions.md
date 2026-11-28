@@ -27,13 +27,13 @@ Each root token is its entry's single root XML allomorph, and each rule token is
 single allomorph; every observed allomorph has index 0 and count 1. Signature token order is
 the final morph occurrence order, while the tables below retain the separate forward rule
 application order. All positive words have status `ok`; `bag` and `bau` have status `ok` with
-zero parses, as declared by `expect_fail`. None of the fixture words is skipped.
+zero parses, as declared by `expect_fail`. None of the test case words is skipped.
 
-Stable source attribution is `ROOT` = `root32`/`root32_1` in the identity and copy-U fixtures;
+Stable source attribution is `ROOT` = `root32`/`root32_1` in the identity and copy-U test cases;
 `ROOTAG` = `root32`/`root32_1` in subsumption; `A` = `mruleTruncTrail`, `B` =
 `mruleTruncLead`, `C` = `mruleTruncOptIns`, `X` = `mrulePrefixX`, and `U` = `mrU`. The
 corresponding `MorphemeId` is explicit in each companion grammar; runtime GUIDs are not used as
-fixture identities.
+test case identities.
 
 `truncate-morphotactic-identity` expected parses:
 
@@ -84,7 +84,7 @@ fixture identities.
 
 Every listed allomorph is index 0; the named roots and rules in the signatures are their explicit
 `MorphemeId` values. The rules use the existing `AffixProcessRule: subtraction/truncation`
-construct label; the fixtures do not introduce new coverage categories. All three declare
+construct label; the test cases do not introduce new coverage categories. All three declare
 `morphologicalRuleOrder="unordered"`, which HCLoader emits. Their words are intentionally synthetic,
 but that does not make the grammar constructs FieldWorks-unproducible, so all three are correctly in scope.
 

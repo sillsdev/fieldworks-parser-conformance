@@ -2,11 +2,16 @@
 """docs/renames.tsv is the contract consumers remap removed test case ids from (ADR 0005).
 
 Fails when: the header's first columns are not old_id, new_id, covered_by, wave; a live test case id appears
-in old_id unless its last entry maps it to itself; new_id is neither `retired` nor a live test case; covered_by
-names a test case that is not live; wave is empty or not `wave-YYYY-MM-DD` or `wave-YYYY-MM-DD-N`; a row is malformed or repeats an
-old_id; or an existing row changed or was removed against the merge base with origin/main (rows are only
-appended). A restore appends `X<TAB>X<TAB><TAB>wave`: each id's last entry rules, a live id needs no entry or a
-self-mapping last entry, and a retired id (last entry not a self-mapping) never becomes another id's new_id. The merge-base comparison is skipped, with a note, when git or the base is unavailable.
+in old_id unless its last entry maps it to itself; covered_by names a test case that is not live; wave is empty or
+not `wave-YYYY-MM-DD` or `wave-YYYY-MM-DD-N`; a row is malformed; or an existing row changed or was removed against
+the merge base with origin/main (rows are only appended). A restore appends `X<TAB>X<TAB><TAB>wave`: each id's last
+entry rules, and a live id needs no entry or a self-mapping last entry.
+
+Chains are allowed: a merge into a test case that an earlier row already targets, and a later merge of that target
+into another, leave X -> Y and Y -> Z, and a consumer resolves X to Z by following last entries (`resolve`). The check
+fails when following an id's last entries loops (a cycle), or ends at an id that is neither live nor `retired`, or
+when a row names as new_id an id that an earlier row had already retired or remapped (it was not live when the row was
+written). The merge-base comparison is skipped, with a note, when git or the base is unavailable.
 """
 import re
 import subprocess
@@ -17,6 +22,31 @@ from suite import ROOT, STRESS_GROUP, fixture_dirs, fixture_id
 PATH = "docs/renames.tsv"
 HEADER = ["old_id", "new_id", "covered_by", "wave"]
 WAVE = re.compile(r"^wave-\d{4}-\d{2}-\d{2}(-[2-9]|-[1-9]\d+)?$")
+
+
+CYCLE = "cycle"
+DANGLING = "dangling"
+
+
+def resolve(old_id, last, live):
+    """Where an id ends up: a live test case id, 'retired', or the CYCLE / DANGLING sentinel.
+
+    `last` maps each old_id to the new_id of its last entry. A live id with no entry, or a self-mapping last entry,
+    resolves to itself; otherwise the last entries are followed one hop at a time (a chain), so an id merged into a
+    survivor that was later merged into another resolves to the final survivor.
+    """
+    seen = set()
+    current = old_id
+    while True:
+        target = last.get(current, current)
+        if target == "retired":
+            return "retired"
+        if target == current:
+            return current if current in live else DANGLING
+        if current in seen:
+            return CYCLE
+        seen.add(current)
+        current = target
 
 
 def parse(text):
@@ -39,10 +69,10 @@ def problems_for(lines, live, base_lines=None):
             continue
         old_id, new_id, covered_by, wave = cells[:4]
         where = f"{PATH}:{number} ({old_id})"
+        if new_id not in ("retired", old_id) and last.get(new_id, new_id) != new_id:
+            problems.append(f"{where}: new_id {new_id!r} was already retired or remapped by an earlier row, so it was not live when this row was written")
         rows.append((where, old_id, new_id))
         last[old_id] = new_id
-        if new_id != "retired" and new_id not in live:
-            problems.append(f"{where}: new_id {new_id!r} is neither 'retired' nor a live test case")
         for target in filter(None, covered_by.split(",")):
             if target not in live:
                 problems.append(f"{where}: covered_by {target!r} is not a live test case")
@@ -53,8 +83,17 @@ def problems_for(lines, live, base_lines=None):
             problems.append(f"{where}: old_id is a live test case whose last entry does not restore it (X, X); a retired id is never reused")
         if old_id not in live and last[old_id] == old_id:
             problems.append(f"{where}: old_id is restored (X, X) but no live test case has that id")
-        if new_id not in ("retired", old_id) and last.get(new_id, new_id) != new_id:
-            problems.append(f"{where}: new_id {new_id!r} is a retired id; a retired id never becomes another id's new_id")
+    reported = set()
+    for where, old_id, _ in rows:
+        if old_id in reported:
+            continue
+        end = resolve(old_id, last, live)
+        if end is CYCLE:
+            reported.add(old_id)
+            problems.append(f"{where}: following new_id from {old_id!r} loops back on itself")
+        elif end is DANGLING:
+            reported.add(old_id)
+            problems.append(f"{where}: following new_id from {old_id!r} ends at an id that is neither live nor 'retired'")
     if base_lines is not None:
         for number, old in enumerate(base_lines, start=1):
             if number > len(lines) or lines[number - 1] != old:

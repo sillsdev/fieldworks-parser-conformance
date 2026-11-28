@@ -12,9 +12,9 @@ Without the `tu` entry the word has no analysis (checked at `ba6dfa10`).
 
 ## Grammar shape
 
-`grammar.xml` is the per-copy form: one stratum holds `ta` and `tu`, both with `MorphemeId` `TA`. Nothing was converted from the staged grammar. The grammar cannot itself say the entry came from a complex-form ref, so what the fixture holds an importer to is the loader's behaviour on that ref, which this suite pins as the resulting grammar.
+`grammar.xml` is the per-copy form: one stratum holds `ta` and `tu`, both with `MorphemeId` `TA`. Nothing was converted from the staged grammar. The grammar cannot itself say the entry came from a complex-form ref, so what the test case holds an importer to is the loader's behaviour on that ref, which this suite pins as the resulting grammar.
 
-## Oracle
+## Reference
 
 Every row was taken with `hc-conformance --propose` at sillsdev/machine `ba6dfa10` (tip of #615, the suite pin). The three staged rows, taken at `aab4c598`, replayed unchanged.
 

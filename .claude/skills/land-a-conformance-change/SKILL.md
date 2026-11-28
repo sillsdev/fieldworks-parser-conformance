@@ -2,7 +2,7 @@
 name: land-a-conformance-change
 description: >-
   Use when a change touches expected parses across the suite, sillsdev/machine and PanGloss. Triggers: fixing a
-  parser bug that changes expected parses; adding or changing a fixture or words; pinning a bug with a fixture;
+  parser bug that changes expected parses; adding or changing a test case or words; pinning a bug with a test case;
   bumping `conformance.commit` in machine or PanGloss; landing stacked PRs across the suite, machine and
   PanGloss; "which order do these PRs land in"; a consumer fails rows the suite expects.
 ---
@@ -12,8 +12,8 @@ description: >-
 This skill says which PRs a change needs, in what order, and what each repository's pin names at each step.
 Mechanics live elsewhere; follow the links and do not restate them:
 
-- Fixture files, producibility, generated files, checks: [AGENTS.md](../../../AGENTS.md).
-- Growth policy (every bug fix lands with a fixture): [CONTRIBUTING.md](../../../CONTRIBUTING.md).
+- Test case files, producibility, generated files, checks: [AGENTS.md](../../../AGENTS.md).
+- Growth policy (every bug fix lands with a test case): [CONTRIBUTING.md](../../../CONTRIBUTING.md).
 - Row format, signatures, the `batch` contract: [PROTOCOL.md](../../../PROTOCOL.md).
 - The engine build behind the rows: the one commit in `reference.commit` (ADR 0003).
 - How consumers pin and read the suite: [docs/consuming.md](../../../docs/consuming.md).
@@ -46,8 +46,8 @@ rules in the grammar explain it. Rows are never written from memory.
 |---|---|---|---|---|
 | (a) Suite only | The reference engine already produces the new or changed rows. | yes | pin bump | pin bump |
 | (b) Reference-engine fix | The reference engine is wrong, and the fix changes expected rows. | yes, rows from the fixed engine | the fix, then the pin bump | pin bump, then port the fix or record a divergence |
-| (c) PanGloss only | PanGloss differs from the reference and the reference is right. | only if no fixture pins it | none | the fix, or a divergence-ledger entry |
-| (d) Docs or tooling | No fixture, grammar or row changes. | yes | pin bump only if a consumer needs it | pin bump only if a consumer needs it |
+| (c) PanGloss only | PanGloss differs from the reference and the reference is right. | only if no test case pins it | none | the fix, or a divergence-ledger entry |
+| (d) Docs or tooling | No test case, grammar or row changes. | yes | pin bump only if a consumer needs it | pin bump only if a consumer needs it |
 
 If you cannot tell, reproduce on the reference engine first (section 3).
 
@@ -57,7 +57,7 @@ If you cannot tell, reproduce on the reference engine first (section 3).
 
 | Step | PR | Suite `main` | Machine pin | PanGloss pin |
 |---|---|---|---|---|
-| 1 | Suite: fixture or words, rows taken from the reference engine | S0 -> S1 on merge | S0 | S0 |
+| 1 | Suite: test case or words, rows taken from the reference engine | S0 -> S1 on merge | S0 | S0 |
 | 2 | Machine: bump pin to S1, CI green, merge | S1 | S1 | S0 |
 | 3 | PanGloss: bump pin to S1. Fix or record the rows it fails. | S1 | S1 | S1 |
 
@@ -116,7 +116,7 @@ issue is closed and the file exists.
 ### (c) PanGloss-only difference
 
 1. Reproduce on the reference engine (section 3). The reference is right.
-2. If no fixture pins the behaviour, add one by class (a) first. The fixture is what shows PanGloss differs.
+2. If no test case pins the behaviour, add one by class (a) first. The test case is what shows PanGloss differs.
 3. In PanGloss, fix the defect, or write a divergence-ledger entry (`docs/divergences/`) when the difference is
    planned to stay. Keep the waiver list in step with the ledger.
 4. Open a machine issue only if the evidence also implicates the reference engine.
@@ -137,13 +137,13 @@ fixed checker. A change that moves a manifest hash (anything in `generated/`) is
 | Reference produces the suite's row; the consumer differs | (c), or a consumer-only bug | Fix the consumer. |
 | Reference differs from the suite's row, and the reference is wrong | (b) | Machine fix PR, then the order in 2(b). |
 | Reference differs from the suite's row, and the row is wrong | (a) | Suite PR with regenerated rows, citing the reference build. |
-| Reference and suite agree, and both are wrong | (b) | Prove it by forward synthesis. Pin the right answer in a fixture and open a machine issue. |
+| Reference and suite agree, and both are wrong | (b) | Prove it by forward synthesis. Pin the right answer in a test case and open a machine issue. |
 
 3. A reference that is wrong needs proof: a hand-traced forward synthesis that builds the surface form. Write the
-   trace in the fixture comment, say in the word `note` which rows are recorded and which are derived, and
-   link the machine issue. Without a fix PR the fixture is an unexplained failure.
-4. Pin the bug with a fixture whenever one is missing ([CONTRIBUTING.md](../../../CONTRIBUTING.md)): add a word first,
-   then extend a grammar, then add an edge case. A fixture that has never failed has proved nothing; show it failing
+   trace in the test case comment, say in the word `note` which rows are recorded and which are derived, and
+   link the machine issue. Without a fix PR the test case is an unexplained failure.
+4. Pin the bug with a test case whenever one is missing ([CONTRIBUTING.md](../../../CONTRIBUTING.md)): add a word first,
+   then extend a grammar, then add an edge case. A test case that has never failed has proved nothing; show it failing
    on the unfixed engine.
 
 ## 4. Checks before each PR
@@ -170,8 +170,8 @@ HC_CONFORMANCE_SUITE=<suite clone> dotnet test tests/SIL.Machine.Morphology.Herm
 - `--propose` prints the `words.yaml` patch for each mismatch and writes nothing. Read every row against the rules.
 - `HC_CONFORMANCE_SUITE` skips machine's pin check. That is intended for trying a suite branch. It also means a
   green local run says nothing about whether the pin is on the suite's `main`.
-- Suite CI runs no engine. A fixture that machine's runner rejects can pass suite CI, land and be tagged. Always run
-  the runner locally before a fixture change lands. (Until #32 is built, nothing else catches it.)
+- Suite CI runs no engine. A test case that machine's runner rejects can pass suite CI, land and be tagged. Always run
+  the runner locally before a test case change lands. (Until #32 is built, nothing else catches it.)
 
 Machine PR that bumps the pin ([machine runner README](https://github.com/sillsdev/machine/blob/master/src/SIL.Machine.Morphology.HermitCrab.Conformance/README.md)):
 
@@ -180,21 +180,21 @@ Machine PR that bumps the pin ([machine runner README](https://github.com/sillsd
    match.
 3. Run the commands in that README's "Before you push". CI also checks the pin is on the suite's `main`.
 4. Commit with a message that says what is now true, such as "Run the conformance suite at `<short sha>`, which adds
-   the `<name>` fixture".
+   the `<name>` test case".
 
 PanGloss pin bump: put the SHA in `conformance.commit`, run its conformance gate (`rust/tools/conformance.ps1`
 fetches the suite at the pin; `rust/tools/run-conformance.sh` runs it), then act on each failing row: fix, or record a
-divergence. A staged copy of a fixture that is now in the suite is deleted in the same commit as the bump.
+divergence. A staged copy of a test case that is now in the suite is deleted in the same commit as the bump.
 
 ## 5. Releases
 
-After a fixture change lands on the suite's `main`:
+After a test case change lands on the suite's `main`:
 
 1. Tag the next patch version (`v0.1.x`) on the merge commit. List tags first (`git tag`) and take the next number.
-2. Write release notes: fixtures added, changed or removed; the machine commit the rows were recorded on; which
+2. Write release notes: test cases added, changed or removed; the machine commit the rows were recorded on; which
    consumers must bump.
 3. Consumers may pin a tag's commit. A pin is still the commit SHA, and it must be on `main`.
-4. Do not tag a commit whose fixtures machine's runner rejects. Run the section 4 commands on the tagged commit.
+4. Do not tag a commit whose test cases machine's runner rejects. Run the section 4 commands on the tagged commit.
 
 Tagging is a push. Do it only when the owner asks.
 

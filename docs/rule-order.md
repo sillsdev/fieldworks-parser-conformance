@@ -31,7 +31,7 @@ select.
 
 `PROTOCOL.md` specifies the adapter contract in engine-agnostic terms; nothing in this repository depends on
 any engine's build, layout, or language. The C# HermitCrab supplies the seed construct vocabulary
-(`constructs.txt`) and is the **founding oracle** that generated every fixture's ground truth, but it is not a
+(`constructs.txt`) and is the **reference** that generated every test case's ground truth, but it is not a
 hard boundary: any engine that implements `PROTOCOL.md`'s contract can be validated here, declaring a partial
 **capability profile** (e.g. morphotactics-only, no phonological rules) to be measured fairly against just the
 subset it claims to support.
