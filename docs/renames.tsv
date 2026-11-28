@@ -110,3 +110,4 @@ edge-cases/metathesis-boundary-two-suffixes	edge-cases/metathesis-segment-class-
 edge-cases/spelling-coverage-compound-affixes	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
 edge-cases/spelling-coverage-compound-prefix-feeds	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
 edge-cases/spelling-coverage-compound-suffix-feeds	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
+edge-cases/spelling-coverage-compound-depth-prefix-hop	edge-cases/spelling-coverage-compound-depth4		wave-2026-11-27-8
