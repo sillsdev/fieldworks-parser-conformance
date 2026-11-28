@@ -1,15 +1,454 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<HermitCrabInput><Language><Name>SpellingCompoundOrdersPos</Name>
-<PartsOfSpeech><PartOfSpeech id="v"><Name>V</Name></PartOfSpeech><PartOfSpeech id="n"><Name>N</Name></PartOfSpeech></PartsOfSpeech>
-<PhonologicalFeatureSystem><SymbolicFeature id="f"><Name>f</Name><Symbols><Symbol id="fP">+</Symbol><Symbol id="fM">-</Symbol></Symbols></SymbolicFeature><SymbolicFeature id="g"><Name>g</Name><Symbols><Symbol id="gP">+</Symbol><Symbol id="gM">-</Symbol></Symbols></SymbolicFeature></PhonologicalFeatureSystem>
-
-<CharacterDefinitionTable id="t"><Name>Main</Name><SegmentDefinitions><SegmentDefinition id="cA"><Representations><Representation>a</Representation><Representation>á</Representation><Representation>xy</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /></SegmentDefinition><SegmentDefinition id="cE"><Representations><Representation>e</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></SegmentDefinition><SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gP" /></SegmentDefinition><SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></SegmentDefinition><SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></SegmentDefinition></SegmentDefinitions><BoundaryDefinitions><BoundaryDefinition id="b"><Representations><Representation>^0</Representation></Representations></BoundaryDefinition></BoundaryDefinitions></CharacterDefinitionTable>
-<NaturalClasses><FeatureNaturalClass id="any"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
-<Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2"><Name>Main</Name><MorphologicalRuleDefinitions>
-<CompoundingRule id="cr1" headPartsOfSpeech="v" nonHeadPartsOfSpeech="n"><Name>cr1</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="cr1h0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="cr1n0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="cr1h0" /><CopyFromInput index="cr1n0" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule>
-<CompoundingRule id="cr2" headPartsOfSpeech="v" nonHeadPartsOfSpeech="n"><Name>cr2</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="cr1h1"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="cr1n1"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="cr1n1" /><CopyFromInput index="cr1h1" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule>
-</MorphologicalRuleDefinitions>
-
-<LexicalEntries><LexicalEntry id="x" partOfSpeech="v"><Allomorphs><Allomorph id="x0"><PhoneticShape>a</PhoneticShape></Allomorph></Allomorphs><MorphemeId>X</MorphemeId></LexicalEntry><LexicalEntry id="y" partOfSpeech="n"><Allomorphs><Allomorph id="y0"><PhoneticShape>p</PhoneticShape></Allomorph></Allomorphs><MorphemeId>Y</MorphemeId></LexicalEntry><LexicalEntry id="z" partOfSpeech="v"><Allomorphs><Allomorph id="z0"><PhoneticShape>s</PhoneticShape></Allomorph></Allomorphs><MorphemeId>Z</MorphemeId></LexicalEntry></LexicalEntries>
-</Stratum></Strata></Language></HermitCrabInput>
+<HermitCrabInput>
+  <Language>
+    <Name>SpellingCompoundOrdersPos</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="v_pos">
+        <Name>V_pos</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="n_pos">
+        <Name>N_pos</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_orders">
+        <Name>V_orders</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_asymmetric">
+        <Name>V_asymmetric</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="f_pos">
+        <Name>f_pos</Name>
+        <Symbols>
+          <Symbol id="fP_pos">+</Symbol>
+          <Symbol id="fM_pos">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_pos">
+        <Name>g_pos</Name>
+        <Symbols>
+          <Symbol id="gP_pos">+</Symbol>
+          <Symbol id="gM_pos">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_orders">
+        <Name>f_orders</Name>
+        <Symbols>
+          <Symbol id="fP_orders">+</Symbol>
+          <Symbol id="fM_orders">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_orders">
+        <Name>g_orders</Name>
+        <Symbols>
+          <Symbol id="gP_orders">+</Symbol>
+          <Symbol id="gM_orders">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_asymmetric">
+        <Name>f_asymmetric</Name>
+        <Symbols>
+          <Symbol id="fP_asymmetric">+</Symbol>
+          <Symbol id="fM_asymmetric">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_asymmetric">
+        <Name>g_asymmetric</Name>
+        <Symbols>
+          <Symbol id="gP_asymmetric">+</Symbol>
+          <Symbol id="gM_asymmetric">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_pos">cell pos</Symbol>
+          <Symbol id="cell_orders">cell orders</Symbol>
+          <Symbol id="cell_asymmetric">cell asymmetric</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <MorphologicalPhonologicalRuleFeatures>
+      <MorphologicalPhonologicalRuleFeature id="m1_orders">m1_orders</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeature id="m2_orders">m2_orders</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeature id="m1_asymmetric">m1_asymmetric</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeature id="m2_asymmetric">m2_asymmetric</MorphologicalPhonologicalRuleFeature>
+      <MorphologicalPhonologicalRuleFeatureGroup matchType="all" outputType="overwrite" features="m1_orders m2_orders m1_asymmetric m2_asymmetric">
+        <Name>exceptionFeatures</Name>
+      </MorphologicalPhonologicalRuleFeatureGroup>
+    </MorphologicalPhonologicalRuleFeatures>
+    <CharacterDefinitionTable id="t_pos">
+      <Name>Main_pos</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA_pos">
+          <Representations>
+            <Representation>a</Representation>
+            <Representation>á</Representation>
+            <Representation>xy</Representation>
+          </Representations>
+          <FeatureValue feature="f_pos" symbolValues="fP_pos"/>
+          <FeatureValue feature="cell" symbolValues="cell_pos"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_pos">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+          <FeatureValue feature="f_pos" symbolValues="fP_pos"/>
+          <FeatureValue feature="g_pos" symbolValues="gM_pos"/>
+          <FeatureValue feature="cell" symbolValues="cell_pos"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_pos">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+          <FeatureValue feature="f_pos" symbolValues="fP_pos"/>
+          <FeatureValue feature="g_pos" symbolValues="gP_pos"/>
+          <FeatureValue feature="cell" symbolValues="cell_pos"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_pos">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f_pos" symbolValues="fM_pos"/>
+          <FeatureValue feature="g_pos" symbolValues="gM_pos"/>
+          <FeatureValue feature="cell" symbolValues="cell_pos"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_pos">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="f_pos" symbolValues="fM_pos"/>
+          <FeatureValue feature="g_pos" symbolValues="gP_pos"/>
+          <FeatureValue feature="cell" symbolValues="cell_pos"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_orders">
+          <Representations>
+            <Representation>b</Representation>
+            <Representation>l</Representation>
+            <Representation>jk</Representation>
+          </Representations>
+          <FeatureValue feature="f_orders" symbolValues="fP_orders"/>
+          <FeatureValue feature="cell" symbolValues="cell_orders"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_orders">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_orders" symbolValues="fP_orders"/>
+          <FeatureValue feature="g_orders" symbolValues="gM_orders"/>
+          <FeatureValue feature="cell" symbolValues="cell_orders"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_orders">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_orders" symbolValues="fP_orders"/>
+          <FeatureValue feature="g_orders" symbolValues="gP_orders"/>
+          <FeatureValue feature="cell" symbolValues="cell_orders"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_orders">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_orders" symbolValues="fM_orders"/>
+          <FeatureValue feature="g_orders" symbolValues="gM_orders"/>
+          <FeatureValue feature="cell" symbolValues="cell_orders"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_orders">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_orders" symbolValues="fM_orders"/>
+          <FeatureValue feature="g_orders" symbolValues="gP_orders"/>
+          <FeatureValue feature="cell" symbolValues="cell_orders"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_asymmetric">
+          <Representations>
+            <Representation>m</Representation>
+            <Representation>z</Representation>
+            <Representation>vw</Representation>
+          </Representations>
+          <FeatureValue feature="f_asymmetric" symbolValues="fP_asymmetric"/>
+          <FeatureValue feature="cell" symbolValues="cell_asymmetric"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_asymmetric">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="f_asymmetric" symbolValues="fP_asymmetric"/>
+          <FeatureValue feature="g_asymmetric" symbolValues="gM_asymmetric"/>
+          <FeatureValue feature="cell" symbolValues="cell_asymmetric"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_asymmetric">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="f_asymmetric" symbolValues="fP_asymmetric"/>
+          <FeatureValue feature="g_asymmetric" symbolValues="gP_asymmetric"/>
+          <FeatureValue feature="cell" symbolValues="cell_asymmetric"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_asymmetric">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="f_asymmetric" symbolValues="fM_asymmetric"/>
+          <FeatureValue feature="g_asymmetric" symbolValues="gM_asymmetric"/>
+          <FeatureValue feature="cell" symbolValues="cell_asymmetric"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_asymmetric">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="f_asymmetric" symbolValues="fM_asymmetric"/>
+          <FeatureValue feature="g_asymmetric" symbolValues="gP_asymmetric"/>
+          <FeatureValue feature="cell" symbolValues="cell_asymmetric"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+      <BoundaryDefinitions>
+        <BoundaryDefinition id="b">
+          <Representations>
+            <Representation>^0</Representation>
+          </Representations>
+        </BoundaryDefinition>
+      </BoundaryDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="any_pos">
+        <Name>Any_pos</Name>
+        <FeatureValue feature="cell" symbolValues="cell_pos"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_orders">
+        <Name>Any_orders</Name>
+        <FeatureValue feature="cell" symbolValues="cell_orders"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_asymmetric">
+        <Name>Any_asymmetric</Name>
+        <FeatureValue feature="cell" symbolValues="cell_asymmetric"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t_pos" morphologicalRuleOrder="unordered" morphologicalRules="cr1_pos cr2_pos cr1_orders cr2_orders cr1_asymmetric cr2_asymmetric">
+        <Name>Main_pos</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="cr1_pos" headPartsOfSpeech="v_pos" nonHeadPartsOfSpeech="n_pos">
+            <Name>cr1_pos</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_pos">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_pos"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_pos">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_pos"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_pos"/>
+                  <CopyFromInput index="cr1n0_pos"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_pos" headPartsOfSpeech="v_pos" nonHeadPartsOfSpeech="n_pos">
+            <Name>cr2_pos</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h1_pos">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_pos"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n1_pos">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_pos"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1n1_pos"/>
+                  <CopyFromInput index="cr1h1_pos"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_orders" headProdRestrictionsMprFeatures="m1_orders" nonHeadProdRestrictionsMprFeatures="m1_orders">
+            <Name>cr1_orders</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_orders">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_orders"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_orders">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_orders"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_orders"/>
+                  <CopyFromInput index="cr1n0_orders"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_orders" headProdRestrictionsMprFeatures="m1_orders" nonHeadProdRestrictionsMprFeatures="m1_orders">
+            <Name>cr2_orders</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h1_orders">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_orders"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n1_orders">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_orders"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1n1_orders"/>
+                  <CopyFromInput index="cr1h1_orders"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_asymmetric" headProdRestrictionsMprFeatures="m1_asymmetric" nonHeadProdRestrictionsMprFeatures="m2_asymmetric">
+            <Name>cr1_asymmetric</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_asymmetric">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_asymmetric"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_asymmetric">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_asymmetric"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_asymmetric"/>
+                  <CopyFromInput index="cr1n0_asymmetric"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_asymmetric" headProdRestrictionsMprFeatures="m1_asymmetric" nonHeadProdRestrictionsMprFeatures="m2_asymmetric">
+            <Name>cr2_asymmetric</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h1_asymmetric">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_asymmetric"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n1_asymmetric">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_asymmetric"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1n1_asymmetric"/>
+                  <CopyFromInput index="cr1h1_asymmetric"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="x_pos" partOfSpeech="v_pos">
+            <Allomorphs>
+              <Allomorph id="x0_pos">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_pos</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_pos" partOfSpeech="n_pos">
+            <Allomorphs>
+              <Allomorph id="y0_pos">
+                <PhoneticShape>p</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_pos</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_pos" partOfSpeech="v_pos">
+            <Allomorphs>
+              <Allomorph id="z0_pos">
+                <PhoneticShape>s</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_pos</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_orders" partOfSpeech="v_orders" ruleFeatures="m1_orders">
+            <Allomorphs>
+              <Allomorph id="x0_orders">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_orders</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_orders" partOfSpeech="v_orders" ruleFeatures="m1_orders">
+            <Allomorphs>
+              <Allomorph id="y0_orders">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_orders</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_orders" partOfSpeech="v_orders" ruleFeatures="m2_orders">
+            <Allomorphs>
+              <Allomorph id="z0_orders">
+                <PhoneticShape>h</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_orders</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_asymmetric" partOfSpeech="v_asymmetric" ruleFeatures="m1_asymmetric">
+            <Allomorphs>
+              <Allomorph id="x0_asymmetric">
+                <PhoneticShape>m</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_asymmetric</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_asymmetric" partOfSpeech="v_asymmetric" ruleFeatures="m2_asymmetric">
+            <Allomorphs>
+              <Allomorph id="y0_asymmetric">
+                <PhoneticShape>q</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_asymmetric</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
