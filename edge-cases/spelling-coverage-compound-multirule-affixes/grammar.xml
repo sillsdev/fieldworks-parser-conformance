@@ -1,14 +1,350 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<HermitCrabInput><Language><Name>SpellingCompoundMultiruleAffixes</Name>
-<PartsOfSpeech><PartOfSpeech id="v"><Name>V</Name></PartOfSpeech></PartsOfSpeech>
-<PhonologicalFeatureSystem><SymbolicFeature id="f"><Name>f</Name><Symbols><Symbol id="fP">+</Symbol><Symbol id="fM">-</Symbol></Symbols></SymbolicFeature><SymbolicFeature id="g"><Name>g</Name><Symbols><Symbol id="gP">+</Symbol><Symbol id="gM">-</Symbol></Symbols></SymbolicFeature></PhonologicalFeatureSystem>
-
-<CharacterDefinitionTable id="t"><Name>Main</Name><SegmentDefinitions><SegmentDefinition id="cA"><Representations><Representation>a</Representation><Representation>á</Representation><Representation>xy</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /></SegmentDefinition><SegmentDefinition id="cE"><Representations><Representation>e</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gM" /></SegmentDefinition><SegmentDefinition id="cI"><Representations><Representation>i</Representation></Representations><FeatureValue feature="f" symbolValues="fP" /><FeatureValue feature="g" symbolValues="gP" /></SegmentDefinition><SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></SegmentDefinition><SegmentDefinition id="cS"><Representations><Representation>s</Representation></Representations><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></SegmentDefinition></SegmentDefinitions><BoundaryDefinitions><BoundaryDefinition id="b"><Representations><Representation>^0</Representation></Representations></BoundaryDefinition></BoundaryDefinitions></CharacterDefinitionTable>
-<NaturalClasses><FeatureNaturalClass id="any"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
-<Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2 PRE SUF"><Name>Main</Name><MorphologicalRuleDefinitions>
-<CompoundingRule id="cr1"><Name>cr1</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="cr1h0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="cr1n0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="cr1h0" /><CopyFromInput index="cr1n0" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule><CompoundingRule id="cr2"><Name>cr2</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="cr2h0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="cr2n0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="cr2n0" /><CopyFromInput index="cr2h0" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule><MorphologicalRule id="PRE" requiredPartsOfSpeech="v"><Name>PRE</Name><MorphologicalSubrules><MorphologicalSubrule id="PRE0"><MorphologicalInput><PhoneticSequence id="PRES"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><InsertSegments><PhoneticShape>s</PhoneticShape></InsertSegments><CopyFromInput index="PRES"/></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>PRE</MorphemeId></MorphologicalRule><MorphologicalRule id="SUF" requiredPartsOfSpeech="v"><Name>SUF</Name><MorphologicalSubrules><MorphologicalSubrule id="SUF0"><MorphologicalInput><PhoneticSequence id="SUFS"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput><MorphologicalOutput><CopyFromInput index="SUFS"/><InsertSegments><PhoneticShape>i</PhoneticShape></InsertSegments></MorphologicalOutput></MorphologicalSubrule></MorphologicalSubrules><MorphemeId>SUF</MorphemeId></MorphologicalRule>
-</MorphologicalRuleDefinitions>
-
-<LexicalEntries><LexicalEntry id="x" partOfSpeech="v"><Allomorphs><Allomorph id="x0"><PhoneticShape>a</PhoneticShape></Allomorph></Allomorphs><MorphemeId>X</MorphemeId></LexicalEntry><LexicalEntry id="y" partOfSpeech="v"><Allomorphs><Allomorph id="y0"><PhoneticShape>p</PhoneticShape></Allomorph></Allomorphs><MorphemeId>Y</MorphemeId></LexicalEntry></LexicalEntries>
-</Stratum></Strata></Language></HermitCrabInput>
+<HermitCrabInput>
+  <Language>
+    <Name>SpellingCompoundMultiruleAffixes</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="v_affixes">
+        <Name>V_affixes</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_multirule">
+        <Name>V_multirule</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="f_affixes">
+        <Name>f_affixes</Name>
+        <Symbols>
+          <Symbol id="fP_affixes">+</Symbol>
+          <Symbol id="fM_affixes">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_affixes">
+        <Name>g_affixes</Name>
+        <Symbols>
+          <Symbol id="gP_affixes">+</Symbol>
+          <Symbol id="gM_affixes">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_multirule">
+        <Name>f_multirule</Name>
+        <Symbols>
+          <Symbol id="fP_multirule">+</Symbol>
+          <Symbol id="fM_multirule">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_multirule">
+        <Name>g_multirule</Name>
+        <Symbols>
+          <Symbol id="gP_multirule">+</Symbol>
+          <Symbol id="gM_multirule">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_affixes">cell affixes</Symbol>
+          <Symbol id="cell_multirule">cell multirule</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="t_affixes">
+      <Name>Main_affixes</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA_affixes">
+          <Representations>
+            <Representation>a</Representation>
+            <Representation>á</Representation>
+            <Representation>xy</Representation>
+          </Representations>
+          <FeatureValue feature="f_affixes" symbolValues="fP_affixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_affixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_affixes">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+          <FeatureValue feature="f_affixes" symbolValues="fP_affixes"/>
+          <FeatureValue feature="g_affixes" symbolValues="gM_affixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_affixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_affixes">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+          <FeatureValue feature="f_affixes" symbolValues="fP_affixes"/>
+          <FeatureValue feature="g_affixes" symbolValues="gP_affixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_affixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_affixes">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f_affixes" symbolValues="fM_affixes"/>
+          <FeatureValue feature="g_affixes" symbolValues="gM_affixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_affixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_affixes">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+          <FeatureValue feature="f_affixes" symbolValues="fM_affixes"/>
+          <FeatureValue feature="g_affixes" symbolValues="gP_affixes"/>
+          <FeatureValue feature="cell" symbolValues="cell_affixes"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_multirule">
+          <Representations>
+            <Representation>b</Representation>
+            <Representation>l</Representation>
+            <Representation>jk</Representation>
+          </Representations>
+          <FeatureValue feature="f_multirule" symbolValues="fP_multirule"/>
+          <FeatureValue feature="cell" symbolValues="cell_multirule"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cE_multirule">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_multirule" symbolValues="fP_multirule"/>
+          <FeatureValue feature="g_multirule" symbolValues="gM_multirule"/>
+          <FeatureValue feature="cell" symbolValues="cell_multirule"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cI_multirule">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_multirule" symbolValues="fP_multirule"/>
+          <FeatureValue feature="g_multirule" symbolValues="gP_multirule"/>
+          <FeatureValue feature="cell" symbolValues="cell_multirule"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_multirule">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_multirule" symbolValues="fM_multirule"/>
+          <FeatureValue feature="g_multirule" symbolValues="gM_multirule"/>
+          <FeatureValue feature="cell" symbolValues="cell_multirule"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_multirule">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_multirule" symbolValues="fM_multirule"/>
+          <FeatureValue feature="g_multirule" symbolValues="gP_multirule"/>
+          <FeatureValue feature="cell" symbolValues="cell_multirule"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+      <BoundaryDefinitions>
+        <BoundaryDefinition id="b_affixes">
+          <Representations>
+            <Representation>^0</Representation>
+          </Representations>
+        </BoundaryDefinition>
+        <BoundaryDefinition id="b_multirule">
+          <Representations>
+            <Representation>~</Representation>
+          </Representations>
+        </BoundaryDefinition>
+      </BoundaryDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="any_affixes">
+        <Name>Any_affixes</Name>
+        <FeatureValue feature="cell" symbolValues="cell_affixes"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_multirule">
+        <Name>Any_multirule</Name>
+        <FeatureValue feature="cell" symbolValues="cell_multirule"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t_affixes" morphologicalRuleOrder="unordered" morphologicalRules="cr1_affixes cr2_affixes PRE_affixes SUF_affixes cr1_multirule cr2_multirule">
+        <Name>Main_affixes</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="cr1_affixes">
+            <Name>cr1_affixes</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_affixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_affixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_affixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_affixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_affixes"/>
+                  <CopyFromInput index="cr1n0_affixes"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_affixes">
+            <Name>cr2_affixes</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_affixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_affixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_affixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_affixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_affixes"/>
+                  <CopyFromInput index="cr2h0_affixes"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_affixes" requiredPartsOfSpeech="v_affixes">
+            <Name>PRE_affixes</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_affixes">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_affixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_affixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>s</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_affixes"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_affixes</MorphemeId>
+          </MorphologicalRule>
+          <MorphologicalRule id="SUF_affixes" requiredPartsOfSpeech="v_affixes">
+            <Name>SUF_affixes</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF0_affixes">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUFS_affixes">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_affixes"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUFS_affixes"/>
+                  <InsertSegments>
+                    <PhoneticShape>i</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF_affixes</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_multirule">
+            <Name>cr1_multirule</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_multirule">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_multirule"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_multirule">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_multirule"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_multirule"/>
+                  <InsertSegments>
+                    <PhoneticShape>~</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_multirule"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_multirule">
+            <Name>cr2_multirule</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_multirule">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_multirule"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_multirule">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_multirule"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_multirule"/>
+                  <InsertSegments>
+                    <PhoneticShape>~</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_multirule"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="x_affixes" partOfSpeech="v_affixes">
+            <Allomorphs>
+              <Allomorph id="x0_affixes">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_affixes</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_affixes" partOfSpeech="v_affixes">
+            <Allomorphs>
+              <Allomorph id="y0_affixes">
+                <PhoneticShape>p</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_affixes</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_multirule" partOfSpeech="v_multirule">
+            <Allomorphs>
+              <Allomorph id="x0_multirule">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_multirule</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_multirule" partOfSpeech="v_multirule">
+            <Allomorphs>
+              <Allomorph id="y0_multirule">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_multirule</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>
