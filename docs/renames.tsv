@@ -76,3 +76,4 @@ edge-cases/spelling-coverage-compound-singleton-medial-suffix	edge-cases/spellin
 edge-cases/spelling-coverage-compound-singleton-quote-boundary	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-4
 edge-cases/spelling-coverage-compound-singleton-thai-mark	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-4
 edge-cases/spelling-coverage-compound-singleton-merging-mark	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-4
+edge-cases/spelling-coverage-compound-junction-boundary-mark	edge-cases/spelling-coverage-compound-junction-mark		wave-2026-11-27-4
