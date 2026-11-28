@@ -99,3 +99,4 @@ edge-cases/spelling-coverage-compound-depth-reordered-prefix	edge-cases/spelling
 edge-cases/spelling-coverage-compound-multirule	edge-cases/spelling-coverage-compound-multirule-affixes		wave-2026-11-27-6
 edge-cases/spelling-coverage-compound-template	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
 edge-cases/spelling-coverage-compound-template-feeds	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
+edge-cases/compound-allomorph-identity-distinct-entries	edge-cases/compound-allomorph-identity		wave-2026-11-27-7
