@@ -1,61 +1,158 @@
 language: SpellingCompoundDepthPrefixZone
-requires: [morpher-settings]
+requires:
+  - morpher-settings
 morpher:
   MaxRoots: 3
 words:
   - word: as
-    note: "C# returns 1 analysis (X+PRE|[aá]s): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell prefix-zone] C# returns 1 analysis (X+PRE|[aá]s): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE|[aá]s"
-        rules: ["PRE"]
+      - signature: X_prefix-zone+PRE_prefix-zone|[aá]s
+        rules:
+          - PRE_prefix-zone
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: sa
-    note: "C# returns 1 analysis (PRE+X|s[aá]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell prefix-zone] C# returns 1 analysis (PRE+X|s[aá]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|s[aá]"
-        rules: ["PRE"]
+      - signature: PRE_prefix-zone+X_prefix-zone|s[aá]
+        rules:
+          - PRE_prefix-zone
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: apst
-    note: "C# returns 3 analyses (X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell prefix-zone] C# returns 3 analyses (X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t"
-        rules: ["PRE", "cr1", "cr2"]
-      - signature: "X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t"
-        rules: ["PRE", "cr1", "cr2"]
-      - signature: "X+Y+PRE+Z|[aá][+-=]?ps[+-=]?t"
-        rules: ["PRE", "cr1", "cr2"]
+      - signature: X_prefix-zone+Y_prefix-zone+PRE_prefix-zone+Z_prefix-zone|[aá][+-=]?ps[+-=]?t
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+          - cr2_prefix-zone
+      - signature: X_prefix-zone+Y_prefix-zone+PRE_prefix-zone+Z_prefix-zone|[aá][+-=]?ps[+-=]?t
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+          - cr2_prefix-zone
+      - signature: X_prefix-zone+Y_prefix-zone+PRE_prefix-zone+Z_prefix-zone|[aá][+-=]?ps[+-=]?t
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+          - cr2_prefix-zone
     exercises:
-      - "CompoundingRule > depth limit"
+      - CompoundingRule > depth limit
   - word: aspt
-    note: "C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell prefix-zone] C# returns 3 analyses (X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t"
-        rules: ["PRE", "cr1", "cr2"]
-      - signature: "X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t"
-        rules: ["PRE", "cr1", "cr2"]
-      - signature: "X+PRE+Y+Z|[aá][+-=]?sp[+-=]?t"
-        rules: ["PRE", "cr1", "cr2"]
+      - signature: X_prefix-zone+PRE_prefix-zone+Y_prefix-zone+Z_prefix-zone|[aá][+-=]?sp[+-=]?t
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+          - cr2_prefix-zone
+      - signature: X_prefix-zone+PRE_prefix-zone+Y_prefix-zone+Z_prefix-zone|[aá][+-=]?sp[+-=]?t
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+          - cr2_prefix-zone
+      - signature: X_prefix-zone+PRE_prefix-zone+Y_prefix-zone+Z_prefix-zone|[aá][+-=]?sp[+-=]?t
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+          - cr2_prefix-zone
     exercises:
-      - "CompoundingRule > depth limit"
+      - CompoundingRule > depth limit
   - word: apt
-    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell prefix-zone] C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
-        rules: ["cr1", "cr2"]
-      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?t"
-        rules: ["cr1", "cr2"]
+      - signature: X_prefix-zone+Y_prefix-zone+Z_prefix-zone|[aá][+-=]?p[+-=]?t
+        rules:
+          - cr1_prefix-zone
+          - cr2_prefix-zone
+      - signature: X_prefix-zone+Y_prefix-zone+Z_prefix-zone|[aá][+-=]?p[+-=]?t
+        rules:
+          - cr1_prefix-zone
+          - cr2_prefix-zone
     exercises:
-      - "CompoundingRule > depth limit"
+      - CompoundingRule > depth limit
   - word: sap
-    note: "C# returns 3 analyses (PRE+X+Y|s[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell prefix-zone] C# returns 3 analyses (PRE+X+Y|s[aá][+-=]?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y|s[aá][+-=]?p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá][+-=]?p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá][+-=]?p"
-        rules: ["PRE", "cr2"]
+      - signature: PRE_prefix-zone+X_prefix-zone+Y_prefix-zone|s[aá][+-=]?p
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+      - signature: PRE_prefix-zone+X_prefix-zone+Y_prefix-zone|s[aá][+-=]?p
+        rules:
+          - PRE_prefix-zone
+          - cr1_prefix-zone
+      - signature: PRE_prefix-zone+X_prefix-zone+Y_prefix-zone|s[aá][+-=]?p
+        rules:
+          - PRE_prefix-zone
+          - cr2_prefix-zone
     exercises:
-      - "CompoundingRule > depth limit"
+      - CompoundingRule > depth limit
+  - word: fdbg
+    note: '[cell reordered-prefix] C# returns 1 analysis (PRE+Y+X+Z|sp[aá][+-=]?[+-=]?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_reordered-prefix+Y_reordered-prefix+X_reordered-prefix+Z_reordered-prefix|fd[bh][+-=]?[+-=]?g
+        rules:
+          - PRE_reordered-prefix
+          - cr1_reordered-prefix
+          - cr2_reordered-prefix
+    exercises:
+      - CompoundingRule > depth limit
+  - word: fbd
+    note: '[cell reordered-prefix] C# returns 2 analyses (PRE+X+Y|s[aá]p[+-=]?): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_reordered-prefix+X_reordered-prefix+Y_reordered-prefix|f[bh]d[+-=]?
+        rules:
+          - PRE_reordered-prefix
+          - cr1_reordered-prefix
+      - signature: PRE_reordered-prefix+X_reordered-prefix+Y_reordered-prefix|f[bh]d[+-=]?
+        rules:
+          - PRE_reordered-prefix
+          - cr2_reordered-prefix
+    exercises:
+      - CompoundingRule > depth limit
+  - word: bdg
+    note: '[cell reordered-prefix] C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_reordered-prefix+Y_reordered-prefix+Z_reordered-prefix|[bh][+-=]?d[+-=]?g
+        rules:
+          - cr1_reordered-prefix
+          - cr2_reordered-prefix
+      - signature: X_reordered-prefix+Y_reordered-prefix+Z_reordered-prefix|[bh][+-=]?d[+-=]?g
+        rules:
+          - cr1_reordered-prefix
+          - cr2_reordered-prefix
+    exercises:
+      - CompoundingRule > depth limit
+  - word: fgdb
+    note: '[cell reordered-prefix] C# returns 1 analysis (PRE+Z+Y+X|stp[+-=]?[+-=]?[aá]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_reordered-prefix+Z_reordered-prefix+Y_reordered-prefix+X_reordered-prefix|fgd[+-=]?[+-=]?[bh]
+        rules:
+          - PRE_reordered-prefix
+          - cr1_reordered-prefix
+          - cr2_reordered-prefix
+    exercises:
+      - CompoundingRule > depth limit
+  - word: dfbg
+    note: '[cell reordered-prefix] C# returns 1 analysis (Y+PRE+X+Z|p[+-=]?s[aá]t[+-=]?): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_reordered-prefix+PRE_reordered-prefix+X_reordered-prefix+Z_reordered-prefix|d[+-=]?f[bh]g[+-=]?
+        rules:
+          - PRE_reordered-prefix
+          - cr1_reordered-prefix
+          - cr2_reordered-prefix
+    exercises:
+      - CompoundingRule > depth limit
+  - word: bfdg
+    note: '[cell reordered-prefix] C# returns 1 analysis (X+PRE+Y+Z|[aá][+-=]?spt[+-=]?): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_reordered-prefix+PRE_reordered-prefix+Y_reordered-prefix+Z_reordered-prefix|[bh][+-=]?fdg[+-=]?
+        rules:
+          - PRE_reordered-prefix
+          - cr1_reordered-prefix
+          - cr2_reordered-prefix
+    exercises:
+      - CompoundingRule > depth limit
