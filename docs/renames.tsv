@@ -69,3 +69,4 @@ edge-cases/metathesis-boundary-between-switches-marker	edge-cases/metathesis-bou
 edge-cases/metathesis-boundary-between-switches-prefix	edge-cases/metathesis-boundary-between-switches-compound		wave-2026-11-27-4
 edge-cases/metathesis-boundary-context-right	edge-cases/metathesis-boundary-context-left-right-to-left		wave-2026-11-27-4
 edge-cases/metathesis-boundary-context-segments	edge-cases/metathesis-boundary-context-left-right-to-left		wave-2026-11-27-4
+edge-cases/metathesis-boundary-morph-order-prefix-root	edge-cases/metathesis-boundary-morph-order-compound		wave-2026-11-27-4
