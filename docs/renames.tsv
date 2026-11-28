@@ -82,3 +82,6 @@ edge-cases/spelling-coverage-compound-singleton-junction-featchange	edge-cases/s
 edge-cases/spelling-coverage-compound-singleton-junction-final-change	edge-cases/spelling-coverage-compound-singleton-junction-deletion		wave-2026-11-27-4
 edge-cases/spelling-coverage-compound-singleton-junction-metathesis	edge-cases/spelling-coverage-compound-singleton-junction-deletion		wave-2026-11-27-4
 edge-cases/spelling-coverage-compound-singleton-junction-root-stratum-final-change	edge-cases/spelling-coverage-compound-singleton-junction-deletion		wave-2026-11-27-4
+edge-cases/ambiguous-disagree-feature-class-unbounded-ltr	edge-cases/ambiguous-disagree-feature-class-bounded-rtl		wave-2026-11-27-4
+edge-cases/ambiguous-disagree-mixed-plus-class	edge-cases/ambiguous-disagree-feature-class-bounded-rtl		wave-2026-11-27-4
+edge-cases/ambiguous-disagree-repeated-minus-partial-focus	edge-cases/ambiguous-disagree-feature-class-bounded-rtl		wave-2026-11-27-4
