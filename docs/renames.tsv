@@ -100,3 +100,4 @@ edge-cases/spelling-coverage-compound-multirule	edge-cases/spelling-coverage-com
 edge-cases/spelling-coverage-compound-template	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
 edge-cases/spelling-coverage-compound-template-feeds	edge-cases/spelling-coverage-compound-template-free-feeds		wave-2026-11-27-6
 edge-cases/compound-allomorph-identity-distinct-entries	edge-cases/compound-allomorph-identity		wave-2026-11-27-7
+edge-cases/spelling-coverage-compound-boundary	edge-cases/spelling-coverage-compound-singleton-boundary		wave-2026-11-27-7

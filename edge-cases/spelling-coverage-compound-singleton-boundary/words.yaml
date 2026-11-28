@@ -3,293 +3,374 @@ requires:
   - morpher-settings
 morpher:
   MaxRoots: 2
+fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a+a
-    note: '[cell boundary] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_boundary|a+?a
+      - signature: X_boundary_singleton-boundary|a+?a
         rules:
-          - cr1_boundary
-      - signature: X_boundary|a+?a
+          - cr1_boundary_singleton-boundary
+      - signature: X_boundary_singleton-boundary|a+?a
         rules:
-          - cr2_boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: a+p
-    note: '[cell boundary] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_boundary+Y_boundary|a+?p
+      - signature: X_boundary_singleton-boundary+Y_boundary_singleton-boundary|a+?p
         rules:
-          - cr1_boundary
-      - signature: X_boundary+Y_boundary|a+?p
+          - cr1_boundary_singleton-boundary
+      - signature: X_boundary_singleton-boundary+Y_boundary_singleton-boundary|a+?p
         rules:
-          - cr2_boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: p+a
-    note: '[cell boundary] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: Y_boundary+X_boundary|p+?a
+      - signature: Y_boundary_singleton-boundary+X_boundary_singleton-boundary|p+?a
         rules:
-          - cr1_boundary
-      - signature: Y_boundary+X_boundary|p+?a
+          - cr1_boundary_singleton-boundary
+      - signature: Y_boundary_singleton-boundary+X_boundary_singleton-boundary|p+?a
         rules:
-          - cr2_boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: p+p
-    note: '[cell boundary] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: Y_boundary|p+?p
+      - signature: Y_boundary_singleton-boundary|p+?p
         rules:
-          - cr1_boundary
-      - signature: Y_boundary|p+?p
+          - cr1_boundary_singleton-boundary
+      - signature: Y_boundary_singleton-boundary|p+?p
         rules:
-          - cr2_boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: a+sa
-    note: '[cell boundary] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_boundary+PRE_boundary|a+?sa
+      - signature: X_boundary_singleton-boundary+PRE_boundary_singleton-boundary|a+?sa
         rules:
-          - PRE_boundary
-          - cr2_boundary
+          - PRE_boundary_singleton-boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: a+sp
-    note: '[cell boundary] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_boundary+PRE_boundary+Y_boundary|a+?sp
+      - signature: X_boundary_singleton-boundary+PRE_boundary_singleton-boundary+Y_boundary_singleton-boundary|a+?sp
         rules:
-          - PRE_boundary
-          - cr2_boundary
+          - PRE_boundary_singleton-boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: a+a+a
-    note: '[cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    note: '[cell singleton-boundary] [cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: ap
-    note: '[cell boundary] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell boundary] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_boundary+Y_boundary|a+?p
+      - signature: X_boundary_singleton-boundary+Y_boundary_singleton-boundary|a+?p
         rules:
-          - cr1_boundary
-      - signature: X_boundary+Y_boundary|a+?p
+          - cr1_boundary_singleton-boundary
+      - signature: X_boundary_singleton-boundary+Y_boundary_singleton-boundary|a+?p
         rules:
-          - cr2_boundary
+          - cr2_boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: b
-    note: '[cell quote-boundary] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_quote-boundary|b
+      - signature: X_quote-boundary_singleton-boundary|b
         rules: []
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: bd
-    note: '[cell quote-boundary] C# returns 2 analyses (X+Y|a[+"]?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 2 analyses (X+Y|a[+"]?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_quote-boundary+Y_quote-boundary|b[~"]?d
+      - signature: X_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?d
         rules:
-          - cr1_quote-boundary
-      - signature: X_quote-boundary+Y_quote-boundary|b[~"]?d
+          - cr1_quote-boundary_singleton-boundary
+      - signature: X_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?d
         rules:
-          - cr2_quote-boundary
+          - cr2_quote-boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: db
-    note: '[cell quote-boundary] C# returns 2 analyses (Y+X|p[+"]?a): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 2 analyses (Y+X|p[+"]?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: Y_quote-boundary+X_quote-boundary|d[~"]?b
+      - signature: Y_quote-boundary_singleton-boundary+X_quote-boundary_singleton-boundary|d[~"]?b
         rules:
-          - cr1_quote-boundary
-      - signature: Y_quote-boundary+X_quote-boundary|d[~"]?b
+          - cr1_quote-boundary_singleton-boundary
+      - signature: Y_quote-boundary_singleton-boundary+X_quote-boundary_singleton-boundary|d[~"]?b
         rules:
-          - cr2_quote-boundary
+          - cr2_quote-boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: b~d
-    note: '[cell quote-boundary] C# returns 2 analyses (X+Y|a[+"]?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 2 analyses (X+Y|a[+"]?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_quote-boundary+Y_quote-boundary|b[~"]?d
+      - signature: X_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?d
         rules:
-          - cr1_quote-boundary
-      - signature: X_quote-boundary+Y_quote-boundary|b[~"]?d
+          - cr1_quote-boundary_singleton-boundary
+      - signature: X_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?d
         rules:
-          - cr2_quote-boundary
+          - cr2_quote-boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: b"d
-    note: '[cell quote-boundary] C# returns 2 analyses (X+Y|a[+"]?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 2 analyses (X+Y|a[+"]?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_quote-boundary+Y_quote-boundary|b[~"]?d
+      - signature: X_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?d
         rules:
-          - cr1_quote-boundary
-      - signature: X_quote-boundary+Y_quote-boundary|b[~"]?d
+          - cr1_quote-boundary_singleton-boundary
+      - signature: X_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?d
         rules:
-          - cr2_quote-boundary
+          - cr2_quote-boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: b"b
-    note: '[cell quote-boundary] C# returns 2 analyses (X|a[+"]?a): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 2 analyses (X|a[+"]?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_quote-boundary|b[~"]?b
+      - signature: X_quote-boundary_singleton-boundary|b[~"]?b
         rules:
-          - cr1_quote-boundary
-      - signature: X_quote-boundary|b[~"]?b
+          - cr1_quote-boundary_singleton-boundary
+      - signature: X_quote-boundary_singleton-boundary|b[~"]?b
         rules:
-          - cr2_quote-boundary
+          - cr2_quote-boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: b"fd
-    note: '[cell quote-boundary] C# returns 1 analysis (X+PRE+Y|a[+"]?sp): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# returns 1 analysis (X+PRE+Y|a[+"]?sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_quote-boundary+PRE_quote-boundary+Y_quote-boundary|b[~"]?fd
+      - signature: X_quote-boundary_singleton-boundary+PRE_quote-boundary_singleton-boundary+Y_quote-boundary_singleton-boundary|b[~"]?fd
         rules:
-          - PRE_quote-boundary
-          - cr2_quote-boundary
+          - PRE_quote-boundary_singleton-boundary
+          - cr2_quote-boundary_singleton-boundary
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: b"b"b
-    note: '[cell quote-boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    note: '[cell singleton-boundary] [cell quote-boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
       - CompoundingRule > boundary marker at the junction
   - word: h
-    note: '[cell thai-mark] C# returns 1 analysis (X|[a่]): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 1 analysis (X|[a่]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_thai-mark|[h่]
+      - signature: X_thai-mark_singleton-boundary|[h่]
         rules: []
     exercises:
       - CompoundingRule
   - word: ่j
-    note: '[cell thai-mark] C# returns 3 analyses (W|[a่]p; X+Y|[a่]+?p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 3 analyses (W|[a่]p; X+Y|[a่]+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: W_thai-mark|[h่]j
+      - signature: W_thai-mark_singleton-boundary|[h่]j
         rules: []
-      - signature: X_thai-mark+Y_thai-mark|[h่]#?j
+      - signature: X_thai-mark_singleton-boundary+Y_thai-mark_singleton-boundary|[h่]#?j
         rules:
-          - cr1_thai-mark
+          - cr1_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: X_thai-mark+Y_thai-mark|[h่]#?j
+      - signature: X_thai-mark_singleton-boundary+Y_thai-mark_singleton-boundary|[h่]#?j
         rules:
-          - cr2_thai-mark
+          - cr2_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
     exercises:
       - CompoundingRule
   - word: h่j
-    note: '[cell thai-mark] C# returns 2 analyses (X+W|[a่]+?[a่]p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 2 analyses (X+W|[a่]+?[a่]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_thai-mark+W_thai-mark|[h่]#?[h่]j
+      - signature: X_thai-mark_singleton-boundary+W_thai-mark_singleton-boundary|[h่]#?[h่]j
         rules:
-          - cr1_thai-mark
+          - cr1_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: X_thai-mark+W_thai-mark|[h่]#?[h่]j
+      - signature: X_thai-mark_singleton-boundary+W_thai-mark_singleton-boundary|[h่]#?[h่]j
         rules:
-          - cr2_thai-mark
+          - cr2_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
   - word: ่jh
-    note: '[cell thai-mark] C# returns 2 analyses (W+X|[a่]p+?[a่]): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 2 analyses (W+X|[a่]p+?[a่]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: W_thai-mark+X_thai-mark|[h่]j#?[h่]
+      - signature: W_thai-mark_singleton-boundary+X_thai-mark_singleton-boundary|[h่]j#?[h่]
         rules:
-          - cr1_thai-mark
+          - cr1_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: W_thai-mark+X_thai-mark|[h่]j#?[h่]
+      - signature: W_thai-mark_singleton-boundary+X_thai-mark_singleton-boundary|[h่]j#?[h่]
         rules:
-          - cr2_thai-mark
+          - cr2_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
   - word: h#่j
-    note: '[cell thai-mark] C# returns 2 analyses (X+W|[a่]+?[a่]p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 2 analyses (X+W|[a่]+?[a่]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_thai-mark+W_thai-mark|[h่]#?[h่]j
+      - signature: X_thai-mark_singleton-boundary+W_thai-mark_singleton-boundary|[h่]#?[h่]j
         rules:
-          - cr1_thai-mark
+          - cr1_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: X_thai-mark+W_thai-mark|[h่]#?[h่]j
+      - signature: X_thai-mark_singleton-boundary+W_thai-mark_singleton-boundary|[h่]#?[h่]j
         rules:
-          - cr2_thai-mark
+          - cr2_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
   - word: j่j
-    note: '[cell thai-mark] C# returns 2 analyses (Y+W|p+?[a่]p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 2 analyses (Y+W|p+?[a่]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: Y_thai-mark+W_thai-mark|j#?[h่]j
+      - signature: Y_thai-mark_singleton-boundary+W_thai-mark_singleton-boundary|j#?[h่]j
         rules:
-          - cr1_thai-mark
+          - cr1_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: Y_thai-mark+W_thai-mark|j#?[h่]j
+      - signature: Y_thai-mark_singleton-boundary+W_thai-mark_singleton-boundary|j#?[h่]j
         rules:
-          - cr2_thai-mark
+          - cr2_thai-mark_singleton-boundary
         exercises:
           - CompoundingRule
   - word: ่j#h#j
-    note: '[cell thai-mark] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
       - CompoundingRule
   - word: kh
-    note: '[cell thai-mark] C# returns 1 analysis (PRE+X|s[a่]): pins that this word has a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell thai-mark] C# returns 1 analysis (PRE+X|s[a่]): pins that this word has a route and its morpheme sequence.'
     parses:
-      - signature: PRE_thai-mark+X_thai-mark|k[h่]
+      - signature: PRE_thai-mark_singleton-boundary+X_thai-mark_singleton-boundary|k[h่]
         rules:
-          - PRE_thai-mark
+          - PRE_thai-mark_singleton-boundary
         exercises:
           - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ́n
-    note: '[cell merging-mark] C# returns 1 analysis (W|́p): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell merging-mark] C# returns 1 analysis (W|́p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: W_merging-mark|́n
+      - signature: W_merging-mark_singleton-boundary|́n
         rules: []
     exercises:
       - CompoundingRule
   - word: ḿn
-    note: '[cell merging-mark] C# returns 2 analyses (X+W|áp): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell merging-mark] C# returns 2 analyses (X+W|áp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: X_merging-mark+W_merging-mark|ḿn
+      - signature: X_merging-mark_singleton-boundary+W_merging-mark_singleton-boundary|ḿn
         rules:
-          - cr1_merging-mark
+          - cr1_merging-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: X_merging-mark+W_merging-mark|ḿn
+      - signature: X_merging-mark_singleton-boundary+W_merging-mark_singleton-boundary|ḿn
         rules:
-          - cr2_merging-mark
+          - cr2_merging-mark_singleton-boundary
         exercises:
           - CompoundingRule
   - word: ́nm
-    note: '[cell merging-mark] C# returns 2 analyses (W+X|́pa): pins that this spelling is a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell merging-mark] C# returns 2 analyses (W+X|́pa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: W_merging-mark+X_merging-mark|́nm
+      - signature: W_merging-mark_singleton-boundary+X_merging-mark_singleton-boundary|́nm
         rules:
-          - cr1_merging-mark
+          - cr1_merging-mark_singleton-boundary
         exercises:
           - CompoundingRule
-      - signature: W_merging-mark+X_merging-mark|́nm
+      - signature: W_merging-mark_singleton-boundary+X_merging-mark_singleton-boundary|́nm
         rules:
-          - cr2_merging-mark
+          - cr2_merging-mark_singleton-boundary
         exercises:
           - CompoundingRule
   - word: ḿnm
-    note: '[cell merging-mark] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    note: '[cell singleton-boundary] [cell merging-mark] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
       - CompoundingRule
   - word: om
-    note: '[cell merging-mark] C# returns 1 analysis (PRE+X|sa): pins that this word has a route and its morpheme sequence.'
+    note: '[cell singleton-boundary] [cell merging-mark] C# returns 1 analysis (PRE+X|sa): pins that this word has a route and its morpheme sequence.'
     parses:
-      - signature: PRE_merging-mark+X_merging-mark|om
+      - signature: PRE_merging-mark_singleton-boundary+X_merging-mark_singleton-boundary|om
         rules:
-          - PRE_merging-mark
+          - PRE_merging-mark_singleton-boundary
         exercises:
           - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: r
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]
+        rules: []
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: rr
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]&?[rä(âã)vw]
+        rules:
+          - cr1_boundary
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: rä
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]&?[rä(âã)vw]
+        rules:
+          - cr1_boundary
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: râã
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]&?[rä(âã)vw]
+        rules:
+          - cr1_boundary
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: r&r
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]&?[rä(âã)vw]
+        rules:
+          - cr1_boundary
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: rr&
+    note: '[cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: '&rr'
+    note: '[cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: r&
+    note: '[cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: âãr
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]&?[rä(âã)vw]
+        rules:
+          - cr1_boundary
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: âã&r
+    note: '[cell boundary] C# returns 1 analysis (ROOT|[aá(xy)ei]+?[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_boundary|[rä(âã)vw]&?[rä(âã)vw]
+        rules:
+          - cr1_boundary
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: r&&r
+    note: '[cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: rrr
+    note: '[cell boundary] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > boundary marker at the junction
