@@ -124,3 +124,4 @@ edge-cases/truncate-morphotactic-identity	edge-cases/truncate-morphotactic-copy-
 edge-cases/word-boundary-affix-rewrite	edge-cases/literal-hash-affix-context		wave-2026-11-27-9
 edge-cases/spelling-coverage-compound-orders	edge-cases/spelling-coverage-compound-orders-pos		wave-2026-11-27-10
 edge-cases/spelling-coverage-compound-orders-asymmetric	edge-cases/spelling-coverage-compound-orders-pos		wave-2026-11-27-10
+edge-cases/spelling-coverage-compound-depth-asymmetric	edge-cases/spelling-coverage-compound-depth-prefix-zone		wave-2026-11-27-10
