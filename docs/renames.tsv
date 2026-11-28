@@ -71,3 +71,4 @@ edge-cases/metathesis-boundary-context-right	edge-cases/metathesis-boundary-cont
 edge-cases/metathesis-boundary-context-segments	edge-cases/metathesis-boundary-context-left-right-to-left		wave-2026-11-27-4
 edge-cases/metathesis-boundary-morph-order-prefix-root	edge-cases/metathesis-boundary-morph-order-compound		wave-2026-11-27-4
 edge-cases/metathesis-boundary-right-to-left-suffix	edge-cases/metathesis-boundary-right-to-left-prefix		wave-2026-11-27-4
+edge-cases/spelling-coverage-compound-singleton-depth3	edge-cases/spelling-coverage-compound-depth3		wave-2026-11-27-4
