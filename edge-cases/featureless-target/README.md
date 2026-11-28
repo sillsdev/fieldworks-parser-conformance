@@ -21,7 +21,7 @@ Each cell's own rationale, as it stood before the merge. Ids and letters in them
 
 ### featureless-target
 
-A featureless rewrite whose output is a class of two segments: both outputs parse as one root and the unchanged root does not surface. The cells differ in the rewrite's target: a literal segment (beside a two-member class), or a one-member class. A literal or singleton target must not hide an ambiguous output. `featureless-unused-feature` stays separate: it declares a feature system.
+A featureless rewrite whose output is a class of two segments: both outputs parse as one root and the unchanged root does not surface. The cells differ in the rewrite's target: a literal segment (beside a two-member class), or a one-member class. A literal or singleton target must not hide an ambiguous output. `partial-feature-literal-output` stays separate: it declares a feature system.
 
 #### Cells
 

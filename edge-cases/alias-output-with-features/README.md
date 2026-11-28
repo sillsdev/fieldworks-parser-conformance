@@ -1,6 +1,6 @@
 # alias-output-with-features
 
-The same pair as `alias-output-featureless`, in a grammar that declares a symbolic feature carried by every segment. A phoneme with two spellings is the output of an obligatory rewrite; each cell writes the rewrite's input as a literal segment or as a one-member natural class. Both spellings parse to the root and the unchanged root does not surface. The feature system is why this is a separate test case from `alias-output-featureless`: it is a grammar-wide difference.
+The same pair as `featureless-target`, in a grammar that declares a symbolic feature carried by every segment. A phoneme with two spellings is the output of an obligatory rewrite; each cell writes the rewrite's input as a literal segment or as a one-member natural class. Both spellings parse to the root and the unchanged root does not surface. The feature system is why this is a separate test case from `featureless-target`: it is a grammar-wide difference.
 
 ## Cells
 
