@@ -4,139 +4,345 @@
   <Language>
     <Name>SpellingCompoundSingletonBoundary</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_boundary">
+        <Name>V_boundary</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_quote-boundary">
+        <Name>V_quote-boundary</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_thai-mark">
+        <Name>V_thai-mark</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_merging-mark">
+        <Name>V_merging-mark</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_boundary">
+        <Name>f_boundary</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_boundary">+</Symbol>
+          <Symbol id="fM_boundary">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_boundary">
+        <Name>g_boundary</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_boundary">+</Symbol>
+          <Symbol id="gM_boundary">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_quote-boundary">
+        <Name>f_quote-boundary</Name>
+        <Symbols>
+          <Symbol id="fP_quote-boundary">+</Symbol>
+          <Symbol id="fM_quote-boundary">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_quote-boundary">
+        <Name>g_quote-boundary</Name>
+        <Symbols>
+          <Symbol id="gP_quote-boundary">+</Symbol>
+          <Symbol id="gM_quote-boundary">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_thai-mark">
+        <Name>f_thai-mark</Name>
+        <Symbols>
+          <Symbol id="fP_thai-mark">+</Symbol>
+          <Symbol id="fM_thai-mark">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_thai-mark">
+        <Name>g_thai-mark</Name>
+        <Symbols>
+          <Symbol id="gP_thai-mark">+</Symbol>
+          <Symbol id="gM_thai-mark">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_merging-mark">
+        <Name>f_merging-mark</Name>
+        <Symbols>
+          <Symbol id="fP_merging-mark">+</Symbol>
+          <Symbol id="fM_merging-mark">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_merging-mark">
+        <Name>g_merging-mark</Name>
+        <Symbols>
+          <Symbol id="gP_merging-mark">+</Symbol>
+          <Symbol id="gM_merging-mark">-</Symbol>
+          <Symbol id="gTone_merging-mark">tone</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_boundary">cell boundary</Symbol>
+          <Symbol id="cell_quote-boundary">cell quote-boundary</Symbol>
+          <Symbol id="cell_thai-mark">cell thai-mark</Symbol>
+          <Symbol id="cell_merging-mark">cell merging-mark</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_boundary">
+      <Name>Main_boundary</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_boundary">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_boundary" symbolValues="fP_boundary"/>
+          <FeatureValue feature="g_boundary" symbolValues="gP_boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_boundary"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_boundary">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_boundary" symbolValues="fM_boundary"/>
+          <FeatureValue feature="g_boundary" symbolValues="gM_boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_boundary"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_boundary">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_boundary" symbolValues="fM_boundary"/>
+          <FeatureValue feature="g_boundary" symbolValues="gP_boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_boundary"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_boundary">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_boundary" symbolValues="fP_boundary"/>
+          <FeatureValue feature="g_boundary" symbolValues="gM_boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_quote-boundary">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_quote-boundary" symbolValues="fP_quote-boundary"/>
+          <FeatureValue feature="g_quote-boundary" symbolValues="gP_quote-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_quote-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_quote-boundary">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_quote-boundary" symbolValues="fM_quote-boundary"/>
+          <FeatureValue feature="g_quote-boundary" symbolValues="gM_quote-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_quote-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_quote-boundary">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_quote-boundary" symbolValues="fM_quote-boundary"/>
+          <FeatureValue feature="g_quote-boundary" symbolValues="gP_quote-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_quote-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_quote-boundary">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_quote-boundary" symbolValues="fP_quote-boundary"/>
+          <FeatureValue feature="g_quote-boundary" symbolValues="gM_quote-boundary"/>
+          <FeatureValue feature="cell" symbolValues="cell_quote-boundary"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_thai-mark">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_thai-mark" symbolValues="fP_thai-mark"/>
+          <FeatureValue feature="g_thai-mark" symbolValues="gP_thai-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_thai-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_thai-mark">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="f_thai-mark" symbolValues="fM_thai-mark"/>
+          <FeatureValue feature="g_thai-mark" symbolValues="gM_thai-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_thai-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_thai-mark">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="f_thai-mark" symbolValues="fM_thai-mark"/>
+          <FeatureValue feature="g_thai-mark" symbolValues="gP_thai-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_thai-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_thai-mark">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="f_thai-mark" symbolValues="fP_thai-mark"/>
+          <FeatureValue feature="g_thai-mark" symbolValues="gM_thai-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_thai-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cM_thai-mark">
+          <Representations>
+            <Representation>่</Representation>
+          </Representations>
+          <FeatureValue feature="f_thai-mark" symbolValues="fP_thai-mark"/>
+          <FeatureValue feature="g_thai-mark" symbolValues="gP_thai-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_thai-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_merging-mark">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+          <FeatureValue feature="f_merging-mark" symbolValues="fP_merging-mark"/>
+          <FeatureValue feature="g_merging-mark" symbolValues="gP_merging-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_merging-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_merging-mark">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="f_merging-mark" symbolValues="fM_merging-mark"/>
+          <FeatureValue feature="g_merging-mark" symbolValues="gM_merging-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_merging-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_merging-mark">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="f_merging-mark" symbolValues="fM_merging-mark"/>
+          <FeatureValue feature="g_merging-mark" symbolValues="gP_merging-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_merging-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_merging-mark">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="f_merging-mark" symbolValues="fP_merging-mark"/>
+          <FeatureValue feature="g_merging-mark" symbolValues="gM_merging-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_merging-mark"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cM_merging-mark">
+          <Representations>
+            <Representation>́</Representation>
+          </Representations>
+          <FeatureValue feature="f_merging-mark" symbolValues="fP_merging-mark"/>
+          <FeatureValue feature="g_merging-mark" symbolValues="gTone_merging-mark"/>
+          <FeatureValue feature="cell" symbolValues="cell_merging-mark"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
-        <BoundaryDefinition id="b">
+        <BoundaryDefinition id="b_boundary">
           <Representations>
             <Representation>+</Representation>
+          </Representations>
+        </BoundaryDefinition>
+        <BoundaryDefinition id="b_quote-boundary">
+          <Representations>
+            <Representation>~</Representation>
+            <Representation>"</Representation>
+          </Representations>
+        </BoundaryDefinition>
+        <BoundaryDefinition id="b_thai-mark">
+          <Representations>
+            <Representation>#</Representation>
+          </Representations>
+        </BoundaryDefinition>
+        <BoundaryDefinition id="b_merging-mark">
+          <Representations>
+            <Representation>%</Representation>
           </Representations>
         </BoundaryDefinition>
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_boundary">
+        <Name>Any_boundary</Name>
+        <FeatureValue feature="cell" symbolValues="cell_boundary"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_quote-boundary">
+        <Name>Any_quote-boundary</Name>
+        <FeatureValue feature="cell" symbolValues="cell_quote-boundary"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_thai-mark">
+        <Name>Any_thai-mark</Name>
+        <FeatureValue feature="cell" symbolValues="cell_thai-mark"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_merging-mark">
+        <Name>Any_merging-mark</Name>
+        <FeatureValue feature="cell" symbolValues="cell_merging-mark"/>
       </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2 PRE">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t_boundary" morphologicalRuleOrder="unordered" morphologicalRules="cr1_boundary cr2_boundary PRE_boundary cr1_quote-boundary cr2_quote-boundary PRE_quote-boundary cr1_thai-mark cr2_thai-mark PRE_thai-mark cr1_merging-mark cr2_merging-mark PRE_merging-mark">
+        <Name>Main_boundary</Name>
         <MorphologicalRuleDefinitions>
-          <CompoundingRule id="cr1">
-            <Name>cr1</Name>
+          <CompoundingRule id="cr1_boundary">
+            <Name>cr1_boundary</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0">
+                  <PhoneticSequence id="cr1h0_boundary">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_boundary"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0">
+                  <PhoneticSequence id="cr1n0_boundary">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_boundary"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0" />
+                  <CopyFromInput index="cr1h0_boundary"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr1n0" />
+                  <CopyFromInput index="cr1n0_boundary"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <CompoundingRule id="cr2">
-            <Name>cr2</Name>
+          <CompoundingRule id="cr2_boundary">
+            <Name>cr2_boundary</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr2h0">
+                  <PhoneticSequence id="cr2h0_boundary">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_boundary"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr2n0">
+                  <PhoneticSequence id="cr2n0_boundary">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_boundary"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr2n0" />
+                  <CopyFromInput index="cr2n0_boundary"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr2h0" />
+                  <CopyFromInput index="cr2h0_boundary"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <MorphologicalRule id="PRE" requiredPartsOfSpeech="v">
-            <Name>PRE</Name>
+          <MorphologicalRule id="PRE_boundary" requiredPartsOfSpeech="v_boundary">
+            <Name>PRE_boundary</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE0">
+              <MorphologicalSubrule id="PRE0_boundary">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES">
+                  <PhoneticSequence id="PRES_boundary">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_boundary"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -144,37 +350,350 @@
                   <InsertSegments>
                     <PhoneticShape>s</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="PRES" />
+                  <CopyFromInput index="PRES_boundary"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE</MorphemeId>
+            <MorphemeId>PRE_boundary</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_quote-boundary">
+            <Name>cr1_quote-boundary</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_quote-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_quote-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_quote-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_quote-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_quote-boundary"/>
+                  <InsertSegments>
+                    <PhoneticShape>~</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_quote-boundary"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_quote-boundary">
+            <Name>cr2_quote-boundary</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_quote-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_quote-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_quote-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_quote-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_quote-boundary"/>
+                  <InsertSegments>
+                    <PhoneticShape>~</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_quote-boundary"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_quote-boundary" requiredPartsOfSpeech="v_quote-boundary">
+            <Name>PRE_quote-boundary</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_quote-boundary">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_quote-boundary">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_quote-boundary"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_quote-boundary"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_quote-boundary</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_thai-mark">
+            <Name>cr1_thai-mark</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_thai-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_thai-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_thai-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_thai-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_thai-mark"/>
+                  <InsertSegments>
+                    <PhoneticShape>#</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_thai-mark"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_thai-mark">
+            <Name>cr2_thai-mark</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_thai-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_thai-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_thai-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_thai-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_thai-mark"/>
+                  <InsertSegments>
+                    <PhoneticShape>#</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_thai-mark"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_thai-mark" requiredPartsOfSpeech="v_thai-mark">
+            <Name>PRE_thai-mark</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_thai-mark">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_thai-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_thai-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>k</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_thai-mark"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_thai-mark</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_merging-mark">
+            <Name>cr1_merging-mark</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_merging-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_merging-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_merging-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_merging-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_merging-mark"/>
+                  <CopyFromInput index="cr1n0_merging-mark"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_merging-mark">
+            <Name>cr2_merging-mark</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_merging-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_merging-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_merging-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_merging-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_merging-mark"/>
+                  <CopyFromInput index="cr2h0_merging-mark"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_merging-mark" requiredPartsOfSpeech="v_merging-mark">
+            <Name>PRE_merging-mark</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_merging-mark">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_merging-mark">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_merging-mark"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>o</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_merging-mark"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_merging-mark</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x" partOfSpeech="v">
+          <LexicalEntry id="x_boundary" partOfSpeech="v_boundary">
             <Allomorphs>
-              <Allomorph id="x0">
+              <Allomorph id="x0_boundary">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X</MorphemeId>
+            <MorphemeId>X_boundary</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_boundary" partOfSpeech="v_boundary">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_boundary">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_boundary</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_boundary" partOfSpeech="v_boundary">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_boundary">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_boundary</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_quote-boundary" partOfSpeech="v_quote-boundary">
+            <Allomorphs>
+              <Allomorph id="x0_quote-boundary">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_quote-boundary</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_quote-boundary" partOfSpeech="v_quote-boundary">
+            <Allomorphs>
+              <Allomorph id="y0_quote-boundary">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_quote-boundary</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_quote-boundary" partOfSpeech="v_quote-boundary">
+            <Allomorphs>
+              <Allomorph id="z0_quote-boundary">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_quote-boundary</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_thai-mark" partOfSpeech="v_thai-mark">
+            <Allomorphs>
+              <Allomorph id="x0_thai-mark">
+                <PhoneticShape>h</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_thai-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_thai-mark" partOfSpeech="v_thai-mark">
+            <Allomorphs>
+              <Allomorph id="y0_thai-mark">
+                <PhoneticShape>j</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_thai-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_thai-mark" partOfSpeech="v_thai-mark">
+            <Allomorphs>
+              <Allomorph id="z0_thai-mark">
+                <PhoneticShape>l</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_thai-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="w_thai-mark" partOfSpeech="v_thai-mark">
+            <Allomorphs>
+              <Allomorph id="w0_thai-mark">
+                <PhoneticShape>่j</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>W_thai-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_merging-mark" partOfSpeech="v_merging-mark">
+            <Allomorphs>
+              <Allomorph id="x0_merging-mark">
+                <PhoneticShape>m</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_merging-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_merging-mark" partOfSpeech="v_merging-mark">
+            <Allomorphs>
+              <Allomorph id="y0_merging-mark">
+                <PhoneticShape>n</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_merging-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_merging-mark" partOfSpeech="v_merging-mark">
+            <Allomorphs>
+              <Allomorph id="z0_merging-mark">
+                <PhoneticShape>q</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_merging-mark</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="w_merging-mark" partOfSpeech="v_merging-mark">
+            <Allomorphs>
+              <Allomorph id="w0_merging-mark">
+                <PhoneticShape>́n</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>W_merging-mark</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

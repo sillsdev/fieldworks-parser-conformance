@@ -1,90 +1,344 @@
-# Graduation rechecks complete word/status/signature multiplicities and rule traces.
-# Earlier provenance comments below describe the original authoring history.
-# hc.dll, Machine 18cf242f.
 language: ambiguous-disagree-feature-class-bounded-rtl
-inspired_by: ["feature-class ambiguous disagreement with a quantified rewrite context"]
-sources: ["HCLoader.cs:2338-2344,2745-2770; Machine XmlLanguageLoader.cs:696-719"]
-requires: [phonology]
+inspired_by:
+  - feature-class ambiguous disagreement with a quantified rewrite context
+  - synthetic mixed alpha class membership
+  - synthetic repeated minus alpha with partial focus
+sources:
+  - HCLoader.cs:2338-2344,2745-2770; Machine XmlLanguageLoader.cs:696-719
+  - HCLoader.cs:2745-2770,2799-2808
+  - HCLoader.cs:2338-2344,2745-2770,2799-2808
+requires:
+  - phonology
 words:
   - word: ii
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'ii' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ii'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: iy
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'iy' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''iy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ia
-    note: "Positive witness for ambiguous disagree feature class bounded rtl: 'ia' must retain the declared analysis."
+    note: '[cell bounded-rtl] Positive witness for ambiguous disagree feature class bounded rtl: ''ia'' must retain the declared analysis.'
     parses:
-      - signature: "AU|[iy]a"
-        rules: ["prDoubleAlpha"]
+      - signature: AU_bounded-rtl|[iy]a
+        rules:
+          - prDoubleAlpha_bounded-rtl
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
   - word: iu
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'iu' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''iu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: yi
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'yi' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''yi'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: yy
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'yy' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''yy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ya
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'ya' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ya'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: yu
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'yu' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''yu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ai
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'ai' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ai'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ay
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'ay' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ay'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: aa
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'aa' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''aa'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: au
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'au' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''au'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > zero-minimum repeat'
   - word: ui
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'ui' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ui'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: uy
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'uy' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''uy'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: ua
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'ua' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''ua'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
   - word: uu
-    note: "Negative control for ambiguous disagree feature class bounded rtl: 'uu' must complete with no analysis."
+    note: '[cell bounded-rtl] Negative control for ambiguous disagree feature class bounded rtl: ''uu'' must complete with no analysis.'
     expect_fail: true
     exercises:
-      - "CharacterDefinitionTable pattern shapes: optional group / Kleene star > bounded repeat"
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: dd
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: dg
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: db
+    note: '[cell unbounded-ltr] Positive witness for ambiguous disagree feature class unbounded ltr: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_unbounded-ltr|[dg]b
+        rules:
+          - prDoubleAlpha_unbounded-ltr
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: df
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: gd
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: gg
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: gb
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: gf
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: bd
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: bg
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: bb
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: bf
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: fd
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: fg
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: fb
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: ff
+    note: '[cell unbounded-ltr] Negative control for ambiguous disagree feature class unbounded ltr: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star > unbounded repeat'
+  - word: jj
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''ii'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: jl
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: jh
+    note: '[cell mixed-plus] Positive witness for ambiguous disagree mixed plus class: ''ia'' must retain the declared analysis.'
+    parses:
+      - signature: AU_mixed-plus|jh
+        rules:
+          - prDoubleAlpha_mixed-plus
+        exercises:
+          - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: jk
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: lj
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: ll
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: lh
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: lk
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hj
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hl
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hh
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: hk
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kj
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kl
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kh
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: kk
+    note: '[cell mixed-plus] Negative control for ambiguous disagree mixed plus class: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - Alpha-variable phonological environments (VariableFeature/AlphaVariables)
+  - word: nn
+    note: '[cell repeated-minus] Positive witness for ambiguous disagree repeated minus partial focus: ''ii'' must retain the declared analysis.'
+    parses:
+      - signature: IU_repeated-minus|nn
+        rules:
+          - prDoubleAlpha_repeated-minus
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: np
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''iy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: nm
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''ia'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: 'no'
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''iu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: pn
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''yi'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: pp
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''yy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: pm
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''ya'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: po
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''yu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: mn
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''ai'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: mp
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''ay'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: mm
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''aa'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: mo
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''au'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: 'on'
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''ui'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: op
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''uy'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: om
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''ua'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'
+  - word: oo
+    note: '[cell repeated-minus] Negative control for ambiguous disagree repeated minus partial focus: ''uu'' must complete with no analysis.'
+    expect_fail: true
+    exercises:
+      - 'CharacterDefinitionTable pattern shapes: optional group / Kleene star'

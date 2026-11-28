@@ -4,57 +4,117 @@
   <Language>
     <Name>SpellingCompoundDepthMedialSuffix</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_depth-medial-suffix">
+        <Name>V_depth-medial-suffix</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_singleton">
+        <Name>V_singleton</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_depth-medial-suffix">
+        <Name>f_depth-medial-suffix</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_depth-medial-suffix">+</Symbol>
+          <Symbol id="fM_depth-medial-suffix">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_depth-medial-suffix">
+        <Name>g_depth-medial-suffix</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_depth-medial-suffix">+</Symbol>
+          <Symbol id="gM_depth-medial-suffix">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_singleton">
+        <Name>f_singleton</Name>
+        <Symbols>
+          <Symbol id="fP_singleton">+</Symbol>
+          <Symbol id="fM_singleton">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_singleton">
+        <Name>g_singleton</Name>
+        <Symbols>
+          <Symbol id="gP_singleton">+</Symbol>
+          <Symbol id="gM_singleton">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_depth-medial-suffix">cell depth-medial-suffix</Symbol>
+          <Symbol id="cell_singleton">cell singleton</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_depth-medial-suffix">
+      <Name>Main_depth-medial-suffix</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_depth-medial-suffix">
           <Representations>
             <Representation>a</Representation>
             <Representation>á</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_depth-medial-suffix" symbolValues="fP_depth-medial-suffix"/>
+          <FeatureValue feature="g_depth-medial-suffix" symbolValues="gP_depth-medial-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth-medial-suffix"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_depth-medial-suffix">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_depth-medial-suffix" symbolValues="fM_depth-medial-suffix"/>
+          <FeatureValue feature="g_depth-medial-suffix" symbolValues="gM_depth-medial-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth-medial-suffix"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_depth-medial-suffix">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_depth-medial-suffix" symbolValues="fM_depth-medial-suffix"/>
+          <FeatureValue feature="g_depth-medial-suffix" symbolValues="gP_depth-medial-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth-medial-suffix"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_depth-medial-suffix">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_depth-medial-suffix" symbolValues="fP_depth-medial-suffix"/>
+          <FeatureValue feature="g_depth-medial-suffix" symbolValues="gM_depth-medial-suffix"/>
+          <FeatureValue feature="cell" symbolValues="cell_depth-medial-suffix"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_singleton">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton" symbolValues="fP_singleton"/>
+          <FeatureValue feature="g_singleton" symbolValues="gP_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_singleton">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton" symbolValues="fM_singleton"/>
+          <FeatureValue feature="g_singleton" symbolValues="gM_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_singleton">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton" symbolValues="fM_singleton"/>
+          <FeatureValue feature="g_singleton" symbolValues="gP_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_singleton">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_singleton" symbolValues="fP_singleton"/>
+          <FeatureValue feature="g_singleton" symbolValues="gM_singleton"/>
+          <FeatureValue feature="cell" symbolValues="cell_singleton"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -68,116 +128,216 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_depth-medial-suffix">
+        <Name>Any_depth-medial-suffix</Name>
+        <FeatureValue feature="cell" symbolValues="cell_depth-medial-suffix"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_singleton">
+        <Name>Any_singleton</Name>
+        <FeatureValue feature="cell" symbolValues="cell_singleton"/>
       </FeatureNaturalClass>
     </NaturalClasses>
     <Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2 SUF">
-        <Name>Main</Name>
+      <Stratum characterDefinitionTable="t_depth-medial-suffix" morphologicalRuleOrder="unordered" morphologicalRules="cr1_depth-medial-suffix cr2_depth-medial-suffix SUF_depth-medial-suffix cr1_singleton cr2_singleton SUF_singleton">
+        <Name>Main_depth-medial-suffix</Name>
         <MorphologicalRuleDefinitions>
-          <CompoundingRule id="cr1">
-            <Name>cr1</Name>
+          <CompoundingRule id="cr1_depth-medial-suffix">
+            <Name>cr1_depth-medial-suffix</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0">
+                  <PhoneticSequence id="cr1h0_depth-medial-suffix">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth-medial-suffix"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0">
+                  <PhoneticSequence id="cr1n0_depth-medial-suffix">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth-medial-suffix"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0" />
+                  <CopyFromInput index="cr1h0_depth-medial-suffix"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr1n0" />
+                  <CopyFromInput index="cr1n0_depth-medial-suffix"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <CompoundingRule id="cr2">
-            <Name>cr2</Name>
+          <CompoundingRule id="cr2_depth-medial-suffix">
+            <Name>cr2_depth-medial-suffix</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr2h0">
+                  <PhoneticSequence id="cr2h0_depth-medial-suffix">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth-medial-suffix"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr2n0">
+                  <PhoneticSequence id="cr2n0_depth-medial-suffix">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth-medial-suffix"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr2n0" />
+                  <CopyFromInput index="cr2n0_depth-medial-suffix"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr2h0" />
+                  <CopyFromInput index="cr2h0_depth-medial-suffix"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <MorphologicalRule id="SUF" requiredPartsOfSpeech="v">
-            <Name>SUF</Name>
+          <MorphologicalRule id="SUF_depth-medial-suffix" requiredPartsOfSpeech="v_depth-medial-suffix">
+            <Name>SUF_depth-medial-suffix</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="SUF0">
+              <MorphologicalSubrule id="SUF0_depth-medial-suffix">
                 <MorphologicalInput>
-                  <PhoneticSequence id="SUFS">
+                  <PhoneticSequence id="SUFS_depth-medial-suffix">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_depth-medial-suffix"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="SUFS" />
+                  <CopyFromInput index="SUFS_depth-medial-suffix"/>
                   <InsertSegments>
                     <PhoneticShape>s</PhoneticShape>
                   </InsertSegments>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>SUF</MorphemeId>
+            <MorphemeId>SUF_depth-medial-suffix</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_singleton">
+            <Name>cr1_singleton</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_singleton">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_singleton">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_singleton"/>
+                  <CopyFromInput index="cr1n0_singleton"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_singleton">
+            <Name>cr2_singleton</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_singleton">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_singleton">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_singleton"/>
+                  <CopyFromInput index="cr2h0_singleton"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="SUF_singleton" requiredPartsOfSpeech="v_singleton">
+            <Name>SUF_singleton</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="SUF0_singleton">
+                <MorphologicalInput>
+                  <PhoneticSequence id="SUFS_singleton">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_singleton"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="SUFS_singleton"/>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>SUF_singleton</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x" partOfSpeech="v">
+          <LexicalEntry id="x_depth-medial-suffix" partOfSpeech="v_depth-medial-suffix">
             <Allomorphs>
-              <Allomorph id="x0">
+              <Allomorph id="x0_depth-medial-suffix">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X</MorphemeId>
+            <MorphemeId>X_depth-medial-suffix</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_depth-medial-suffix" partOfSpeech="v_depth-medial-suffix">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_depth-medial-suffix">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_depth-medial-suffix</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_depth-medial-suffix" partOfSpeech="v_depth-medial-suffix">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_depth-medial-suffix">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_depth-medial-suffix</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_singleton" partOfSpeech="v_singleton">
+            <Allomorphs>
+              <Allomorph id="x0_singleton">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_singleton</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_singleton" partOfSpeech="v_singleton">
+            <Allomorphs>
+              <Allomorph id="y0_singleton">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_singleton</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_singleton" partOfSpeech="v_singleton">
+            <Allomorphs>
+              <Allomorph id="z0_singleton">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_singleton</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

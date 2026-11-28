@@ -4,56 +4,116 @@
   <Language>
     <Name>MetathesisMorphOrderCompound</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_compound">
+        <Name>V_compound</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_prefix-root">
+        <Name>V_prefix-root</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_compound">
+        <Name>f_compound</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_compound">+</Symbol>
+          <Symbol id="fM_compound">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_compound">
+        <Name>g_compound</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_compound">+</Symbol>
+          <Symbol id="gM_compound">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_prefix-root">
+        <Name>f_prefix-root</Name>
+        <Symbols>
+          <Symbol id="fP_prefix-root">+</Symbol>
+          <Symbol id="fM_prefix-root">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_prefix-root">
+        <Name>g_prefix-root</Name>
+        <Symbols>
+          <Symbol id="gP_prefix-root">+</Symbol>
+          <Symbol id="gM_prefix-root">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_compound">cell compound</Symbol>
+          <Symbol id="cell_prefix-root">cell prefix-root</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_compound">
+      <Name>Main_compound</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_compound">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_compound" symbolValues="fP_compound"/>
+          <FeatureValue feature="g_compound" symbolValues="gP_compound"/>
+          <FeatureValue feature="cell" symbolValues="cell_compound"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_compound">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_compound" symbolValues="fM_compound"/>
+          <FeatureValue feature="g_compound" symbolValues="gM_compound"/>
+          <FeatureValue feature="cell" symbolValues="cell_compound"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_compound">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_compound" symbolValues="fM_compound"/>
+          <FeatureValue feature="g_compound" symbolValues="gP_compound"/>
+          <FeatureValue feature="cell" symbolValues="cell_compound"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_compound">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_compound" symbolValues="fP_compound"/>
+          <FeatureValue feature="g_compound" symbolValues="gM_compound"/>
+          <FeatureValue feature="cell" symbolValues="cell_compound"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_prefix-root">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-root" symbolValues="fP_prefix-root"/>
+          <FeatureValue feature="g_prefix-root" symbolValues="gP_prefix-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_prefix-root">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-root" symbolValues="fM_prefix-root"/>
+          <FeatureValue feature="g_prefix-root" symbolValues="gM_prefix-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_prefix-root">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-root" symbolValues="fM_prefix-root"/>
+          <FeatureValue feature="g_prefix-root" symbolValues="gP_prefix-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_prefix-root">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_prefix-root" symbolValues="fP_prefix-root"/>
+          <FeatureValue feature="g_prefix-root" symbolValues="gM_prefix-root"/>
+          <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -65,56 +125,160 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_compound">
+        <Name>Any_compound</Name>
+        <FeatureValue feature="cell" symbolValues="cell_compound"/>
       </FeatureNaturalClass>
-    <FeatureNaturalClass id="T"><Name>T</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="P"><Name>P</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass></NaturalClasses>
-    <PhonologicalRuleDefinitions><MetathesisRule id="pr1" leftSwitch="swB" rightSwitch="swA"><Name>m</Name><StructuralDescription><PhoneticTemplate><PhoneticSequence><SimpleContext id="swA" naturalClass="T" /><SimpleContext id="swB" naturalClass="P" /></PhoneticSequence></PhoneticTemplate></StructuralDescription></MetathesisRule></PhonologicalRuleDefinitions><Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1" phonologicalRules="pr1">
-        <Name>Main</Name>
+      <FeatureNaturalClass id="T_compound">
+        <Name>T_compound</Name>
+        <FeatureValue feature="f_compound" symbolValues="fM_compound"/>
+        <FeatureValue feature="g_compound" symbolValues="gP_compound"/>
+        <FeatureValue feature="cell" symbolValues="cell_compound"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_compound">
+        <Name>P_compound</Name>
+        <FeatureValue feature="f_compound" symbolValues="fM_compound"/>
+        <FeatureValue feature="g_compound" symbolValues="gM_compound"/>
+        <FeatureValue feature="cell" symbolValues="cell_compound"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_prefix-root">
+        <Name>Any_prefix-root</Name>
+        <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_prefix-root">
+        <Name>T_prefix-root</Name>
+        <FeatureValue feature="f_prefix-root" symbolValues="fM_prefix-root"/>
+        <FeatureValue feature="g_prefix-root" symbolValues="gP_prefix-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_prefix-root">
+        <Name>P_prefix-root</Name>
+        <FeatureValue feature="f_prefix-root" symbolValues="fM_prefix-root"/>
+        <FeatureValue feature="g_prefix-root" symbolValues="gM_prefix-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_prefix-root">
+        <Name>Sx_prefix-root</Name>
+        <FeatureValue feature="f_prefix-root" symbolValues="fP_prefix-root"/>
+        <FeatureValue feature="g_prefix-root" symbolValues="gM_prefix-root"/>
+        <FeatureValue feature="cell" symbolValues="cell_prefix-root"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <MetathesisRule id="pr1_compound" leftSwitch="swB_compound" rightSwitch="swA_compound">
+        <Name>m_compound</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="swA_compound" naturalClass="T_compound"/>
+              <SimpleContext id="swB_compound" naturalClass="P_compound"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <MetathesisRule id="pr1_prefix-root" leftSwitch="swB_prefix-root" rightSwitch="swA_prefix-root">
+        <Name>m_prefix-root</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="swA_prefix-root" naturalClass="Sx_prefix-root"/>
+              <SimpleContext id="swB_prefix-root" naturalClass="T_prefix-root"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="t_compound" morphologicalRuleOrder="unordered" morphologicalRules="cr1_compound PRE_prefix-root" phonologicalRules="pr1_compound pr1_prefix-root">
+        <Name>Main_compound</Name>
         <MorphologicalRuleDefinitions>
-          <CompoundingRule id="cr1">
-            <Name>cr1</Name>
+          <CompoundingRule id="cr1_compound">
+            <Name>cr1_compound</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0">
+                  <PhoneticSequence id="cr1h0_compound">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_compound"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0">
+                  <PhoneticSequence id="cr1n0_compound">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_compound"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0" />
-                  <CopyFromInput index="cr1n0" />
+                  <CopyFromInput index="cr1h0_compound"/>
+                  <CopyFromInput index="cr1n0_compound"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          </MorphologicalRuleDefinitions>
+          <MorphologicalRule id="PRE_prefix-root" requiredPartsOfSpeech="v_prefix-root">
+            <Name>PRE_prefix-root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_prefix-root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_prefix-root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_prefix-root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_prefix-root"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_prefix-root</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_compound" partOfSpeech="v_compound">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_compound">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_compound</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_compound" partOfSpeech="v_compound">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_compound">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_compound</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_prefix-root" partOfSpeech="v_prefix-root">
+            <Allomorphs>
+              <Allomorph id="x0_prefix-root">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_prefix-root</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_prefix-root" partOfSpeech="v_prefix-root">
+            <Allomorphs>
+              <Allomorph id="y0_prefix-root">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_prefix-root</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_prefix-root" partOfSpeech="v_prefix-root">
+            <Allomorphs>
+              <Allomorph id="z0_prefix-root">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_prefix-root</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

@@ -1,13 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE HermitCrabInput SYSTEM "HermitCrabInput.dtd">
-<HermitCrabInput><Language><Name>CompoundIdentity</Name>
-<PartsOfSpeech><PartOfSpeech id="v"><Name>V</Name></PartOfSpeech></PartsOfSpeech>
-<PhonologicalFeatureSystem><SymbolicFeature id="f"><Name>f</Name><Symbols><Symbol id="fP">+</Symbol><Symbol id="fM">-</Symbol></Symbols></SymbolicFeature><SymbolicFeature id="g"><Name>g</Name><Symbols><Symbol id="gP">+</Symbol><Symbol id="gM">-</Symbol></Symbols></SymbolicFeature></PhonologicalFeatureSystem>
-<CharacterDefinitionTable id="t"><Name>Main</Name><SegmentDefinitions><SegmentDefinition id="cA"><Representations><Representation>a</Representation></Representations><FeatureValue feature="f" symbolValues="fP"/><FeatureValue feature="g" symbolValues="gP"/></SegmentDefinition><SegmentDefinition id="cP"><Representations><Representation>p</Representation></Representations><FeatureValue feature="f" symbolValues="fM"/><FeatureValue feature="g" symbolValues="gM"/></SegmentDefinition></SegmentDefinitions><BoundaryDefinitions><BoundaryDefinition id="b"><Representations><Representation>^0</Representation></Representations></BoundaryDefinition></BoundaryDefinitions></CharacterDefinitionTable>
-<NaturalClasses><FeatureNaturalClass id="any"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
-<Strata><Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2"><Name>Main</Name><MorphologicalRuleDefinitions>
-<CompoundingRule id="cr1"><Name>Compound</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="h0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="n0"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="h0" /><CopyFromInput index="n0" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule>
-<CompoundingRule id="cr2"><Name>Compound2</Name><CompoundingSubrules><CompoundingSubrule><HeadMorphologicalInput><PhoneticSequence id="h1"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></HeadMorphologicalInput><NonHeadMorphologicalInput><PhoneticSequence id="n1"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="any" /></OptionalSegmentSequence></PhoneticSequence></NonHeadMorphologicalInput><MorphologicalOutput><CopyFromInput index="n1" /><CopyFromInput index="h1" /></MorphologicalOutput></CompoundingSubrule></CompoundingSubrules></CompoundingRule>
-</MorphologicalRuleDefinitions>
-<LexicalEntries><LexicalEntry id="x" partOfSpeech="v"><Allomorphs><Allomorph id="x0"><PhoneticShape>a</PhoneticShape></Allomorph><Allomorph id="x1"><PhoneticShape>p</PhoneticShape></Allomorph></Allomorphs><MorphemeId>X</MorphemeId></LexicalEntry><LexicalEntry id="y" partOfSpeech="v"><Allomorphs><Allomorph id="y0"><PhoneticShape>pp</PhoneticShape></Allomorph></Allomorphs><MorphemeId>Y</MorphemeId></LexicalEntry></LexicalEntries>
-</Stratum></Strata></Language></HermitCrabInput>
+<HermitCrabInput>
+  <Language>
+    <Name>CompoundIdentity</Name>
+    <PartsOfSpeech>
+      <PartOfSpeech id="v_distinct-entries">
+        <Name>V_distinct-entries</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_same-spelling">
+        <Name>V_same-spelling</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <PhonologicalFeatureSystem>
+      <SymbolicFeature id="f_distinct-entries">
+        <Name>f_distinct-entries</Name>
+        <Symbols>
+          <Symbol id="fP_distinct-entries">+</Symbol>
+          <Symbol id="fM_distinct-entries">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_distinct-entries">
+        <Name>g_distinct-entries</Name>
+        <Symbols>
+          <Symbol id="gP_distinct-entries">+</Symbol>
+          <Symbol id="gM_distinct-entries">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_same-spelling">
+        <Name>f_same-spelling</Name>
+        <Symbols>
+          <Symbol id="fP_same-spelling">+</Symbol>
+          <Symbol id="fM_same-spelling">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_same-spelling">
+        <Name>g_same-spelling</Name>
+        <Symbols>
+          <Symbol id="gP_same-spelling">+</Symbol>
+          <Symbol id="gM_same-spelling">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_distinct-entries">cell distinct-entries</Symbol>
+          <Symbol id="cell_same-spelling">cell same-spelling</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+    </PhonologicalFeatureSystem>
+    <CharacterDefinitionTable id="t_distinct-entries">
+      <Name>Main_distinct-entries</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="cA_distinct-entries">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+          <FeatureValue feature="f_distinct-entries" symbolValues="fP_distinct-entries"/>
+          <FeatureValue feature="g_distinct-entries" symbolValues="gP_distinct-entries"/>
+          <FeatureValue feature="cell" symbolValues="cell_distinct-entries"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_distinct-entries">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+          <FeatureValue feature="f_distinct-entries" symbolValues="fM_distinct-entries"/>
+          <FeatureValue feature="g_distinct-entries" symbolValues="gM_distinct-entries"/>
+          <FeatureValue feature="cell" symbolValues="cell_distinct-entries"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_same-spelling">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_same-spelling" symbolValues="fP_same-spelling"/>
+          <FeatureValue feature="g_same-spelling" symbolValues="gP_same-spelling"/>
+          <FeatureValue feature="cell" symbolValues="cell_same-spelling"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_same-spelling">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_same-spelling" symbolValues="fM_same-spelling"/>
+          <FeatureValue feature="g_same-spelling" symbolValues="gM_same-spelling"/>
+          <FeatureValue feature="cell" symbolValues="cell_same-spelling"/>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+      <BoundaryDefinitions>
+        <BoundaryDefinition id="b">
+          <Representations>
+            <Representation>^0</Representation>
+          </Representations>
+        </BoundaryDefinition>
+      </BoundaryDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="any_distinct-entries">
+        <Name>Any_distinct-entries</Name>
+        <FeatureValue feature="cell" symbolValues="cell_distinct-entries"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_same-spelling">
+        <Name>Any_same-spelling</Name>
+        <FeatureValue feature="cell" symbolValues="cell_same-spelling"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <Strata>
+      <Stratum characterDefinitionTable="t_distinct-entries" morphologicalRuleOrder="unordered" morphologicalRules="cr1_distinct-entries cr2_distinct-entries cr1_same-spelling">
+        <Name>Main_distinct-entries</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="cr1_distinct-entries">
+            <Name>Compound_distinct-entries</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="h0_distinct-entries">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_distinct-entries"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="n0_distinct-entries">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_distinct-entries"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="h0_distinct-entries"/>
+                  <CopyFromInput index="n0_distinct-entries"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_distinct-entries">
+            <Name>Compound2_distinct-entries</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="h1_distinct-entries">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_distinct-entries"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="n1_distinct-entries">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_distinct-entries"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="n1_distinct-entries"/>
+                  <CopyFromInput index="h1_distinct-entries"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr1_same-spelling">
+            <Name>Compound_same-spelling</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="h0_same-spelling">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_same-spelling"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="n0_same-spelling">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_same-spelling"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="h0_same-spelling"/>
+                  <CopyFromInput index="n0_same-spelling"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+        </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="x_distinct-entries" partOfSpeech="v_distinct-entries">
+            <Allomorphs>
+              <Allomorph id="x0_distinct-entries">
+                <PhoneticShape>a</PhoneticShape>
+              </Allomorph>
+              <Allomorph id="x1_distinct-entries">
+                <PhoneticShape>p</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_distinct-entries</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_distinct-entries" partOfSpeech="v_distinct-entries">
+            <Allomorphs>
+              <Allomorph id="y0_distinct-entries">
+                <PhoneticShape>pp</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_distinct-entries</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="root_same-spelling" partOfSpeech="v_same-spelling">
+            <Allomorphs>
+              <Allomorph id="root0_same-spelling">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+              <Allomorph id="root1_same-spelling">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>ROOT_same-spelling</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+    </Strata>
+  </Language>
+</HermitCrabInput>

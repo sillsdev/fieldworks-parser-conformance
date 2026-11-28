@@ -1,77 +1,136 @@
 language: MetathesisBoundaryRightToLeftPrefix
-requires: [phonology]
+requires:
+  - phonology
 words:
-  - word: "p"
-    note: >-
-      Root p alone: no prefix, so no switch pair exists.
+  - word: p
+    note: '[cell prefix] Root p alone: no prefix, so no switch pair exists.'
     parses:
-      - signature: "Y|p"
+      - signature: Y_prefix|p
         rules: []
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "t"
-    note: >-
-      Root t alone: no prefix, so no switch pair exists.
+      - MetathesisRule > right-to-left application
+  - word: t
+    note: '[cell prefix] Root t alone: no prefix, so no switch pair exists.'
     parses:
-      - signature: "Z|t"
+      - signature: Z_prefix|t
         rules: []
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "ts"
-    note: >-
-      Right-to-left rule on prefix s, boundary, root t: the boundary joins the group of the later switch; only segments move, so s moves after t and the boundary, which stays in place, comes first (+?ts), and C# lists the morphs PRE+Z.
+      - MetathesisRule > right-to-left application
+  - word: ts
+    note: '[cell prefix] Right-to-left rule on prefix s, boundary, root t: the boundary joins the group of the later switch; only segments move, so s moves after t and the boundary, which stays in place, comes first (+?ts), and C# lists the morphs PRE+Z.'
     parses:
-      - signature: "PRE+Z|+?ts"
-        rules: [PRE, pr1]
+      - signature: PRE_prefix+Z_prefix|+?ts
+        rules:
+          - PRE_prefix
+          - pr1_prefix
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "+ts"
-    note: >-
-      The same surface with the moved boundary written first: C# accepts it.
+      - MetathesisRule > right-to-left application
+  - word: +ts
+    note: '[cell prefix] The same surface with the moved boundary written first: C# accepts it.'
     parses:
-      - signature: "PRE+Z|+?ts"
-        rules: [PRE, pr1]
+      - signature: PRE_prefix+Z_prefix|+?ts
+        rules:
+          - PRE_prefix
+          - pr1_prefix
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "sp"
-    note: >-
-      Prefix s then root p: p is not a switch target, so nothing swaps (PRE+Y).
+      - MetathesisRule > right-to-left application
+  - word: sp
+    note: '[cell prefix] Prefix s then root p: p is not a switch target, so nothing swaps (PRE+Y).'
     parses:
-      - signature: "PRE+Y|s+?p"
-        rules: [PRE]
+      - signature: PRE_prefix+Y_prefix|s+?p
+        rules:
+          - PRE_prefix
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "s+p"
-    note: >-
-      Prefix s, boundary, root p: no swap.
+      - MetathesisRule > right-to-left application
+  - word: s+p
+    note: '[cell prefix] Prefix s, boundary, root p: no swap.'
     parses:
-      - signature: "PRE+Y|s+?p"
-        rules: [PRE]
+      - signature: PRE_prefix+Y_prefix|s+?p
+        rules:
+          - PRE_prefix
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "sa"
-    note: >-
-      Prefix s then root a: a is not a switch target, so nothing swaps (PRE+X).
+      - MetathesisRule > right-to-left application
+  - word: sa
+    note: '[cell prefix] Prefix s then root a: a is not a switch target, so nothing swaps (PRE+X).'
     parses:
-      - signature: "PRE+X|s+?a"
-        rules: [PRE]
+      - signature: PRE_prefix+X_prefix|s+?a
+        rules:
+          - PRE_prefix
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "t+s"
-    note: >-
-      Rejected: in a right-to-left application s moves after t and the boundary, which stays in front of the pair, so it cannot stay between the swapped segments.
+      - MetathesisRule > right-to-left application
+  - word: t+s
+    note: '[cell prefix] Rejected: in a right-to-left application s moves after t and the boundary, which stays in front of the pair, so it cannot stay between the swapped segments.'
     expect_fail: true
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "st"
-    note: >-
-      Never a surface: the obligatory rule rewrites st to ts, and C# rejects it.
+      - MetathesisRule > right-to-left application
+  - word: st
+    note: '[cell prefix] Never a surface: the obligatory rule rewrites st to ts, and C# rejects it.'
     expect_fail: true
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "s+t"
-    note: >-
-      Never a surface: the obligatory rule rewrites s+t to +ts, and C# rejects it.
+      - MetathesisRule > right-to-left application
+  - word: s+t
+    note: '[cell prefix] Never a surface: the obligatory rule rewrites s+t to +ts, and C# rejects it.'
     expect_fail: true
     exercises:
-      - "MetathesisRule > right-to-left application"
+      - MetathesisRule > right-to-left application
+  - word: d
+    note: '[cell suffix] Root p alone: no suffix, so no switch pair exists.'
+    parses:
+      - signature: Y_suffix|d
+        rules: []
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: f
+    note: '[cell suffix] Root s alone: no suffix, so no switch pair exists.'
+    parses:
+      - signature: Z_suffix|f
+        rules: []
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: bg
+    note: '[cell suffix] Root a then suffix t: t is not preceded by a switch target, so nothing swaps (X+PRE).'
+    parses:
+      - signature: X_suffix+PRE_suffix|b+?g
+        rules:
+          - PRE_suffix
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: b+g
+    note: '[cell suffix] Root a, boundary, suffix t: no swap.'
+    parses:
+      - signature: X_suffix+PRE_suffix|b+?g
+        rules:
+          - PRE_suffix
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: gf
+    note: '[cell suffix] Right-to-left rule on root s, boundary, suffix t: the boundary joins the group of the later switch; only segments move, so s moves after t and the boundary stays in front of the pair (+?ts), and the suffix is listed before the root (PRE+Z).'
+    parses:
+      - signature: PRE_suffix+Z_suffix|+?gf
+        rules:
+          - PRE_suffix
+          - pr1_suffix
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: +gf
+    note: '[cell suffix] The same surface with the moved boundary written first: C# accepts it.'
+    parses:
+      - signature: PRE_suffix+Z_suffix|+?gf
+        rules:
+          - PRE_suffix
+          - pr1_suffix
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: dg
+    note: '[cell suffix] Root p then suffix t: no swap (Y+PRE).'
+    parses:
+      - signature: Y_suffix+PRE_suffix|d+?g
+        rules:
+          - PRE_suffix
+    exercises:
+      - MetathesisRule > right-to-left application
+  - word: gb
+    note: '[cell suffix] Never a surface in this grammar: no root or affix makes it, and C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > right-to-left application

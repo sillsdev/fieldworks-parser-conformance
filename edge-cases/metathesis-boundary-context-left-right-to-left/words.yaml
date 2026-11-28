@@ -1,93 +1,377 @@
 language: MetathesisBoundaryContextLeftRightToLeft
-requires: [phonology]
+requires:
+  - phonology
 words:
-  - word: "a"
-    note: >-
-      Root a alone: no s-t pair, nothing swaps.
+  - word: a
+    note: '[cell left-right-to-left] Root a alone: no s-t pair, nothing swaps.'
     parses:
-      - signature: "X|a"
+      - signature: X_left-right-to-left|a
         rules: []
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "p"
-    note: >-
-      Root p alone: nothing swaps.
+      - MetathesisRule > right-to-left application
+  - word: p
+    note: '[cell left-right-to-left] Root p alone: nothing swaps.'
     parses:
-      - signature: "Y|p"
+      - signature: Y_left-right-to-left|p
         rules: []
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "st"
-    note: >-
-      Root st alone: the rule needs a preceding a, so st is not swapped.
+      - MetathesisRule > right-to-left application
+  - word: st
+    note: '[cell left-right-to-left] Root st alone: the rule needs a preceding a, so st is not swapped.'
     parses:
-      - signature: "Z|st"
+      - signature: Z_left-right-to-left|st
         rules: []
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "aa"
-    note: >-
-      Prefix a+ with root a: no s-t pair (PRE+X).
+      - MetathesisRule > right-to-left application
+  - word: aa
+    note: '[cell left-right-to-left] Prefix a+ with root a: no s-t pair (PRE+X).'
     parses:
-      - signature: "PRE+X|a+?a"
-        rules: [PRE]
+      - signature: PRE_left-right-to-left+X_left-right-to-left|a+?a
+        rules:
+          - PRE_left-right-to-left
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "ap"
-    note: >-
-      Prefix a+ with root p: no s-t pair (PRE+Y).
+      - MetathesisRule > right-to-left application
+  - word: ap
+    note: '[cell left-right-to-left] Prefix a+ with root p: no s-t pair (PRE+Y).'
     parses:
-      - signature: "PRE+Y|a+?p"
-        rules: [PRE]
+      - signature: PRE_left-right-to-left+Y_left-right-to-left|a+?p
+        rules:
+          - PRE_left-right-to-left
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "a+a"
-    note: >-
-      Prefix a, boundary, root a: the boundary is optional on the surface.
+      - MetathesisRule > right-to-left application
+  - word: a+a
+    note: '[cell left-right-to-left] Prefix a, boundary, root a: the boundary is optional on the surface.'
     parses:
-      - signature: "PRE+X|a+?a"
-        rules: [PRE]
+      - signature: PRE_left-right-to-left+X_left-right-to-left|a+?a
+        rules:
+          - PRE_left-right-to-left
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "a+p"
-    note: >-
-      Prefix a, boundary, root p.
+      - MetathesisRule > right-to-left application
+  - word: a+p
+    note: '[cell left-right-to-left] Prefix a, boundary, root p.'
     parses:
-      - signature: "PRE+Y|a+?p"
-        rules: [PRE]
+      - signature: PRE_left-right-to-left+Y_left-right-to-left|a+?p
+        rules:
+          - PRE_left-right-to-left
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "ats"
-    note: >-
-      Right-to-left rule a _ [s t] over prefix a+ and root st: traversal meets t, then s, then steps over the boundary, which C# gives to s's group; only segments move, so t moves in front of the boundary and the surface is at+s.
+      - MetathesisRule > right-to-left application
+  - word: ats
+    note: '[cell left-right-to-left] Right-to-left rule a _ [s t] over prefix a+ and root st: traversal meets t, then s, then steps over the boundary, which C# gives to s''s group; only segments move, so t moves in front of the boundary and the surface is at+s.'
     parses:
-      - signature: "PRE+Z|at+?s"
-        rules: [PRE, pr1]
+      - signature: PRE_left-right-to-left+Z_left-right-to-left|at+?s
+        rules:
+          - PRE_left-right-to-left
+          - pr1_left-right-to-left
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "at+s"
-    note: >-
-      The same analysis with the moved boundary written before s: C# accepts it.
+      - MetathesisRule > right-to-left application
+  - word: at+s
+    note: '[cell left-right-to-left] The same analysis with the moved boundary written before s: C# accepts it.'
     parses:
-      - signature: "PRE+Z|at+?s"
-        rules: [PRE, pr1]
+      - signature: PRE_left-right-to-left+Z_left-right-to-left|at+?s
+        rules:
+          - PRE_left-right-to-left
+          - pr1_left-right-to-left
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "a+ts"
-    note: >-
-      The boundary left after the context, where the pre-fix Rust HC put it: C# rejects it.
+      - MetathesisRule > right-to-left application
+  - word: a+ts
+    note: '[cell left-right-to-left] The boundary left after the context, where the pre-fix Rust HC put it: C# rejects it.'
     expect_fail: true
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "a+st"
-    note: >-
-      Never a surface: the obligatory rule rewrites a+st, and C# rejects it.
+      - MetathesisRule > right-to-left application
+  - word: a+st
+    note: '[cell left-right-to-left] Never a surface: the obligatory rule rewrites a+st, and C# rejects it.'
     expect_fail: true
     exercises:
-      - "MetathesisRule > right-to-left application"
-  - word: "ast"
-    note: >-
-      Never a surface: the obligatory rule rewrites it, and C# rejects it.
+      - MetathesisRule > right-to-left application
+  - word: ast
+    note: '[cell left-right-to-left] Never a surface: the obligatory rule rewrites it, and C# rejects it.'
     expect_fail: true
     exercises:
-      - "MetathesisRule > right-to-left application"
+      - MetathesisRule > right-to-left application
+  - word: b
+    note: '[cell right] Root a alone: no s-t pair, nothing swaps.'
+    parses:
+      - signature: X_right|b
+        rules: []
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: d
+    note: '[cell right] Root p alone: nothing swaps.'
+    parses:
+      - signature: Y_right|d
+        rules: []
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: fg
+    note: '[cell right] Root st alone: the rule needs a following a, so st is not swapped.'
+    parses:
+      - signature: Z_right|fg
+        rules: []
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: bb
+    note: '[cell right] Root a with suffix +a: no s-t pair (X+SUF).'
+    parses:
+      - signature: X_right+SUF_right|b+?b
+        rules:
+          - SUF_right
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: db
+    note: '[cell right] Root p with suffix +a: no s-t pair (Y+SUF).'
+    parses:
+      - signature: Y_right+SUF_right|d+?b
+        rules:
+          - SUF_right
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: b+b
+    note: '[cell right] Root a, boundary, suffix a: the boundary is optional on the surface.'
+    parses:
+      - signature: X_right+SUF_right|b+?b
+        rules:
+          - SUF_right
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: d+b
+    note: '[cell right] Root p, boundary, suffix a.'
+    parses:
+      - signature: Y_right+SUF_right|d+?b
+        rules:
+          - SUF_right
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: gfb
+    note: '[cell right] Root st before suffix +a: the right context a is reached across the boundary, and C# gives the skipped boundary to t''s group, the switch matched before it; only segments move, so s moves after t and the boundary and the surface is t+sa.'
+    parses:
+      - signature: Z_right+SUF_right|g+?fb
+        rules:
+          - SUF_right
+          - pr1_right
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: g+fb
+    note: '[cell right] The same analysis with the moved boundary written after t: C# accepts it.'
+    parses:
+      - signature: Z_right+SUF_right|g+?fb
+        rules:
+          - SUF_right
+          - pr1_right
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: gf+b
+    note: '[cell right] The boundary left before the context, where the pre-fix Rust HC put it: C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: fg+b
+    note: '[cell right] Never a surface: the obligatory rule rewrites st+a, and C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: fgb
+    note: '[cell right] Never a surface: the obligatory rule rewrites it, and C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: kl
+    note: '[cell segments] R0 is underlying st; nothing swaps: C# gives R0|st.'
+    parses:
+      - signature: R0_segments|kl
+        rules: []
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: jkl
+    note: '[cell segments] R1 is underlying pst; nothing swaps: C# gives R1|pst.'
+    parses:
+      - signature: R1_segments|jkl
+        rules: []
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: klh
+    note: '[cell segments] R0+SUF0 is underlying st+a; nothing swaps: C# gives R0+SUF0|st+?a.'
+    parses:
+      - signature: R0_segments+SUF0_segments|kl+?h
+        rules:
+          - SUF0_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: klj
+    note: '[cell segments] R0+SUF1 is underlying st+p; nothing swaps: C# gives R0+SUF1|st+?p.'
+    parses:
+      - signature: R0_segments+SUF1_segments|kl+?j
+        rules:
+          - SUF1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: kl+h
+    note: '[cell segments] R0+SUF0 is underlying st+a; nothing swaps: C# gives R0+SUF0|st+?a.'
+    parses:
+      - signature: R0_segments+SUF0_segments|kl+?h
+        rules:
+          - SUF0_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: kl+j
+    note: '[cell segments] R0+SUF1 is underlying st+p; nothing swaps: C# gives R0+SUF1|st+?p.'
+    parses:
+      - signature: R0_segments+SUF1_segments|kl+?j
+        rules:
+          - SUF1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: kljh
+    note: '[cell segments] R0+SUF1+SUF0 is underlying st+p+a; nothing swaps: C# gives R0+SUF1+SUF0|st+?p+?a.'
+    parses:
+      - signature: R0_segments+SUF1_segments+SUF0_segments|kl+?j+?h
+        rules:
+          - SUF1_segments
+          - SUF0_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: lkhj
+    note: '[cell segments] R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p. R0+SUF2 is underlying st+ap; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2|t+?sap.'
+    parses:
+      - signature: R0_segments+SUF0_segments+SUF1_segments|l+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+      - signature: R0_segments+SUF2_segments|l+?khj
+        rules:
+          - SUF2_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: l+khj
+    note: '[cell segments] R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p. R0+SUF2 is underlying st+ap; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2|t+?sap.'
+    parses:
+      - signature: R0_segments+SUF0_segments+SUF1_segments|l+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+      - signature: R0_segments+SUF2_segments|l+?khj
+        rules:
+          - SUF2_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: lkh+j
+    note: '[cell segments] R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p.'
+    parses:
+      - signature: R0_segments+SUF0_segments+SUF1_segments|l+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: l+kh+j
+    note: '[cell segments] R0+SUF0+SUF1 is underlying st+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF0+SUF1|t+?sa+?p.'
+    parses:
+      - signature: R0_segments+SUF0_segments+SUF1_segments|l+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: jlkhj
+    note: '[cell segments] R1+SUF0+SUF1 is underlying pst+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF0+SUF1|pt+?sa+?p. R1+SUF2 is underlying pst+ap; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF2|pt+?sap.'
+    parses:
+      - signature: R1_segments+SUF0_segments+SUF1_segments|jl+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+      - signature: R1_segments+SUF2_segments|jl+?khj
+        rules:
+          - SUF2_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: jl+khj
+    note: '[cell segments] R1+SUF0+SUF1 is underlying pst+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF0+SUF1|pt+?sa+?p. R1+SUF2 is underlying pst+ap; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF2|pt+?sap.'
+    parses:
+      - signature: R1_segments+SUF0_segments+SUF1_segments|jl+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+      - signature: R1_segments+SUF2_segments|jl+?khj
+        rules:
+          - SUF2_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: jl+kh+j
+    note: '[cell segments] R1+SUF0+SUF1 is underlying pst+a+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R1+SUF0+SUF1|pt+?sa+?p.'
+    parses:
+      - signature: R1_segments+SUF0_segments+SUF1_segments|jl+?kh+?j
+        rules:
+          - SUF0_segments
+          - SUF1_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: lkhjh
+    note: '[cell segments] R0+SUF2+SUF0 is underlying st+ap+a; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2+SUF0|t+?sap+?a.'
+    parses:
+      - signature: R0_segments+SUF2_segments+SUF0_segments|l+?khj+?h
+        rules:
+          - SUF2_segments
+          - SUF0_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: lkhjj
+    note: '[cell segments] R0+SUF2+SUF1 is underlying st+ap+p; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2+SUF1|t+?sap+?p.'
+    parses:
+      - signature: R0_segments+SUF2_segments+SUF1_segments|l+?khj+?j
+        rules:
+          - SUF2_segments
+          - SUF1_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: l+khj+h
+    note: '[cell segments] R0+SUF2+SUF0 is underlying st+ap+a; the root s and t swap before the context a p; only segments move, and the root''s boundary closes the group of t, so s lands after that boundary: C# gives R0+SUF2+SUF0|t+?sap+?a.'
+    parses:
+      - signature: R0_segments+SUF2_segments+SUF0_segments|l+?khj+?h
+        rules:
+          - SUF2_segments
+          - SUF0_segments
+          - pr1_segments
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: klhj
+    note: '[cell segments] C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: kl+hj
+    note: '[cell segments] C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: klh+j
+    note: '[cell segments] C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: kl+h+j
+    note: '[cell segments] C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: khj
+    note: '[cell segments] C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context
+  - word: lhkj
+    note: '[cell segments] C# rejects it.'
+    expect_fail: true
+    exercises:
+      - MetathesisRule > boundary in the switch context

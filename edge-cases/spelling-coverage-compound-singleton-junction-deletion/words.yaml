@@ -1,372 +1,4560 @@
-language: SpellingCompoundSingletonJunctionDeletion
-requires: [phonology, morpher-settings]
+language: SpellingCompoundSingletonBoundary
+requires:
+  - phonology
+  - morpher-settings
 morpher:
   MaxRoots: 2
 words:
   - word: a
-    note: "C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|a"
+      - signature: X_deletion|a
         rules: []
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: p
-    note: "C# returns 3 analyses (Y|p; Z+Y|+?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (Y|p; Z+Y|+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|p"
-        rules: [pr1]
-      - signature: "Z+Y|+?p"
-        rules: [cr1, pr1]
-      - signature: "Z+Y|+?p"
-        rules: [cr2, pr1]
+      - signature: Y_deletion|p
+        rules:
+          - pr1_deletion
+      - signature: Z_deletion+Y_deletion|+?p
+        rules:
+          - cr1_deletion
+          - pr1_deletion
+      - signature: Z_deletion+Y_deletion|+?p
+        rules:
+          - cr2_deletion
+          - pr1_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: t
-    note: "C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z|t"
+      - signature: Z_deletion|t
         rules: []
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: aa
-    note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|a+?a"
-        rules: [cr1]
-      - signature: "X|a+?a"
-        rules: [cr2]
+      - signature: X_deletion|a+?a
+        rules:
+          - cr1_deletion
+      - signature: X_deletion|a+?a
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: ap
-    note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|a+?p"
-        rules: [cr1]
-      - signature: "X+Y|a+?p"
-        rules: [cr2]
+      - signature: X_deletion+Y_deletion|a+?p
+        rules:
+          - cr1_deletion
+      - signature: X_deletion+Y_deletion|a+?p
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: at
-    note: "C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Z|a+?t"
-        rules: [cr1]
-      - signature: "X+Z|a+?t"
-        rules: [cr2]
+      - signature: X_deletion+Z_deletion|a+?t
+        rules:
+          - cr1_deletion
+      - signature: X_deletion+Z_deletion|a+?t
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: pa
-    note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+X|p+?a"
-        rules: [cr1]
-      - signature: "Y+X|p+?a"
-        rules: [cr2]
+      - signature: Y_deletion+X_deletion|p+?a
+        rules:
+          - cr1_deletion
+      - signature: Y_deletion+X_deletion|p+?a
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: pp
-    note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|p+?p"
-        rules: [cr1]
-      - signature: "Y|p+?p"
-        rules: [cr2]
+      - signature: Y_deletion|p+?p
+        rules:
+          - cr1_deletion
+      - signature: Y_deletion|p+?p
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: pt
-    note: "C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+Z|p+?t"
-        rules: [cr1]
-      - signature: "Y+Z|p+?t"
-        rules: [cr2]
+      - signature: Y_deletion+Z_deletion|p+?t
+        rules:
+          - cr1_deletion
+      - signature: Y_deletion+Z_deletion|p+?t
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: ta
-    note: "C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z+X|t+?a"
-        rules: [cr1]
-      - signature: "Z+X|t+?a"
-        rules: [cr2]
+      - signature: Z_deletion+X_deletion|t+?a
+        rules:
+          - cr1_deletion
+      - signature: Z_deletion+X_deletion|t+?a
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: tt
-    note: "C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z|t+?t"
-        rules: [cr1]
-      - signature: "Z|t+?t"
-        rules: [cr2]
+      - signature: Z_deletion|t+?t
+        rules:
+          - cr1_deletion
+      - signature: Z_deletion|t+?t
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: sa
-    note: "C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|sa"
-        rules: [PRE]
+      - signature: PRE_deletion+X_deletion|sa
+        rules:
+          - PRE_deletion
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: sp
-    note: "C# returns 4 analyses (PRE+Y|sp; PRE+Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 4 analyses (PRE+Y|sp; PRE+Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y|sp"
-        rules: [PRE, pr1]
-      - signature: "PRE+Z+Y|s+?p"
-        rules: [PRE, cr1, pr1]
-      - signature: "PRE+Z+Y|s+?p"
-        rules: [PRE, cr1, pr1]
-      - signature: "PRE+Z+Y|s+?p"
-        rules: [PRE, cr2, pr1]
+      - signature: PRE_deletion+Y_deletion|sp
+        rules:
+          - PRE_deletion
+          - pr1_deletion
+      - signature: PRE_deletion+Z_deletion+Y_deletion|s+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+          - pr1_deletion
+      - signature: PRE_deletion+Z_deletion+Y_deletion|s+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+          - pr1_deletion
+      - signature: PRE_deletion+Z_deletion+Y_deletion|s+?p
+        rules:
+          - PRE_deletion
+          - cr2_deletion
+          - pr1_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: st
-    note: "C# returns 1 analysis (PRE+Z|st): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (PRE+Z|st): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Z|st"
-        rules: [PRE]
+      - signature: PRE_deletion+Z_deletion|st
+        rules:
+          - PRE_deletion
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-  - word: "+p"
-    note: "C# returns 2 analyses (Z+Y|+?p): pins that this spelling is a route and its morpheme sequence."
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: +p
+    note: '[cell deletion] C# returns 2 analyses (Z+Y|+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z+Y|+?p"
-        rules: [cr1, pr1]
-      - signature: "Z+Y|+?p"
-        rules: [cr2, pr1]
+      - signature: Z_deletion+Y_deletion|+?p
+        rules:
+          - cr1_deletion
+          - pr1_deletion
+      - signature: Z_deletion+Y_deletion|+?p
+        rules:
+          - cr2_deletion
+          - pr1_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: asa
-    note: "C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE|a+?sa"
-        rules: [PRE, cr2]
+      - signature: X_deletion+PRE_deletion|a+?sa
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: asp
-    note: "C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE+Y|a+?sp"
-        rules: [PRE, cr2]
+      - signature: X_deletion+PRE_deletion+Y_deletion|a+?sp
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: ast
-    note: "C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+PRE+Z|a+?st"
-        rules: [PRE, cr2]
+      - signature: X_deletion+PRE_deletion+Z_deletion|a+?st
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "a+a"
-    note: "C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: a+a
+    note: '[cell deletion] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|a+?a"
-        rules: [cr1]
-      - signature: "X|a+?a"
-        rules: [cr2]
+      - signature: X_deletion|a+?a
+        rules:
+          - cr1_deletion
+      - signature: X_deletion|a+?a
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "a+p"
-    note: "C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: a+p
+    note: '[cell deletion] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|a+?p"
-        rules: [cr1]
-      - signature: "X+Y|a+?p"
-        rules: [cr2]
+      - signature: X_deletion+Y_deletion|a+?p
+        rules:
+          - cr1_deletion
+      - signature: X_deletion+Y_deletion|a+?p
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "a+t"
-    note: "C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: a+t
+    note: '[cell deletion] C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Z|a+?t"
-        rules: [cr1]
-      - signature: "X+Z|a+?t"
-        rules: [cr2]
+      - signature: X_deletion+Z_deletion|a+?t
+        rules:
+          - cr1_deletion
+      - signature: X_deletion+Z_deletion|a+?t
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: psa
-    note: "C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+PRE+X|p+?sa"
-        rules: [PRE, cr2]
+      - signature: Y_deletion+PRE_deletion+X_deletion|p+?sa
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: psp
-    note: "C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+PRE|p+?sp"
-        rules: [PRE, cr2]
+      - signature: Y_deletion+PRE_deletion|p+?sp
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: pst
-    note: "C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+PRE+Z|p+?st"
-        rules: [PRE, cr2]
+      - signature: Y_deletion+PRE_deletion+Z_deletion|p+?st
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "p+a"
-    note: "C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: p+a
+    note: '[cell deletion] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+X|p+?a"
-        rules: [cr1]
-      - signature: "Y+X|p+?a"
-        rules: [cr2]
+      - signature: Y_deletion+X_deletion|p+?a
+        rules:
+          - cr1_deletion
+      - signature: Y_deletion+X_deletion|p+?a
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "p+p"
-    note: "C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: p+p
+    note: '[cell deletion] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|p+?p"
-        rules: [cr1]
-      - signature: "Y|p+?p"
-        rules: [cr2]
+      - signature: Y_deletion|p+?p
+        rules:
+          - cr1_deletion
+      - signature: Y_deletion|p+?p
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "p+t"
-    note: "C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: p+t
+    note: '[cell deletion] C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+Z|p+?t"
-        rules: [cr1]
-      - signature: "Y+Z|p+?t"
-        rules: [cr2]
+      - signature: Y_deletion+Z_deletion|p+?t
+        rules:
+          - cr1_deletion
+      - signature: Y_deletion+Z_deletion|p+?t
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: tsa
-    note: "C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z+PRE+X|t+?sa"
-        rules: [PRE, cr2]
+      - signature: Z_deletion+PRE_deletion+X_deletion|t+?sa
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: tsp
-    note: "C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z+PRE+Y|t+?sp"
-        rules: [PRE, cr2]
+      - signature: Z_deletion+PRE_deletion+Y_deletion|t+?sp
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: tst
-    note: "C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z+PRE|t+?st"
-        rules: [PRE, cr2]
+      - signature: Z_deletion+PRE_deletion|t+?st
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "t+a"
-    note: "C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: t+a
+    note: '[cell deletion] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z+X|t+?a"
-        rules: [cr1]
-      - signature: "Z+X|t+?a"
-        rules: [cr2]
+      - signature: Z_deletion+X_deletion|t+?a
+        rules:
+          - cr1_deletion
+      - signature: Z_deletion+X_deletion|t+?a
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "t+t"
-    note: "C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: t+t
+    note: '[cell deletion] C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Z|t+?t"
-        rules: [cr1]
-      - signature: "Z|t+?t"
-        rules: [cr2]
+      - signature: Z_deletion|t+?t
+        rules:
+          - cr1_deletion
+      - signature: Z_deletion|t+?t
+        rules:
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: saa
-    note: "C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|sa+?a"
-        rules: [PRE, cr1]
-      - signature: "PRE+X|sa+?a"
-        rules: [PRE, cr1]
-      - signature: "PRE+X|sa+?a"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+X_deletion|sa+?a
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+X_deletion|sa+?a
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+X_deletion|sa+?a
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: sap
-    note: "C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y|sa+?p"
-        rules: [PRE, cr1]
-      - signature: "PRE+X+Y|sa+?p"
-        rules: [PRE, cr1]
-      - signature: "PRE+X+Y|sa+?p"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+X_deletion+Y_deletion|sa+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+X_deletion+Y_deletion|sa+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+X_deletion+Y_deletion|sa+?p
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: sat
-    note: "C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Z|sa+?t"
-        rules: [PRE, cr1]
-      - signature: "PRE+X+Z|sa+?t"
-        rules: [PRE, cr1]
-      - signature: "PRE+X+Z|sa+?t"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+X_deletion+Z_deletion|sa+?t
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+X_deletion+Z_deletion|sa+?t
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+X_deletion+Z_deletion|sa+?t
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: spa
-    note: "C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y+X|sp+?a"
-        rules: [PRE, cr1]
-      - signature: "PRE+Y+X|sp+?a"
-        rules: [PRE, cr1]
-      - signature: "PRE+Y+X|sp+?a"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+Y_deletion+X_deletion|sp+?a
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Y_deletion+X_deletion|sp+?a
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Y_deletion+X_deletion|sp+?a
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: spp
-    note: "C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y|sp+?p"
-        rules: [PRE, cr1]
-      - signature: "PRE+Y|sp+?p"
-        rules: [PRE, cr1]
-      - signature: "PRE+Y|sp+?p"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+Y_deletion|sp+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Y_deletion|sp+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Y_deletion|sp+?p
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: spt
-    note: "C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y+Z|sp+?t"
-        rules: [PRE, cr1]
-      - signature: "PRE+Y+Z|sp+?t"
-        rules: [PRE, cr1]
-      - signature: "PRE+Y+Z|sp+?t"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+Y_deletion+Z_deletion|sp+?t
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Y_deletion+Z_deletion|sp+?t
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Y_deletion+Z_deletion|sp+?t
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: sta
-    note: "C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Z+X|st+?a"
-        rules: [PRE, cr1]
-      - signature: "PRE+Z+X|st+?a"
-        rules: [PRE, cr1]
-      - signature: "PRE+Z+X|st+?a"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+Z_deletion+X_deletion|st+?a
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Z_deletion+X_deletion|st+?a
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Z_deletion+X_deletion|st+?a
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: stt
-    note: "C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell deletion] C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Z|st+?t"
-        rules: [PRE, cr1]
-      - signature: "PRE+Z|st+?t"
-        rules: [PRE, cr1]
-      - signature: "PRE+Z|st+?t"
-        rules: [PRE, cr2]
+      - signature: PRE_deletion+Z_deletion|st+?t
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Z_deletion|st+?t
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+      - signature: PRE_deletion+Z_deletion|st+?t
+        rules:
+          - PRE_deletion
+          - cr2_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
-  - word: "s+p"
-    note: "C# returns 3 analyses (PRE+Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence."
+      - CompoundingRule > junction phonology
+  - word: s+p
+    note: '[cell deletion] C# returns 3 analyses (PRE+Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Z+Y|s+?p"
-        rules: [PRE, cr1, pr1]
-      - signature: "PRE+Z+Y|s+?p"
-        rules: [PRE, cr1, pr1]
-      - signature: "PRE+Z+Y|s+?p"
-        rules: [PRE, cr2, pr1]
+      - signature: PRE_deletion+Z_deletion+Y_deletion|s+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+          - pr1_deletion
+      - signature: PRE_deletion+Z_deletion+Y_deletion|s+?p
+        rules:
+          - PRE_deletion
+          - cr1_deletion
+          - pr1_deletion
+      - signature: PRE_deletion+Z_deletion+Y_deletion|s+?p
+        rules:
+          - PRE_deletion
+          - cr2_deletion
+          - pr1_deletion
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
+  - word: b
+    note: '[cell epenthesis] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis|b
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d
+    note: '[cell epenthesis] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis|d
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: g
+    note: '[cell epenthesis] C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis|g
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: bb
+    note: '[cell epenthesis] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis|b+?b
+        rules:
+          - cr1_epenthesis
+      - signature: X_epenthesis|b+?b
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: bd
+    note: '[cell epenthesis] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+Y_epenthesis|b+?d
+        rules:
+          - cr1_epenthesis
+      - signature: X_epenthesis+Y_epenthesis|b+?d
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: bg
+    note: '[cell epenthesis] C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+Z_epenthesis|b+?g
+        rules:
+          - cr1_epenthesis
+      - signature: X_epenthesis+Z_epenthesis|b+?g
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: db
+    note: '[cell epenthesis] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+X_epenthesis|d+?b
+        rules:
+          - cr1_epenthesis
+      - signature: Y_epenthesis+X_epenthesis|d+?b
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: dd
+    note: '[cell epenthesis] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis|d+?d
+        rules:
+          - cr1_epenthesis
+      - signature: Y_epenthesis|d+?d
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: dg
+    note: '[cell epenthesis] C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+Z_epenthesis|d+?g
+        rules:
+          - cr1_epenthesis
+      - signature: Y_epenthesis+Z_epenthesis|d+?g
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gb
+    note: '[cell epenthesis] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+X_epenthesis|g+?b
+        rules:
+          - cr1_epenthesis
+      - signature: Z_epenthesis+X_epenthesis|g+?b
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gg
+    note: '[cell epenthesis] C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis|g+?g
+        rules:
+          - cr1_epenthesis
+      - signature: Z_epenthesis|g+?g
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fb
+    note: '[cell epenthesis] C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis|fb
+        rules:
+          - PRE_epenthesis
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: fd
+    note: '[cell epenthesis] C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis|fd
+        rules:
+          - PRE_epenthesis
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: fg
+    note: '[cell epenthesis] C# returns 1 analysis (PRE+Z|st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Z_epenthesis|fg
+        rules:
+          - PRE_epenthesis
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: bfb
+    note: '[cell epenthesis] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+PRE_epenthesis|b+?fb
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: bfd
+    note: '[cell epenthesis] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+PRE_epenthesis+Y_epenthesis|b+?fd
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: bfg
+    note: '[cell epenthesis] C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+PRE_epenthesis+Z_epenthesis|b+?fg
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: b+b
+    note: '[cell epenthesis] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis|b+?b
+        rules:
+          - cr1_epenthesis
+      - signature: X_epenthesis|b+?b
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: b+d
+    note: '[cell epenthesis] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+Y_epenthesis|b+?d
+        rules:
+          - cr1_epenthesis
+      - signature: X_epenthesis+Y_epenthesis|b+?d
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: b+g
+    note: '[cell epenthesis] C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+Z_epenthesis|b+?g
+        rules:
+          - cr1_epenthesis
+      - signature: X_epenthesis+Z_epenthesis|b+?g
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: dfb
+    note: '[cell epenthesis] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+PRE_epenthesis+X_epenthesis|d+?fb
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: dfd
+    note: '[cell epenthesis] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+PRE_epenthesis|d+?fd
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: dfg
+    note: '[cell epenthesis] C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+PRE_epenthesis+Z_epenthesis|d+?fg
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d+b
+    note: '[cell epenthesis] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+X_epenthesis|d+?b
+        rules:
+          - cr1_epenthesis
+      - signature: Y_epenthesis+X_epenthesis|d+?b
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d+d
+    note: '[cell epenthesis] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis|d+?d
+        rules:
+          - cr1_epenthesis
+      - signature: Y_epenthesis|d+?d
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d+g
+    note: '[cell epenthesis] C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+Z_epenthesis|d+?g
+        rules:
+          - cr1_epenthesis
+      - signature: Y_epenthesis+Z_epenthesis|d+?g
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gbd
+    note: '[cell epenthesis] C# returns 2 analyses (Z+Y|ta+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+Y_epenthesis|gb+?d
+        rules:
+          - cr1_epenthesis
+          - pr1_epenthesis
+      - signature: Z_epenthesis+Y_epenthesis|gb+?d
+        rules:
+          - cr2_epenthesis
+          - pr1_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gfb
+    note: '[cell epenthesis] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+PRE_epenthesis+X_epenthesis|g+?fb
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gfd
+    note: '[cell epenthesis] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+PRE_epenthesis+Y_epenthesis|g+?fd
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gfg
+    note: '[cell epenthesis] C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+PRE_epenthesis|g+?fg
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: g+b
+    note: '[cell epenthesis] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+X_epenthesis|g+?b
+        rules:
+          - cr1_epenthesis
+      - signature: Z_epenthesis+X_epenthesis|g+?b
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: g+g
+    note: '[cell epenthesis] C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis|g+?g
+        rules:
+          - cr1_epenthesis
+      - signature: Z_epenthesis|g+?g
+        rules:
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fbb
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis|fb+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis|fb+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis|fb+?b
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fbd
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis+Y_epenthesis|fb+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Y_epenthesis|fb+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Y_epenthesis|fb+?d
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fbg
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis+Z_epenthesis|fb+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Z_epenthesis|fb+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Z_epenthesis|fb+?g
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fdb
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis+X_epenthesis|fd+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+X_epenthesis|fd+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+X_epenthesis|fd+?b
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fdd
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis|fd+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis|fd+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis|fd+?d
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fdg
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis+Z_epenthesis|fd+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+Z_epenthesis|fd+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+Z_epenthesis|fd+?g
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fgb
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Z_epenthesis+X_epenthesis|fg+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis+X_epenthesis|fg+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis+X_epenthesis|fg+?b
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fgg
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Z_epenthesis|fg+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis|fg+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis|fg+?g
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: b+fb
+    note: '[cell epenthesis] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+PRE_epenthesis|b+?fb
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: b+fd
+    note: '[cell epenthesis] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+PRE_epenthesis+Y_epenthesis|b+?fd
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: b+fg
+    note: '[cell epenthesis] C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_epenthesis+PRE_epenthesis+Z_epenthesis|b+?fg
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d+fb
+    note: '[cell epenthesis] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+PRE_epenthesis+X_epenthesis|d+?fb
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d+fd
+    note: '[cell epenthesis] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+PRE_epenthesis|d+?fd
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: d+fg
+    note: '[cell epenthesis] C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_epenthesis+PRE_epenthesis+Z_epenthesis|d+?fg
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: gb+d
+    note: '[cell epenthesis] C# returns 2 analyses (Z+Y|ta+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+Y_epenthesis|gb+?d
+        rules:
+          - cr1_epenthesis
+          - pr1_epenthesis
+      - signature: Z_epenthesis+Y_epenthesis|gb+?d
+        rules:
+          - cr2_epenthesis
+          - pr1_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: g+fb
+    note: '[cell epenthesis] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+PRE_epenthesis+X_epenthesis|g+?fb
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: g+fd
+    note: '[cell epenthesis] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+PRE_epenthesis+Y_epenthesis|g+?fd
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: g+fg
+    note: '[cell epenthesis] C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_epenthesis+PRE_epenthesis|g+?fg
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fb+b
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis|fb+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis|fb+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis|fb+?b
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fb+d
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis+Y_epenthesis|fb+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Y_epenthesis|fb+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Y_epenthesis|fb+?d
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fb+g
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+X_epenthesis+Z_epenthesis|fb+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Z_epenthesis|fb+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+X_epenthesis+Z_epenthesis|fb+?g
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fd+b
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis+X_epenthesis|fd+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+X_epenthesis|fd+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+X_epenthesis|fd+?b
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fd+d
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis|fd+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis|fd+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis|fd+?d
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fd+g
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Y_epenthesis+Z_epenthesis|fd+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+Z_epenthesis|fd+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Y_epenthesis+Z_epenthesis|fd+?g
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fgbd
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Z+Y|sta+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Z_epenthesis+Y_epenthesis|fgb+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+          - pr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis+Y_epenthesis|fgb+?d
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+          - pr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis+Y_epenthesis|fgb+?d
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+          - pr1_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fg+b
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Z_epenthesis+X_epenthesis|fg+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis+X_epenthesis|fg+?b
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis+X_epenthesis|fg+?b
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: fg+g
+    note: '[cell epenthesis] C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_epenthesis+Z_epenthesis|fg+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis|fg+?g
+        rules:
+          - PRE_epenthesis
+          - cr1_epenthesis
+      - signature: PRE_epenthesis+Z_epenthesis|fg+?g
+        rules:
+          - PRE_epenthesis
+          - cr2_epenthesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h
+    note: '[cell featchange] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange|h
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j
+    note: '[cell featchange] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange|j
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: l
+    note: '[cell featchange] C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange|l
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: hh
+    note: '[cell featchange] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange|h+?h
+        rules:
+          - cr1_featchange
+      - signature: X_featchange|h+?h
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: hj
+    note: '[cell featchange] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+Y_featchange|h+?j
+        rules:
+          - cr1_featchange
+      - signature: X_featchange+Y_featchange|h+?j
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: hl
+    note: '[cell featchange] C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+Z_featchange|h+?l
+        rules:
+          - cr1_featchange
+      - signature: X_featchange+Z_featchange|h+?l
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: jh
+    note: '[cell featchange] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+X_featchange|j+?h
+        rules:
+          - cr1_featchange
+      - signature: Y_featchange+X_featchange|j+?h
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: jj
+    note: '[cell featchange] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange|j+?j
+        rules:
+          - cr1_featchange
+      - signature: Y_featchange|j+?j
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: jl
+    note: '[cell featchange] C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+Z_featchange|j+?l
+        rules:
+          - cr1_featchange
+      - signature: Y_featchange+Z_featchange|j+?l
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: lh
+    note: '[cell featchange] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+X_featchange|l+?h
+        rules:
+          - cr1_featchange
+      - signature: Z_featchange+X_featchange|l+?h
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ll
+    note: '[cell featchange] C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange|l+?l
+        rules:
+          - cr1_featchange
+      - signature: Z_featchange|l+?l
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kh
+    note: '[cell featchange] C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange|kh
+        rules:
+          - PRE_featchange
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: kj
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y|sp; Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange|kj
+        rules:
+          - PRE_featchange
+          - pr1_featchange
+      - signature: Z_featchange+Y_featchange|k+?j
+        rules:
+          - cr1_featchange
+          - pr1_featchange
+      - signature: Z_featchange+Y_featchange|k+?j
+        rules:
+          - cr2_featchange
+          - pr1_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kl
+    note: '[cell featchange] C# returns 1 analysis (PRE+Z|st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange|kl
+        rules:
+          - PRE_featchange
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: hkh
+    note: '[cell featchange] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+PRE_featchange|h+?kh
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: hkj
+    note: '[cell featchange] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+PRE_featchange+Y_featchange|h+?kj
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: hkl
+    note: '[cell featchange] C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+PRE_featchange+Z_featchange|h+?kl
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h+h
+    note: '[cell featchange] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange|h+?h
+        rules:
+          - cr1_featchange
+      - signature: X_featchange|h+?h
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h+j
+    note: '[cell featchange] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+Y_featchange|h+?j
+        rules:
+          - cr1_featchange
+      - signature: X_featchange+Y_featchange|h+?j
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h+l
+    note: '[cell featchange] C# returns 2 analyses (X+Z|a+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+Z_featchange|h+?l
+        rules:
+          - cr1_featchange
+      - signature: X_featchange+Z_featchange|h+?l
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: jkh
+    note: '[cell featchange] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+PRE_featchange+X_featchange|j+?kh
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: jkj
+    note: '[cell featchange] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+PRE_featchange|j+?kj
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: jkl
+    note: '[cell featchange] C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+PRE_featchange+Z_featchange|j+?kl
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j+h
+    note: '[cell featchange] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+X_featchange|j+?h
+        rules:
+          - cr1_featchange
+      - signature: Y_featchange+X_featchange|j+?h
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j+j
+    note: '[cell featchange] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange|j+?j
+        rules:
+          - cr1_featchange
+      - signature: Y_featchange|j+?j
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j+l
+    note: '[cell featchange] C# returns 2 analyses (Y+Z|p+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+Z_featchange|j+?l
+        rules:
+          - cr1_featchange
+      - signature: Y_featchange+Z_featchange|j+?l
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: lkh
+    note: '[cell featchange] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+PRE_featchange+X_featchange|l+?kh
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: lkj
+    note: '[cell featchange] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+PRE_featchange+Y_featchange|l+?kj
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: lkl
+    note: '[cell featchange] C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+PRE_featchange|l+?kl
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: l+h
+    note: '[cell featchange] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+X_featchange|l+?h
+        rules:
+          - cr1_featchange
+      - signature: Z_featchange+X_featchange|l+?h
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: l+l
+    note: '[cell featchange] C# returns 2 analyses (Z|t+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange|l+?l
+        rules:
+          - cr1_featchange
+      - signature: Z_featchange|l+?l
+        rules:
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: khh
+    note: '[cell featchange] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange|kh+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange|kh+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange|kh+?h
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: khj
+    note: '[cell featchange] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange+Y_featchange|kh+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Y_featchange|kh+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Y_featchange|kh+?j
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: khl
+    note: '[cell featchange] C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange+Z_featchange|kh+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Z_featchange|kh+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Z_featchange|kh+?l
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kjh
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange+X_featchange|kj+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+X_featchange|kj+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+X_featchange|kj+?h
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kjj
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange|kj+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange|kj+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange|kj+?j
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kjl
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange+Z_featchange|kj+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+Z_featchange|kj+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+Z_featchange|kj+?l
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: klh
+    note: '[cell featchange] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange+X_featchange|kl+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange+X_featchange|kl+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange+X_featchange|kl+?h
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kll
+    note: '[cell featchange] C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange|kl+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange|kl+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange|kl+?l
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kkj
+    note: '[cell featchange] C# returns 3 analyses (PRE+Z+Y|ss+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange+Y_featchange|kk+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+          - pr1_featchange
+      - signature: PRE_featchange+Z_featchange+Y_featchange|kk+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+          - pr1_featchange
+      - signature: PRE_featchange+Z_featchange+Y_featchange|kk+?j
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+          - pr1_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: k+j
+    note: '[cell featchange] C# returns 2 analyses (Z+Y|s+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+Y_featchange|k+?j
+        rules:
+          - cr1_featchange
+          - pr1_featchange
+      - signature: Z_featchange+Y_featchange|k+?j
+        rules:
+          - cr2_featchange
+          - pr1_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h+kh
+    note: '[cell featchange] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+PRE_featchange|h+?kh
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h+kj
+    note: '[cell featchange] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+PRE_featchange+Y_featchange|h+?kj
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: h+kl
+    note: '[cell featchange] C# returns 1 analysis (X+PRE+Z|a+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_featchange+PRE_featchange+Z_featchange|h+?kl
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j+kh
+    note: '[cell featchange] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+PRE_featchange+X_featchange|j+?kh
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j+kj
+    note: '[cell featchange] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+PRE_featchange|j+?kj
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: j+kl
+    note: '[cell featchange] C# returns 1 analysis (Y+PRE+Z|p+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_featchange+PRE_featchange+Z_featchange|j+?kl
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: l+kh
+    note: '[cell featchange] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+PRE_featchange+X_featchange|l+?kh
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: l+kj
+    note: '[cell featchange] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+PRE_featchange+Y_featchange|l+?kj
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: l+kl
+    note: '[cell featchange] C# returns 1 analysis (Z+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_featchange+PRE_featchange|l+?kl
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kh+h
+    note: '[cell featchange] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange|kh+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange|kh+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange|kh+?h
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kh+j
+    note: '[cell featchange] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange+Y_featchange|kh+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Y_featchange|kh+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Y_featchange|kh+?j
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kh+l
+    note: '[cell featchange] C# returns 3 analyses (PRE+X+Z|sa+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+X_featchange+Z_featchange|kh+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Z_featchange|kh+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+X_featchange+Z_featchange|kh+?l
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kj+h
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange+X_featchange|kj+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+X_featchange|kj+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+X_featchange|kj+?h
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kj+j
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange|kj+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange|kj+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange|kj+?j
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kj+l
+    note: '[cell featchange] C# returns 3 analyses (PRE+Y+Z|sp+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Y_featchange+Z_featchange|kj+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+Z_featchange|kj+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Y_featchange+Z_featchange|kj+?l
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kl+h
+    note: '[cell featchange] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange+X_featchange|kl+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange+X_featchange|kl+?h
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange+X_featchange|kl+?h
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kl+l
+    note: '[cell featchange] C# returns 3 analyses (PRE+Z|st+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange|kl+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange|kl+?l
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+      - signature: PRE_featchange+Z_featchange|kl+?l
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: kk+j
+    note: '[cell featchange] C# returns 3 analyses (PRE+Z+Y|ss+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_featchange+Z_featchange+Y_featchange|kk+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+          - pr1_featchange
+      - signature: PRE_featchange+Z_featchange+Y_featchange|kk+?j
+        rules:
+          - PRE_featchange
+          - cr1_featchange
+          - pr1_featchange
+      - signature: PRE_featchange+Z_featchange+Y_featchange|kk+?j
+        rules:
+          - PRE_featchange
+          - cr2_featchange
+          - pr1_featchange
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m
+    note: '[cell final-change] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change|m
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n
+    note: '[cell final-change] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change|n
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: o
+    note: '[cell final-change] C# returns 1 analysis (Z|s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change|o
+        rules:
+          - pr1_final-change
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: +
+    note: '[cells final-change, root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: mm
+    note: '[cell final-change] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change|m+?m
+        rules:
+          - cr1_final-change
+      - signature: X_final-change|m+?m
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: mn
+    note: '[cell final-change] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+Y_final-change|m+?n
+        rules:
+          - cr1_final-change
+      - signature: X_final-change+Y_final-change|m+?n
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: mq
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: mo
+    note: '[cell final-change] C# returns 2 analyses (X+Z|a+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+Z_final-change|m+?o
+        rules:
+          - cr1_final-change
+          - pr1_final-change
+      - signature: X_final-change+Z_final-change|m+?o
+        rules:
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: nm
+    note: '[cell final-change] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+X_final-change|n+?m
+        rules:
+          - cr1_final-change
+      - signature: Y_final-change+X_final-change|n+?m
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: nn
+    note: '[cell final-change] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change|n+?n
+        rules:
+          - cr1_final-change
+      - signature: Y_final-change|n+?n
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: nq
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: 'no'
+    note: '[cell final-change] C# returns 2 analyses (Y+Z|p+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+Z_final-change|n+?o
+        rules:
+          - cr1_final-change
+          - pr1_final-change
+      - signature: Y_final-change+Z_final-change|n+?o
+        rules:
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qm
+    note: '[cell final-change] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+X_final-change|q+?m
+        rules:
+          - cr1_final-change
+      - signature: Z_final-change+X_final-change|q+?m
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qn
+    note: '[cell final-change] C# returns 2 analyses (Z+Y|t+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+Y_final-change|q+?n
+        rules:
+          - cr1_final-change
+      - signature: Z_final-change+Y_final-change|q+?n
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qq
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qo
+    note: '[cell final-change] C# returns 2 analyses (Z|t+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change|q+?o
+        rules:
+          - cr1_final-change
+          - pr1_final-change
+      - signature: Z_final-change|q+?o
+        rules:
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: om
+    note: '[cell final-change] C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change|om
+        rules:
+          - PRE_final-change
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: 'on'
+    note: '[cell final-change] C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change|on
+        rules:
+          - PRE_final-change
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: oq
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oo
+    note: '[cell final-change] C# returns 1 analysis (PRE+Z|ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change|oo
+        rules:
+          - PRE_final-change
+          - pr1_final-change
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: o+
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +m
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +n
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +q
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +o
+    note: '[cell final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ++
+    note: '[cells final-change, root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: mom
+    note: '[cell final-change] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+PRE_final-change|m+?om
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: mon
+    note: '[cell final-change] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+PRE_final-change+Y_final-change|m+?on
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: moo
+    note: '[cell final-change] C# returns 1 analysis (X+PRE+Z|a+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+PRE_final-change+Z_final-change|m+?oo
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+m
+    note: '[cell final-change] C# returns 2 analyses (X|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change|m+?m
+        rules:
+          - cr1_final-change
+      - signature: X_final-change|m+?m
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+n
+    note: '[cell final-change] C# returns 2 analyses (X+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+Y_final-change|m+?n
+        rules:
+          - cr1_final-change
+      - signature: X_final-change+Y_final-change|m+?n
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+o
+    note: '[cell final-change] C# returns 2 analyses (X+Z|a+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+Z_final-change|m+?o
+        rules:
+          - cr1_final-change
+          - pr1_final-change
+      - signature: X_final-change+Z_final-change|m+?o
+        rules:
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: nom
+    note: '[cell final-change] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+PRE_final-change+X_final-change|n+?om
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: non
+    note: '[cell final-change] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+PRE_final-change|n+?on
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: noo
+    note: '[cell final-change] C# returns 1 analysis (Y+PRE+Z|p+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+PRE_final-change+Z_final-change|n+?oo
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+m
+    note: '[cell final-change] C# returns 2 analyses (Y+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+X_final-change|n+?m
+        rules:
+          - cr1_final-change
+      - signature: Y_final-change+X_final-change|n+?m
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+n
+    note: '[cell final-change] C# returns 2 analyses (Y|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change|n+?n
+        rules:
+          - cr1_final-change
+      - signature: Y_final-change|n+?n
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+o
+    note: '[cell final-change] C# returns 2 analyses (Y+Z|p+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+Z_final-change|n+?o
+        rules:
+          - cr1_final-change
+          - pr1_final-change
+      - signature: Y_final-change+Z_final-change|n+?o
+        rules:
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qom
+    note: '[cell final-change] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+PRE_final-change+X_final-change|q+?om
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qon
+    note: '[cell final-change] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+PRE_final-change+Y_final-change|q+?on
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: qoo
+    note: '[cell final-change] C# returns 1 analysis (Z+PRE|t+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+PRE_final-change|q+?oo
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+m
+    note: '[cell final-change] C# returns 2 analyses (Z+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+X_final-change|q+?m
+        rules:
+          - cr1_final-change
+      - signature: Z_final-change+X_final-change|q+?m
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+n
+    note: '[cell final-change] C# returns 2 analyses (Z+Y|t+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+Y_final-change|q+?n
+        rules:
+          - cr1_final-change
+      - signature: Z_final-change+Y_final-change|q+?n
+        rules:
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+o
+    note: '[cell final-change] C# returns 2 analyses (Z|t+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change|q+?o
+        rules:
+          - cr1_final-change
+          - pr1_final-change
+      - signature: Z_final-change|q+?o
+        rules:
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: omm
+    note: '[cell final-change] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change|om+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change|om+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change|om+?m
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: omn
+    note: '[cell final-change] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change+Y_final-change|om+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change+Y_final-change|om+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change+Y_final-change|om+?n
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: omo
+    note: '[cell final-change] C# returns 3 analyses (PRE+X+Z|sa+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change+Z_final-change|om+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+X_final-change+Z_final-change|om+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+X_final-change+Z_final-change|om+?o
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: onm
+    note: '[cell final-change] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change+X_final-change|on+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change+X_final-change|on+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change+X_final-change|on+?m
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: onn
+    note: '[cell final-change] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change|on+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change|on+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change|on+?n
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ono
+    note: '[cell final-change] C# returns 3 analyses (PRE+Y+Z|sp+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change+Z_final-change|on+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Y_final-change+Z_final-change|on+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Y_final-change+Z_final-change|on+?o
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oqm
+    note: '[cell final-change] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change+X_final-change|oq+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+X_final-change|oq+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+X_final-change|oq+?m
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oqn
+    note: '[cell final-change] C# returns 3 analyses (PRE+Z+Y|st+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change+Y_final-change|oq+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+Y_final-change|oq+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+Y_final-change|oq+?n
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oqo
+    note: '[cell final-change] C# returns 3 analyses (PRE+Z|st+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change|oq+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Z_final-change|oq+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Z_final-change|oq+?o
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+om
+    note: '[cell final-change] C# returns 1 analysis (X+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+PRE_final-change|m+?om
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+on
+    note: '[cell final-change] C# returns 1 analysis (X+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+PRE_final-change+Y_final-change|m+?on
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: m+oo
+    note: '[cell final-change] C# returns 1 analysis (X+PRE+Z|a+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_final-change+PRE_final-change+Z_final-change|m+?oo
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+om
+    note: '[cell final-change] C# returns 1 analysis (Y+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+PRE_final-change+X_final-change|n+?om
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+on
+    note: '[cell final-change] C# returns 1 analysis (Y+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+PRE_final-change|n+?on
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: n+oo
+    note: '[cell final-change] C# returns 1 analysis (Y+PRE+Z|p+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_final-change+PRE_final-change+Z_final-change|n+?oo
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+om
+    note: '[cell final-change] C# returns 1 analysis (Z+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+PRE_final-change+X_final-change|q+?om
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+on
+    note: '[cell final-change] C# returns 1 analysis (Z+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+PRE_final-change+Y_final-change|q+?on
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: q+oo
+    note: '[cell final-change] C# returns 1 analysis (Z+PRE|t+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_final-change+PRE_final-change|q+?oo
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: om+m
+    note: '[cell final-change] C# returns 3 analyses (PRE+X|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change|om+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change|om+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change|om+?m
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: om+n
+    note: '[cell final-change] C# returns 3 analyses (PRE+X+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change+Y_final-change|om+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change+Y_final-change|om+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+X_final-change+Y_final-change|om+?n
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: om+o
+    note: '[cell final-change] C# returns 3 analyses (PRE+X+Z|sa+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+X_final-change+Z_final-change|om+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+X_final-change+Z_final-change|om+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+X_final-change+Z_final-change|om+?o
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: on+m
+    note: '[cell final-change] C# returns 3 analyses (PRE+Y+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change+X_final-change|on+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change+X_final-change|on+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change+X_final-change|on+?m
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: on+n
+    note: '[cell final-change] C# returns 3 analyses (PRE+Y|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change|on+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change|on+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Y_final-change|on+?n
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: on+o
+    note: '[cell final-change] C# returns 3 analyses (PRE+Y+Z|sp+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Y_final-change+Z_final-change|on+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Y_final-change+Z_final-change|on+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Y_final-change+Z_final-change|on+?o
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oq+m
+    note: '[cell final-change] C# returns 3 analyses (PRE+Z+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change+X_final-change|oq+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+X_final-change|oq+?m
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+X_final-change|oq+?m
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oq+n
+    note: '[cell final-change] C# returns 3 analyses (PRE+Z+Y|st+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change+Y_final-change|oq+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+Y_final-change|oq+?n
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+      - signature: PRE_final-change+Z_final-change+Y_final-change|oq+?n
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: oq+o
+    note: '[cell final-change] C# returns 3 analyses (PRE+Z|st+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_final-change+Z_final-change|oq+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Z_final-change|oq+?o
+        rules:
+          - PRE_final-change
+          - cr1_final-change
+          - pr1_final-change
+      - signature: PRE_final-change+Z_final-change|oq+?o
+        rules:
+          - PRE_final-change
+          - cr2_final-change
+          - pr1_final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: r
+    note: '[cell metathesis] C# returns 1 analysis (X|a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis|r
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: v
+    note: '[cell metathesis] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_metathesis|v
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: x
+    note: '[cell metathesis] C# returns 1 analysis (Z|t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis|x
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: rr
+    note: '[cell metathesis] C# returns 2 analyses (X|aa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis|rr
+        rules:
+          - cr1_metathesis
+      - signature: X_metathesis|rr
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: rv
+    note: '[cell metathesis] C# returns 2 analyses (X+Y|ap): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis+Y_metathesis|rv
+        rules:
+          - cr1_metathesis
+      - signature: X_metathesis+Y_metathesis|rv
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: rx
+    note: '[cell metathesis] C# returns 2 analyses (X+Z|at): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis+Z_metathesis|rx
+        rules:
+          - cr1_metathesis
+      - signature: X_metathesis+Z_metathesis|rx
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: vr
+    note: '[cell metathesis] C# returns 2 analyses (Y+X|pa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_metathesis+X_metathesis|vr
+        rules:
+          - cr1_metathesis
+      - signature: Y_metathesis+X_metathesis|vr
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: vv
+    note: '[cell metathesis] C# returns 2 analyses (Y|pp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_metathesis|vv
+        rules:
+          - cr1_metathesis
+      - signature: Y_metathesis|vv
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: xr
+    note: '[cell metathesis] C# returns 2 analyses (Z+X|ta): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis+X_metathesis|xr
+        rules:
+          - cr1_metathesis
+      - signature: Z_metathesis+X_metathesis|xr
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: xx
+    note: '[cell metathesis] C# returns 2 analyses (Z|tt): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis|xx
+        rules:
+          - cr1_metathesis
+      - signature: Z_metathesis|xx
+        rules:
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wr
+    note: '[cell metathesis] C# returns 1 analysis (PRE+X|sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+X_metathesis|wr
+        rules:
+          - PRE_metathesis
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: wv
+    note: '[cell metathesis] C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Y_metathesis|wv
+        rules:
+          - PRE_metathesis
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: wx
+    note: '[cell metathesis] C# returns 1 analysis (PRE+Z|st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Z_metathesis|wx
+        rules:
+          - PRE_metathesis
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rwr
+    note: '[cell metathesis] C# returns 1 analysis (X+PRE|asa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis+PRE_metathesis|rwr
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: rwv
+    note: '[cell metathesis] C# returns 1 analysis (X+PRE+Y|asp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis+PRE_metathesis+Y_metathesis|rwv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: rwx
+    note: '[cell metathesis] C# returns 1 analysis (X+PRE+Z|ast): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_metathesis+PRE_metathesis+Z_metathesis|rwx
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: vwr
+    note: '[cell metathesis] C# returns 1 analysis (Y+PRE+X|psa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_metathesis+PRE_metathesis+X_metathesis|vwr
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: vwv
+    note: '[cell metathesis] C# returns 1 analysis (Y+PRE|psp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_metathesis+PRE_metathesis|vwv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: vwx
+    note: '[cell metathesis] C# returns 1 analysis (Y+PRE+Z|pst): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_metathesis+PRE_metathesis+Z_metathesis|vwx
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: xwr
+    note: '[cell metathesis] C# returns 1 analysis (Z+PRE+X|tsa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis+PRE_metathesis+X_metathesis|xwr
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: xwv
+    note: '[cell metathesis] C# returns 1 analysis (Z+PRE+Y|tsp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis+PRE_metathesis+Y_metathesis|xwv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: xwx
+    note: '[cell metathesis] C# returns 1 analysis (Z+PRE|tst): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis+PRE_metathesis|xwx
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wrr
+    note: '[cell metathesis] C# returns 3 analyses (PRE+X|saa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+X_metathesis|wrr
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+X_metathesis|wrr
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+X_metathesis|wrr
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wrv
+    note: '[cell metathesis] C# returns 3 analyses (PRE+X+Y|sap): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+X_metathesis+Y_metathesis|wrv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+X_metathesis+Y_metathesis|wrv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+X_metathesis+Y_metathesis|wrv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wrx
+    note: '[cell metathesis] C# returns 3 analyses (PRE+X+Z|sat): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+X_metathesis+Z_metathesis|wrx
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+X_metathesis+Z_metathesis|wrx
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+X_metathesis+Z_metathesis|wrx
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wvr
+    note: '[cell metathesis] C# returns 3 analyses (PRE+Y+X|spa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Y_metathesis+X_metathesis|wvr
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Y_metathesis+X_metathesis|wvr
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Y_metathesis+X_metathesis|wvr
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wvv
+    note: '[cell metathesis] C# returns 3 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Y_metathesis|wvv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Y_metathesis|wvv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Y_metathesis|wvv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wxr
+    note: '[cell metathesis] C# returns 3 analyses (PRE+Z+X|sta): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Z_metathesis+X_metathesis|wxr
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+X_metathesis|wxr
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+X_metathesis|wxr
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wxx
+    note: '[cell metathesis] C# returns 3 analyses (PRE+Z|stt): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Z_metathesis|wxx
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis|wxx
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis|wxx
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: xv
+    note: '[cell metathesis] C# returns 4 analyses (Z+Y|tp): pins that this word has a route and its morpheme sequence.'
+    parses:
+      - signature: Z_metathesis+Y_metathesis|xv
+        rules:
+          - cr1_metathesis
+          - pr1_metathesis
+      - signature: Z_metathesis+Y_metathesis|xv
+        rules:
+          - cr1_metathesis
+          - pr1_metathesis
+      - signature: Z_metathesis+Y_metathesis|xv
+        rules:
+          - cr2_metathesis
+          - pr1_metathesis
+      - signature: Z_metathesis+Y_metathesis|xv
+        rules:
+          - cr2_metathesis
+          - pr1_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wxv
+    note: '[cell metathesis] C# returns 6 analyses (PRE+Z+Y|stp): pins that this word has a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_metathesis+Z_metathesis+Y_metathesis|wxv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+          - pr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+Y_metathesis|wxv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+          - pr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+Y_metathesis|wxv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+          - pr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+Y_metathesis|wxv
+        rules:
+          - PRE_metathesis
+          - cr1_metathesis
+          - pr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+Y_metathesis|wxv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+          - pr1_metathesis
+      - signature: PRE_metathesis+Z_metathesis+Y_metathesis|wxv
+        rules:
+          - PRE_metathesis
+          - cr2_metathesis
+          - pr1_metathesis
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: vx
+    note: '[cell metathesis] C# finds no analysis for this word.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: wvx
+    note: '[cell metathesis] C# finds no analysis for this word.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Xo|a; X|a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change|z
+        rules: []
+      - signature: X_root-stratum-final-change|z
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Yo|p; Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change|à
+        rules: []
+      - signature: Y_root-stratum-final-change|à
+        rules: []
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo|t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change|â
+        rules:
+          - pr1_root-stratum-final-change
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Z|s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_root-stratum-final-change|á
+        rules:
+          - pr1_root-stratum-final-change
+        exercises:
+          - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: zz
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (X+Xo|a+?a; Xo+X|a+?a; Xo|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_root-stratum-final-change+Xo_root-stratum-final-change|z+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+X_root-stratum-final-change|z+?z
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change|z+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change|z+?z
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: zà
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (X+Yo|a+?p; Xo+Yo|a+?p; Xo+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_root-stratum-final-change+Yo_root-stratum-final-change|z+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Yo_root-stratum-final-change|z+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Yo_root-stratum-final-change|z+?à
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Y_root-stratum-final-change|z+?à
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: zâ
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (X+Zo|a+?t; Xo+Zo|a+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_root-stratum-final-change+Zo_root-stratum-final-change|z+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Zo_root-stratum-final-change|z+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Zo_root-stratum-final-change|z+?â
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: zá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Xo+Z|a+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+Z_root-stratum-final-change|z+?á
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àz
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (Y+Xo|p+?a; Yo+Xo|p+?a; Yo+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_root-stratum-final-change+Xo_root-stratum-final-change|à+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Xo_root-stratum-final-change|à+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Xo_root-stratum-final-change|à+?z
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+X_root-stratum-final-change|à+?z
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àà
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (Y+Yo|p+?p; Yo+Y|p+?p; Yo|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_root-stratum-final-change+Yo_root-stratum-final-change|à+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Y_root-stratum-final-change|à+?à
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change|à+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change|à+?à
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àâ
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (Y+Zo|p+?t; Yo+Zo|p+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_root-stratum-final-change+Zo_root-stratum-final-change|à+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Zo_root-stratum-final-change|à+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Zo_root-stratum-final-change|à+?â
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Yo+Z|p+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+Z_root-stratum-final-change|à+?á
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âz
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (Zo+Xo|t+?a; Zo+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+Xo_root-stratum-final-change|â+?z
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+Xo_root-stratum-final-change|â+?z
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+X_root-stratum-final-change|â+?z
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âà
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (Zo+Yo|t+?p; Zo+Y|t+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+Yo_root-stratum-final-change|â+?à
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+Yo_root-stratum-final-change|â+?à
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+Y_root-stratum-final-change|â+?à
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ââ
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Zo|t+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change|â+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change|â+?â
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo+Z|t+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+Z_root-stratum-final-change|â+?á
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áz
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (PRE+Xo|sa; PRE+X|sa; Z+Xo|s+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz
+        rules:
+          - PRE_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change|áz
+        rules:
+          - PRE_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Z_root-stratum-final-change+Xo_root-stratum-final-change|á+?z
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áà
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (PRE+Yo|sp; PRE+Y|sp; Z+Yo|s+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà
+        rules:
+          - PRE_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change|áà
+        rules:
+          - PRE_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Z_root-stratum-final-change+Yo_root-stratum-final-change|á+?à
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâ
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Zo|st; Z+Zo|s+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Z_root-stratum-final-change+Zo_root-stratum-final-change|á+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Z|ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change|áá
+        rules:
+          - PRE_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - RewriteRule Iterative (epenthesis/deletion/feature/expansion/merge)
+  - word: á+
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +z
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +à
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +â
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: +á
+    note: '[cell root-stratum-final-change] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: záz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Xo+PRE+X|a+?sa; Xo+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+X_root-stratum-final-change|z+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change|z+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: záà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Xo+PRE+Yo|a+?sp; Xo+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Yo_root-stratum-final-change|z+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Y_root-stratum-final-change|z+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: záâ
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Xo+PRE+Zo|a+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Zo_root-stratum-final-change|z+?áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: záá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Xo+PRE+Z|a+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Z_root-stratum-final-change|z+?áá
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+z
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (X+Xo|a+?a; Xo+X|a+?a; Xo|a+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_root-stratum-final-change+Xo_root-stratum-final-change|z+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+X_root-stratum-final-change|z+?z
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change|z+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change|z+?z
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+à
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (X+Yo|a+?p; Xo+Yo|a+?p; Xo+Y|a+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_root-stratum-final-change+Yo_root-stratum-final-change|z+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Yo_root-stratum-final-change|z+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Yo_root-stratum-final-change|z+?à
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Y_root-stratum-final-change|z+?à
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+â
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (X+Zo|a+?t; Xo+Zo|a+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_root-stratum-final-change+Zo_root-stratum-final-change|z+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Zo_root-stratum-final-change|z+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+Zo_root-stratum-final-change|z+?â
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Xo+Z|a+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+Z_root-stratum-final-change|z+?á
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àáz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Yo+PRE+Xo|p+?sa; Yo+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Xo_root-stratum-final-change|à+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+X_root-stratum-final-change|à+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àáà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Yo+PRE+Y|p+?sp; Yo+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Y_root-stratum-final-change|à+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change|à+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àáâ
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Yo+PRE+Zo|p+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Zo_root-stratum-final-change|à+?áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: àáá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Yo+PRE+Z|p+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Z_root-stratum-final-change|à+?áá
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+z
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (Y+Xo|p+?a; Yo+Xo|p+?a; Yo+X|p+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_root-stratum-final-change+Xo_root-stratum-final-change|à+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Xo_root-stratum-final-change|à+?z
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Xo_root-stratum-final-change|à+?z
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+X_root-stratum-final-change|à+?z
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+à
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (Y+Yo|p+?p; Yo+Y|p+?p; Yo|p+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_root-stratum-final-change+Yo_root-stratum-final-change|à+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Y_root-stratum-final-change|à+?à
+        rules:
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change|à+?à
+        rules:
+          - cr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change|à+?à
+        rules:
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+â
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (Y+Zo|p+?t; Yo+Zo|p+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_root-stratum-final-change+Zo_root-stratum-final-change|à+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Zo_root-stratum-final-change|à+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+Zo_root-stratum-final-change|à+?â
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Yo+Z|p+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+Z_root-stratum-final-change|à+?á
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âáz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Zo+PRE+Xo|t+?sa; Zo+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Xo_root-stratum-final-change|â+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+X_root-stratum-final-change|â+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âáà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Zo+PRE+Yo|t+?sp; Zo+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Yo_root-stratum-final-change|â+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Y_root-stratum-final-change|â+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âáâ
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change|â+?áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: âáá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo+PRE+Z|t+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Z_root-stratum-final-change|â+?áá
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+z
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (Zo+Xo|t+?a; Zo+X|t+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+Xo_root-stratum-final-change|â+?z
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+Xo_root-stratum-final-change|â+?z
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+X_root-stratum-final-change|â+?z
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+à
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (Zo+Yo|t+?p; Zo+Y|t+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+Yo_root-stratum-final-change|â+?à
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+Yo_root-stratum-final-change|â+?à
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+Y_root-stratum-final-change|â+?à
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+â
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Zo|t+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change|â+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change|â+?â
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo+Z|t+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+Z_root-stratum-final-change|â+?á
+        rules:
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ázz
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+X+Xo|sa+?a; PRE+Xo+X|sa+?a; PRE+Xo|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+X_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ázà
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+X+Yo|sa+?p; PRE+Xo+Yo|sa+?p; PRE+Xo+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Y_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ázâ
+    note: '[cell root-stratum-final-change] C# returns 5 analyses (PRE+X+Zo|sa+?t; PRE+Xo+Zo|sa+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ázá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Xo+Z|sa+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Z_root-stratum-final-change|áz+?á
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áàz
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+Y+Xo|sp+?a; PRE+Yo+Xo|sp+?a; PRE+Yo+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+X_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áàà
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+Y+Yo|sp+?p; PRE+Yo+Y|sp+?p; PRE+Yo|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Y_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áàâ
+    note: '[cell root-stratum-final-change] C# returns 5 analyses (PRE+Y+Zo|sp+?t; PRE+Yo+Zo|sp+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áàá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Yo+Z|sp+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Z_root-stratum-final-change|áà+?á
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâz
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (PRE+Zo+Xo|st+?a; PRE+Zo+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Xo_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Xo_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Xo_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+X_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâà
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (PRE+Zo+Yo|st+?p; PRE+Zo+Y|st+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Yo_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Yo_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Yo_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Y_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áââ
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (PRE+Zo|st+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Zo+Z|st+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Z_root-stratum-final-change|áâ+?á
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ááz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Z+Xo|ss+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Xo_root-stratum-final-change|áá+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Xo_root-stratum-final-change|áá+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ááà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Z+Yo|ss+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Yo_root-stratum-final-change|áá+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Yo_root-stratum-final-change|áá+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: ááâ
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Z+Zo|ss+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Zo_root-stratum-final-change|áá+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Zo_root-stratum-final-change|áá+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: á+z
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Z+Xo|s+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_root-stratum-final-change+Xo_root-stratum-final-change|á+?z
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: á+à
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Z+Yo|s+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_root-stratum-final-change+Yo_root-stratum-final-change|á+?à
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: á+â
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Z+Zo|s+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Z_root-stratum-final-change+Zo_root-stratum-final-change|á+?â
+        rules:
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+áz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Xo+PRE+X|a+?sa; Xo+PRE|a+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+X_root-stratum-final-change|z+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change|z+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+áà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Xo+PRE+Yo|a+?sp; Xo+PRE+Y|a+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Yo_root-stratum-final-change|z+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Y_root-stratum-final-change|z+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+áâ
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Xo+PRE+Zo|a+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Zo_root-stratum-final-change|z+?áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: z+áá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Xo+PRE+Z|a+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Xo_root-stratum-final-change+PRE_root-stratum-final-change+Z_root-stratum-final-change|z+?áá
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+áz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Yo+PRE+Xo|p+?sa; Yo+PRE+X|p+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Xo_root-stratum-final-change|à+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+X_root-stratum-final-change|à+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+áà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Yo+PRE+Y|p+?sp; Yo+PRE|p+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Y_root-stratum-final-change|à+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change|à+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+áâ
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Yo+PRE+Zo|p+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Zo_root-stratum-final-change|à+?áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: à+áá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Yo+PRE+Z|p+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Yo_root-stratum-final-change+PRE_root-stratum-final-change+Z_root-stratum-final-change|à+?áá
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+áz
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Zo+PRE+Xo|t+?sa; Zo+PRE+X|t+?sa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Xo_root-stratum-final-change|â+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+X_root-stratum-final-change|â+?áz
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+áà
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (Zo+PRE+Yo|t+?sp; Zo+PRE+Y|t+?sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Yo_root-stratum-final-change|â+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Y_root-stratum-final-change|â+?áà
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+áâ
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo+PRE|t+?st): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change|â+?áâ
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: â+áá
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (Zo+PRE+Z|t+?ss): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Zo_root-stratum-final-change+PRE_root-stratum-final-change+Z_root-stratum-final-change|â+?áá
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áz+z
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+X+Xo|sa+?a; PRE+Xo+X|sa+?a; PRE+Xo|sa+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+X_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change|áz+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áz+à
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+X+Yo|sa+?p; PRE+Xo+Yo|sa+?p; PRE+Xo+Y|sa+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Yo_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Y_root-stratum-final-change|áz+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áz+â
+    note: '[cell root-stratum-final-change] C# returns 5 analyses (PRE+X+Zo|sa+?t; PRE+Xo+Zo|sa+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+X_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Zo_root-stratum-final-change|áz+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áz+á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Xo+Z|sa+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Xo_root-stratum-final-change+Z_root-stratum-final-change|áz+?á
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áà+z
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+Y+Xo|sp+?a; PRE+Yo+Xo|sp+?a; PRE+Yo+X|sp+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Xo_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+X_root-stratum-final-change|áà+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áà+à
+    note: '[cell root-stratum-final-change] C# returns 6 analyses (PRE+Y+Yo|sp+?p; PRE+Yo+Y|sp+?p; PRE+Yo|sp+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Y_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change|áà+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áà+â
+    note: '[cell root-stratum-final-change] C# returns 5 analyses (PRE+Y+Zo|sp+?t; PRE+Yo+Zo|sp+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Y_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Zo_root-stratum-final-change|áà+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áà+á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Yo+Z|sp+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Yo_root-stratum-final-change+Z_root-stratum-final-change|áà+?á
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâ+z
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (PRE+Zo+Xo|st+?a; PRE+Zo+X|st+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Xo_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Xo_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Xo_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+X_root-stratum-final-change|áâ+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâ+à
+    note: '[cell root-stratum-final-change] C# returns 4 analyses (PRE+Zo+Yo|st+?p; PRE+Zo+Y|st+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Yo_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Yo_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Yo_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Y_root-stratum-final-change|áâ+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâ+â
+    note: '[cell root-stratum-final-change] C# returns 3 analyses (PRE+Zo|st+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change|áâ+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áâ+á
+    note: '[cell root-stratum-final-change] C# returns 1 analysis (PRE+Zo+Z|st+?s): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Zo_root-stratum-final-change+Z_root-stratum-final-change|áâ+?á
+        rules:
+          - PRE_root-stratum-final-change
+          - cr2_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áá+z
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Z+Xo|ss+?a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Xo_root-stratum-final-change|áá+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Xo_root-stratum-final-change|áá+?z
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áá+à
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Z+Yo|ss+?p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Yo_root-stratum-final-change|áá+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Yo_root-stratum-final-change|áá+?à
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology
+  - word: áá+â
+    note: '[cell root-stratum-final-change] C# returns 2 analyses (PRE+Z+Zo|ss+?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Zo_root-stratum-final-change|áá+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+      - signature: PRE_root-stratum-final-change+Z_root-stratum-final-change+Zo_root-stratum-final-change|áá+?â
+        rules:
+          - PRE_root-stratum-final-change
+          - cr1_root-stratum-final-change
+          - pr1_root-stratum-final-change
+    exercises:
+      - CompoundingRule > junction phonology

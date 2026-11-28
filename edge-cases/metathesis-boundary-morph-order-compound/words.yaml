@@ -1,45 +1,78 @@
 language: MetathesisMorphOrderCompound
-requires: [phonology]
+requires:
+  - phonology
 words:
-  - word: "p"
-    note: >-
-      Root p alone: no compound, so no switch pair exists.
+  - word: p
+    note: '[cell compound] Root p alone: no compound, so no switch pair exists.'
     parses:
-      - signature: "Y|p"
+      - signature: Y_compound|p
         rules: []
     exercises:
-      - "MetathesisRule > morph order across the switch"
-  - word: "t"
-    note: >-
-      Root t alone: no compound, so no switch pair exists.
+      - MetathesisRule > morph order across the switch
+  - word: t
+    note: '[cell compound] Root t alone: no compound, so no switch pair exists.'
     parses:
-      - signature: "Z|t"
+      - signature: Z_compound|t
         rules: []
     exercises:
-      - "MetathesisRule > morph order across the switch"
-  - word: "pp"
-    note: >-
-      Compound of p and p: neither order forms the t-then-p switch pair, so nothing swaps.
+      - MetathesisRule > morph order across the switch
+  - word: pp
+    note: '[cell compound] Compound of p and p: neither order forms the t-then-p switch pair, so nothing swaps.'
     parses:
-      - signature: "Y|pp"
-        rules: [cr1]
+      - signature: Y_compound|pp
+        rules:
+          - cr1_compound
     exercises:
-      - "MetathesisRule > morph order across the switch"
-  - word: "pt"
-    note: >-
-      Surface of the compound t then p with no boundary written: the swap crosses the compound junction and the morphs are listed in surface order (Y+Z); C# returns the analysis twice.
+      - MetathesisRule > morph order across the switch
+  - word: pt
+    note: '[cell compound] Surface of the compound t then p with no boundary written: the swap crosses the compound junction and the morphs are listed in surface order (Y+Z); C# returns the analysis twice.'
     parses:
-      - signature: "Y+Z|pt"
-        rules: [cr1, pr1]
-      - signature: "Y+Z|pt"
-        rules: [cr1, pr1]
+      - signature: Y_compound+Z_compound|pt
+        rules:
+          - cr1_compound
+          - pr1_compound
+      - signature: Y_compound+Z_compound|pt
+        rules:
+          - cr1_compound
+          - pr1_compound
     exercises:
-      - "MetathesisRule > morph order across the switch"
-  - word: "tt"
-    note: >-
-      Compound of t and t: no p after the t, so nothing swaps.
+      - MetathesisRule > morph order across the switch
+  - word: tt
+    note: '[cell compound] Compound of t and t: no p after the t, so nothing swaps.'
     parses:
-      - signature: "Z|tt"
-        rules: [cr1]
+      - signature: Z_compound|tt
+        rules:
+          - cr1_compound
     exercises:
-      - "MetathesisRule > morph order across the switch"
+      - MetathesisRule > morph order across the switch
+  - word: d
+    note: '[cell prefix-root] Root p alone: no prefix, so no switch pair exists.'
+    parses:
+      - signature: Y_prefix-root|d
+        rules: []
+    exercises:
+      - MetathesisRule > morph order across the switch
+  - word: g
+    note: '[cell prefix-root] Root t alone: no prefix, so no switch pair exists.'
+    parses:
+      - signature: Z_prefix-root|g
+        rules: []
+    exercises:
+      - MetathesisRule > morph order across the switch
+  - word: gf
+    note: '[cell prefix-root] Underlying prefix s then root t with no boundary written: the swap crosses the morph boundary, so the analysis lists the root first (Z+PRE), in surface order.'
+    parses:
+      - signature: Z_prefix-root+PRE_prefix-root|gf
+        rules:
+          - PRE_prefix-root
+          - pr1_prefix-root
+    exercises:
+      - MetathesisRule > morph order across the switch
+  - word: fd
+    note: '[cell prefix-root] Prefix s then root p: p is not a switch target, so nothing swaps and the order stays PRE+Y.'
+    parses:
+      - signature: PRE_prefix-root+Y_prefix-root|fd
+        rules:
+          - PRE_prefix-root
+    exercises:
+      - MetathesisRule > morph order across the switch

@@ -4,56 +4,316 @@
   <Language>
     <Name>SpellingCompoundSingletonBoundary</Name>
     <PartsOfSpeech>
-      <PartOfSpeech id="v">
-        <Name>V</Name>
+      <PartOfSpeech id="v_deletion">
+        <Name>V_deletion</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_epenthesis">
+        <Name>V_epenthesis</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_featchange">
+        <Name>V_featchange</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_final-change">
+        <Name>V_final-change</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_metathesis">
+        <Name>V_metathesis</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="v_root-stratum-final-change">
+        <Name>V_root-stratum-final-change</Name>
       </PartOfSpeech>
     </PartsOfSpeech>
     <PhonologicalFeatureSystem>
-      <SymbolicFeature id="f">
-        <Name>f</Name>
+      <SymbolicFeature id="f_deletion">
+        <Name>f_deletion</Name>
         <Symbols>
-          <Symbol id="fP">+</Symbol>
-          <Symbol id="fM">-</Symbol>
+          <Symbol id="fP_deletion">+</Symbol>
+          <Symbol id="fM_deletion">-</Symbol>
         </Symbols>
       </SymbolicFeature>
-      <SymbolicFeature id="g">
-        <Name>g</Name>
+      <SymbolicFeature id="g_deletion">
+        <Name>g_deletion</Name>
         <Symbols>
-          <Symbol id="gP">+</Symbol>
-          <Symbol id="gM">-</Symbol>
+          <Symbol id="gP_deletion">+</Symbol>
+          <Symbol id="gM_deletion">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_epenthesis">
+        <Name>f_epenthesis</Name>
+        <Symbols>
+          <Symbol id="fP_epenthesis">+</Symbol>
+          <Symbol id="fM_epenthesis">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_epenthesis">
+        <Name>g_epenthesis</Name>
+        <Symbols>
+          <Symbol id="gP_epenthesis">+</Symbol>
+          <Symbol id="gM_epenthesis">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_featchange">
+        <Name>f_featchange</Name>
+        <Symbols>
+          <Symbol id="fP_featchange">+</Symbol>
+          <Symbol id="fM_featchange">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_featchange">
+        <Name>g_featchange</Name>
+        <Symbols>
+          <Symbol id="gP_featchange">+</Symbol>
+          <Symbol id="gM_featchange">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_final-change">
+        <Name>f_final-change</Name>
+        <Symbols>
+          <Symbol id="fP_final-change">+</Symbol>
+          <Symbol id="fM_final-change">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_final-change">
+        <Name>g_final-change</Name>
+        <Symbols>
+          <Symbol id="gP_final-change">+</Symbol>
+          <Symbol id="gM_final-change">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_metathesis">
+        <Name>f_metathesis</Name>
+        <Symbols>
+          <Symbol id="fP_metathesis">+</Symbol>
+          <Symbol id="fM_metathesis">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_metathesis">
+        <Name>g_metathesis</Name>
+        <Symbols>
+          <Symbol id="gP_metathesis">+</Symbol>
+          <Symbol id="gM_metathesis">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="f_root-stratum-final-change">
+        <Name>f_root-stratum-final-change</Name>
+        <Symbols>
+          <Symbol id="fP_root-stratum-final-change">+</Symbol>
+          <Symbol id="fM_root-stratum-final-change">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="g_root-stratum-final-change">
+        <Name>g_root-stratum-final-change</Name>
+        <Symbols>
+          <Symbol id="gP_root-stratum-final-change">+</Symbol>
+          <Symbol id="gM_root-stratum-final-change">-</Symbol>
+        </Symbols>
+      </SymbolicFeature>
+      <SymbolicFeature id="cell">
+        <Name>cell</Name>
+        <Symbols>
+          <Symbol id="cell_deletion">cell deletion</Symbol>
+          <Symbol id="cell_epenthesis">cell epenthesis</Symbol>
+          <Symbol id="cell_featchange">cell featchange</Symbol>
+          <Symbol id="cell_final-change">cell final-change</Symbol>
+          <Symbol id="cell_metathesis">cell metathesis</Symbol>
+          <Symbol id="cell_root-stratum-final-change">cell root-stratum-final-change</Symbol>
         </Symbols>
       </SymbolicFeature>
     </PhonologicalFeatureSystem>
-    <CharacterDefinitionTable id="t">
-      <Name>Main</Name>
+    <CharacterDefinitionTable id="t_deletion">
+      <Name>Main_deletion</Name>
       <SegmentDefinitions>
-        <SegmentDefinition id="cA">
+        <SegmentDefinition id="cA_deletion">
           <Representations>
             <Representation>a</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_deletion" symbolValues="fP_deletion"/>
+          <FeatureValue feature="g_deletion" symbolValues="gP_deletion"/>
+          <FeatureValue feature="cell" symbolValues="cell_deletion"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cP">
+        <SegmentDefinition id="cP_deletion">
           <Representations>
             <Representation>p</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_deletion" symbolValues="fM_deletion"/>
+          <FeatureValue feature="g_deletion" symbolValues="gM_deletion"/>
+          <FeatureValue feature="cell" symbolValues="cell_deletion"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cT">
+        <SegmentDefinition id="cT_deletion">
           <Representations>
             <Representation>t</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fM" />
-          <FeatureValue feature="g" symbolValues="gP" />
+          <FeatureValue feature="f_deletion" symbolValues="fM_deletion"/>
+          <FeatureValue feature="g_deletion" symbolValues="gP_deletion"/>
+          <FeatureValue feature="cell" symbolValues="cell_deletion"/>
         </SegmentDefinition>
-        <SegmentDefinition id="cS">
+        <SegmentDefinition id="cS_deletion">
           <Representations>
             <Representation>s</Representation>
           </Representations>
-          <FeatureValue feature="f" symbolValues="fP" />
-          <FeatureValue feature="g" symbolValues="gM" />
+          <FeatureValue feature="f_deletion" symbolValues="fP_deletion"/>
+          <FeatureValue feature="g_deletion" symbolValues="gM_deletion"/>
+          <FeatureValue feature="cell" symbolValues="cell_deletion"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_epenthesis">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+          <FeatureValue feature="f_epenthesis" symbolValues="fP_epenthesis"/>
+          <FeatureValue feature="g_epenthesis" symbolValues="gP_epenthesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_epenthesis">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+          <FeatureValue feature="f_epenthesis" symbolValues="fM_epenthesis"/>
+          <FeatureValue feature="g_epenthesis" symbolValues="gM_epenthesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_epenthesis">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+          <FeatureValue feature="f_epenthesis" symbolValues="fM_epenthesis"/>
+          <FeatureValue feature="g_epenthesis" symbolValues="gP_epenthesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_epenthesis">
+          <Representations>
+            <Representation>f</Representation>
+          </Representations>
+          <FeatureValue feature="f_epenthesis" symbolValues="fP_epenthesis"/>
+          <FeatureValue feature="g_epenthesis" symbolValues="gM_epenthesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_featchange">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+          <FeatureValue feature="f_featchange" symbolValues="fP_featchange"/>
+          <FeatureValue feature="g_featchange" symbolValues="gP_featchange"/>
+          <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_featchange">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+          <FeatureValue feature="f_featchange" symbolValues="fM_featchange"/>
+          <FeatureValue feature="g_featchange" symbolValues="gM_featchange"/>
+          <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_featchange">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+          <FeatureValue feature="f_featchange" symbolValues="fM_featchange"/>
+          <FeatureValue feature="g_featchange" symbolValues="gP_featchange"/>
+          <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_featchange">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+          <FeatureValue feature="f_featchange" symbolValues="fP_featchange"/>
+          <FeatureValue feature="g_featchange" symbolValues="gM_featchange"/>
+          <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_final-change">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+          <FeatureValue feature="f_final-change" symbolValues="fP_final-change"/>
+          <FeatureValue feature="g_final-change" symbolValues="gP_final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_final-change">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+          <FeatureValue feature="f_final-change" symbolValues="fM_final-change"/>
+          <FeatureValue feature="g_final-change" symbolValues="gM_final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_final-change">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+          <FeatureValue feature="f_final-change" symbolValues="fM_final-change"/>
+          <FeatureValue feature="g_final-change" symbolValues="gP_final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_final-change">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+          <FeatureValue feature="f_final-change" symbolValues="fP_final-change"/>
+          <FeatureValue feature="g_final-change" symbolValues="gM_final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_metathesis">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+          <FeatureValue feature="f_metathesis" symbolValues="fP_metathesis"/>
+          <FeatureValue feature="g_metathesis" symbolValues="gP_metathesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_metathesis">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+          <FeatureValue feature="f_metathesis" symbolValues="fM_metathesis"/>
+          <FeatureValue feature="g_metathesis" symbolValues="gM_metathesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_metathesis">
+          <Representations>
+            <Representation>x</Representation>
+          </Representations>
+          <FeatureValue feature="f_metathesis" symbolValues="fM_metathesis"/>
+          <FeatureValue feature="g_metathesis" symbolValues="gP_metathesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_metathesis">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+          <FeatureValue feature="f_metathesis" symbolValues="fP_metathesis"/>
+          <FeatureValue feature="g_metathesis" symbolValues="gM_metathesis"/>
+          <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_root-stratum-final-change">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+          <FeatureValue feature="f_root-stratum-final-change" symbolValues="fP_root-stratum-final-change"/>
+          <FeatureValue feature="g_root-stratum-final-change" symbolValues="gP_root-stratum-final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cP_root-stratum-final-change">
+          <Representations>
+            <Representation>à</Representation>
+          </Representations>
+          <FeatureValue feature="f_root-stratum-final-change" symbolValues="fM_root-stratum-final-change"/>
+          <FeatureValue feature="g_root-stratum-final-change" symbolValues="gM_root-stratum-final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_root-stratum-final-change">
+          <Representations>
+            <Representation>â</Representation>
+          </Representations>
+          <FeatureValue feature="f_root-stratum-final-change" symbolValues="fM_root-stratum-final-change"/>
+          <FeatureValue feature="g_root-stratum-final-change" symbolValues="gP_root-stratum-final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_root-stratum-final-change">
+          <Representations>
+            <Representation>á</Representation>
+          </Representations>
+          <FeatureValue feature="f_root-stratum-final-change" symbolValues="fP_root-stratum-final-change"/>
+          <FeatureValue feature="g_root-stratum-final-change" symbolValues="gM_root-stratum-final-change"/>
+          <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
         </SegmentDefinition>
       </SegmentDefinitions>
       <BoundaryDefinitions>
@@ -65,78 +325,362 @@
       </BoundaryDefinitions>
     </CharacterDefinitionTable>
     <NaturalClasses>
-      <FeatureNaturalClass id="any">
-        <Name>Any</Name>
+      <FeatureNaturalClass id="any_deletion">
+        <Name>Any_deletion</Name>
+        <FeatureValue feature="cell" symbolValues="cell_deletion"/>
       </FeatureNaturalClass>
-    <FeatureNaturalClass id="T"><Name>T</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gP" /></FeatureNaturalClass><FeatureNaturalClass id="P"><Name>P</Name><FeatureValue feature="f" symbolValues="fM" /><FeatureValue feature="g" symbolValues="gM" /></FeatureNaturalClass></NaturalClasses>
-    <PhonologicalRuleDefinitions><PhonologicalRule id="pr1"><Name>pr1</Name><PhoneticInput><PhoneticSequence><SimpleContext naturalClass="T" /></PhoneticSequence></PhoneticInput><PhonologicalSubrules><PhonologicalSubrule><PhoneticOutput><PhoneticSequence /></PhoneticOutput><Environment><RightEnvironment><PhoneticTemplate><PhoneticSequence><SimpleContext naturalClass="P" /></PhoneticSequence></PhoneticTemplate></RightEnvironment></Environment></PhonologicalSubrule></PhonologicalSubrules></PhonologicalRule></PhonologicalRuleDefinitions><Strata>
-      <Stratum characterDefinitionTable="t" morphologicalRuleOrder="unordered" morphologicalRules="cr1 cr2 PRE" phonologicalRules="pr1">
-        <Name>Main</Name>
+      <FeatureNaturalClass id="T_deletion">
+        <Name>T_deletion</Name>
+        <FeatureValue feature="f_deletion" symbolValues="fM_deletion"/>
+        <FeatureValue feature="g_deletion" symbolValues="gP_deletion"/>
+        <FeatureValue feature="cell" symbolValues="cell_deletion"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_deletion">
+        <Name>P_deletion</Name>
+        <FeatureValue feature="f_deletion" symbolValues="fM_deletion"/>
+        <FeatureValue feature="g_deletion" symbolValues="gM_deletion"/>
+        <FeatureValue feature="cell" symbolValues="cell_deletion"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_epenthesis">
+        <Name>Any_epenthesis</Name>
+        <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_epenthesis">
+        <Name>T_epenthesis</Name>
+        <FeatureValue feature="f_epenthesis" symbolValues="fM_epenthesis"/>
+        <FeatureValue feature="g_epenthesis" symbolValues="gP_epenthesis"/>
+        <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_epenthesis">
+        <Name>P_epenthesis</Name>
+        <FeatureValue feature="f_epenthesis" symbolValues="fM_epenthesis"/>
+        <FeatureValue feature="g_epenthesis" symbolValues="gM_epenthesis"/>
+        <FeatureValue feature="cell" symbolValues="cell_epenthesis"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_featchange">
+        <Name>Any_featchange</Name>
+        <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_featchange">
+        <Name>T_featchange</Name>
+        <FeatureValue feature="f_featchange" symbolValues="fM_featchange"/>
+        <FeatureValue feature="g_featchange" symbolValues="gP_featchange"/>
+        <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_featchange">
+        <Name>P_featchange</Name>
+        <FeatureValue feature="f_featchange" symbolValues="fM_featchange"/>
+        <FeatureValue feature="g_featchange" symbolValues="gM_featchange"/>
+        <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_featchange">
+        <Name>Sx_featchange</Name>
+        <FeatureValue feature="f_featchange" symbolValues="fP_featchange"/>
+        <FeatureValue feature="g_featchange" symbolValues="gM_featchange"/>
+        <FeatureValue feature="cell" symbolValues="cell_featchange"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_final-change">
+        <Name>Any_final-change</Name>
+        <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_final-change">
+        <Name>T_final-change</Name>
+        <FeatureValue feature="f_final-change" symbolValues="fM_final-change"/>
+        <FeatureValue feature="g_final-change" symbolValues="gP_final-change"/>
+        <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_final-change">
+        <Name>P_final-change</Name>
+        <FeatureValue feature="f_final-change" symbolValues="fM_final-change"/>
+        <FeatureValue feature="g_final-change" symbolValues="gM_final-change"/>
+        <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_final-change">
+        <Name>Sx_final-change</Name>
+        <FeatureValue feature="f_final-change" symbolValues="fP_final-change"/>
+        <FeatureValue feature="g_final-change" symbolValues="gM_final-change"/>
+        <FeatureValue feature="cell" symbolValues="cell_final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_metathesis">
+        <Name>Any_metathesis</Name>
+        <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_metathesis">
+        <Name>T_metathesis</Name>
+        <FeatureValue feature="f_metathesis" symbolValues="fM_metathesis"/>
+        <FeatureValue feature="g_metathesis" symbolValues="gP_metathesis"/>
+        <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_metathesis">
+        <Name>P_metathesis</Name>
+        <FeatureValue feature="f_metathesis" symbolValues="fM_metathesis"/>
+        <FeatureValue feature="g_metathesis" symbolValues="gM_metathesis"/>
+        <FeatureValue feature="cell" symbolValues="cell_metathesis"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="any_root-stratum-final-change">
+        <Name>Any_root-stratum-final-change</Name>
+        <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="T_root-stratum-final-change">
+        <Name>T_root-stratum-final-change</Name>
+        <FeatureValue feature="f_root-stratum-final-change" symbolValues="fM_root-stratum-final-change"/>
+        <FeatureValue feature="g_root-stratum-final-change" symbolValues="gP_root-stratum-final-change"/>
+        <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="P_root-stratum-final-change">
+        <Name>P_root-stratum-final-change</Name>
+        <FeatureValue feature="f_root-stratum-final-change" symbolValues="fM_root-stratum-final-change"/>
+        <FeatureValue feature="g_root-stratum-final-change" symbolValues="gM_root-stratum-final-change"/>
+        <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="Sx_root-stratum-final-change">
+        <Name>Sx_root-stratum-final-change</Name>
+        <FeatureValue feature="f_root-stratum-final-change" symbolValues="fP_root-stratum-final-change"/>
+        <FeatureValue feature="g_root-stratum-final-change" symbolValues="gM_root-stratum-final-change"/>
+        <FeatureValue feature="cell" symbolValues="cell_root-stratum-final-change"/>
+      </FeatureNaturalClass>
+    </NaturalClasses>
+    <PhonologicalRuleDefinitions>
+      <PhonologicalRule id="pr1_deletion">
+        <Name>pr1_deletion</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="T_deletion"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence/>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="P_deletion"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="pr1_epenthesis">
+        <Name>pr1_epenthesis</Name>
+        <PhoneticInput>
+          <PhoneticSequence/>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <Segment segment="cA_epenthesis"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <LeftEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="T_epenthesis"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </LeftEnvironment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="P_epenthesis"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="pr1_featchange">
+        <Name>pr1_featchange</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="T_featchange"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="Sx_featchange"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate>
+                  <PhoneticSequence>
+                    <SimpleContext naturalClass="P_featchange"/>
+                  </PhoneticSequence>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <PhonologicalRule id="pr1_final-change">
+        <Name>pr1_final-change</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="T_final-change"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="Sx_final-change"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence/>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+      <MetathesisRule id="pr1_metathesis" leftSwitch="swB_metathesis" rightSwitch="swA_metathesis">
+        <Name>m_metathesis</Name>
+        <StructuralDescription>
+          <PhoneticTemplate>
+            <PhoneticSequence>
+              <SimpleContext id="swA_metathesis" naturalClass="P_metathesis"/>
+              <SimpleContext id="swB_metathesis" naturalClass="T_metathesis"/>
+            </PhoneticSequence>
+          </PhoneticTemplate>
+        </StructuralDescription>
+      </MetathesisRule>
+      <PhonologicalRule id="pr1_root-stratum-final-change">
+        <Name>pr1_root-stratum-final-change</Name>
+        <PhoneticInput>
+          <PhoneticSequence>
+            <SimpleContext naturalClass="T_root-stratum-final-change"/>
+          </PhoneticSequence>
+        </PhoneticInput>
+        <PhonologicalSubrules>
+          <PhonologicalSubrule>
+            <PhoneticOutput>
+              <PhoneticSequence>
+                <SimpleContext naturalClass="Sx_root-stratum-final-change"/>
+              </PhoneticSequence>
+            </PhoneticOutput>
+            <Environment>
+              <RightEnvironment>
+                <PhoneticTemplate finalBoundaryCondition="true">
+                  <PhoneticSequence/>
+                </PhoneticTemplate>
+              </RightEnvironment>
+            </Environment>
+          </PhonologicalSubrule>
+        </PhonologicalSubrules>
+      </PhonologicalRule>
+    </PhonologicalRuleDefinitions>
+    <Strata>
+      <Stratum characterDefinitionTable="t_deletion" morphologicalRuleOrder="unordered" phonologicalRules="pr1_root-stratum-final-change">
+        <Name>Inner_root-stratum-final-change</Name>
         <MorphologicalRuleDefinitions>
-          <CompoundingRule id="cr1">
-            <Name>cr1</Name>
+          </MorphologicalRuleDefinitions>
+        <LexicalEntries>
+          <LexicalEntry id="x_root-stratum-final-change" partOfSpeech="v_root-stratum-final-change">
+            <Allomorphs>
+              <Allomorph id="x0_root-stratum-final-change">
+                <PhoneticShape>z</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_root-stratum-final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_root-stratum-final-change" partOfSpeech="v_root-stratum-final-change">
+            <Allomorphs>
+              <Allomorph id="y0_root-stratum-final-change">
+                <PhoneticShape>à</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_root-stratum-final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_root-stratum-final-change" partOfSpeech="v_root-stratum-final-change">
+            <Allomorphs>
+              <Allomorph id="z0_root-stratum-final-change">
+                <PhoneticShape>â</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_root-stratum-final-change</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+      <Stratum characterDefinitionTable="t_deletion" morphologicalRuleOrder="unordered" morphologicalRules="cr1_deletion cr2_deletion PRE_deletion cr1_epenthesis cr2_epenthesis PRE_epenthesis cr1_featchange cr2_featchange PRE_featchange cr1_final-change cr2_final-change PRE_final-change cr1_metathesis cr2_metathesis PRE_metathesis cr1_root-stratum-final-change cr2_root-stratum-final-change PRE_root-stratum-final-change" phonologicalRules="pr1_deletion pr1_epenthesis pr1_featchange pr1_final-change pr1_metathesis">
+        <Name>Main_deletion</Name>
+        <MorphologicalRuleDefinitions>
+          <CompoundingRule id="cr1_deletion">
+            <Name>cr1_deletion</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr1h0">
+                  <PhoneticSequence id="cr1h0_deletion">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_deletion"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr1n0">
+                  <PhoneticSequence id="cr1n0_deletion">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_deletion"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr1h0" />
+                  <CopyFromInput index="cr1h0_deletion"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr1n0" />
+                  <CopyFromInput index="cr1n0_deletion"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <CompoundingRule id="cr2">
-            <Name>cr2</Name>
+          <CompoundingRule id="cr2_deletion">
+            <Name>cr2_deletion</Name>
             <CompoundingSubrules>
               <CompoundingSubrule>
                 <HeadMorphologicalInput>
-                  <PhoneticSequence id="cr2h0">
+                  <PhoneticSequence id="cr2h0_deletion">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_deletion"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </HeadMorphologicalInput>
                 <NonHeadMorphologicalInput>
-                  <PhoneticSequence id="cr2n0">
+                  <PhoneticSequence id="cr2n0_deletion">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_deletion"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </NonHeadMorphologicalInput>
                 <MorphologicalOutput>
-                  <CopyFromInput index="cr2n0" />
+                  <CopyFromInput index="cr2n0_deletion"/>
                   <InsertSegments>
                     <PhoneticShape>+</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="cr2h0" />
+                  <CopyFromInput index="cr2h0_deletion"/>
                 </MorphologicalOutput>
               </CompoundingSubrule>
             </CompoundingSubrules>
           </CompoundingRule>
-          <MorphologicalRule id="PRE" requiredPartsOfSpeech="v">
-            <Name>PRE</Name>
+          <MorphologicalRule id="PRE_deletion" requiredPartsOfSpeech="v_deletion">
+            <Name>PRE_deletion</Name>
             <MorphologicalSubrules>
-              <MorphologicalSubrule id="PRE0">
+              <MorphologicalSubrule id="PRE0_deletion">
                 <MorphologicalInput>
-                  <PhoneticSequence id="PRES">
+                  <PhoneticSequence id="PRES_deletion">
                     <OptionalSegmentSequence min="1" max="-1">
-                      <SimpleContext naturalClass="any" />
+                      <SimpleContext naturalClass="any_deletion"/>
                     </OptionalSegmentSequence>
                   </PhoneticSequence>
                 </MorphologicalInput>
@@ -144,37 +688,536 @@
                   <InsertSegments>
                     <PhoneticShape>s</PhoneticShape>
                   </InsertSegments>
-                  <CopyFromInput index="PRES" />
+                  <CopyFromInput index="PRES_deletion"/>
                 </MorphologicalOutput>
               </MorphologicalSubrule>
             </MorphologicalSubrules>
-            <MorphemeId>PRE</MorphemeId>
+            <MorphemeId>PRE_deletion</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_epenthesis">
+            <Name>cr1_epenthesis</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_epenthesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_epenthesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_epenthesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_epenthesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_epenthesis"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_epenthesis"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_epenthesis">
+            <Name>cr2_epenthesis</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_epenthesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_epenthesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_epenthesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_epenthesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_epenthesis"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_epenthesis"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_epenthesis" requiredPartsOfSpeech="v_epenthesis">
+            <Name>PRE_epenthesis</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_epenthesis">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_epenthesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_epenthesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>f</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_epenthesis"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_epenthesis</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_featchange">
+            <Name>cr1_featchange</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_featchange">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_featchange"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_featchange">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_featchange"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_featchange"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_featchange"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_featchange">
+            <Name>cr2_featchange</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_featchange">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_featchange"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_featchange">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_featchange"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_featchange"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_featchange"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_featchange" requiredPartsOfSpeech="v_featchange">
+            <Name>PRE_featchange</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_featchange">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_featchange">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_featchange"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>k</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_featchange"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_featchange</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_final-change">
+            <Name>cr1_final-change</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_final-change"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_final-change"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_final-change">
+            <Name>cr2_final-change</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_final-change"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_final-change"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_final-change" requiredPartsOfSpeech="v_final-change">
+            <Name>PRE_final-change</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_final-change">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>o</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_final-change"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_final-change</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_metathesis">
+            <Name>cr1_metathesis</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_metathesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_metathesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_metathesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_metathesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_metathesis"/>
+                  <CopyFromInput index="cr1n0_metathesis"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_metathesis">
+            <Name>cr2_metathesis</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_metathesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_metathesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_metathesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_metathesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_metathesis"/>
+                  <CopyFromInput index="cr2h0_metathesis"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_metathesis" requiredPartsOfSpeech="v_metathesis">
+            <Name>PRE_metathesis</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_metathesis">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_metathesis">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_metathesis"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>w</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_metathesis"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_metathesis</MorphemeId>
+          </MorphologicalRule>
+          <CompoundingRule id="cr1_root-stratum-final-change">
+            <Name>cr1_root-stratum-final-change</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr1h0_root-stratum-final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_root-stratum-final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr1n0_root-stratum-final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_root-stratum-final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr1h0_root-stratum-final-change"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr1n0_root-stratum-final-change"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <CompoundingRule id="cr2_root-stratum-final-change">
+            <Name>cr2_root-stratum-final-change</Name>
+            <CompoundingSubrules>
+              <CompoundingSubrule>
+                <HeadMorphologicalInput>
+                  <PhoneticSequence id="cr2h0_root-stratum-final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_root-stratum-final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </HeadMorphologicalInput>
+                <NonHeadMorphologicalInput>
+                  <PhoneticSequence id="cr2n0_root-stratum-final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_root-stratum-final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </NonHeadMorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="cr2n0_root-stratum-final-change"/>
+                  <InsertSegments>
+                    <PhoneticShape>+</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="cr2h0_root-stratum-final-change"/>
+                </MorphologicalOutput>
+              </CompoundingSubrule>
+            </CompoundingSubrules>
+          </CompoundingRule>
+          <MorphologicalRule id="PRE_root-stratum-final-change" requiredPartsOfSpeech="v_root-stratum-final-change">
+            <Name>PRE_root-stratum-final-change</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="PRE0_root-stratum-final-change">
+                <MorphologicalInput>
+                  <PhoneticSequence id="PRES_root-stratum-final-change">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="any_root-stratum-final-change"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>á</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="PRES_root-stratum-final-change"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PRE_root-stratum-final-change</MorphemeId>
           </MorphologicalRule>
         </MorphologicalRuleDefinitions>
         <LexicalEntries>
-          <LexicalEntry id="x" partOfSpeech="v">
+          <LexicalEntry id="x_deletion" partOfSpeech="v_deletion">
             <Allomorphs>
-              <Allomorph id="x0">
+              <Allomorph id="x0_deletion">
                 <PhoneticShape>a</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>X</MorphemeId>
+            <MorphemeId>X_deletion</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="y" partOfSpeech="v">
+          <LexicalEntry id="y_deletion" partOfSpeech="v_deletion">
             <Allomorphs>
-              <Allomorph id="y0">
+              <Allomorph id="y0_deletion">
                 <PhoneticShape>p</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Y</MorphemeId>
+            <MorphemeId>Y_deletion</MorphemeId>
           </LexicalEntry>
-          <LexicalEntry id="z" partOfSpeech="v">
+          <LexicalEntry id="z_deletion" partOfSpeech="v_deletion">
             <Allomorphs>
-              <Allomorph id="z0">
+              <Allomorph id="z0_deletion">
                 <PhoneticShape>t</PhoneticShape>
               </Allomorph>
             </Allomorphs>
-            <MorphemeId>Z</MorphemeId>
+            <MorphemeId>Z_deletion</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_epenthesis" partOfSpeech="v_epenthesis">
+            <Allomorphs>
+              <Allomorph id="x0_epenthesis">
+                <PhoneticShape>b</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_epenthesis</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_epenthesis" partOfSpeech="v_epenthesis">
+            <Allomorphs>
+              <Allomorph id="y0_epenthesis">
+                <PhoneticShape>d</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_epenthesis</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_epenthesis" partOfSpeech="v_epenthesis">
+            <Allomorphs>
+              <Allomorph id="z0_epenthesis">
+                <PhoneticShape>g</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_epenthesis</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_featchange" partOfSpeech="v_featchange">
+            <Allomorphs>
+              <Allomorph id="x0_featchange">
+                <PhoneticShape>h</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_featchange</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_featchange" partOfSpeech="v_featchange">
+            <Allomorphs>
+              <Allomorph id="y0_featchange">
+                <PhoneticShape>j</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_featchange</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_featchange" partOfSpeech="v_featchange">
+            <Allomorphs>
+              <Allomorph id="z0_featchange">
+                <PhoneticShape>l</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_featchange</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_final-change" partOfSpeech="v_final-change">
+            <Allomorphs>
+              <Allomorph id="x0_final-change">
+                <PhoneticShape>m</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_final-change" partOfSpeech="v_final-change">
+            <Allomorphs>
+              <Allomorph id="y0_final-change">
+                <PhoneticShape>n</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_final-change" partOfSpeech="v_final-change">
+            <Allomorphs>
+              <Allomorph id="z0_final-change">
+                <PhoneticShape>q</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="x_metathesis" partOfSpeech="v_metathesis">
+            <Allomorphs>
+              <Allomorph id="x0_metathesis">
+                <PhoneticShape>r</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>X_metathesis</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="y_metathesis" partOfSpeech="v_metathesis">
+            <Allomorphs>
+              <Allomorph id="y0_metathesis">
+                <PhoneticShape>v</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Y_metathesis</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="z_metathesis" partOfSpeech="v_metathesis">
+            <Allomorphs>
+              <Allomorph id="z0_metathesis">
+                <PhoneticShape>x</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Z_metathesis</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="xo_root-stratum-final-change" partOfSpeech="v_root-stratum-final-change">
+            <Allomorphs>
+              <Allomorph id="x0o_root-stratum-final-change">
+                <PhoneticShape>z</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Xo_root-stratum-final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="yo_root-stratum-final-change" partOfSpeech="v_root-stratum-final-change">
+            <Allomorphs>
+              <Allomorph id="y0o_root-stratum-final-change">
+                <PhoneticShape>à</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Yo_root-stratum-final-change</MorphemeId>
+          </LexicalEntry>
+          <LexicalEntry id="zo_root-stratum-final-change" partOfSpeech="v_root-stratum-final-change">
+            <Allomorphs>
+              <Allomorph id="z0o_root-stratum-final-change">
+                <PhoneticShape>â</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>Zo_root-stratum-final-change</MorphemeId>
           </LexicalEntry>
         </LexicalEntries>
       </Stratum>

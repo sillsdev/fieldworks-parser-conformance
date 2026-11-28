@@ -1,39 +1,96 @@
 language: SpellingCompoundJunctionMark
-requires: [morpher-settings]
+requires:
+  - morpher-settings
 morpher:
   MaxRoots: 3
 words:
-  - word: "aṕ"
-    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?[t́]): pins that this spelling is a route and its morpheme sequence."
+  - word: aṕ
+    note: '[cell mark] C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?[t́]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
-        rules: ["cr1", "cr2"]
-      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
-        rules: ["cr1", "cr2"]
+      - signature: X_mark+Y_mark+Z_mark|[aá][+-=]?p[+-=]?[t́]
+        rules:
+          - cr1_mark
+          - cr2_mark
+      - signature: X_mark+Y_mark+Z_mark|[aá][+-=]?p[+-=]?[t́]
+        rules:
+          - cr1_mark
+          - cr2_mark
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: apt
-    note: "C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?[t́]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell mark] C# returns 2 analyses (X+Y+Z|[aá][+-=]?p[+-=]?[t́]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
-        rules: ["cr1", "cr2"]
-      - signature: "X+Y+Z|[aá][+-=]?p[+-=]?[t́]"
-        rules: ["cr1", "cr2"]
+      - signature: X_mark+Y_mark+Z_mark|[aá][+-=]?p[+-=]?[t́]
+        rules:
+          - cr1_mark
+          - cr2_mark
+      - signature: X_mark+Y_mark+Z_mark|[aá][+-=]?p[+-=]?[t́]
+        rules:
+          - cr1_mark
+          - cr2_mark
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: at
-    note: "C# returns 2 analyses (X+Z|[aá][+-=]?[t́]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell mark] C# returns 2 analyses (X+Z|[aá][+-=]?[t́]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Z|[aá][+-=]?[t́]"
-        rules: ["cr1"]
-      - signature: "X+Z|[aá][+-=]?[t́]"
-        rules: ["cr2"]
+      - signature: X_mark+Z_mark|[aá][+-=]?[t́]
+        rules:
+          - cr1_mark
+      - signature: X_mark+Z_mark|[aá][+-=]?[t́]
+        rules:
+          - cr2_mark
     exercises:
-      - "CompoundingRule > junction phonology"
+      - CompoundingRule > junction phonology
   - word: sa
-    note: "C# returns 1 analysis (PRE+X|s[aá]): pins that this word has a route and its morpheme sequence."
+    note: '[cell mark] C# returns 1 analysis (PRE+X|s[aá]): pins that this word has a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|s[aá]"
-        rules: ["PRE"]
+      - signature: PRE_mark+X_mark|s[aá]
+        rules:
+          - PRE_mark
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: bdég
+    note: '[cell boundary-mark] C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_boundary-mark+Y_boundary-mark+Z_boundary-mark|[bh][~#%é]?d[~#%é]?g
+        rules:
+          - cr1_boundary-mark
+          - cr2_boundary-mark
+      - signature: X_boundary-mark+Y_boundary-mark+Z_boundary-mark|[bh][~#%é]?d[~#%é]?g
+        rules:
+          - cr1_boundary-mark
+          - cr2_boundary-mark
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: bdg
+    note: '[cell boundary-mark] C# returns 2 analyses (X+Y+Z|[aá][+-=é]?p[+-=é]?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_boundary-mark+Y_boundary-mark+Z_boundary-mark|[bh][~#%é]?d[~#%é]?g
+        rules:
+          - cr1_boundary-mark
+          - cr2_boundary-mark
+      - signature: X_boundary-mark+Y_boundary-mark+Z_boundary-mark|[bh][~#%é]?d[~#%é]?g
+        rules:
+          - cr1_boundary-mark
+          - cr2_boundary-mark
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: bég
+    note: '[cell boundary-mark] C# returns 2 analyses (X+Z|[aá][+-=é]?t): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_boundary-mark+Z_boundary-mark|[bh][~#%é]?g
+        rules:
+          - cr1_boundary-mark
+      - signature: X_boundary-mark+Z_boundary-mark|[bh][~#%é]?g
+        rules:
+          - cr2_boundary-mark
+    exercises:
+      - CompoundingRule > boundary marker at the junction
+  - word: fb
+    note: '[cell boundary-mark] C# returns 1 analysis (PRE+X|s[aá]): pins that this word has a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_boundary-mark+X_boundary-mark|f[bh]
+        rules:
+          - PRE_boundary-mark
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'

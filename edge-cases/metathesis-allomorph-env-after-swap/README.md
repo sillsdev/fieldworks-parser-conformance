@@ -15,4 +15,4 @@ C# only because `taa` requires a following segment: with that environment remove
 [docs/fieldworks-cannot-say.md](../../docs/fieldworks-cannot-say.md)), so `taa` now requires a following segment.
 `taa` therefore never parses in C#; it is a negative control. All lexemes are synthetic. Rows come from the C#
 self-check (`hc-conformance --propose`) at sillsdev/machine `ba6dfa10`; no row was filled from PanGloss output.
-`rules:` copies the attribution of the sibling `metathesis-boundary-between-switches-prefix` rows.
+`rules:` copies the attribution of the `prefix` cell of `metathesis-boundary-between-switches-compound` (formerly `metathesis-boundary-between-switches-prefix`).

@@ -3,54 +3,187 @@ requires: []
 fieldworks_producible_notes: Fully specified literal segments and ordinary compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a
-    note: "C# returns 1 analysis (ROOT|a): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell plain] C# returns 1 analysis (ROOT|a): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|a"
+      - signature: ROOT_plain|a
         rules: []
     exercises:
-      - "CompoundingRule"
+      - CompoundingRule
   - word: p
-    note: "C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell plain] C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|p"
+      - signature: ROOT_plain|p
         rules: []
     exercises:
-      - "CompoundingRule"
+      - CompoundingRule
   - word: aa
-    note: "C# returns 1 analysis (ROOT|aa): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell plain] C# returns 1 analysis (ROOT|aa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|aa"
-        rules: ["cr1"]
+      - signature: ROOT_plain|aa
+        rules:
+          - cr1_plain
         exercises:
-          - "CompoundingRule"
+          - CompoundingRule
   - word: ap
-    note: "C# returns 1 analysis (ROOT+ROOT|ap): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell plain] C# returns 1 analysis (ROOT+ROOT|ap): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT+ROOT|ap"
-        rules: ["cr1"]
+      - signature: ROOT_plain+ROOT_plain|ap
+        rules:
+          - cr1_plain
         exercises:
-          - "CompoundingRule"
+          - CompoundingRule
   - word: pa
-    note: "C# returns 1 analysis (ROOT+ROOT|pa): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell plain] C# returns 1 analysis (ROOT+ROOT|pa): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT+ROOT|pa"
-        rules: ["cr1"]
+      - signature: ROOT_plain+ROOT_plain|pa
+        rules:
+          - cr1_plain
         exercises:
-          - "CompoundingRule"
+          - CompoundingRule
   - word: pp
-    note: "C# returns 1 analysis (ROOT|pp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell plain] C# returns 1 analysis (ROOT|pp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "ROOT|pp"
-        rules: ["cr1"]
+      - signature: ROOT_plain|pp
+        rules:
+          - cr1_plain
         exercises:
-          - "CompoundingRule"
+          - CompoundingRule
   - word: aaa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell plain] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule"
-  - word: "a^0p"
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+      - CompoundingRule
+  - word: a^0p
+    note: '[cell plain] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule"
+      - CompoundingRule
+  - word: b
+    note: '[cell separated] C# returns 1 analysis (ROOT|a): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_separated|b
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: d
+    note: '[cell separated] C# returns 1 analysis (ROOT|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_separated|d
+        rules: []
+    exercises:
+      - CompoundingRule
+  - word: db
+    note: '[cell separated] C# returns 2 analyses (PRE+ROOT|p(^0)?a; ROOT+ROOT|pa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_separated+ROOT_separated|d(^0)?b
+        rules:
+          - PRE_separated
+      - signature: ROOT_separated+ROOT_separated|db
+        rules:
+          - cr1_separated
+    exercises:
+      - CompoundingRule
+  - word: dd
+    note: '[cell separated] C# returns 2 analyses (PRE+ROOT|p(^0)?p; ROOT|pp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_separated+ROOT_separated|d(^0)?d
+        rules:
+          - PRE_separated
+      - signature: ROOT_separated|dd
+        rules:
+          - cr1_separated
+    exercises:
+      - CompoundingRule
+  - word: bb
+    note: '[cell separated] C# returns 1 analysis (ROOT|aa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_separated|bb
+        rules:
+          - cr1_separated
+        exercises:
+          - CompoundingRule
+  - word: bd
+    note: '[cell separated] C# returns 1 analysis (ROOT+ROOT|ap): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_separated+ROOT_separated|bd
+        rules:
+          - cr1_separated
+        exercises:
+          - CompoundingRule
+  - word: ddb
+    note: '[cell separated] C# returns 2 analyses (PRE+ROOT+ROOT|p(^0)?pa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_separated+ROOT_separated+ROOT_separated|d(^0)?db
+        rules:
+          - PRE_separated
+          - cr1_separated
+      - signature: PRE_separated+ROOT_separated+ROOT_separated|d(^0)?db
+        rules:
+          - PRE_separated
+          - cr1_separated
+    exercises:
+      - CompoundingRule
+  - word: dbd
+    note: '[cell separated] C# returns 2 analyses (PRE+ROOT+ROOT|p(^0)?ap): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_separated+ROOT_separated+ROOT_separated|d(^0)?bd
+        rules:
+          - PRE_separated
+          - cr1_separated
+      - signature: PRE_separated+ROOT_separated+ROOT_separated|d(^0)?bd
+        rules:
+          - PRE_separated
+          - cr1_separated
+    exercises:
+      - CompoundingRule
+  - word: bdd
+    note: '[cell separated] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: dddd
+    note: '[cell separated] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: bdb
+    note: '[cell separated] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: dbb
+    note: '[cell separated] C# returns 2 analyses (PRE+ROOT|p(^0)?aa): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_separated+ROOT_separated|d(^0)?bb
+        rules:
+          - PRE_separated
+          - cr1_separated
+      - signature: PRE_separated+ROOT_separated|d(^0)?bb
+        rules:
+          - PRE_separated
+          - cr1_separated
+    exercises:
+      - CompoundingRule
+  - word: ddd
+    note: '[cell separated] C# returns 2 analyses (PRE+ROOT|p(^0)?pp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_separated+ROOT_separated|d(^0)?dd
+        rules:
+          - PRE_separated
+          - cr1_separated
+      - signature: PRE_separated+ROOT_separated|d(^0)?dd
+        rules:
+          - PRE_separated
+          - cr1_separated
+    exercises:
+      - CompoundingRule
+  - word: bbdd
+    note: '[cell separated] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
+  - word: bbb
+    note: '[cell separated] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule
