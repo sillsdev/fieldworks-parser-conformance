@@ -3,703 +3,2741 @@ requires: []
 fieldworks_producible_notes: Fully specified literal segments with partial-feature aliases and ordinary non-recursive compounding or affix rules; no fwdata round-trip witness is claimed.
 words:
   - word: a
-    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|[aá(xy)ei]"
+      - signature: X_affix-feeds|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: p
-    note: "C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|p"
+      - signature: Y_affix-feeds|p
         rules: []
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: s
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: i
-    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|[aá(xy)ei]"
+      - signature: X_affix-feeds|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aa
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affix-feeds
+      - signature: X_affix-feeds|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ap
-    note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+Y_affix-feeds|[aá(xy)ei]p
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: as
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ai
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affix-feeds
+      - signature: X_affix-feeds|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pa
-    note: "C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "Y+X|p[aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: Y_affix-feeds+SUF_affix-feeds|p[aá(xy)i]
+        rules:
+          - SUF_affix-feeds
+      - signature: Y_affix-feeds+X_affix-feeds|p[aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pp
-    note: "C# returns 1 analysis (Y|pp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (Y|pp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y|pp"
-        rules: ["cr1"]
+      - signature: Y_affix-feeds|pp
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pi
-    note: "C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "Y+X|p[aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: Y_affix-feeds+SUF_affix-feeds|p[aá(xy)i]
+        rules:
+          - SUF_affix-feeds
+      - signature: Y_affix-feeds+X_affix-feeds|p[aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sa
-    note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|s[aá(xy)ei]"
-        rules: ["PRE"]
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: sp
-    note: "C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y|sp"
-        rules: ["PRE"]
+      - signature: PRE_affix-feeds+Y_affix-feeds|sp
+        rules:
+          - PRE_affix-feeds
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: si
-    note: "C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X|s[aá(xy)ei]"
-        rules: ["PRE"]
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: ia
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affix-feeds
+      - signature: X_affix-feeds|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ip
-    note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+Y_affix-feeds|[aá(xy)ei]p
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: is
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ii
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i]"
-        rules: ["SUF"]
-      - signature: "X|[aá(xy)ei][aá(xy)ei]"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i]
+        rules:
+          - SUF_affix-feeds
+      - signature: X_affix-feeds|[aá(xy)ei][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aaa
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aap
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aai
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: apa
-    note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: app
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: api
-    note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: asa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: asp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ass
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: asi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aia
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aip
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ais
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aii
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: paa
-    note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds+X_affix-feeds|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: Y_affix-feeds+X_affix-feeds+SUF_affix-feeds|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pap
-    note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]p"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds|p[aá(xy)i]p
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pai
-    note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds+X_affix-feeds|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: Y_affix-feeds+X_affix-feeds+SUF_affix-feeds|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ppa
-    note: "C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds|pp[aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ppp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ppi
-    note: "C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|pp[aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds|pp[aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: psa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: psp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: psi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pia
-    note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds+X_affix-feeds|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: Y_affix-feeds+X_affix-feeds+SUF_affix-feeds|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pip
-    note: "C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF|p[aá(xy)i]p"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds|p[aá(xy)i]p
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pis
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: pii
-    note: "C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "Y+SUF+X|p[aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
-      - signature: "Y+X+SUF|p[aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: Y_affix-feeds+SUF_affix-feeds+X_affix-feeds|p[aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: Y_affix-feeds+X_affix-feeds+SUF_affix-feeds|p[aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saa
-    note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sap
-    note: "C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds|s[aá(xy)ei]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds|s[aá(xy)ei]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sas
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sai
-    note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: spa
-    note: "C# returns 4 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+Y_affix-feeds+SUF_affix-feeds|sp[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds+SUF_affix-feeds|sp[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds+X_affix-feeds|sp[aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds+X_affix-feeds|sp[aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: spp
-    note: "C# returns 2 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y|spp"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y|spp"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+Y_affix-feeds|spp
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds|spp
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sps
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: spi
-    note: "C# returns 4 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+Y+SUF|sp[aá(xy)i]; PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+SUF|sp[aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+Y+X|sp[aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+Y_affix-feeds+SUF_affix-feeds|sp[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds+SUF_affix-feeds|sp[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds+X_affix-feeds|sp[aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+Y_affix-feeds+X_affix-feeds|sp[aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ssa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ssp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ssi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sia
-    note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sip
-    note: "C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X+Y|s[aá(xy)ei]p"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds|s[aá(xy)ei]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds|s[aá(xy)ei]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sis
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sii
-    note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iaa
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iap
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ias
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iai
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ipa
-    note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ipp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ips
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: ipi
-    note: "C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y+SUF|[aá(xy)ei]p[aá(xy)i]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: isa
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: isp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iss
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: isi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iia
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iip
-    note: "C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF+Y|[aá(xy)ei][aá(xy)i]p"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|[aá(xy)ei][aá(xy)i]p
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iis
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: iii
-    note: "C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["cr1", "SUF"]
-      - signature: "X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["cr1", "SUF"]
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: X_affix-feeds+SUF_affix-feeds|[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saip
-    note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "cr1", "SUF"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sapi
-    note: "C# returns 3 analyses (PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 3 analyses (PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+Y+SUF|s[aá(xy)ei]p[aá(xy)i]"
-        rules: ["PRE", "cr1", "SUF"]
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+Y_affix-feeds+SUF_affix-feeds|s[aá(xy)ei]p[aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saipi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sapii
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: aipi
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: apii
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sasp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saisp
-    note: "C# finds no analysis: pins that this spelling is not a route of the grammar."
+    note: '[cell affix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
     expect_fail: true
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: xy
-    note: "C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X|[aá(xy)ei]"
+      - signature: X_affix-feeds|[aá(xy)ei]
         rules: []
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: xyp
-    note: "C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "X+Y|[aá(xy)ei]p"
-        rules: ["cr1"]
+      - signature: X_affix-feeds+Y_affix-feeds|[aá(xy)ei]p
+        rules:
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sxyi
-    note: "C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 4 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)i]; PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "SUF"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
-      - signature: "PRE+X|s[aá(xy)ei][aá(xy)ei]"
-        rules: ["PRE", "cr1"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds|s[aá(xy)ei][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: saixy
-    note: "C# returns 6 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 6 analyses (PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]"
-        rules: ["PRE", "cr1", "SUF"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)ei][aá(xy)i]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds|s[aá(xy)ei][aá(xy)i][aá(xy)ei]
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
   - word: sxyip
-    note: "C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence."
+    note: '[cell affix-feeds] C# returns 3 analyses (PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
     parses:
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "cr1", "SUF"]
-      - signature: "PRE+X+SUF+Y|s[aá(xy)ei][aá(xy)i]p"
-        rules: ["PRE", "cr1", "SUF"]
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
+      - signature: PRE_affix-feeds+X_affix-feeds+SUF_affix-feeds+Y_affix-feeds|s[aá(xy)ei][aá(xy)i]p
+        rules:
+          - PRE_affix-feeds
+          - cr1_affix-feeds
+          - SUF_affix-feeds
     exercises:
-      - "CompoundingRule > feeds affixation"
+      - CompoundingRule > feeds affixation
+  - word: b
+    note: '[cell affixes] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes|[bl(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hb
+    note: '[cell affixes] C# returns 1 analysis (PRE+ROOT|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_affixes+ROOT_affixes|h[bl(jk)df]
+        rules:
+          - PRE_affixes
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: bf
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)i]; ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f]
+        rules:
+          - SUF_affixes
+      - signature: ROOT_affixes|[bl(jk)df][bl(jk)df]
+        rules:
+          - cr1_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbb
+    note: '[cell affixes] C# returns 4 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]; PRE+ROOT|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes|h[bl(jk)df][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+ROOT_affixes|h[bl(jk)df][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bbf
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bhb
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bfb
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bfbf
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbhb
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbbf
+    note: '[cell affixes] C# returns 6 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bhbf
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bfhb
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: jk
+    note: '[cell affixes] C# returns 1 analysis (ROOT|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes|[bl(jk)df]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hjk
+    note: '[cell affixes] C# returns 1 analysis (PRE+ROOT|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_affixes+ROOT_affixes|h[bl(jk)df]
+        rules:
+          - PRE_affixes
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: jkf
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)i]; ROOT|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f]
+        rules:
+          - SUF_affixes
+      - signature: ROOT_affixes|[bl(jk)df][bl(jk)df]
+        rules:
+          - cr1_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: jkhjk
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: jkfjk
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bbb
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hhb
+    note: '[cell affixes] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: bff
+    note: '[cell affixes] C# returns 2 analyses (ROOT+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; ROOT+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+      - signature: ROOT_affixes+SUF_affixes|[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbf
+    note: '[cell affixes] C# returns 4 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i]; PRE+ROOT|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes|h[bl(jk)df][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+      - signature: PRE_affixes+ROOT_affixes|h[bl(jk)df][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: hbfb
+    note: '[cell affixes] C# returns 6 analyses (PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)ei][aá(xy)i]; PRE+ROOT+SUF|s[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)df][bl(jk)f]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+      - signature: PRE_affixes+ROOT_affixes+SUF_affixes|h[bl(jk)df][bl(jk)f][bl(jk)df]
+        rules:
+          - PRE_affixes
+          - cr1_affixes
+          - SUF_affixes
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: m
+    note: '[cell prefix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_prefix-feeds|[mz(vw)no]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: q
+    note: '[cell prefix-feeds] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_prefix-feeds|q
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: r
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mm
+    note: '[cell prefix-feeds] C# returns 1 analysis (X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_prefix-feeds|[mz(vw)no][mz(vw)no]
+        rules:
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mq
+    note: '[cell prefix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_prefix-feeds+Y_prefix-feeds|[mz(vw)no]q
+        rules:
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qm
+    note: '[cell prefix-feeds] C# returns 1 analysis (Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_prefix-feeds+X_prefix-feeds|q[mz(vw)no]
+        rules:
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qq
+    note: '[cell prefix-feeds] C# returns 1 analysis (Y|pp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_prefix-feeds|qq
+        rules:
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rm
+    note: '[cell prefix-feeds] C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+X_prefix-feeds|r[mz(vw)no]
+        rules:
+          - PRE_prefix-feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rq
+    note: '[cell prefix-feeds] C# returns 1 analysis (PRE+Y|sp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+Y_prefix-feeds|rq
+        rules:
+          - PRE_prefix-feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmm
+    note: '[cell prefix-feeds] C# returns 2 analyses (PRE+X|s[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+X_prefix-feeds|r[mz(vw)no][mz(vw)no]
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+      - signature: PRE_prefix-feeds+X_prefix-feeds|r[mz(vw)no][mz(vw)no]
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmq
+    note: '[cell prefix-feeds] C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+X_prefix-feeds+Y_prefix-feeds|r[mz(vw)no]q
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+      - signature: PRE_prefix-feeds+X_prefix-feeds+Y_prefix-feeds|r[mz(vw)no]q
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqm
+    note: '[cell prefix-feeds] C# returns 2 analyses (PRE+Y+X|sp[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+Y_prefix-feeds+X_prefix-feeds|rq[mz(vw)no]
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+      - signature: PRE_prefix-feeds+Y_prefix-feeds+X_prefix-feeds|rq[mz(vw)no]
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqq
+    note: '[cell prefix-feeds] C# returns 2 analyses (PRE+Y|spp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+Y_prefix-feeds|rqq
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+      - signature: PRE_prefix-feeds+Y_prefix-feeds|rqq
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mmrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mqrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: mrrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qmrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qqrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rmrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rqrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrmm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrmq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrmr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrqm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrqq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrqr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrrm
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrrq
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rrrr
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: vw
+    note: '[cell prefix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_prefix-feeds|[mz(vw)no]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: vwq
+    note: '[cell prefix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_prefix-feeds+Y_prefix-feeds|[mz(vw)no]q
+        rules:
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qvw
+    note: '[cell prefix-feeds] C# returns 1 analysis (Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_prefix-feeds+X_prefix-feeds|q[mz(vw)no]
+        rules:
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: rvw
+    note: '[cell prefix-feeds] C# returns 1 analysis (PRE+X|s[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+X_prefix-feeds|r[mz(vw)no]
+        rules:
+          - PRE_prefix-feeds
+        exercises:
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
+  - word: rvwq
+    note: '[cell prefix-feeds] C# returns 2 analyses (PRE+X+Y|s[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: PRE_prefix-feeds+X_prefix-feeds+Y_prefix-feeds|r[mz(vw)no]q
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+      - signature: PRE_prefix-feeds+X_prefix-feeds+Y_prefix-feeds|r[mz(vw)no]q
+        rules:
+          - PRE_prefix-feeds
+          - cr1_prefix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: qrvw
+    note: '[cell prefix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: à
+    note: '[cell suffix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds|[àè(æç)âã]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ä
+    note: '[cell suffix-feeds] C# returns 1 analysis (Y|p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds|ä
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ã
+    note: '[cell suffix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds|[àè(æç)âã]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àà
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds|[àè(æç)âã]ä
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äà
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds|ä[àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ää
+    note: '[cell suffix-feeds] C# returns 1 analysis (Y|pp): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds|ää
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äã
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds|ä[àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãà
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds|[àè(æç)âã]ä
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààà
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds+Y_suffix-feeds|[àè(æç)âã][àè(æç)ã]ä
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäà
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã]ä[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäã
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã]ä[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãà
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds+Y_suffix-feeds|[àè(æç)âã][àè(æç)ã]ä
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàà
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds+X_suffix-feeds|ä[àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàä
+    note: '[cell suffix-feeds] C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)ã]ä
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàã
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds+X_suffix-feeds|ä[àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääà
+    note: '[cell suffix-feeds] C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ää[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääã
+    note: '[cell suffix-feeds] C# returns 1 analysis (Y+SUF|pp[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ää[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãà
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds+X_suffix-feeds|ä[àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãä
+    note: '[cell suffix-feeds] C# returns 1 analysis (Y+SUF|p[aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)ã]ä
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãã
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds+X_suffix-feeds|ä[àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàà
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds+Y_suffix-feeds|[àè(æç)âã][àè(æç)ã]ä
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäà
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã]ä[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäã
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã]ä[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããà
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+SUF+Y|[aá(xy)ei][aá(xy)i]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds+Y_suffix-feeds|[àè(æç)âã][àè(æç)ã]ä
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àààà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àààä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àààã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààäà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààäã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààãà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààãä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ààãã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäàà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäàä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäàã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àääà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àääã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäãà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäãä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àäãã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãàà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãàä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãàã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãäà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àãäã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àããà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àããä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àããã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äààà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äààä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äààã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàäà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàäã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàãà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàãä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äàãã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääàà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääàä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääàã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äääà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äääã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääãà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääãä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ääãã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãàà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãàä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãàã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãäà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äãäã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äããà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äããä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äããã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãààà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãààä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãààã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàäà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàäã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàãà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàãä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãàãã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäàà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäàä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäàã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãääà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãääã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäãà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäãä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãäãã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããàà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããàä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããàã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããäà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããää
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ããäã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãããà
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãããä
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: ãããã
+    note: '[cell suffix-feeds] C# finds no analysis: pins that this spelling is not a route of the grammar.'
+    expect_fail: true
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: æç
+    note: '[cell suffix-feeds] C# returns 1 analysis (X|[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds|[àè(æç)âã]
+        rules: []
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: æçä
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y|[aá(xy)ei]p): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds|[àè(æç)âã]ä
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äæç
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF|p[aá(xy)i]; Y+X|p[aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds|ä[àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: æçã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)i]; X|[aá(xy)ei][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã]
+        rules:
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds|[àè(æç)âã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: æçäã
+    note: '[cell suffix-feeds] C# returns 1 analysis (X+Y+SUF|[aá(xy)ei]p[aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+Y_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã]ä[àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: äæçã
+    note: '[cell suffix-feeds] C# returns 2 analyses (Y+SUF+X|p[aá(xy)i][aá(xy)ei]; Y+X+SUF|p[aá(xy)ei][aá(xy)i]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: Y_suffix-feeds+SUF_suffix-feeds+X_suffix-feeds|ä[àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: Y_suffix-feeds+X_suffix-feeds+SUF_suffix-feeds|ä[àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation
+  - word: àæçã
+    note: '[cell suffix-feeds] C# returns 2 analyses (X+SUF|[aá(xy)ei][aá(xy)ei][aá(xy)i]; X+SUF|[aá(xy)ei][aá(xy)i][aá(xy)ei]): pins that this spelling is a route and its morpheme sequence.'
+    parses:
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)âã][àè(æç)ã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+      - signature: X_suffix-feeds+SUF_suffix-feeds|[àè(æç)âã][àè(æç)ã][àè(æç)âã]
+        rules:
+          - cr1_suffix-feeds
+          - SUF_suffix-feeds
+    exercises:
+      - CompoundingRule > feeds affixation

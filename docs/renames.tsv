@@ -107,3 +107,6 @@ edge-cases/featureless-unused-feature	edge-cases/partial-feature-literal-output	
 edge-cases/final-template-partial-root	edge-cases/final-template-partial-reachability		wave-2026-11-27-8
 edge-cases/final-template-partial-trace	edge-cases/final-template-partial-reachability		wave-2026-11-27-8
 edge-cases/metathesis-boundary-two-suffixes	edge-cases/metathesis-segment-class-union		wave-2026-11-27-8
+edge-cases/spelling-coverage-compound-affixes	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
+edge-cases/spelling-coverage-compound-prefix-feeds	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
+edge-cases/spelling-coverage-compound-suffix-feeds	edge-cases/spelling-coverage-compound-affix-feeds		wave-2026-11-27-8
