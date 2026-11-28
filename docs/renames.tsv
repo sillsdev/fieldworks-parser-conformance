@@ -88,3 +88,4 @@ edge-cases/ambiguous-disagree-repeated-minus-partial-focus	edge-cases/ambiguous-
 edge-cases/partial-feature-literal-rewrite	retired	edge-cases/partial-feature-literal-output	wave-2026-11-27-5
 edge-cases/partial-feature-singleton-rewrite	retired	edge-cases/partial-feature-literal-output	wave-2026-11-27-5
 edge-cases/spelling-coverage-compound-depth-mpr-restricted	retired	edge-cases/spelling-coverage-compound-depth-mpr-output	wave-2026-11-27-5
+edge-cases/epenthesis-then-swap-keeps-its-edge-before-suffix	edge-cases/epenthesis-then-swap-with-root-keeps-its-edge		wave-2026-11-27-6
