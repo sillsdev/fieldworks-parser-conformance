@@ -338,7 +338,7 @@ Whole-language grammars with a realistic lexicon and several interacting process
 - `edge-cases/convergent-affix-multiple-application`: [XAmple] four suffixes spelled `ta`: a noun-to-noun one that may apply twice and a verb-to-verb one that may apply three times beside two one-shot category changers, so one shape is reached with different per-rule counts; guards an analysis-side match table that must not carry a count decision from another path (15 words).
 - `edge-cases/convergent-homophonous-suffix-reduplication`: [XAmple] a CV reduplication prefix beside four homophonous category-changing suffixes and two homophonous agreement suffixes in one template slot, so the copy-agreement check runs on one shape reached by many suffix histories; guards an analysis-side match table (21 words).
 - `edge-cases/convergent-zero-derivation-identity`: [XAmple] three null affixes beside two homophonous `-ti` suffixes, so un-applying a null affix returns the same shape and every rule is retried on it under a different history; guards an analysis-side match table (13 words).
-- `edge-cases/zero-width-morpheme-identity`: [XAmple] a zero-width noun-to-verb rule beside two overt category toggles, so the same surface is reached through different rule histories (machine#506); `sagui` is pinned from the C# run (4 words).
+- `edge-cases/zero-width-morpheme-identity`: [XAmple] a zero-width noun-to-verb rule beside two overt category toggles, so the same surface is reached through different rule histories (machine issue 506, an open investigation); `sagui` is pinned from the C# run (4 words).
 
 ## Templates, slots and parts of speech
 
