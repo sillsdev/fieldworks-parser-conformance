@@ -3,54 +3,720 @@
 <HermitCrabInput>
   <Language>
     <Name>FinalTemplatePartialReachability</Name>
-    <PartsOfSpeech><PartOfSpeech id="posA"><Name>A</Name></PartOfSpeech><PartOfSpeech id="posB"><Name>B</Name></PartOfSpeech><PartOfSpeech id="posC"><Name>C</Name></PartOfSpeech><PartOfSpeech id="posE"><Name>E</Name></PartOfSpeech></PartsOfSpeech>
-    <CharacterDefinitionTable id="tbl"><Name>Main</Name><SegmentDefinitions>
-<SegmentDefinition id="sa"><Representations><Representation>a</Representation></Representations></SegmentDefinition><SegmentDefinition id="sb"><Representations><Representation>b</Representation></Representations></SegmentDefinition><SegmentDefinition id="sd"><Representations><Representation>d</Representation></Representations></SegmentDefinition><SegmentDefinition id="se"><Representations><Representation>e</Representation></Representations></SegmentDefinition><SegmentDefinition id="sg"><Representations><Representation>g</Representation></Representations></SegmentDefinition><SegmentDefinition id="si"><Representations><Representation>i</Representation></Representations></SegmentDefinition><SegmentDefinition id="sk"><Representations><Representation>k</Representation></Representations></SegmentDefinition><SegmentDefinition id="sl"><Representations><Representation>l</Representation></Representations></SegmentDefinition><SegmentDefinition id="sm"><Representations><Representation>m</Representation></Representations></SegmentDefinition><SegmentDefinition id="sn"><Representations><Representation>n</Representation></Representations></SegmentDefinition><SegmentDefinition id="so"><Representations><Representation>o</Representation></Representations></SegmentDefinition><SegmentDefinition id="sp"><Representations><Representation>p</Representation></Representations></SegmentDefinition><SegmentDefinition id="sq"><Representations><Representation>q</Representation></Representations></SegmentDefinition><SegmentDefinition id="sr"><Representations><Representation>r</Representation></Representations></SegmentDefinition><SegmentDefinition id="ss"><Representations><Representation>s</Representation></Representations></SegmentDefinition><SegmentDefinition id="st"><Representations><Representation>t</Representation></Representations></SegmentDefinition><SegmentDefinition id="su"><Representations><Representation>u</Representation></Representations></SegmentDefinition><SegmentDefinition id="sw"><Representations><Representation>w</Representation></Representations></SegmentDefinition><SegmentDefinition id="sx"><Representations><Representation>x</Representation></Representations></SegmentDefinition><SegmentDefinition id="sy"><Representations><Representation>y</Representation></Representations></SegmentDefinition><SegmentDefinition id="sz"><Representations><Representation>z</Representation></Representations></SegmentDefinition>
-    </SegmentDefinitions></CharacterDefinitionTable>
-    <NaturalClasses><FeatureNaturalClass id="ncAny"><Name>Any</Name></FeatureNaturalClass></NaturalClasses>
+    <PartsOfSpeech>
+      <PartOfSpeech id="posA_reachability">
+        <Name>A_reachability</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posB_reachability">
+        <Name>B_reachability</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posC_reachability">
+        <Name>C_reachability</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posE_reachability">
+        <Name>E_reachability</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posX_root">
+        <Name>x_root</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posY_root">
+        <Name>y_root</Name>
+      </PartOfSpeech>
+      <PartOfSpeech id="posV_trace">
+        <Name>V_trace</Name>
+      </PartOfSpeech>
+    </PartsOfSpeech>
+    <CharacterDefinitionTable id="tbl_reachability">
+      <Name>Main_reachability</Name>
+      <SegmentDefinitions>
+        <SegmentDefinition id="sa_reachability">
+          <Representations>
+            <Representation>a</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sb_reachability">
+          <Representations>
+            <Representation>b</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sd_reachability">
+          <Representations>
+            <Representation>d</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="se_reachability">
+          <Representations>
+            <Representation>e</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sg_reachability">
+          <Representations>
+            <Representation>g</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="si_reachability">
+          <Representations>
+            <Representation>i</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sk_reachability">
+          <Representations>
+            <Representation>k</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sl_reachability">
+          <Representations>
+            <Representation>l</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sm_reachability">
+          <Representations>
+            <Representation>m</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sn_reachability">
+          <Representations>
+            <Representation>n</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="so_reachability">
+          <Representations>
+            <Representation>o</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sp_reachability">
+          <Representations>
+            <Representation>p</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sq_reachability">
+          <Representations>
+            <Representation>q</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sr_reachability">
+          <Representations>
+            <Representation>r</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="ss_reachability">
+          <Representations>
+            <Representation>s</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="st_reachability">
+          <Representations>
+            <Representation>t</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="su_reachability">
+          <Representations>
+            <Representation>u</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sw_reachability">
+          <Representations>
+            <Representation>w</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sx_reachability">
+          <Representations>
+            <Representation>x</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sy_reachability">
+          <Representations>
+            <Representation>y</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sz_reachability">
+          <Representations>
+            <Representation>z</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sA_root">
+          <Representations>
+            <Representation>h</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sB_root">
+          <Representations>
+            <Representation>j</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sD_root">
+          <Representations>
+            <Representation>v</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sF_root">
+          <Representations>
+            <Representation>à</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sG_root">
+          <Representations>
+            <Representation>á</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sI_root">
+          <Representations>
+            <Representation>â</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sK_root">
+          <Representations>
+            <Representation>ã</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sN_root">
+          <Representations>
+            <Representation>ä</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="sP_root">
+          <Representations>
+            <Representation>å</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cS_trace">
+          <Representations>
+            <Representation>ê</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cA_trace">
+          <Representations>
+            <Representation>æ</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cG_trace">
+          <Representations>
+            <Representation>è</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cF_trace">
+          <Representations>
+            <Representation>ç</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cQ_trace">
+          <Representations>
+            <Representation>é</Representation>
+          </Representations>
+        </SegmentDefinition>
+        <SegmentDefinition id="cT_trace">
+          <Representations>
+            <Representation>ë</Representation>
+          </Representations>
+        </SegmentDefinition>
+      </SegmentDefinitions>
+    </CharacterDefinitionTable>
+    <NaturalClasses>
+      <FeatureNaturalClass id="ncAny_reachability">
+        <Name>Any_reachability</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_root">
+        <Name>Any_root</Name>
+      </FeatureNaturalClass>
+      <FeatureNaturalClass id="ncAny_trace">
+        <Name>Any_trace</Name>
+      </FeatureNaturalClass>
+    </NaturalClasses>
     <Strata>
-<Stratum characterDefinitionTable="tbl" morphologicalRuleOrder="unordered" morphologicalRules="d e u p q" isActive="yes"><Name>Main</Name>
-<MorphologicalRuleDefinitions><MorphologicalRule id="d" requiredPartsOfSpeech="posA" outputPartOfSpeech="posB"><Name>d</Name><MorphologicalSubrules><MorphologicalSubrule id="subd">
-<MorphologicalInput><PhoneticSequence id="std"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><CopyFromInput index="std" /><InsertSegments><PhoneticShape>d</PhoneticShape></InsertSegments></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>D</MorphemeId><Gloss>d</Gloss></MorphologicalRule>
-<MorphologicalRule id="e" outputPartOfSpeech="posB"><Name>e</Name><MorphologicalSubrules><MorphologicalSubrule id="sube">
-<MorphologicalInput><PhoneticSequence id="ste"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><CopyFromInput index="ste" /><InsertSegments><PhoneticShape>e</PhoneticShape></InsertSegments></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>E</MorphemeId><Gloss>e</Gloss></MorphologicalRule>
-<MorphologicalRule id="t"><Name>t</Name><MorphologicalSubrules><MorphologicalSubrule id="subt">
-<MorphologicalInput><PhoneticSequence id="stt"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><CopyFromInput index="stt" /><InsertSegments><PhoneticShape>t</PhoneticShape></InsertSegments></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>T</MorphemeId><Gloss>t</Gloss></MorphologicalRule>
-<MorphologicalRule id="u"><Name>u</Name><MorphologicalSubrules><MorphologicalSubrule id="subu">
-<MorphologicalInput><PhoneticSequence id="stu"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><CopyFromInput index="stu" /><InsertSegments><PhoneticShape>u</PhoneticShape></InsertSegments></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>U</MorphemeId><Gloss>u</Gloss></MorphologicalRule>
-<MorphologicalRule id="x"><Name>x</Name><MorphologicalSubrules><MorphologicalSubrule id="subx">
-<MorphologicalInput><PhoneticSequence id="stx"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><CopyFromInput index="stx" /><InsertSegments><PhoneticShape>x</PhoneticShape></InsertSegments></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>X</MorphemeId><Gloss>x</Gloss></MorphologicalRule>
-<MorphologicalRule id="p"><Name>p</Name><MorphologicalSubrules><MorphologicalSubrule id="subp">
-<MorphologicalInput><PhoneticSequence id="stp"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><InsertSegments><PhoneticShape>a</PhoneticShape></InsertSegments><CopyFromInput index="stp" /></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>P</MorphemeId><Gloss>p</Gloss></MorphologicalRule>
-<MorphologicalRule id="q" partial="true" requiredPartsOfSpeech="posC"><Name>q</Name><MorphologicalSubrules><MorphologicalSubrule id="subq">
-<MorphologicalInput><PhoneticSequence id="stq"><OptionalSegmentSequence min="1" max="-1"><SimpleContext naturalClass="ncAny" /></OptionalSegmentSequence></PhoneticSequence></MorphologicalInput>
-<MorphologicalOutput><CopyFromInput index="stq" /><InsertSegments><PhoneticShape>q</PhoneticShape></InsertSegments></MorphologicalOutput>
-</MorphologicalSubrule></MorphologicalSubrules><MorphemeId>Q</MorphemeId><Gloss>q</Gloss></MorphologicalRule>
-</MorphologicalRuleDefinitions>
-<AffixTemplates><AffixTemplate requiredPartsOfSpeech="posB" final="true"><Name>T1</Name><Slot morphologicalRules="t"><Name>slotT1</Name></Slot></AffixTemplate>
-<AffixTemplate requiredPartsOfSpeech="posB" final="true"><Name>T2</Name><Slot morphologicalRules="u"><Name>slotT2</Name></Slot></AffixTemplate>
-<AffixTemplate requiredPartsOfSpeech="posC" final="true"><Name>T3</Name><Slot morphologicalRules="x"><Name>slotT3</Name></Slot></AffixTemplate>
-<AffixTemplate requiredPartsOfSpeech="posA" final="true"><Name>T4</Name><Slot morphologicalRules="x"><Name>slotT4</Name></Slot></AffixTemplate>
-</AffixTemplates>
-<LexicalEntries><LexicalEntry id="ekam" partOfSpeech="posA"><Allomorphs><Allomorph id="akam"><PhoneticShape>kam</PhoneticShape></Allomorph></Allomorphs><MorphemeId>KAM</MorphemeId><Gloss>kam</Gloss></LexicalEntry>
-<LexicalEntry id="ekamb" partOfSpeech="posB"><Allomorphs><Allomorph id="akamb"><PhoneticShape>kam</PhoneticShape></Allomorph></Allomorphs><MorphemeId>KAMB</MorphemeId><Gloss>kamb</Gloss></LexicalEntry>
-<LexicalEntry id="elop" partOfSpeech="posB"><Allomorphs><Allomorph id="alop"><PhoneticShape>lop</PhoneticShape></Allomorph></Allomorphs><MorphemeId>LOP</MorphemeId><Gloss>lop</Gloss></LexicalEntry>
-<LexicalEntry id="enuk" partOfSpeech="posC"><Allomorphs><Allomorph id="anuk"><PhoneticShape>nuk</PhoneticShape></Allomorph></Allomorphs><MorphemeId>NUK</MorphemeId><Gloss>nuk</Gloss></LexicalEntry>
-<LexicalEntry id="emo" partOfSpeech="posE"><Allomorphs><Allomorph id="amo"><PhoneticShape>mo</PhoneticShape></Allomorph></Allomorphs><MorphemeId>MO</MorphemeId><Gloss>mo</Gloss></LexicalEntry>
-<LexicalEntry id="epa" partial="true"><Allomorphs><Allomorph id="apa"><PhoneticShape>pa</PhoneticShape></Allomorph></Allomorphs><MorphemeId>PA</MorphemeId><Gloss>pa</Gloss></LexicalEntry>
-</LexicalEntries></Stratum>
+      <Stratum characterDefinitionTable="tbl_reachability" morphologicalRuleOrder="unordered" isActive="yes" morphologicalRules="mrPartial_trace mrTail_trace">
+        <Name>Lower_root</Name>
+        <MorphologicalRuleDefinitions>
+          <!-- Slot rule of the non-final template. Its suffix f is the final template's suffix too. -->
+          <MorphologicalRule id="mrNonFinal_trace" requiredPartsOfSpeech="posV_trace">
+            <Name>Non-final template suffix_trace</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subNonFinal_trace">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemNonFinal_trace">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_trace"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemNonFinal_trace"/>
+                  <InsertSegments>
+                    <PhoneticShape>ç</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>NONFINAL_trace</MorphemeId>
+          </MorphologicalRule>
+          <!-- Slot rule of the final template. -->
+          <MorphologicalRule id="mrFinal_trace" requiredPartsOfSpeech="posV_trace">
+            <Name>Final template suffix_trace</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subFinal_trace">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemFinal_trace">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_trace"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemFinal_trace"/>
+                  <InsertSegments>
+                    <PhoneticShape>ç</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>FINAL_trace</MorphemeId>
+          </MorphologicalRule>
+          <!-- Partial (an inflectional rule in no slot): allowed after the final template, refused straight after the non-final one. -->
+          <MorphologicalRule id="mrPartial_trace" partial="true" requiredPartsOfSpeech="posV_trace">
+            <Name>Partial suffix_trace</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subPartial_trace">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemPartial_trace">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_trace"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemPartial_trace"/>
+                  <InsertSegments>
+                    <PhoneticShape>é</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>PARTIAL_trace</MorphemeId>
+          </MorphologicalRule>
+          <!-- Derivational (it has an output part of speech), so refused straight after the final template and allowed after a non-final one. -->
+          <MorphologicalRule id="mrTail_trace" requiredPartsOfSpeech="posV_trace" outputPartOfSpeech="posV_trace">
+            <Name>Tail suffix_trace</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subTail_trace">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemTail_trace">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_trace"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemTail_trace"/>
+                  <InsertSegments>
+                    <PhoneticShape>ë</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>TAIL_trace</MorphemeId>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <AffixTemplates>
+          <AffixTemplate requiredPartsOfSpeech="posV_trace" final="true">
+            <Name>finalTemplate_trace</Name>
+            <Slot morphologicalRules="mrFinal_trace">
+              <Name>finalSlot_trace</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posV_trace" final="false">
+            <Name>nonFinalTemplate_trace</Name>
+            <Slot morphologicalRules="mrNonFinal_trace">
+              <Name>nonFinalSlot_trace</Name>
+            </Slot>
+          </AffixTemplate>
+        </AffixTemplates>
+        <LexicalEntries>
+          <LexicalEntry id="ePak_root" partial="true">
+            <Allomorphs>
+              <Allomorph id="aPak_root">
+                <PhoneticShape>åhã</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>PAK_root</MorphemeId>
+            <Gloss>pak</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eSag_trace" partOfSpeech="posV_trace">
+            <Allomorphs>
+              <Allomorph id="aSag_trace">
+                <PhoneticShape>êæè</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>SAG_trace</MorphemeId>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
+      <Stratum characterDefinitionTable="tbl_reachability" morphologicalRuleOrder="unordered" morphologicalRules="d_reachability e_reachability u_reachability p_reachability q_reachability mrGateX_root mrGateY_root" isActive="yes">
+        <Name>Main_reachability</Name>
+        <MorphologicalRuleDefinitions>
+          <MorphologicalRule id="d_reachability" requiredPartsOfSpeech="posA_reachability" outputPartOfSpeech="posB_reachability">
+            <Name>d_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subd_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="std_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="std_reachability"/>
+                  <InsertSegments>
+                    <PhoneticShape>d</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>D_reachability</MorphemeId>
+            <Gloss>d</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="e_reachability" outputPartOfSpeech="posB_reachability">
+            <Name>e_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="sube_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="ste_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="ste_reachability"/>
+                  <InsertSegments>
+                    <PhoneticShape>e</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>E_reachability</MorphemeId>
+            <Gloss>e</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="t_reachability">
+            <Name>t_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subt_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stt_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stt_reachability"/>
+                  <InsertSegments>
+                    <PhoneticShape>t</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>T_reachability</MorphemeId>
+            <Gloss>t</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="u_reachability">
+            <Name>u_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subu_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stu_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stu_reachability"/>
+                  <InsertSegments>
+                    <PhoneticShape>u</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>U_reachability</MorphemeId>
+            <Gloss>u</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="x_reachability">
+            <Name>x_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subx_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stx_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stx_reachability"/>
+                  <InsertSegments>
+                    <PhoneticShape>x</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>X_reachability</MorphemeId>
+            <Gloss>x</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="p_reachability">
+            <Name>p_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subp_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stp_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <InsertSegments>
+                    <PhoneticShape>a</PhoneticShape>
+                  </InsertSegments>
+                  <CopyFromInput index="stp_reachability"/>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>P_reachability</MorphemeId>
+            <Gloss>p</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="q_reachability" partial="true" requiredPartsOfSpeech="posC_reachability">
+            <Name>q_reachability</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subq_reachability">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stq_reachability">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_reachability"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stq_reachability"/>
+                  <InsertSegments>
+                    <PhoneticShape>q</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>Q_reachability</MorphemeId>
+            <Gloss>q</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrFinX_root" requiredPartsOfSpeech="posX_root">
+            <Name>FinX_root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subFinX_root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemFinX_root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemFinX_root"/>
+                  <InsertSegments>
+                    <PhoneticShape>àh</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>FINX_root</MorphemeId>
+            <Gloss>finx</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrGateX_root" requiredPartsOfSpeech="posX_root" outputPartOfSpeech="posX_root">
+            <Name>GateX_root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subGateX_root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemGateX_root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemGateX_root"/>
+                  <InsertSegments>
+                    <PhoneticShape>áh</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>GATEX_root</MorphemeId>
+            <Gloss>gatex</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrFinY_root" requiredPartsOfSpeech="posY_root">
+            <Name>FinY_root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subFinY_root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemFinY_root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemFinY_root"/>
+                  <InsertSegments>
+                    <PhoneticShape>àj</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>FINY_root</MorphemeId>
+            <Gloss>finy</Gloss>
+          </MorphologicalRule>
+          <MorphologicalRule id="mrGateY_root" requiredPartsOfSpeech="posY_root" outputPartOfSpeech="posY_root">
+            <Name>GateY_root</Name>
+            <MorphologicalSubrules>
+              <MorphologicalSubrule id="subGateY_root">
+                <MorphologicalInput>
+                  <PhoneticSequence id="stemGateY_root">
+                    <OptionalSegmentSequence min="1" max="-1">
+                      <SimpleContext naturalClass="ncAny_root"/>
+                    </OptionalSegmentSequence>
+                  </PhoneticSequence>
+                </MorphologicalInput>
+                <MorphologicalOutput>
+                  <CopyFromInput index="stemGateY_root"/>
+                  <InsertSegments>
+                    <PhoneticShape>áj</PhoneticShape>
+                  </InsertSegments>
+                </MorphologicalOutput>
+              </MorphologicalSubrule>
+            </MorphologicalSubrules>
+            <MorphemeId>GATEY_root</MorphemeId>
+            <Gloss>gatey</Gloss>
+          </MorphologicalRule>
+        </MorphologicalRuleDefinitions>
+        <AffixTemplates>
+          <AffixTemplate requiredPartsOfSpeech="posB_reachability" final="true">
+            <Name>T1_reachability</Name>
+            <Slot morphologicalRules="t_reachability">
+              <Name>slotT1_reachability</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posB_reachability" final="true">
+            <Name>T2_reachability</Name>
+            <Slot morphologicalRules="u_reachability">
+              <Name>slotT2_reachability</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posC_reachability" final="true">
+            <Name>T3_reachability</Name>
+            <Slot morphologicalRules="x_reachability">
+              <Name>slotT3_reachability</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posA_reachability" final="true">
+            <Name>T4_reachability</Name>
+            <Slot morphologicalRules="x_reachability">
+              <Name>slotT4_reachability</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posX_root" final="true">
+            <Name>finalTemplateX_root</Name>
+            <Slot morphologicalRules="mrFinX_root">
+              <Name>finSlotX_root</Name>
+            </Slot>
+          </AffixTemplate>
+          <AffixTemplate requiredPartsOfSpeech="posY_root" final="true">
+            <Name>finalTemplateY_root</Name>
+            <Slot morphologicalRules="mrFinY_root">
+              <Name>finSlotY_root</Name>
+            </Slot>
+          </AffixTemplate>
+        </AffixTemplates>
+        <LexicalEntries>
+          <LexicalEntry id="ekam_reachability" partOfSpeech="posA_reachability">
+            <Allomorphs>
+              <Allomorph id="akam_reachability">
+                <PhoneticShape>kam</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>KAM_reachability</MorphemeId>
+            <Gloss>kam</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="ekamb_reachability" partOfSpeech="posB_reachability">
+            <Allomorphs>
+              <Allomorph id="akamb_reachability">
+                <PhoneticShape>kam</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>KAMB_reachability</MorphemeId>
+            <Gloss>kamb</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="elop_reachability" partOfSpeech="posB_reachability">
+            <Allomorphs>
+              <Allomorph id="alop_reachability">
+                <PhoneticShape>lop</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>LOP_reachability</MorphemeId>
+            <Gloss>lop</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="enuk_reachability" partOfSpeech="posC_reachability">
+            <Allomorphs>
+              <Allomorph id="anuk_reachability">
+                <PhoneticShape>nuk</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>NUK_reachability</MorphemeId>
+            <Gloss>nuk</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="emo_reachability" partOfSpeech="posE_reachability">
+            <Allomorphs>
+              <Allomorph id="amo_reachability">
+                <PhoneticShape>mo</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>MO_reachability</MorphemeId>
+            <Gloss>mo</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="epa_reachability" partial="true">
+            <Allomorphs>
+              <Allomorph id="apa_reachability">
+                <PhoneticShape>pa</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>PA_reachability</MorphemeId>
+            <Gloss>pa</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eDak_root" partOfSpeech="posX_root">
+            <Allomorphs>
+              <Allomorph id="aDak_root">
+                <PhoneticShape>vhã</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>DAK_root</MorphemeId>
+            <Gloss>dak</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="ePib_root" partial="true">
+            <Allomorphs>
+              <Allomorph id="aPib_root">
+                <PhoneticShape>åâj</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>PIB_root</MorphemeId>
+            <Gloss>pib</Gloss>
+          </LexicalEntry>
+          <LexicalEntry id="eNib_root" partOfSpeech="posY_root">
+            <Allomorphs>
+              <Allomorph id="aNib_root">
+                <PhoneticShape>äâj</PhoneticShape>
+              </Allomorph>
+            </Allomorphs>
+            <MorphemeId>NIB_root</MorphemeId>
+            <Gloss>nib</Gloss>
+          </LexicalEntry>
+        </LexicalEntries>
+      </Stratum>
     </Strata>
   </Language>
 </HermitCrabInput>

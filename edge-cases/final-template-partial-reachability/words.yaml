@@ -1,191 +1,295 @@
-# Four final templates: T1 and T2 (part of speech B), T3 (C) and T4 (A). One partial rule q needs part of speech C, so only T3 can follow a partial word; a partial entry (pa, no part of speech) is the other source of partial words. Words ending in T1, T2 or T4 after an ordinary rule have no analysis; words ending in T3 after q do.
 language: FinalTemplatePartialReachability
-inspired_by: ["synthetic partial-rule probe (not modeling any real language)"]
+inspired_by:
+  - synthetic partial-rule probe (not modeling any real language)
+  - synthetic partial-root probe for final-template pruning (not modeling any real language)
+  - 'synthetic final-template gate probe: a final and a non-final template, a partial and a plain suffix (not modeling any real language)'
 sources:
-  - "https://github.com/sillsdev/machine/issues/643"
+  - https://github.com/sillsdev/machine/issues/643
+  - https://github.com/sillsdev/machine/issues/551
+  - src/SIL.Machine.Morphology.HermitCrab/AnalysisAffixTemplateRule.cs
+  - src/SIL.Machine.Morphology.HermitCrab/MorphologicalRules/SynthesisAffixProcessRule.cs
+  - https://github.com/sillsdev/machine/issues/507
 requires: []
 words:
   - word: kamd
-    note: >-
-      d needs part of speech A and gives B; kam in A gives KAM+D, which no template closes, so no analysis.
+    note: '[cell reachability] d needs part of speech A and gives B; kam in A gives KAM+D, which no template closes, so no analysis.'
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamt
-    note: >-
-      Control: the B entry kamb takes the final template T1 directly.
+    note: '[cell reachability] Control: the B entry kamb takes the final template T1 directly.'
     parses:
-      - signature: "KAMB+T|kamt"
-        rules: [t]
+      - signature: KAMB_reachability+T_reachability|kamt
+        rules:
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamdt
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "KAM+D+T|kamdt"
-        rules: [d, t]
+      - signature: KAM_reachability+D_reachability+T_reachability|kamdt
+        rules:
+          - d_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamet
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "KAM+E+T|kamet"
-        rules: [e, t]
-      - signature: "KAMB+E+T|kamet"
-        rules: [e, t]
+      - signature: KAM_reachability+E_reachability+T_reachability|kamet
+        rules:
+          - e_reachability
+          - t_reachability
+      - signature: KAMB_reachability+E_reachability+T_reachability|kamet
+        rules:
+          - e_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamu
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "KAMB+U|kamu"
-        rules: [u]
+      - signature: KAMB_reachability+U_reachability|kamu
+        rules:
+          - u_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamut
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "KAMB+U+T|kamut"
-        rules: [u, t]
+      - signature: KAMB_reachability+U_reachability+T_reachability|kamut
+        rules:
+          - u_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: lopt
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "LOP+T|lopt"
-        rules: [t]
+      - signature: LOP_reachability+T_reachability|lopt
+        rules:
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: lopu
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "LOP+U|lopu"
-        rules: [u]
+      - signature: LOP_reachability+U_reachability|lopu
+        rules:
+          - u_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: nukx
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "NUK+X|nukx"
-        rules: [x]
+      - signature: NUK_reachability+X_reachability|nukx
+        rules:
+          - x_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamx
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "KAM+X|kamx"
-        rules: [x]
+      - signature: KAM_reachability+X_reachability|kamx
+        rules:
+          - x_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: lopx
-    note: >-
-      x is only in the slots of T3 (C) and T4 (A); lop is B, so no analysis.
+    note: '[cell reachability] x is only in the slots of T3 (C) and T4 (A); lop is B, so no analysis.'
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: akamt
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "P+KAMB+T|akamt"
-        rules: [p, t]
+      - signature: P_reachability+KAMB_reachability+T_reachability|akamt
+        rules:
+          - p_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: akamdt
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "P+KAM+D+T|akamdt"
-        rules: [p, d, t]
-      - signature: "P+KAM+D+T|akamdt"
-        rules: [p, d, t]
+      - signature: P_reachability+KAM_reachability+D_reachability+T_reachability|akamdt
+        rules:
+          - p_reachability
+          - d_reachability
+          - t_reachability
+      - signature: P_reachability+KAM_reachability+D_reachability+T_reachability|akamdt
+        rules:
+          - p_reachability
+          - d_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: alopt
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "P+LOP+T|alopt"
-        rules: [p, t]
+      - signature: P_reachability+LOP_reachability+T_reachability|alopt
+        rules:
+          - p_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: pat
-    note: >-
-      No analysis: no sequence of the grammar's rules builds this string.
+    note: '[cell reachability] No analysis: no sequence of the grammar''s rules builds this string.'
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: pau
-    note: >-
-      The partial entry pa has no part of speech and takes the template T2 slot rule u after it.
+    note: '[cell reachability] The partial entry pa has no part of speech and takes the template T2 slot rule u after it.'
     parses:
-      - signature: "PA+U|pau"
-        rules: [u]
+      - signature: PA_reachability+U_reachability|pau
+        rules:
+          - u_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: pad
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "PA+D|pad"
-        rules: [d]
+      - signature: PA_reachability+D_reachability|pad
+        rules:
+          - d_reachability
         exercises:
-          - "AffixProcessRule: prefix/suffix/circumfix/infix"
-
+          - 'AffixProcessRule: prefix/suffix/circumfix/infix'
   - word: nukqx
-    note: >-
-      q applies first and the final template T3 closes the word.
+    note: '[cell reachability] q applies first and the final template T3 closes the word.'
     parses:
-      - signature: "NUK+Q+X|nukqx"
-        rules: [q, x]
+      - signature: NUK_reachability+Q_reachability+X_reachability|nukqx
+        rules:
+          - q_reachability
+          - x_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: nukxq
-    note: >-
-      q (partial, needs part of speech C) after the final template T3: allowed because q is partial.
+    note: '[cell reachability] q (partial, needs part of speech C) after the final template T3: allowed because q is partial.'
     parses:
-      - signature: "NUK+X+Q|nukxq"
-        rules: [x, q]
+      - signature: NUK_reachability+X_reachability+Q_reachability|nukxq
+        rules:
+          - x_reachability
+          - q_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: kamtd
-    note: >-
-      d after the final template T1 is refused: d is not partial.
+    note: '[cell reachability] d after the final template T1 is refused: d is not partial.'
     expect_fail: true
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
-
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
   - word: nuket
-    note: >-
-      Control: no partial rule is involved.
+    note: '[cell reachability] Control: no partial rule is involved.'
     parses:
-      - signature: "NUK+E+T|nuket"
-        rules: [e, t]
+      - signature: NUK_reachability+E_reachability+T_reachability|nuket
+        rules:
+          - e_reachability
+          - t_reachability
     exercises:
-      - "Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability"
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: vhãàh
+    note: '[cell root] Control. The final template alone on a non-partial root.'
+    parses:
+      - signature: DAK_root+FINX_root|vhãàh
+        rules:
+          - mrFinX_root
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: vhãàháh
+    note: '[cell root] Control (blocked). Non-partial root dak, ordinary non-partial rule after the final template. Synthesis refuses it, so no analysis exists.'
+    expect_fail: true
+    blocked_by:
+      - mrGateX_root
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: åhãáh
+    note: '[cell root] Control. Partial root in a lower stratum, ordinary rule, no template. The word is partial, so no template applies and the rule is allowed.'
+    parses:
+      - signature: PAK_root+GATEX_root|åhãáh
+        rules:
+          - mrGateX_root
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: åhãàh
+    note: '[cell root] Partial root. SynthesisAffixTemplatesRule skips every template for a partial root morpheme, so the final template never applies and this string has no analysis.'
+    expect_fail: true
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: åhãàháh
+    note: '[cell root] Partial root in a lower stratum, with the rule chain that dakfaga uses. The word inherits partiality from pak, which would let mrGateX follow a final template, but no final template ever applies to a partial root, so there is no derivation to license it. This is the case that the lexical-entry half of Morpher.IsPartial was suspected to protect (issue 551).'
+    expect_fail: true
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: åâjáj
+    note: '[cell root] Control. Partial root in the same stratum as the rules, ordinary rule, no template.'
+    parses:
+      - signature: PIB_root+GATEY_root|åâjáj
+        rules:
+          - mrGateY_root
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: åâjàj
+    note: '[cell root] Partial root in the template''s own stratum. The final template does not apply to it.'
+    expect_fail: true
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: åâjàjáj
+    note: '[cell root] Same-stratum counterpart of pakfaga. Also has no analysis, for the same reason.'
+    expect_fail: true
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: äâjàj
+    note: '[cell root] Control. The final template alone on the non-partial root nib, same stratum as pib.'
+    parses:
+      - signature: NIB_root+FINY_root|äâjàj
+        rules:
+          - mrFinY_root
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: äâjàjáj
+    note: '[cell root] Control (blocked). Non-partial root nib, same chain as pibfbgb.'
+    expect_fail: true
+    blocked_by:
+      - mrGateY_root
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: êæèçëç
+    note: '[cell trace] The non-final template, a derivational rule, then the final template. The derivational rule follows a non-final template, so the gate allows it.'
+    parses:
+      - signature: SAG_trace+NONFINAL_trace+TAIL_trace+FINAL_trace|êæèçëç
+        rules:
+          - mrNonFinal_trace
+          - mrTail_trace
+          - mrFinal_trace
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: êæèçéç
+    note: '[cell trace] No reading parses. The partial rule straight after the non-final template is refused (NonPartialRuleRequiredAfterNonFinalTemplate), and after the final template the last f has no template left to be.'
+    expect_fail: true
+    blocked_by:
+      - mrPartial_trace
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: êæèçé
+    note: '[cell trace] A partial rule after the final template. Only a partial rule may follow it, so this parses.'
+    parses:
+      - signature: SAG_trace+FINAL_trace+PARTIAL_trace|êæèçé
+        rules:
+          - mrFinal_trace
+          - mrPartial_trace
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: êæèçë
+    note: '[cell trace] A derivational rule after the final template is refused (the trace names NonPartialRuleProhibitedAfterFinalTemplate), but the word still fails with that gate removed, so it does not evidence it.'
+    expect_fail: true
+    blocked_by:
+      - mrTail_trace
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
+  - word: êæèç
+    note: '[cell trace] The final template alone parses.'
+    parses:
+      - signature: SAG_trace+FINAL_trace|êæèç
+        rules:
+          - mrFinal_trace
+    exercises:
+      - 'Affix template slots (obligatory/disjunctive/ordering) > partial template: reachability'
